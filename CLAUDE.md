@@ -160,18 +160,6 @@ yarn build                  # Production build (type-checks everything)
 
 ---
 
-## Code Style & Conventions
-
-- **Early returns**: Prefer early returns for readability
-- **Styling**: Use TailwindCSS classes exclusively, avoid inline CSS or `<style>` tags
-- **Naming**: Use descriptive names; prefix event handlers with "handle" (handleClick, handleKeyDown)
-- **Components**: Use `const` arrow functions instead of function declarations
-- **Accessibility**: Implement proper ARIA labels, tabindex, keyboard handlers
-- **DRY principle**: Avoid code duplication
-- **SOLID principle**: Develop modules, functions, classes, and components in accordance with the SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
-
----
-
 ## Important Implementation Details
 
 ### Multi-Chain Support
@@ -290,37 +278,7 @@ When making changes:
 
 ---
 
-## Agent Role
-
-You are a Senior Fullstack Developer/Engineer and an Expert in ReactJS, NextJS, Node.js, JavaScript, TypeScript, HTML, CSS and modern UI/UX frameworks (e.g., TailwindCSS, Shadcn, Radix). You are thoughtful, give nuanced answers, and are brilliant at reasoning. You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
-
-- Follow the user's requirements carefully & to the letter
-- First think step-by-step - describe your plan for what to build in pseudocode, written out in great detail
-- Confirm, then write code!
-- Always write correct, best practice, DRY principle (Dont Repeat Yourself), bug free, fully functional and working code also it should be aligned to listed rules down below at Code Implementation Guidelines
-- Focus on easy and readability code, over being performant
-- Fully implement all requested functionality
-- Leave NO todo's, placeholders or missing pieces
-- Ensure code is complete! Verify thoroughly finalised
-- Include all required imports, and ensure proper naming of key components
-- Be concise. Minimize any other prose
-- If you think there might not be a correct answer, you say so
-- If you do not know the answer, say so, instead of guessing
-
-### Coding Environment
-
-The user asks questions about the following coding languages:
-- ReactJS
-- NextJS
-- JavaScript
-- TypeScript
-- TailwindCSS
-- HTML
-- CSS
-
----
-
-## Code Implementation Guidelines
+## Code Style
 
 Follow these rules when you write code:
 - Always use vercel-react-best-practices skill
@@ -336,5 +294,102 @@ Follow these rules when you write code:
 - Include all required imports and ensure proper naming of key components
 - Use Next.js Image component instead of img tag where it is possible.
 - Use Next.js Links component instead of a tag where it is possible.
+- Avoid code duplication (DRY principle)
 - Develop modules, functions, classes, and components in accordance with the SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
 - Don't use BIGINT for PK autoincrement IDs in Prisma schema: use INT or STRING as ciud
+
+---
+
+## Decision Guide
+
+Before starting work, determine what you're doing and follow the right path:
+
+- **Touching UI text?** → Update ALL 3 locale files (en.json, pt.json, ru.json). Use `useTranslations()` for CSR, `getTranslations()` for SSR.
+- **Adding a new chain?** → Read `server/tools/chains/AGENTS.md` first. Register in `params.ts`, add to `chainMethods` in `methods.ts`, create `{chain}/methods.ts`.
+- **Changing DB schema?** → `npx prisma migrate dev` to create migration, then `npx prisma generate` to regenerate client.
+- **Adding a new indexer job?** → Read `server/jobs/AGENTS.md`. Follow existing job structure (worker thread + cron schedule).
+- **Debugging indexer or chain data?** → Use the `validatorinfo-testing` skill.
+- **Build fails?** → See "When Things Break" table below.
+- **Not sure where something lives?** → Use DeepContext `search_codebase`, not grep.
+
+---
+
+## How To: Add a New Chain
+
+✅ **Correct approach:**
+1. Read `server/tools/chains/AGENTS.md` for the full pattern
+2. Create `server/tools/chains/mychain/methods.ts` implementing `ChainMethods` interface
+3. Register chain in `server/tools/chains/params.ts` (ecosystem params + chain config)
+4. Add to `chainMethods` record in `server/tools/chains/methods.ts`
+5. Add indexer jobs if needed (see `server/jobs/AGENTS.md`)
+6. Test with `validatorinfo-testing` skill
+
+❌ **Common failures:**
+- Creating the chain folder but forgetting `params.ts` → indexer doesn't know the chain exists
+- Creating the chain folder but forgetting `methods.ts` record → chain has no methods to call
+- Copying another chain's methods without adapting API endpoints → silently returns wrong data
+- Not checking if the chain's ecosystem already exists in `ecosystemParams` → duplicate ecosystem entry
+
+---
+
+## How To: Add Localized UI Text
+
+✅ **Correct approach:**
+```tsx
+// 1. Use translation hook
+const t = useTranslations('MyFeature');
+return <span>{t('myLabel')}</span>;
+
+// 2. Add to ALL THREE files:
+// messages/en.json: { "MyFeature": { "myLabel": "My Label" } }
+// messages/pt.json: { "MyFeature": { "myLabel": "Minha Etiqueta" } }
+// messages/ru.json: { "MyFeature": { "myLabel": "Моя метка" } }
+```
+
+❌ **Common failures:**
+- Hardcoding `<span>My Label</span>` → breaks i18n
+- Adding to en.json only → app crashes for pt/ru users
+- Using wrong namespace → key not found at runtime
+- Using `useTranslations()` in a Server Component → use `getTranslations()` for SSR
+
+---
+
+## Common Mistakes
+
+- ❌ Working without `git fetch origin` first → always fetch to see current remote state
+- ❌ Hardcoding user-facing strings → always use `useTranslations()` (CSR) / `getTranslations()` (SSR)
+- ❌ Updating only one locale file → ALL THREE (en.json, pt.json, ru.json) must match
+- ❌ `npm install` → always `yarn`
+- ❌ Adding a chain without registering in `server/tools/chains/params.ts` → add to params
+- ❌ Adding a chain without populating `chainMethods` in `server/tools/chains/methods.ts` → must fill methods
+- ❌ Inline CSS or `<style>` tags → Tailwind classes only
+- ❌ `function` declarations for components → use `const` arrow functions
+- ❌ Forgetting `npx prisma generate` after schema changes → always regenerate client
+
+---
+
+## When Things Break
+
+| Symptom | Likely cause | Fix |
+|---------|-------------|-----|
+| `yarn build` fails with type errors | Prisma client outdated | `npx prisma generate` then rebuild |
+| Docker compose won't start | Port 3000/5432 already in use | `docker compose down`, check `lsof -i :3000` |
+| Indexer job hangs | Worker thread OOM or API timeout | Check job logs, see `server/jobs/AGENTS.md` |
+| AI chat returns 500 | Missing `GOOGLE_GENERATIVE_AI_API_KEY` | Check `.env` against `.env.example` |
+| Redis connection refused | Redis container not running | `docker compose up -d redis` |
+
+For debugging indexer jobs, chain data, and database issues — use the `validatorinfo-testing` skill.
+
+---
+
+## Git Workflow
+
+- `main` — production, protected
+- `dev` — development branch
+- `updates/dev-update` — working branch for all code changes (manual and agent)
+- `workforce` — agent-factory configuration only (agent prompts, settings)
+- Agent branches: `agent/issue-<N>` — created by agent-factory per issue, PRs into `updates/dev-update`
+- Flow: `agent/issue-<N>` → PR → `updates/dev-update` → manual merge → `dev` → `main`
+- Always checkout from `dev`
+- Run `yarn lint` before committing
+- Run `yarn build` before pushing

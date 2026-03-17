@@ -1,0 +1,444 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/ericvoskuil
+
+Episode name:
+Monolithic Culture, Writing in C and Bitcoin Core with Eric Voskuil
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of Resilient Web 3 Podcast. Today, I have Eric with me from Bitware. Very excited to have you on, Eric. Hi, welcome to the show.
+
+Eric
+Hi, thanks for having me.
+
+Citizen Web3 
+Yeah, man. I don't know how much the listeners know about you, but you've been a member of, I don't know, research developed community of Bitcoin. Could I ask you, please do a very boring stuff probably thing, sorry, but to introduce yourself and talk a little bit about what you do and what you want people to know about you in general.
+
+Eric 
+yeah. So I, I, what do you want to know? I guess I can start with college. You know, I, I grew up in, the U S and New England. went to, I went to college to get a computer science degree and took an internship with IBM in 1986, which at the time was, I think the biggest company in the world. And, that was pretty boring. turns out that.
+
+That was that that changed the course of my future. So I decided to join the Navy. and I spent, you know, a couple more years getting into that. And then, I did 10 years of active duty, as a pilot in the Navy. did the Bosnian war, twice. and then I left in the late nineties to, to go back to software. So I.
+
+I started a company and moved back in the Boston area and eventually sold that company to Microsoft in 2006, spun out another company and went back to that after I did my couple years at Microsoft as a software architect. That was actually great. I'm not a big company guy.
+
+and sold that one to a private equity group and then the third one that failed and then I, right around that time I found Bitcoin.
+
+And I've been working on that ever since. The company you mentioned, Bitware, I haven't done much with it. I formed it, but I pretty much spend all of my time working on open source software development, primarily in libbitcoin, which is a project started by Amir Taki in 2011. I have been full time on that really.
+
+Eric 
+ever since, say, late 2013, early 2014, and kind of took over directing it around 2015 or so.
+
+when Amir went to Rojava in Syria. And so he's moved on to other things, but we're still in touch and the project is still very active. We've had myself and one other person that have really been full time on it and several other contributors. also, back around 2017 or so, I started writing a lot more and eventually held a...
+
+crypto conference called Crypto Econ in Hanoi in February of 2020, which wasn't the best timing, but we had a good time and published my book at the same time, which was basically a collection of essays that I had written about Bitcoin in the interim. And that's been translated a few times. I think there's a German one in the works right now. It's just volunteers that do that.
+
+And I guess that's it. I'm very actively working right now on the Bitcoin node aspect of the Bitcoin, which is an attempt to improve a number of aspects, including the scalability of the node software.
+
+And I've on my two gigabit network at home. I'm able to achieve 60 minute Full initial block download sync well without full validation. That's that's that's you know, milestone as we call it, but otherwise a complete in 60 minutes consistently Which I think is pretty fantastic. I'm presently working on
+
+Eric 
+improvements to the full validation aspect of that, which is also pretty fast. And that's the same machine I've been working on for seven years. So it's not, you know, it's not a super computer. So I think there's, there's hope there. And that's, that's, I've been distracted by some other personal things recently. I'm putting a floor in my house. So it's kind of disrupted that work, but I'll get back to it soon enough.
+
+Citizen Web3 
+The floor is important if you need to have a base, right?
+
+Eric 
+If you don't have a floor, you just can fall forever. You it's gotta have a floor under you.
+
+Citizen Web3
+I agree. I'm going to do like I'm going to I'm going to steal a steal steal for 10 seconds that the light here and guys, girls for everybody who's listening and you want to know about Amir Taki, check out of course, our interview at least from some years ago, three, four years ago, Amir Taki go to the search. And of course, we did an episode with him. yeah, big on a lot of things he does start out to Amir there. But anyways, back to you, Eric. You know,
+
+There is there is some so many things you said like you said it's all that's it, know, after that's all I've done But you know, it's like a lot of a lot of things in short and sweet thing I want to talk of course a little bit first of all about a bit Bitcoin and It's sometimes mentioned as an alternative Toolkit for Bitcoin. Do you do on do know why it's referenced like in your opinion? I mean, is why is it mentioned as an alternative?
+
+toolkit to the Bitcoin.
+
+Eric 
+Well, know, there's certainly people look at Satoshi's initial implementation as being Bitcoin. And so, you know, some people even mistake libcoin as like an altcoin or something, right? The lib, a part of libcoin means library. It's a prefix that's pretty common, and especially in C++ development. So it's a Bitcoin library. It's actually a set of 10 different libraries. And...
+
+You know, I mean, I guess it's a it's a fair description to you know If you take Satoshi's was first and everything else that ever comes along will be an alternate but it's kind of like referring to Chrome as an alternate browser to you know Mozilla or you know, thanks or something. So It's a it's a you know, it's a full implementation of Bitcoin, but it is a developer toolkit which is the term Amir like to use and
+
+it's meant not just to be an application. The analogy I often use is, us that are old, I mean, when you were born, I started programming, so that's how old I am. And I think I wrote my first code in, I don't know, 81 or 82. So.
+
+Mozilla, you know, came out and also we had a graphical, sorry, Mosaic, we had a graphical browser and, know, and Netscape made it into a company and they took off and it was great. It was everything for a while and, you know, but it was just an application. They tried to make it into an API and put it in everything, but that didn't really work out. And that kind of sealed its fate, I think, you know. So eventually we got web APIs
+
+Windows and you know then eventually Linux and Mac and Unix even so so these things became integrated into the platform and became much more usable and now we have kind of web features in everything and programmers can use it easily and that's kind of how I look at Bitcoin Core it's a monolithic application you install it and if you want to do anything with Bitcoin unless there's some other thing right you've got to install that thing and then and then kind of try to connect to it
+
+Eric 
+which feels a lot like connecting to Netscape to do something on the internet that is unrelated to Netscape. So the idea of having a toolkit means when people build Bitcoin products or software, they have the hard stuff or the core Bitcoin stuff.
+
+already done in a way that's accessible and can be directly integrated with what they're building.
+
+Also, if they want to experiment with different changes, new protocols, it makes it quite a bit easier than maintaining a fork of a massive library. And the Bitcoin's big as well, but it's factored for developers. It's an API. We also provide command line tools so that we have a command line node and command line kind of client side tools that allow us to see the entire thing running so we know that it actually works.
+
+So it's important for us, one of the many reasons it was started was so that people who are building Bitcoin stuff don't gravitate towards the easier implementation, which is to use web APIs or the like. so having a, I mean, unless you're building directly on a node, you're really not building Bitcoin. You're actually hurting it. And so,
+
+you know, one approach, you know, is to, is to kind of put a wrapper around Bitcoin core and try to provide some API, which is similar to the web APIs. And that, that, that's worked for some people, but that's not a really, you know, not a good long-term solution. The other, the other, there's a number of other problems. There's governance issues with Bitcoin, Bitcoin, you know, obviously it doesn't really have governance, but if there's only one application that everybody uses effectively, it does have governance and,
+
+Eric 
+So creating another body or more bodies of people who are experts in fairly difficult software and who can speak on it from a different perspective is and has been important. That was one of the reasons Amir started it because the Bitcoin Foundation was kind of taking control of the direction of the one and only implementation.
+
+He also created the BIP system, which was designed for the same reason, to open up that decision-making process, which was very closed at the time and still can be. And so people have different perspectives on that. Some people would say, well, everybody can contribute, and it's an open community for Satoshi's node, which...
+
+you know, was called, we used to just call it Bitcoin D and now they rebranded it to Bitcoin Core. you know, the presumption there is that core development is Bitcoin Core. We used to call core development anybody who works on node software and that
+
+You know, so I've always called myself a core developer and people sometimes call me out and say, you you don't work on Bitcoin Core. Mostly no shit. That's not the only core software in Bitcoin. So there's this perception, right, that anything else is an alternate. But, you know, again, it would be silly to call like...
+
+Chrome and alternate browser and that's kind how I look at it. So there's a number of other reasons for the Bitcoin. Sorry to interrupt. One of the most important is that the architecture of Bitcoin Core is not scalable. So that's why people are increasing, fairly dramatically increasing setup times for initial block download or sync or whatever you want to call it.
+
+Citizen Web3
+I like that.
+
+Eric
+pointing out to people that hardware cost is decreasing exponentially and the chain is bounded linearly, it grows linearly. you know, people start talking about UTO set and other stuff. These are irrelevant arguments. The time should decrease and on my machine I can fully sync the node in 60 minutes consistently and that used to take me all day because I've got a two gig network now. anyway, so there's important reasons for this work to continue.
+
+And I think people are starting to recognize that more and more.
+
+Citizen Web3
+I like your explanation because it's I think when I was asking the question, like in my head at least, my alternate, my alternative word was not alternative from the perspective, alternate or I don't know what would be the right route here, but not alternate, alternating from the perspective of being different, but alternative as in perspective from offering
+
+a different solution and solution that is more different from the one that everybody's used to. But I like the way you took it because I guess that most people do take alternative like that. kind of hear, it's alternative, you know, and then they're like altcoins, right? And the alternatives to the one real thing, right? But it's not like that. It's not like we don't think like that. We think differently. But I'm going to ask you this. I'm going to...
+
+I didn't plan to go here straight away, but since we kind of are, you you mentioned Bitcoin Core and, you know, I've met, I told you before the call started, you asked me about how much into Bitcoin I am. And this is going to be my question by telling you a story. I'm sorry about that, but this is how my mind works. So in 2016, 17, roughly, I met for the first time, like not online, but somebody
+
+in Portugal, actually, from Bitcoin Core. And there was two people. I'm not going to go into nicknames now, but one of them was, at least was back then a very heavy developer of the Bitcoin Core code. And I spent, I was lucky enough to be in the same place where they were working for the week. And I kind of got to talk to them a few evenings. And the question will be there, I promise. And after having like...
+
+spending those two, three evenings, I was put away of being only Bitcoin. I was not only Bitcoin anymore. It was really talking to these two guys, especially one of them, that what made me understand was that they're practically religious, let alone that their views are not righteous, right? There is no such thing as a righteous person. That's subjective, right? I'm not religious at all, but I'm going to use those words just for the stigmatic understanding of what I'm trying to explain. They were believing that they were righteous and that everything they say is like a holy grail that should be
+
+Citizen Web3 
+I upon and it wasn't and it was like it was those two factors that put me off it. Now, I recently and this is the question I'm finally coming to it recently I've noticed that in the Bitcoin community there are more and more alternatives or okay as you explained that they're not alternative they're just different from the original implementation like philosophies let's so to speak. I know there is no real question but from your perspective like
+
+How do you feel about it? you feel that it's changing? Do you feel that Bitcoin Core is becoming more powerful now? Do feel that the people who develop tools like yourself and try to look for, I'm sorry, for that word again, alternative implementations are in the minority and being like, what's your feelings here?
+
+Eric 
+Yeah, that's a good question. So yeah, don't let me, there's several parts and I don't want to miss it even, but.
+
+So there are, far as like the direct, I don't really follow other implementations of Bitcoin. Like I don't get into the code. I don't, I'd have a hard time like naming all of them. I don't really pay much attention to them. I'm aware, right? And the same thing with Bitcoin Core. And I've never...
+
+I've never developed on Bitcoin Core. Bitcoin has never been a fork of the software of Bitcoin Core. At one point, it did have some bits and pieces from it, but it has no code from Bitcoin Core anymore. We do use the Libsac library, which is external. We actually integrated that before Bitcoin Core did and shipped it.
+
+And anyway, so unrelated, but so there's a, there's a reasons, there's a number of reasons people have done other implementations of Bitcoin. What was Bitcoin D at the time and, and now it's Bitcoin Core. So I look at Satoshi's implementation. And if you look at, know, just, just even if you're only loosely familiar with the conversations he had or, you know, they had and the process that occurred, it's clear that it's a prototype.
+
+Right. Just trying to get it to work and fixing things on a daily basis, throwing out hard forks here and there, soft forks, whatever, you know, the terms didn't even exist back then. You know, in software engineering, that's a prototype, right? And there's a rule in software engineering, you know, kind of a cheeky rule, which is you never ship your prototype, right? Because then you're stuck with it, especially in Bitcoin, because you're stuck with the consensus aspects of it.
+
+Eric 
+But it's a lot of code and it's running and supporting a lot of money and it's risky now to make changes to it. And so changes and a lot of people want to, and so it's very hard to actually make any significant change.
+
+that's a consequence of shipping the prototype. What you learn from a prototype is what you got right and what you didn't get right. And so that can inform new architecture, new decisions, new design.
+
+Amir took that to heart and made some architectural changes. I have gone, know, so conceptually, like the way the code operates, even though it's completely different code, in the beginning, to the first releases of the Bitcoin operated very similarly to the way Satoshi's prototype worked. there Amir started to feed in certain design changes. And then I made some pretty significant architectural changes.
+
+to based on what we were experiencing and how we thought things could be much more optimal and scalable, cetera, right? Have fewer problems down the road. So the Bitcoin is, it was written in C++. think we were, Mimir started with C++ 11, which was way beyond kind of where Satoshi was, you he used earlier versions. So we had advantages in language. And now I think we're, you know,
+
+C++20. So it's not a different programming language than Bitcoin Core. We don't use any C, which is very low-level programming. Core does, in some cases, to try to achieve better performance. Those are philosophical differences. We don't believe you get better performance from writing in C. It's just poorly written C++ that causes you to do that.
+
+Eric
+These are fairly low level distinctions. What I'm pointing out is that it's C++ in both cases. So some people would say, well, why would you bother? Why would you do that? Because
+
+A lot of the other implementations, for example, and Bitcoin was an early one that was built on C sharp, right? And then there was Bitcoin J, which was Java. And then there was, there's a JavaScript, you know, implementation. There's a Rust implementation. There's a Go implementation, right? And I don't, you know, those are in varying degrees with support and, you know, usability at this point, as is the Bitcoin, right? But
+
+Those are, you can look at that and go, well, what's been done is ported Satoshi's code to another language with all that porting, right?
+
+doesn't necessarily change the architecture. And my understanding, again, not from spending a lot of time in these implementations, is that the implementations tend to mirror the architecture of the original implementation. It's not trivial to make significant changes to it. So that's the easy path.
+
+I know there were some way back attempts to make architectural changes and they don't think they exist anymore. Can't even remember their names, but I had some lengthy discussions with one person who's actually no longer with us.
+
+Eric
+who had done that work and it was very interesting to look at the kind of design decisions that he had made. So there's this one group which is language ports, which consists of pretty much all the other implementations, right? And then there's...
+
+Eric 
+there's libcoin which is not a language port so what is it right it's it's it's meant to be aside from being a developer toolkit you know in terms of being a node it's meant to be a more optimal architecture and so what we're seeing it with Bitcoin core
+
+is that Satoshi's architecture is showing its limits. And those were predictable over 10 years ago when we started, I I started working on this about 10 years ago, Amir started in 2011.
+
+So some of those limits include redundant storage of the UTXO set, right? Everybody believes that a UTXO set as this distinct group of, you know, a bunch of data apart from the blocks is necessary, right? But the outputs are in the transactions and the transactions are in the blocks. So why are we storing it twice? And now everybody's got, you know,
+
+all concerned that the UTXO set is growing exponentially. Well, it can't be growing exponentially because blocks grow linearly. It's not possible. It is bounded by linear growth, by the number, the, by the block size limits.
+
+So there's that. There's the mempool. Well, what's the limit to the size of the mempool? There is no limit. It's a conceptual thing, right? What people call the mempool is just all the unconfirmed transactions that have ever existed. Now you could discard the ones that are in conflict with transactions that are confirmed, but things can become unconfirmed. Okay, it's a fairly, it's a fair line to toss out the ones that are in conflict with confirmed ones and assume that they won't get unconfirmed. But
+
+Eric 
+That's a fairly, you know, that's a large and infinite, you know, unbounded set of data. Well, why would you store it in RAM?
+
+Right? There's no, you know, it's basically a guaranteed denial of service attack. So now you have to start DOSing yourself by throwing the stuff out arbitrarily. And if you look at what's happening today, right, the long threads in Bitcoin are just are about this issue and it had, you all the pinning, you know, all that stuff has to do with how they're dealing with the fact that Satoshi decided to store unconfirmed transactions in memory, which is just absurd.
+
+Well, know, claim about, you know, performance, et cetera, right? the performance is the problem now. And there's a number of, there's just a lot of issues like that. Like recently, there was a, they documented a denial of service attack, which was passed, which,
+
+Eric 
+But there's one that there's an issue that's similar, say if you're banning nodes, right? Actually this may have been what actually occurred. If you're banning nodes that contact you with garbage data and you have to store that somewhere, well, what's the limit on that? There is no limit, right? People can, and of course when you overflow that, you bring down the process and that causes a catastrophic failure. So there's...
+
+I think that was the issue, which is predictable. A decade ago, I said, we're not gonna do banning. It doesn't make any sense, because somebody just overflowed your ban, right? You just make yourself performant in dealing with peers that you don't want to deal with and that don't follow the rules. And...
+
+There's also, we had a long discussion recently on delving in Bitcoin dev email list about, it was tangentially related, but the idea of storing hashes of invalid blocks so that you don't have to invalidate them again. When you see that hash, you can discard it. But computing the hash is extraordinarily costly, right? And storing it again is unbounded. And some garbage blocks you get can't be hashed.
+
+because they don't succeed getting through that process of producing a hash. So what's the point, right? If I can just send you garbage data that can't be hashed or can just continuously send you ones with different hashes, right? There's no point. there's a lot of these decisions made in the design. Some over time as problems were encountered, probably banning and storing invalid block hashes,
+
+that don't really make sense. And there was some from Satoshi that didn't really make sense. I think there was a time at one point where un-parented blocks, which that's properly an orphan block. We use the term orphan for.
+
+Eric 
+a weaker chain block now, but an orphan is something that doesn't have a parent, right? So you don't store orphan transactions. If a transaction shows up and you can't connect it to the chain or the mempool, you don't store it. And you don't store orphan blocks either because it could be just completely random data. there were times when I think, at least I know early in the Bitcoin, that was copied from Satoshi's implementation, which is, know, store these things and wait till the parent shows up, right? So self-DOS.
+
+So, you know, not always the best architectural and design decisions being made. mean, some things are brilliant. Believe me, I'm not,
+
+down everybody, you know, all these, all, all of it. But, but like the ability to improve upon what exists is important. And when, you know, when, when one guy writes the thing ships it and then people get to see it and, and we, you know, can't really be changed after that. you're kind of stuck with, you know, with, with the, with the foresight of one individual, know, Satoshi was great, but you know, not.
+
+you know, he didn't have that kind of foresight and certainly his software doesn't show that. the difference, know, the Bitcoin is an attempt to improve Bitcoin to the point where it remains usable, right? Bitcoin core is becoming unusable and that's becoming a common complaint and one of the big issues with that
+
+is the implementation flaws are driving people to want to make consensus changes. And I fought this, you know, in a smaller context, this specific issue recently in Bitcoin dev where, you know, making consensus changes because your implementation is limited is a real significant issue, right? you know, I have people tell me it takes them days
+
+Eric 
+if not a week, to get synced up on fast network and bottom machine. I'm like, well, that's just an implementation flaw. That's not a problem with linear data growth.
+
+We have people that will complain about the storage cost. The US dollar cost of a terabyte SSD, a fast one today, is, I don't know, like 10 bucks? It's not really that much money, right? So there's kind of false handwringing about Bitcoin itself because of implementation issues. And...
+
+There are people, you know, like there's the lib kernel or whatever bitcoin kernel thing, they're trying to separate out the consensus rules again. They did it once before.
+
+Core Hechtamon led that project for Bitcoin Core way back and they encouraged us and others to take it on, just the script implementation so we wouldn't have consensus deviations. And we did. We put it in a library. It's actually still in our repo. It's still part of our release client version three, which is like seven years old, but we've maintained it. like last month, they dropped it. We were the only ones that ever used it. They dropped it and didn't even tell us, right? This is drop support. It was never reasonable in the first place,
+
+because apart from the dependency complexities that go along with it and the fact that they didn't really factor it out, it forced us to have to serialize or re-deserialize each transaction to run it through their script processor.
+
+Eric 
+So guaranteed under performance, right? If they created a type library that had object definitions for transactions and scripts and witnesses and all these different parts, opcodes, then we could deserialize into that, use that as the primary data model, and then just run the script validation using their library. But doing that,
+
+is what we've done, right? It's not a small piece of work. It requires a complete redesign. You're basically building a developer library where you're exposing an entire type library.
+
+so that you can expose these capabilities. So now they're doing it again, the kernel thing, and I don't, I just don't see how it makes sense. I I know there's a reasonable objective to try to get everybody from, know, everybody on the same set of consensus, consensus, at least script implementation. But every time a new release is put out, it's a different implementation. And, you know, they've forked because of it and will continue to do so. It's just a fact of life.
+
+but it's a performance, it's an underperformance guarantee or they have to do what we've done. So the point of these comments is that.
+
+somebody has to, if you want to get to that ability to have developers using this stuff in a fairly consistent way, somebody has to redesign the entire code base. And that's what we've done. So the question is, you know, why would it be better to have them do it again? Right? I don't know, they can certainly do that, but I don't see that progress being made. So we're doing what needs to be done. It takes time because pretty much all money that goes into
+
+Eric
+to core Bitcoin development goes to Bitcoin core. And I've had this experience over and over and over again. I, you know, I and the other people that work on the Bitcoin won't accept any strings and we won't moderate what we say. You know, we speak freely and we've been able to raise some money for other developers. I've never, I don't accept any money for anything in Bitcoin. I fund myself and I fund other people.
+
+I'm lucky enough to do that from my past life. you know, that's the, know, it takes time, right? We got about at least a half a million lines of code to maintain and to move forward. And so we're...
+
+We'll get there eventually, you know.
+
+Citizen Web3 
+I tell you that for a lot of the outside communities, having had the luck, so to speak, in my crypto journey, I've spent time in the Bitcoin community, I've spent time in the Ethereum community, I've spent time outside any communities, I've raised projects. I've had the touch of pretty much like...
+
+a lot of communities like sides, least the major aspects of them. And I can tell you that the Bitcoin community has always been perceived. I don't know if you've ever seen or is anybody who's listening to this has ever seen the series called Rydge's Gemstones. And it was a series, I don't know what on what Netflix, Schmetflix think it was. Yeah. So
+
+Eric 
+Yes, I've seen it. I've seen a few episodes.
+
+Citizen Web3 
+Nice. it's like, you know, just for the listeners out there, it's about like a family of a very religious family who believe, of course, that everything they do is, is very righteous, very correct. But of course, it's not so to speak. So and of course, they are just humans. And it seemed like to the outside of the Bitcoin community, this is how the Bitcoin community seems many times, because it started off with, you know, like
+
+Eric
+funny.
+
+Citizen Web3 
+I mean, the block itself, know, in Bitcoin, you know, the first block which mentions, you know, the banks and the cartel, well, so to speak, you know, of course, in a specific language. But and then kind of like what other people I think feel and see what pushes other developers sometimes away is that is exactly that is exactly that, you know, conservativism that I feel. But and here you are saying that
+
+And I can see that a lot also in, for example, I've spent some time in Israel and I've, like I said, I'm not religious, but I've noticed that in Judaism, the synagogues, they're so tiny, so little following, but they fight in between themselves on how to perform a certain ritual or how to like, no, you cannot like put the candles out at 7.04, you have to put them at 7.05 because well,
+
+You don't understand what you're doing. Like what you're doing is going to like destroy the whole and this is how it feels. And this is like, do you think that like with all that long story that I just did, like, do you think that that's there? There's ever a step beyond that? Do think that there is ever a place where the Bitcoin community says, okay, we're sick of fighting it?
+
+Let's might as well join the rest of the movement, so to speak. of course, there are people, you know, and there are a lot of people and a lot of projects who do both already. But I mean, like the general Bitcoin community, like Bitcoin Core, for example. Do you think they would ever say, OK, fuck it. Let's let's let's let's let's join them and just go along with them. I don't think that's ever going to happen.
+
+Eric 
+It's like asking if religion's ever gonna go away, Or religious fervor, right? No, I don't think so. But I think it's, I mean...
+
+Citizen Web3 
+Well, BAM!
+
+Eric 
+I think what's inevitable is that,
+
+Eric 
+The kind of design of Bitcoin, which requires no central operator rate, implies that people will do what they want. And people are doing what they want. Bitcoin Core...
+
+does what they want and some people, you know, have some kind of religious fervor about it and other people are, you know, they're more flexible and casual about it. I try not to judge. do what they want, but I can do what I want. you know, and so I think it's kind of funny, you know, how tightly, it's understandable that a group of people who, you know, they come and go.
+
+Citizen Web3 
+Yeah, you're right.
+
+You're right.
+
+Eric
+always the same people, but this group of people who earns their keep by maintaining this code wants it to be the only code. That's fairly straightforward. With or without the religious fervor, people want a monopoly. Because all the money flows there. Why would it flow somewhere where nobody has adoption or
+
+Citizen Web3 
+Yes. Yes.
+
+Eric 
+you know, there's fork risk or all these other, you know, kind of things that they're going to, they're going to keep promoting, to, try to maintain that, that, that,
+
+central position and that's kind of why I use the Netscape analogy. know Netscape would have loved it if anybody if everybody would just built on Netscape and there would have never been you know Netscape, it would have never been Internet Explorer and then would have never been Firefox or Opera or Chrome or Safari right we just all use Netscape it's great you know and and the argument you know the kind of core dev argument Bitcoin core dev argument is that well it's consensus right we need to make sure we don't deviate
+
+from the rules.
+
+You know, the risk of somebody deviating from the rules is on that person, right? They take the risk themselves. And if they don't want to, you know, well, they don't really have an option because every new version is a new release and there will be consensus deviations. But the risk to Bitcoin is basically zero, right? Bitcoin will keep operating anyway. And we've, so what's happened? We have, we have nodes out there. They're not, they're certainly not a high percentage of the nodes at least you can see on the network.
+
+Citizen Web3 
+Yeah, of course.
+
+Eric 
+work, but they're out there and they're going to keep growing, getting better. And what I, what I saw has continued to accelerate, is, you know, early going back early on deciding to work on this was that
+
+was that it would be very difficult to make progress with such a huge committee-based thing. People say, well, standards bodies are important to the internet. made it. But standards bodies didn't make the software. They made the standards. And so development by committee is a disaster. It's an unmitigated disaster. When you're doing significant work, you want a few people, and that's
+
+it. And then after you get it, you know, you get the architecture done, get the cool, mean, Satoshi did it by himself, right, initially. So you can't really make progress in this environment where you've got so much contention for every single change and you have so much fear in breaking something and having that responsibility. It just, it just
+
+reaches a deadlock and that's kind of, yeah, things keep getting committed to Bitcoin Core, but there's been no re-architecture whatsoever in that implementation going on, you know what, 15 years now. So, we've re-architected a couple of times. We've learned, we've tried things, we've learned from it, we've tried other things. I've done that myself and I still do it in certain areas.
+
+to get to what works best. And it's not really possible to foresee it all. You have to prototype, test, performance testing. It requires observation. So you can kind of predict that what's gonna happen is it's gonna atrophy at some point and people are gonna spit off, they're gonna get tired of it. And this is what's happened to a lot of good core devs. They've gone on to other things or other projects.
+
+Eric 
+or they're kind of tangentially involved and other people have taken up the task, but over time, there'll be more and more and higher, higher quality implementations designed for different purposes, just like there is with every other piece of software. the dam holding that back from the core dev perspective is the fear of forks, right? The fear of inadvertent forks caused by consensus bug.
+
+Citizen Web3
+It's ironic in a way.
+
+Eric 
+which is, it's just, it's ironic given the fact that there have been many from Bitcoin Core.
+
+Citizen Web3
+Yes.
+
+Eric 
+And, you know, there have, you know, there have been hard forks that have not been, you know, that have been denied to be hard forks. And, you know, they kind of rearrange the terminology to suit their needs. have been ones that have kind of been slipped in without telling anybody, or there have been ones that have been accidental that haven't caused chain splits. There have been ones that have been accidental or, you know, unaware that have caused chain splits. There's a long history of this. And it's, you know, it'll continue. One of the things that caused
+
+causes it is the complete impenetrable nature of the code itself, of Satoshi's implementation. Satoshi was a premature optimization addict. He was optimizing for single bytes and things that were going to end up in hundreds of gigabytes.
+
+tiny percentages, therefore making the code very obtuse. So people will tell you they don't know what the consensus rules are. Nobody's ever written them down. The code is the consensus. And when the code breaks, when something goes wrong,
+
+they don't adhere to that. They change the code. They fix it, right? Because there is this other idea of consensus rules that's outside of the code. This was the case, for example, the, I guess it was LevelDB, I think it was LevelDB or BerkeleyDB, the database locking issue, Where they, back, where,
+
+the switch to the database imposed in a lock limitation, which effectively limited how many hashes you could have within a block, both transaction, the transaction hashes and the block hash, I guess. it arbitrarily limited, say the number of transactions in the block and it was unknown. Well, when that happened, the chain split based on
+
+Eric 
+think machine configuration or at least version of the software you're running. And it was figured out and what the solution was to impose a soft fork, which was basically to limit the number of transactions that could be in a block or the number of hashes, I forget what.
+
+That was just pushed out same day. This is the limit. So now we're not going to fork off of each other. And then later, the code was modified, that limit was removed. That's a hard fork. So now we're allowing things to happen that were invalid before. So now we hard forked our way out. So we had a chain split caused by an unknown.
+
+Eric 
+soft fork that was deployed some places but not other places, right? And then we had a soft fork imposed in the new release and then we had a hard fork imposed in the new release. All this stuff, right?
+
+What do we mean this, you know, this doesn't happen, right? Of course it happens and this will continue to happen as the code is modified. There were certain risks from the use of OpenSSL, there were just code changes like the inflation bug, right? And I'm not saying us or anybody else is immune to that kind of stuff, but...
+
+The nature of the code, the implementation of Bitcoin Core is such that somebody with my level of experience in understanding the implementation of Bitcoin script or network or whatever.
+
+I can go into that code after having a full understanding of these things, and it can take me a long time to figure out what the heck is going on in the code. It's like, what is this really doing? So clearly, there's going to be confusion over what the rules really are or what impact will occur from a certain change.
+
+Citizen Web3 
+Thanks
+
+Eric 
+There are people that believe that's necessary, right? Like it's inherent in the software. It's not. It is absolutely not necessary. It is just poor code. And there are some people that believe, well, maybe it's not necessary. The code could be more readable, but it wouldn't perform well. That's also untrue.
+
+It's just poor coding practices that lead somebody to believe that you need to have unreadable code to make it fast, which is completely unrealistic, especially in today's modern C++ implementations. So, yeah.
+
+Citizen Web3 
+me. No, no, go on. Please, please finish. No, no, please finish, Eric, please. I thought you made a logical pose there, so I was...
+
+Eric 
+Bye.
+
+I can just go on forever. So you have to stop me at some point, but I was going to point out that like, you know, when, when, when people want speed, you know, they, like the way I tend, and this is probably an over, you know, certainly an over generalization, but the way I personally tend to look at, when, when, the, when the good folks at Bitcoin core want to optimize something, typically what they do is they, go to lower level code, right? So hash optimization, there's, there's assembly language, you know, optimizations in the
+
+code for certain platforms. There's C implementations of hashing and, know, like SHA, for example, is implemented. believe all the hashing functions are in these individual C functions. And we had that for a while. And I just got so tired of having, like, you know, this hodgepodge of different C implementations for hash functions and, you know, related code.
+
+that I just threw it all away. I wrote all the hash functions from scratch using the specs in C++ in a single template library. One implementation for all of it. One implementation for the...
+
+Eric 
+All the SHA in one implementation for all the message digest, like ripe-md. And which SHA you want, just drop in a different template argument and it's all the same, right? Well, that's C++, that's gotta be slower, right? No, C++ also compiles to assembly. It doesn't have to be slower, it's actually faster.
+
+Citizen Web3 
+It's not simple bus as always.
+
+Eric 
+It's faster. I've benchmarked it, right? So, and I can get, we can get the same optimizations out of that. Like Shawnee, for example, native Shaw implementation and Intel AMD processors. So, you know, this idea that everything has to be low level and completely unreadable to be fast is just wrong. The most important things that determine performance in software
+
+tend to be the architectural decisions. For example, the fact that I can sync the entire chain, I stop at the halving, so it's 840,000 blocks. That way I get a consistent measure every time I do it, So presently for the last year, ever since the halving, I've been stopping at 840,000 blocks. 840,000 blocks I can do in 60 minutes, plus or minus one or two minutes. Very consistently on a two gig network, home network, right?
+
+on a PC on Windows. So that's kind of my benchmark. It's a big machine. It's 32 dual cores. It's got 256 gig of RAM and a decent SSD. It's had that for seven years. These aren't fast CPUs and the RAM's not fast and the disk isn't fast. It's just...
+
+So what, you know, when I put Bitcoin Core on that machine, I just download, install it and run it. After an hour, it has downloaded somewhere around five to 10 % of the chain, which varies quite a bit. It's not as consistent, right? I'm done. I'm talking about percent of the chain by byte volume, right? Which doesn't track block height very closely.
+
+So that's 5 % of the time. So in other words, it's going to take 20 times longer. And my implementation, I run on the same machine. It's done. And we're talking about a similar configuration. I turn on transaction indexing, which we have. We can't turn off. We always index the transactions.
+
+Eric 
+And but the Bitcoin index is everything bi-directionally you can navigate the entire chain at very high speed Where you know internet scale query against the server with Bitcoin core can't do we do all that right? And if you tap on another 15 minutes or so you can actually do all the Electrum X indexing at the same time all addresses on the entire chain indexed in an hour and 15 minutes where Electrum X indexing locally off a Bitcoin core node
+
+right, that's already synced, can take days, does take days, and so does, know, fulcrum can take like a full day just to get it indexed off of a node that already has the data, which is ridiculous, right? And of course, you know, if you're running a lot of things in Bitcoin, you need full address indexing. Why don't they have that? I don't know, right? So how is it possible? I mean, this isn't like some hashing optimization, right? This isn't, this isn't like, we implemented, you know, Shawnee.
+
+and now all of sudden we can do it in an hour and it takes all, you know, like a week for everybody else. These are architectural distinctions, On that machine that I'm talking about, it's so old it doesn't have Shawnee on it. It doesn't have the, it's five times faster to do a Shaw 256 hash with Shawnee versus a fast native implementation, right?
+
+We don't have that on this machine, still. So when I get a new machine that actually has Shiny on it, it'll be great. And we also don't have AVX 5.4, which is 16-lane vectorization. We're limited to eight, which is AVX 2 on this machine. So that significantly affects, that almost doubles the cost of doing a Merkle tree hashing, which is costly, right? So.
+
+It's the optimum, the performance optimizations don't come from these little tweaks where they milk out another 2%, 3%, 5%, 10%, 20%. Those are big numbers, but where do you go from it takes me a full day to down to it takes me an hour, 20, 20x times faster. That comes from high level of concurrency.
+
+Eric 
+where I can connect to, like when I typically run, found that the of optimal sweet spot for me is about two, I connect to about 200 peers, right? I divide up the download work across those peers, chunk it up into certain windows, it, know, like 50,000 at a time divided up among 200 peers.
+
+And people might say, why are you tying up 200 peers? No, I tie them up for a tiny amount of time because I only need a small amount of data from them. And then I get some from someone else. I'm constantly flipping peers to find the faster ones, the slower ones I leave alone. I don't want blocks from somebody's laptop. So we use standard deviation to find the fastest peers. We connect to a large number of them. We get all the data, and then we're out.
+
+And we have a database that's fully write concurrent. So we can store all data at the same time, you know, as long as we have a thread to do it. So if you've got more threads, you got more cores, you can write more data at the same time. The entire database is a hand rolled memory map set of hash tables. So if you got more memory, you never even touch the disk. So if I had a...
+
+say like a half terabyte of RAM. I've got a quarter terabyte of RAM, which I've had since, you seven years ago.
+
+If I doubled that, which I can't do on this machine, when I started up and synced, it would probably take me 45 minutes because the theoretical limit of syncing the entire chain up to 840K on a two gig network is 46 minutes. That's the theoretical limit. If you just were to just straight download from an infinitely fast machine over a two gig network, that's how long it would take. So we're at about an hour.
+
+Eric 
+and that tends to get used, that extra 15 minutes tends to get used up by flushing the memory to the SSD. Okay, so if I had more memory, I wouldn't do that. We'd probably be right at the theoretical limit, right around 46 to 50 minutes probably. So that.
+
+There's no reason why any implementation shouldn't be able to download and store and index. The downloading should be the slow part, right? The entire chain at almost the theoretical limit of the transfer time. And it doesn't matter how slow your peers are. That's not a factor. You just connect to more peers, divide up the work more. So...
+
+So Bitcoin Core is nowhere close to that type of architecture. It doesn't have that type of right concurrency in the store. It doesn't have the ability to manage that type of pure concurrency. So it's a full redesign to get anywhere close to that. So people have been led to believe that Bitcoin is struggling, not Bitcoin Core. Bitcoin is struggling.
+
+because it's now taking longer and longer and longer to download the chain and people are blaming that on what they call spam which are paid transactions right consistent with the rules and and so you got people you know crying about
+
+Bitcoin's failing because it's got transactions, which is what we want. We want full blocks, we want full transactions. I don't really care what's in them. From my perspective, as long as they're full, I get a better test of what the capacity of the system is. So that's the consequences of this kind of monolithic culture and software is that it doesn't get questioned.
+
+Eric 
+I remember right before the inflation bug, was just a lot of cheerleading about how infallible core was. I remember Andreas used to say this all the time, right? The most tested, the most reliable, best quality, whatever, everything, and then that happened. And then you don't hear that. You stopped hearing that. Because people actually believed it until it was demonstrated to obviously not be true.
+
+So there's a lot of kind of this, as you described, religious fervor, not just in the choice of coin and rules, but also in the implementation. There should only be one group of people who go through this, they jump through these set of hoops to get their code in if they're lucky.
+
+And that's it. There shouldn't be anything else. People actually believe that. I think that's absolute nonsense. And what we can see now is the damage that that's causing. Bitcoin Core, the team is loot. What you mentioned earlier was that they, you know, there appeared to be like it's getting more controlling and stronger. I forget the words you used, but from my perspective, kind of an outsider, what I'm seeing is this whole attempt to hold it all together.
+
+right, and this one monolith is starting to just kind of, not starting, but it's gradually just kind of dissipating, it's falling apart. They're not holding the narrative the way they used to. And they used to because they had people with a lot of experience who had a fairly consistent viewpoint and made pretty good engineering decisions. And...
+
+They've moved on, a lot of them, most of them. more good people have come in, but they just don't have that history and personality to be able to browbeat everybody else into submission, whether it's for the right reasons or not. That seems to be what's changed. And...
+
+Eric 
+So I don't think, don't, the software, think part of that is the software showing these problems, and which they've been more honest about actually documenting, right? They're actually documenting their security flaws consistently. Now they're trying to actually going retroactively and trying to document all the ones that weren't being documented in the past, which is great.
+
+their openness is improved, but it's also, you know, has a side effect of showing the fallibility that's real. And so I tend to think that the issues with the software, the kind of weakening of the team is leading to others to kind of...
+
+Eric 
+There's a lot of rhetoric about it, There's a lot of verbal attacks, and I don't engage in that stuff. don't care, but it seems fairly obvious to me that there's something changing over time, which I would have predicted. think it's one way or another, it's not gonna be the only thing that matters.
+
+Citizen Web3
+Hopefully, we're going to see these things evolve, like you say. I think that the perspective that you're describing is something that the more people see, of course, that it's not Bitcoin struggling, it's implementations that are struggling, that it's some centralization of powers that is limiting from the implementation to become more efficient and more optimized or optimized implementation. hope that that's...
+
+really, really, really lives on. Eric, I want to thank you for your time very, very, very much. want to thank you for finding the... Because not everybody wants to talk about Bitcoin Core and other foundations. So want to thank you for not the courage because it doesn't require courage, especially I see that you don't have a problem with it. But being honest about talking about the issues that...
+
+Eric
+Yeah.
+
+Citizen Web3
+people don't like to talk about. So I do want to thank you for that. Please don't hang up just yet. This is going to be good.
+
+Eric 
+Sorry, you're welcome. And I just want to point out that this is why I don't take money. I don't. And Amir started this, you know, I mean, Amir took donations, right? But that's not the only way. We...
+
+we have a strong resistance to strings attached, which allows us to speak freely. And that's why you're hearing me say things that a lot of other people would say, but can't, right? And that's the danger of a single gatekeeper, which is what we have with core.
+
+Citizen Web3
+Absolutely.
+
+Citizen Web3 
+And I really, really, really want to thank you for it again, because it's important for people to hear lack of filters rather than hearing black box, especially considering we're talking about Bitcoin Web 3 and the lack of all of that. Yeah. So please don't hang up just yet. This is just a goodbye for the listeners and for everybody else. Once again, everything me or Eric mentioned, please find to the show notes and follow the links, read about it. And yeah.
+
+Do more research, Eric. Thank you very much once again.
+
+Eric 
+Thank you for having me, Derek.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

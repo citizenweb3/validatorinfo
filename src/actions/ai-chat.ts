@@ -56,43 +56,85 @@ export const askAgent = async (
       return { ok: false, error: 'invalid_request', code: 'INVALID_REQUEST' };
     }
 
-    const trimmedMessages = validatedMessages.slice(-MAX_MESSAGES);
     const safeContext = sanitizeContext(context);
     const systemPrompt = AiService.buildSystemPrompt(safeContext);
 
-    logDebug(`Calling LLM with ${trimmedMessages.length} messages, page: ${safeContext.page}`);
+    const estimateTokens = (msgs: ChatMessage[]) => {
+      const msgChars = msgs.reduce((sum, m) => sum + m.content.length, 0);
+      return Math.ceil((systemPrompt.length + msgChars) / 4) + 5000;
+    };
 
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), LLM_TIMEOUT);
+    const CONTEXT_STRATEGIES = [
+      { windowSize: 4, maxAssistant: null },
+      { windowSize: 4, maxAssistant: 1500 },
+      { windowSize: 2, maxAssistant: 1000 },
+      { windowSize: 1, maxAssistant: null },
+    ];
 
-    try {
-      const { text } = await generateText({
-        model: AiService.model,
-        system: systemPrompt,
-        messages: trimmedMessages,
-        tools: aiTools,
-        maxOutputTokens: AiService.maxTokens,
-        stopWhen: stepCountIs(MAX_STEPS),
-        abortSignal: controller.signal,
+    const TOKEN_THRESHOLD = 20_000;
+
+    const buildMessages = (strategy: typeof CONTEXT_STRATEGIES[number]) => {
+      const window = validatedMessages.slice(-strategy.windowSize);
+      return window.map((msg) => {
+        if (msg.role === 'assistant' && strategy.maxAssistant && msg.content.length > strategy.maxAssistant) {
+          return { ...msg, content: msg.content.slice(0, strategy.maxAssistant) + '\n[...truncated]' };
+        }
+        return msg;
       });
-      clearTimeout(timeoutId);
+    };
 
-      if (!text || text.trim().length === 0) {
-        logWarn('LLM returned empty response');
-        return { ok: false, error: 'empty_response', code: 'EMPTY_RESPONSE' };
-      }
-
-      logDebug(`LLM response received, length: ${text.length}`);
-
-      return { ok: true, text };
-    } catch (error) {
-      clearTimeout(timeoutId);
-      if (error instanceof Error && error.name === 'AbortError') {
-        logError('LLM request timed out');
-        return { ok: false, error: 'timeout', code: 'TIMEOUT' };
-      }
-      throw error; // re-throw non-timeout errors to be caught by outer try/catch
+    let startIdx = 0;
+    const fullMessages = buildMessages(CONTEXT_STRATEGIES[0]);
+    const estimatedTokens = estimateTokens(fullMessages);
+    if (estimatedTokens > TOKEN_THRESHOLD) {
+      startIdx = 1;
+      logDebug(`Context estimated at ~${estimatedTokens} tokens, starting with trimmed strategy`);
     }
+
+    for (let attempt = startIdx; attempt < CONTEXT_STRATEGIES.length; attempt++) {
+      const strategy = CONTEXT_STRATEGIES[attempt];
+      const msgs = buildMessages(strategy);
+
+      logDebug(`Attempt ${attempt + 1}/${CONTEXT_STRATEGIES.length}: window=${strategy.windowSize}, maxAssistant=${strategy.maxAssistant ?? 'full'}, messages=${msgs.length}`);
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), LLM_TIMEOUT);
+
+      try {
+        const { text } = await generateText({
+          model: AiService.model,
+          system: systemPrompt,
+          messages: msgs,
+          tools: aiTools,
+          maxOutputTokens: AiService.maxTokens,
+          stopWhen: stepCountIs(MAX_STEPS),
+          abortSignal: controller.signal,
+        });
+        clearTimeout(timeoutId);
+
+        if (!text || text.trim().length === 0) {
+          if (attempt < CONTEXT_STRATEGIES.length - 1) {
+            logWarn(`LLM returned empty response (strategy ${attempt + 1}/${CONTEXT_STRATEGIES.length}), retrying with reduced context...`);
+            continue;
+          }
+          logWarn(`LLM returned empty response after all ${CONTEXT_STRATEGIES.length} strategies`);
+          return { ok: false, error: 'empty_response', code: 'EMPTY_RESPONSE' };
+        }
+
+        logDebug(`LLM response received, length: ${text.length}`);
+
+        return { ok: true, text };
+      } catch (error) {
+        clearTimeout(timeoutId);
+        if (error instanceof Error && error.name === 'AbortError') {
+          logError('LLM request timed out');
+          return { ok: false, error: 'timeout', code: 'TIMEOUT' };
+        }
+        throw error;
+      }
+    }
+
+    return { ok: false, error: 'empty_response', code: 'EMPTY_RESPONSE' };
   } catch (error) {
     logError(`AI chat error: ${error instanceof Error ? error.message : String(error)}`);
     return { ok: false, error: 'service_error', code: 'SERVICE_ERROR' };

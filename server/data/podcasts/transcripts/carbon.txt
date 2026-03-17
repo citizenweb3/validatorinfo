@@ -1,0 +1,387 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/carbon
+
+Episode name:
+Web3, Order Books and a DEX with Ivan Poon
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of a citizen cosmos today with me I have Ivan the co founder of Carbon protocol and switch your labs. I hope I didn't get it wrong as usual. I do have the tendency to get all those things wrong. Ivan Hi man. Welcome to the show.
+
+ivan___switcheo_labs___carbon_protocol
+Hi, hi Serge. So you got it all right? No worries. Super stoked to be here. Yeah. Yeah, so thanks for having me.
+
+Citizen Web3
+Yay, because nice, nice, nice. I, I'm really glad to because I, I gonna be honest with you. We've interviewed all sorts of like, you know, like I'm not going to do the whole A-class, B-class things, but like big projects, smaller projects, tiny, medium, whatever. And I have to say the amount of questions I have for you from the audience today.
+
+I'm definitely not going to, I'm really sorry guys, who's in the audience because I definitely won't be able to ask all of them because there is like a list list of them. And this is really impressive. Actually, I'm really impressed. So kudos on gathering such a great community around your project, man.
+
+ivan___switcheo_labs___carbon_protocol
+Yeah, thanks guys. Thanks everyone who asked all the questions. You guys are good.
+
+Citizen Web3 
+So I'm gonna go with our first like obvious thing. Can you please for the audience and for me introduce yourself and your own words, what do you do, whatever else you wanna add to that, you're welcome, it's all yours.
+
+ivan___switcheo_labs___carbon_protocol 
+Yeah, right. So I'm Ivan. I've been with Citroen Labs since the start. I'm its co-founder. And we've been in the space for like really, really pretty long. But most of us right now know us for carbon. We are the team or the labs behind carbon protocol, which is a Cosmos SDK chain, App Chain. And what we're really trying to build is a
+
+decentralized future where any sort of structure, any sort of financial action can be done on this one protocol called carbon. And the reason why we started is really because we tried using Ethereum, we tried using Bitcoin and it really doesn't solve everything because like for Bitcoin you only can transfer funds from person A to person B and for Ethereum it's just Ethereum.
+
+everyone's using it. It's crowded, the fees are high and it's not cross-chain compatible, right? So when we started on our journey, we interacted with many other blockchain protocols out there and we realized that there this gap in the market and that's what made us build this team and after many years of experimentation and building together, what we've came up with is our current flagship product.
+
+current flagship protocol covered.
+
+Citizen Web3 
+So you did say flagship product and before I start bombarding you with different several questions, that means there is other products. And yeah, as far as I understand, help me to figure out the order here. I have here Switchio, Carbon, Demiq, ZilSwap, Zoller. So I have at least like, help me to put them in the right order. Who is what? Who is where?
+
+ivan___switcheo_labs___carbon_protocol 
+Yeah,  Okay. So, so, like, like I said, we are a software development team. We have a team of like, 20 over developers, software engineers, designers, et cetera. So we actually built a lot of, different sort of software, Some of them are our own babies. Some of them are like contracted by other third party companies who are like saying that, Hey, are you going to give you a grant to build this awesome thing on my protocol or as a sort of,
+
+development incentive. right that's the reason why as a lab team we have multiple products. But let's go through them one at a time. Let's talk about carbon first, which I think most of the people here today, most of the community here today are excited to hear about. So carbon, the reason why we build it is because
+
+of an earlier product, which is a DEX, a decentralized exchange that was on a different blockchain. It was called NEO. And at that time, this exchange could only serve, we built it because, like I said earlier on, when we were exploring the various blockchain protocols out there, Ethereum, Bitcoin, and NEO, for example, we realized that, there's a huge gap here.
+
+Dex's don't exist. The tokens we purchased in the ICOs in whatever fund raise cannot actually be liquid. And we have to like wait and beg for people like central exchanges, Binance or whatever to list them before we actually have that liquidity. So that's why that's actually when we started the journey to build Dex's for different types of protocols. And pretty early on, we realized that, this is not going to work.
+
+And that's because when the taxes that you build, even today, like Unisoc, et cetera, they're only on a single protocol. because of that, you're kind of isolated, you're kind of siloed into that blockchain. And it's really not cross compatible. It's really not Binance. It's not really not FTX. You don't have a truly decentralized exchange because a truly decentralized exchange needs to...
+
+ivan___switcheo_labs___carbon_protocol
+support any sort of token on any sort of protocol. So that brings us to carbon. When we realized that, this single isolated way of building DEXs doesn't work, we went to look, OK, what's the correct way to build it? And then we searched across the state of the art at that time. looked at Cosmos, looked at Polkadot. We looked at a whole bunch of technologies that were very new at that time. That was like three years ago, before most of
+
+before people were even looking at multichain. And we decided that hey, Cosmos SDK, the Cosmos ecosystem is the most mature. It has the most amount of fundamental code, foundational code out there. And we could use this technology to build what we wanted to build, which is a decentralized exchange that's more than just a spot trading sort of venue within a certain, that trades one token for another.
+
+in just one isolated silo. We wanted a protocol that could treat any sort of thing, not just a token from a single blockchain, but across multiple blockchains. And on top of that, we also wanted to support any sort of other financial action that you could do in traditional finance. So that would mean things like futures, perpetuals, options.
+
+borrowing lending, bonds, et cetera. So we wanted to make sure that this is actually possible in a truly decentralized fashion. And that started us on our journey towards building carbon and now DMAX. So DMAX is the second product. And DMAX is basically what we call a reference user interface to showcase how a protocol like carbon could be used. So currently, DMAX supports order book trading. It supports
+
+liquidity pools, EMMs, and the whole suite of what you expect to find in DeFi today. And what we are hoping is that as we gain users in DMAX, eventually people will look at carbon as a protocol for finance and build their own products on top of it, whether it's lending and borrowing, whether it's different types of option structures, or even just using the EVMs sandbox within our protocol to
+
+ivan___switcheo_labs___carbon_protocol 
+to construct their own Nova financial products. So that's what I think we most people here today know and want to talk about. I do want to mention the other products that you brought up. Most of them currently on Zilliqa blockchain. So we are actually the leading protocol for Zilliqa.
+
+So you will find any sort of thing, any sort of DeFi application that you'll find on a blockchain like Ethereum, you'll find it on Zilliqa as well, and most probably it's built by us. So we have built Sealswap, which is like the Uniswap Dex. We have built Zylo, which is like a launchpad platform. And we have ARK, which is an NFT trading platform. I think it's the leading one in Zilliqa currently.
+
+And then we have Zola, which I also think is the leading. I mean, I'm using leading quite loosely here, but that's to my knowledge. It's leading NFT game on Zilliqa at this point. So in terms of the Zilliqa ecosystem, we're also pretty well known as builders for the ecosystem.
+
+Citizen Web3 
+correct me if I'm wrong but I'm sure that the name switcher like you said yourself already but now that you were telling the story the name switcher does come up to mind not from even two but like three years ago and could I have heard it right it is from Zilliqa in Ethereum you did migrate to cosmos after already started on those protocols am I correct in thinking that?
+
+ivan___switcheo_labs___carbon_protocol 
+Yes, yes. Actually, we started, like I said, just now we started really early on on this blockchain called Neo, N-E-O. And I think probably you have heard it from there, like Switcho exchange, we call it, it was just called Switcho previously. And, but because it's siloed to a single, those two blockchains, we actually invented like, or not really invented, but we launched the one of the first atomic swaps between two different protocols.
+
+but because it was slow, not really scalable, etc. That's why we looked outwards and we found Cosmos, the Cosmos ecosystem, and we started building on carbon.
+
+Citizen Web3
+What attracted you to Cosmos the most? Was it the idea of IBC? Was it the TCPIP over blockchain? What was the biggest attraction for you?
+
+ivan___switcheo_labs___carbon_protocol 
+For us, we examined a few protocols, but definitely Cosmos was the leader by far. A few reasons. The first reason was that its fundamental consensus algorithm was rock solid, that it's tandemine, and it's fully produced in production already by Cosmos Hub. And the way that the whole
+
+SDK was structured or such that it's permissionless, it's independent. We do not need, for example, the permission of Cosmos to launch our blockchain and sort of hook up to it. We do not need to beat for para slots like in Polkadot. And it doesn't really matter whether the other chains succeed or fail.
+
+it's, it's, we like the idea of being permissionless in terms of building as well. So that was definitely the first point. Second point was really, it was the structure of the whole code in terms of technology was really clean. They really separated the consensus layer with application layer. You could really bootstrap things very quickly. It was written in Golang, rather, which, which compiled, which runs natively on the notes machine.
+
+rather than a virtual machine like in Ethereum or other computing platforms. And that really allows us to fulfill our vision. Our dream was to have every sort of, to have really sophisticated financial constructs, financial actions to be performed on the blockchain. And very early on, we felt that it was impossible to do it on EVM. It's impossible to sort of
+
+It's so impossible meaning not literally impossible but more like not viable because at the end of the day you're going to be fighting with the rest of the world. You're fighting with projects that are launching a token, meaning NFTs and I don't know, whatever other crazy things that they are doing. And for us, running on this independent chain, natively on the machine.
+
+ivan___switcheo_labs___carbon_protocol 
+the node and having only that run gave us the confidence that eventually when we make it or when the protocol makes it, it's going to be scale. It's not going to collapse under its own weight. So that was the second thing that was really important for us. And of course, yeah. Right. And then I think the final thing was the concept of IBC was really enticing to us.
+
+ivan___switcheo_labs___carbon_protocol
+we really believe that that's the way forward because if everyone understands what their protocol is supposed to do, and then you kind of link them up in a permissionless, trustless way, that I feel is the correct architecture for scalability. That's kind of the architecture that the internet should be built on or so, where you have independent entities and then you talk to each other based on your own trust model based on
+
+how you want it to be structured rather than having like a certain entity govern things and white list things and things like that yeah, scenarios like that. So the whole concept, yeah, we loved it from the start.
+
+Citizen Web3 
+Could you like say that Cosmos in a way has an architecture where you at the same time can have competition but don't have to fight for the block space because you have like app specific blockchains which can communicate which still leaves the ability to compete with each other in the free market but they don't need to fight for the block space.
+
+ivan___switcheo_labs___carbon_protocol 
+Correct,  so more importantly, you can compete. You don't like waste resources. You don't waste, it's efficient. You don't waste the user's fees. And more importantly, it's still composable. The blockchain still can talk to each other, which was the whole reason why we wanted to build like a second separate protocol, because we felt that we don't want to be siloed in our own, in our own DAX, our own blockchain that we chose.
+
+Citizen Web3 
+I'm going to pick on you a little bit. Don't worry. You said Ethereum is just Ethereum. What did you mean by that? I would love to hear a little bit more of your thoughts there.
+
+ivan___switcheo_labs___carbon_protocol
+So I feel that Ethereum as a global consensus, it's okay. And at the end of the day, a lot of the assets that we use are from Ethereum, say Ether, USDC, WBDC, whatever. But at the end of the day, it's probably not the correct solution for a lot of things, including building the financial real ways that we're trying to build. So the way we do it is...
+
+We custom build it in we custom build a code that it's meant to run in a specific way, right? If you're going to do borrowing and lending, you're not going to do crazy things with it. So we don't need a full virtual machine for that. We just need the building blocks that represent the different, these various states, these various actions that need to be done. Whereas for Ethereum, it's,
+
+They try to make it a sandbox, which is good and bad. The good thing is that you, you, you push at this sort of ecosystem, this community, but the bad side is that it's, you're, you're constrained to, certain limitations with the EVM. And more importantly, at the end of the day, it's never going to be truly cross compatible if another, another chain, unlike the IBZ chains where the protocol already built in this knowledge of.
+
+of communication with other protocols.
+
+Citizen Web3 
+You said also for you, one of the things was like a gap in the market. What specific gap are you talking about? You're talking about a gap of a protocol like your own, which can communicate and not sell it out. Or was there another gap that you saw and then that's what came up as something to fix that gap.
+
+ivan___switcheo_labs___carbon_protocol
+Yeah, so early on, was really a gap in just DEXs in general, in decentralized protocols in general. But with Uniswap and the whole boom of DeFi, that is a lesser reason now. But there is still gaps in certain areas. So what we have solved is DeFi or DEXs in a single protocol. We have not solved
+
+cross-chain exchanges. We have not solved.
+
+like derivatives in a scalable way. We have not solved on-chain options. We have not solved things that we're trying to build, that we've already built. So we have solved it on other blockchains, but not on Ethereum. So for example, on DMAX, we can do a full on-chain central limit order book, which means it looks exactly like Binance or FTX. And that's all running on the node itself. It's all running on the validators.
+
+There's no centralized back end hosting this order book. So now these are the gaps that we are actually trying to fill. And there's still a lot more that we are going to build in the coming months and years.
+
+Citizen Web3 
+You mentioned order books and I have a question and again, please correct me if I'm going off of the ramp here. I have noticed lately, I don't know since when, assume maybe like a few months, I would say that there is at least a couple of projects now that arise. think one is called SAFE, if I'm not mistaken. And there was another one that what they created is basically an order book, a blockchain, which is an order book. So for
+
+projects like carbon, what should I say? Or should I say like Switchall Labs in general with all of the ecosystem that exists underneath it? Is that the way forward to create their own big like blockchain order books? Or will they use things like other? I don't know what I mean, when I say order book, it kind of confuses my head because it's an order book, but it's a whole blockchain that is in specific order book. So
+
+What is the way here for something like Carbon and Switcho? Is that to create your own things like that and to connect them because IBC allows you to do that? Or is the way to use like side chains, which are actual order books, which give the feeds to other protocols? If that makes any sense at all.
+
+ivan___switcheo_labs___carbon_protocol 
+Well, I'm not super familiar with the project you mentioned, but I do know that in terms of on-chain order books, there are a couple of protocols trying to do the same thing. And I think what matters is composability. At the end of the day, an order book is just a representation of quotes or intents of various users.
+
+If a DApp is like DMAX for example, which is like the UI layer, right? If it's able to display the audiobooks on multiple protocols and combine it together, then I think it's great for the user. And do you need, do you really, I don't think that it's possible to force everyone to kind of use a single central audiobook layer. I think that's a bit naive.
+
+for various reasons. But at the same time also in the spirit of decentralization, I don't think there's a good model to go by. If your protocol is to say that, I'm providing you guys with an audiobook layer, I mean, that's fine. But of course, for us, have built, because our premise was that we want to make sure that everything that needs to be done can be done within the protocol. So we have built the audiobook layer engine within the protocol.
+
+Whether you use it or not, it's a different method to get there. For example, it's possible to interact with the liquidity pool modules. It's possible to do CDPs and things like that separately from order book. So it's really about providing the building blocks and making sure that it's available for the developers and the users when the comes.
+
+Citizen Web3 
+Before I gonna jump to like most of the community questions, I would love to hear a little bit about your background. I do know that you worked as a CTO in several companies, you worked in SaaS and HR. if the information is correct, of course, this is the internet is full of magical information these days when you want to find something about a person.
+
+Citizen Web3 
+Do you want to share how, how would, before, before like even that, how you heard of blockchain? How did you, I mean, you woke up one day and went, I'm going to build a decentralized protocol, right? Doesn't work like that. So how did you get to that? I would love to hear that.
+
+ivan___switcheo_labs___carbon_protocol 
+Well, yeah, so from my background first, I'm a technical person. So I used to be CTOs for many companies. Most of them, I mean, none of them were blockchain related, of course. Yeah, but for CTO Labs, no one wanted to be the face, so I had to do it. but yeah, so in terms of...
+
+how we got to know it, how we got started with blockchain, it's really because of our technical background. We started really from the technology angle, not even from like trying to build on it or even invest in it and things like that. How I first found out about blockchain was right around the time of Ethereum's ICO.
+
+So of course I've heard of Bitcoin and things like that, but I never really touched it. But what really got me interested was ICO because they shielded really well. They called it the world computer. So as a techie, I was like, wow, what's this cool thing? I've been on the Hacker News, It's headlines like the world computer. So I went to look more into it. It looked pretty interesting. I didn't really understand it fully at that time, but I was interested. So I wanted to try some.
+
+They had like the language, right? They had solidity, right? Smiling in the center of the page. So was like, hey, new language, let me try it out. But they said that to actually try it on production, right? mean that you need some ether. And the thing was that the ICO had already closed. And it was in this weird time where I just missed the end of the ICO. And then they were just doing the minting like two months later. So I was like, okay, maybe when they go live, I'll check.
+
+I mean, two months later. Funny story, two months later, it really appeared on Hacker News and I really found it like two days right after they launched them in there. But the thing was, when I went back, I was like, okay, time to play this cool new technology, right? They said that to get this Ether, you need to go onto this website called Coinbase. And you got to buy Bitcoin and you got to swap it for Ether and something like that. And I was like...
+
+ivan___switcheo_labs___carbon_protocol
+wait, what's this Coinbase? And at that time, looked sketchy as shit. Coinbase was like some scam website. It looked bad. So I was like, okay, maybe this is like some scam or it's not gonna work out. And funnily enough, just like a year later, like six months later, my teammate was working with me on one of the
+
+the companies that I was in off the city or just like my co-founders was like, have you heard of this thing called ETA? It went like 1000 % last week. And I was like, shit, okay, let's look at it. Like big time. So that's when we invested more time into looking at this whole technology stack. And like I said, just now, we also look at new protocols like Neo and we found these gaps, right? Like, hey, there's not enough people building on it. There's no decentralized protocols.
+
+And the rest is history, as I say.
+
+Citizen Web3 
+You said the Coinbase was looking at the beginning sketchy as shit. would like to add to that. think every single website accelerated to crypto up until 2016, I think, or 17, even, was looking sketchy as shit. think some of them still look sketchy as shit, actually. it's normal. What was your though? Obviously, your internal drive there was to improve that experience, I guess. that was more of a...
+
+I think to me that sounds at least more like a professional drive. Did you connect at all to the philosophy of blockchain, the decentralization, or was that later already?
+
+ivan___switcheo_labs___carbon_protocol
+Definitely, we started from a technology angle, but we connected really early on, in part due to our frustration about tokens and things like that, and also in part due to the fundamentals of it. Fundamental as in like the premise that you should be able to control your wealth, you should be able to control...
+
+where you want to spend your money. that's the thing because it fits my persona very well, right? And that's the reason why I never, if you look at my resume, I've never actually worked for anyone for very long. Because I like to control my destiny, I like to control, I like to have a lot of say over my future, over what I do, control over what I can.
+
+how I use my money is also very fundamental to me. So definitely that was one of the huge things that made us go into it and stick with it now.
+
+Citizen Web3 
+can totally relate to every word you said there about the destiny. So I understand exactly what you mean. think that being able to control of that and not believing in, well, for me, at least, I'm sorry if I will offend anyone out there, but believing in such thing as fate and destiny, that the wind changes that or whatever. To me, that was always since childhood, I think a very strange thought. And I always wanted to like understand how do I control it? How do I do it? And to me, that's why.
+
+I blockchain was like, that's how you see you can control a lot of things just by eliminating the third party, right? By the way, one strange drink, I'm sorry if I'm going to put you on the spot. You're having a drink over there. What's the drink for everybody who can't see? on, I'm going to because not everybody can see.
+
+ivan___switcheo_labs___carbon_protocol
+This is like a smoke hit. It's a whiskey on rocks
+
+Citizen Web3 
+Nice, nice. Well done. My mind is water. It's still a bit early for me, but I think I have a cup. It's quite usual. I have guests from very different time zone and we always like, I'm drinking like one thing like a tea or water because it's usually in the morning, but they're already drinking like whiskey, tequila. And I'm like, damn it. I need to change all that. I'm getting jealous. Sorry, back to the questions. So
+
+ivan___switcheo_labs___carbon_protocol 
+Ha!
+
+Citizen Web3 
+I think I'm gonna like do not a blitz blitz, but like I'm gonna start with some of the community questions and some of them might be a little bit repetitive. So I'm gonna try to skip some. So let's start with the general ones, I think. Well, you did answer already what other daps the team is working on. Is there any other teams? I'm gonna derive a question from that. Are there any other teams apart from
+
+the, let's say the Switchall Labs or Carbon Protocol in-house teams, which are currently sponsored either by grants or community pools that are working on other dubs and protocol in the ecosystem.
+
+ivan___switcheo_labs___carbon_protocol 
+So, things. One is that we've been ideating this DApp that it's meant to be a competitor to Oneinch that's a multi-chain and that's due quite in the early works. So I can't say too much into it, but definitely that DMAX will not be the only sort of application that runs on carbon.
+
+And the other thing is there are also teams that are working on apps for carbon, but not directly user phasing. like liquidity enhancement, liquidity bridging, things like that. So our main focus now for the protocol is really getting the TVR up, getting the liquidity in. So that's why a lot of the projects that we are
+
+trying to bootstrap, trying to grow right now, are very liquidity focused, more than application focused.
+
+Citizen Web3
+Okay, great. Second one. I love this question. What are you most excited about going forward? I love this question. This is one of my types of questions. I guess it's a very general question towards anything you want to take it off, whether it's the project or your own focus in life or whatever. Let's see. I'll let you flow with whatever you want.
+
+ivan___switcheo_labs___carbon_protocol 
+Yeah, there's just so many and so let's try to reduce the number. Of course, you're going to launch a new sort of financial product, right? We already have data futures. You're going to go with Perpetros. So like Bitcoin Perpetros, Ethereum Perpetros, that's going to go live like in one or two weeks, I think. But what really excites me the most would probably be the money market.
+
+and CDP module that we have recently added to the roadmap. So we haven't really talked much about it. I think we haven't even published the article. Hopefully the team will not be too upset. But anyway, yeah, I'm going to front run them a bit. Yeah, so we're going to build a mining market for the Cosmos ecosystem. And the idea here is that there will be a boring and landing market for all Cosmos app chains. So you can...
+
+collect your say cosmos and Borrow Atom for example or even USDC and then use this to trade, use this to long or short etc. And more importantly with this whole multi-collateral money market we also are looking at introducing a stablecoin. I know there's a couple of stablecoins coming out for the Cosmos ecosystem.
+
+but we are hoping that our version of it will be useful, will be the most useful for users. Two reasons, one is because of the way we're going to build this. We're going to build it such that there will be, you can use many types of Cosmos, AppChains, tokens at once to back this minting of the stablecoin. And on top of that, this stablecoin can be used on DMX.
+
+futures and perpetual markets. this is like a USD token that you can actually trade. You can long and short Bitcoin, can long and short Ethereum on.
+
+Citizen Web3 
+I have one suggestion for you. Don't hire Doc One if you're going to plan to do stable coin because Doc One, I'm joking, of course, I'm joking. But if I was to take the same question of what are you most excited about going forward outside of Switchio and Carbon and apply it to your, let's say like your decentralized opinions and the way you see the Web3 going forward. Is there anything like technology?
+
+Citizen Web3 
+or any like type of not even app, maybe yeah, technology. Let's go with that, that you're really excited about in the Web3 space, a protocol.
+
+ivan___switcheo_labs___carbon_protocol 
+Right. I really want to be able to really not use banks anymore. I think that's what really excites me. And I think we're getting there, but we are kind of so close, so far. The reason why I say that is that upcoming, there's the merge with Ethereum, right? They're going to go to proof of stake. That's like a huge one, in my opinion. It's really the next step.
+
+to making it mass market enough because the proof of work system just didn't work right. And in terms of fundamental concepts of layer. Then the next steps will be getting all these layer 2s to interoperate properly. Now there's too many layer 2s, it's like siloed again. What I really want to see is for all of them to interconnect, all of them to be liquid with each other. And of course,
+
+Ideally implement some sort of inter blockchain standard. So implement IBC with the other IBC actions. And then we have this whole descent, a truly decentralized network of protocols of value of monies flowing around without anyone stopping them. And then at that point, you really don't need banks, I feel. And I mean, I've a pet peeve with like bank and financial institutions too.
+
+The funny thing is that I didn't used to this annoyance with them. It was only after I made money, I got more annoyed because they are just terrible. It's you do crypto, no bank account for you, no method. Yeah, it's ridiculous.
+
+Citizen Web3 
+I totally, totally understand what you mean. It's is ridiculous. What is the biggest things that is stopping in the world of realizing that the evil is not the rich people or the poor people. The evil is the middleman that stands in the middle and tries to put one against the other, which is for example, today is the banks in some way, right, which
+
+do a lot of things. you already kind of mentioned that, but what do you think is the biggest thing for people to see that?
+
+ivan___switcheo_labs___carbon_protocol 
+Yeah, I think it's pretty hard to convince people in that manner. I think for the crypto community, us, what we really need to focus on is on making it better than the alternative. in the same way as... So the example I love to give was like, back then, the cable companies, the TV cable companies, there were a lot of them and they just charged ridiculous amounts for like...
+
+packages. They packaged like a bunch of stuff and then you only need one of them and then you pay a shitload of money. So then the pirate bay came along and then they started losing share because everyone was like, hey this is free, this is easy and people started moving towards that. But the thing was that it was not really about the fees or anything and the reason why you know that is because Netflix came along.
+
+And everyone stopped pirating shit. Everyone just signed up for Netflix. Why? Because Netflix gives a better user experience. They go to Netflix, have everything, they just one button, it streams, fine, it's $15, I'll pay for it. And that's the thing we actually need to do. We need to give users a better experience than the banks. And until we do that, it's very hard to convince people otherwise. So for us in the crypto space, we really need to work on user experience, we need to work on
+
+getting people to onboard easily if we actually want the message to figure out the better alternative. So the things I like to point out, it's always like application safety, how do you make sure that users know they're on the correct front end, wallet UX, how do you actually protect the user by improving the wallets. For example, the wallets can check contract addresses.
+
+ivan___switcheo_labs___carbon_protocol 
+they can get transactions for you, things like that. There's a whole bunch of things that we can do to actually make it better for users. And then you don't need to convince them because it's an equal or better experience and the banks, any little fault that that Cloulddoes, it's a very easy switch from there. Right now it's not an easy switch and I think that is actually the main problem.
+
+Citizen Web3 
+could you summarize your words that it's not about convincing users. It's about giving them adoption. It's about giving them. Bring in that industry to a point where users don't need to think. Not, not, to think in general, like not, not to use their brain, but not to like be overwhelmed with the amount of like switches, let's say like a pilot cabin thing where you're like, what am I doing? Like, you know, and just pull $15 and you're gone kind of thing. Okay.
+
+ivan___switcheo_labs___carbon_protocol
+Correct. So it's not about convincing them about something, it's just showing them that there's a better alternative and that's what we need to focus on.
+
+Citizen Web3 
+It's interesting that you say that it's not about convincing because like in the last, let's 10 years or even a little bit more that I've been around blockchain. One thing that I came to realize like last year only, or a little bit before that was when I was all this time talking about blockchain to other people, I found it very difficult. Like, I mean, first people who never heard about it. And then what I realized is this is you don't need to talk about blockchain to show people the benefits of blockchain. You need to explain to them how the current system works.
+
+And then they're like, so what do we do with it? Like, how do we change this? And like, well, then there is this thing. Yeah, it's maybe not ready, but I like that, that you say it's kind of like has a similar direction. The next question, like two or three of them, I'm going to kind of a little bit combine them because they're a little bit similar, but they're a little bit more specific. For, and I hear a cat. that a cat? Show me the cat. Come on. Where is the cat? Come on. I want to see the cat. Where is the cat? Okay.
+
+ivan___switcheo_labs___carbon_protocol
+She's outside. I don't know if you come in. Let's see.
+
+Citizen Web3 
+She doesn't want to go in? Let's see. Mine doesn't want to go in as well. She ran away too. But people love cats. Come kitty. Where are you? Where are you cat? Let's see the cat. cuddles. Is that the name? that is so cute. She's huge. She's huge. She's huge. it's a him. I'm sorry. He's he's he's huge.
+
+ivan___switcheo_labs___carbon_protocol
+All right.
+
+ivan___switcheo_labs___carbon_protocol 
+Yes, cuddles.
+
+ivan___switcheo_labs___carbon_protocol 
+Alright, this is for the... Yeah, Kados. He loves Kadoling. Yeah, it's a him. But he looks like a girl. He's a very pretty guy. Pretty boy. Very pretty boy.
+
+Citizen Web3 
+is a very good looking guy. Wow, he's huge. If my my car is somewhere right away, but if she came in, you would see why I'm saying that because she's like, she's like this is tiny pizza. Okay, so cute moments are over guys. So back to back to crypto back to the hardcore stuff. what where do you see carbon dynamics and I'm gonna add, you know, all the other protocols that you're working on in the next like three to five years and you kind of answered that already. But do you see
+
+Citizen Web3 
+Any specific, apart from more adoption, do you see anything else like that you think will happen in the next three, five years for those protocols that you're building?
+
+ivan___switcheo_labs___carbon_protocol 
+Yeah, hope it's of course that it will really be a... Yeah, I'll really say is that it should be equivalent alternatives to what users use today. Whether it's Terabit for options or FTX for features or Binance for just small markets. I think...
+
+That's the level we want to achieve and I do strongly believe that we can get to that level. And of course, the thing about the crypto space is that it's a lot of, it's not path independent. There's a lot of work to be done in terms of outreach, in terms of getting people to know about these alternatives. And that's something we're working really hard towards.
+
+and we want to achieve that sort of angle.
+
+Citizen Web3
+so slightly more specific questions I guess they're gonna be a bit I would assume easier for you and again guys whoever's in the audience listen you're not even right now but to be recording of course as well I'm sorry I won't be able to ask the whole questions you are great there is a lot of them and thank you for them but so I'm gonna carry on is Demixtoq in something you consider
+
+ivan___switcheo_labs___carbon_protocol 
+It's definitely something that we have been thinking about, we are not a, if you look at our team, we don't launch tokens like nonstop. Like even though there's so many projects we have like, for, there's just a carbon token, right? There's only one token for this ecosystem. And, and the reasons that we don't like to do tokens for the sake of doing tokens. However, it's something we're considering because we do want to
+
+to ensure that each entity is decentralized, each entity has its own sort of governance, its own sort of, how do you say, community that can run itself. We wanted to work even without CitroLabs. So for that to happen, eventually, that's probably a necessary thing. So what I mean here is that
+
+RBC carbon as sort of like the base layer, right? The protocol layer, something like Ethereum and DMACC would be something like Uniswap. So it does make sense for the application to have a token for various things. So one of the things is that we're trying to solve and it's that came up recently with the tornado cash sanctions and things like that is who's going to host the UI? What if Citroen Labs cannot host the UI?
+
+And therefore, can we use a token to incentivize a decentralized hosting of the UI that anyone can access in a censorship resistance, permissionless manner? So that's one of the first use case that is not really a use case. It's more like, how do we incentivize this? only way is like, OK, maybe a token. And the other thing is also in terms of governing what should be displayed, what should be accepted.
+
+on the UI governing things like incentive programs. So the other thing is incentives, I think it would be good to have each application have its own incentive mechanisms for users. If you use D9 as opposed to another application on carbon, you should have, say, in
+
+ivan___switcheo_labs___carbon_protocol
+in how DMAX works. So it goes back to the same mechanic that DeFi uses, That your users are your owners. And the way to do that is to have a DMAX token for DMAX users.
+
+Citizen Web3 
+And again, I'm going to use the question and a little bit like go over it. So because you mentioned that essentially you would why not consider ownership tokens or governance tokens or whatever is the right way to call them for every single protocol to make it more decentralized. Would you be considering I don't like airdrops questions, but let's go with it. Sorry, guys, whoever left that question.
+
+It's just about the airdrops in general. So would if the DemiX talking came out or any other protocols currently that don't have a code and sorry, they don't have a talking in the ecosystem came out. Would you be considering airdrops to atom communities or osmosis communities to raise awareness?
+
+ivan___switcheo_labs___carbon_protocol 
+Yeah, think definitely that's one of the main initial distribution methods that we will consider. And again, it goes back to my point just now where one of the main reasons for having a new token or a DMAX token would be to incentivize to attract users to the application. So it does make sense to do that sort of airdrop model, in my opinion.
+
+Citizen Web3
+would Atom be considered as a possibility for the time when the perpetuals markets will be launched?
+
+ivan___switcheo_labs___carbon_protocol
+Yeah, definitely. think one of the main things that we want to do at the start is to have perpetual markets for a lot of the Cosmos tokens, a of the Cosmos applicants, because I feel right now that's not many venues where you can actually do that. And since we are within the Cosmos ecosystem, we do want to start with supporting the various applications within the ecosystem.
+
+Citizen Web3 
+How is the progress of CDP going?
+
+ivan___switcheo_labs___carbon_protocol
+I think the team is going to kill me, but I think I want to launch it by the end of like next month at the latest. That's what I'm going for. Yeah, we'll see.
+
+Citizen Web3
+I have a they sent you cuddles as a spy and cuddles is just like transferring the information right now and saying, Ivan is like giving it all away, man. Guys, come on, we have to work too hard now for the next month. Nah, I'm joking. Let me see, there's a couple more questions in the chat as well, because most of them, you actually, I just realized like reading the questions, there's still a lot, but most of them you did answer as you touched on as you were talking. How are you planning to increase the volume on the DEMEX? Currently people are saying the volume isn't very high.
+
+Are there any plans that you have to increase that and how?
+
+ivan___switcheo_labs___carbon_protocol 
+Well, I think for volume, the first thing is liquidity. that's why I mentioned just now we're working on multiple liquidity programs at the same time. Some of them are already like really close. They're already in place, just that the amount is small. We are trying to make sure that we improve the reliability and the security of these programs first.
+
+And when you large, when you have a decent amount of liquidity, what do I mean by liquidity here is that if your order book only has like, I don't know, $5,000 each side, or your liquidity pool is like less than a million, right? There's not much a large trader can do. And I don't feel like, I don't think it's possible to have volume without like that sort of deep liquidity.
+
+And any volume you get is probably like, I don't know, fake or it's just mining your program or it's just you farming your incentive program. So first step is liquidity. When we see that deep, then I think you can ask like, okay, how do we get volume now? And of course we do have plans in terms for that stage as well. One of them, course, is like the DMAX token you talked about. Can that be used as an incentive?
+
+for users to try out DMACC. Second thing is, it's in terms of the traditional campaigns that central life exchanges run. Can we as a DAO come up with regular competitions, programs, referral schemes, etc. etc. I think all those are like ammunition. There are things that
+
+as an ecosystem we can use together and we have not actually even activated it yet. So to be honest, the feature, it's right there. The upside still untapped and we will get there I think.
+
+Citizen Web3 
+Man, thank you for that answering the bunch of questions. That was a bombardment a little bit. I'm going to take it a little bit to a resume, but I'm going to have it with a question at first. have two more questions for myself. One is, I like to go, well, you do have a very active Twitter and you have a lot of things on there, but I decided usually I do pick a quote and ask you a little bit to go over it, but I'm going to actually go with the Switch.io website. There is one of the first quotes that we see when we go on the Switch.io website.
+
+says enabling a world where trust is optional. So do you really believe that we can live, that we can come today as we are today as humanity, as society to a world where we don't need trust? Is that really you think is possible?
+
+ivan___switcheo_labs___carbon_protocol
+So I think in a large amount, in a lot of ways, I think it's possible. Right now, it's not just trust, it's also reliance. And probably that's the key idea we're going for. There's a lot of reliance on this trust that doesn't need to be there. And because of this reliance, people abuse the trust that you give them.
+
+And that is really the main trust of this statement. Can we remove this reliance on trust? Well, you can still trust people, but it is optional.
+
+Citizen Web3 
+I really hope that we get to that stage while we're still young. I guess you're more optimistic than me about the way it is, but it's good, it's good. On that note, to resume all that kind and considering, again, you're building like this huge ecosystem, which is multi-chain, which is important in my opinion, not siloed out somewhere in its own little world. What...
+
+keeps you motivated in your daily life, day after day to wake up and to keep on building, whether you're wearing the hat of the co-founder of Switcheo Labs or you're the CEO of Carbon Protocol today, more in that, or you need to think about liquidity or take care of cuddles or whatever, what motivates you to wake up every day and keep on going and building, man?
+
+ivan___switcheo_labs___carbon_protocol 
+Well, think I do have a lot of things going for me. First of all, I love what I do. I love building in general. I love technology. I love looking at these crazy new ideas that everyone comes up with, not that. Sometimes they're bad ideas, and then we'll have arguments over why UST doesn't work and things like that. Yeah, but...
+
+In general, I really love what I do. So that's the first thing. So I don't do it for the sake of money or anything like that. Even if it doesn't pay me, I would still like to build it. The second thing is, I guess the team and the vision. So I have gathered a team that's really great to work with and they're like superb in terms of everything.
+
+whatever their role is. And that's something that keeps me motivated to get to the office and like, things out with them. Yeah. And yeah, I was talking about the vision. At the end of the day, I believe that what we're building is useful. It's going to work. Even if we don't build it, I feel that someone else will build it. And then why not us? Why not we take the chance, take the step at it?
+
+and build something that could be the next big thing, the thing that everyone will use in five or 10 years. So yeah, all this really gets me, yeah, 8 a.m. I'm awake and like, okay, what should we do now?
+
+Citizen Web3 
+Love it man, love it. That was a good answer, I like it, thank you. Ivan, is there anything else you would like to mention that I didn't ask at all? About anything at all? In general?
+
+ivan___switcheo_labs___carbon_protocol
+I think we covered a lot of things. So I guess it's really for the new users. you're from the Cosmos ecosystem, haven't really heard of us, do check us out. carbon.network, dem.exchange. Do check out our protocols and let us know what you think. The social media channels are all there.
+
+Citizen Web3
+For sure guys, if your first time you heard of either the Cosmos ecosystem or any of the protocols we mentioned, there's going to be all of the links that Ivan mentioned, all of them, all of the protocols, all of the papers, it's all going to be there. And if you can't find it, we're doing a bad job, but I think we're doing okay. So Ivan, thank you very, very much for your time. This is, it's been a really great pleasure talking to you and I hope catching up in the future with you, man. Thank you.
+
+ivan___switcheo_labs___carbon_protocol
+Yeah, thank you so much.
+
+Citizen Web3
+Thanks everyone, bye.
+
+ivan___switcheo_labs___carbon_protocol
+Bye guys.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

@@ -1,0 +1,548 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/guillemferrer
+
+Episode name:
+Non Custodial Staking, Economics and the Recipe for Success with Guillem Ferrer
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode. And this time I'm not going to say Citizen Cosmos. This time I'm going to say Citizen Web 3. So for all our listeners out there, if you've been following our blog, sorry, and reading some of our recent stories, you've seen the change of the name on the revamp, but not to the point. So welcome to a new episode of Citizen Web 3 podcast. And this time I have with me, Gulliam from Dragonsteak.
+
+Guys are operators around several different chains. We'll talk about it in a second. And, William, hi. Welcome, man. Welcome to the show.
+
+Guillem DragonStake 
+Hello, thank you for inviting me to this podcast.
+
+Citizen Web3 
+I'm glad to have you on, man. I've been speaking like personally from my journey in Cosmos started like... I mean, I was following the paper, but I didn't start being active in Cosmos until 2018, late 18. And since I was, I've always in some way bumped into you guys, into Dragon's Take, in my past projects, in my current project.
+
+And yeah, so it's nice finally like having you actually on and speaking with you. Tell me man, tell me all about Dragon's Take. Tell me about yourself. Introduce yourself a little bit more than just Gullium. Who are you, man? What do you do and why?
+
+Guillem DragonStake 
+Okay, I'm going to start by myself. My name is Guillem. I'm from Spain, Barcelona. I discovered blockchain in 2018. Fun fact is that I first criticized Bitcoin when I heard about that, because like it was 2018 after the bull run to $20,000. And all what I read about Bitcoin was it's a scam, we're on the scheme.
+
+only drug operations and stuff. But after a few months later, I restarted my study about this field, about Bitcoin, Ethereum and blockchain. So I understand fully the key concepts and I understand that the television wasn't telling the truth, completely the truth. So my perception completely changed.
+
+and I've been studying blockchain and cryptocurrencies since then. And two years later, 2020, I started creating content in Spanish under the name of Crypto Boy. And just talking about blockchain, cryptocurrencies, DeFi opportunities in a way, in an easy way, that everyone, so mostly newbies, could understand and so they could join the ecosystem without fear.
+
+because there's a lot of different concepts, different tools. So I make them easy for them. And I grew up a community of 100,000 users, more or less, within two years and a half. And then I met Freddie, which is the founder of Dragonsteak. I met him in Polkadot event, Polkadot World Barcelona, in 2021, where both were speakers. So we create our relationship there.
+
+And yeah, last year I started, I directed a company based, specialized in education and consulting in new technologies. And I hired Freddie and Mario, which is our senior developer in DragonStake to teach some topics in the blockchain ecosystem. And that's all about myself. I think so. And then Freddie, which is the founder, I think it's...
+
+Guillem DragonStake
+a cool story to tell. Fred is dedicated all his life to the networks before the internet existed. So what I mean with that is that as we saw in the movies, the networks before internet work are synchronously. So as we've seen in the movies, there were people in boots, collecting messages, then transferring these messages to other boots in other countries. And then these boots...
+
+to the people in that country. So, Freddy started there and he discovered Bitcoin in its early stages, I don't remember the year exactly. And then after discovering Bitcoin, he started mining Ethereum by his own. And well, he started receiving white papers about new networks that...
+
+that won't work with proof of work, as we already, as all the networks before work, like Bitcoin and Ethereum, but with proof of stake and the concept of staking. And he discovered that he started working with the Cosmos Network and later founded DragonStake, the first company in Spain dedicated to proof of stake validation. And right now we are the first company in Spain. And I think that currently we are still the only
+
+Spanish company dedicated to creating blogs in Proof of Stake.
+
+Citizen Web3
+This is actually quite interesting. Freddy is mainly the guy I was going to ask you about, Freddy. Freddy, I spoke with him when I was saying that I contacted you guys a couple of times with the other projects. And I think he had like a little green dragon logo next to his name. And man, but you said you build. I have a question for you about the community that you build. You said you managed to build a community within several years of 100 plus thousand active users, right?
+
+Guillem DragonStake
+Yeah.
+
+Guillem DragonStake 
+Yeah.
+
+Citizen Web3
+Whoa man, that's a lot. What's the secret man? What is the...
+
+Guillem DragonStake 
+A lot of hustle, hard work. I worked with in these two or three years, like Monday to Monday, a lot of hours. And I strongly believe in blockchain and in cryptocurrencies and in their future. So when you strongly believe in something, you transmit these values to the people and they catch.
+
+Citizen Web3 
+Hahaha
+
+Guillem DragonStake 
+that feeling so they are more attracted to you, your channel, your value proposition. And I started in a beer market, yeah, 2020 was like pre-COVID, so it was a beer market. And then I got the boom with the bull run. So I think that's why my community grow up so fast.
+
+Citizen Web3 
+Well done.
+
+Citizen Web3 
+Well done, man. That's really crazy achievement. Really, really crazy achievement. Sorry, I'm moving here a bit uncomfortably, but it's the humidity in these regions these days. So I have to move, man. Man, let me ask you something a little bit more about the story of Dragon's Take. Considering like doesn't matter, you know, I mean, you said
+
+Guillem DragonStake
+Thank you.
+
+Guillem DragonStake 
+I understand you, no problem.
+
+Citizen Web3 
+Freddie's story considering, you know, he was doing networking before networking existed, and you know, you are into education, and then you said there was another person involved, right? But why? What's the point for you today for Dragon's Take? What is the mission? What is the goal? What's the where is it going? Why validate?
+
+Guillem DragonStake 
+Okay, as I said, I believe in blockchain and their future, so as Freddie and the DragonStake team. So that's why Freddie decided to found this company and started to focus all his life in proof of state validation. As I said, he worked all his life with networks. So he saw blockchain as the new improvement in networks. First, there was the asynchronously networks, then it comes internet, and then...
+
+it came the blockchain. So as we believe in the future of these new networks, one way to contribute to this ecosystem is creating the blocks, because as we know, without blocks, there's nothing. There's no dApps. There's no transactions. There's no value. There's no users. So Freddie and the technical team, they really get used to creating these infrastructures in the past, the present, and the future, of course. So it's a great thing.
+
+it was easier for them to create these nodes and start validating in different networks like Polkadot, Cosmos, Avalanche, MOS and soon Ethereum.
+
+Citizen Web3 
+And you say soon Ethereum, still you want to collect 32 ETH? That's the problem? No, I'm joking. But why, why soon? Why not already?
+
+Guillem DragonStake 
+Okay, that's a good question because right now, as most of you know, if you want to stake Ethereum in a native way without relying in third-party apps, you need to stake 32 ETH for each node. And we know that retail users don't have this amount. Most of them don't have this amount of ETH. So it appears a new network which will work.
+
+with Ethereum one, it's called SSUV Network. That they are in the alpha mainnet, if I'm correct. They are in the mainnet, but I think it's the alpha one, alpha phase. And they are creating tools to stake your Ethereum without relying in third party apps and without needing the 32-Eath.
+
+Right now, if you don't have this amount of ETH, you can go to Lido or other protocols to stake your ETH, but you are relying on a third-party app. It's not self-custodial. We strongly believe and we are building everything in a self-custodial way and improving that. So we are closely working with SSUB Network to get these tools as soon as possible to the users. So we are really happy.
+
+Guillem DragonStake 
+that these new tools arrive to the user. So it will be easier for them to generate passive income with their ETH, without relying to third-party apps, of course.
+
+Citizen Web3
+What about Rocket Pool?
+
+Guillem DragonStake 
+What rocket pool can you can I'm not familiar with the early they are leaky staking right?
+
+Citizen Web3
+I they are they are the first non-custodial staking they were before Lido they were before everybody else they were the first I highly suggest you guys check give them check out as well RPL is the ticker and the guys have been building for a long time they've really you know
+
+And by the way, they already, I think, offer some tools. I don't want to advertise too much, so please do your own research. And this is for everybody, of course, who's listening to this. But in terms of, you know, like I also support what Guilhem, you just mentioned that, you know, Lido being a big giant, but yeah, we have to be a bit decentralized and take care of those risks as well. So yeah, definitely look at non-custodial options, people, whoever is here in this.
+
+Guillem DragonStake 
+Yeah, I didn't know about Rocket Pool. I'm going to, I have the website here. I'm going to look inside. Yeah, I'm going to check out that. It's quite interesting. I mean, yeah, it can be Rocket Pool. It can be SSUB. The idea is that every staking should be self custodian. So if there's more options than just one, better for everyone.
+
+Citizen Web3 
+Check him out man. Check him out.
+
+Citizen Web3 
+idea.
+
+Citizen Web3 
+Yeah.
+
+Guillem DragonStake 
+Decentralization.
+
+Citizen Web3 
+I absolutely, absolutely agree. Absolutely. Man, you mentioned while you were telling about, um, a dragon steak in general and about you and Freddie that you met, uh, at a polka dot, uh, event. And, um, uh, I know that you guys validate, uh, several different ecosystems, uh, or rather chains inside. I don't know what's the correct way to say it, but yeah. And, um, so I'm.
+
+You know, one of the goals that I had with Citizen Cosmos and one of the goals that I still have with Citizen Web3, the main primary thing, really why I want this project to exist is curing tribalism. It's for people to understand that regardless of which ecosystem you belong to, this bullshit doesn't matter who is bigger, who is smaller. You know, like we're not here to compare PPs. Well, we can, but...
+
+Yeah, but anyways, and you tell me straight away that you guys already, so I mean, so it's something you guys, I guess, understand, and a lot of validators I speak to, they are not about tribalism. So, and you said you build a big community. So I'm really curious. My question to you, why does tribalism happen if validators are happy to validate Cosmos, Polkadot, Ethereum, everything else?
+
+So who is spreading this tribalism and how do we stop it? How can, what is the best way for people to understand that it doesn't matter what blockchain, as long as it's open, verifiable, decentralized and blah, of course.
+
+Guillem DragonStake
+I think that this comes from outside, not from inside. I've been in a lot of events, I know a lot of people inside the ecosystem, companies, KOLs, and everyone. And we always say that we don't see each other as competitors. When I create content, I don't see my colleagues as competitors, so, oh, he has more views than me, I'm not gonna help him or I'm not gonna talk to him, no.
+
+just the opposite. We are going to create good synergies between the two of us to get... Yeah, to get an advantage. Yeah, get a bigger result, but together. So I think that this comes from outside, not from inside, and I'm talking about Dragon's Take Vision, as I said, with Rocket Pool.
+
+Citizen Web3 
+bigger result, yeah, I understand.
+
+Guillem DragonStake 
+I don't care if it's Rocket Pool, if it's SCV, it's Dragon's Take, it's 4 Ball, Citizen, we don't really care. We believe in decentralization and we need more options than just one. So we are going to help our colleagues in whatever they need and create good...
+
+right now, like this podcast. I mean, you are Cosmos validators, you invite us, it's not a competition, it's a cooperation, you know? So I think, I believe that this strong community comes that we are a few right now. We are little people, we are not a lot of people in the industry yet. So we are...
+
+not fighting each other, just helping each other to make this bigger and get all rewarded.
+
+Citizen Web3 
+What is the... apart from education, obviously, because education is kind of the obvious answer. What else do you think can help, I don't know, us or everybody else to stop... to cooperate, to cooperate more, not to stop anything, but to cooperate more apart from education. And I'm talking about Web3 space, of course, for the sake of the conversation, not of the whole world.
+
+Guillem DragonStake 
+I think that to make the cooperation bigger or better, we should think like not... I understand we are all companies. I'm a company. Dragonsteak is a company. I mean, myself, Guillem is a company. I see myself as a company. So I'm gonna... I need some revenue to live. So Dragonsteak to get bigger. So Citizen and the SAP.
+
+But as I said, we are not a lot of people. We need to create a good image to the outside. Right now, people that is not inside this industry see us as animals, scammers, and that we don't have future. And we get, we earn this reputation because of bad actors, of course, but...
+
+If we stay closer to each other, if we continuously improving and creating and developing, sooner or later people will start losing this bad idea of this industry. So first thing is the education of course. The second key point is to start thinking as a group, not as individuals.
+
+It's difficult, I know it's human instinct. And the third one, it's making all easier. Right now entering the ecosystem, the interpretability, it's really difficult. It's difficult for us that we are in this industry for many years. I cannot tell for people that start today. There are a lot of information, different apps, they are not user-friendly.
+
+So I think that this is one of the main goals to make this easier for everyone and just to calm people inside the industry and start creating and developing more DApps and infrastructure here. I think, I don't know, I would like to know your answer.
+
+Citizen Web3 
+It's pretty much somewhere on the same thing. I was gonna like agree with you about simplicity. I've been using crypto since 1012 or something like that. And sometimes, if I don't, I mean, for example, yesterday was the first time I had a chance in a long, long time to take care of some of the like, long term accounts, so to speak, you know, go there, go there.
+
+Guillem DragonStake 
+Whoa.
+
+Citizen Web3 
+Um, stake that and stake this and I can tell you that I haven't done it in several, like about what four or five months, like really, really go deep into it. And I was like, what the fuck? What is this? Why do I still have to, man, what year is this? So we still in 2012, sometimes like you have that feeling where you need to especially go between different chains and you need to bridge something that doesn't have proper UI, they need to go find either like something like a comma. Yeah, of course. I definitely agree with you. I think maybe as well.
+
+maybe as well responsibility, but that goes together with what you said about thinking. So, but maybe rather than thinking just as a group, I agree with you about that. Maybe I would love to see people taking more responsibility of everything that they do in general, of course. And I think that would translate to more cooperation maybe as well, because if I'm not expecting somebody else to be responsible, then maybe I will
+
+have more initiative to go and do more cooperation with Dragon Steak if I don't think Dragon Steak will take care of it or I don't know, four ball will take care of it, you know, or somebody else that I'm like, okay, maybe nobody will take care of it. I have to take care of it. So I'll go a Dragon Steak. Hey, four ball. Hey, I don't know, P2P. Do you guys want to cooperate? Well, I don't know, something like that something in those
+
+Guillem DragonStake 
+Yeah, I completely agree with that. If anyone is doing nothing, so you should start that and talk with all the other colleagues and then, hey, we should do that. Yeah, we don't think about that. We are always in our heads, in our brains, with our staff. So sometimes we don't think outside the box or in other things outside of our business. So it's great to have...
+
+Citizen Web3 
+No.
+
+Citizen Web3 
+Mm-hmm.
+
+Guillem DragonStake 
+different people that comes to you that says, oh, you should do that. Oh yeah. Thank you.
+
+Citizen Web3 
+Man, you mentioned team several times. Before I ask about the team, how many networks do you currently validate, by the way? Do you know?
+
+Guillem DragonStake 
+We are validating Avalanche, I have them in my screen. Avalanche, Polkadot, Kusama, Cosmos, Ebmos, Kaba, Forta and SSUB.
+
+Citizen Web3 
+Ah nice nice. Nice.
+
+Citizen Web3 
+So eight. Okay. And that's three people right as far as I understood or you have more people in the team.
+
+Guillem DragonStake 
+No, we are currently eight in the team. Yeah. Most of them are developers. I mean, just me, myself, and another colleague are from marketing. The other ones are founders and developers as well.
+
+Citizen Web3
+eight people. Wow. So it's a, this is interesting because a lot of
+
+Citizen Web3
+Mm-hmm.
+
+Citizen Web3 
+It's interesting because a lot of people underestimate, I think, how many people it takes to run a validator that is a project and doesn't just validate a network and that's it. And even if it's just that people underestimate how many people it takes to run. And I know I spoke before on this show to people who are managing to run one, two networks single-handedly.
+
+I have even spoke to people who have done more before, people who are, but they don't do operations. They don't operate a project. You know, they operate, I don't want to say mining facility. I'm really sorry to say that, but it's not. It's a validation facility. But so, so yeah, my question to you is like, how do you find guys like as a...
+
+is a team because validating the networks you mentioned, you know, unless you're a huge validator, the income that comes in is not always great. And having a team that has to operate the project, yeah, it needs to eat food, you know, it needs to pay bills. And apart from, you know, making profits. So I'm curious, how do you guys survive with eight people on this bear market?
+
+Guillem DragonStake 
+Yeah
+
+Citizen Web3 
+And what do you guys do? What's your advice maybe to other validators who are maybe smaller or bigger, I don't know.
+
+Guillem DragonStake 
+Okay, I have to tell that first of all, when you start creating a company, you start, you make all by yourself. And if you have a co-founder, just the two of you. So you don't, you can't have this amount of networks because each network is like a baby. They need control 24 seven. If the nodes are down services, maintenance, any...
+
+error, you need to quickly correct them before you get a slash or you get penalized. So you need to thanks to things of being egg people, Freddy can sleep at night. So they can turn to control all the servers and nodes and stuff. But they started just Freddy and the other founder,
+
+Guillem DragonStake 
+with Cosmos getting a grant winning a hackathon. It was the hackathon of Game of Stakes, I think it was called Game of Stakes in the testnet. It's a hackathon in the testnet, not in the mainnet. They won one of the prizes there. It was the uptime prize, meaning that their node, our node was the best.
+
+one in not receiving attacks in a longer time. So they received a grant in Atom Token so they could start the node. It's easier for a VC or any company that has capital, it's easier for them to just buy the tokens, create the nodes, have the infrastructure and just that work fluidly.
+
+But if you are starting with this amount of capital, this amount of infrastructure, you should start working. And this is advice for anyone that would like to start their own node company or their nodes without creating a company by creating a company. They should work in the easy stages of each network, in the testnet, mainly in the testnet. So.
+
+If you don't have a background in the ecosystem, you are just a new one, they won't trust you. They won't give you a grant for your happy face. You need to work hard for that and work before receiving any compensation at all, I mean, for free. And if you contribute in any way, community management, technical issues, whatever, it's your...
+
+your expertise, they will have that into account. And then if you talk with them, they will be more open to help you giving a grant or giving you work or whatever do you need. So that's the first advice that I give to these new people that would like to start as a validator. And the other one would be the.
+
+Guillem DragonStake
+At a technical level, I am not a professional. My expertise is marketing. But from my point of view, it's what I talked about earlier, that 24-7 control. I think it's one challenge or one thing that people should take into account really seriously, because they cannot. There are a lot of problems always 24-7 in the space. So you need to stay really close to the monitor and correct these errors.
+
+Citizen Web3
+Sorry. Gone. Gone, gone, please, Grym.
+
+Guillem DragonStake 
+And also, sorry, yeah, it comes to my mind. Growing a community. After you receive the grant, after you create your node, you could just live with the revenue that you have with this amount of tokens and what it gives you. But if you want more, if you want to create a bigger company, go to other networks. You need to.
+
+money. If you use the money the first node gives you to live, there's no money to invest. So you need to grow a community so people could know your validator and vote and delegate their tokens with you so you could get a higher revenue and then invest in your company with creating other nodes or going to other networks or creating new products or services, whatever you want.
+
+Citizen Web3 
+This is actually really interesting. Your first advice is what I have been used to say to people when they ask me about newbies ask me like, oh, so I only have a hundred dollars or whatever. How do I, or I don't know coding. How do I, well, how you start to look on get haps, you start to look on commit to open source, you go and you draw a logo. You don't need to, you just, just find the place, how to connect. And then as soon as you find that.
+
+you will find that path to the ground, so to speak, or to work.
+
+Guillem DragonStake 
+Yeah, and this is like another startup. If you have another expertise that is not techy, so you don't know how to create these nodes or these infrastructures, you should talk with people in the ecosystem and creating synergies and say, hey, I need help with that, could you help me? Or would you like to found this company validating? Yeah, okay, so you are gonna take care of the technical issues.
+
+I'm going to take care about the business economics. I don't know, business, marketing, design, whatever is your expertise. So if you're not able to do all the stuff needed to create the company, you should align yourself with people in the industry. We are really open to create a synergy. So it won't be a problem to find a good colleague to work with.
+
+Citizen Web3 
+Yeah, we have good happy faces, you know. Man, I know it's not an easy subject, but you mentioned it and you've done it yourself. And I think when you mentioned point number three about, you know, you said, well, you can receive the grant and stay with the money that you will get from that income or whatever that brings you if you stake at a percentage, whatever, I don't know. Or you can create a community.
+
+Guillem DragonStake 
+Also.
+
+Citizen Web3 
+Man, but this is the secret, wherever I speak to, whether it's validators or projects or, I don't know, or our founders or anyone, everybody is always, that's one of the hardest things everybody finds. Like, so how, when you say create a community to somebody who is from outside of this, you know, to somebody who's hearing this, what does it mean create a community? Would go on TikTok and film yourself?
+
+Not really making sense, right? Because, well, I don't know, maybe for some validators it will work. I don't know, maybe. But what do you mean by that?
+
+Guillem DragonStake
+TikTok is a good social media to grow your audience organically without paying any cent, but it's not for everyone. I mean, right now, as I said, the blockchain ecosystem is really small. So if you go to TikTok and talk about staking, you can and you should at the beginning, but you won't get a lot of audience because...
+
+you are inside the crypto ecosystem, which is small, and inside of that you're talking about a really specific topic, which is staking. And not a lot of people know about the staking or know the... or they are not really interested in that, but you should. You should use mostly Twitter. Twitter is... I think you can agree with that. It's the main crypto social media.
+
+So you should grow your community in Twitter or Telegram slash Discord. Both are great. And then you can use TikTok to just, OK, maybe the videos will be seen by 2,000 people. But maybe these 2,000 people will be like 20 people that understand the staking, that like your videos, that...
+
+like your image, your values, and they are going to invest in your, they are going to delegate the tokens with your node. So everything that you could do is welcome. It's not easy. There are companies that grow faster than other ones. I mean content creators, individual people, it's easier to grow than a company. Exchanges have better resources to grow.
+
+And staking companies or validating validator companies, they have a, right now, they have a handicap. But it's not impossible. And not just social media, you should go to every event that you can, offline or online. Maybe as a speaker, maybe as a...
+
+Guillem DragonStake 
+So you can create networks and start talking with people, with communities, with, I don't know, with normal people. So here, there in these events, I knew a lot of good members in the community and we created synergies by knowing each other in these events like Freddie and me in the past. So I invite everyone to participate in the, in every event.
+
+They can.
+
+Citizen Web3 
+It's not easy for sure. I know there is a lot of events, but I know that a lot of people, especially online, I mean offline it's still possible, but online that's it. You get lost especially with, but I understand what you mean. I understand.
+
+Guillem DragonStake 
+Well, there are a lot of Twitter spaces, Telegram groups, Discord. We have the idea of an event like with a stage, with, I don't know, camera, a lot of attendance, speakers, whatever. But there are a lot of small events in site communities or maybe by myself, I ask Guillem, today I'm going to make Twitter spaces.
+
+Citizen Web3 
+Yes.
+
+Citizen Web3 
+Yeah
+
+Guillem DragonStake 
+And if I saw that you participate a lot, that you are really interested, we are going to create a good relationship, because I will remember you. And in the future, we don't know. Maybe we can create a company together. You have a business, and I could help you with connecting with our college, with our business. You don't know. You never know.
+
+Citizen Web3
+Absolutely. Man, let's talk a little bit about challenges for validators. I mean, we kind of been speaking about one community. I mean, we also spoke a little bit about another one like grants and stuff. But in personal experience relating to DragonStake, what are the challenges, the biggest challenges that you guys come across as a validator?
+
+Guillem DragonStake 
+I think that finding good networks. I mean, as I said, we are in eight networks right now, but this doesn't mean that we only work with eight networks. There are a lot of networks that we started working with them in the testnet and they didn't arrive to the mainnet or they just died, get run out of funds. So it's not easy to select these.
+
+the good networks or the ones that have future. And I'm gonna put an example. It's just an example, it's invented. Don't trust that what I'm gonna say, but imagine that Polkadot right now, it's the best network in the ecosystem, but in the next full market, it disappears. I mean, people...
+
+won't pay attention to the network, they don't create new parachains, they don't develop anything, all your efforts will stay there because people are gonna unlock, most people will unlock their tokens, they are gonna sell them, so I think it's one of the challenges, selecting the good networks and the ones that are gonna be persistent in the future.
+
+Because being mainstream now, it doesn't mean that in four years, you will still be in mainstream. And it not depends on you. I mean, I don't have any control in Gavin Wood and Moonbeam and every DApp or network that it's built inside. So I think it's a key challenge working with these networks. And maybe we work with other networks that didn't go well.
+
+you invest time and money and it goes like...
+
+Guillem DragonStake 
+Do nothing.
+
+Citizen Web3 
+I know what you mean. And I think one of the worst feelings is not even lost opportunities, but to me personally, it's more about, it's a personal thing, you know, when you spend a year or two years, sometimes more, dedicating, creating content, dedicating your time, trying to help to find contacts, to create a synergy. And then suddenly it just goes to nothing. To me, it's very, I understand what you mean. Yeah.
+
+Guillem DragonStake
+It's part of the game. I mean, I continuously say that in my social media that blockchain companies, crypto companies are like startups. You need to try, you need to try product services and if they don't work you need to pivot, you need to change and just...
+
+Citizen Web3 
+No.
+
+Guillem DragonStake 
+wait and just keep working until find a good product service and in this case a good network that attracts people so you can attack it's not that a good work but attack the people to make them delegate their tokens with you so you will get more revenue and you can continue to grow
+
+Citizen Web3 
+Yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah, yeah
+
+Guillem DragonStake 
+you can continue growing your company.
+
+Citizen Web3 
+Do you have, without going super deep into it, do you have a list on the top of your head of criteria that would be good criteria for any validator to select or not select a particular network? On the top of the head, kind of thing.
+
+Guillem DragonStake 
+Yeah, it depends a lot on who you...
+
+Citizen Web3
+Who you speak to, right? Who you are to...
+
+Guillem DragonStake
+Yeah, yeah. In the case of Freddy, because Freddy is the one that is the one who selects the networks that we are going to work with, first he looks if the network fosters interoperability. Because as I said, he started with networks. Network is like a construction that connects everyone. It's the internet 2.0.
+
+Citizen Web3 
+Mm-hmm.
+
+Guillem DragonStake 
+in resume so Like that's why we what we We work with Polkadot and cosmos also networks that aims Decentralized application self custodians taking like in this case SSUV or other networks that brings How they say that brings new
+
+new concepts, new features in the networks, that they are not a copy of a copy. And also that, I mean, we are not gonna work with VCT. We are not gonna work with Binance Smart Chain because it's really centralized, so it's not inside our values.
+
+Citizen Web3 
+I understand.
+
+Citizen Web3 
+Let me ask you a question, man. I have my...
+
+Guillem DragonStake 
+First of all, first of all, I would like to know your... Your answer in that. What are your main... Okay.
+
+Citizen Web3 
+It's related. My question is my question is because I wasn't going to ask that my question is appeared now because of those because of that answer like I
+
+Citizen Web3
+Like one of the biggest problems that I realized over four years of doing this particular thing, this particular project was that values and my beliefs, my values are my biggest enemy. My, um, and I'm not ready to, I'm the kind of person who is ready to fight until the end. So that's why, like, and today, you know, yeah. So my answer is also values.
+
+But that is the problem. The problem starts to arise that what I realize is that you cannot create a product if you have too many values. And for example, I am a person who has way too much values, way too many. It's impossible to deal with me, really. I'm annoying myself sometimes. So a question is, how the hell do you guys live with it, man? Because I find it very hard. So what helps?
+
+Guillem DragonStake 
+Hehehe
+
+Guillem DragonStake 
+Yeah, yeah, we are seeing this right now. The last bull market or the last years, we talk a lot about fundamentals, about how fundamentals were key to the success of a company. But at the end, we saw that not always the fundamentals won. We saw a lot of scams, meme coins.
+
+networks that they don't bring anything new to the ecosystem and they like go explode. And the other ones like they bring a lot of features, they work really hard, a lot of the apps, a lot of the five opportunities and well built, they went to hell. So it's really frustrating seeing that the fundamentals, it seems like the fundamentals, they are not working.
+
+At least in this beer market, in the bull market, everything works. Like the little shit in your floor, it works as well. So it's really frustrating that the values are not the key point right now. And I don't know in the future, in the next few years, if they will be the standard or we will be seeing...
+
+like all Memcoins, all blockchains without any use going up and the other ones like Polkadot, Cosmos or Avalanche going down.
+
+Citizen Web3 
+understand, man. It's a question of, I guess, whether the market buys it, right? Whatever is getting sold.
+
+Guillem DragonStake
+Yeah, and here most of people is here for the money. So you cannot punish them. I mean, it's their money, their decisions, but in your point of view, it's like frustrating because you are not here just for the money. You want a good feature for the, for blockchains. But.
+
+Citizen Web3 
+Yep. Yeah.
+
+No, no, no.
+
+Citizen Web3 
+Yeah, no.
+
+It is.
+
+Citizen Web3 
+I think, well, I think, I don't think that, but I hope that, you know, I mean, in my opinion, proof of stake is obviously also not ideal, but I hope that, you know, we will not just, it's not just a lot of people that even if the majority of the market is there for the money, I still think that the, I hope, sorry again, nothing.
+
+Citizen Web3
+that the core of that community of the market is still there for the ideas, I believe at least in that. And that's what keeps me going, I guess. And I guess that will develop things in the direction which will try to take the focus, I hope, again, away from the money and more on how to develop proof of stake, how to make governance better, how to...
+
+make things more decentralized, how to make nodes talk to each other without revealing IPs. I don't know, whatever, like, like blah, blah. Like I hope that it's going to be that way and not another way.
+
+Guillem DragonStake 
+I agree on that. And I think that this will... I don't know how to say that. The change between this market and what you said now will be the regulation. In my opinion, you cannot avoid regulation. It's coming whether you like it or not. So regulation, I hope that will keep apart.
+
+from this ecosystem all the scammers or all the not good projects that aims for the future of the blockchain and the inter-parallelity networks, staking, whatever. So I hope that regulation will help to just maintain the good projects and get away with the bad ones. I hope so.
+
+Citizen Web3 
+It's interesting the amount of opinions in crypto that goes from the spectrum from, hey, we want to be decentralized, hey, we want to be regulated, hey, we want to be this way, this way. It's crazy. It's a crazy world really is I mean, I'm on the other spectrum here. But it's interesting that we are both on the same in terms of values, but on the other spectrum in terms of regulation, not regulation, but still, yeah.
+
+Guillem DragonStake 
+At the end, we are going to go to the same point, but we are taking different paces.
+
+Citizen Web3 
+Yeah, it's funny.
+
+funny. So what I'm saying, it's really funny in crypto to meet so many people where you see it from so many different angles and at the end it's all leads to all roads lead to Rome, right? One last question before I go into the blades. What is currently, at least for you again, for Guriem, not necessarily just for Dragon's Take, what is for you?
+
+Guillem DragonStake 
+Yeah.
+
+Citizen Web3
+the one thing that Dragon's Take has done that you are built, or it could be a tool, it could be something that you guys did, like help build a community, write a paper, something that you guys did in Dragon's Take that you are personally proud of as GLM.
+
+Guillem DragonStake 
+Okay, talking about myself and DragonStake 2, we're really proud that all the networks that we are working with, we started in the testnet and in the genesis block. So it means that we are there from the beginning. So we help them in the testnet to check all the stuff. We have a good...
+
+Guillem DragonStake 
+good anecdotes in Cosmos. We stopped a civil attack in the test net and other stuff. So we are really proud about that, that all the networks that we're working with, we are there from the beginning. And also we developed some tools in two ecosystems. The first one, it was in the Polkadot ecosystem. It's called polkastats.io. It's a blockchain explorer.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+Oh, I use it. I use it.
+
+Guillem DragonStake 
+developed by our senior developer. It's developed by Mario Pino, who is our senior developer. And then we have a recent creation, like a kid, like a baby, also directed by Mario, and it's the SSUBscan. You can search it in the ssubscan.io, and it offers a complete set of functions.
+
+Citizen Web3 
+Thanks.
+
+Citizen Web3 
+Nice.
+
+Guillem DragonStake 
+that allows you or new users to evaluate the network performance and also the operators and validators performance. It's not a blockchain explorer per se as Polka.Stats, as PolkaStats. It's focused on the operators performance. It's more a validators block explorer. So here you have all the information about the network, operators and validators.
+
+Citizen Web3
+Nice.
+
+Guillem DragonStake 
+look inside these nodes and select the favorite ones to delegate their ethereum.
+
+Citizen Web3 
+The last one.
+
+And the last one is blockchain stats, right? You said blockchainstat.io, right? The last one. Polkas... Ah, ssuviscan.io, sorry, sorry. The last one, okay. The Polkas stats, I know. The other one is ssuviscan.io, right? Okay, nice. And all the links are obviously, guys, if you're listening to this, and are in the descriptions. Yes, so this was more of a personal question for myself. I didn't hear, to be honest, the last link.
+
+Guillem DragonStake 
+No, it's PolkaStats and this is ssubscan.io Yeah.
+
+Guillem DragonStake
+in the description.
+
+Citizen Web3 
+Okay, man, believe so. Three questions. First one. Three doesn't have to be blockchain, you could answer anything you want. Three technologies that you are curious in personally today in the world. Could be projects, it could be technology in general, whatever you want. Three things.
+
+Guillem DragonStake
+Okay, I'm gonna say Ethereum, Arbitrum as L2, like no, another Arbitrum is ZKSync and then DAAC. It's a DAAC, it's not blockchain, it's a DLT.
+
+Citizen Web3 
+Which one?
+
+Oh.
+
+Okay. Well, what's the website to go and read about it if anybody wants to? Yeah. Ah, okay.
+
+Guillem DragonStake 
+No, it's not a project. It's a technology. It's a distributed ledger technology that differs from blockchain. It's like an improvement of...
+
+Citizen Web3 
+Oh, okay, okay. I directed the critic graph. Okay. Sorry. I understood a director a career graph. Okay, I'm sorry, man. I really I heard Bach. Sorry. And I was okay. Sorry, man. Second one. What is two motivational things in your life that help you to keep on building and keep on waking up every day.
+
+Guillem DragonStake 
+Okay.
+
+Guillem DragonStake 
+No problem.
+
+Guillem DragonStake 
+I always want to be the best of myself. I think that in life, the main goal is to become a better version of yourself every day. Not competing with the other ones, just with you, being better than the past you. So I'm really competitive talking about myself. So I always wanted to learn about new stuff, new skills.
+
+So one thing that keeps me being like, hustling every single occasion. And in this case, blockchain, I strongly believe in blockchain technology. I strongly believe in the future of cryptocurrencies. So that's the main reason that I'm still here in a bull market. I in a bull market, in a beer market. I'm still...
+
+creating and still developing with other colleagues. So I think that these two main, yeah, these two main topics will be my motivation in my day to day.
+
+Citizen Web3 
+Last one then. Last one is... Doesn't matter if it's real or imaginary. Doesn't matter dead or alive. Doesn't matter. Give me one, but one. Character or a real personage or persona. Or it could be a coder. It could be your boss. It could be your family. Somebody that inspires you still today. Not just in the past, but today. It's not your guru, but inspires you.
+
+Guillem DragonStake 
+I would say Will Smith.
+
+Citizen Web3 
+Well, okay, that's an unusual one. Damn, I did not expect that. I did not expect that. That was unexpected completely. Why? Please, please, please.
+
+Guillem DragonStake 
+Do you want a fun fact? Just to finish? My name is the same as Will Smith, but in another language. Guillem in English is William. And Smith in my surname is Ferrer. It's a Catalan surname. And in English it's Smith.
+
+Citizen Web3
+Okay.
+
+Citizen Web3 
+Okay. Ha ha ha.
+
+Guillem DragonStake 
+So I'm Will Smith in the catalan version.
+
+Citizen Web3
+Will Smith. Is the Will Smith from Barcelona? No, no. Okay. Man, I like it. I like it. I was not expecting that. I was. Come on. Well, Independence Day, Will Smith. Yeah, pretty cool. You know, but not always. It could be you could be better than Will Smith in a lot of things. I'm pretty sure, man. But it's cool, man. That was really unexpected. You got me by surprise completely. Absolutely.
+
+Guillem DragonStake
+Yeah, I wish.
+
+Guillem DragonStake
+Hahaha
+
+Citizen Web3 
+Man, it's been a real pleasure speaking with you. And it's nice to put a face even, you know, that it's not, of course, a team behind the project, but it's still nice to put a face to somebody I was been speaking to for many years online, about four years now already a four and a half with other members of your team. So yeah, and yeah, man.
+
+Thank you for finding the time and joining.
+
+Guillem DragonStake 
+Thank you for inviting me. I really enjoyed this podcast. I'm sorry that my English is not perfect, so sometimes I get like a blank, but I'm doing my best.
+
+Citizen Web3 
+Perfect. It is perfect. Great. It was great. It was great. Thank you very much. And please don't hang up just yet. And thank you everybody who is tuned in and listen to us. Thanks. Bye.
+
+Guillem DragonStake 
+See you soon, bye bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

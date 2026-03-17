@@ -1,0 +1,573 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/pavelparamonov
+
+Episode name:
+Trustless Systems, Luck and VC's with Pavel Paramonov
+
+Citizen Web3 
+Hello everyone and welcome to a new episode of the Citizen Web 3 podcast. I keep trying to say the old name Citizen Cosmos I know I'm sorry people Citizen Web 3 now today I have with me Pavel Paramonov He does research the Wales capital DC Pavel. Hi, welcome to the show
+
+Pavel 
+I think thanks for having me.
+
+Citizen Web3 
+Thanks for joining, man. We haven't had over the four years that many VC. I've had about two, three maybe guests so far before you. So we like talking to VCs. VCs have a lot of opinions which make you see things different. But before we jump into all the crazy shit, let's do some cheat chat. First of all, if you want to introduce yourself, anything you want to tell about yourself, what you do, what you like, whatever.
+
+Pavel
+Yeah.
+
+Pavel 
+Thank you.
+
+Yeah, sure. So yeah, as you said, as you said, my name is Paul, and I'm currently working as a research analyst in the Wells Capital. So focused on the on the protocol and in the in the investments research. So basically, before that, eventually how I got into crypto is similar story for most of the people in 2021. I was basically flipping NFTs on Solana and Ethereum. And I also worked in the like,
+
+traditional IT as a product analyst. So, and after the bear market hit, I decided to work commercially in the fund. I have chosen fund because actually there is a lot of capital and there is not that much people so you can have a great influence on the products. So on what you're doing. So you're not like a small, small detail
+
+like for example in the big company like Binance. So yeah that's eventually how it came and now I'm doing the research, the analytics in the crypto, in the blockchain and all of that fancy words we have now. So yeah I think that's it, that's about me.
+
+Citizen Web3 
+You said there one thing briefly that I'm going to bug you a little bit about. You said, and then I found a job with job in VC. Now a lot of listeners probably wonder how the hell do you just wake up and find a job in VC. So it didn't just happen, right? I mean, where you specifically, maybe a little bit more if you want, if you want, of course, to talk a little bit more about it.
+
+Pavel 
+Yeah.
+
+Pavel 
+Yeah.
+
+Pavel
+Yeah, sure. So basically I had an internship as a product analyst at the company called LA Talking, which is not very well, which doesn't have like good opinions in the community because of the toxic CEO, unfortunately. So basically after that, I wanted to find a job in Web3. I didn't care if it would be a fund or some protocol,
+
+to work in crypto because new industry. Yeah. So, and that was a really like, I think one of the, one of the most difficult moments because I had.
+
+I was looking for a job like for six months. So I basically, I went through some 50 or 60 interviews, I rejected like multiple times. And then eventually I just randomly applied to some fund, which I don't want to call the name because yeah, we had some disagreements in the past. Yeah, so.
+
+Citizen Web3 
+I understand.
+
+Pavel 
+So yeah, I got an internship and then later, I was working with my colleague and the colleague went to another fund and then at the D Wales and then he invited me. So that's basically how it all started. It was like a hundred applications a day, like numerous times I was rejected. I think like one of the most painful moments is when you go through like three or four stages
+
+of the interview and you're like talking to the co-founders and they like everything, but then they message you like a day later, like two days later, so that, sorry, we can't take you unfortunately. So basically that was six months of the grinding of applications of interviews and you learn a lot like when you're doing this, so yeah.
+
+Citizen Web3 
+So the advice there is persistence, right? For anybody who wants.
+
+Pavel 
+Yeah, of course. Because, yeah, sure. Because eventually I was lucky, but luck is a word. If you try more, then you have more luck. So that's basically your luck in the numbers if you try more. So yeah.
+
+Citizen Web3 
+there's a good there's a good saying in Russian, right? The water doesn't flow under a stone that doesn't move, right? So something like that. It sounds silly in English. But yeah, I hope the listeners can understand this. So wait, Pavel. Okay, that's cool. Still, let's do some more chit chat before we start talking, you know, crypto. Um, well, I mean, but why web? I mean, you said I was sitting there flipping NFTs. Why web three? What drew you to web three? What? Why you decided?
+
+Pavel 
+Yeah. Yeah, that's it.
+
+Yeah.
+
+Citizen Web3 
+Blockchain is something you want to be part of.
+
+Pavel 
+Yeah, I think it was a pretty, pretty random moment, because back in the beginning of 2021, everyone was going crazy about NFT, everybody was talking about it, and it came to the point where a taxi driver was asking me about NFTs, he had some news. And it's really difficult to ignore such topic when everyone is talking.
+
+about it. So I just decided to see what it feels like, what is NFT about. I didn't know what like deep, what blockchain is or what crypto is. So it was basically just about some, you know, some pictures that are being traded for some like enormous amount of money for some reason. So yeah, and then...
+
+And then I liked it, I liked the technology of the portion where you can have, where nobody should trust anyone. So it's basically a trustless system. So you just remove a middleman to remove the trust factor. So basically I like the innovations and I think that's the back point three.
+
+like blockchain and crypto in particular, it's the most emerging topic in the 21st century, like with the AI perhaps. So, and basically being one of the early guys that can do some influence, have some impact, it's a pleasure that we were born in such a long way. So basically going in traditional IT, I think it's a little bit boring right now,
+
+because you have like, for example, if you want to go in data science, for example, there are like millions of guys doing the data science, millions of guys doing some guides, some, you know, millions of companies using, you know, some data science technologies, some machine learning and stuff. But eventually when you enter the new industry, like crypto, like blockchain, there are not that much people that care and there are not that much people that actually understand the stuff.
+
+Pavel 
+And I think the most key factor would device and see the web with the web two and web three.
+
+is people, because most of the web3 people, they don't separate work and life. So basically, you don't have work-life balance. Your life is your work and your work is your life. And basically, it's such an uncommon term for the traditional IT, information technologies, because basically, you work eight hours a day, and then, okay, so I'm done working, I'm gonna do some fun stuff. But when you work in crypto, all you do is the fun stuff.
+
+That's it, yeah.
+
+Citizen Web3
+It's funny, my ex-partner, she, a few years ago, when I moved to a new place, someone asked me once, also, how much time do you spend per day on work? And I don't know, I looked at him and I was like, I don't know, like six, seven, eight. And then my previous partner, she looked at me and she started to laugh and I was like, why are you laughing? She's like, because you do 22 hours a day.
+
+I was like, no, no. But yeah, but I understand. But honestly, by the way, I have to say to you that with time, I think that work life balance is something we all find I think that, you know, been in crypto for about 10 years now, maybe more 11. And, and I think it's something that takes time, but I think it does get there. But let's talk about something to do with research, you know, this is something I'm really curious about. And I'm sure all the listeners are curious about
+
+Pavel 
+Yeah.
+
+Pavel 
+Oh, okay.
+
+Citizen Web3 
+I would love to hear your perspective about, before we go into like specific, like I don't know how you guys approach networks, I want to know that if of course you fancy talking about it, but I wanna talk about your approach to research in general. I think for crypto, it's audience, it's a very important topic. Of course, we all look for those, for everything, whether it's technology, whether it's a gem, whether it's, I don't know, community, whether it's something else.
+
+Pavel
+Yeah.
+
+Pavel 
+Mm-hmm.
+
+Citizen Web3 
+and we all look for it, we search for it. What is your approach, not necessarily to research in a token, but to research in general from the big capital letter R? How do you approach any topic when you start to research it?
+
+Pavel 
+Well, actually, I think there is the key, it's in the word analysis itself, because analysis as a definition is you basically have something and then you divide it into the parts. So basically that's what, I think that's the key to learn something, to research anything, like anything you want. It's basically you have some difficult topic, and then you try to understand what does it consist of. So basically there are,
+
+there is a, okay, let's take the blockchains as an example. So, okay, you have a blockchain and you have to, you want to understand how it works. So you basically, first of all, you have to find what parts of the, like the blockchain consists of.
+
+So basically it has some blocks, okay? It has some chains, what are the chains? It has some transactions, some fees. And you basically start wondering like, okay, what are blocks? Why are they blocks? Not some triangular figures. So why is that? Why is it blocks? How many transactions of the block? What are transactions? What does the fees depend on? So you're basically, you have one big structure, then you divide it into 10 multiple parts.
+
+then you divide these 10 multiple parts into 100, 100 more multiple parts. And you basically, you study all of the details and then eventually, eventually you will come up understanding the structure as a whole. So for example, like I clearly, I remember this moment when I didn't know that much and I thought the minus, minus of the Bitcoin, they do the mining from the air. And it was, it was like,
+
+got excited when I learned that miners actually not only earn the money for mining the block, but actually for validating the transactions. So actually the fee that we pay for the transaction is not going to somewhere's pocket, it's going straight to the network. So basically that was my realization, one of the most fundamental ones, but that was so, I don't know, I remember this moment for some reason. So yeah, I think the key is you first, you have a structure, you divide it
+
+Pavel
+researching each part, then you connect these parts together and then you actually understand you're doing the synthesis. It's about like, you know, collecting the parts into one structure. So, yeah, so you're basically doing some legal stuff. So yeah.
+
+Citizen Web3 
+I understand basically breaking everything down. This is pretty much, to be honest, with every researcher I have, this is more or less their go-to call. What about, okay, let's get more warmer to our topic. And I'm going to have a strange question for you straight off the top. What is your personal, Pavel, go-to resources for when you wake up and you're a researcher for a VC, everybody wants to know what a VC is doing, and Pavel wakes up.
+
+Pavel 
+Yeah.
+
+Citizen Web3 
+opens his computer. I mean, I don't want to know your passwords, save them, but, you know, save all the social stuff as well that you do. In relation to crypto, I'm joking, man. In relation to crypto, what is the websites you open? What is the first place you go to look for information?
+
+Pavel 
+Thank you.
+
+Pavel 
+Well, I think it's a little bit simpler for me, because I work in a font with lots of smart guys. And actually, those guys just provide the protocol. So basically, there is no magic pill. So I read the same influencers on Twitter that all of you guys do. I read the same news. But basically, when you're working in the organization, you have some guys that have some kind
+
+So basically...
+
+So yeah, basically the contacts and all of the alpha, whatever you want to call it. So it comes from the networking. So you basically have to be, you have to have a good reputation in this space and you have to be smart enough. You just have to work, okay? So in order to achieve some meaningful connections, to talk to some smart people. And basically I think that's one approach
+
+one is you're really interested in some topic. For example, it's LSD, Likusakian derivatives, just for example.
+
+And then you want to understand, like you have a fish protocol like LIDAR finance, and then you want to understand the other ones. So you actually start looking for other ones, you start looking for new ones, because eventually they just pop up on Twitter. So everything pops up on Twitter. It's just, you just have to be smart enough to try to the keywords to find it.
+
+Pavel 
+So yeah, there is no magic pill. I read the same news that all of the other guys do. But yeah.
+
+Citizen Web3 
+Damn, damn, man, like straight a disappointment. Come on, you have to say there is a magic pill, but you have to, you know, go for it. I'm kidding. I'm kidding. I understand. I understand. To be honest with you, I think I came over many years to the same conclusion that, you know, there is no magic pill. It's all about understanding. And for me, computing, for me, computing, understanding of computing helps a lot of understanding how blockchains work. You know, we see the bandwidth
+
+Pavel 
+No, not unfortunately, unfortunately not.
+
+Pavel
+Yeah.
+
+Citizen Web3 
+You know, it's following more or less the same cycle as computing did development of recent computing did in the 90s and the zeros. And that's how like my kind of thinking builds up. I'm not sure if you see the same similarities or not.
+
+Pavel
+Yeah.
+
+Yeah, I agree with you, yeah, definitely.
+
+Citizen Web3 
+Man, what about this like, you know, there's a lot of questions, to be honest, I can go here. But you know, I mean, I'm sorry for asking this. But you know, this is in I'm gonna ask this because this is something it's a bit of an off topic and we'll and we'll go back to research. But this is some Yeah.
+
+Pavel 
+It's fine. Yeah, ask anything you want. That's great.
+
+Citizen Web3
+LSD, can we get LSD? I'm talking about, of course, here and the other. No, no, of course, liquid, stake and derivatives. No, I'm gonna ask you about VCs, man. So lately, you know, when I say lately, I mean, the last cycle, more or less. And when I said last cycle, I mean, I don't know what part of the cycle we're in. I'm not to be honest, that care that much. But, you know, the last sort of one and a half, two years, there has been a lot of big stories that include VCs, you know, there is, of course,
+
+Pavel 
+Yeah.
+
+Citizen Web3 
+um some and there was of course a couple more and it even got to Binance. I mean Binance is not exactly a VC but there has been a lot of negative um not reputation but news and structure from not all VCs because some of them have actually not been in the negative light but why is that? Why are people um why is
+
+Pavel 
+Mm-hmm. Yeah.
+
+Citizen Web3 
+The crypto community or is it the crypto community? Is it the world in general that is negative towards VCs? Is it a bad, what's your opinion on this? Do you feel it by the way, or is it just me maybe?
+
+Pavel 
+Yeah, so, yeah, that's an interesting question. Thank you for that. So basically, I think the key thing that community don't understand is that we see, so the main concern is we see have access to the early investments deals. So, and you basically, you can buy like some token or some equity for really, really low prices.
+
+And of course, if you're just a regular retail user, you can't do that. But there is a big reason for that, is you don't have enough capital. So it's basically about the money. So of course, like if you're like a retail user who want to invest in the early stage protocols, that's fine, but you have to be an angel at least. So you have to, you just have to accept that everything you invest
+
+is what you can afford to lose. So basically as a guy who works in VC, so I don't quite understand that hate and that toxicness that goes because there can always be and there will always be some negative, some bad investments. And I think the case that I can give you here
+
+in crypto paradigm, they invested in the in the in the NFC collection in the see like generative art called gobliners. And, you know, after this gobliners, like the price of these goblins, they went like, to zero, they removed all of the
+
+all of the mentions that it's a crypto VC fund. So it's basically, they were just, oh, we never did crypto, so sorry. So basically everyone has its problems. And so, yeah, I think it's just about that VCs are known in the space and they're big guys with reputation. And when some investment goes wrong,
+
+Citizen Web3 
+Hehehe
+
+Pavel
+Of course, it's a sign off for the community. Oh, but this is our bed. Nobody should take investments for them But it's there are always there are always more good cases. For example, like you can take any protocol that is Like uniswap for example, okay So which is backed by the same paradigm that did better investments and in gobliners so it's basically I think I think it's about the popularity and the So yeah, so I think that's it
+
+Citizen Web3 
+Oh, sorry. I want to let's carry it on. I like this. And so what about you know, there is a big opinion and, you know, I'm gonna play like I always say this to my guests. I always play devil's advocate. So let's play a little bit. But what about you know, the whole sentence of VCs are just using retailers exit liquidity in crypto.
+
+Pavel 
+Yeah, sure.
+
+Pavel 
+Oh, well, actually that's a really good question. And that's a topic that I was thinking, I think yesterday. And yeah, and actually, yeah, actually, eventually, I think there are two, yeah, I think there are two types of products of the protocol that can be divided into two categories. And one is speculating, and second is infrastructure. So basically,
+
+Citizen Web3
+Let's go. I love it.
+
+Pavel 
+the VC is always interested in providing returns for their limited partners, for their investors. And basically the first side is infrastructure, is basically when you invest in the stuff that can be a foundation for the world, for the Web3 world and for the, I don't like this word mass adoption, but let's say that is.
+
+That's when we see really, really...
+
+have a big impact and they do really good things. Because eventually they allocate the capital for the foundation for the lots of stuff in the future. So that's okay. And I'm personally like, I can be a bit biased here because I'm a fan of infrastructure, all of these, you know, protocols. But the second side is speculations. And of course there are some problems
+
+Pavel 
+that we can witness even right now. Like for example, recently there was an announcement of the new layer two called blast. And eventually...
+
+So eventually it was backed by Paradigm and by Standard Crypto. And I think the big guys with names, they actually troll the community for some reason. I don't know, that's my opinion. Because when the community sees some big vices, Enchus closes the run for the project.
+
+So they eventually started going crazy for some reason. For example, like, okay, let's take blast. And basically what we know about blast is it's optimistic rollup and it has native yield, which is promised, which is not up yet.
+
+We have no documentation, we have no main net, we have no test net. So it's basically the only thing the protocol does is it's depositing assets from Ethereum to LIDAR or to the maker donkeys of stable coins. And when you deposit the money, it's locked for three months. So it's basically you take, you give the blast, your Ethereum's locked for three months and the product is not live. So you basically just stake it in the product.
+
+And the last line, the last but not the least, is it's backed by Paradigm. So basically the community starts to go crazy because the Paradigm, they are investors, they are investors in this product and they are the creators of the word called Airtrop.
+
+Pavel 
+So, and you know, everyone likes money, everyone likes speculations, everyone likes, you know, getting some money for the activities. And if this protocol wasn't backed by Paradigm, I don't think anyone would use it. Like why would you deposit your Ethereum into non-existent product, like locked for three months? I mean, isn't it crazy? But because it has a line by Paradigm and standard crypto.
+
+people feel like it's okay. So that's generally, I don't think we should blame VCs for that because community falls for it themselves. So.
+
+It's basically, it's about a thing that if you're a blame in paradigm for doing this, why would you deposit your Ethereum? So that's basically, I think the same situation was with frontage as well. Like kinda I look like I'm a hater of paradigm, but that's not it, it's just a case. So there is of course, yeah.
+
+Citizen Web3 
+No, no, you don't. You do a little bit, a little bit. But no, I'm kidding. I'm kidding, man. That's up to you. It's okay, man. We had people who hate one story or the other story. It's okay not to hate them too.
+
+Pavel 
+Yes, so...
+
+Pavel 
+Yeah, that's just my opinion, of course. So, you know, you know, frontage, it's basically, so I don't know how to call it, but it's basically an only funds on the blockchain with some three, 3.3 dynamics. So you, when you basically sell your friends for money, and if it wasn't back, so it's like a big ponzi scheme, like 99% of the crypto which is in speculation is ponzi. So let's be honest.
+
+And also it wouldn't be used if the paradigm wasn't the investors of it. So in, and if it didn't have the word airdrop in it. So basically community falls for it and then blame the VC, which is, I don't think that's the right thing to do actually. Cause yeah.
+
+Citizen Web3 
+So to try to put it into perspective. Because so basically if what you're saying is, sorry to interrupt you of course, but then carry on. But so basically what as far as I'm hearing you, what you're saying it's lack of responsibility, right? That is the reason, right? Okay, okay, okay.
+
+Pavel
+Yeah.
+
+Pavel
+Okay.
+
+Pavel 
+Yeah, yeah, for sure. Sure. That's, uh, that's, that's.
+
+That's a lack of a reason. And of course, you can't define the world by black and white. So it's and actually, yeah, you can blame you can blame VCs, you can blame like the same paradigm for like, creating Ponzi schemes. And to, you know, to, to just farm the money from the face, I mean, front edge, they outperform the theorem, which is crazy, in terms of face. But actually,
+
+Citizen Web3 
+course.
+
+Pavel 
+they don't realize how much the same VC actually have impact in the sphere. For example, Paradigm, they're a big... They're like the biggest contributors to the open source. I mean, they have created a lot of like frameworks like Artemis, for example, for MAV.
+
+For example, they created like a Retherium library. They created Foundry, which is widely used in the audits and the security researchers. So they created like, there is a guy named Storm and he created a library for CREO for extracting the data. So basically their impact in the open source is insane and you can't really override this, but at the same time, yeah,
+
+So nobody here is good or bad person. It's not about black and white. So it's about, okay, you can like something, you can dislike something, but you can't judge based on the one case.
+
+Citizen Web3 
+Do you think it's possible? Well, or do you think there is a solution today, tomorrow, in 10 years' time? I think what you say and what you are talking about here, I think a lot of it, I'm going to try and make a thought here. It's going to be difficult because it's a bit of a mess in the head. It's with regards to distribution. I think that a lot of what you say upsets people.
+
+Pavel 
+Yeah.
+
+Citizen Web3
+Not that they blame, not okay, if we all want to blame somebody, it's a natural human reaction. Okay, the cup is broken. Who broke the cup? Well, maybe it was me when I did it with my back and I didn't see but you know, obviously, I'm gonna blame myself last. But, you know, I think maybe the distribution thing, you know, maybe a lot of people get upset because you know, what happens is quite often.
+
+Pavel 
+Yeah.
+
+Citizen Web3 
+in smaller or medium, small to medium project, the medium project that happens less often, especially with bad distribution, what we see. We've seen this with Helium, for example. We've seen this with a lot of projects where VCs have esteemed it, where there was a takeover, like a hostile takeover. It's not about VC, actually. So let me correct myself here. The question is, I'm gonna shift a little bit, maybe from the VC side here, but could such...
+
+issues be solved where people get upset with a particular entity, regardless of whether this entity is a VC, whether they are an angel, whether they're a contributor, whether at the foundation, whether the team is there maybe, you know, something that can be done here in terms of distribution. Could the distribution be improved? That's what I'm asking. So these kind of things are avoided where somebody dumps.
+
+Pavel 
+Well, actually, that's a big, I think that's the main problem in terms of, of course, in terms of tokenomics and in terms of the investments in general. For example, okay, let's say, yeah, let's say the tokenomics side, for example, and let's say the protocol is raising one million and let's say, okay, let's say 300K is allocated for the investors.
+
+And the catch here is how to allocate this 300K. Should it be distributed to one person, you know, to one entity? Should it be distributed to 10 different entities? To 20, to five? Why for 20? Why to five? Because the main problem here is, okay, if you do like, if you do have one investor, you have to be really, you know.
+
+You have to be sure that this investor won't kick you out. And all of that stuff. So, because for example, the Anderson Horowitz, they have 4% of Uniswap supply. And I mean, that's insane. That's insane. And yeah, eventually even more. So, you know, it's even worse.
+
+Citizen Web3 
+I think they have more!
+
+Pavel 
+So, and the question here is if they decide to do, if they decide to dump, they will dump. Okay, but we all know that Anderson Horowitz is a good fund, so they won't dump. But the whole point of the blockchain and the blockchain industry is to be trustless.
+
+but you have to trust the big guys. So that's the problem right here. So that's the problem if we allocate the big supply for the one entity. So now let's say we allocate this 300K for like 30 different guys, 10K each.
+
+So, and basically that's also a bad thing to do. Because when you have 10K, which is, you know, it might be a lot for some people, but for VC it's nothing. And when you have 10K over the year, over the allocation, you can basically dump, okay? Everybody would like to dump if they see like two X or three X. So, and basically how can you incentivize these guys not to dump their 10K?
+
+is like, that's not much. And you also can't predict the behavior, the behavior that they will have after like the tokens go live. So that's another problem. So, and basically I think this is the problem that...
+
+also relies on trust. So you have to eventually, there is no trust, there is no trustless systems in terms of like, you know, people relations and you always have to trust nobody does.
+
+Citizen Web3 
+But here's another solution here. No, I mean, like there's a solution here that says, well, let's not sell to VCs.
+
+Pavel 
+Well, of course there is a solution here and actually the statistic.
+
+of the VC funding in general is if you don't take VC's money, your chances to success are way lower. But if you take the VC's money, your chances of success is lower than to be overly successful. So you're either like super successful or you're either not successful at all. And basically, of course you can be self-funded. Okay, you can have like you can be bootstrapped and all of this stuff.
+
+But eventually it also lays on your shoulders. So, you know, for example, if I have like a million and I'm not some, you know, and I just decided to build some project, I mean, I would count every cent. So, and I would like to know where every cent of the mine invested mining go. So, and basically the funding, the VC funding is, it's not always about
+
+money. I mean, it's the main thing, but it's also about some marketing, some growing, some all of that stuff, because you have initially you have a third party that are interested in you succeeding, so they can earn money. So yeah.
+
+Citizen Web3 
+But doesn't that defeat the object then? I mean, you said yourself, we're in a trustless system, right? So we should not trust anyone to help us to succeed. We should succeed ourselves, shouldn't we? I mean, we know better not to trust banks, hospitals, police, and other governments and other entities. Why should we trust somebody to market ourselves?
+
+Pavel 
+Yep.
+
+Pavel 
+Well, eventually, yeah, that's a trap.
+
+That's a trap that eventually at the end, at the end you have to trust somebody, okay? So even with like, even with the blockchain, you have to trust that validators, all of the validators don't decide to go down yesterday or tomorrow. So basically that's, you can actually remove, you can't remove the trust completely, but you can lower it as much as you can.
+
+For example, like you got in the VC funding, there is a blockchain called Kenta, I believe, and it's not funded by the VCs at all. It operates at the like, you know, VCLS without the VCs. So, and it goes quite well, but I think it's an exception.
+
+Yeah, so I think that's about it. And the first, and I think the first, and the most important protocol and the most important project in the crypto wasn't founded by VC, which is Bitcoin, of course. So yeah.
+
+Citizen Web3
+Well, you're arguable, arguable. But, you know, let's I have I have your opinion. This is what I want. I want to understand how you see it. You know, it's not about my opinion here, honestly. But what I want to understand also from you is, I know you have a lot of opinions on Ethereum on gas fees. I've been kind of like doing my research, doing my homework here.
+
+Pavel
+Yeah.
+
+Citizen Web3 
+I'm curious, what is your opinion on the development of the L2 infrastructure? And I'm curious, what is your opinion in particularly when it comes to bridging, particularly when, you know, we're going to be because bridges and moving capital between blockchains is the only trustless way we can go if we want to go trustless. But there is a lot of fucking trust issues there. So
+
+Pavel 
+Yeah.
+
+Pavel 
+Yeah.
+
+Pavel 
+Yeah.
+
+Citizen Web3
+I'm curious about your opinion. I'm curious, what do you think about this whole situation?
+
+Pavel
+Yeah, so first of all, I think I'll start with the bridges and then I'll move to the L2s if that's fine. So, eventually I am a big hater of bridges. As a man who wrote two articles regarding this question, bridges should die. That's the thing, because you know you can't rely on it.
+
+Pavel 
+like, you have some, you know, you have broken something.
+
+but you don't have some money to buy the new one. So you try to do something to fix it, but it will break again. So that's the basic thing to think with breaches. Because, okay, for example, we have Ethereum, and we have Solana, for example, non-EVM. Okay, there is a breach for Ethereum to Solana. Okay, then we have, for example, Optimism and Arbitrum. Okay, there has to be a breach for Optimism and Arbitrum.
+
+So the thing is that's not scalable. You have to create, okay, you have to create like a new solution for every, so, you know, every pair of blockchains. And of course there are some cross-chain bridges, you can say, but actually these, the blockchains added to cross-chain bridges, they're added by the developers themselves. So eventually you have to add this overall.
+
+So basically the thing that can remove the bridges and the bridge infrastructure in general is I think there are three protocols. One is called, you know, Cosmos IBC. So the second one is called like ChenLing CCIP, you know, and the third one is called Layer 0. So these are the top three protocol
+
+remove the breach infrastructure so you can make the payments and the transfer of the assets seamless without knowing, without like relying on some third-party stuff.
+
+Pavel 
+So, and eventually, yeah, that's about the bridges. So bridges should die, that's for sure. And we should have some standards, we should have some industry standards for moving the assets from blockchain to another one. So that's basically like, you can compare it with the web too. For example, like each blockchain is a website. Like imagine if you have to, if it didn't have some browsers, so imagine you have to go from
+
+one website to another one using like every time you're using different bridge. That's that's madness. So, so yeah, so we, we eventually we have to have a like, yeah, yeah. Yeah, for sure. Yeah. And, um,
+
+Citizen Web3
+You mean different SPs for data relaying. I think we already did it. Ha ha ha.
+
+Pavel 
+So yeah, that's about it. So we have to have an industry standard. And I think it's will, I think in my opinion, it's only my opinion, it's gonna be Chainlink because Chainlink is already like a big infrastructure provider, big Oracle provider. And I think it's gonna be Chainlink. So that's about the bridges. So regarding the layer twos, you know, every layer two is different.
+
+and every layer two is aimed to do their own stuff. For example, okay, let's take the roll-ups and the ZK things. So, okay, let's take Arbitrum, Optimism and Polygon, for example.
+
+So, you know, they all have, you know, different goals and different stuff. For example, Arbitrum is really good for DeFi for multiple reasons. It's like, if you look at the Arbitrum TVL in DeFi, it's probably like, I don't know, two or $3 billion while in the second largest, you know, layer two optimism, it's about 600. So that's a big difference. So Arbitrum is just eventually better for the DeFi.
+
+for the yield stuff and all of that. And it's clearly Arbitrum is aimed for the DeFi. For example, Optimism, it's more aimed for the infrastructure and for the scalability in general. For example, there are a lot of good infrastructure product that is built on Arbitrum, for example, Mirror, Mirror XYZ, which is a medium for the blockchain.
+
+And for example, Polygon was a side chain, before releasing Polygon, ZK, ADM. So, and they really shifted towards corporate development. So they offer their services to the corporations for Microsoft, I might be mistaken here. Yeah, so every layer two has different goal. And eventually, you can always
+
+Pavel
+I will firstly point out the obvious problem here is liquidity fragmentation, which is like most of the guys want to talk about, but the liquidity fragmentation fixes with the releasing of the industry standard without relying on the bridges. So you can seamlessly send the assets. So it's not because number of blockchains will increase that's they're always increasing. Like, of course you wouldn't expect in like 2020 that we would have something like sui,
+
+I feel like say some Optus and all of that stuff. So there are always some more block inside it. So you can't really, the liquidity will be fragmented anyway, so you can't deny that. And basically to fix the problem, you have to create an industry standard for seamless transferring of the assets. So that's it, yeah.
+
+Citizen Web3 
+I think a lot of it is like with any young industry, which is what we're dealing with here, a lot of it is buried, in my opinion, personal opinion, in wording, in semantics. And a lot of the time, we put semantics like bridges, and then when we have IBC, Grandpa, we have a lot of stuff like fusion, like gravity. There is a lot of different, I think it really is about semantics. It's about, you know, like...
+
+There's a lot of things like in crypto, it's like inactive and jailed validators, you know, like the confusing people, you know, like API, PR, you know, we, we take a lot of semantics from which is a good, which API and API are a bit different, of course, example here. But still, I totally agree with you. I think that I do have an opinion that the bridges are not bridges such as that will offer you services again. And we are stuck into semantics here because what we call bridges today.
+
+And the bridges that I'm foreseeing when I'm talking about IBC, Grand Park, Gravity Bridge, and so on and so forth, Fusion, whatever, those are very different technologies. And I think they will slowly catch up probably with the liquidity that is provided elsewhere and that will probably make a difference, but let's see. I have one more topic for you, which I know is...
+
+Dear, not dear to you, but I know you're interested in that topic. And the topic is like... Oh, by the way, before we go into that, I'm gonna say something for the listeners, and I'm sorry that I'm gonna say it in such a... But I will definitely, as you know, guys, we do all the links to all the projects that were mentioned on the website. I don't remember the project now, but I will, of course, remind my team to do that. And while me and Pavel are on this topic...
+
+There is a website, maybe Pavel, if you know, tell me, that actually shows all the bridges and it tells you at which stage they are of development. For example, if they have a multisig, how much is the multisig? And it shows you like even like nice visual stuff, so you don't need to be technical. Now I don't remember the website now, but I will surely have it under the description of this episode. So if you're interested in it, it's a nice little tool. It shows you all the L2 and not only, it even goes outside of Ethereum.
+
+Citizen Web3 
+So it's a nice little tool. So anyways, the topic was adoption. I know you hate and love it. So before we kind of finish off, you know, let's talk about a little bit mass usage or adoption in 1984. So do you think there is a lot of conversation lately in our industry that whatever is adoption or I don't like that word usage adoption, whatever, let's stick with some
+
+Pavel 
+Yeah.
+
+Pavel 
+Yeah.
+
+Citizen Web3 
+semantics here again. There we go. We're here already. And the whole 1984 story, I'm sure you know what I mean. So the privacy nightmare, so to speak. So I mean, we all understand that blockchains are the perfect, well, not open, not open, not verifiable, but closed blockchains are just perfect. They really are made to seriously look at everything you do, every move, every breath you take.
+
+Pavel
+Yeah.
+
+Pavel 
+True.
+
+Citizen Web3 
+Kind of reminds me of some music there. So what's your opinion about all this? Privacy, adoption, usage, is it bullshit? Is it really gonna happen? Are we in danger? Should we do something? What's your opinion?
+
+Pavel 
+Yeah.
+
+Pavel 
+Well, so actually I'm optimistic and realistic at the same time. So, you know, basically an adoption is something we're really far away right now. If we are talking about the mass adoption in general, because, you know, regular users, they shouldn't care what blockchain is. They shouldn't care what gas fees are.
+
+care about the yield, about the staking, of course, they shouldn't care about it to be widely used. So the goal here is to implement a payment system, a transferring system, so user doesn't have to know what blockchain is. So they just, nothing changes for them. You just say, okay, here's a new tool and we're all gonna use it. That's better.
+
+that's better because like seamless payments, you can transfer the money from Australia to Japan basically for like a flash and a second. So basically,
+
+optimistic but currently the protocols and the founders that use this expression, mass adoption, they clearly don't understand what they're talking about. And when I say this, I mean, for example,
+
+they say we are going to onboard 1 billion users to DeFi. The problem here is 1 billion users, they don't fucking care what DeFi is and they don't want to care. They just want some API, some API and to be as simple as possible. So the problem is that, and basically, yeah, the problem is showing off that it's crypto. So, you know.
+
+Pavel
+For example, you want to capture a market of 1 million users, which is insane. And you have to... And you're providing the new definition for them. And of course, it's going to be hard and it's going to be really difficult because they wouldn't like to get into this stuff because it's too technical. It's too difficult for regular users who just want to transfer some money.
+
+for example. So the key stuff, you know, the key thing that we can do there.
+
+is basically removing all of the words like blockchain, like crypto, like NFT, DeFi, and all of that geek stuff we care about. And eventually one of the good, good examples of it is Reddit, because Reddit had NFT avatars and they've been really, really successful with this NFT avatars.
+
+The secret here is that users that bought the NFT avatars, they didn't know that it was NFT. And they didn't know they would own the wallet. So it's hidden and it should be hidden for not to, you know, not to fear. Yeah.
+
+Citizen Web3 
+There is a good word, uncommon combination of words in English, but it does exist and it's mass usage. And I think mass adoption is very far away, but mass usage has been here for a while, you know, mass knowledge of what that, you know, it's been here for a few years, but mass adoption, which means at least, you know, what we're talking depends, of course, on what statistics we use. But, you know,
+
+Pavel 
+Yeah.
+
+Citizen Web3 
+I would say if it's mass, then it's more than 50%. Right? We're still far away from it. So anyways, man, quick, tiny blitz, five questions. Feel free to answer longer. Feel free to answer short. Some of them are simple, some more complicated. Let's start with the easy one. No, no, no. It's about you. It's about your preferences. But you will understand. You will understand. So give me one book or movie that has had an impression on you in the past year.
+
+Pavel 
+Yeah.
+
+Pavel 
+Sure.
+
+Pavel 
+Yeah, is it like a quiz, right? Okay. Okay, sure. Okay, okay.
+
+Pavel
+Oh, well, I think the one that pops up immediately in my head is called Requiem for a Dream. So yeah, that's a movie about... Yeah, so that's basically some of them, you know, they look at this movie, like it's about drugs. But you know, it's not about drugs, it's about dependencies, influence and all of that stuff.
+
+Citizen Web3 
+Respect brother, fridge, fridge.
+
+Citizen Web3 
+That's not... That's what CHOICE is.
+
+Pavel 
+choices, for example, yeah. And basically through the seasons, because they're like summer, winter, autumn, through the seasons, you can clearly see how choices change, how people betray themselves. So it's basically a movie about making your own choices and do what you really want to do, not to, you know, just be like good person in general, just to be.
+
+Citizen Web3 
+choose life. Okay, give me now two very similar questions. One is going to follow the other. Give me, first of all, one technology. And when I say technology, one direction that you're interested in that lately arouses curiosity in your development doesn't have to be blockchain.
+
+Pavel 
+Choose Live. Basically, choose Live instead of Redis.
+
+Pavel 
+So, well, it doesn't have to be blockchain, but it will be, I think. Because yeah, I am, well, I think the one narrative that I'm really interested right now.
+
+Citizen Web3 
+Ha ha!
+
+Pavel 
+is social file, which I wouldn't really pay attention like, okay, like six months ago. But now I've seen what work costs what these guys are doing, like Farcast, which is basically a Twitter but made like for the blockchain users. And there is like a lot of other social file protocols, right, like Lens, for example. So basically, I think that's a really new topic.
+
+That's something really new and really interesting for me right now to research. So I am getting deep in this field right now. So yeah.
+
+Citizen Web3 
+Ironically, I started my crypto career in 2015, 16 from social five, from a project called Golas. But, and it would give me one project, wait, one project that arouses a curiosity in crypto.
+
+Pavel 
+Oh. Gollum. Okay.
+
+Pavel 
+Well, I think it's about social fight or in general.
+
+Citizen Web3 
+No, no, go outside of social fire social fire. You already said a couple, but give me go outside of social fire. Something that you like.
+
+Pavel 
+Okay, so basically as I said before, I'm an infrastructure fan.
+
+Citizen Web3
+I remember.
+
+Pavel 
+And the one that pops up in my head right now is the protocol called blockless. So that's a protocol which allows you to build an application. And this application will be available on all of the chains. And it won't be limited from different limitations on these chains. So it will work as it should be.
+
+I'm also a big fan of modularity, for example, for Celeste. And so you can actually do some crazy settings right here is you can change the consensus model depending on the blockchain. Like imagine you have some liquid protocol and like on Solana, it works with the proof of stake, for example, and on Ethereum, it works with some with ZK proofs, which is, I don't know for like...
+
+it will just useful for the different cases. And I think the, I'm not a fan of monolithic structure, but like modular is more interesting for me. So basically it's just modularity in general.
+
+Citizen Web3 
+I'm gonna take a... Sorry, it's just because I started to speak because there was a little pause that I wasn't gonna interrupt you. But modularity in general is something I definitely like. While I'm having a moment here, if you're looking to delegate your stockings on Celestia, you can find citizen web three. So that's a moment of self-advertisement. Let's keep on that. I don't like self-advertisement. Two last questions. So they're gonna be a bit more difficult. One...
+
+Pavel
+Sure, sure, sure. Like this.
+
+Pavel 
+Yeah.
+
+Citizen Web3 
+person that it could be alive, could be dead, could be a character from a cartoon, from a Disney, I don't care, from Soviet cartoon that had inspiration on you when you were younger in life. It could be a real person as well.
+
+Pavel
+Oh.
+
+Oh, okay. So when I was, because currently I don't think I have those people because I'm currently just Yeah, okay. Just inspiration. Well, I think it's uh, it's uh, it's a very famous guy, which is uh, you know Whose name whose name is pavel as well. So the creator of telegram so pavel durov so that's uh, I think that was the inspiration because he was uh, he's basically like
+
+Citizen Web3 
+Inspiration, not guru, inspiration, just inspiration.
+
+Pavel 
+things because like he speaks like lots of languages I speak like Russian English German Hungarian so I speak a lot of languages too so like he builds the stuff so basically I think I think it was him because he's you always you have the inspiration from the people that are outliers so he has he has some different views on the world on the technology on life in general apart from all of the other ones and of course you're interested in outlier that
+
+the others. So I think it was him.
+
+Citizen Web3 
+Last one. One motivational thing that keeps Pavel waking up every day, researching infra, reading other things online and keeping on living. What is the one motivational thing that helps you?
+
+Pavel 
+Uh, well...
+
+Actually, I don't believe in motivation. And the motivation is what is... Okay, you have motivation, but eventually it is slowly fading away with time. So, basically, first of all, firstly, it's about discipline. If you really want to learn something, want to achieve something, it's about discipline. But then the discipline becomes a part of your life. So you can't... So basically you can't live without it.
+
+I started like because I really wanted to learn but sometimes you know, you don't really feel like it So you don't really feel like you should learn you should do some new stuff But eventually it's about discipline is doing about what? What what you don't want to do, but you have to and it was basically I think This this was this was my mindset when I went to the gym I didn't really like the first two or three months, but I was forcing myself
+
+but then like now it became such an important and fundamental part of my life that I can't really... So it's like a drug but in a good way so you can't live without it. So that's basically that's about everything in life. So I basically... First of all it's about motivation, it's about wish to do something, wish to do something. Then it's about discipline and then discipline becomes a part of
+
+That's it.
+
+Citizen Web3 
+Totally agree with this and you know, not all drugs are bad. On that note, not all drugs are bad, I think is the best sentence to finish a podcast episode. Pavel, thank you very much for your opinions. Please don't hang up right now. I'm just going to hang up and just let you go in a second. But for everybody who joined us today, thank you very much and see you next time, guys. Thank you. Bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

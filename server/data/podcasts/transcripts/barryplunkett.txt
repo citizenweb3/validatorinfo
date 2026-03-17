@@ -1,0 +1,418 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/barryplunkett
+
+Episode name:
+Digital Ownership, First Principles and Arcane Dark Arts with Barry Plunkett
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast. have Barry from Skip today. He's not just from Skip, he's also, of course, from Cosmos Hub. Barry, hi. Welcome to the show.
+
+Barry Plunkett 
+Hey, Serge, great to be here. Thanks for having me on.
+
+Citizen Web3 
+That was like the shortest intro that I did for anybody probably. So I'm going to like, I'm sorry, man, but Barry skip Cosmos. You have to know him. So can I ask you please for myself, for the listeners to make, I'm not going to say short, like an intro of yourself, feel free to make it short, long, medium. What I'm going to ask you please in that intro, include your WebThree story. And of course what you're happening to be working on right now, if that's okay.
+
+Barry Plunkett 
+Mm.
+
+Barry Plunkett
+Yeah, yeah. I'll skip to the end and then go back. Skip previously was building infrastructure in the Cosmos ecosystem to help chains onboard users and capital. We grew that to a point where almost every IBC transaction was actually going through Skip and almost all of the flow of capital into the Cosmos ecosystem, hundreds of millions of dollars a month, was going through Skip as well.
+
+And we recently transitioned from that after being acquired by the Interchain Foundation into absolutely being the core development team for the Cosmos Hub, the Cosmos Stack, and the Cosmos ecosystem. So we have a ton more resources, a ton more energy, and a ton more opportunity to go out and make Cosmos great. But that's always kind of been the purpose of Skip.
+
+I can back up to how I got into crypto originally, which led to founding skip, which the very, I'll give you the longer version of the story, which is I grew up near DC, Washington DC. And when I was a kid, if you grew up near DC, you sort of think like the whole world is the government and the only way that you can actually
+
+build anything interesting or change the world or make people's lives better is by like going and working in the government. which is what I wanted to do. I wanted to go and to research and participate in public policy and kind of helping to, helping to kind of graph government spending and government programs to, to improve people's lives. And I worked on a bunch of campaigns for, for, mostly democratic candidates when I was younger and,
+
+went to college and sort of like joined the young Democrats organization was like really, really intense about that. And then I sort of realized while I was there by way of two things, like that one, most of the people who were interested in that actually weren't interested in trying to improve the world or make people wealthier, make people happier in any meaningful way. They were mostly interested in just like proving the other side wrong. And I thought that that
+
+Barry Plunkett 
+You know, you go to a nice school, like whatever, people would be more thoughtful, wasn't the case. And at the same time, I got exposed to like computer science for the first time. And I realized like, oh, actually there's, there are other ways that you can go about kind of changing the world. can actually, rather than joining government, you can, you can build things, you can advance technology and that can be a way to improve people's lives.
+
+And it seemed much more interesting and much harder and everybody in my dorm was doing computer science. I was like, I can do that. Like I should, I should go and do that. And I should drop this other stuff. that's I did. I my co-founder, they're, Mag who also now helping to lead the Cosmos ecosystem with me. and then I went and, worked at a hedge fund where basically my job was to help them spin out new companies. so it's actually the hedge fund that Jeff Bezos used to work for.
+
+where they refused to invest in Amazon and they obviously missed a lot of upside from that. And so then they decided to build this team that I was on where the idea was, we're going to look at the stuff that the firm has, markets that we might be able to build interesting things in, and we're going to spin them off startups. So my job was to kind of like help lead the startups initially and then find teams, help them raise money and send them on their way.
+
+did that with a few different kind of like dev tooling projects and things like this. And while I was there, DeFi Summer started happening. And so we were looking at crypto and Mag, my co-founder, he was working another job, but was like spending 80 % of his time in crypto. And he was like, hey, you know, this is really interesting. You know, we should really do something here. And the company that I was at,
+
+they basically refused to go anywhere near it. Even with one of these startups, they were like, it's too legally risky. Like we don't know what's going to happen. And I was getting more and more interested in it. And then we kind of discovered Cosmos, which was the super eye opening moment for me, because it was one of the first times that I had seen the two things that I was interested in, which was like sort of policy and government and how you organize people and communities. And
+
+Barry Plunkett
+technology brought together in a way that I thought made a lot of sense where, and I sort of saw crypto through a different light as a result of that and got a lot more excited about trying to get in and trying to use this to build and change the internet and build a new generation of the internet. And Cosmos just made a lot of sense, like from the perspective of it being this place where
+
+anybody could go and truly permissionless, right? You don't need someone else's token. You don't need to build on someone else's platform. You really can build on your own terms. And that was really exciting to me. so the company I at, didn't want to do anything with crypto, quit my job, jumped in, sort of went into the Cosmos ecosystem. Terra was huge at that time. So that's really what we focused on initially and then expanded. But that's kind of my...
+
+crypto journey. So I've been in Cosmos the whole time I've been in crypto really and have been mostly working on skip and now interchange and just trying to make the Cosmos ecosystem better.
+
+Citizen Web3
+I will, of course, bring in Terra a bit later down the conversation for sure. I will put you on the spotlight with it a little bit, if you don't mind. Nothing, nothing, nothing, nothing. No, no, no, you got scared. Nothing that serious. It's going to be an easy question, but I'm going to make it a little bit controversial. We'll get back to that. But I wanted to just reflect a few things. First of all, you mentioned politics and people didn't want to...
+
+change and nothing but just to argue with other people. as you were saying that, you know, I think one of the things that comes to mind is, I believe it's George Carlin from about ecologists. And when you said, you know, that the ecologists environmentalists, he calls them back then, you know, they don't really care about anything, but just improving their own habitat. They don't really love the planet. They don't give a shit about what is existent. That straight away pops to mind.
+
+Barry Plunkett 
+Yeah. Yeah.
+
+Citizen Web3 
+It's a sad story that it's everywhere,
+
+Barry Plunkett 
+Yeah, and I think like, it's an easy and like it was a trap that I definitely fell into to like, especially when you're, you're young and like, you don't know and you're surrounded by these people who they're older than you, they seem super accomplished. They're like, these guys are evil, you should hate them. And you're like, yeah, fuck yeah. Like, I hate those guys. And then like, it took me going to college and being surrounded by a lot of different kinds of people.
+
+who had different points of view to realize like, I'm very much in this like really strange bubble of like super liberal, very kind of big government oriented people. And not that that's necessarily a bad thing, but that like I hadn't considered other ways of actually like doing meaningful things. And that that was a pretty narrow way to look at it, but it was the one that everybody around me was consumed with.
+
+Citizen Web3 
+You know, when you say something like falling in a hole, it kind of brings me slowly to the next question that I haven't reflected on what you said originally. you know, I can't help again not to think of how many, like when I remember myself 16 and I remember protesting and I remember, protesting against the first war in Iraq in, what was it, in 2001. Well, not the very first time, but 2001 we're talking, right? And I remember, you know, a lot of...
+
+falling for a lot of things that in my opinion, actually that was most good, but that after came to realization that, yeah, I'm being influenced and right now looking at a lot of my school buddies and it's been more than 20 years, a lot more than 20 years, a lot of them are still stuck in some of those mentalities. And my question is, how did you, because I'm gonna try to move it from here to kind of crypto and found this,
+
+Your story going from skip to cosmos and I'm going to try and connect it is a very quick one. Like you basically went from, we just found out about this blockchain. And now you kind of like championing one of the, I'm not going to afraid to say the biggest project in crypto. at least with one of the biggest promises and, one of the biggest hopes in my opinion, in crypto. So how did you manage to not stay behind and be influenced by.
+
+Barry Plunkett 
+Yeah. Yeah.
+
+Citizen Web3 
+all the thoughts that you had before and trying to kind of how do you how do do it? How do you manage to put yourself up and try to head on a new and face a much bigger and a larger challenge? Maybe that's the question. I'm not sure if that's the right question, but I don't know kind of there.
+
+Barry Plunkett 
+Yeah.
+
+Yeah, no, it's a good it's a good question. And it is, you know, a huge challenge. I can tell you. I guess I'll tell you a little bit about kind of how and maybe why we wanted to why we wanted to do this. So very early days of, of skip, we were focused on
+
+What we always try to do is we always try to think about what makes sense from first principles. Like what can we reason our way to starting from things that we know to be true? Because in crypto, I think in general, but especially in crypto, like you're sort of constantly surrounded by people who are trying to convince you of some...
+
+potential future narrative or like some weird thing and they make everybody makes things really, really complicated. Like I remember when we were learning about MEB, we were like, this is like some super crazy, you know, quantitative trading, financial arbitrage, blah, blah. And then we looked more closely and we're like, it's actually just transaction ordering. Like that's all it is. It's like who goes first, who goes second. It's like that. So I'm like many things in crypto are like that.
+
+And so we try to always think from first principles. so when, when we originally looked at Cosmos, and this is a huge part of why we're still really excited about it. We looked at Cosmos, we looked at a bunch of other stuff and sort of every kind of crypto ecosystem is claiming that they want to do the same thing, right? They're all claiming that they really want to work on building the next kind of generation of the internet, a new
+
+Barry Plunkett 
+a new foundation for an internet built around self custody. so, and that was the mission that we really resonated with more than anything else, obviously, like, we love DeFi, we think it's super interesting, we think that's big part of it. You know, we think real world asset issuance and sort of the programmability of assets is really interesting and sort of some of the privacy stuff. like, fundamentally, the thing that we were convicted in is that like, as people's lives have moved online,
+
+We have really lost control of our assets and our data and our identities. Like these things are all custodyed by big tech companies that are mostly headquartered in Silicon Valley. And there are basically any government in the world that has enough money or enough, a big enough military can influence them and sort of get them to do what they want. And so it didn't used to be the case, right? It used to be like, okay, like you own something, you live in the house.
+
+that you own and that's most of your property. But now most of our relationships, most of this stuff is online. So we want to build this new foundation of an internet that's built around this principle of self custody of like taking back digital ownership rights, digital property rights. And so if you think about it from that perspective, what do you need to actually say you're going to, you're going to have, you're going to have this built around self custody. It's going to be internet scale. First of all, it needs to be infinitely horizontally scalable, right? Like it needs to be
+
+a platform that anybody from any part of the world can access with zero financial resources, as long as they have an internet connection and a laptop that they can use to build something with. So it has to be infinitely scalable. It can't be built on a single platform, since if it's built on a single platform that you can't scale that way, then you are just going to end up with the same situation you've had previously where one company or that platform itself
+
+is going to have a huge amount of power and is going to effectively be the custodian of people's assets and their lives and identities. that immediately throws out Ethereum. It immediately throws out Solana. It leaves you with basically Cosmos and Polkadot to a lesser extent, like when you start with that. And you need that again to be internet scale. So that's the first thing. Then the second thing is
+
+Barry Plunkett
+you need it to be fully open source, right? it is for the same reason you, if, if you have a single central identity that controls the stack, central entity that controls the stack that, folks have to pay or folks have to get approval from that entity can be captured. And again, you're going to be in that old monopolistic internet. so again, okay, we need to be fully open source and fully accessible to anyone that throws out.
+
+avalanche and everything that's been done over there, since you have to sort of, you have to get their permission, you have to set up in a way that their validators are comfortable with. And then the last thing that we need is it needs to be legitimately decentralized from an operator perspective, right? So if you have these things like L2s where you have one central sequencer, again, that sequencer can just be captured by a government entity or a corporation. We see that, right?
+
+Base is great. Like it's bringing people on chain, but it is literally just Coinbase again, that controls it. And so it actually hasn't moved us in this direction. And so when you add up all of these things, infinitely horizontally scalable, fully open source, truly decentralized. The only platform that you're left with is Cosmos. Like it's the only one that can make sense as the foundation for the new internet. And so
+
+a huge, that was why we got excited originally, because we looked at it from that perspective. And that's why we were excited to double down, because when we were thinking about, okay, well, positive ecosystem isn't going in great direction, what would we do differently? Right? We didn't have that many things that we would do that differently that mattered at a super high level, because like, we think it got these fundamental primitives correct. And so
+
+That's also why we're able to just get more convicted and like take on this big challenge because we're so, we spent a lot of time thinking about it and we're so convinced like reasoning backwards from building the new internet that it's the right thing to do. Does that make sense?
+
+Citizen Web3 
+You. Yeah, it makes perfect sense. I was listening because I want to like I said, I'm going to be a little bit before we started recording Devil's Advocate and let me be here is my place, I think. you and Mag are definitely people who are hardcore believers in what you do. I spoke to you, I spoke to Mag separately and you both stroke me as two guys who are, you know, like really
+
+focused and believe in what we do. But let me be the devil's advocate right now. So we just spoke with you about a similar thing. When we were younger and you get influenced by things, whether it's politics or whether it's protesting or whether it's believing in, arguing with somebody or whatever. I mean, doesn't, mean, and let me get this again, before I go on to make this very straight.
+
+Since 2016 or 17, since I last saw the paper of Do Kwon, I've been obsessed with the idea. And I'm not the only one. The idea is not just fascinating. It's actually what started in 2021. It started for me, the IBC. I remember the IBC transaction with osmosis. And it was like, oh my God, it's actually working five years after. Oh my God, it's actually working. There is IBC transactions and now we have
+
+Eureka with the theory, you might be see transactions, right? But that fucking contradicts the vision, doesn't it? I mean, in the end of the day, saying that hey, Cosmos should be the only one, because if you look at the Internet, it's not like that. have, you know, standalone silos. We have computers that the talk in rust, computers that talk and go, composite token plus computers are talking. I don't know, Ada or whatever. I'm not talking about Cardano. I'm talking about the language, of course, or, you know, or or or Julia or or any any any other possible language. And you have.
+
+You you have different operational systems, whether it's Linux or whether it's Microsoft or whether it's, I don't know, Apple or whatever. There is more actually, right? Not many, but there is more. And they're all sort of intercommunicate. So what I want to be the biggest devil's advocate right now is by saying, hey, I'm probably one of the biggest believers in cosmos in my opinion, because
+
+Citizen Web3 
+I have really given a lot of it as well, I still believe, and I'm sorry, this is for the monologue here. I still believe that Cosmos can pave the way for the internet of blockchains and show by example how it should be done. But I still think that if we're talking about the internet of blockchains, that means centralized blockchains as well. mean, I'm a fucking anarchist, hardcore anarchist. I hate the government, so I think they should not exist.
+
+But that doesn't give me the right to say that, hey, every bank, every government should die. No, people choose banks, people choose governance. So sorry for the long intro. I'm going to cut it. Sorry for the long question on the intro, but I'm going to cut it. But long story short, if the vision of Cosmos is what you describe before me and you believe in, do we sometimes as a community, I have this feeling, and in my opinion, it's wrong. Why do we sometimes
+
+delete others and we don't look at them instead of saying, hey, yeah, let them work on whatever they work. We connect with them. They will see that we are better and they will be like us or something like that.
+
+Barry Plunkett 
+Yeah, I mean, so, sir, actually, great question. Like, I, I don't, I certainly don't believe that the right way to build the next generation of the internet is to say, it's our way or the highway and everyone else's is to put and not useful. And I think that
+
+you see that now in the strategy that we're bringing to the ecosystem, right? Which is, right, in our first 90 days, the two major focuses have been bringing the EVM to Cosmos so that we can actually onboard all of these users and infrastructure providers and protocols that are EVM native who have been isolated from the ecosystem for years and bringing Cosmos through IBC to the EVM, right? So we now are about to
+
+launched have launched the not fully productized yet. That'll be in a few days. The first IBC connection to Ethereum mainnet. And that's the start right, you know, from there, the L2s, Solana, other places. And so, and, and we really do believe that like, you know, one of the fundamental things about Cosmos, like one of the ways that I really like think about it is that every other ecosystem sort of starts with security.
+
+as the core primitive, which is an economic mechanism, right? Where, okay, the core primitive is we have some security, we're gonna reuse it, we're gonna share it, we're gonna do something like this, whether that's Solana, everything's in one place, Ethereum, or we have these L2s, or Celestia, you have these roll-ups. And Cosmos actually said, no, no, no, like, we believe that the internet is going to be so big and so diverse that there's gonna be, we can't start with an economic mechanism, because like you said,
+
+going to be a huge variety of different economic mechanisms that exist that people might want to use, right? They might want to be fully centralized. They might want to have a set of people who they know really well, who they trust, who they don't need to worry about slashing. They might want to trust no one and have some kind of you know ZK execution proving mechanism. Or they might want to have a fully open, large permissionless validator set. Who knows, right?
+
+Barry Plunkett
+probably different strokes from different folks. And so Cosmos says is, rather than starting with economic mechanism, we're gonna start with a communication primitive, which is IBC, right? And in the next generation of the internet, it's really important that the communication primitive can cross boundaries between people who have different trust assumptions. And by starting with a communication primitive, you actually can be internet scale, right? Whereas by starting with an economic mechanism,
+
+the boundaries of your mechanism will always be limited by the amount of capital that you can get into it, or, you know, the amount of liquidity that you can have supporting the mechanism, right. And whereas communication is infinite, it's human scale, right. And so we actually think that because of that, that's what makes sort of the boundaries of Cosmos hard to define, because it's really just, okay, we start with this communication primitive. I think
+
+So to your point of like, okay, well, we don't all need to be decentralized. For me, that's more of a, and a lot of the folks who we connect with over IBC over the next 12 months, they're probably quite centralized. And that's okay, right? I think that doesn't, I would have a hard time waking up in the morning, working on something that was fully centralized, because I don't know what you're getting out of that.
+
+Right? It's like we've gone through all of this work. We've done so much to try to like create it an internet based on self custody, only to say at the finish line now, nevermind. And then it's like, well, we have, you know, we have a bank. If you want to put your money a bank, like, I don't know, like there's a lot of quite good bank apps. That's not true for the whole world, but it's certainly true for a vast majority of it. And if you want to choose who to, who to trust, you know, so maybe for some people,
+
+purpose of cryptos like, I'm in Nigeria, I'm in the Philippines, and I want to actually custom my money with like a US entity. And that NT is Coinbase, and base is a great way to do that. That's potentially useful. But we think long term, that you can put your money, your assets, your identity in places where you fundamentally don't need to trust anyone. And so that's why the decentralization thing matters in the long run, right? If that doesn't exist, then crypto
+
+Barry Plunkett 
+a huge amount of crypto will be wasted. But that doesn't mean we only want to interface with and work with people who are centralized. I think that that's an important distinction.
+
+Citizen Web3
+I would go beyond that. would say that money is a language. Money is communication. money, communication, being able to speak your own language or being able to freely trade. I wrote a post, I think, five or six years ago about that. And I would say that what you are talking about is the essence, is the security, is everything, is there before that. Because if that doesn't exist, you can exist other things, but they will just not have the same shape. But what I want to say is that like,
+
+It reminds me a little bit, I remind myself, I look at myself, you know, over the past like 12 years in this industry. And what I kind of see now is that meme, you know, with the IQ where you started at zero, 150, and then in the middle you have one opinion, but at the start and the lowest and the highest, they have the same opinion. And I look at myself and I remember myself at the beginning of the journey when I was like, Bitcoin is, you know, like, blah, blah, blah, blah, blah, blah, blah,
+
+Citizen Web3 
+I was like, no, Bitcoin is the king, it's everything, know, all this is bullshit. And now I'm again like, dude, what was I thinking? Of course it's about everything, you know, of course it's about. So kind of back to the same place where I didn't know everything after spending 12 years and understanding the industry. I'm kind of back where I started. what, you know, again, to kind of go and I'm going to be slightly more controversial, you know, because we're main coin base and I'm sorry for that, but.
+
+Citizen Web3 
+You know, we look right now at I'm going to try and move it a little bit also, but feel free to comment on anything. But you know about the current state of Cosmos Hub and a lot of again, what you guys have done, what Skip has done is beyond recognition. I think that people should really, really owe you something. But it's not about my opinion here because
+
+You guys are actually looking into what have been stuck for the past three or four years. And right now, if look at Cosmos and we go to Valorators, we talk about decentralization, but we see Coinbase at the top. We see Binance at the top. We see guys like and high P2P, high Costine, how everybody else, but they have no place. They don't deserve to be there anymore. They deserve to be the five years ago, P2P and Corus and everybody else. Hi, Brian as well. But right now they're kind of centralizing, in my opinion, the stakes. So how do
+
+we progress to what you said to that, to take communication to the further level where, you know, we will lead the hub itself, which is creating all this technology can lead by itself by an example, because today I'm not sure if the stake, least the way it is decentralized, centralized, spreaded, distributed is a good example to the rest of the decentralized world.
+
+Barry Plunkett 
+Yeah, I mean, it's a great point that the hub isn't as decentralized as it probably could be and should be, right? There are
+
+handful of validators that have a pretty high percentage of the stake. Now, fortunately, if you add those up, don't get to anything that is sort of meaningful from a network security perspective, and you tell you get quite a ways down the list. we know what it it actually doesn't affect the hub security so much as it affects like the economic distribution of the outcomes, right? And that's that's
+
+I think really the piece that we need to make progress on, which is how can we make sure that folks who are farther down that list have a strong economic incentive to help protect the security of the network and help the network stay decentralized, whether that's by, you know, trying to move some of that stake out of, out of Coinbase and Binance, or whether it's by other mechanisms that are
+
+you helpful to the smaller validators. I actually, you know, there's, are certain things that we can do that will help the scenario there directly. We're not prioritizing a lot of them, but there are a lot of ideas that folks have had in terms of, you know, things around capping validator upside around.
+
+I'm working to try to like, do education with folks around, okay, how much money are you actually missing out on by staking with Coinbase or by not staking and letting them stake on your behalf versus, you know, working with a smaller validator and making sure that, you know, those things are accessible. So for example, one thing that we're doing right now is we're working with Anchorage on using skip go.
+
+Barry Plunkett 
+to improve their kind of in application staking for the Cosmos Hub and for other chains. And there's a huge amount of Atom in these things like from institutional investors. And right now, like, it's actually not straightforward for those folks to see the difference or understand, okay, hey, you know, what am I actually getting by going with someone whose name I haven't heard of before? Or what are the things that I can get by going with that person? So there's things that we can do
+
+on the margin there that we're working on. But it's really targeting these big pools of capital and selling people, look, here is the amount that you're missing out on. But I think it's a hard problem. It is a legitimately hard problem. The other way that, this isn't the question that you asked, but it's a big part of why I actually think Cosmos is important is like the
+
+Cosmos platform actually gives people an infinite number of ways to experiment with this and to solve this problem by saying, okay, hey, look, you know, this chain is structured in this way. It has these trust assumptions. has these, you know, incumbent parties. We're gonna do something totally new and different with a new set of parties. And that allows you to have this kind of like meta decentralization that can't happen with an Ethereum or a Solana, right? The case in Ethereum is actually much worse. Like, you know,
+
+When you look at the hubs, Nakamoto coefficient compared to Ethereum or Solana, it's actually really quite high. And it's even better if you think about this fact that, okay, with Cosmos, can actually, we have many, many different chains that were distributed over and, in many potential validators and different ways to participate. Whereas with Ethereum or Solana, like you have a ton more capital, it's concentrated into this one structure. And ultimately like that structure is directly controlled by Coinbase or Circle.
+
+I read something that the Ethereum sync committee has a pretty high percentage chance of actually having a majority controlled by a single validator operator, just given how many different validators Coinbase, for example, operates there. That kind of thing, for example, though, literally cannot happen with the Cosmos Hub because of the nature of the Tendermint client. so I think we're not great, but
+
+Barry Plunkett
+If you zoom out, we're much, better than what exists out there, both as the hub and the ecosystem.
+
+Citizen Web3
+Where should the line be drawn between kind of saying, for example, right? mean, you didn't go that way, but if we talk about validators, we could start coping validators, for example, like you said, or we could start...
+
+giving the delegators, don't know, fines, whatever. Where do we draw the line? Because those solutions, in my opinion, are not decentralized. Those are not decentralized solutions. But we can, of course, do them. In my opinion, again, as an anarchist, I'm against those kind of solutions. I'm up for the free market, in my opinion, the free market. Coinbase is actually playing a fair game, in my opinion, but I don't like them, but they are playing a fair fucking game. So where do we draw that line, in your opinion, between, okay, decentralization,
+
+Citizen Web3
+And I don't know if the efficiency is on the other side or what should be on the other side, but I'm sure you get what I'm trying to ask here.
+
+Barry Plunkett 
+Yeah, I mean, so I don't, you know, personally, I don't think that tapping validators works. I think what you need to actually do is, like I said, create better mechanisms for people to have access to smaller validators, and to understand the advantage of staking with a smaller validator and to understand the advantage of spreading their stake out and these kinds of things and better tooling around
+
+being able to do that really easily, to update it really easily and to claim your rewards really easily. So I tend to agree with you. Like it's not a great solution in terms of what's decentralized or not though. My honest perspective is look, that's up to the Cosmos Hub governance community. Like, and truly that is like the definition of decentralization. Like if the community votes to say, Hey, we want to
+
+provide disproportionate rewards to smaller validators, I would probably encourage them not to do that because I think you can game that mechanism really easily. I think like, simpler is better for these kinds of things. But if they decided to do it, that's, you know, it's fair game, in my opinion. And like, that's one of the things that I like about the Cosmos ecosystem. Again, there's a real, the community has real control. And that incentivizes like,
+
+real participation and real, real thought. And sometimes, you know, the community does things that I wouldn't do. Sometimes they do things that I would do. But I like that there's a real, there's a real vested interest from the token holders and from the people in terms of changing the network. And so if they wanted to do it, I'd vote against it probably. But ultimately I'd support it and make sure that we build out functionality for it. And that's like, that's the game.
+
+Citizen Web3 
+It's really hard being a Cosmonaut and having values. can tell you that it's because I have, I have, have like Cosmos has a, mean, I don't say this on the podcast for almost never, but Cosmos has, I mean, I do say that it has a place in my heart all the time. that, but you know, we, talk to all ecosystems, whether it's Bitcoin, Solana, Ethereum, Polkadot, I don't care, near. I'm on this translation, Maxi. And, but Cosmos does have, but when you, you know, when you talk about that, there has been so many proposals where I personally look at and
+
+I was against and even wrote that I'm against and voted for because I don't think validators should put sticks into the wheels of their own machine. So and I felt like that a couple of times and I even wrote huge explanation. So I was like, hey, I'm voting for this, but I'm actually completely against this proposal. I don't want this to happen. I think it's bullshit. And in a couple of places, I was right in a couple of wrong, but I'm going to ask you something. I remember this is a question I was asking back a few years ago in this blockchain week.
+
+I did some series of field interviews. I was speaking with Corus1, with Steakfish, with all... But I was asking all of them. It a 10-minute interview for each one and the same set of questions. And I'm going to ask you one of them, the questions from there. So if you had to choose between 5,000 community members or a group of three hardcore developers.
+
+Citizen Web3 
+Where would you go? What would you choose that understand, of course, go and all the stack that of Cosmos, what would you choose? Would you choose the efficiency of three developers and work with them and understand that you can build something or you would choose the starting point as 5,000 unique community members, but of course, none of them have development experience.
+
+Barry Plunkett
+That is a super good question. I will say, think like,
+
+You can sort of look at what we've done and say we've chosen the community, right? Like, like if you look at the decision to rather than kind of go out, raise some big round, incubate a couple of small teams and like start afresh. We looked at Adam and we looked at the Cosmos hub and we said like, you know, this is going to be.
+
+this is what's going to really hard to recreate is a community of people who believe in the vision, who share the values that we have, who've already been self-selected into that group over years, who've put up with a lot of bullshit, who are going to be willing to ride or die. We like picked that. And so you can look at what we've done. I think if..if.
+
+It were a much simpler choice of like, three developers versus 5,000 community members.
+
+I honestly don't know, like gun to my head, I'm probably picking the community. Again, if it's like a values thing, like typically developers are just gonna build, you know, wherever there's a platform that suits their needs. And we wanna make the Cosmos hub into that platform, but like community support is kind of irrational. It's a little bit like the...
+
+Barry Plunkett
+the politics stuff that I was I came from. It's like they believe because they believe and because they share our fundamental values and like that gives us a much longer rope. Right. Like we can work with them. We can try different things if we if we have a bad quarter or whatever. don't ship things up to expectation. They're not going to disappear in the same way that like developers they are going to. So I'd pick the community probably.
+
+Citizen Web3 
+Ironically, was also always picking that. People ask me, what do you pick? What would you pick? But interestingly, and sorry, irony is that all the guys that I spoke to, was validators, huge validators, was like Steakfish, Corvus One, like all the top validators, they're all pick three developers, all of them, every single one of them. None of them pick community, but I also said I would pick community when they asked me back. anyways, how, okay, next question. How do we, how do you guys,
+
+Citizen Web3 
+plan with Skip or I don't know if I should say Interchain Foundation to bring back reshaping market fairness, considering you know like Terra, I said I will bring back Terra. And you know like I said, I take a lot of interviews and not just interviews. And some people were hurt a lot by that. Like some people...don't
+
+For them, Cosmos finished on Terra. I still talk to them two years later and hear those opinions. It's smart people. Don't get me wrong. It's people who are not outside the industry. It's not people who don't understand development. It's not people who write consensus. You know How do we as a community, and when I say we, like I said, even though I'm in a situation, Max, I consider myself to be a Cosmonaut at heart. So how do we bring back the trust after all that has happened?
+
+Citizen Web3 
+Even though it's been two years, but it seems I'm not sure if the Cosmos community is aware. I'm sorry to put such a highlight on it. But man, like I'm surprised how people deeply remember that and how how wrong they remember the occasion, how deeply it went into their brain and how much of a black market put on on on on the whole ecosystem.
+
+Barry Plunkett 
+Yeah. Yeah, I mean, I think like, that Tara in particular, but a number of things from Cosmos was passed have like, really harmed trust with various groups of people, think, investors, you know,
+
+Tara obviously, farmed a lot of retail investors and benefited a lot of institutional investors. Like this galaxy thing just happened. I don't know if you saw that, like, galaxy was fined for, saying that they're long Tara and they're buying while they were, they were actually selling Luna. they find $200 million or something like that by the SEC. just kind of, came through last week.
+
+and I actually think that like, that's a huge, it's not just Tara too. There, there's a sort of a history, of these proof of stake chains benefiting insiders and harming retail investors and users. Right. we saw this with, at most two.
+
+right, where a lot of the core investors made huge, huge sums of money in the token by taking staking their early rewards into huge APRs and then selling it and doing it repeatedly until there was nothing left. And so they never had to actually vest and they made their 10 X or their 50 X or whatever. A lot of those folks, you know,
+
+people then see, they see Celestia, they see the staking rewards there, they see what's happened with the token. You know, they think similar things are happening. And it's like an active narrative that we have to fight against, right. And there's some truth to it in the past too, like chains would make their staking yields unnecessarily and unreasonably high, right. And there was all this like, you need economic security.
+
+Barry Plunkett
+And like a huge amount of that was just a value transfer to investors. So the first thing is being honest about these things, like, just admitting that they have happened instead of like, lying to people or trying to represent it as like, Oh, well, this is just like the consequence of being an L one. Like it's not, it's actually not like you can have lower inflation. You can have lower inflation at the start. You can have, you can get product market fit without actually launching a token. You can start POA, right?
+
+These things are, their parameter changes in the SDK. Like it's not some arcane dark art. It's straightforward. And we have spent a lot of time encouraging new teams to do that and promoting teams that are doing that. So for example, like Anisha is going to be starting with a very low staking APR, right? Something that's necessary for, for security, but is defensible. Like I think it's like 4 % or something like that. And so what you're going to see there probably is some of these bigger validators that have higher
+
+hurdle rates for what they need to do, they're not gonna, they're probably not going to join that network. And some of the investors who maybe had short term, who had short term ideas for how they were going to make their investment back are probably rethinking that. But long term, those kinds of norms are really what we want to promote. And what we want to see more of and you're seeing that too, with like, you know, noble, for example, as a POA chain.
+
+has been for over a year. They're working really hard on finding product market fit now. We're making, being a group of authority, we're making having lower staking yields, we're making not being able to configure, these people can't sell their rewards so that investors can't dumb. Much, much easier first class citizens in the SDK so that out of the box, you get good economics for the community, not harmful economics for the community. And so I think like, as we start to see these things,
+
+And as other ecosystems reinvent like the bad, because they're years behind, right? Like they're, and they're all trying to figure out ways they could use their L2 sequencers to like stake and get yield and dump. I think it's going to lead to a transfer of trust back into the community, but it's really just about like embodying those values and then making sure the SDK and the technology like reflect them and make it really easy for people.
+
+Citizen Web3 
+Second aside for the listeners, if you guys, girls, bots, whatever who's listening to this, I have to be fair to the reality today. We don't have just boys and girls anymore. Jokes aside, if you guys want to learn the history, we have a podcast that goes back as far as Aragon chain. And then you can build your way through my personal, I think, belief that went into the first podcast and then,
+
+Basically, if you follow that, you're going to be an interesting ride, guys. So please do your Dior. And again, everything, of course, me and Barry mentioned is in the show notes, whether it's projects, whether it's people, whether it's, I don't know, anything else, ideas, please, please do look at it. I would love, while you were talking, I was making that note and I was laughing. I was like, I would love to see a betting market for validators who are going to join.
+
+I would love to see people lock in actually before yeah, I that would be hilarious. That would be really
+
+Barry Plunkett
+It would be cool. mean, one thing, you know, there's a big, one of the things that like the validator community, I don't know how many validators you have that like listen to the podcast. But one of the huge angles that other stacks compete with Cosmos on right now is this, this idea, this basically this lie.
+
+that getting a validator set together is really hard. And they compare that to how easy it is to spin up an L2 with, you know, one of the RAS providers there. And this has always really, really pissed us off and frustrated us because that's not the hard part, right? Like,
+
+Like, and you know that if you're a validator, you know that if you're a team building on Cosmos, but there's this narrative that like, my God, it's so hard to get validators. Like, how are you going to coordinate them? Like the validators we work with are like professional infrastructure operators with like, you know, dozens of deployments. And now at this point, like a decade of experience, many of them, and there's new ones all the time and folks who are hungry and trying to break in and looking for ways to differentiate. It's actually a huge vibrant ecosystem.
+
+And for some reason, there's this fud that it's really hard to navigate. And it's one of the things that we just want to like crush that narrative. so
+
+Citizen Web3 
+I just, you know, look at, I think what you said before, I had a note about that, but I never did make a point on that, but you said the words magical properties. And I think one of the biggest reasons for those misconceptions is the belief that, because people who become professional validators at the beginning are also just beginners. And, you know, everybody who, I think is the belief in, like, when I talk to somebody about blockchain,
+
+which I don't anymore. I stopped doing that after 10 years. I peeled them the other way around. You talk about the economical system and then they ask you about blockchain. This was my learning curve. But I noticed that some people believe that there is a little gnome that sits there and a bunch of them and do magical properties. And I think validators, it's a little bit about validation as well. Like I hear some people say things which are like, dude, but it's much more similar. I don't know. So do you think that
+
+Barry Plunkett 
+Okay.
+
+Citizen Web3 
+Increasing and I'm going to try and then put it the last kind of question. Increasing education in community in all regards would help to build a cross-chain community because Cosmos at the end of the day is a cross-chain, it's internet of blockchains, cross-chain, whatever you want to call it, inter-chain, whatever ecosystem. And communities today are still, regardless of whether they believe in little gnomes or don't believe in little gnomes.
+
+They are obsessed with their bugs apart from memes memes are kind of like free from that Which is strange, but okay It's true, right memes have kind of cured tribalism in a way. It's it's funny as fuck but it is but you know, anyways, you know not about the good and the bad sides of memes, but Do you think that? I'm Increasing amounts of sharing information telling the truth education. Like you said, you know leading by example will help
+
+Barry Plunkett 
+Thank you.
+
+Citizen Web3 
+cosmos to gather as a unified community over the technology and the belief in building the Internet of blockchains and not just over the token price. Is that something that would help?
+
+Barry Plunkett
+I mean, the token price is always going be a huge thing, right? And we are extremely aware of that. And a huge amount of what we do, right, is about aligning these things, right? You actually want what you want is a business model for the token that aligns with the technology platform and the values of the ecosystem. And that's really what, you know,
+
+we and other teams are trying to create around Adam and the Cosmos Hub right now. Like making the Hub truly a Hub where it provides services and protocols and infrastructure over IBC to all of the world-class teams that are building with the stack to help them launch more easily, grow more easily and monetize more easily, and then have that value flow back into the Cosmos Hub.
+
+And as a result of those products and those services back into the ecosystem, that's like the really core thing that we need to do. So there's not this thing of like, okay, do I support the internet of blockchains or do I support the atom token price? It's like, no, like they're actually deeply linked. and that's, think how you build like a winning ecosystem and product is that you, have like community.
+
+technology product alignment. like you need like these things to actually be in touch. And IBC Eureka is like a huge first step there, right? Like having this connection to Ethereum is allowing us to onboard a ton of Ethereum asset issuers into the Cosmos ecosystem who want access to a lot of the great teams that we're building with. And those teams want access to these assets. So we're just...
+
+we're providing a real service. We're helping those teams win. We're helping those asset issuers expand their business and we're going to be driving value to Atom that way. And like that's kind of the core of what you need. If it's just like the token goes up and there's no connection to the ecosystem, then in the long run, we're going to lose. And if the ecosystem wins, but the token does nothing, then we're going to lose the community. And so it's really important to have alignment here. And that's really kind of what we're focused on.
+
+Citizen Web3
+I like that answer a lot, Not that it matters my opinion here, but it's about yours. But still, I do align with that answer, I think. I came to grow again as somebody who spent a lot of years in blockchain and has a lot of values that business has to be important. You cannot close. Of course, I'm talking about talking price in the case of a blockchain.
+
+But anyways, I'm going to take it to a whole other conversation instead of finishing it up. I'm sorry. Let me take you to a blitz. I call it a blitz. You don't have to answer quick. So this is three questions that's going to take us out of the blockchain conversation to kind of bring us down. So you don't have to answer them quickly. Take your time. But I call it a blitz. So first one, and they're to get a little bit strange, but bear with me. first one, Barry, can you please...
+
+Give me either a song or a movie or a book that has positive influence on your work life, on your professional life.
+
+Barry Plunkett 
+Wow, that is a good question. I think the...
+
+book or song or movie that has had the most influence, positive influence on my work or professional life. The
+
+Barry Plunkett
+Okay, this is kind of a, this is sort of a stupid answer. But, and it's kind of a cop out. I have recently found that like, watching old sports documentaries has been tremendously helpful for like, understanding how to lead a bigger team now, and how to like,
+
+Citizen Web3 
+I love it already.
+
+Barry Plunkett 
+tell a simple story that gets people excited. Like I always used to look at coaches and they'd be like, Yeah, we're just gonna like do the fundamentals. And we're gonna like we're gonna play the game and we're gonna like focus on the ball. Like I'm always like, he's fucking stupid. But now that I like have to like, talk to 50 people at the same time, or 40 people at the same time, like really like you do need to communicate really, really simply. And so that's been that's been super fun for me. So like, I don't know what which one has been best.
+
+I can I can send you something you can link I can send I can send you something you can link in the show notes.
+
+Citizen Web3 
+You don't have to pick one. Please, please. I have to say, by the way, this is the first answer that I heard such an answer. And I must say that as somebody who grew up in the East, know, when in our cinematography, that example of sports coaches and sport people bleeding doesn't exist, man. So when you watch these movies, you're like...
+
+And they start talking about baseball examples as, know, the solution is like, what is happening? You know, but I, do, I do understand totally what you're saying and I love it. next one, this is going to be, get weirder. I'm sorry. So one motivational thing that of course you can share with me and the audience that keeps, getting Barry every day out of bed in the morning or in the afternoon or whatever, or in the evening and wanting to build the internet of blockchains wanting to.
+
+close shut the shut ears to all the stupid comments that sometimes come from from yeah just focus on what is important and really build what is what you believe in something motivational.
+
+Barry Plunkett 
+Yeah, for me, there's kind of two things. One is a personal one, which is sort of going back to that stuff that got me into crypto and and teach some stuff that, you know, my family went through when I was quite.
+
+young, where during the financial crisis, my mom's business was really suffering and my dad's job was was in a difficult place. And there was this whole thing that happened where one of his colleagues was was sort of trying to to like, take his job get promoted over him and he worked in the government. And so the way you do this is like, you you like, have to build a very
+
+detailed case against someone to get them fired and then tries to move out, take their position. Um, and this person built like a totally fraudulent, but like spent a year building like a case against my dad that he then had to spend a year dismantling and disproving. Um, and it was one of those sort of early things that I look back on and I think about like how important it is to have systems that have verifiable ability,
+
+built into them. So you don't get into these situations where you have like, okay, one person saying X and the other person saying Y and it like completely it was a huge mess, right for my family. And if I think if the sort of policies were actually built around in a way where we're working backwards from things that we, you know, can cryptographically prove.
+
+You know, I think there's much better ways to resolve these kinds of things. It wouldn't have spent my dad wouldn't have had to spend years kind of like dismantling this thing. That was that's one that's a personal thing. And then for now, like zooming in, think what. Is really different about the skip team that's now leading Cosmos compared to basically any other ecosystem that I looked at is we're super customer driven. We like.
+
+Barry Plunkett
+care really deeply about helping chains and the ecosystem win. And if you ask anyone, like they'll tell you that we have excellent customer service. We take feedback really openly and really well and incorporate into our product roadmaps. We get really excited when people use our products and it helps, it helps them onboard users. helps them onboard capital. makes it easier for them to build their chains. And we, you know,
+
+also get really excited when people give us feedback. sort of like look at that as a gift. And we have so many good, we're like so lucky in the Cosmos ecosystem to have like so many of the best teams in crypto. Like if you look at most other ecosystems, have like shit like, like they basically have people who come to them and just like, they're like, give us a grant, give us a grant, give us a grant. We get to work with teams like Babylon and Noble and
+
+million and dyda like market leaders right in basically every category. So we get to work with the best of the best and we get a lot of joy out of taking care of them and helping them win. So that's honestly the most fun part about the job for me.
+
+Citizen Web3 
+First of all, thank you for sharing the initial story and just to back up what you say once again, the listeners won't let me lie. I don't do this, but I'm what I call myself a super user of crypto. I I use crypto for 12, 15 years every fucking day. And just to prove your words, I've recently wrote to, I opened a ticket recently on skip and it actually took a little bit longer to complete because of what the issue was. Let's not go into it, but you guys did and
+
+You know, nobody told me, hey, this is serious. We know you can wait. know, people went and actually fixed the cross-chain bridge because I was the only person that did something stupid and got stuck. And I didn't, you know, like say, oh, I'm a guy who like you, no, I didn't. I just came. wanted to, I want to on the support ticket. And after some time, it took a while, but after the first, they replied and after some time they fixed the issue and it was done. And it's like, so just to back up your words, it's true.
+
+It is really, really true. Not in every place you get the same response. So yeah. 
+
+Barry Plunkett 
+Okay, Yeah, it's something we care a lot about. And if it hadn't happened, or if you do have a bad experience, and or anyone listening to this does, you should tell me because we're not perfect. And, you know, now that we're bigger, it's harder for me to be on the ground floor. But we want to enforce that standard everywhere.
+
+Citizen Web3
+Absolutely.
+
+Citizen Web3 
+Thank you for that as well for the invitation to do that as well. And last one is going to be the weirdest one. So Dead or Alive, made up or a real persona, it could be a family member, could be your work colleagues, could be a developer, know, could be a book character, a cartoon character, historical character, an alien, doesn't matter. Not a guru, because I personally don't believe in them. I don't think it's correct, but
+
+a personage that when you professionally feeling stuck, you kind of, okay, that's it. You don't see the exit. You just don't see the light. You kind of not call them, but it helps you to think of that character, of that persona, whether they're real or not. And this helps you to get your own wheels going once again.
+
+Barry Plunkett 
+Yeah.
+
+I have two again that I they're both founders that I think are really good. One is Dee Hock, who is the founder of Visa. There's a really, really great book written about Visa called, I think, One for All, which is sort of about how they they structured the network and aligned incentives so that
+
+would be owned by the banks who are participating in it and how important that is for, scale and for actually winning. And I think I draw a lot of inspiration from sort of how they designed that for how we want to think about the Cosmos ecosystem and, sort of creating a business that aligns with chains. I also think he's just like such an Epic founder. Like they built the first MVP of,
+
+visa like on mainframes in the 60s or something like that in like 60 days and it was nationwide and it worked. the engineers told him like, it'll take like a year and a half. And he was like, computer people, like it'll take as long as you're given, like as long as as much time as you give them, they'll like get it done.
+
+Citizen Web3 
+ha ha ha
+
+Barry Plunkett 
+And he was right, you know. I think about that a lot too, where like people are like, my God, it's gonna take so long. And I'm like, I don't know, I kind of think you can do it. Yeah, and then the second one is this guy named Frank Slootman, who you may have heard of. He's sort of famous for coming into struggling businesses and turning them around.
+
+Citizen Web3 
+And the second one, wait, you said two. You said two. There is two characters.
+
+Barry Plunkett 
+He wrote this great book called Amp It Up, is basically this idea that the way that you have to show up as a leader is like bring a ton of intensity to every interaction every day and hold people to super high standards and super high expectations. And when you do that, the company will win and people will really, really surprise you, but that that starts with you.
+
+He also is very famous for making a lot of hard decisions, right? And like cutting things that aren't working and doubling down on things that are. And so I think it's like useful sometimes to sort of back up and like whenever you're in a difficult spot or like, you know, you're trying to avoid some tough decision, which happens a lot. You're like, what would like, what would Frank Slootman do here? Like he were coming in, like how would he restructure this company? And that's like a usually a useful way to, like actually be like, this is the important thing.
+
+Like if I weren't me, if I weren't in this situation, like how would I handle it?
+
+Citizen Web3
+Of course. of course. That's a good... I actually have not... I think the name of the book rings something, but I don't think I've heard about it. So I'm definitely going to be the one checking this out because I don't think I've read it or heard of this person. Barry, I want to thank you very, very much for your time, for your answers. I'm going to say goodbye. This is going to be a goodbye for the listeners, so please don't hang up just yet. For everybody else.
+
+Thank you for tuning in and see you next week. Thanks Barry.
+
+Barry Plunkett 
+Thanks, Serge.
+
+Citizen Web3 
+Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

@@ -1,0 +1,388 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/polto
+
+Episode name:
+Zapoy, Free Software and Cyberpunk with Alexander Poltorak
+
+Citizen Web3 (00:03.609)
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast. Today, I'm proud to have Alexander, the founder of Polto with me. Alexander, hi.
+
+Polto (00:13.046)
+Hi, Alexander, Alexander Poltorak or Polto for short. So I'm not founder of Polto. I'm just Polto. It's fine.
+
+Citizen Web3 (00:14.417)
+How are you?
+
+Citizen Web3 (00:23.069)
+Damn. But okay, I like that correction though. I like that correction. It's good. It's good. And I love your background. Let's try it. I know the listeners cannot see it, but please tell me two words. Alexander right now is pointing to his hat and he will tell us. I'm going to let him tell what he's trying to say to me. Alexander, tell me a little bit about where you are.
+
+Polto (00:46.866)
+I don't know if that was the question or... Yeah. So I'm actually in the middle of nowhere in Colombia traveling. So I'm traveling in South America now. Colombia, Paraguay, Salvador, at least maybe some more. And yeah, the hat I was pointing to is Zapoy fixes this. And yeah, it's a small joke about Bitcoin fixes this.
+
+Citizen Web3 (00:57.745)
+Beautiful.
+
+Citizen Web3 (01:06.619)
+Beautiful.
+
+Polto (01:16.622)
+because I don't think Bitcoin fixes everything in the world. And actually, believe that Zapoy fixes more things.
+
+Citizen Web3 (01:18.16)
+Huh.
+
+Citizen Web3 (01:25.841)
+Guys for the listeners out there, by the way, we will definitely find some kind of encyclopedia show note. What is a Zapoy thing? But I'm going to leave it. I'm going to leave it a mystery. I'm going to leave it a mystery. let's for the listeners and the ones that really don't speak Russian and want to know what it is, you guys go to the show notes and I promise there will be a show note to explain what is the poi. But I'm going to leave it a mystery for you guys. please, Alexander, go back to you.
+
+Tell me, can I please ask you to introduce yourself for me, for the listeners? mean, not just your name, but anything you want. Not a secret, of course, but talk a little bit about yourself. What did you used to do? How did you get in? How did life get you to work in Bitcoin? And how did you end up where you are today?
+
+Polto (02:15.692)
+Yeah, long, long story. I'll try to make it relatively short. So I was born in Soviet Union in Kiev, raised in Moscow. like Ukrainian, Russian, let's say nowadays. because of my Soviet education, I don't understand anything about money and everything I learned about money. actually learned it from Bitcoin. So.
+
+Since very early days, I was mainly involved in free software, open hardware, and discovered Bitcoin quite early. The free software side of it, of course, intrigued me. The cryptography, I was always interested in applied cryptography, but honestly, I kind of dismissed it first for many, many years and tried to get back to it several times.
+
+Probably people who were in Bitcoin very early knows that it was very Windows. for example, I tried to GPU mine. Was a hell, like I never succeeded to make it work under Linux. And I wasn't able to force myself to install Windows just for that. So tried several times, dismissed it like it's shit, it's shitty software.
+
+I didn't really understood the use case. And to be honest, I kind of felt back again through Ethereum. I had a chance to help a professor at the University of Geneva to co-organize the first hackathon for Ethereum Foundation. I believe it was not even Ethereum Foundation yet.
+
+So it was still pre main net proof of concept. And yeah, the idea of smart contracts, enforcing stuff, execution of the contracts through peer-to-peer network and cryptography kind of pulled me in. And then I spent a few years trying to do stuff on Ethereum and...
+
+Polto (04:36.75)
+through that experimentation became a kind of Bitcoin Maxi. So I'm still doing other stuff, but yeah, kind of Bitcoin Maxi. So now, yeah, I just forgot to mention what I'm doing now in this space and my main project. I...
+
+Citizen Web3 (04:48.561)
+We will talk about not a gun, please please. Sorry. Sorry. Sorry. Sorry, please go on. go on. Please go on. Sorry. I thought I thought you
+
+Polto (05:02.345)
+When I decided to move on completely into Bitcoin and crypto, I joined the crypto broker in Notchatelle called BT. It was one of the first brokers in crypto brokers in Switzerland. Well, Bitcoin brokers at the time, and they were the first to start also with onboarding from fiat to Ethereum. So I spent three and a half year in that company and then
+
+left to create my own company called Hodling. And with Hodling, we help to huddle, obviously. So it's a company doing education about multi-signature wallets, essentially. So for a very niche clientele. And on the side, I'm doing consulting for a few projects, mainly Alephium that I'm helping. Yeah, so that's what I'm doing nowadays.
+
+Citizen Web3 (06:02.865)
+I promise I'm going to try and ask you about, have actually in my notes pretty much all of those that I want to talk to you about, but I'm going to, if you don't mind, of course, feel free to, if you don't, I'm going to try a subject. If you think it's a bit too private, you don't have to go there, but I'm always curious. I mean, this podcast is about four and a half, almost five years old now. And, you know, mostly I've been talking to people like yourself.
+
+people who are founders, who are developers, who are validators. And one of my goals, at least personally, and I think it's something that our audience of the podcast is interested in is try to understand why. And what I mean by why is nobody just wakes up and says, okay, I'm going to be a privacy advocate. I'm going to build Libre software. It doesn't happen in one day.
+
+I mean, you kind of mentioned the Soviet and I can definitely connect to that, you know, the ex-Soviet background. But I don't think it's enough. Usually it's something, at least for me personally, it is something from inside me. So I want to ask you why, why did you pick these things in your life instead of going working for a huge company, for example?
+
+Polto (07:22.692)
+Actually, Bitcoin took me some time, but free software, got hooked almost in a day. It was a quite intense experience. I was still a kid. I was helping my father with his company to do some database stuff. was a very early day of the internet. Basically, I was helping to make his webpage.
+
+And then from the static web page, we wanted to have some database and they tried some stuff with my windows. It was Windows 3.11, I think something like that. The last Windows I tried and yeah, was not really working well. And I went to my masters to people I knew were competent in the field.
+
+So it was a small internet provider in Switzerland. They're still existing, expanded quite a bit called the Infomaniac. And the guy, the founder of Infomaniac told me, okay, I see what you are trying to do. He gave me an account at their machine. It was called heaven.infomaniac.ch and it was their Linux server.
+
+And basically he explained me how to edit files there and how to access them through the web. And, for me, I was just doing like writing some software running this software on the web. And it took me quite a while to understand that this terminal, it was like an entire operating system. And when I understood this, basically I removed my windows.
+
+Installed Slackware Linux. was still with no graphical interface at that time. You had to compile it and it took me something like two months to understand how. but basically I, I got hooked completely in and since then, yeah. And, and I had a lot of chance also meeting the right set of people meeting Richard Stallman, quite early also,
+
+Polto (09:44.659)
+Like humanly speaking, he's a complicated person to discuss with, but yeah, the ideals, I got hooked very quickly and then also met the first pioneers in open hardware, had a chance to work in this company. So yeah, I fell down in the rabbit hole very quickly.
+
+Citizen Web3 (09:48.881)
+Hahaha
+
+Citizen Web3 (10:07.889)
+This is another, I guess, aspect of the show that a lot of the people who spoke on the show were at the very roots of the internet in the 80s and even before a little bit. And it's interesting always to talk to people like yourself, at least for me, because I find so much new things, at least perspectives, you know, for what I thought was one way or another.
+
+And then because, you know, I was not there at that time, you know, that people, when they give you that perspective, it kind of for me, tries to put things in the right place. And I'm going to try and ask you a question from that. What is today, what's your personal goal in terms of not crypto, but in terms of, you said, you know, open hardware, Libre software, what is
+
+Why is it important to you today? Where are you going with it personally?
+
+Polto (11:11.005)
+So when I started to discover Linux and free software, I discovered the entire cypherpunk movement and the early hacker movement and kind of understood the idea that these people were on one side scared about and on one side trying to build another world. So basically they understood that we will either be controlled by
+
+these machines and by the people who control the machines, or we will have control over the machines and they will be tools that we can use for our needs. And obviously I tried to be on this side of things, building machines that we can use as tools, as extension of our mind and not enslaving us.
+
+Citizen Web3 (12:05.005)
+I can totally connect with that. Let me play a little bit devil's advocate there. People who listen to the show, they know I like doing this. So, but I'm going to play a little bit devil's advocate. Don't you think though that, you know, by sometimes, for example, And I think I've seen something on your Twitter somewhere, know, there isn't a veracty, but I think I've seen some mentions somewhere from you, which make me think about this question and what you're saying now. So for example, you know, we talk about
+
+You currently mentioned we need to be here. Our goal is to try to make the machines not enslave us, but the continuation of our mind. And I totally agree, by the way. What I have a question about is, for example, the way that I see the crypto world, the Web3 world. I know you're Bitcoin Maxi and it's more about Bitcoin, but still bear with me, please. know, going sometimes I ask myself question, for example, I look at El Salvador or other countries and I think, but
+
+Isn't that just going backwards? Aren't we just now giving away our power to the people who are there to enslave us? So don't you think so that sometimes, I don't know, what do you think about that? Not don't you think so. I'm going to rephrase the question. What do you think about the whole thing of whether it's Bitcoin or whether it's Ethereum or any other crypto becoming a legal tender? Because to me, it kind of feels like I'm shooting myself in the leg. But what's your thoughts on that?
+
+Polto (13:34.273)
+I was very much against the legal tender idea and I'm happy that they actually like still allow both and don't force people to pay in between because I think it should be something that you opt in and not forced to use. So that was always a question that I asked myself and maybe you know that some
+
+open source licenses for some use like military use. Like purely free software licenses allow any kind of usage. So what I'm telling myself on this is yes, free software also reinforce bad people.
+
+with bad intentions, but it gives the same possibilities to all people. And this is what I like in there. So yes, it gives powers also to the bad guys, but not only. And that's the difference.
+
+Citizen Web3 (14:49.073)
+My question is to you here, but who defines the bad guys, know who define who makes the definition of
+
+Polto (14:54.745)
+it's an individual, probably a personal perspective for everyone.
+
+Citizen Web3 (15:01.701)
+Because there is a lot of especially like I must must admit I must make an honest thing here. be up until four to five months ago. I haven't spoken to a lot of people from the Bitcoin community and I started recently to try and change that and to invite more and more guests such as yourself and other people, you know, to hear to do. And I know it's a big change, yet still I can.
+
+sense that how to say that and a lot of people that from the Bitcoin community I talked to the kind of they don't deny it. They don't say that it's like that, but don't deny that Bitcoin today and mass and I'm not talking about a technology. I'm talking about how it's marketed, how it's being adopted. It's more about surveillance. It's more about like a business that is there to find trans... How do we fix that?
+
+Polto (15:59.574)
+For more free software, basically. So I seen the same going in free software being kind of eaten by huge industries. Like now even Microsoft is doing, they try to call it open source, obviously not free software, but they are also doing free software. They work for...
+
+Citizen Web3 (16:02.289)
+software.
+
+Polto (16:27.003)
+a very long period, the biggest contributor of the Linux kernel, for example. So they are forced to do it. They try to subvert some terms and call it differently. But yeah, the license is the license. So it gives the same rights to everyone. So about surveillance, will try to make a short story from my past. So one of the companies that I co-founded that is still running is
+
+but I left the company, it's called the STVS, stvs.ch. It's a video surveillance company. And basically it was at the very, very beginning of the IP video surveillance cameras. And I kind of seen where this is going. And my point was that, yeah, okay, this will exist anyway. The industry is going in this direction. So either I let...
+
+Other people do horrible stuff, proprietary horrible stuff that we don't have any clue what's going on in, or we try to build some free software for this industry and to make it possible to choose free software for a horrible thing like video surveillance. But because there is demand for video surveillance, like
+
+football stadium, commercial centers, they all have video surveillance. But now they at least have the choice to have the free software that people can understand how it works. And we had some customers like schools, for example, installing video surveillance and having like big, big questions, ethical questions. And only because it's free software, these questions were
+
+possible to openly discuss and to see how the software works, what it does, how it handles those ethical questions, et cetera, et cetera.
+
+Citizen Web3 (18:30.779)
+I want to ask you a strange philosophical thing then, because I am not maybe not like yourself. haven't been this since the very beginning, but I've been in this industry and in this for a long time since 2012 roughly and 11, 12, whatever. And there is several times I've personally seen people who
+
+come to, I'm not, of course, I'm not gonna say any names right now, but you know, who come to this industry and they come with good intentions, but they don't know when to stop. And they go so much over the line that I feel, I don't want to say ashamed that I know them, but I feel a bit guilty maybe, you know, for being a part of them being here. So the question is like this.
+
+Polto (19:07.377)
+Yes.
+
+Citizen Web3 (19:24.795)
+How do you as a person, when you make yourself, know, when you say, okay, I'm on a pathway to make sure, because this is what I feel, I'm here to make sure blockchains don't end up as that mechanism that control us because it's a perfect tool to do that if it's given to the wrong hands. How do I know or you or anybody else, how should they know when to stop and not to go over the line to end up on the other side? Because it's a very thin line, I think.
+
+Polto (19:40.487)
+Yes.
+
+Polto (19:55.49)
+tough question, but I think the most important here is to have those lines defined for yourself. So for me, the line, like the absolute line I'm not ready to cross is about the licenses, about free software. So for example, STBS, the moment they decided to not do free software, I just...
+
+Citizen Web3 (20:02.865)
+course.
+
+Polto (20:22.756)
+on the same day quit the company.
+
+At some point, they understood that it was a mistake and reverted for at least a part of the licensing. But yeah, for me, that's the line I'm not ready to cross. And I guess the most important thing is to understand where your lines are and what are the criteria for you.
+
+Citizen Web3 (20:53.539)
+It's of course, it's a good thing. I'm trying to dig a little bit your personal here, of course, but you know, I have to. But as I do that, I think that what you say definitely makes me think because, for example, in my projects, I invented the license. I called it Be Good, Be Good Public License. And I wrote that everything is free, everybody who would do whatever you want. But if you make money on it,
+
+Polto (20:53.787)
+and it's personal.
+
+Citizen Web3 (21:21.913)
+You will be a bad person if you don't share some profits with me. like, you know, it's it's and I didn't say if you have to share profits, it's something like you would be considered the good person if you copy my work and make money and then share something with me. And ironically, though, I you know, when I did that, like I have when because we started to develop open source and I had some developers who got scared. They were like, no, we have to put MIT license. But then I actually managed to.
+
+explain to them that it's not about that. It doesn't matter what, if you have something called a license that you can put whatever you want in there. It is the issue of the court and the lawyer, so to speak, if an issue arises to try to decipher what is it really. So for me, it's also about free things. how do we, but the question that I want to ask by that is how can we as
+
+Polto (22:07.161)
+Yes.
+
+Yes.
+
+Citizen Web3 (22:20.005)
+I don't know, as a movement, let's call it like that, right? Like a web tree, decentralization movement, whatever. How can we help people to stop being afraid of everything, to stop being afraid on every step? You know, I see developers and founders. I don't want to launch a wallet because the SEC is going come for me. I don't want to put code in here because somebody is going to put me in prison.
+
+And things like that happen. how, what can we do? Is there something that you think can be done or something you experienced in your journey that helps people to, I'm going to say it, I'm sorry, to grow balls, you know, like.
+
+Polto (23:00.944)
+Trying things little by little and seeing the results and gaining in confidence with time. I think that's the only thing that really works. Like having discussions also, like for example, with all the samurai wallet situation, tornado cash situation, it fostered a lot of discussions and panels at conferences.
+
+Like every single conference last year I went to, we had a panel about the situation. And this actually helps a lot the different people to understand the boundaries, understand what went wrong in both cases, what are the arguments used by the courts, by the judges and prosecutor and yeah, to...
+
+kind of have a better understanding of these boundaries. And some people say, okay, no facts given about the boundaries. I just have to go fully dark, anonymous and continue to do my stuff. Some people understand that, okay, maybe like writing software is not a problem. The problem is like running some centralized service with money flow coming out of the...
+
+of the service that can be considered as money transmission or money laundering service. So yeah, just discussing these things and find the line where you are still in your comfort zone.
+
+Citizen Web3 (24:44.593)
+Let's me jump a little bit to Bitcoin here. And I'm gonna call this question, I know you probably might not like the technical term, but let's talk a bit about Bitcoin L2 in quotations, know, the whole movement. know, for a long time, Bitcoin, again, I know that L2 is a very big, vague, abstract term, but just for the stigmatic
+
+question. Please, please, please allow me to call it like that. You know, it didn't have much, didn't catch much user attention, know, liquid or or and anything else or lightning, you know, there was an issue today. Well, it looks like the scalability problem has been it has been solved. You have so many and you have and of course you have a lithium, you know, with yourself, you have new things coming out like I don't know.
+
+Citra with the ZK rollups and and you have like I don't know fractal with their issues or not issues Whatever there is or the nose. There is so many things. My question is this it looks Like this color ability Bitcoin thing has somehow been solved. But with that we have three new questions decentralization of those L2 security of those L2s and Utility because now are they offering more utility are so my question is to you
+
+Polto (26:01.637)
+Yes.
+
+Citizen Web3 (26:10.319)
+What are your general thoughts about this whole Bitcoin, again, I'm going to call it L2, please correct me if you think the term is wrong, And do you think that this Bitcoin L2 revolution will cause problems in terms of security and decentralization to Bitcoin itself?
+
+Polto (26:33.609)
+Yeah, so I have to admit that I'm not like super bullish on the currently available L2 solutions for Bitcoin. Like my personal opinion about Lightning is that it's shit. I that Lightning authors are pretty much aligned with this opinion. The authors of the initial paper, I mean.
+
+So the problem of, let's say, decentralization and security for L2 was mentioned since the very, very beginning of the first tests of doing things like, let's say, similar to liquid. And the dual-side peg in a fully permissionless way is still a problem, at least on Bitcoin.
+
+I think it's the right moment to mention the shit coinery stuff. So, like some people say Bitcoin and shit coins, and this is an easy way. And I think still a good way to prevent the total noobs, people discovering the whole field to, to fall into scams. Because when you say these, you are like 99 % right. Probably like by calling everything else.
+
+or useless crap. I personally, at least when I talk to people who has at least some technical background, I tend to split into three categories, not two categories, like Bitcoin, Shitcoins, and in between the sandboxes. And the sandboxes, the reason I am calling these sandboxes is that we can't try
+
+everything on Bitcoin. It would be dangerous to try like two experimental stuff on Bitcoin. Bitcoin is already experimental enough. It's already an experiment. And honestly, like I think that nobody wants to fail that experiment. So we try to be conservative with this experimentation and try stuff like more experimental stuff on the side. So this is why
+
+Polto (28:57.466)
+sorry. And when I say try, you need to try it with money involved. Because, yeah, if there is no money involved, it doesn't really attract the right hackers. Yeah, there is no skin in the game. So you need to have skin in the game. And for this, you need those networks to have some value.
+
+The other reason I'm calling it sandbox and not something that will last forever is that the foundational layer is that it has to be open source. It has to be free software in order to be able to verify. Like the don't trust verify. comes from the free software aspect that you can verify that you can look into the code. And if you can look into the code and that
+
+this new functionality, let's say on Zcash or on Monero or even on Alephium, if it's proven to be safe over time, if it's proven to have some market demand, then I believe that people will research how to soft fork it into Bitcoin. And when I say soft fork it into Bitcoin, in Bitcoin, we want to avoid how
+
+hard forks, we want to avoid breaking compatibility with the older clients, with the older full node versions. So it's way more difficult to bring new functionalities, but yeah, it takes just much more time to find a way to bring this functionality in the way called soft forks. So not breaking the compatibility with older clients.
+
+And yeah, I think that if there is enough demand and if the technology is proven to be stable enough, it will end up into Bitcoin. And so for me, there are all these sandboxes where we try privacy tech, scalability tech, security tech, and that I believe that most of it, if it makes sense, will end up in Bitcoin. And we start to see already some of the zero-knowledge stuff.
+
+Polto (31:20.727)
+coming into Bitcoin. So yeah, that's my position on the topic. And this is why I think it's important to have all these other networks experimenting with layer 2s. And actually, for example, layer 2s on Ethereum for me are way better than, have much better trade-offs than the layer, currently available layer 2s on Bitcoin.
+
+Citizen Web3 (31:28.497)
+It's... gone, please, please, gone.
+
+Citizen Web3 (31:53.443)
+When you say when you say that it has better trade offs, what would do what what for example, talk talk me through through example some something at least.
+
+Polto (32:03.38)
+Okay, I think the most easy to understand is the liquidity requirements on Lightning Network. For example, if you are a merchant, let's say you try to orange peel a merchant and to onboard him into accepting Bitcoin and accepting Lightning Network payments for coffee or for small expenses. The first thing you need to explain to these merchant is that he has to open the
+
+a channel, a lightning channel, and for that he has to lock up some of his liquidity. And this is so like weird when you're not into Bitcoin. It's very difficult to understand why you have to do that. And it requires some capital to lock in. So, yeah, this is one of the example of bad tradeoffs that lightning requires.
+
+Citizen Web3 (33:01.585)
+I am one more question in that direction. And then I want to talk a little bit about wallets with you and ask you a little bit wallets. you you said that you believe that a lot of the experiments from the sandbox will sooner or later end up in Bitcoin. Now, again, here's the question to me.
+
+This sounds like there's two examples of what we had previously in the history of humanity. One, we tried to experiment with money a lot, and then we decided to give it all to one entity called bank. And that didn't end up very well. But we tried to experiment before that. A second one is we had a lot of experiments with such a thing called the law. And there was a lot of private laws, that, you know, we couldn't well, we gave it to the government also didn't end up very well.
+
+Why will this case, in your opinion, where let's say that, you know, we all agree that every single sandbox has to go back into Bitcoin, why do you think that this case will not end up like the previous cases in our history, even though it's verifiable? Why do you think that this will not be the same case?
+
+Polto (34:18.719)
+forkability because Bitcoin is forkable because yeah, basically same you can make the same parallel with the Linux kernel or any free software like, I don't know, Firefox or whatever. Just because it's forkable. I think that we have like a good enough protection and we've seen this in work with
+
+with many free softwares like LibreOffice working from OpenOffice, like MariaDB working off from MySQL. So there is enough history showing that if someone mess too much with the free software, the community will just work and completely switch to the fork.
+
+Citizen Web3 (35:18.545)
+I must say that governments are also forkable, not as easy of course, but sometimes it doesn't solve the issue. But yeah, I understand where you're going. understand that. I do want to ask you a little bit about wallets, a little bit. And the first question I have is, what are the current trade... Okay, let me zoom out. It seems that today...
+
+You know that if we talk about adoption and I don't mean adoption that exists today because everybody knows about Bitcoin, literally everybody. Like it's very hard to find a person who hasn't heard the word Bitcoin today. But usage hasn't happened. Mass usage doesn't happen, you know. So at least to me, it's kind of obvious that wallets and explorers are the two tools that will be between that stand between
+
+normal people and adoption, to speak, mass adoption. Now, explorers are kind of lagging behind in terms of still, you know, but yeah, let's talk about wallets, not explorers. What do you think? Is there such a thing as a perfect wallet? And if not, what are the acceptable trade-offs in your opinion that a wallet that is there to adopt more users can afford for itself?
+
+Polto (36:44.41)
+Yeah. So first of all, I don't think there will ever be a perfect wallet because there are different use cases. So like one of our presentation slides from Hodling start with a picture with a wallet for paper money with some CHF Swiss francs inside, a small cute safe from home that you can have at home.
+
+and the bank's safe deposit box. And these things has a different, let's say, accessibility, different portability, and different security levels. And not anyone needs a safe deposit box. Everyone probably need a pocket wallet with some money inside. But yes, so different use case, different security level, different.
+
+level of accessibility. For example, the bank's safe deposit box is probably not open on weekends. yeah, so same goes for crypto, in my opinion, and for Bitcoin. Like I personally use a hardware wallet, but also a software wallet. My software wallet doesn't even has a password or anything. like for super quick access to make the expenses without
+
+like fancy security features or whatever, to go fast. And then I have a multi-sig and the multi-sig is not something I'm using on daily basis. That's not the purpose. It's more like a safe deposit box. And I think that at some point we will have better interfaces mixing these different things into maybe one single interface.
+
+But for now, it's really like three different things, at least three different things. There might be more, like for companies, it's much more complex.
+
+Citizen Web3 (38:53.073)
+Usually when people talk about adoption, course, and I, by the way, I don't agree with that opinion, but I want to ask you that question. Because usually when people talk about adoption, of course, they talk about all the people in the world or at least all of different types, older people, younger people, people who are businessmen, people who are artists, whatever. And of course, you just mentioned yourself that
+
+different types of wallets for different types of usage. And my question is about adoption and you know, it's an old silly question, but I do want to ask them because there is so many different opinions. It's about older people. I must say I cannot see, I mean, I'm not going to say anything about my opinion, but I just cannot see.
+
+My grandmother, well, using a multi-signature wallet. I just cannot picture it. I can picture using a hardware wallet sooner or later. But a multi-signature wallet, think that's... How do we... Do we need... No, sorry. The question is, do we need to solve this or is it something that we don't need to look at and we need to focus on the people who will use that?
+
+Polto (40:05.644)
+Yeah, it's good question. first of all, I tried to make a distinction between the, let's say, the people who lives in good economies having access to financial services and who are like, well, my bank interface is really easy to use. Why would they use something that much complicated like a multi-sig?
+
+some other people who don't have access to these financial services and who has to try to participate in world economy, they study these tools and they learn how to use them because they don't really have other choices. So that's the first layer of answer from me. Is there a need really?
+
+And if there is a need, you will learn the tools even if they are not perfect, complicated to use, et cetera, et cetera. So that's the first layer of Hansel. The second layer is that we can, we will, we should, and we will probably make these tools much easier to use. Like for example, multi-signature wallets on Bitcoin five years ago.
+
+It was extremely complicated and I've seen people who brought the beeps, people who contribute to Bitcoin core, people who contribute to Ethereum, even Vitalik to mess up with their Bitcoin multi-signature wallet and to lose money forever. Because it was so complicated.
+
+probably I would say three, four years, we start to have much, much better user interfaces that kind of guide you to prevent to fall into these pitfalls. And since, yeah, let's say a year, we start to have on Bitcoin even better interfaces using
+
+Polto (42:19.636)
+new stuff in Bitcoin like like MiniScript. So I don't know if you tried, for example, the Liana wallet. It it start to be much more user friendly and the multi-signature part can partially be outsourced in in different ways. Some ways would be very centralized, relying on some third parties. Some ways would be, let's say, federated.
+
+less centralized and some ways can be even fully self-custodial but obviously more technical to use. So it's already getting better and I think that there is way to get even much more in this direction.
+
+Citizen Web3 (43:13.905)
+I hope so. remember using BitShares in 2013. I remember using Bitcoin in 2011. It was fun. I think we all locked our fun sooner or later when using first multi-signature stuff. It was always fun locking something.
+
+and finding out that, you can lock stuff like that. I didn't know that. Somebody's like, how did you do that? Well, I don't know. I just was clicking this, this, this, this, this. And it's like, OK. I have a last kind of question for you before we jump into the Blitz. It's an easy question, a very typical question, I guess. Privacy and scalability. So it seems that, you know,
+
+Privacy is something that we want and it's definitely then a lot of people will argue that it's a right because it doesn't require somebody else's work, right? So it's something that somebody of course can say no and that's okay also. Though if we want privacy and this is by the way also a question, do you think that we need privacy? I guess that's the first question. And if you think we do, how do we make privacy scalable?
+
+Polto (44:32.628)
+Tough question, actually. So I think we definitely need privacy. And I don't know if you know about there is like a whole split kind of now between the solar banks and the lunar banks, the people who think that the transparency of networks like Ethereum can
+
+Citizen Web3 (44:35.547)
+Sorry.
+
+Polto (45:00.657)
+help to build a better society and people who think that, it's basically a nightmare society, like the totally dystopian society. So I'm more on the lunar punk side. I admit that some of the transparency can be used for good, like, for example, transparency for politicians, for governmental organization.
+
+can be leveraged, but there should be privacy for citizens, for normal people, for companies, for private companies, for non-governmental organizations. So, how to build... Sorry, what was the question again?
+
+Citizen Web3 (45:50.853)
+The question was how do we scale privacy? Because there are technologies that endanger security decentralizations and so on and so forth. How do we scale privacy in a good way, so to speak? I know it's a very vague question, but what do you think?
+
+Polto (45:54.451)
+How do we scale? Yeah.
+
+Polto (46:06.163)
+Yeah, it's quite vague and honestly, I think I'm not technical enough on the privacy side. But yeah, we've seen, for example, with all the zero-knowledge field that the first proofs required a lot of space usage on the blockchain. They were very long to calculate, so it was quite expensive, not scalable at all.
+
+And through time, we experimented by dozens of different zero-knowledge proofs and came to much more succinct, faster proof that use less space on the chain, that are much more scalable, that take less time to verify. So I guess it's trying different techniques and developing better
+
+cryptography.
+
+Citizen Web3 (47:08.091)
+Okay, thank you. Alexander, I'm going to ask you three very strange questions to, I call them blitz. You don't have to answer quick. It's not really a blitz. It's questions that are completely irrelevant to Bitcoin, as you will see, or to crypto, but it will help us to finish the conversation, I guess, and to jump out of, know, ground down, I would say, to a beautiful view such as what you have in the background there. So first question is,
+
+please name me or one song or one book or one movie or, or that throughout your life has a positive influence on you book song or movie with positive influence that you recommend, course.
+
+Polto (47:56.093)
+Well...
+
+Citizen Web3 (47:59.333)
+Told you it's going to be strange.
+
+Polto (48:01.619)
+Well, it was many, many, many different ones and like in very different ways. Okay, probably.
+
+Like a lot of the cypherpunk literature, one that comes to the mind now, it's not cypherpunk at all, but the cathedral and the bazaar was very, to say, helped me a lot to understand the different types of societal organizations, let's say.
+
+Yeah, I would name that one. Cathedral, the cathedral and the bazaar.
+
+Citizen Web3 (48:46.67)
+I like it. Thank you. By the way, once again, guys, girls, bots, if there are bots listening to this one day, please check out the show notes. And of course, every project, including all those books and everything we're going to mention is there. So please check it out, read it, do your own research as they say. Alexander, two more. This is going to get weirder now, I promise. Give me...
+
+One motivational thing that you can share, of course, with me and the listeners, that keeps Alexander wanting to build free software, open hardware, focus on decentralization and live your life without thinking, everything is stressing, something motivational that keeps you going every day or something like that.
+
+Polto (49:40.357)
+I think I missed the first part of the question. Give me the what.
+
+Citizen Web3 (49:43.505)
+Sorry, sorry, sorry, sorry. Something motivational. One motivational thing that keeps you going every day.
+
+Polto (49:51.693)
+just seeing the return, seeing people who start to use this tech and to gain in sovereignty. This is largely enough for me to keep going on. And it goes like one by one person.
+
+Citizen Web3 (50:04.731)
+Thank you for saying that. Thank you for that answer. really, I really appreciate that answer personally, at least thank you for that answer. So it's a personal thank you from me. Sorry. But one more, this is the weird, strangest one. So dead or alive, real or made up, cartoon character, writer, family member, history character, coder, doesn't matter.
+
+Somebody, one persona, once again, real, dead, alive, doesn't matter, who is not a guru for you, because I don't believe in gurus, I don't think that's a thing. But sometimes we all get stuck and sometimes it helps us to think of a particular character or person or a person could be my wife or whatever, you know, that helps you to kind of like and it flows, know, do you have something like that for you?
+
+Somebody or something.
+
+Polto (51:04.842)
+Probably my first not guru that keeps me going is Richard Stone, definitely. The most dedicated person to his topic that I ever met in my life probably. And with all of his, as I said, all of his problems and let's say social non-skills.
+
+Citizen Web3 (51:13.731)
+Okay. Okay. Good.
+
+Polto (51:33.306)
+that make it difficult to discuss with him. But yeah, very motivating person to keep going.
+
+Citizen Web3 (51:43.921)
+Alexander, thank you. Thank you for the answers. And everybody who tuned in, thank you for listening. We will see you next week. Alexander, please don't hang up just yet. This is just a goodbye for the listeners, for everybody else. Goodbye, Alexander. Thank you.
+
+Polto (51:57.331)
+Goodbye listeners, thank you. Thanks for having me.
+
+Citizen Web3 (52:00.165)
+Thanks. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

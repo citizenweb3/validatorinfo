@@ -1,0 +1,350 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cosmosuplink
+
+Episode name:
+Airdrops, Democracy and Operator Values with Cosmosuplink
+
+Citizen Web3: 
+Good space time, y'all. In this episode, we talk to the founder of Cosmos Uplink, a calendar web app which can save you a lot of time while you're roaming the Cosmos Galaxy. We discuss values, democracy, consensus, and web tree monetization. And there is a lot of awesome insights from David, including their upcoming Dow launch, Airdrop, and the new YouTube show. The most obvious answer is to launch your own token. 
+
+David Sen Com: 
+And yes, that brought me into crypto and Cosmos. And over the two years, I have put always more effort into it, researching, writing my own pet projects. And one day, I said, all right, it's time. 
+
+Citizen Web3: 
+Consensus mechanisms like Tendermint have already proven to work much better than democracy. 
+
+David Sen Com: 
+In web three, you can create win-win situations for both participants in a business relationship. 
+
+Citizen Web3: 
+Just adding ownership rights and qualities of money together, this really creates endless possibilities. 
+
+David Sen Com: 
+Once you're in crypto, you're not going out. 
+
+When I got into crypto, I thought, all right, I'll have a lot of money and a lot of time. 
+
+Citizen Web3: 
+Before we rock it off into our next episode, here are some news from the sponsor of this episode, Cyber. The bootloader network Boss Room is launched and has grown to over 500 daily active citizens. The data Oracle has grown to over 10,000 cyber links and the current main focus of development is that common drop. 
+
+David is the founder of Cosmos Uplink. And if anybody hasn't heard about it, it's a really, really, really cool app, a website app. And we will gonna hear all about it today. David, man, tell me how you founded Cosmos Uplink and what it's all about. 
+
+David Sen Com: 
+It started in November last year. I started to get rid of my legacy job and legacy off-chain obligations and spent more time in crypto and Cosmos specifically. It took me a lot of hours of the day to stay up to date with what's happening, what's launching today, what's launching tomorrow, stuff like that. So I hit up a friend who is crypto guy too and said, man, let's do it together. And we did that. We had some excel sheets, some internal calendars. And after a month or so, I just said, come on, if I do all that effort for us, why not just make it public? It's no big extra effort. And that's what we did. We launched the website and the Twitter account and wild ride ever since. 
+
+Citizen Web3: 
+When you say legacy, like on-chain legacy things, do you want to share what you mean by that or is it a secret? 
+
+David Sen Com: 
+No, it's not a secret. I'm a computer scientist by degree and I've been working at a research facility in artificial intelligence in Germany. 
+
+Citizen Web3: 
+Wow
+
+David Sen Com: 
+Yeah, it sounds really crazy, but it's more like normal things, basically. Yeah, that's my job. And I quit it to go full-time crypto because I love crypto, simple as that. 
+
+Citizen Web3: 
+How was the decision? Because there's so many guests that I talk to about, like going full-time crypto. And most people say that it's so scary to make that step. How was it for you? Was it scary or were you like cool with it? 
+
+David Sen Com: 
+Yeah, it is scary. That's right. I did it step by step. I built my portfolio over time. This gives some confidence in financial confidence. And I happened to find another protocol I'm a contributor to, White whale, who I work for. And this made it easier to make the step. And I also have a very supporting girlfriend and family who supported me in this step. So I think I got it done pretty well. 
+
+Citizen Web3: 
+I remember going full-time in crypto about five, six years ago. And I remember how important it is to have and I call this support around you so I totally understand. But what's the main... I mean, you said that when you founded Cosmos Uplink, the idea was that you spent so much time on it and then you wanted to make it public. What's the main goal of Cosmos Uplink? Could you say that it's to save time or to make life easier? 
+
+David Sen Com: 
+Yeah, good question. So our goal for Cosmos Uplink is to support the Cosmos and broader IBC ecosystem in whatever it needs. So from that task, you can derive a few subtasks. And the easiest one, what everyone needed back in December and I think still needs now more than ever, is a way to save time on airdrops and launches from new chains, new projects. 
+
+And that was the first thing we did. And there are a few other things we have in mind, how to support the network or the networks, there are multiple, for example, validators, for example, code contributions to existing projects. So yeah, we don't have one big chain or big protocol in mind, at least not right now, rather more like community work and securing the network. 
+
+Citizen Web3: 
+The reason I'm asking is because I was talking to actually a validator, like a known validator within the Cosmos ecosystem today, and they didn't know about your service and we were talking and I was like, well, why don't you guys have a look at that? This is really useful. And they were like, oh my God, this is useful. 
+
+At first, because at first when I saw the app, I thought, oh, this is only for airdrops, but then you realize, well, not really, because as a validator, you can also look at the launches and the updates. And this is really cool. Is this what you had in mind when you were planning it originally? 
+
+David Sen Com: 
+I had in mind to save everyone time, but I didn't have validators in mind specifically. But of course, they're portfolio like everyone else and they even have their validator jobs so they can use the website too or services. 
+
+Citizen Web3: 
+Obviously, I assume you guys would not expect, but you would like it if people were to submit events. Are there people outside of your team that are now already submitting events to the calendar or not yet? 
+
+David Sen Com: 
+Actually, yes, there are. There are a few. I mean, we're just getting started. We started the project in late December, so it's not even two months, but we're already getting some submissions from numerous projects. And what I'm particularly excited about is that we try to make air drops specifically a little bit more secure by pre-screening them for the community, because with Juno Open, the casino is about to start. 
+
+And with the casino, there will be scams. And I think this will cause a great deal of tears in the future for some unfortunate cosmonauts. So I encourage every project to contact us so we can at least take a quick look over the code, talk with the team a few words, and then submit it to our followers and the rest of the ecosystem. 
+
+Citizen Web3: 
+That's a cool idea. And how would you anyone contact you? The website, Telegram, email, what's the best way to find your GitHub? 
+
+David Sen Com: 
+Whatever suits you. We have Discord, we have... 
+
+Citizen Web3: 
+Whatever. 
+
+David Sen Com: 
+write us on Twitter, email. We specifically have an air drop submission form and event submission form on our website. So if you want to save us a little bit of time, just use that. 
+
+Citizen Web3: 
+I was actually looking at your thing today when I was giving it to the other guy, and I saw the button, Submit Event. And then I'm sure you guys probably thought about it already. 
+
+And this is actually my next question. I'm going to say what I had in mind and then ask you if this is what you guys have in mind if you want to share, of course. I was looking at it and I was thinking what would be the best way to attract people to submit events to you. And I think the most obvious answer is you launch your own token and have a smart contract that distributes like that to whoever submits events starts to distribute tokens. So my question to you is what's your guys' idea to increase the participation of the community in what you're doing? 
+
+David Sen Com: 
+Yeah, you hit the nail with this one. We are finalizing our token economics and internal idea of how we will structure our DAO. I mean, with DAO DAO on June, it's become really easy. And we were going to use that, of course. And there won't be a smart conflict for submissions because we have to curate them. We have to look at is it a spam submission or something. But community activity will be rewarded by our token. That's correct. Yeah, you hit the nail. 
+
+Citizen Web3: 
+It's cool to hear that those things are getting the way, like the obvious kind of how to say reward economics. I think those things might be obvious and some people they like to over complicate things. But these things work. I mean, you do something, you get a reward, right? 
+
+David Sen Com: 
+Yeah, it works. 
+
+You're right. 
+
+Citizen Web3: 
+Man, let's talk a little bit maybe about you personally and how you got into crypto. I mean, you mentioned you worked in AI. 
+
+How did you from that... I mean, you mentioned that you were building portfolios. So obviously, you were following this for some time, but do you want to share the story? Is it public? 
+
+David Sen Com: 
+Yeah, no big secret here again. How did I got into crypto? I think it was in 2009. It was shortly before the corona stuff started. Yeah, it's not so long as some of you guys are. I'm a newbie, if you want to say it like that. How did I got into it? I was always enthusiast of privacy and data protection. 
+
+And I think this is very important. And I stumbled across crypto somehow. I think it was DVPN actually, when I was looking for a good VPN provider. 
+
+I found DVPN Sentinel Network. And yes, that brought me into crypto and cosmos. And over the two years, I have put always more effort into it, researching, writing my own pet projects. And one day I said, all right, it's time. And then I did what I did. 
+
+Citizen Web3: 
+When you were saying building portfolio, I like to ask, guess this, what was the first token that you have a bought? 
+
+David Sen Com: 
+I think it was Sentinel. 
+
+Citizen Web3: 
+Sentinel. 
+
+David Sen Com: 
+It was way back on Ethereum, DVPN, I think it was. 
+
+Citizen Web3: 
+This is fucking cool, actually. I mean, that's really cool, because I think that is the first time somebody tells me that the first token in the boat was a cosmos ecosystem token. Okay, you said it was still on Ethereum, but still that's pretty cool, I think. 
+
+But going back to you, man, on your Twitter, it says in the description, the era of paper promises is coming to an end. I like this sentence. Do you want to explain what you mean by that? 
+
+David Sen Com: 
+Yeah, sure. I think many people have the wrong vision, what you can do with crypto. And I see it not only as making some tokens and getting rich quick scheme, but a way to organize. Organize large communities, whole humankind, basically. Because I think right now, our government corporations, all these things we have invented, they are a mechanism to allow organization on a large scale. 
+
+And that works pretty well. I mean, look at where we are as a species right now. But it obviously has some drawbacks. The larger it gets, the more corrupted it gets. 
+
+It gets slower, it gets intransparent. And for me, crypto is a solution to that. How we can have hyper secure, efficient and transparent system that are censorship resistant, corruption resistant. And that's crypto for me. And I think cosmos is doing a great job at that because there's not a single point of failure, single point of manipulation like Ethereum, for example. So I like to compare Ethereum to the Tower of Babel, where you only have one language, everything is one, which is not good, obviously. But the cosmos that represents for me the ideal state of local communities that can cooperate in small, but also in big. And I think we still have a long, long way to go there, but that's crypto for me. 
+
+Citizen Web3: 
+Nice, man. I love that. I couldn't agree more with 95% of what you said. I always say that I'm a decentralization maximalist, so I believe in a lot of different chains and I think they will all work eventually. 
+
+I hope not all, that's an overstatement of course, but I'm an ether boy as well as a cosmos boy. So do you think that the words in terms of semantics, I mean, obviously you said like as a humanity as a species, we got very far. And I think semantics helped us to get quite far away by building languages. 
+
+And I mean, you used the good descriptions of the bubble of Tower. And my question is, do you think that the word consensus and the meaning behind what consensus does and the words governance and what it does are actually in the meaning of what they do could be a synonym somewhere along the way? 
+
+David Sen Com: 
+I think governments is a sub part of consensus where you govern over something, for example, over funds. And to do that, you reach consensus. So I think they are very closely related. And that's one of the most powerful assets a cosmos ecosystem has with the DOWs, with validators. I think no chain or no ecosystem in crypto has such vibrant and living decentralized DOW system like cosmos has. 
+
+Citizen Web3: 
+A lot of people don't think of it as a DOW for some reason, but the governance is inbuilt into the chain. Like of course it's a DOW. So it's funny how people outside don't see it like that sometimes, unless until you tell them that, well, or point out that, shall I say, right, that's the more correct way, but still. And the reason I was asking the question before and what I was trying to get at is that about organizing humanity, I think that consensus mechanism, and this is again a question I will want to ask you, that consensus mechanisms like Tendermint have already proven to work much better than democracy, for example, because technically democracy is just another consensus mechanism. So what do you think? Do you think that things like Tendermint and other consensus mechanism could be compared to things like democracy and to things like other things you would want to compare them to in terms of consensus? 
+
+David Sen Com: 
+I think Tendermint is actually democracy because you vote with your tokens and you have a majority vote and everybody has a say in that. So I think what we have in the cosmos is direct democracy, which is the ideal state of how things should be, I think, or close to it at least. And regarding Tendermint, I would rather think of it like the parliament, the vehicle, how we reach consensus. 
+
+It's a tool for that and not competing with a concept like democracy. But yeah, Tendermint, it's really great library I've been working on with it quite a lot lately and I'm impressed. These guys really know what they're doing. Great stuff. 
+
+Citizen Web3: 
+This is an interesting, by the way, point about democracy. I liked it. I haven't heard it that way. Thanks for that. But coming back to actual cosmos itself and the governance within cosmos, you said it's working better. You think that's the way that it should be if compared to a democracy. 
+
+Do you think that the mechanism of voting is currently... How do you think we should improve it? Let me jump a question here. If you think it should be improved, of course. 
+
+David Sen Com: 
+Yeah, sure. There is always room for improvement. For me, the most annoying thing right now is validators not casting their vote. I think that should be punished because running a validator is not only securing the infrastructure. This is one part, but also taking part in governments. It's like you vote an official into office and he doesn't cast his vote. This should be punished too, in my opinion. 
+
+But that's another topic. But here in crypto, we can actually verify if they have voted or not. And in my opinion, this should be punished because when you delegate your coins to a validator, you give him your voice in a lot of important things. And he should cast it in your interest. 
+
+Citizen Web3: 
+Well, actually, you're delegating power of voice. You're not actually delegating your tokens, right? You're delegating shares. And that's exactly what you say. I totally agree with you. I think it's definitely validators and users should vote. But do you think there could be an instantivization mechanism that could help that instead of a punishment mechanism? 
+
+David Sen Com: 
+Well, there is already incentivize. The validators have your stake. They get commission. That's their reward for treating you well and participating in the governments. So I think they already benefit from that. And unfortunately, it hasn't proven enough for most. I personally think that punishment is the way to go right now. Sounds harsh, but I think few will suffer and then everybody will see, OK, I have to cast now and then this thing will be a thing of the past. 
+
+Citizen Web3: 
+What about in general token holders? Do you think it also should be a punishment mechanism for not voting? 
+
+David Sen Com: 
+No, not at all. Not at all. Because the token holders, they're normal people. They don't have normally the time to spend hours reading a proposal. They typically can't code. So they cannot look at the proposals that are made. That's what they pay their validators for with their commission. So no, the token holders shouldn't be punished in any way. 
+
+Citizen Web3: 
+There was one consensus, I think it was called holographic consensus, which I saw some time ago. I don't know what's the development stage of it right now on Ethereum somewhere. And it was an idea of putting a betting mechanism on top of the voting mechanism. 
+
+And in that way, try to incentivize the whole community, the whole DAO to participate more in the voting. I have no idea what's the development stage of that though. And do you think you're going to implement any new techniques? I mean, obviously, if you already mentioned that you have ideas of launching a token, I can ask this. Are you going to launch a token on an existing platform inside of Cosmos? Or are you going to launch your own blockchain? 
+
+David Sen Com: 
+For now, we will launch our token on Juneau. Having an own chain is of course the dream of the nerd. But not for now. We will stick to DAO DAO towards probably. I don't know if you have tested it on the testnet. 
+
+It was really good. And yeah, regarding your question, the beauty is we are on unexplored terrain here. Or at least it's very little known what works, what doesn't work. So we're free to experiment a little bit in our token economics because it's not a chain. It's not a protocol. 
+
+It's a DAO. And right now we're working on how we can actually create value for the token because we don't have a value accrual mechanism like you have with blockchains. But yeah, with governments, we haven't actually put too much thought into it. It's actually a good point that you mentioned how we can increase the participation here. Yeah, I have to think about that. I cannot tell you anything out of my mind right now. 
+
+Citizen Web3: 
+I'm going to ask the obvious question and I'm sorry for that. Is there going to be an airdrop? I'm sorry. I have to ask it. 
+
+David Sen Com: 
+Of course there will be an airdrop. Of course. I mean, we are course almost up. Top link. The best projects are always with AirDrops and a lot of the total supply AirDrop. Look at Osmosis, look at Juno. They are the top docs in Cosmos right now and they have basically fully AirDrop the supply. So yeah, there will be. 
+
+Citizen Web3: 
+I noticed as well on your Twitter account, at least a couple of tweets. I mean, I'm talking to your personal Twitter. Sorry, thanks, God, for social networks. There's some mentions, one mention of Brussels and El Salvador and then another mention like when you scroll down about, I think it was Sentinel or a delegation and something to do again with like humanitarian things. And so is it something that I assume was saying before that you think that crypto or rather blockchains can help to fix some things in humanity? I assume that also this is a topic that this is an interest of you that you follow. 
+
+David Sen Com: 
+Yeah, I typically try to keep politics out of all the discussions because it only creates unnecessary tension. So I don't want to argue too much about the quality of El Salvador, the president, but I think the move of switching to Bitcoin, a free censorship resistant currency is actually a very smart one. 
+
+And I wouldn't be surprised if El Salvador becomes the Dubai of Latin America in the couple of next years or decades. So yeah, of course, I had to say a few words to that. 
+
+Citizen Web3: 
+I understand about the politics thing. I thought, I can get it. So let's skip that. What about upland? You guys run any nodes right now already in the cosmos? Do you secure any networks? 
+
+David Sen Com: 
+We are launching our first validator soon. Yeah, I'm very happy to have a new team member, which is an IT security expert, a very good friend of mine. He's very skilled. And with him, we will launch our first validator in the coming weeks, March, probably latest. And then we will start branching from that and secure more chains, of course. 
+
+Citizen Web3: 
+I think it was it the Hua guys and Meta rats, I believe now that have launched validators from the name of the, I guess, not the chain, maybe, but the core team right behind the chain. I mean, I would love to see though a validator run by the whole DAO by a chain using like some of the community pool money, maybe like tied to some contracts or whatever. But that would be interesting in the future. I mean, of course, that's a little bit far fetched for now, but that would be interesting, I think. 
+
+David Sen Com: 
+Yeah, sure. I mean, Chihuahua is not the only one. There's also, I think Sentinel is doing it onyflicks. I've seen a few actually, who are doing that too. 
+
+Citizen Web3: 
+Yes. Yes. Yes. Sorry, Sentinel. I think actually delegate to Sentinel in a few places. Sorry, you're completely right. I don't know why suddenly the only day came up to my mind. You're right. You're right. But I just because you said like you're going to launch it, I assume from uplink and then if you guys are going to launch a chain later, so you're already going to, which is a good way, I guess, to monetize and Web three. And it's a very good mechanism. And this is like coming back to where you say that validators should participate in voting. This is where I totally agree. I mean, if you're using this to monetize whatever business you're building in a digital world in a metaverse, shall we say, right? And then web three, whatever. I guess you should also have some responsibilities, you say, for the work that you're doing, right? 
+
+David Sen Com: 
+It's interesting that you talk about monetization because I think that's something many people haven't fully grasped right now either is that in web three, you can create win-win situations for both participants in a business relationship, which often don't happen in the traditional world. Well, for example, when you have a large community as an influencer, the only way to profit off your community is typically besides donation and stuff like that, that you bombard them with advertisements. And that's, of course, to the disadvantage of the user who only wants to see your content. And in Cosmos specifically, you can monetize your community or your work you do for the community by having a delegator and the people stake with you. And it's a win-win situation. They get your content, whatever you do, and you get rewards for that. So I think that's a very beautiful design here. 
+
+Citizen Web3: 
+I totally agree. I think it's amazing. Maybe I don't know if it's like a new model. Well, it is, I guess, right? Because it didn't exist before, but like in terms of maybe comparison, it could be compared to the old world, but I think a lot of people are missing out in my opinion, personal opinion on the amount of possibilities that this world already offers. 
+
+And they probably are hard to dive into if you're completely outside of this world. What do you think? Do you think it needs more adoption for those things to be accepted or anything else? 
+
+David Sen Com: 
+Yeah, technical barrier needs to be much, much lower. I like to compare the state of crypto right now we're in with the first nerd sending some emails to each other. Sure, crypto is two point or whatever trillion of market cap. But from the technical side, there's still so much room to grow. It's really hard to navigate in crypto between the different chains. You have different couple of wallets. 
+
+You have to bridge here and there. It's too much for the average user and there still has to be a lot of improvement. But I think it will come like the internet over the years with increasing technology and with easier access to the system. I think they will grow to much larger dimensions. 
+
+Citizen Web3: 
+Do you think that there could be anything that would push that in that direction? Like any event, I mean, or any acceptance or adoption of something, for example, the NFT in the art thing, right? I think that kind of really helped to push a lot of things. Do you think that could be something else like this that could help or does it even need to be pushed? 
+
+David Sen Com: 
+It will push itself from a loan once you're in crypto. You're not going out. So you might lose all your money if you only trade it on pancakes. Well, but then you have never been really into crypto. But once you're really in, there's no way you're going out. 
+
+It's the one way street, I think. What I see for the future is that crypto for the coming two years or something will branch into different areas. One of it is NFTs art, you said it. But another really, really big one will be gaming. I think every guy on the world is a gamer, 90 percent of them, at least on our causation. And I think this will rock the gaming world. 
+
+No one can imagine right now because imagine everything you do in the game. It's actually yours. Every monster you slay, real money, every item you buy, real item. 
+
+And then you can transfer the items between worlds. This will be crazy, really, truly crazy. But there are also a few more things I will think that will make a large impact in the next two years, a couple of years. 
+
+One is DeFi. It will stay around for longer and it will give people escape from the banking system we're having right now, which you might imagine I'm not a big fan of. And also insurance. It's also already possible to, for example, as a farmer, I think in India, to ensure your crops and data oracles, they check the weather. 
+
+And if it hasn't rained, for example, enough, you get automatic payout by smart contract. Yeah, there are a lot of things that are happening right now simultaneously. And I don't think it will be possible to follow all of them because it will be everywhere. 
+
+Citizen Web3: 
+I totally agree. There are so many. This space has progressed so much in the last, I think, five, six years where a lot of it was ideas. And of course, it wasn't hard to see which ideas are going to be good and which are not going to work if you're into that. 
+
+But I think the whole idea of putting together the ownership rights and qualities of money and even improving the qualities of money, but just adding ownership rights and qualities of money together, this really creates endless possibilities. And like you already mentioned, pretty much all of them. But the gaming thing and transferring items between worlds. I'm not a gamer, you see, but I've never thought about transferring items between worlds. That's actually pretty cool. 
+
+And with ABC, that is pretty cool. Going back to uplink and what you do in general in the crypto world, because you said you had some pet projects before. Do you still have any other projects that you want to talk about? What about uplink? 
+
+David Sen Com: 
+Yeah, I am a core contributor to the white whale protocol on terror. I'm not sure if many people have heard about it. It will launch very soon. Let me just quickly explain the cash cow in terror right now is anchor protocol. 20% on your stable coins. That's wow. Great. And the beauty of anchor is that it's composable. So you have one protocol anchor with a 20% base layer, APY on your stable coins. 
+
+Other protocols can use this to build more sophisticated products. And white whale is doing that. And specifically, they are doing arbitrage. So arbitrage for those who don't know, it's when you have two pools with the same coins, but not the same pools, two different. 
+
+And there's a whale trading in one. Then it creates an imbalance between the two assets in the pool. For example, someone buys a lot of Luna with US team, then the price changes in one pool, but not in the other. And arbitrage is rebalancing those pools again. So they have the same price. And typically this is something that has been in the hands of venture capitals and well funded teams, but not the community. 
+
+It's actually very important that the community has a say in this because this creates stability, price stability in the ecosystem. And it also, in case of terror, keeps the pack. I don't know if anyone has seen the latest flash crash where USTC and USDT were at, I think, 60 cent, even though they're supposed to be $1 and terror was, I think, 99 percent. So the pack is really important for a stable coin. And white whale is trying to give that back to the community by creating walls. Everybody can put their tokens in. 
+
+For now, we start with UST only. And then we have an army of arbitrage bots who look for arbitrage opportunities. So for example, a whale trades. And once there is an opportunity, it takes it, it rebalances the pools. And there's always a little bit of profit. And the profit that is made is given back to the vault where everyone gets a proportion of the trade that was done. 
+
+And I think that's pretty cool. You have to imagine it's 20 percent anchor plus everything the bots make. So it's like anchor plus. You could think about it like that. 
+
+Citizen Web3: 
+Is it already launched or is it still in development? 
+
+David Sen Com: 
+It's still in development, but it will launch very, very, very, very soon. Yeah, we're in the final stages of fixing the contracts. There have been two audits and then the curtain will be revealed. Yeah, I'm very excited about this project. And we also have plans to branch to the Cosmos ecosystem, Osmosis, JunoSwap, stuff like that. So it will be very interesting. It's definitely something people should take a look at because getting, I don't know, 25 percent or something on your stablecoin. That's a lot. 
+
+Citizen Web3: 
+That is pretty good if you're looking for something like long term and stable. And you said it's not launched yet, but where is it possible to have a look? Is there a GitHub or a website or anything that's already on live? 
+
+David Sen Com: 
+Yeah, a lot of things are live already. The website is live and the web app is live. You can watch, see the treasury there. It's all transparent. The voting mechanism and governments is live. The GitHub will be rather empty. I think the contracts will be uploaded there very quickly. But our secrets, our bots, they won't be for now. But we plan to even open source parts of them so the community can build their own bots for whatever they want to do. And the vaults, they offer flash loans. So our bots, they use the vaults as for flash loans. And soon in the near future, this will be open, I think, and people can build their own bots for whatever purpose they have in mind. 
+
+Citizen Web3: 
+And you said this is going to be essentially cross-cosmos and IBC protocol, right? 
+
+David Sen Com: 
+Yeah, I'm not going to make decisions here. But as far as I'm concerned, IBC is not ready for our purposes because it's too slow. In arbitrage, it's about milliseconds. So you have to be really, really fast. And that's not what IBC is right now. But what IBC can be used for right now is transfer lots of value between chains. So for example, if there's a different price on osmosis, you can transfer it to gravity decks or something, some of the funds. But IBC needs a little bit more work for that because imagine you're doing arbitrage with a community fund, you send the tokens and then one hour IBC gets stuck. So this has to be fixed before we can explore these possibilities. 
+
+Citizen Web3: 
+There is several oracles as far as I know that are working on different things like that. I don't know if you heard of microtik, for example, or microtik. I'm not sure how they pronounce to be honest. 
+
+David Sen Com: 
+Yeah, they're almost Moses, but I haven't too deep into them. I don't know. I know there's also band protocol. 
+
+Citizen Web3: 
+I can't say I'm like too familiar with what's going on in development of either, but just like trying to think of a price oracles that work around those systems that may. 
+
+David Sen Com: 
+Yeah, most of the time you get the price data directly from the nodes. So we host our own nodes and our bots query them. For example, how much Terra and USD are in this pool right now with the specific address. So no need for oracles here. 
+
+They're too slow. But the Terra pack, so Terra, a lunar USD, that's done by oracles actually. So the oracle gives a price. That's the USD Luna price. And then the bots work with that. 
+
+Citizen Web3: 
+And is there any other projects or those are just the two that you currently working on? 
+
+David Sen Com:  
+Yeah, only those two. They are. 
+
+Citizen Web3: 
+No, it's a lot. It's a hell of a lot in my opinion. And this is a big problem, I think, in crypto is like the burnout where you don't have time to sleep anymore. And that's it. 
+
+David Sen Com: 
+Yeah, when I got into crypto, I thought, all right, I'll have a lot of money and a lot of time, you know, 
+
+Citizen Web3: 
+it's going down the hill. But it's true. The more time you spend in crypto, the more you realize that you're like, OK, OK, where am I going to get sleep? And I guess this is like I'm going to like try to come to the traditional question here to wrap it up. Doing on one hand doesn't might not sound a lot like contributing to two projects, but I can totally relate to that. You understand that that's like a 22 or 23 or 24 hour job. And what do you do like in your daily life to keep you going? What motivates you to keep going really? 
+
+David Sen Com: 
+You have a very lovely girlfriend who looks out for me. So I'm very happy to have her. And for me, the reason why I do all of this is because I believe in it. It's not because of the money. 
+
+Sure, I need money to live. But that's not the reason why I'm doing this. I actually believe in what I'm doing. And I hope to make a positive impact on how the world works, even if it's in my small realm of possibilities. And that keeps me going every day. 
+
+Citizen Web3: 
+That's totally something I can very, very, very much relate to. So is there any sources of inspiration that you draw from, let's say, the digital world or the real world? I mean, apart from your girlfriend, of course, but anything that you can suggest to read, maybe, or to watch or to follow, whatever. 
+
+David Sen Com: 
+I'm a religious man. I believe in God. And the Bible teaches us to do good. And that's what I'm trying to do here. That's my source of inspiration. 
+
+Citizen Web3: 
+That's cool, man. I like I say, like I told you, I'm a decentralization, Muxi. And I believe that every right and every opinion has the right to exist. And actually, recently, I spoke on one of my good friends podcasts, and it's actually a religious podcast. It's about religion, but they talk about different topics. And I was talking about crypto. 
+
+David Sen Com: 
+That's the reason for me, I think. That's why I'm in it every day. And I love it. Everyone else around me hates it because I have no time, but I love what I'm doing. And I'm very happy to work with the people at UpLink and White whale. They're really great guys. They know what they're doing. I think there's a lot of to expect in the future from both projects. White whale are very soon, but also from Cosmos UpLink with our validators. 
+
+And by the way, I haven't really mentioned it right now. We are doing a new YouTube series about the validators of the cosmos because we thought the communication between validators and, let's say, token holders is not as optimal as it should be. I mean, there are people delegating thousands, hundreds of thousands, maybe even millions of their coins to delegators, but they don't really know who's behind it. 
+
+Or at least what are the ideas they don't have to talk to themselves if they don't want to, but what are the ideals of those people? And so we're in the process of starting our YouTube series where we interview validators. And I would love to have you on the show sometime where we can switch the question asking and then you can sell yourself from the best side and tell everyone who's delegating to you. We're looking forward. 
+
+Citizen Web3: 
+For sure. We'd love that. I don't know if you have actually noticed. I think we spoke about it a few times and I spoke about this a few times, but I can again would love to participate and we would love to participate because part of the idea of citizen cosmos is exactly that. And there has been about now about a dozen episodes with different validators, small and big. 
+
+So P2P, Steakfish, ChainFlow, Strange Love, recently Highlander, you know, so. And our idea is always to try to understand the ideals behind these people. So I can totally, totally relate to this series and looking forward to them coming out and looking forward and coming on as well. Thanks for the invitation. It's been a huge pleasure chatting and I definitely advise everybody to follow if you're still not using Cosmos Uplink. Definitely do. This is like a lifesaver. Thanks for coming on. 
+
+David Sen Com: 
+Thank you very much. Pleasure talking to you. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

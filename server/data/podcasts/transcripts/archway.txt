@@ -1,0 +1,269 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/archway
+
+Episode name:
+Developers, Incentives and Governance with Archway
+
+Citizen Web3: 
+Good space, then, y'all. This episode turned out to be one of those episodes where we suddenly talked to more than one guest, which is always a good thing. Definitely two brains are better than one, I'm guessing. The guys at Archway are incubated by Tendermint, and they're building an incentivized smart contract platform. We spoke about everything that they're doing and about their idea to focus on developers more by incentivizing smart contracts from inflation, and in my opinion that's a very cool idea. There might even be some alpha in the episode, but you have to listen very carefully. 
+
+Griffin : 
+I remember on the day it happened, inside the office everybody got tacos and things like that because it was just like a pretty big impact. 
+
+Citizen Web3: 
+I think I understand why Ethereum didn't do it. I think they're a little bit scared, to be honest. 
+
+Mike: 
+Not every project or developer wants or needs their own change just yet. 
+
+Griffin : 
+I think the evolution of myself and a lot of the core contributors to this protocol is this multi-chain world. You can live in a basement or in your attic or in the garage or wherever you might be living around the world and build something that adds value to the underlying change and exchange or sees some value yourself. 
+
+Citizen Web3: 
+Before we rock it off, into our next episode, here are some news from the sponsor of this episode, Cyber. The bootloader network Boss Room is launched and has grown to over 500 daily active citizens. The data Oracle has grown to over 10,000 cyber links and the current main focus of development is that coming drop. 
+
+Welcome everybody to a new episode of Citizen Cosmos. We have today with us Griffin Anderson, who is the core contributor to Archway. He's also the CEO of Philabs and I'm sure that he will tell us more exactly what he does and what Archway is and why he contributes there because he also works for Tendermint, as far as I know. Griffin, hi, welcome to the show. 
+
+Griffin : 
+Hey, thank you so much for having me today. Right now, we're building and working on a new protocol, new Cosmos-based blockchain called Archway. The project has been incubated inside Tendermint, also known as All In Bits, for over the last year. Really, one of the first, if not the first incubated project officially inside Tendermint. 
+
+We're very excited to have that title and help out. Yeah, previously a little bit about myself. Originally, I joined the crypto space in 2015 and was able to join the Ethereum space at the time and join a company called Consensus, where I was one of the first hires over there. Of course, in 2016, just had a front row seat to basically building out the Ethereum ecosystem and the community. Was there when the forecap happened back in the day, all the way to building out Enterprise Ethereum Alliance and jumping around planes all around the globe and building offices and building out tooling for the developer ecosystem. And so My background is on the Ethereum side and before that, FinTech. Wanted to really bring a lot of these initiatives more broadly to the Cosmos space. We'll dive into the protocol here in a little bit, but that's just a little bit about my background in context. 
+
+Citizen Web3: 
+That's pretty amazing. First of all, working in the industry since 2016, usually it's like, I've been here for half a year, I've been here for two months and I think there's you who's not just seen the Ethereum fork, but you were part of it. How was that? 
+
+Griffin : 
+A little surreal. At the time, I was still pretty early. I remember the day it happened. Inside the office, everybody got tacos and things like that because it was just a pretty big impact. But in the following weeks, we were on the calls with the miners around the world, talking to everybody and trying to get the community to basically fork Ethereum. So it was a little bit of a surreal experience at the time and didn't really understand the implications of it all, but it was really a fun and unique experience in some of the early days when I first got into crypto and the Ethereum space. 
+
+Citizen Web3: 
+I can imagine. I mean, I don't know how much is still connected to Ethereum or to consensus at all. I have a strange question that just came to my head though. Do you think that before ETH2 launches, we're going to see another fork? There's a lot of people who speculate about it. 
+
+Griffin : 
+That's a great question. I think we saw a lot of forks with the Bitcoin side of things. It wouldn't surprise me if we saw another Ethereum fork, to be quite honest. But I'm a little bit more detached from that community. Lately, most of my time has been very much active in the Cosmos space. And so, don't necessarily get to stay up to date on all the inside information that's happening in the Ethereum space over the last probably year or two. I've been a little detached. 
+
+Citizen Web3: 
+Just saying to anybody who is listening, it's a hint. But let's talk archway. When I go on the website or when I go on your Twitter, I think, I mean, it says an incentivized smart contract platform. Do you want to explain what you guys mean by that? 
+
+Griffin : 
+Yeah, absolutely. We think we're the first network that baked into the protocol rewards and incentives that go directly to the DAP developers that are building on top. So it's a smart contracting chain. But for the first time, if you're a DAP developer and you start to build a DAP and deploy it to the Archway protocol, you'll start to earn the native network token. So that's why we call it incentivized because you're incentivized to basically build DAPs on top and earn rewards for ultimately bringing transactions and users to the underlying chain, which is pretty unique in the space. 
+
+And it's been something we've been working on over the last year. The vision from that kind of came from the FAP protocol thesis, a little bit older version, but even just our experience on the at the AM side as DAP developers have many layer ones to choose from and different communities to kind of participate in. Oftentimes, the value accrues to the native network tokens, which is often the largest token holders. And so what we wanted to do was build a brand new protocol where a lot of the value and activity that the DAP developers are ultimately the ones that are bringing to the underlying chain and share some of that value directly back with the DAP developers that are building on top. And so it's really our way of giving DAP developers incentive upside into the underlying layer one and making sure both the DAP layer and the layer one network were more connected and more streamlined together. 
+
+Citizen Web3: 
+Let me clarify something here a little bit because I have heard of similar ideas before, but every time they're slightly differently architectured. And I'm sure that your architecture here is also unique. So when you say DAP developers are incentivized, are we talking that the person who, let's say not the person even, but the key related to the whoever launched the contract is getting incentivized. The smart contract itself is getting incentivized. I mean, if you want to be more specific, if you can, of course. 
+
+Griffin : 
+Yeah, absolutely. So the reward system works like this. It's programmatically built into the network. We are a Kazem wasm-based chain, similar to the tarot ecosystem and other web assembly-based virtual machines. 
+
+Mostly contract development is done in Rust. And so what happens is when a DAP developer deploys their contract to the chain, they can earn rewards in three different ways, all completely built into the protocol natively. The first is what we call is a gas rebates feature. And so a proportion of the gas rewards are directly shared with DAP developers and instead of it all going to the validators or burned in the example of EIP 1559 on the Ethereum side. 
+
+This is really important. So it's kind of like subsidizing the gas fees a little bit. The second way the DAP developers can earn rewards is through, we share some of the inflation that typically just goes to the validator community directly with the DAP developers themselves. So that's the second way they can earn rewards that's natively built in. And a third feature we have is called contract premiums. It's a feature that the developer can set on top, which is basically an additional gas fee that's baked right into the gas fee itself that the developer can specify to earn and accrue rewards directly from the native gas fee. So it's basically like a tax or a toll. And the reason they might want to do that is to subsidize oracle fees or pay for off-chain events and things like that. There could be a whole variety of reasons. And I can definitely dive into the different use cases and different examples here. 
+
+Citizen Web3: 
+And I was just going to clarify one thing before you're going to jump. In case I assume if we're talking about a smart contract platform, we're talking a platform that you can obviously have your own tokens on. And I'm quite curious whether because you said there are like three options and there's like the third option where with the developers they get an extra tax, that's what like the simple way to call it. Is it kind of parameterized to everybody who has then the token of the smart contract or is it only the smart... I'm trying to get a little bit more in detail, sorry if I'm getting into too much here. 
+
+Griffin : 
+Yeah, no, this is great. So the gas fees are baked in and you can look up in our light paper, the distribution between the split between the gas fees going to the validators and the gas fees that go to the DAP developers and same with the inflationary rewards. The third feature, the contract premiums default is zero. So there's no added tax as you can think of it as. It's up to the DAP developer that builds the DAP and add deployment to that DAP onto the chain. They'll be able to specify that contract premium, that tax quote unquote being paid for users that interact with their contracts. 
+
+And so that's completely up to them to specify what that tax and toll is. Similar to the Ethereum space, there's a lot of folks that fork smart contracts and build new versions of protocols and things like that. And so the DAP developer is going to have this incentive to try to, at least on the contract premium side, not charge too much or too much of a significant fee because they might lose their user base and their transactions. But at the same time, they may want to add a premium or a quote unquote tax to their contracts for a variety of reasons. For instance, like paying off chain events, like paying relayers, IBC based relayers or paying Oracle systems, etc. And so it really just gives them the flexibility to add that additional value that's completely baked into the gas recalculation and then redirected to a contract address that they select. 
+
+Citizen Web3: 
+And you mentioned use cases. I mean, let's talk use cases. 
+
+Griffin : 
+Yeah. So the reward system is interesting, but okay, so what? What can you do with these rewards? The most easiest specific example would be, obviously you can use these funds that accrue at this address to pay the team. You can redirect them to a multi-sig and just use it to fund future developments of your protocol or future versions of your debt. 
+
+But the use cases get much, much more interesting from there. So obviously you can use it to fund a DAO, for instance, so you can just redirect all the proceeds into a DAO and then based on how that DAO is governed, those proceeds can be used to do whatever is best for that individual community or debt. You could use it to redirect the rewards to your governance token holders. So you can still have a governance token, but now what you can try to do is you can just redirect those rewards to all your governance token participants, similar to some of the stuff that Sushi Shwap is doing on that side of things, on the Ethereum side, similar kind of ideas, like just redirecting the rewards to your governance token holders. You can use it to boost liquidity pools. You can use it to fund new NFT projects or new artists. Really, all the possibilities are up to you. You can incentivize basically any kind of behavior that you want your community to do, and it gives you an option and a steady stream of token rewards that is up to you to figure out what that combination is. 
+
+Citizen Web3: 
+Here is a crazy question. Sorry to interrupt you, but while you're on it, do you think we'll ever get to the stage where the smart contract itself decides who redistributed the rewards to? 
+
+Griffin : 
+Absolutely. So the rewards can be redirected to a contract address and then based on governance or other types of events and how that contract is created, there's another trigger event that they could automatically distribute those rewards to however they want. I mean, you start to build the AI into some of it or a machine learning type of products. So it's completely up to the community. And we also think it's a more sustainable model than just issuing a governance token. We think it's going to open up all kinds of new use cases, such as streaming payments or rewards, subscription-based services. Basically, ultimately, there's going to be all kinds of new sectors of DAPs that are built when they have access to more of a traditional Web 2.0 just streaming rewards-based model for that DAP model, that business model. And so it just unlocks so many different possibilities and so many different kinds of new use cases. We're really excited to see what the community comes up with here. 
+
+Citizen Web3: 
+I think the closest model that I'm aware of so far is actually also in a Cosmos ecosystem with it's of cyber. I think they have a very similar idea to that, but I'm not sure it's good if you're going to have two similar systems to see the new thing. 
+
+You always want to look for new mistakes and see how it develops. I think it's great that more and more people are coming to the idea of having the smart contract being incentivized. I think I understand why Ethereum didn't do it. 
+
+I think they're a little bit scared, to be honest. But the community, maybe they will do it in the future in a more active manner like you guys are doing it. Do you think we'll ever see it in Ethereum? 
+
+Griffin : 
+Possibly. I mean, the current community is so large and it's quite a big change to the underlying protocol. And so you're talking a big evolution from how that works. And they've really gone in the direction of burning gas fees and said, are redirecting them to their token holders or to their DAP community. And our theory is basically it's a better use to use those gas rewards and say just burning them is to basically redirect them to your DAP community so that there's a more bigger and larger community on top. I would say the rationale and the reason for this is as a DAP developer, you have a choice of which protocol you want to go build on top of. And today, if you were to go build on top of Ethereum and you're just coming out of university or college and you don't maybe have a large financial position in ETH, what kind of models or incentives do you have to basically go build on top of that platform and make that protocol much more valuable versus coming on to a protocol like Archway where you could build a DAP from scratch and start to earn some of the native network tokens. And so we think it just overall better aligns and incentivizes the DAP developer with the underlying layer one network. 
+
+Citizen Web3: 
+For sure. I mean, being a devil's advocate, I would say network effect. That was the first thing springs to mind to say, oh, well, the developer would be incentivized by looking there. But I totally agree with you, to be honest. 
+
+So like I said, it's a devil's advocate thing on a slightly different note. You mentioned value a lot and looking at your past working experiences online, thanks God for Web 2. I see that you're a lot about user engagement. That's how I kind of like understood it, perceived it. And you spoke now a lot about user engagement, about different models, about values. Do you want to talk a little bit more about the value of the community and about how you see user engagement? I mean, of course, your guys are incentivized, which gives you a whole huge advantage to developers to come and write those small contracts. But then again, like I say, you face in the network effect. So what are the other things that you plan to do to attract developers and users? 
+
+Griffin : 
+Similar to kind of joining the Ethereum space, anybody who joined in 2015, 2016, the protocol was mostly built out, but the tooling around the protocol was not built out. So a lot of the core contributors on Archway right now are very much focused on building the best DAP developer experience for building Cosm-Wasin-based contracts. So we're building out IDEs, specialized wallets, tooling, lending, all the plugins that are necessarily to streamline the DAP developer experience as much as possible. In the coming months, you'll hear more announcements about Builders Program and other community-based events that make it really easy for DAP developers to get together, learn how to build Cosm-Wasin-based DAPs, and quickly deploy them to the protocol. So very much the team actually, if not most of the team and most of the core contributors on Archway are focused on building out the DAP developer experience, which is just completely lacking right now in the Cosmos space. Up until now, the SDK is pretty robust. It has a lot of other issues and there's a lot of focus on other projects on the R &D side. But nobody from our perspective is really tackling or strongly tackling the go-to-market experience for DAP developers and just ultimately building out very strong tooling and ecosystem around that for the Cosmos space. And we just think the timing is right for this. And that's one of the reasons that drew the team together in a lot of the core contributors to work on this project was because the timing was right to just start to build out DAPs for the Cosmos space. 
+
+Citizen Web3: 
+More DAPs, I'm joking, but we need a lot more DAPs, I think, for Cosmos to grow. But you mentioned the team so much and the core contributors so much and I can't help to and not say that we have another core contributor of Archway that is present on a call. I'm not sure if he wants to say hello, Mike. 
+
+Mike: 
+Yes, Serge, I'm here. 
+
+Citizen Web3: 
+Do you want to tell your vision, your side of being a core contributor of Archway, your side of things, what Griffin was telling about, about user engagement, about getting more developers, about building DAPs and growing the Cosmos ecosystem? 
+
+Mike: 
+Yeah, sure. So maybe just for context, a bit about my experience, I've been in the space since the end of around 2017. I joined a project called Loom that was just starting up and we were building some of the early L2s and scaling solutions in Ethereum. We were building a lot of the developer educational tools. If you've heard of crypto zombies, brought many, many engineers into the space, got them up to speed on Solidity, smart contracts, NFTs, all the fun stuff. We were building some DAPs ourselves. So I have been in the thick of DAP development. For some years now, it was a little early with Loom back in 2018, 2019. 
+
+But obviously, the market has progressed quite a bit over the past year and a half or so and Loom was actually one of the first tendermint-based chains to go live. So I've been following and interacting with the Cosmos space for years now. And we always believed in that multi-chain future and Cosmos was clearly leading the charge. Things lined up really, really beautifully with IBC going live just about a year ago now, I guess. 
+
+The grand vision became a reality. We have this holy trinity of the Cosmos SDK tender-bent consensus and finally IBC. So yeah, I think the rest of the market was coming around to this notion that we are in fact living in a multi-chain world. And to me, Cosmos was ahead of the pack. And we saw that with products like osmosis is launching and it being a pretty magical experience. Anybody who talked to who used osmosis over the course of 2021, it was rather enlightening. And so yeah, I was just really excited about Cosmos generally. 
+
+And then when I connected with Griffin about what he was cooking up with Archway around sort of building out this on-ramp or launch pad into Cosmos and layering on this novel economic model where DAP developers are directly incentivized, immediately clicked for me. Even though the grand Cosmos vision is this world of millions of application-specific chains that are all connected and we are getting to that eventual end state, I think the reality is not every project or developer wants or needs their own chain just yet. There's a lot of powerful work being done to simplify that and lower a lot of the barriers, whether it's tools like Starport that let people, has all the scaffolding to spin up your own chain in a matter of minutes or that's one piece. Another piece is interchain security, shared security that's on the way at some point in 2020 that will help people bootstrap their own chains without having to attract their own independent validator set, which remains a major barrier. But even still, I think many, many projects just want a quick and easy way to deploy a DAP. And so I think the notion of a smart contract chain positioned as sort of an on-ramp to Cosmos that's natively plugged into IBC and that allows people to... Access all of the users, all of the assets from across the ecosystem without having to spin up and maintain their own chain. Incredibly powerful. And then again, that idea of baking developer incentives directly into the protocol. 
+
+I feel like once you see it, you can't unsee it. As you think about some of the early days when folks were designing the economic models around proof of stake networks and you're trying to pinpoint all of your stakeholders, you try to create these mutually reinforcing incentives amongst them, but somehow developers were left out. I don't think anyone would disagree that developers are contributing and driving immense amount of value to the underlying network, as Griffin was saying earlier, but they've been excluded from the incentive model. And so, you know, I think the design of Archway views developers as critical network participants in a similar way to validators being critical network participants, right, performing really fundamental services to the network and ultimately driving a lot of value and that should be properly incentivized and rewarded. 
+
+Citizen Web3: 
+I totally agree. I meant to that, I would say. I remember Crimped to zombies very well. I remember even using them, even though I was aware of Solidity and understood how to write some basic things, it did help to a lot. And I think I would talk about Crimped to zombies to anyone who would start to learn coding up like, guys, go check out Crimped to zombies. It's really cool. So heads up with that. 
+
+Mike: 
+Yeah, that's good to hear. Hundreds of thousands of developers went through Crimped to zombies. And I think, you know, even well beyond the Solidity and Ethereum space, fortunately, help folks get speeds up. Happy to hear that. 
+
+Citizen Web3: 
+Guys, I don't know if a question basically may be back to Griffin, but feel free both to answer if you want. As far as I understand, the story of the project begins with a hackathon, right? Hackathon, shall I say? 
+
+Griffin : 
+The story of the project really started almost about a year and a half ago inside Tender Mint. And we were looking at the current landscape and asking ourselves, how do we get more DeFi and NFT projects into the Cosmos ecosystem? How do we build a more flourishing ecosystem similar to what was happening on the Ethereum space? And as we analyzed the space, we really do believe in the vision of the Cosmos space of building apps, civic chains or self-solving chains. But the challenge is just the technical complexity to spin up your own custom chain is still today pretty complex. 
+
+You have to have core SDK developers that understand GoLang pretty well. You have to build out a robust validator network. You have to secure the chain, et cetera. And we found all these barriers to just being able to spin up your own custom chain. 
+
+And so what we really wanted to do was build a space similar to Ethereum or Solana or Near or Avalanche or any of these other protocols that we see out there, where Dev developers in this multi-chain world could quickly just easily create a version of their DAP and deploy it to the chain. Some of it came from deep research inside Tenderman to basically arrive at this. And then I would say the team and the protocol and a lot of the core contributors have been working on this protocol for over a year now. And we've just been working behind the scenes, haven't been talking too much about the work. 
+
+It's just been this community that's just organically been arriving and popping up. And we really did a lot of work of forking Cosmosmwasm, making major modifications to how that works. A lot of changes around this rewards is still meant and we can definitely dive into all that more. But that's kind of the roots of the project was trying to solve this problem for the Cosmos space of how do we get more assets and liquidity in the Cosmos space, similar to what was happening in other ecosystems. 
+
+Citizen Web3: 
+I think being so long around blockchain what fascinates me a lot about what you say is the fact that most of the people who worked or work or somehow contributed to Tendermint. I know you guys have not as far as I understand, but when they leave Tendermint or when they're about to leave, they still launch their own projects in the same ecosystem. And to me, that says a lot because well, been around for like about 10 years, maybe even more around blockchain. 
+
+I've seen networks go live, die. Usually it's to do with developers or with validators or with the team. But it's amazing that in Cosmos, we see that even that if the person might not still be working for the same team, they're still doing their project in the same ecosystem, which to me says a lot about the technology. And I think even to anyone who is not technical, right? It still should say a lot about the technology that it's working. 
+
+The question that I kind of have, which is obvious, well, to me it seems obvious, but I'm still going to ask it. Why Cosmos? Is it because of IBC? Is it because of Cosmoswasm? Is it because of that you guys have already been in Tenderminy and you knew that technology was what you guys want or any other reason? 
+
+Griffin : 
+I think it started with the premise of the multi-chain world. If you would ask me back in 2016 if I was more like an ETH maximalist or something like that and thought all the DAP activity would happen on one chain, I'd probably would have said yes. But since that time, I think the evolution of myself and a lot of the core contributors to this protocol is this multi-chain world. And as Mike was saying, with the advent of IBC and so forth, it just having the native transactions to the chain make it so much easier and interoperable across Cosmos-based chains. And then I think the other thing is just the green space. 
+
+The opportunity ahead of us. I mean, if you're a DAP developer looking at a lot of these layer ones, for instance, if you're looking at the Solona community right now, there's several DEXs, there's several NFT marketplaces, et cetera. But in the Cosmos space, it's completely green space. And the tech has been a lot of the core SDK depths have been working on the tech for many, many years. And it just feels like the timing's right for the Cosmos ecosystem to kind of explode and basically solve the small-chain narrative world that we believe in quite a bit. 
+
+Citizen Web3: 
+I have a slightly different question maybe for you. How did you even get into the blockchain space? I mean, you're head of product for TenderMint, right? If I'm still correct. 
+
+Griffin : 
+Yeah, I had a product on the Archway product. Yep. And we have several great product people internally, but running the Archway project as a core contributor. How did I get into the blockchain space? My background is like a lot of people, you know, finance, computer science got into kind of fintech and it helped out with a bunch of startups. 
+
+Was a full-time engineer at one point and then led more into a product-based type role as time went on. And just with the advent of these blockchains, I think with a lot of people coming from Wall Street or Silicon Valley or even some of the consulting space, you know, if you have that kind of finance, computer science background, you get really kind of interested in what's happening in the crypto. For me, I think just with the launch of the Ethereum protocol back in 2015, when it really went live, it just clicked with me. I just understood how it would work and the opportunity that was ahead of itself. 
+
+And I just went full-fledged and jumped right in and started talking to a lot of the key players around the Ethereum space at that time and just so happened and it got back in consensus. But for me, it was just the vision of the tech and what was happening. Bitcoin, I think a lot of people got in with Bitcoin, but for me, Ethereum was the thing that kind of drew me in. 
+
+Citizen Web3: 
+What were you around before Ethereum? Already with blockchain, I mean, did you already touch it? 
+
+Griffin : 
+You're aware of it, but I never really dove into it. It wasn't, to me, it was a payment system that was interesting, but I think the smart contracting platform was really the thing that drew me in. Maybe as more of a developer-type background, it was just much more interesting than use cases and the opportunities around this stuff. And I remember going back to 2015, 2016, I mean, we were talking about NFTs way back then and DAOs and everything else. 
+
+And it's just fancying all these different use cases really take off today across the board. So for me, it was Ethereum that kind of drew me in just because the complexity of it all. 
+
+Citizen Web3: 
+Out of curiosity, if you fancy answering that was Ethereum the first token that you bought in crypto? 
+
+Griffin : I think at the time I had to buy Bitcoin to get Ethereum. So But yeah, I think a lot of folks kind of came in at around that time very early. 
+
+Citizen Web3: 
+I was just wondering if it was like one of those ICOs, because usually the story begins with it. It was one of those ICOs. But it's good to hear that it's not for everyone. It's like that. What about you, Mike? What's your blockchain story, if your fans are telling it? 
+
+Mike: 
+My journey kind of started out on the traditional tech side of things. I was early on, I was building trading systems and financial platforms. It's not all that fulfilling or fun, as you can imagine. So I had been itching for something with a little more purpose than I could genuinely get into and get revved up about when you get up in the morning. I made the leap to the startup world with a deliberate focus around kind of a social enterprise. I joined a company that was building language translation tools for doctors and nurses so they could communicate with patients who don't speak English, which is a long, long ways from crypto. But I was sort of looking for something where I could have a net positive impact. But I didn't want to go down the nonprofit route. 
+
+I was careful that to evaluate sort of like the incentive structures of what I thought would ultimately be effective. I wound up running that company for a couple of years. And then over the course of 2017, just got bit by the crypto bug and just learned a little bit here and there. I was completely confused, but then learned a little bit more, remained curious, connected the dots. 
+
+And then at the end of that year, just decided that I had to go all in because really for that same reason of being tickled by the possibilities for a positive social impact. I think we've got a long ways to go. We've got a lot of the infrastructure in place. We haven't quite delivered on that, but I remain optimistic about the possibilities to improve things with blockchain tech and crypto. But yeah, ultimately that was sort of the force that drew me in. 
+
+Citizen Web3: 
+I definitely would agree a lot on maybe not the exact quote, but the idea that blockchain is surely not the goal, but the tool to get humanity, I would say, right? Maybe not just humanity, maybe robots and humanity, to a better communication style, I guess, or to not having to trust each other. 
+
+And this is actually my next question, Griffin. You kind of already gave it away by talking about the developers and bringing value to developers, including them in the actor incentivization model, I guess. But still, I would like to hear it in your own words and maybe more in depth. What is the major purpose goal of Archway? I guess it is that, but still, I would like to hear it from you. 
+
+Griffin : 
+Yeah, just some of our experience being in the crypto space, we've been very fortunate enough to a lot of the core contributors have been on planes and traveling all around the world. And there's this challenge, I think, right now with Silicon Valley that if you're not plugged into a city with a very robust VC market, you don't necessarily have access to capital and resources to go build your startup, to go build your DAB. And that means there's many, many people around this world that are disenfranchised and don't have access to the resources to basically pursue their dreams and build a startup and project that they want to go build. And so what Archway Protocol does is we take those incentives and we build it right into the protocol. We will have obviously similar stuff to other layer ones, grant programs and ecosystem funds and everything else will be coming. But at the end of the day, even those programs have some of their downsides. It's often only insiders get access to those resources. 
+
+You have to know somebody that's part of that foundation or that community in order to access those resources so that you can continue to pursue your dream. But when we take these rewards and we build them right into the protocol, any developer around the world can build a DAB on top of Archway and start to access the rewards model baked completely into the protocol. And it doesn't mean they necessarily have to be a top five DAB. 
+
+It could be a DAB that just brings a handful of transactions or activity pitching. But the rewards may be significant enough that it covers their cost of living. It might fund future developments of the protocol so that they can continue to pursue their dream. So it's not about necessarily, obviously, you want to be incentivized to get millions of transactions through your DAB. But ultimately, even if you build a DAB that brings in a couple hundred transactions per month or something like that, that might be enough to cover your living costs and cover future versions of the product and the protocol. And when we natively, like I said, build it right into the protocol, we take out all the biases. You're no longer limited by your geographical access or location to resources. 
+
+You can live in a basement or your attic or in the garage or wherever you might be living around the world and build something that adds value to the underlying change and exchange or see some value yourself. And I think bigger picture, when we look at Web 2.0 platforms for a moment, let's just say Instagram or YouTube, you have all these individual contributors that contribute to these underlying platforms, but often don't receive the same value back from what they contribute to the product in the protocol. So if you, obviously, sometimes you can do ads and things like that, but you have all these individual contributors that might be just contributing a few images or a few videos, it's really hard for them to monetize this stuff. And because the platforms extract all the underlying value. And the truth is, the reality is Ethereum kind of does this today too. On a lot of these other protocols, the value all crews under the fat protocol thesis and similar thesis, it occurs to the largest token holders. And you as an individual, don't get any upside when you add value and contribute to the underlying platform. So we think blockchains in general have this problem. And so Archway is really designed to go after that problem and solve that where the platforms actually give back to the contributors and all the individual participants that contribute to making a success, not take a rent seeking approach and absorb and take all the value. 
+
+Citizen Web3: 
+Is that correct of me to say, if I would try to repeat that like back in a short version, that the goal of Archway is, well, one of the goals is to find a fairer value distribution model? 
+
+Griffin : 
+I think that's very fair. Yep. That would be, I would say, one of the core objectives of the Archway protocol. 
+
+Citizen Web3: 
+I can't help not to ask. I know it does say in your documents that you don't really want to talk about it too much. So please tell me not to talk about it. If you guys don't want to. But we're in cosmos and there's a lot of talk about airdrops and distributed value to, this is how my brain connects things. Sorry. So if you can share anything about an upcoming airdrop or a planned airdrop or anything like that, feel free. 
+
+Griffin : 
+Yeah, that's great. Well, you might have to have us back on and then maybe we can have more details. But here's what I'll say. There's a lot of folks that have contributed to the cosmos SDK and the cosmos ecosystem, and we do want to give back. And we're figuring out what's the best approach to do that. But other than that, I would say stay tuned. We'll have more information at a later time. They'll walk you through everything. But like our mission and our goal, we want to give back to the community. 
+
+Citizen Web3: 
+That's nice. I like it. We'll definitely come back with it when you guys, but by the way, when are you planned? Well, I know it's a bit of a hard and I think it does say quarter two or quarter three this year, the launch. Yeah. 
+
+Griffin : 
+Yeah So some context here. So pretty soon here, you'll see some announcements from the current contributors about the Incentivize Testnet program that will be launching here in late February. We're very excited about it after months and months and months of work to get into this state of things. We are ready to go to start testing the protocol. And then we're looking at a mainnet launch in Q2 of this year. So not too far away, but that's the tentative schedule right now on the product program. 
+
+Citizen Web3: 
+How are you planning out of curiosity to attract? Oh, well, I mean, I don't know if shared security is going to be around, but do you have any plans apart from incentivizing a testnet to attract validators or any specific type of validator? 
+
+Griffin : 
+We're very fortunate enough to have a lot of core contributors on the protocol that have been in crypto and have deep experience and ties and very much fortunate. I think there'll be some announcements coming up in the coming weeks, but most of the validators are already on board and supportive of the Archway protocol, basically all the big names and a lot of individual ones. So we're very excited that we already have a deep validator community supporting us. More bigger public announcements on that in the coming weeks. 
+
+Citizen Web3: 
+Nice. Nice. Nice. Hopefully when this episode is going to come out, which is probably going to be in a couple of weeks from records and usually, hopefully it will align nicely with the announcement. So I hope so. On the wrapping up note for this episode, I would like to ask a traditional question, which is what motivates you personally as Griffin, not as a product manager, not as a core contributor, but you personally to build Archway or do whatever it is doing your daily life. Is it reading something? I don't know, spending time with your children, coding, maybe you would recommend some of those practices to somebody else? 
+
+Griffin : 
+Yeah, all the above are good things. I think my motivation when they work on this is, I think you kind of touched on it earlier, but just ultimately it's to build a more fairer world, one where everybody has equal access and opportunity to kind of chase their dreams. And I think that's a pretty noble pursuit to chase. 
+
+Citizen Web3: 
+I guess not what is the ultimate goal, but what is like the daily activity that helps you to get through the day and say, okay, I've done that, if it makes sense. 
+
+Griffin : 
+Yeah, recently got a dog, a mini Bernice mountain dog. 
+
+Citizen Web3: 
+Wow. 
+
+Griffin : 
+Yeah, except he's going to be very large. So I would say that's definitely helps get my wife and I through the day and the grind and everything else. Yeah, but I think it's just a little things and seeing the impact that you have on the community and so forth. And that makes you want to go to bed and wake up working hard, stronger than ever and putting in the long hours in to make it a success is just seeing the impact that you're having on the community and people's lives. 
+
+Citizen Web3: 
+I like that our ex-host and the ex-founder of Citizen Cosmos, Anna, she had a Bernice mountain dog and I've seen it a couple of times. It was like an 70 something kilo beast machine that's a good motivation. 
+
+Griffin : 
+It is. 
+
+Mike, what about you? Do you have any things like that that motivate you maybe meditation or something like that and walking through the forest? 
+
+Mike: 
+I think broadly in terms of motivation, my earlier point on still having something to prove about blockchains, achieving a positive impact, getting beyond pure speculation, realizing some real use cases and utility and kind of expanding the scope of applications that are being built. I think that's the broad a little more specifically, you know, I actually too just got a puppy, which yeah, incidentally enough, Gus, he's fantastic. So yeah, he keeps me happy and motivated and busy. 
+
+And that's your point, Serge. I think yeah, getting out there in a little bit of nature goes a long way. I was in New York for about a decade and it was a long lockdown this past couple of years. So I've since escaped and yeah, a little fresh air, a little space goes a long way to put the wind in your sails. 
+
+Citizen Web3: 
+Sounds nice guys. I like the dog consistency. At one point we had a consistency on the show that people used to get married soon after the recording of the episode, but getting a dog is I guess a bit easier. 
+
+So let's leave it at getting a dog maybe. Guys, it's been a huge pleasure having you on the show and Griffin, thanks so much for such detailed answers really does help to understand what you guys doing and why you guys doing it. And hopefully we will speak like you say a little bit more words like the year and with more detail and with more things.
+
+Griffin :  Yeah, absolutely. And thank you so much for having us. 
+
+Citizen Web3: 
+Thanks guys. 
+
+Mike: Thanks Serge. Take care. Thanks Serge. Bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

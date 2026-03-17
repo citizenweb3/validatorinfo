@@ -1,0 +1,379 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/girnaarnodes
+
+Episode name:
+Answers, Research and Community with Nimit Girnaar
+
+Citizen Web3
+Hello, everybody. Welcome to a new episode of the citizen web three podcast. And today I have me meet with me from the Gernard validator. And I'm not getting that. There we go. It was the second one better time limit. I'm sorry. Welcome.
+
+Nimit from Girnaar
+Thank you so much for having me on. It was bang on mate. You got it right.
+
+Citizen Web3
+Thank you. Thank you. Thank you. Thank you as all of our listen is now already I The beginning is always the names pronunciation and but I'm there, you know as a person who? traveled a lot I Have such a mixed accent that sometimes I get confused how to pronounce things correctly. So I'm sorry about it. Nemeet Man, what tell us all about yourself? How did you get to a tree the story of Nemeet?
+
+What's your background and what do you do these days in Web3?
+
+Nimit from Girnaar
+Awesome. Hey, everyone, thanks for listening in, and thanks for having me on board, by the way. The story of us getting on Web3 is actually quite funny. They call it the necessity is the mother of all invention. It pretty much is the story of Web3 and it's pretty much the story of us getting on Web3. So before I started on my journey on Web3, we were actually, I've been a startup guy for quite some time. This is almost the fourth venture that I'm building.
+
+And back then, this was, I think, only 2017, we were building something in the Web2 space in the HR tech space. We had raised some seed capital, we were going quite well. But I think along the journey, every time as you go on a journey, you realize that at some point of time, you realize that you probably have to pivot because it's not going exactly where you want it to go. And I looked up that, okay, it's time to pivot. We really need to go somewhere else. But we didn't have the resources to do it.
+
+I looked at my bank balance, we had spent a lot of money building the product, trying to get it to market. We had some clients. I looked at my cap table, we had already diluted the seed round. So unless we proved traction with the next one, we couldn't take it to the next round. The only thing we interestingly had was a ton of cloud credits because we have been to Microsoft Ventures and all those kinds of fancy incubators, right? And you know how the web two incubators are, they shower you with credits so that they can get you hooked.
+
+And if you ask me now, I never build on AWS or Microsoft, but that's a separate story. It's all bare metal or nothing, right? It's all deep in or nothing now. But that's the only thing I had. I was looking at a way of converting these cloud credits into money so that we could fund of a pivot. And Think-A-Bango comes along something as beautiful as Web3 or the blockchain, where you put in compute power and it turns into money.
+
+Who would have thought? A raw compute power. And we started spinning up Ethereum validators. Back then it was actually proof of work, so they were miners, they're not validators. And our math was actually built on Ethereum being close to early hundreds. Stroke of luck, 2017 bull market happened, and we were just hooked from that time.
+
+Citizen Web3
+I like hooked. Hooked is good. It's funny how the web tree, not funny, but I guess there is a little bit of irony inheriting that slang from web 2, which is a strange slang, right? It uses the same words like hooked users, and we all know what other industries use those words, which of course matches.
+
+But it's just ironic that Web3 also inherited it, and we all kind of like into it. You mentioned Ethereum validators, and I know, I think you guys validate on LIDAR Finance, right?
+
+Nimit from Girnaar
+So, yeah, so Lido is one of the people who brings a stick. So Lido Effective is not protocol, right? So we started with Lido on Polygon. We are now on Lido's test nets for its DVT program, which is where it's taking into community. It's actually doing the right thing by decentralizing because that's the biggest thing Lido was criticized for. It's 32, 37 validators at the back, running 32% of the Ethereum.
+
+stake which actually is anti-centr... even Vitalik spoke about it. So Lido is going through a decentralized program with dbt, we are part of that and we are quite excited to kind of be a part of go through that journey. But for us Lido's journey started on polygon. We are one of the early guys who partnered with Lido on polygon when they just started. Back then it was like three or five validators. Now we're just up to 12 validators on polygon. It's been a very strong partnership since then.
+
+Citizen Web3
+We had a moment of self-advertisement here for the listeners. If you guys want to learn more about Lido, check out a couple of the podcasts we did with Lido and also with P2P, which are closely related some years ago with the founder of P2P. What's your opinion, Nimit, on that whole story with 32% being in...
+
+Okay, not in one hands, but let's say in the hands of one entity and obviously a centralized entity regardless of whether it's an entity on top of a blockchain or not. We all understand how structures work in this world. What's your opinion on not just, not the fact itself that it's one entity. I mean, that's how technically the market happened. But in your opinion, should networks interfere at this stage as manually, even if it's a decentralized network? Because then you have like, you know,
+
+this two end stick, right? What's your take on that?
+
+Nimit from Girnaar
+I think the first thing it says a lot about how good a protocol LIDAR was, because it just naturally gravitated to that state, right? They didn't force anyone. There was nothing going wrong in the way they did it. They did it the right way. They just happened to be one of the most successful guys, so success brought in some inherent challenges. But they're taking the right step now. Yes, it does create centralization risk, no matter how decentralized the protocol itself is.
+
+There's nothing that's gone wrong so far. So there's one argument to be made that, well, it's working right, right? But then they're getting ahead of the problem and they're being proactive by bringing it through community staking. And the thing that I like about that is they're also doing it by not introducing artificial barriers like bonds, or even if they're bonds, they're gonna be very low bonds. So they're gonna get more powerful. It's...
+
+it probably might eat up some bit of rocket pool share too, because you don't need these bonds, they're doing it the right way, they're using the SSPO ball of the new technology to do it. It's just probably taking a little bit more time, but that's how decentralized structures are, right? You need to check all boxes. My opinion is there was a problem created, not thought through, but now they're fixing it, so that's the right thing to do. And hopefully after that we should be through, because...
+
+The stage one talks about some 250, 300 new validators, which is not 100% decent, but quite ahead. And then there is more. And I think by the next time we speak about all of this, Arj, we'll be talking about Eigen layer being the centralizing force. This never ends because someone becomes more successful.
+
+Citizen Web3
+What if we play, you know, let's, I, again, every listener is no, I like to play devil's advocate a little. Let's dig the rabbit hole a little bit. Lidoaciety, you know, the case, let's abstract from the case itself and from Lido. And I mean, in general, it's an interesting thing because I have been around the space for a while. And I have seen...
+
+different occasions, for example, let's, let's pick a little bit and point fingers. Um, you have the story of Juno. I'm not sure how you familiar with it in cosmos. There was a big thing where, um, they decided that one of the whale accounts gained the airdrop and the governance voted to actually take the tokens of their account. And then there was the whole argument. The chain has the right to defend itself. That's why the consensus is there.
+
+At the same time, that's not a very decentralized thing to do. So, you know, it's kind of like in the same level of story, you know, where we have like, okay, we have an entity with a big amount of stake again. Forget the names here for a second, you know, regardless of that. A question is to you personally, do you think on the spectrum of decentralization, centralization of the web three world we are building or supposed to be building? What is the correct way?
+
+here to act is the correct way for the chain to say, yeah, okay, we need to do anything to defend ourselves or we have to keep the decentralized balance and there is some things we will never do no matter what. What's your opinion on this?
+
+Nimit from Girnaar
+That's a hard one, but I think I'll fall a little close to what exactly the Ethereum Foundation is doing. So if you look at what Ethereum Foundation is doing, it's trying to enforce decentralization, or rather bring in more decentralization by bringing in more innovative solutions, encouraging at least. So one simple example, I know we're trying to extract that from use cases, but let's take one for better understanding.
+
+Every time you tune into any conversation that happens between Shriyayan from Aigan and Justin from the Ethereum Foundation, you see that natural tension over where Justin is not comfortable where Aigan is taking the whole ecosystem. Justin knows that, yes, this is going to lead to some sort of a Lido ecosystem if not fixed. But all credit to those guys. They're not stopping that ecosystem. Aigan is not yet launched. They could have done anything to pull the plug on it.
+
+Nimit from Girnaar
+deposit contracts went live and you have the six billion worth of TVL locked in, they had the chance to pull the plug. They didn't. Rather, they have been constantly looking at what can help solve the challenge. I kind of like that approach. Innovation, I mean, we all have to agree this is work in progress. Web3 is work in progress. So that means there will be certain situations that will pop up that you have not imagined. And then how you act is important. And if you stop the
+
+If you pull the brakes on it, then people don't trust you. And we've seen some of these examples. Again, we're trying to abstract away. So we've seen some of these examples where if foundations act rationally, no one's going to trust the trustlessness of the layer.
+
+Citizen Web3
+It's, it's, I mean, the reason I think I'm asking these questions is I kind of pivoted from your story straight into questions. There was a point there, but one of the reasons is I think, and I always say this to guests before we start recording the same thing I said to you, you know, the star of the guest, the star of the show is the guest. And in the, in the, in the sense of the person, not the project.
+
+And what I'm trying to connect the dots here, the way I'm trying to connect is some of the questions I'm asking, I guess, a little bit philosophical, right? And a little bit about values and all that. But it's an interesting point to ask validators and people who contribute directly into the Web3 space, why, what are your goals? What are your ethical beliefs? What are your values? Because I think a lot of the time kind of...
+
+we miss on that sometimes, right? And we try to build, and I totally agree with you that Web3 is a huge experiment and it's great to hear more and more people coming to acceptance of that, that it's not something that needs to be expected of, at least in my opinion. But here's the question to you with all of that in mind, back to your kind of story of Nenit and Gernar. So the story that you were saying, of you had a seed round and you had fun, and then et cetera, et cetera.
+
+startup story, you know, that led you eventually to the place where you are today. What's the goal though? What's the like the greater, not end point of course, right? It's not an interview where you're going to be in five years time, but where are you guys heading? What is the mission, so to speak?
+
+Nimit from Girnaar
+Yeah.
+
+Nimit from Girnaar
+Right. And I don't think our goal is too different from anyone who is truly in-web-free. It is decentralization. And that's the reason why when you asked me this question, I erred on the point of saying, when you create something, and it's supposed to be decentralized, you never know what shape and form it will take. You will gotta let it fly. And even if it's against...
+
+what you imagine it to be. And that's the reason why I go back to the same example. The Ethereum Foundation just did that. It's only once in the history that they pulled the plug where the entire fork happened to save a few users. I'm not in favor of that. And that's exactly the kind of stuff that the centralized institutions pull on us, which is what we all stand against, right? Centralized institutions are great to protect people who don't understand stuff. But...
+
+Is the best way to control their choices? Probably not. The best way is to educate the user Yes, you can't educate in every single small choice But on the core things that matter to people you got to educate and you literally let people decide for themselves So we also stand for the same value set essentially. That's what brought us. So the story is supposed to be a funny story but the core reason Why we continue to stay after coming in The funny story, right? We could have continued building the web to work with that money and left with it
+
+is because when we came in here, we realized that the best thing that we ever thought was getting built, which was the world's first decentralized computer. And that kept us in. And that's essentially what's been our value set. And that's exactly where you see us. If you look at all the networks that we validate on, it's all very close to EVM. We genuinely believe that the decentralized nature of compute power essentially...
+
+And the decent nature of trust essentially what's the base layer on which everything else should be built. And that's the goal. And when it comes to specifically what our goal would be, we will want to take and extend a decentralization to stuff that we do, which is infrastructure and validation. And that's what we're trying to work towards. So one of the next things that we're trying or playing around with is to, well, some of that is already done, but we want to do it some way differently. We want to build some, a little bit of decentralized validated network.
+
+Nimit from Girnaar
+And that's again in the same theme and thesis that we were decentralized stuff And one of the big drivers for that is that if you look at the entities that are the most centralized Unfortunately right now in that three
+
+If you take out the home stakers, it's all validators. Right? And you have validators now being as big as VCs, funding and deciding which projects should thrive and which should get killed. Unfortunate direction of what's happened, but that's exactly what we're gonna pull away from. Lido is doing that by introducing community staking. We wanna do it by bringing direct community-driven validators to the ecosystem.
+
+And that's what we're working on right now.
+
+Citizen Web3
+It's interesting, you know, you say something that has been a goal, part of my goal, regardless of before the rebranding of the project, because we had, we were called Citizen Cosmos and then we changed to Citizen Web 3, half a year ago, something like that. We were trying to do it for a while. We've been covering other ecosystems for a while, but the goal, one of the goals has been exactly what you say, is the understanding that, I mean, we are a validator ourselves, validate more than 15 networks today. And we also are like...
+
+moving to bare metal, we also like try to participate, you know, the same goals. And it's interesting that, you know, the understanding that validators play maybe a bigger role than disease, I think play on, on the stock market in a sense, not the stock market, but a startup market. Sorry. Um, because validators are people who, who were there, you know, and who were successful, who were there and were successful during the bull run of 2000.
+
+13, 14, or 16, 17. And since then, we've seen all of the projects. And this is the question, what are you guys doing? And at the peak of the market, you see certain validators, like Steakfish, P2P. You take the big names. And we're talking about hundreds of thousands of dollars of commissions per day. And it's interesting to understand. It's interesting that you mentioned the Validator Network. I had several validators on the show.
+
+over the last several years, who it's an interesting topic that I would like to ask you something about. There has been, actually we are as a validator, we try to experimentally buy a stake in every validator DAO that exists. If I hear a validator DAO, citizen, we go and we put $50 or whatever just to have every DAO validator stake around the world. But anyways, the point is that the old...
+
+try different methods approaches of decentralizing this centralized entity called the validator. Some by building DAOs on top of them and then giving them some voting powers. Some go as far as saying that the tokens are like shares, blah, whatever. And then even they have to measure the commits to GitHub. And then there are different systems. It seems that today to me at least, it seems that today, as much as I would love it,
+
+Citizen Web3
+It seems that the tools are not yet there to create a decentralized validator. What's your approach here and what are you planning to do? What's the structure? How will it look at the centralized validator network or just a decentralized validator?
+
+Nimit from Girnaar
+It's funny that they asked me this. I'll be honest, right? Right now we still, we haven't formed it up completely in our heads. But here are the two things I was thinking about. The first thing that we have learned is that there is a difference, which is very well, which is very well, you know, something that's come out in the open because of liquid staking. There's a difference between the kind of people that are there. There are those who have the capital, who still want to be a validator. There are those who have the tech know-how.
+
+A large part of the current networks essentially assume they're the same people. Right, so most people would think about that if a validator, or you want to be part of the validator DAO, they don't distinguish their role. And which is the reason why the success is limited. I think that's one thing we're building on. How will we do it? We'll of course release a lot more information in the coming time to come. We'd love the community to kind of give us feedback. But you want to kind of play that very clearly out there.
+
+It's not necessary that if you have to be a part of this network, you actually have to bring both, which is very rarely that people are both. But you both of them get a say. You essentially, one can't override the other. The capital can't override the tech, the tech can't override the capital. And that's important. The second thing I think that's interesting that I mentioned, people are trying to find some different sorts of proxies to the commitment.
+
+I think for us, we're just finding a simple proxy to the commitment is that how much of effort is going in going the network. Now GitHub commits, et cetera, is one, but because it's validation is essentially two things, infrastructure and the capital. So these are the two proxies that we measure it on. So if you can bring infrastructure, you can run it right. And we have to figure out the performance metrics around that front. That's essentially what we measure and kind of go to as contribution rewarding.
+
+behavior and if you even if you don't have the capital you can source the capital which means that you can get commitments to the tokens of the project that gets rewarded too because that creates a very nice flywheel effect right. Staking is the only thing that is a positive one of the few things that has a positive flywheel effect in the ecosystem. So those are the broad guidelines we're trying to build on. How would exact structure look chief? I mean I'll just say just wait a little while we'll come up with something and then we'll laugh to your we'll just sit back and we'll just love to your feedback.
+
+Nimit from Girnaar
+on does that make sense, what tweaks? And instead of decentralization, let it go in the world and we'll know.
+
+Citizen Web3
+You mentioned capital. You mentioned capital. Let's stick to capital. I understand that you still guys are designing and of course, ironically, we've been building a tool for validators and it's a multi-chain validator explorer that is validator centric, not network centric, not talking centric. It's a validator centric explorer. And I'm curious because you mentioned capital. How...
+
+Can a validator in your opinion increase the revenue stream for their token holders? And I'm talking within the centralized boundaries without saying, oh, we are using your stake to invest into Apple stocks and then we return you a packet of 6.2% bonus in the end of the century.
+
+Whatever. No, no, no. Is there a way today, in your opinion, apart from, of course, printing and on talking and giving extra staking rewards, are there ways for validators today to introduce any additional revenue streams and so capital by such matters to their stakers?
+
+Nimit from Girnaar 
+I think you're coming very close to what we're thinking, right? Yes, So the short answer is yes, there's a ton of services and validators you can to provide on top because there are two natural synergies. One is these are tech folks who can build stuff on top. Second is they're already running the infrastructure. Let me take some very few examples, right? RPCs, high quality decentralized RPCs for each of the blockchain networks, effectively right now run by centralized institutions.
+
+Nimit from Girnaar
+and a lot of revenue actually gets built there. These are dollar revenues, they're not token revenues that goes there, right, which projects pay, which users pay for. There's no reason why validators should not be running that. Because essentially, it's referring to the same network and the RPC providers pretty much running just a node. Yes, they're doing a fairly good job not to take credit away from them, but that's something that we can, of course, decentralize and bring it as an add-on from the validator. So that's one example, there are tons more.
+
+where validators get more actively organized, think through better and build the tech. And as a structure, if that's what gets accepted, then there's a lot more of economic benefit that can be passed around, both to the consumers as well as to the validators themselves, which are suddenly being captured outside of the ecosystem by centralized entities. It was probably necessary some time back when everybody couldn't do it, but there's no reason why it can't be done now.
+
+Citizen Web3
+Um, it's, it's a tricky topic, measuring revenue. I tried to, with a tool that we're building, we're trying to understand, you know, whether
+
+some validators who print tokens, for example, own tokens on top of any network, doesn't matter what is the underlying layer there of the contract, and then say, okay, so apart from the stake and reward that you're getting, you're also getting those loyalty points or whatever. And then some validators go, okay, now we have merchandise and we sell that merchandise for those. In a sense, that's kind of like, but it's there.
+
+You know, we were trying to think how to measure it because, you know, to show the point I'm trying to get it here is, I think that, you know, it's interesting to see, like with liquid staking, of course, which introduced, you know, a huge, regardless of what we think of it, whether it's bad, good, you know, like, no, not the point of not economical, I guess, point now, but it's reduced something very new.
+
+to capital that wasn't moving, I think that was what I was trying to get at. Do you think that there is more such examples as liquid staking, which was introduced to many networks over the last six, seven months, a year, let's say, something that will come, that will be like liquid staking, but from a validator to their delegator, let's say, not necessarily liquid staking, but I don't know.
+
+printing bonds because you're taking tokens to me and you go with these bonds to, I don't know, to this market, borrow capital, blah, whatever. I mean, is that realistic or is that like trying to build a useless chain of DeFi here and in the speculation in my head.
+
+Nimit from Girnaar
+Well, that's for the market to decide. But I think what you're speaking was already being done. So there's this project, and I'm sure you probably have come across it. There's a project called Tenderize. Very good folks, go check them out. We love them, we went on the early backers there. They've done validated specific LST, liquid staking. And they've done it on a few projects right now. Polygon is one of them, and that's the reason we know them closely enough. Now...
+
+Yeah, the jury is still out there, whether it's something that's absolutely useless and it's over-engineering, as people call it, or finance, or it's actually required. But the fact is they're growing, man, and they're growing crazy. They're the fastest growing protocol on DeFi Llama in their category, oh sorry, in the chains. So there is demand for it. And there is all this revenue exactly right, which is getting leaked out. I was still happy that some of this revenue gets into decentralized protocols like Ido, but...
+
+I'm super not happy about all of this getting leaked to centralized institutions. And we will name them, but the RPC providers, all of those guys, right? Effectively just running nodes, man, but doing a much better job at marketing. But Web3 is not about marketing, it's about community. And the decentralized way is the right way to do it.
+
+Citizen Web3
+Before I'm going to ask you a question about community, which I definitely want to ask you, I want to ask you what's your opinion or, I mean, it's not going to be a statement or a question, but one, I guess, large topic for validators in terms of decentralization is bare metal and cloud infrastructure. And of course, different network requirements.
+
+and are to be considered when this question is asked. And of course, different specifics of wherever this validator is physically, or the team is physically based, I don't know, the weather conditions and so on and so forth. We can talk forever about... I mean, we had a guy on who was saying, I mean, he was like, I would love to do bare metal, but I'm having three, four storms per year, and I have electricity cuts out every... Like, I cannot, it's physically...
+
+to build that type of a generator physically for me would not be feasible. So a question to you. What do you think? Do you think that there's two extremes, and there's, of course, the opinion in between. One extreme, Valorator nodes should be outside of centralized data center.
+
+and only run from home, from mobile phones, whatever. And then we have the opinion, okay, but liveliness is important. We need the quicker ping, quicker connection. So we need to be the nosing, liveliness has to be the highest we can get. So only cloud can provide it or it doesn't matter in your opinion. What's your opinion here? Where is your take on this?
+
+Nimit from Girnaar
+I think it goes back to values, right? Our values are very idealistic. We believe that it should be individual devices that are always connected, but we also are realistic in believing that it's a journey. And I kind of echo Vitalik's sentiment that it eventually wanted to be mobile, but doesn't start there. And it's not something that we just say. If you look at our journey, right? We started on cloud. You exactly heard where we started with those cloud credits. And just in one month, we'll be in a data center.
+
+So we just almost finished the migration. And that's a local data center. And then we want to have like, so this is not renting out bare metal. This is actually our own physical rack that we have configured our network. Sometimes it kind of, I don't know if you've seen the startup, which was the series, the Silicon Valley, I think that's called. And you have the character of Gilfoyle sometimes gives me that feeling. But that's too extreme for everybody to run.
+
+And we kind of feeling the pressure for it, but we like that journey. We think that's where it should be, completely more in your control. And we know that over a period of time, as network sample, mobile networks become more reliable, devices become much more reliable, less centralized, because devices also are centralized today. You will basically see a move, but it's not gonna happen overnight, right? So let's be realistic. But in the process of being realistic, let's not leave the ideal.
+
+So it's a journey, man. It's not a one, one zero one. So we've got to get there and we've got to keep taking steps towards that direction. At the end of the day, if in 10 years, Valido is still going to run on AWS, GCP and Azure, it's probably not the world I signed up for, man.
+
+Citizen Web3
+It's something I totally can relate to. I mean, the amount of projects in 2016, 17 that came out on ICO with the promise of building a cloud, decentralized cloud. And I'm not talking about the 2020, 2021 projects. I'm talking about the 2016, 17 projects. And I don't recall any of them succeeding in doing such. Unfortunately.
+
+But there are good movements. No, there were some good movements. I've seen a lot of projects these days trying to, you know, to create some decentralized cloud solutions. And have you actually, personally, do you think there are any technology, it's not necessarily projects in terms of decentralized cloud that you've seen on the market that you would potentially do anybody research in this question would recommend looking at?
+
+Nimit from Girnaar
+I wanna say I've started giving up on going too deep right now, man, there's so much noise. But I think back in the day, the one I really liked was Helium. I don't know why that, why that kind of thing. They had, they had the right architecture at least in place. Yeah, but I don't know. Yeah, exactly. Yeah, yeah. Unfortunately, it's the Jinx, man. I don't know why. It's the too early, too early a mover. Let's not call it the first mover. Too early a mover. Jinx maybe.
+
+Citizen Web3
+Napster. You know that, right? It's the same guy, right? You know that, you know.
+
+Citizen Web3
+funny.
+
+Citizen Web3
+Yes, because we're also involved with bare metal and like own bare metal also, like with our own racks and everything. And we try to be involved in, lately we got involved in some projects with like deep in projects, you know, like, like such as helium. And it's interesting the amount of like little antennas and stuff that you, you know, have to go into and all that and sometimes build yourself. But anyways, sorry, going off track, but.
+
+One, I think, not final thing, but I do want to ask you about the community as well. But just before that, you mentioned a lot of values, you mentioned a lot of education.
+
+Citizen Web3
+what's it seems that the story, you know, like you say, it wasn't easy, you know, it wasn't like a one day story. Like you say, it wasn't something that was just happened over there. And you guys obviously have a direction in which you're going. But if you were to look at all this now today and, you know, to, to
+
+Citizen Web3
+kind of what was your biggest challenge that you found in terms of trying to get the validator to have a community to actually for the infrastructure, like you say, you went from cloud to having your own rack rented, which is, I understand the process. It sounds like it's going from cloud to having a rented rack. No, it's a huge, huge process, which requires a lot of planning, a lot of equipment, a lot of...
+
+technical work. So I understand that it wasn't probably an easy way. And in all of that journey, regardless of whether it was the software, the hardware, the people, the community, what is the biggest challenge that you encountered? And if there was somebody else listening today, wanting to start the validator, what would you say to them then, considering the challenge that, pay attention to this or pay attention to that? Or I don't know.
+
+Don't do this, do that.
+
+Nimit from Girnaar
+I don't know where to start. Okay, let me start. I'm going to flip the question. I'm sorry. I'm going to flip the question and let me talk about first, not the challenges, but what really helped solve all of those challenges. And it goes back to the same thing that we're going into, community. We wouldn't have been here without the community. And that's what we love of this space. That's why decentralization too. I'm going to give a shout out to some of these very special guys.
+
+Citizen Web3
+Hahaha
+
+Citizen Web3
+Please.
+
+Nimit from Girnaar
+who helped us when we knew nothing about validation, we knew nothing about running this kind of infrastructure because we were application guys. We were not infrared guys when we started. We wanted to be there because we loved what it was solving for, that's exactly what blockchain was when we started, Web3 was, it is still a little bit more infrared, it's just getting into apps. But everyone from the community rallied around us, including what people in the regular world call competitors. So, special mention to my friend at Stakepool.
+
+He was a competitor, man. He taught me essentially how to run my machines. The team at Polygon, amazingly helpful. All of these guys. And there are so many games I can mention. But effectively, that's what helps solve most of it. So I think the challenge is largely mindset. Whoever's kind of coming into this ecosystem, who thinks 0-1 games, not infinite sum games, right? That's what you've got to fix first. Unfortunately, I don't know about you,
+
+A large part of us grew up in that kind of mindset. And that's not that three. That three is infinite sum. And if you go in with the wrong mindset of saying that, hey, I'm gonna be guarded, I'm not gonna, you're gonna put your guards down, you're gonna think about how you're gonna take the whole network together. And then you thrive. Then most of the challenges get solved for. So for me, the big learning was mindset. It probably tells people I'm old, largely older than most people in the community.
+
+But yeah, man, I came from the web to start up world, a doggy dog world. I did finance, I'm a CFA by training. It was a lot of unlearning that had to happen to get here. But now I'm super happy that I'm here. I just can't see myself anywhere else.
+
+Citizen Web3
+It's interesting. I've seen, I think over the last like, I don't know, 10, 11, 12 years in this industry, a lot of younger people who come and it's actually not, not that different, you know, from the old world, you know, I'm going to use some quotations here in terms of, you know, it's like, you know, if you put a really experienced waiter in a restaurant, but, you know, let's say he worked all his life, I don't know.
+
+in Soviet, in restaurants in Soviet Union. And then, you know, you, you take him to, I don't know, a restaurant in Europe and you put him there because he has 10 years experience, but all the experience isn't going to mean shit because, um, yeah, it's better. And in this industry, what I was trying to say, you know, all of these people, like young people who also came in without experience today are top end blockchain developers. And the reason they are is because they didn't have all that luggage, which we have. I'm also a little bit, uh, I guess older than I look.
+
+But yeah, but you know, and I totally agree. I totally understand. But you know, but, but you, you kind of shifted this to the community already. And I want to ask that because it's, it's a huge topic for, for validators, because obviously without the community, validators wouldn't exist. Number one reason they wouldn't have delegations. So they wouldn't have delegations. They wouldn't have revenue. They wouldn't have the ability to provide either public goods or any, and pay, pay for the infrastructure and so on. So.
+
+And regardless of the material question in the head, you know, or not material, how I'm going to go very, very abstract here, but not abstract, but very vague. Sorry. How does a validator build the community? It's like, like this, just like big question. Like, no, no.
+
+Nimit from Girnaar
+So yeah, so I think that's a, actually it's not abstract. It's a very pointed question. Contribution is the short answer to it. So I think a lot of us think that validates a single rule of running infrastructure. Actually, that's where it starts. It doesn't end there. It starts from running infrastructure, then goes to us participating in governance, then goes to us building more tools for the network that you're validating on, then goes to us actually trying to think more about the challenges the network is facing to bring adoption.
+
+And the more you kind of, and that's a thought process because when you go down the thought process, you're actually building stuff along the way that will help the network. And then you're cross-feeding because the network will actually push you. I'll give you a few examples directly for people to understand this, right? We started off with starting to get delegations. And the first thing our polygon team said, hey, you know what, do you want to try out the new guys who are coming on the block?
+
+I said, okay, sure. What does that mean? It's like, hey, Lido is coming on Polygon, but the way they're doing it is a little different because it's just starting out. Take a short, if you're comfortable getting on board. And actually it was a big risk because Lido, when it started out on Polygon, the way the smart contracts were done, they wanted us to deposit a validated NFT. For the folks who don't know Polygon enough, Polygon is one of the very few left walled gardens. It's changing soon. But first come first serve, it's not that of 100, right? It is...
+
+100 data Gordon or 105 data Gordon are the validators. So giving up the NFT was a big deal, but that's where it started. And then we learned. And then we started supporting each new project that came on Polygon, help vet it, kind of go through the process. Then we started learning, getting more active in governance. We started building tools on Polygon. We are now building a dashboard that helps people understand the economic incentives better. And we realized that it's a good time to do it because Polygon 2.0 is coming around.
+
+and it's becoming a hyper tome with more kind of chains that you can validate on. So, I mean, that's chain specific conversation, but there is so much you can do, right? We are part of the test net, we run the test net for free, but then that's what brings more delegations because we are the first guys who go out there and tell people, hey, this is the bug that we found. And then you release, do it, don't do it. This is how we kind of solve for it. So they created a small subcommittee and it's just keep contributing, man. You keep contributing, you keep getting more actively involved in conversations.
+
+Nimit from Girnaar
+And that's what the people are looking for people looking for contribution and who you are just to know you better as people and then what you're doing to help the network and community go forward. Because the beauty of Web3 is that you all in the same thing. Ultimately, we are getting rewarded in the same token, the user is holding the same token. So the user does understand that, the lady does understand that is there something that you're contributing to bring the token economically inattractive by taking the project forward, the community forward, the network forward. You do that.
+
+things start falling in place, you get in touch with more people, the wheels start spinning.
+
+Citizen Web3
+This is a big question, the wheel spinning. I mean, you say it obviously with experience, but to some it might sound, I'm going to take the other side of the conversation to be able to have that conversation here. I'm totally understanding and I'm following what you're saying. But I want to dig into the subject a little bit here, because I've been asked numerous times. I've run Node since 2016 on Beecher's types protocols.
+
+witness nodes, you know, and it was very different. And, but, you know, since then, you know, to say that I know how to run a validator better than somebody else bullshit, I don't, you know, I mean, we're not trying to big validator, you know, our validator is quite small, you know, we were concentrated on certain networks and then we try to contribute. But anyways, point being is, you know, the question that I got asked the most so far, it's about that wheel starting to spin.
+
+because, you know, validators come and they say, okay, I'm contributing. I've either built tools or I've either shown the foundation that we are capable of, I don't know, creating a dashboard, an explorer, providing extra RPC points or anything else, I don't know, whatever. The foundation either provides them some initial delegation or...
+
+Regardless, you know, but that's it. And then they get stuck and then they're like, but what do I do next? What, how do I get that wheel to start to spin? You know, like, cause you said it's so like, and then they will start spinning, you know, but how does it start spinning? Well, what, where, who, where is, you know, what was, where's the leverage because one thing's sorry for such a long question, but one thing is, is to prove to the foundation that, Hey, I'm contributing here is the dashboard. Here's the Explorer. Here is the GitHub link, blah, whatever.
+
+Another thing is to show this to retail. Another thing is to show this to stakers that, hey, we are a validator who contributes. We're a validator who have built explorers. And those explorers, the delegators might not even like that explorer. They might say, hey, your explorer is shit. We don't understand your UI. We don't even understand why the foundation has given you money for it, which is sometimes the case. So I'm sorry for such a long and like a little question. But.
+
+Citizen Web3
+What does a validator do at this point? How does he prove to the community that he's important?
+
+Nimit from Girnaar
+So I don't claim to know the entire answer to this question. I'm still learning. Of course, we are not the large guys yet. But I think it's a factor of three things. One is of course a large factor is timing like anything else in life. You know, a lot of validators who kind of come in right now, they're trying to crack into more established networks. If I had to go and say that I have to crack into Solana, by the way, we're not there. The amount of effort, this is already built, right? What am I gonna do there? What am I gonna contribute? Another third dashboard?
+
+No one cares for a third dashboard. So you're going to take bets early. And I can see you laughing there. But you're going to take some bets early, man. It's a lot about timing, too. And look, you are there because you were there from a time when no one believed in the ecosystem. 2016 was really early. You stuck around. So that's how we get rewarded. Does that mean the board has sailed? No. There's so much more getting built. Just go and find some of those opportunities. But don't.
+
+hope to get rewarded soon because back in 2016 all these coins were shit. I mean there's no value probably by just managing to keep your pants on by paying those bills but it stuck around right and now the time for reward has come so timing and patience is something that people are underrate. Validator business is not it's not the farmer business you're not farming tokens man it's not a bull run case it's a long term play if you're in here you're in for the good yeah exactly right so don't take that short term view.
+
+And that's the first thing to go for. And I think the second thing is a large part of the validers I see do never get out there. They build a lot of ton of shit, but they don't talk about it. And this is unfortunate. Maybe it's persona. Maybe just we've been lucky that I've been out there in the world a little bit longer before getting into this business. So we do talk, maybe not enough, but I think that's one thing that people miss out on. It's as much important to
+
+engage in conversations as it is to build stuff. Most validators don't end up doing it. Networks, some networks have really done a good job at doing it. Again, I'll take the example of polygon, they don't validate the spotlight series. Some have actually done much better jobs. We're also trying to see if we can bring some of those conversations alive from the dashboards that we're bringing. But yes, there is some distance to be done where validators probably need to take a little bit of effort, but networks also really need to push conversations between the community and validators. A lot of work to be done there.
+
+Nimit from Girnaar 
+a lot of work to be done. But that's one of the things.
+
+Citizen Web3
+What about... Sorry for the interruption, but I agree, man. That gap of having to... Not having to, but in a sense it is having to because when you run big infrastructure, when you run, you have people working. You do have to go and try to sell yourself and
+
+Citizen Web3
+trying to provide the public goods and trying to be part of that economy or well, literally, you know, of building the digital nation that you're supporting with your infrastructure, you know, whichever one you believe in or, or the several, you know, it is that the gap is hard, but that's the validator point of view. What about the stakers? What about the other question? How did they find the right validator? Because, you know, today there is
+
+in a sense, somewhat bigger because maybe it's not bigger because, but it is because, you know, validators at the end, like we said, essentialize entities who come and go and they will come and go. But the damage that can be done by, you know, the wrong validator attracting, you know, the wrong part of the network or whatever, you know, and then...
+
+Like we said, you know, go and build an atomic bomb with those revenue or whatever they're doing, you know, so how do stakers, so anyways, the question is basically the same, but reversed. What do, how, how do you, your opinion, what, how does a staker today should find the right validator? What did he do?
+
+Nimit from Girnaar
+I think I know the answer but I'm not able to figure out the incentive to act upon it. So I'll tell you what the answer is. The answer is of course more research. Stakeholders put a lot of energy and effort in figuring out which projects they want to back. That's the token that they buy. I think beyond that they stop. They don't figure out what's the best next big thing to do with the token. And as a result of which despite that you see a lot of networks being understated. When I say understated, Ethereum is 16% stake. Come on.
+
+I mean, Polygon are 35, 38% stake. If you are believe in the project, and a lot of these are long-term holders, by the way, they still don't kind of go on and stake, which is what people call the risk-free return of stake. So if they're not willing to research what to do with their token, I'm trying to figure out what's the incentive for them to research who do the pocket with. But the answer is research. And maybe we can actually do a very long, I mean, we can keep going on and on about this, but there has to be a...
+
+Maybe it's about making it easier for them to actually do the research without having to go deep in the scourge and have to go deep in snapshot to figure out who partisan and what governance. It's too hard for them currently. We're trying to build a dashboard that makes it a little bit easier, but I think it's still miles to go. But yeah, man, I think research to figure out who they connect with, who they... It's literally the decentralized world. You're picking people that you connect with, you vibe with, but no one does that.
+
+of very few people actually do it.
+
+Citizen Web3
+It's the same community question. You know, it's like one on one type, how do I build a community? On the other hand, what community do I want to join? You know, it's like, I have now suddenly the freedom of joining any community. And that community is not like, you know, it's not a kindergarten. It's an economical community. It's an economic, and I don't mean that it's serious. I mean that it has, it could give you incentives. It could suddenly feed you if you're in the right place, like you said, in the right time, you know, suddenly your $1,000 investment into, I don't know.
+
+XYZ chain is a staker turned out to be, I don't know, whatever. And then, yeah, that's what I'm saying. You know, it is a community question. It's always like trying to find that balance between, I think, you know, delegating to the right validator for, or is there such a thing as the right validator? I mean, because it's a decentralized world, right? So it's kind of like a never-endless like topic, I think, to discuss with.
+
+with the never endless possibilities of what's right or wrong, if it makes sense.
+
+Nimit from Girnaar
+there is a right for you, right? I mean, there is a right writer for you. It's just like probably going in a relationship. I mean, is there the most beautiful person out there? Of course, beauty can be parameterized, but who do you vibe with is very individual. The same story goes. But, you know, it's very hard to find that in the Web3 world because it's hard to figure out how do you kind of even go in and have a conversation or maybe just figure out who this person is.
+
+Citizen Web3
+course.
+
+Nimit from Girnaar
+Which is probably why I love this podcast, man, I think you guys are doing a great job in trying to bring some of that persona out.
+
+Citizen Web3
+Well, like I said, we're building also a tool. And hopefully, we're going to soon, soon release a demo. And hopefully, we'll help people to narrow that gap between the research. But let's see. We hope that more and more Valtes, like as yourselves as well, who build in other dashboards, we always look up to other teams and what they're doing and trying to learn from them.
+
+Nimit, let me jump from here quickly to the Blitz. And it's going to be like five questions. So they're a bit random, but I hope that you stick with me. So give me one movie or song or book that has, throughout your life, had a special place in your head, in your heart, in your influence on what you do.
+
+Nimit from Girnaar
+for a sort of happiness.
+
+Citizen Web3
+Okay. Good. That was easy. Okay. Give me one direct technological direction, such as, for example, machine learning outside of the blockchain space that you are interested in.
+
+Nimit from Girnaar
+It's probably even cliched, but it's still AI. I think there's still a lot of work, and it's very interesting what's happening.
+
+Citizen Web3
+Okay. What about within the blockchain space? What technological advance? Sorry. Deepin, sorry. I didn't hear. Sorry, Deepin. Okay. I understand. It's a big trend. It's hard to follow sometimes, I think. What about one...
+
+Nimit from Girnaar
+Deepen all the way man. Deepen all the way, getting it right. Deepen, deepen all the way, getting it right.
+
+Citizen Web3
+blockchain project, but please don't say Ethereum, Polygon, Bitcoin, Cosmos, Polkadot. Something like, you know, outside of the scope of what the market hype, you know, something, not something you're suggesting for people to buy, but something that you have been following maybe for some time, a smaller project, which you think is worth looking at it one today.
+
+Nimit from Girnaar
+Unfortunately, it's got hype now. I think all data availability solutions, just because it got hyped, I'm not changing my answer there. Avail is definitely one that's close to heart. It comes from semi-ecosystem, but yeah, Avail and anything that's data availability, I think they're solving for one very massive problem statement. Making it really modular runs from there.
+
+I'm sorry, it's got hype so it doesn't stick to the answer for my dirty one.
+
+Citizen Web3
+No, no, it's good. It's good. You know, we are not here. It's not an exam. So two more last ones. This is the more, this is the more abstract ones now. So give me one motivational thing, which keeps an image, you know, building a decentralized future for, for humanity, waking up out of bed every day, you know, and keeping validating, focusing on communities, infrastructure, what, what keeps you going every day?
+
+Nimit from Girnaar
+I got a two-year-old daughter and I want to make sure she lives in a world where she's not dictated her choices. She makes her choices and she's able to do that.
+
+Citizen Web3
+Yeah, that is very, very fucking good. There is, I, amen to that. Really, really, that is something that, uh, be a big topic, uh, for, I think a lot of people today. Okay. Um, last, last one. Um, you kind of just said it, but let's see if you, if you, if there is going to be a different one, um, give me one person.
+
+dead, alive, human being, an alien, made-up character, a coder, a writer, doesn't matter, that not a guru, because guru is a bit extreme, but somebody that has been throughout your life consistently, at least lately, helping you see a better future. I mean, you said your daughter already, but...
+
+Let's get a different one then.
+
+Nimit from Girnaar
+It's a little different but I'm a bit spiritual and I do have a guru. Basically it goes by the name of Nirmal Maharaj. This is a very specific tool. In fact, just a little bit of backstory to folks. Girnar is named after a place which is a spiritual place in India.
+
+Nimit from Girnaar
+So look it up, look it up. I think you'll get some really good insights. Because life, of course, is beyond what you're building, and a large part of the mission of Web3 is the same as the mission that they have. So a lot connects.
+
+Citizen Web3
+And to all the folks interested, please do look at the show notes because there are going to be links and we're going to link all of the stuff that Nimit has obviously mentioned. And you guys, folks, and guys and girls and everybody else can have a look for themselves and do the research on those things. Because I'm also, it's not something that I'm familiar with, so I want to also research. Nimit, thank you very, very much for your time.
+
+and been a pleasure and looking forward to see how the continuation of the decentralized network building will be folding out.
+
+Nimit from Girnaar
+Awesome, and thank you so much for having me on board and for everyone who's listening in, do check out the new dashboard that is releasing, man, everything in that direction. We love and we support.
+
+Citizen Web3
+Thank you. Please don't hang up just yet. Thank you everybody for tuning in. Thanks and goodbye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

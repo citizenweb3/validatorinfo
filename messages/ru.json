@@ -833,7 +833,9 @@
     "eco tooltip": "Зелёная энергия",
     "keyhole tooltip": "Шардинг ключей через Horcrux",
     "github tooltip": "Github",
-    "place your interview here": "Разместите Cвое Интервью Здесь"
+    "place your interview here": "Разместите Cвое Интервью Здесь",
+    "Podcast Summary": "AI саммари подкаста",
+    "Listen to episode": "Послушать эпизод"
   },
   "ValidatorNetworksPage": {
     "title": "Профиль Валидатора: Поддерживаемые сети",

@@ -1,6 +1,6 @@
 import { Abi, getAddress } from 'viem';
 
-import { AztecChainName, contracts, gseAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { AztecChainName, getContracts, gseAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { readContractWithFailover } from '@/server/utils/viem-client-with-failover';
 
 let cachedLatestRollup: string | null = null;
@@ -11,7 +11,8 @@ export const fetchNodeStake = async (
   rpcUrls: string[],
   chainName: AztecChainName,
 ): Promise<bigint> => {
-  const contractAddress = contracts[chainName].gseAddress;
+  const l1Contracts = await getContracts(chainName);
+  const contractAddress = l1Contracts.gseAddress;
   const abi = gseAbis[chainName] as Abi;
 
   try {

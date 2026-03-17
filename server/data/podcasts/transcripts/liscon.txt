@@ -1,0 +1,415 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/liscon
+
+Episode name:
+Mass Adoption, DAO's and Web3 with Radicle, Gitcoin, Gnosis and Trading Strategy
+
+Citizen Web3: 
+Good space time, y'all, and welcome to a new episode of the Citizen Cosmos podcast. We are Serge and Anna, and we discovered Interchain by talking with awesome people from various teams and communities. Today, we have prepared yet another Interchain Special episode, which will take you on a journey across four interviews with four different projects from the Ethereum ecosystem. 
+
+These are trading strategy AI, noses, radical and Gitcoin. All the materials for this episode were recorded during the 2021 LISCon conference in Lisbon. Join us if you want to learn how dreams and ambitions turn to code and reality. 
+
+Before we rock it off into our next episode, we would like to share the latest news of this episode's sponsor, Cyber. The Cyber Congress DAO has recently launched its bootloader network for the Superintelligence Bostrom. The network is stable and the first IBC connection has been established. More news on the activation of Cyber's gift to follow soon. The test Cyber heads straight to the air app on Cyp.ai. 
+
+Anna: 
+So now I'm with Mikko from Trading Strategy AI Researcher and Analyst. Mirko, welcome to the show. 
+
+Mikko Ohtamaa: 
+It's my pleasure. I hope you all who are here have had a good conference and whoever is there listening to this is you can enjoy the YouTube and all the other stuff going on at Crypto Twitter. 
+
+Anna: 
+Thank you. Let's start from Crypto Twitter because I know that it's your special part. You are the kind of Twitter trickster. Can I say that? So tell me about why you decided to do what you do in Twitter. So how you get to that stage that you believe that you should express yourselves there, your tweets. 
+
+Mikko Ohtamaa: 
+It's very easy to say. I used to do blocking long time ago. I have been also writing informative topics on Twitter, but no one really cares. The only thing they care is the shit posting and that's how you get an engagement. So the more you post shit, the more popular you are. 
+
+Anna: 
+Okay. And how to mix that shit contact with what is your real values? Because I know that a lot of people come to you, start retweeting, you answer and we can see that you have really deep understanding what is going on in the industry. So how that happened? 
+
+Mikko Ohtamaa: 
+It mainly happened just by being around for a long time, being around for a decade and seeing those first crypto bubbles in 2013 and seeing the first altcoin boomers with dowds and all of that. 
+
+It's not same technology, but it's the same social events repeating over and over again. So it's as somebody said that the fool who doesn't study history is going to repeat the mistakes of the past. And for me, myself, I'm not going to apply for anybody anymore. So I don't really any more care to speak truth and being harsh for people and hurt their feelings because that's what I have learned from the past. And I hope the people don't repeat the same mistakes again. 
+
+Anna: 
+For me, I'm talking with a lot of founders and people who are in the blockchain industry. And a lot of them say, okay, one day I decided that I want to work for myself. Could you tell me a little bit when it was that point? Then you decided, okay, I should stop to be an employee. 
+
+Mikko Ohtamaa: 
+That was even before blockchain. So I was studying back in Finland, 2001 to 2007. I was working for big corporations. It was the largest mobile phone vendor by the time called Nokia. It was a really large enterprise with great people, great mats, great computers. 
+
+It was super boring. And even before blockchain in 2000, we had an active skin going on in an open source movement. Open source didn't exist really until the Linux and Firefox and all of these things came around. And I was a huge open source advocate. And I was doing it on my basically on spare time. And then I got contacted by people randomly from London. It was London School of Management. 
+
+They just contacted me, sent me an email. We have some problems. Can you help us to fix it and we can pay you? It was really early. So this we didn't have upwork or anything like that by the time. And then I was like, somebody wants to pay for me to work on things I want to do on open source from London. One and a half month later, I just told my boss that, hey, I'm going to become a freelancer and see you. 
+
+Anna: 
+See you next time in the next troll. I love your story because it's the story when you decide to do something and you just jump into the uncertainty of what is going on in the world. It's really impressed me. So talking about open source advocate, could you share your values? Why is the living open source and why is it so important for you to follow the values of open source community? 
+
+Mikko Ohtamaa: 
+It's hard for people for understand today. But like back in the 90s, when I was still a kid and early 2000, it was a different world. So if you wanted to build a software, the first thing you had to do was to break money, to buy a compiler and buy an operating system and just pay for the software. It would be a strange idea for people for today that you need to pay for your web browser just to go to the web. And then you buy the time was Microsoft. Microsoft presented everything that's not open source. 
+
+And there's even like these emails from Bill Gates and with the other guy, Stephen Ellop, leaking like how they want to kill the open source movement and what they can do about it. And it was truly like the fight of the generation. Now we have other fight going on. 
+
+That's the fight over the finance. So that's actually building on the top of the open source we have now because it couldn't have happened if Bitcoin wouldn't have the open source movement behind it. And Bitcoin was open source in 2009. So they already had the solid foundation going on. And it's basically just the value promise is simple, making the world fair place that if you have merit, if you have skills, if you want to become a software developer, you should be able to do it regardless if your parents have money or not. 
+
+Anna: 
+That's true. Absolutely. I agree with the point that you should have the equal opportunities if your parents have money or not. It's because of the modern world and how we can express ourselves through this world. And back into your Twitter, do you believe that promoting open source and values of blockchain and how we can use the technology in that field can change the way of people thinking about that? 
+
+Mikko Ohtamaa: 
+I would say no. It has been going only worse. Now there's a speciality crypto narrative is dominated by being greedy, how much money you make. After you have made some money, that's enough to live. I mean, who cares how much money you make it. I think I was speaking with one of the crypto VCs on Tuesday. 
+
+The real measurement of your success is that how big impact you have, how many hearts you will touch and how many people you can help in your life. And I think that's a little bit lost nowadays in crypto Twitter and everywhere else. 
+
+Anna: 
+I agree with you that crypto Twitter moved to a little bit another field, but I think it's organic process. We cannot just go there and say, you do something wrong, Twitter. Let's see how it's going. And let's move to your project, Noi Project Trading Strategy AI. So tell us a little bit about your project and what are you doing? 
+
+Mikko Ohtamaa: 
+Yeah, you can go to a trading resident AI website today and go to Discord, but we have not launched yet. And it's basically a builds on the same movement that we discussed before. So open source and making everything open, also taking the DeFi forward. So we have now seen what's there and it all comes from the history that we first invented cryptocurrencies with Bitcoin. Then we invented smart contracts, then we created the tokens. 
+
+So we have assets. Now we have business exchange and on the top of that, we have funds and DAOs and the back office protocols like Enzoom and Arakon that you can actually build the decentralized organization. And if you look this from the perspective of finance, what we actually have done, we have been just replacing parts of the organizations with software. 
+
+So we replaced the currency with software, it changes with software. And now we are in a point that if you are doing investing, if you are like, let's say professional trader or investor, the only human left anymore is the investment manager who decides what to buy, where to buy, how much and when. And trading resident AI. So our goal is to replace the last human with the program. So we have only a machine left trading chair and there's no humans anymore. 
+
+And other way, how to put it. So other people are these intermittent banks. We are this intermittent PayPal credit card. So we are this intermittent hedge funds. So we are here to kill all the hedge funds. And I believe that hedge funds are the evilest organization in the world. So we are doing good. 
+
+Anna: 
+There are ambitions to replace the last human in the chain. Tell me, please, how you get to that point and you decide, okay, we have lack of this technology for the moment. When you start selling that we need to replace the last human in the chain. 
+
+Mikko Ohtamaa: 
+Again, it comes back to the question that defies moving a higher in the value hierarchy, because after we have replaced money and making it fairer. And in the end, there's the last bastion is the old greedy guys who, if you have what's movie of Wolf of Wall Street and all of that stuff. So looking like, Hey, what those guys are doing, they are rich. Can we be rich as well? Can we make this more fair? How can we do it? So we basically need to remove the fund managers and the greed element from there and make it open for everybody that everybody could play with the same rules and have the equal chance to enter this interesting game of finance. 
+
+Anna: 
+You mentioned Wolf from Wall Street. It's quite strong personality, it's quite strong person. So do you believe that the modern person who wanted to say his world in the finance industry should be looks like the main hero from Wolf from Wall Street? Or now it's like a guy with the small glasses wearing strange or super normal wearing and go to the conference using trams and metro and sitting at home most of the time, trading through the laptop from the cafe, maybe? 
+
+Mikko Ohtamaa: 
+I would definitely say that I find the latter stereotype more appealing like here in the conference. They tend to be more open and friendly than the Wall Street guys who I have been also talking with. But in the end, I believe that after you get wealth, after you get money, no matter how good is your heart, it will corrupt you. So that's why we need to replace the humans with machines because machines are uncorruptible. They don't do late payments. They don't change the fees. They are basically just being doing their task and they can't lie to you. That's the thing there. 
+
+Anna: 
+Yeah, I totally agree that machines cannot lie. I don't remember from Asimov probably the first rule of robots, they cannot lie. I love the theory that we can implement only what we put into the robots. And do you believe that replacement of human can generate more equal spreading of their interest from the capital? 
+
+Because before most of the interests are concentrated on the top of hedge funds and we can see that pyro-mates and why people get involved into the Wall Street big movement. Do you believe that if we replace human in the chain, it can help? 
+
+Mikko Ohtamaa: 
+It will definitely help. The real question is how much and how fast, especially if you are in corrupted countries like Africa or South America. I think the impact we can make is much higher because their old finance system is more rotten. Here in Western Europe, in USA, in places like South Korea, Japan, the system is more robust. Their institutions are more strong and they can't be game that much. So it's more difficult for Western people to see what needs to be changed. But explaining these ideas to somebody who comes from a country where the system is not that robust, they understand the problem better and they believe more to these kind of ideals. 
+
+Anna: 
+I agree with you. I hope it will happen sooner than later. and Last question, kind of traditional question for our podcast. Usually we ask people what motivates them and what kind of sources they can recommend. So for you, you're best free Twitter and person who you want to recommend to read, to understand what is going on in the blockchain industry, crypto industry, recommend to read in Twitter. 
+
+Mikko Ohtamaa: 
+I try to follow some of these US lawyers. I think Gabriel Safiro is one of those. They understand the future but they have a clear mindset and they have integrity. So it's not like these talfrocs that think that we can do whatever we want and it doesn't harm the society. So it's always try to see the balance there. 
+
+Like if you are doing something and it's actually doing good or bad. Gabriel Safiro and Stephen Pali are the lawyers. And then my favorite, of course, on Twitter is Rekt HQ, Rekt News. That's like the only honest blockchain publication out there. So they don't have a vested interest with anybody and they are very, very brutal. 
+
+Anna: 
+Thank you very much for being with me today and thank you for coming. 
+
+Mikko Ohtamaa: 
+Thank you for yourself and it has been a pleasure. 
+
+Anna: 
+Now I'm with Gnosis teams. I'm with Lukas and Richard from Gnosis and they will say what they're doing now. 
+
+Richard Meissner: 
+Hey, nice to meet everyone. I'm Richard. I am responsible for all the technical coordination at Gnosis. Safe and we're currently looking into bringing more power to the ecosystem and letting them govern how we proceed with the safe and making it more like a safe open system where everybody can participate. And I'm coordinating this on a technical level. 
+
+Lukas Schor: 
+And I'm Lukas. I'm originally a product guy, but recently I'm more also involved the same as Richard and kind of like this transition from building a product towards building an ecosystem. My involvement in the Gnosis safe has changed from just product focus to more holistic, like how can we achieve this transition? 
+
+Anna: 
+What inspire you to do a Gnosis project right now? What is your inspiration? What is in your mind that you try to do right now? 
+
+Richard Meissner: 
+So for me, a lot of my inspiration is coming from the technical aspect. So I always enjoyed hacking and obviously having being fully in control of what you do is very amazing. So in the past, when I started, obviously, most of the developers started out with, you have to use Google, you have to use Amazon to host your software. And using blockchain where you have a decentralized piece and that can be accessed by everyone is very amazing. 
+
+And it's for me personally, very big driver. And therefore also this transition for the safe, obviously, in the beginning, it was just say, yes, it's a way how I can manage my own crypto, but now pushing it towards more to an ecosystem project or to a bigger ecosystem where everybody can participate, which drives forward full decentralization, becoming a standard is something that really motivating me because I really believe in this decentralization that everybody that you don't have to rely on one service. And then suddenly a company like Facebook has issues. And then for seven hours, nobody can communicate with any of their friends. So it's having this fully decentralized infrastructure also is something that really motivates me. 
+
+Anna: 
+Do you believe that decentralization of such big projects like Facebook is something in our nearest future or we're still far away from it? 
+
+Richard Meissner: 
+I think it depends a lot on how you define decentralization, right? Like decentralization can mean many things. If we go something like full decentralization like Ethereum, where you have appeared to peer network, everybody can randomly join and leave. I think this is quite far away for some infrastructure parts, but you can also define decentralization already as something where you don't have to rely on a central instance. 
+
+You can decide on your own, like do I want to spin up the service, run it on my own machine and the only reliant part right now maybe is your internet provider. I think decentralizing that one is going to be quite hard. But having in this form of decentralization, I think we are way closer to decentralize a lot of different parts in the community where people can spin up their own little piece of software, use it. 
+
+And there are a lot of projects which make use of running more advanced logic server kind of logic inside the browser with Wasm, which will allow empowering a lot of the users more directly. 
+
+Lukas Schor: 
+Maybe to add on that, decentralization is not just like from a technical perspective, something interesting. It's also the community involvement that's important. And even there, I think companies like Facebook and Twitter, I would like to see them involve their communities actually more in kind of setting the rules of the systems and like the ecosystem and so on. For example, Twitter is kind of defining what's kind of legitimate content that they want to have their platform or not, but they're never asking kind of their community how this should be done. And just like these aspects of having the community more involved in like curating aspects or setting the rules of kind of how you can engage with platforms and ecosystem. That's something I think even kind of like the more traditional companies should go more towards in the near future. 
+
+Anna: 
+Yeah, I agree that you're saying about how we can define the centralization and it depends on the terms and what we mean by that. So in terms of that, do you think that the biggest question now is the balance between decentralization and efficiency? 
+
+Richard Meissner: 
+I think this will be the first thing that we have to tackle, yes. In the future, hopefully we can use way more the technologies at a point where full decentralization is more feasible. But I mean, also for the safety, already see that when it comes, mobile is a big part and mobile has a lot of constraints because there are devices that are not constantly full power connected to the network. 
+
+They go to sleep, they normally have like wake up messages, they have low level services that have only full control. And this is very different to what your normal computer can do, how it can connect to the internet. And therefore you have to differentiate how does a mobile device behave in the decentralized web and what does it mean for mobile to decentralize? How can you still bring the convenience of this mobile device to your decentralized users? 
+
+Right. And I think also there, it's a big part for us to figure out how to do this work together with projects like Wallet Connect who are also focusing a lot on this to make it possible for the whole ecosystem to also have the benefits of mobile and this convenience that mobile brings will also be one of the drivers to bring mass adoption to web three because it was super convenient to use web 2.0. Therefore a lot of people started using it and therefore mobile is such a big driver. 
+
+Anna: 
+Cool. And what do you believe is the biggest driver for mass adoption of web three? What it can be? 
+
+Richard Meissner: 
+Good question. Because I think that what it is currently a driver to use web three is will be very different in the future. I think especially for us, we are based in Germany or in Lisbon. So we are based in central Europe. Basically, it's quite hard to understand the motivation of a lot of people like who live in Venezuela and so on where this web three brings them independence from their governance where because there's a loss of trust into the governance. So I think this is a big part for a lot of parts in the world. For the Western world, I think another motivation is to some extent a lot simpler than the traditional finance system. You can do a lot of stuff that on a finance system requires a lot of bureaucratic work. You have to go to a lot of different entities on a blockchain. 
+
+You can do it with one transaction. I think the example that one of our founders, Martin always brings it's like, wouldn't it be nice if you can transfer your house to somebody else with just one transaction of an NFT transfer by currently in Germany would have to go to multiple instances, pay a lot of money. I think also this is also what actually a lot of bigger companies like Facebook and a lot of banking institute, what they find interesting in this decentralized technology where they can join this network and it's easier to fulfill certain transactions. And I think leveraging this will be a big driver also for a mass adoption in the future. 
+
+Anna: 
+I love that you say leverages can be a big driver because it's close to financial industry when the leverage is everything to get or big win or big lose. Do you believe that you can do something and you have to be very adjustable to a market to deliver that product market thing to find product market seed right on time? Because if you are too early, it can be too early for the market and if the ecosystem is not ready, you cannot find the product market seed. But if you're on time, it's good. But how to define this? 
+
+Lukas Schor: 
+That's actually quite interesting because we initially started building our project and also saved as tools for individuals to manage digital assets. But we were at this point just too early because at this point individuals like the mass adoption wasn't there. We're building something for when they would be there. So we kind of went two steps back and more optimized for the people that were already there, which were like crypto native projects and like companies that kind of were starting to build out the web free ecosystem. And only now, in the last six, 12 months, we're at the point where actually more retail users are coming into the Ethereum ecosystem and start using applications such as NFT based applications or participating in DAOs where we have the self-custody solutions for individuals that we initially built become irrelevant. 
+
+And so also kind of our project will again go back to this initial idea we had on building awesome tooling for the masses or kind of like enabling these tools that are built by others. 
+
+Anna: 
+It's like a circle. If when you started off your spiral, it would go deeper and deeper. Maybe we'll add something. 
+
+Richard Meissner: 
+I find Lukas example very fitting. I think it's that we already were in this case, like we had this issue already as Lukas described and we went back to this mass adoption. And I think also this is why we believe in this ecosystem approach where it's like if you're involved more people, you are more flexible because you have more people that can build on top of your product, allowing you transition potentially between different interfaces because a lot of times you have like a very common core and it's just a little bit the representation to the user is different. And by providing this flexibility, providing this openness so that everybody can participate, we should be able to better facilitate or like better adjust to the changes also in the protocol. Like right now it's very technical, but in the future it might be necessary that you abstract away a lot of these technical details and that therefore you might want to have a separate interface based on the same technology. 
+
+You can imagine it as an advanced mode and the simple mode, right? And we discussed it in the past and it's just when you start a project, when you want to bring out your first version, it doesn't help to try to solve all the problems. But you have to concentrate on one problem first. You cannot try to cover all the users, all the use cases. And so we will concentrate from our side on one, on this advanced user for now because it's an existing user, but make it possible so that others can plug in and adjust it so that they can then potentially target the users that are more specific to their target user groups or to new user groups coming up. 
+
+Anna: 
+So I have some tricky question then. You think that you should cover, of course it's reasonable, cover some small amount of user first. So do you believe that you should cover the necessities of that user, that you understand better or how you prioritize the users? So obviously you have a lot of segmentation and how you can find that users you should take care about first. 
+
+Richard Meissner: 
+I think I will hand it off to Lukas afterwards to also extend on what I'm saying. Since he's a product guy and I'm the technical guy. And I think in the past also we have to see a little bit where did the Gnosis save come from and it comes from the Gnosis multi-sig prior product from Gnosis. And then it's interesting where did this product come from. It's actually like Gnosis built it for themselves because they wanted to manage their funds. So you have already the origin decides a little bit like also okay who do you listen for, who do you build it for. And then we just saw okay we see The one who is using our product is really the high rollers, the teams that have a lot of money and therefore it was the most straightforward to listen to them. Even so, I wouldn't say that they are the easiest to understand for us because if we look into the team, obviously we are individual users rather and if we want ourselves to use the app, which is obviously also one of the goals, it's a little bit different use case there because we are more individual than teams. 
+
+So this is why it's tricky but we have more connections to the different teams and also to our own team. We were one of the first safe users ourselves, obviously. We moved a couple of tens of millions of dollars of funds into our safe as one of the first users and therefore it was easier to incorporate the feedback. But even now it's always this, okay, how do we balance this forward and external feedback with internal feedback because obviously also our team, like our diagnosis team is coming to us and saying, hey look for us, certain use cases are tricky to do and we are saying, that's nice but this is one specific use case if we talk to the broader masses and if we try to collect feedback, we see a different picture on priorities. Maybe Lukas can also give more insight but there is how to acquire this knowledge from our users. It's not always easy but there are different ways. 
+
+Lukas Schor: 
+It's especially tricky because oftentimes it's kind of a chicken egg problem where the use cases only emerge when there's kind of the tooling to enable them. So no one is using or trading NFTs if there's no way to securely store it or exchange the NFTs with others. So it's hard to anticipate these use cases and kind of build the tooling that will enable these use cases but it's more like going in circles and like contributing the tools and then maybe some use cases emerge and then you can optimize for some of them. 
+
+We definitely focused on one specific user groups first but we definitely see that there's a need, kind of this ecosystem to build around because one company can never build out all use cases themselves but rather we should find ways to have a set of projects focusing on different kinds of use cases and then. 
+
+Anna: 
+Thank you guys and the kind of traditional questions. What inspired you in your daily life? It can be books, media, whatever to do what you do on a daily basis to move forward and do what you do every day. 
+
+Richard Meissner: 
+I think for a traditional question I give a traditional answer. It's my family also for me. It's just this curiosity. I like to understand what it's below the surface. So it's just like looking at this. It drives me because Ethereum and blockchain is such a vast universe where you can just go deeper and deep. It's like Alice in Wonderland where you just go deeper into the rabbit hole and you find something new every day and it's ever changing. So this is something where it's like trying to understand this more completely is something that really motivates me for my work. 
+
+Anna: 
+Thank you. Actually you're the first to say curiosity. Thank you and Lucas you. 
+
+Lukas Schor: 
+I think it's also important that we find some roots and kind of reality from time to time as we are in web three. It's still we're engaging in kind of like these communities and kind of with same interests and being in this field bubble and it's just important to sometimes see the challenges of like real human beings out there. 
+
+And so for me that's traveling which inspires me kind of seeing how different cultures are kind of living and kind of what their challenges are facing. And oftentimes they don't really need what we are building right now with free. But obviously there's quite some opportunity there to also provide better tooling for them to kind of engage in finance or to kind of have financial freedom and so on. And the other thing is maybe being in nature and just get detached completely from like kind of the troubles of day to day and just ground yourself. And that's what inspires me. 
+
+Anna: 
+So thank you guys for being with me today. 
+
+Richard Meissner: 
+Thank you. What a pleasure. 
+
+Anna: 
+Could you explain in a couple of words what are you doing? 
+
+Abbey Titcomb: 
+I'm the head of community at Radical. Radical is a decentralized network for collaboration. 
+
+Anna: 
+Why do we need to decentralize collaboration? What is the idea behind it? 
+
+Abbey Titcomb: 
+Yeah, so we're all usually at this conference, an Ethereum conference. We're all building towards this thing called Web3, right? And so Web3 to me represents the transition from an internet controlled by centralized platforms to an internet powered by decentralized protocols. So it's a space that's online decentralized and completely open source yet hubs for collaboration are code hosting platforms, our collaboration platforms are still centralized and controlled by corporations. 
+
+And so we believe that if we truly want to steward the Web3 vision, then we need to decentralize the root of our domain, right? Which is like where we collaborate, where we build the software and how we distribute the software. 
+
+Anna: 
+What is the biggest obstacles to decentralize the development collaboration? 
+
+Abbey Titcomb: 
+I think that there's a lot of entrenched social networks and behavior in our current centralized collaboration hubs, AKA GitHub is one. And I also think that we're experimenting with a new type of development, Dow driven development. So I think that the barriers come from trying to understand where we need to introduce decentralization and where we need to maintain centralized collaboration. So it's kind of like balancing efficiency versus decentralization. You don't want to flip everything on its head just to decentralize one aspect of your project. It's about progressively building decentralization into developer workflows and figuring out where to do that and when. And I think that that's kind of the biggest thing for Radical right now is that it's not reaching feature parity with collaboration platforms. It's kind of demonstrating what are the new ways that we can be experimenting with development and how can we be building tooling for the people who are adopting those workflows now. 
+
+Anna: 
+Yeah, perfect. What is the milestones on the way? What can be a first milestone to understand, okay, now we need to decentralize this platform far to far work. 
+
+Abbey Titcomb: 
+Yeah, I think it's all about what you're building, right? So I think that right now we have seen the rise of Dow's decentralized organizations who are coordinating around protocols that are governing billions of dollars in value in DeFi to protocol ecosystems starting to distribute funds from their treasury to fund development ecosystems like Uniswap or Compound or Ave. And so I think that these projects that are experimenting with decentralized collaboration, meaning they're coordinating value via community governance. These types of projects can start thinking about where they need to decentralize their infrastructure and it's not just because they want to or ideologically they want to because it aligns with their values. It's also because they need to because when you create a decentralized, when you are able to own your infrastructure and decentralize it, you're actually able to create a sovereign space for collaboration that is resilient to any, you could say, institutional rug pulls that they may come across, right? So it's actually something that we think that Dow's will need to do in the future as it means to maintain political, social and financial resilience. 
+
+Anna: 
+And question just pop up in my head about what happened if we try to avoid the influence from biggest corporation, but sometimes in the Dow we can see that a lot of talk and concentrated with the several big players. Do you think it's a problem now or not? 
+
+Abbey Titcomb: 
+I wouldn't say it per se. It's a problem. I think it's a reality. And so I think that the centralization of token distributions among VCs, investors, team members is more something that should be called out and evaluated for what it is instead of immediately disregarded or ignored because I think that centralization exists, right? And I don't think that Web 3 is means total decentralization. I think that it means creating spaces for evaluating authority surfaces of networks and understanding what the centralization points are and then creating more decentralized or end-or-community driven processes around those centralization points to reduce the risk that that centralization brings to the network. 
+
+You know what it means? It's about understanding the points of decentralization and then creating processes around those points to minimize the risk and thus decentralizing authority, power, and also influence throughout the community. So I think it's like the conversation of like flat hierarchy versus hierarchy in that you can decentralize yourselves without committing to a completely fat, flat, total decentralization. I think it's kind of all about figuring out like what is the right puzzle of decentralization that fits within your project and making sure that you're just like constantly evaluating the risks that the centralization brings to your project or organization. 
+
+Anna: 
+Quite cool. And then you're speaking about the balance and how to balance the project itself. Do you think that we need a lot of team members that share the same value to translate this value to the community or the community can develop their own values? 
+
+Abbey Titcomb: 
+I think that it always helps to have leaders who are able to steward a vision and values, anything that's important for any project or any movement or anything. But I do think that the healthiest networks are ones that allow for the collective re-evaluation of those values and give communities the space to opt into those values. So I think that the most successful protocol ecosystems have a sort of social contract in which since you are contributing to this project, you're contributing to a certain set of principles and value sets. 
+
+That doesn't mean that you have to personally share them. It just means that you are responsible for kind of stewarding those visions with your work and with your contributions. And so I think it is important to have that social contract in place within a community. I think it's OK if, say, the founders or the original core team define that initial social contract. 
+
+But I think it's up to the initial creators of that contract to create the space for the re-evaluation of those values. And so it's all about building the social infrastructure that allows a community to raise their voice and raise their issues and have those be fully considered instead of everybody kind of coming to consensus about every single decision. 
+
+Anna: 
+So do you think that if in the community we have a separate group and they start to, let's not say just arguing, but to not share all the values, do you think it's helpful for communities and its help for the community itself and for the project? 
+
+Abbey Titcomb: 
+Yeah, I think that we'll see that DAOs and decentralized organizations are actually like a patchwork of smaller, more modular sub-DAOs that represent different groups of people with different values and different prime directives. And they all operate with each other within like a greater picture. So I think that it's less of like one DAO that's completely decentralized and more of one DAO coordinating the work and development of individual subgroups, working groups, work streams, whatever you want to call them, who are then operating within themselves and governing themselves. 
+
+So I think it's more modular, this version of governance that we'll see and succeed in kind of future protocol ecosystems. But thank you so much for having me. 
+
+Anna: 
+Thank you. 
+
+Now I have Kevin from Gitcoin.  Yep. I always try to pronounce it in the correct way, but I'm always confused. So hey, Kevin. 
+
+Kevin Owocki: 
+Yep. Hey, thanks so much for having me. 
+
+Anna: 
+In our podcast, we try to understand what motivates people to do what we do. So your project now I think is five years old or something like this. 
+
+Kevin Owocki: 
+Yep. Gitcoin was launched in 2017 and it's now 2021, so just over four years. 
+
+Anna: 
+Could you discover a little bit for us how you get the idea to start and touch projects? 
+
+Kevin Owocki: 
+Totally. So Gitcoin is a place that you can get coins if you're a software engineer. And basically I have been an engineering leader in the startup ecosystem out of Boulder, Colorado for about 10 or 15 years and have hired dozens of software engineers. 
+
+And I just knew that the model for software recruitment was broken and we built Gitcoin to be a better place for software engineers to break into working on open source software and getting technology jobs. So it's sort of borne out of my experience doing engineering stuff for startups for the last 10 or 15 years. 
+
+Anna: 
+I love the part when you say that you wanted to attract the engineers for startups because we all know that it's quite a competitive industry to find such kind of engineers, especially for startups. So what do you think is the secret source for engineering to be attracting to a startup, not to a big corporation? 
+
+Kevin Owocki: 
+I think that startups are a really great vehicle for creative construction and sometimes destruction. They're all kind of like contained explosions. So routing people to the right projects, the projects that are doing good for the world and the projects that are going to be successful to me is a really important thing. So I think that it's really important that we move people from working on JP Morgan Chase or at like a thing startup and have them working on open source and crypto. So that's what I'm trying to do. 
+
+Anna: 
+You mentioned open source and we all know that most of the software now in the world is open source. Some people think that is an opposite, that it's quite interesting. So when you discover that the open source is a value itself. 
+
+Kevin Owocki: 
+Yeah, so there's a lot of software that's great that's proprietary and there's also a lot of software that's amazing that's open source. Just so happens that most of our digital infrastructure is open source software. When I wanted to play a new startup, I don't write my own database server, I don't write my own web server, I just use open source software. And that's what runs a lot of the web out there. But it's kind of messed up because there's no business model for open source. 
+
+It's just available for free online. And so because of that, the people who are maintaining this digital infrastructure are not properly compensated for the work that they do. So there's a large asymmetry between value created by open source and value captured by open source because there's no business model. And we think crypto can maybe help change that. 
+
+Anna: 
+So as I understand, you believe that crypto provides a good economic incentives to develop the open source. 
+
+Kevin Owocki: 
+Yep, I think it provides a toolkit to build better incentives. And we're still experimenting with the best ways to fund public goods like open source software with crypto. 
+
+Anna: 
+What kind of other ways you can feel that it can be helpful to keep the open source? 
+
+Kevin Owocki: 
+One of the things that's really great to me about open source software is that you can inspect it and that it's transparent and you know that it's doing what it says that it's doing. And so that's what's really exciting about open source to me. I do think that it's been a couple of interesting experiments in open source business models. Tokenization is obviously a thing. 
+
+NFTs are obviously a thing. On Gitcoin grants, that's a way of raising money for your open source project and keeping the lights on while you build it out. Mirror is doing some really interesting stuff around funding open source software. And so there's a number of ways to experiment in funding open source with blockchain. And I don't know that we have the killer app yet, but there seems to be some interesting momentum. 
+
+Anna: 
+Cool. And when you personally discovered blockchain for yourself? 
+
+Kevin Owocki: 
+I Discovered Bitcoin in 2011, 2012, and I just kind of treated it as a toy for several years until I realized that, oh my gosh, this thing really could change the world and got into it professionally. 
+
+Anna: 
+No, I didn't remember any other tokens because that day I remember colored tokens, not only Bitcoin. What is your maybe remarkable investment? 
+
+Kevin Owocki: 
+Well, my cocktail party anecdotes are smart enough to buy, but not smart enough to hold. So I wouldn't take investment advice to me, but I did mine some prime point back in the day. I thought it was really cool to use proof of work for something useful like finding new prime numbers. But I got kicked off my digital ocean account for mining prime points. So it didn't really work out. 
+
+Anna: 
+And now you're fully involved into your own project or you try to diversify by investing in being involved in other projects as a developer, maybe? 
+
+Kevin Owocki: 
+Well, I think that we just recently did a report on DAO's and we found that most people can't be meaningfully involved in more than two or three DAOs. And so a really common pattern we've seen is the 80-20 pattern where basically you're loosely involved in three or four DAOs and you've got one or two that you spend 80% of your time on. So that's what I've seen people be successful with entering the crypto space. Just know where you want to focus. 
+
+Anna: 
+Yeah, focus and to be detected to one thing is kind of a crucial for project success. Do remember that point when you stop being like you as a founder 100% of your project and think, oh, okay, maybe we need DAO or maybe it's a good way to do it. 
+
+Kevin Owocki: 
+I think Gitcoin is all about funding open source software developers. And when we first launched, we were just focused on building a product in a community that people love. And that was where we focused and I'm super proud of that. But now that we've got $6 million per quarter going through the platform, we've started to think a little bit about how we decentralized way from the central point of failure, which is me and the company and into a DAO. And I also think that we're building software for DAOs. 
+
+So we've got to evolve forward and think like our customers, act like our customers. And that's the point in which we decided that we wanted to build a DAO, Gitcoin DAO. 
+
+Anna: 
+And where are you now for Gitcoin DAO? 
+
+Kevin Owocki: 
+Yeah, so the Gitcoin DAO has hundreds of active members and they're in charge of governing Gitcoin, investigating and parsing the results of every Gitcoin grants round, which is kind of our flagship product. And then we're also launching different prototypes of coordination tools for the Ethereum community. So we just launched NFT on stage called thegreatestlarp.com. And so it's rapidly prototyping different softwares and launching them has been what we've been doing in the Gitcoin DAO. So far, so good, but it's only four months old. It's a baby DAO. 
+
+Anna: 
+Yeah, I love this term like baby DAO. Speaking about something emerging, what kind of technologies or maybe projects that you can see now you feel that is quite promising in terms of development? 
+
+Kevin Owocki: 
+The interesting thing for me is the combination of blockchain and AR and VR and artificial intelligence and just this whole idea of a metaverse, a intermediating human experience that we all create here online. 
+
+To me, it seems like a really exciting thing where a lot of possibilities for human potential can be unleashed. And so it's just that landscape that emerging that I'm really excited about seeing. And I think it's going to take a decade or two, but I'm really excited to see what it looks like after that exists. 
+
+Anna: 
+Do you think that it's really in two decades because now we can see that technologies like spit up themselves. It's not like take decades as previously. 
+
+Kevin Owocki: 
+Yeah, there is an accelerating growth curve. I think that's happening in technology. Just depends on the technology. You know, they've been talking about nuclear fusion being 10 years away for the last 40 years and always the metaverse going to be like that or is it going to be something that actually happens in the next 10 years? I mean, kind of say probably faster, but I was like to hedge my bets a little bit with making time predictions. 
+
+Anna: 
+Do you think that we need some shell points or some points to build the meta universe? 
+
+Kevin Owocki: 
+I think just keep throwing spaghetti at the wall, seeing what works and doubling down on what works and throw away what doesn't work. Gitcoin was my seventh side project in crypto and I stuck with it because it clearly had legs, but I shut down all the projects that I threw spaghetti at the wall and it didn't stick. And so it's that process of creation and navigating the idea of me is that people have to get really comfortable with how tough that is. And it's really exciting when you find something that hits. And I can't tell you how much it's meant for me to be working in Gitcoin and to be helping all these different people in the Ethereum community find their next career opportunity. So it's been really a lot of fun. But first you got to figure out where you can make an impact and you can't do that without trying and experimenting. 
+
+Anna: 
+Talking about experimenting, you're not well known. That is not quite right. You have some side project or pet projects that is good and how is it not so good? How can you see that your project is not so good and probably you need to kill the project because it's the one of the most important point. 
+
+Kevin Owocki: 
+Totally. Well, I think that basically startups are just this cycle of having a hypothesis and then launching an experiment and getting the results and then learning and then repeating with a new hypothesis, that same loop or shutting it down. And so it's important to go into a launch with a hypothesis that you're testing. And for example, the thing that we just launched, the greatestlart.com is an NFT auction for funding public goods. And the hypothesis is that people will fund public goods if they get an NFT out of it. You know, after our interview, I'm going to go check the stats and the numbers will point me in one direction or not. So you've got to go into your experiment with a hypothesis. I think it's the answer. 
+
+Anna: 
+And one point you can see that, oh, okay, your hypothesis wasn't correct. And you need to kill the project. 
+
+Kevin Owocki: 
+Kill it or learn from it and evolve it forward. I think that learning is one of the most important things with doing experiments and then evolving your strategy forward. That means you shut down the project, but maybe it means you take one glimmer of something that worked and you double down on that instead. 
+
+Anna: 
+Do you remember some features that you did like this for your project? 
+
+Kevin Owocki: 
+Yeah, totally. Gitcoin has been a series of experiments in funding open source software. We launched as a Bounties product. We launched an ethical advertising platform for a couple of years. We built this thing called Gitcoin Classes, which was a way of onboarding people into Web Free. And it turns out Gitcoin Grants is kind of our flagship. So now we're focused on Gitcoin Grants and Gitcoin Bounties. And so the product suite has been six or seven products over time of us launching experiments and then shutting them down when they didn't work. And it's that learning that I'm most proud of. 
+
+Anna: 
+And what happened with Web three project? Because I believe that Web Free is the biggest hype cycle term now in the crypto. 
+
+Kevin Owocki: 
+We got it like, it was played by hundreds of people per day and people were earning NFTs for doing the quest. And it was fun. But honestly, I think that people should go to rabbit hole GG when they're trying to get onboarded into the ecosystem. They hit product market fit way more than we did with quests, just because we've been focused on Gitcoin Grants. And so shout out to Brian Flynn and rabbit hole GG. I think that they're amazing. 
+
+Anna: 
+Yeah, I'm really amazing. But we all know that your project, I think it was first in that direction. Is that correct? 
+
+Kevin Owocki: 
+I'm not sure. There's always been different attempts at onboarding people. It was definitely a valiant attempt in that direction, but I'm not sure it was the first. 
+
+Anna: 
+Do you know Indiegogo or projects like this for a classic market? Do you believe that they have some disadvantages? 
+
+Kevin Owocki: 
+Well, I think that if we do believe that software will be deployed by DAOs one day, then being a DAO based entity would probably be an advantage in that world. But I don't know that Indiegogo and Etsy and all these other shops are going to be willing to transform their companies into DAOs just yet. So it might be a disadvantage for them. 
+
+Anna: 
+And the last kind of traditional question. Could you say something? It can be some projects and some ideas that inspire you to do what you do every day? 
+
+Kevin Owocki: 
+Well, I think that one of the most inspiring projects out there for me has just been this long legacy of the history of the open source movement with starting with Richard Stahlman in the 1980s, basically saying, no, we need to have free software, software that does what I want as the user, not what the programmer at some company wants to do in order to extract extract value for me. And then Linus Torvold and Linus basically taking on Microsoft in the 90s for the cloud computing market and eating Microsoft. 
+
+It's incredible. And then I think that there's just this long history of people who have been fighting for using technology and cryptography to create a better world for average, everyday citizens. And that's the most inspiring thing for me is to think that we could play a small part in caring for that mantle. 
+
+Anna: 
+Thank you, Kevin, for being with me today. 
+
+Kevin Owocki: 
+Thanks so much for having me. Can't wait to check out the podcast. 
+
+Anna: 
+Thank you and bye to everyone. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

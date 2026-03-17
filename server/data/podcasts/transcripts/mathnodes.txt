@@ -1,0 +1,410 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/mathnodes
+
+Episode name:
+Monopoly on Privacy, Passive Income and Community with FreQniK
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of Citizen WebTree. And today I have Frick Nick with me today. Sorry, no, I got it wrong. I'm going to do it again. I'm going to do it again. Sorry, sorry, Frick. Hi, everybody. Welcome to a new episode of Citizen WebTree podcast. And today I got Frick Nick with me, the founder of Math Notes, and I did it correctly on the second time. I told the listeners as well, obviously. And he's also a developer involved with Sentinel. And hi, Frick Nick. Welcome to the show, man.
+
+freQniK
+Hi, thank you for having me. I appreciate being here.
+
+Citizen Web3
+Excited, man. Excited to, as always, talk to somebody that is actually building, you know, the not just the ecosystem, but Web3. So, yeah, tell us, maybe, can I ask you to introduce yourself? You know, the traditional thing we do, like, tell us and me and the listeners, everything about you. Want people to know what you do, why Web3, why blockchain? How did your life get to this point?
+
+freQniK
+So it kind of I guess the web3 journey started back in graduate school back in early 2011 I was studying number theory so elliptic curves everything that blockchain is based off of but I was aware of Bitcoin when it came out, but you know it was just kind of like a kind of a Just a fun thing to know about but nothing they really get involved in and in about 2011 my graduate
+
+Ten year was ending and I needed some cash So I asked one of my computer buddies that I'd known for about 15 years or so I said, you know, is there any how do I can I didn't make cash because well you can mine Bitcoin It's like well, I don't know, you know mining Bitcoin at this point. He was a my old hacker buddy We used to go to 2600 meetings. So we see you know break into computers when we were teenagers
+
+So I was thinking what he meant by mining Bitcoin was something like, you know, kind of hacking Bitcoin or something like that. Because I knew of what Bitcoin was, but I didn't know what mining was or anything. So I looked into it and realized that I needed to use my computers to compute hash power. And at that point, I needed them for graduate school. So I didn't do it. So I finished graduate school and I did some odd jobs until about, you know, 2017. And
+
+Throughout the time from 2013 to 2017, I was aware of the crypto space. I was checking the prices, you know, and just never really got involved into it until I created my first Bitcoin wallet in 2017 for donations for open source software that I was developing. I mean, I got a couple donations here and there, nothing major, just like, you know, a few hundred sats. But I didn't really get involved into it until 2020.
+
+when I discovered actually Monero. I had read about Bitcoin and it's pseudonymous and not fully anonymized transactions. And when I was researching Monero, I read the white paper and I said, wow, this is like everything I studied in graduate school with elliptic curves over finite fields. And this is really cool. This is what I wanna do. So I started developing Monero.
+
+freQniK 
+like scripts and software and website. I kind of like followed the Twitter influencers of Monero. And I really fell in love with the privacy aspect, the privacy coins, because I feel like that is the true cypherpunk venture that a lot of crypto is missing. And you know.
+
+most of my investments are in actually privacy coins, even though it's not a strong investment, I think they'll be necessary in the future when people wake up to realize that everything they're doing is surveilled and there's repercussions for that. So as I was discovering Monero, one of the Monero influencers in late 2021 posted something about Sentinel.
+
+And I had dabbled in the Cosmos ecosystem a little bit with Secret Network. I was part of Secret before they went and joined the Cosmos ecosystem. So I was working on their network and I found Sentinel and I said, well, you know, I use a VPN, why not a decentralized VPN? You know, it makes more sense. You're not trusting any centralized entities with your data.
+
+anybody, it's permissionless, anybody can run a node on the Sentinel network. And so that's when I really started developing software for the Sentinel network. And I was approached by the foundation in January of 2022 to develop applications for Sentinel. And I did, and I haven't looked back. It's been a great journey. I've spread my validators across other networks like
+
+music, NFTs and collectibles. And I actually really, I'm huge in the music industry where I'm located. I've been part of the music scene for a very long time, electronic music. And so we used to go to raves when we were teenagers and all that stuff. And, you know, so I wanna get a lot, I know a lot of the artists in my local scene, a lot of the local artists and some of the bigger names. And so I wanna get them involved in BitSong
+
+freQniK 
+Like music NFTs, music has kind of went the way of like throwaway kind of art. People so go on Spotify and they don't look at the album art anymore. Album art is kind of a lost thing. Um, and I feel that, uh, collectible music NFTs gives a way to appreciate music once again, and it allows people to, it allows artists to have direct royalties for their artwork.
+
+for their music and some of the reports from the recent launches of the Bitsong NFTs was that the artist said they made more money on royalties in one week than they did the entire time they released something on a major label in the traditional music industry. So I really thought Bitsong is very futuristic in the sense that it can revolutionize the
+
+is treated by collectors and by artists as well. And then also I went to the validators on Decentre network, which is also part of Cosmos. Decentre is a custom web browser, so it's like Brave where you can earn crypto coins for surfing the web. But with Decentre, you don't get pop-up advertisements. It computes your unique
+
+web surfing experience and rewards you in the Decentre token. So I launched a validator on there early last year and I've been part of the team as well, working with a bunch of their developers on integrating Sentinel stuff with their products. And then just recently I launched a validator on Jackal network because Jackal is pretty cool. It's a...
+
+It's also in the Cosmos ecosystem and they are a D-Pen, decentralized public infrastructure network that specializes in file storage. So permanent file storage and where anybody can host their own node with whatever free hard drive space they have and they can earn the Jackal token from it.
+
+freQniK 
+And so I really am really big in utility crypto as well as privacy coins because I feel like utility offers an experience for users and for people to make passive income with their laying around hardware like Akash too. Akash is really great.
+
+I love those deep in networks and I feel like that's going to be the major big space along with privacy coins going forward. So that's basically where I'm at now. I also work with other projects, atomic swaps and Monero and Bitcoin and Litecoin. So I kind of crypto is a huge ecosystem, like as an all encompassing viewpoint.
+
+There's so many different networks to be part of. And I feel that to understand one network, it's good to understand a lot because maybe you can take integrations from some networks and put them over into other aspects. And I feel like I like to be well-rounded in the whole crypto sphere because it just has so much to offer and it gives people a way to earn income that we didn't have before. And...
+
+Hence the pure-to-pure Digital cache aspect as well for more things like Monero and in pirate chain and stuff like that as well So that's basically where I got started and where I am now
+
+Citizen Web3
+I love the fact that you're able to actually talk in depth about what is the utility of most of the, or all of the networks that you mentioned, because a lot of the time I talk to guests, sometimes a lot of validators, they, especially the bigger guys, you feel like when you're talking to them, and I'm going to be honest right now. I mean, I'm not saying all of them, right? And this is not a generalizer, and I'm sorry that it sounds like that.
+
+But by no means I mean to offend anyone here, but I have already had guests from the bigger validators so when you talk to them about utility of the network the validate they get a little bit lost and it's great to hear that it's not the case with us with the Average and smaller validators. I'm sorry from putting a stigma here on the size of the math nodes You know, but it's true. It seems like the smaller and the average validators are a little bit more involved. Is that
+
+something you would agree with or like that statement particularly that the smaller and average size validators are more involved in the network's life than the bigger ones or no?
+
+freQniK 
+Well, I can't speak for everybody, but on the Sentinel network, a lot of the smaller validators have contributed code base on GitHub. Like there was Alessandro Maggio, who is writing SDK now, and he's in the bottom 50 of validators. Then there's another one, Bitvale. Both of these guys are out of Italy.
+
+And they just launched a validator and he helped develop the SDK for four math nodes. I contracted them for that and so Yeah, I think I think Because it's hard to get delegations nowadays Like it's unless you're just starting up on a network and you know the team Then you can probably get a larger delegation but for the smaller validators they have to
+
+show their passion for the network and their understanding for the network in order to get foundational delegations or delegations from the public. I notice a lot of bigger validators kind of just post stuff on Twitter, just kind of market themselves, but certain ones like Brandon from WhisperNode, he's on every Cosmos chain.
+
+But he's got quality infrastructure. He does post, and he gets involved. He runs some infrastructure for all the networks and stuff like that as well. I don't know what he does on a developer side, but it seems like smaller validators do put a little bit more effort in. And that's respectful because they have to get delegations. I mean, there's no point in running a validator if it's not profitable, right? So they're just trying to make themselves.
+
+seen and heard so that way they can turn a profit on their infrastructure for the network.
+
+Citizen Web3
+There are so many points you touch on that I want to jump on and start talking to, but I'm going to try and keep my head loosening because there are so many points we touch on. By the way, quick question before I go into a more difficult question. Do you actually mind Monero right now?
+
+freQniK 
+Actually, I switched over to Zephyr because Zephyr is a narrow fork, but they have an algorithmic stablecoin. So it's a private stablecoin. It's called ZSD, Zephyr Stable Dollar. So it's an overcollaterized stablecoin that the protocol was developed by IOHK. So Charles Hodgson guy for Cardano. His company developed.
+
+the protocol for this stablecoin. So actually, it's more profitable than mine Zephyr right now and I do because it's just launched like seven months ago. So there's bigger block rewards and the speculation on Zephyr has gone through the roof. So the coin has risen quite a bit in price impact.
+
+So I have mine Monero, I was mining it for about two years there. And I also mine Darrow as well, which was a Monero fork. Darrow is pretty cool. It's a homomorphic encryption blockchain. It's the first one. And it's got smart contracts and it's a really good network. I'm a little weary about some of the people in there.
+
+But I think it's got a huge potential to grow. And there's a lot of developers creating some great software. So I mind Aero mostly on some nodes that I have and stuff like that. So yeah, but privacy coins in general, yeah.
+
+Citizen Web3 
+Well done, man. Well done, man. I've been watching Dero since I think 2016, I believe. It's a project I've been following for a long, long time. And Monero is something I remember actually I was involved a few years ago in CCC, Chaos Communication Congress.
+
+Citizen Web3 
+I was
+
+Citizen Web3 
+So I totally understand here. But yeah, but it's cool, man, because a lot of some validators I have already, and this is actually going to be my question here to you to stop, I'm going to stop blabbering on about Monero, but a shout out to Monero anyways. But I've spoken to several validators and regardless of the size of the team or the structure of the team, I've met at least, well.
+
+Let's just say several over the past four years or so that are scared of privacy coins that are, you know, not in terms of like scared. Oh my God, I don't want them to exist, but they're scared to be participating in either mining privacy coins or running their validators on specific chains because of, I don't know, whatever it is they're afraid of. Now everybody's afraid of something else. Now you don't seem to have that problem. Now I'm totally with you, but the question, you know, like from kind of like the side, right?
+
+Why don't you care about the same things those other validators care when they say, oh my God, I don't want to be involved in privacy coin mining or validating or whatever.
+
+freQniK 
+Well, I see privacy coins as essential going forward in the future. And because there's a little saying that is from a Seinfeld episode that says about, and I related to government and privacy, is that Seinfeld says, you know, the very fact that you're against this makes me think I'm on to something.
+
+You know, it's true, the fact that, uh...
+
+Governments want to have a monopoly on privacy. They want privacy for themselves and everybody else to be surveilled. Because they, governments have a history of controlling populations. I mean, that's what they do. You know, they're supposed to work for us, but they have other agendas in mind. And in order for us to be liberated to some extent, because, um, is Jean-Jacques Rousseau said, uh, man is born free.
+
+but is everywhere in chains. And it's because society imposes limitations on us and government imposes limitations on society. So in order to have a more liberated environment for people to flourish their creative aspects of life, we need privacy because privacy is essential for things that we hold that are valuable.
+
+So it's not because I'm doing something wrong, it's because what I know may be valuable. And I may not wanna share that with everybody until the time is right. And it's about being able to share when you're ready to share with who you wanna share with instead of everything being known by a central authority all the time, you know, the watch tower, right? So I'm not afraid because I feel like for us to move forward as a society.
+
+freQniK 
+We need to envision a world where people are trusted with their knowledge and they do the right thing with their knowledge. Of course, humans have a proclivity to...
+
+freQniK 
+take advantage of one another. And so that's, I think, where people are scared of privacy because they think, well, if they know something that I don't, they can use that against me. But I think in order for us to evolve as a society, we have to understand that privacy is important for our self-dignity, for our self-independence, and for our self-respect. And I think more people that realize the impact that privacy can have for the individual, I think
+
+society will evolve to a better place than if it was under some kind of watch guard of a central authority, limiting what people can do, say, think, feel. So I think that's why I have a deep passion for privacy and privacy coins as well.
+
+Citizen Web3
+You know, we over the past years, we have dedicated many, many discussions to privacy, literally. Like, I don't know, I don't want to say number, but there has been a lot, including like, you know, having guests from different places, not just one case. But one of my one of one of one of an interesting points mentioned about privacy, not that long ago on a podcast was by Chris goes from Anoma, Nomada, Anoma, Nomada is the blockchain, right?
+
+And so, and recently actually been launched, the Shielded Expedition has been launched recently. We were also part of the Valorator team, Citizen Web 3. And he made an interesting point, which, you know, I'm a huge privacy advocate. Like I'm a bit obsessive when it comes to certain things and, but that's due to experience. But still, he said an interesting point, which made me think a lot that, you know, I think a lot of our society, the reason we are so confused sometimes.
+
+and scared of privacy is semantics, you know, and a lot of the time, like people put, for example, you know, private data or privacy in your beta or private, sorry, in a different way that he said it was sounds better, like private
+
+Citizen Web3 
+And from here comes a lot of the problems why people sometimes scared of what privacy might bring. And also, I think that another point that this is not on the podcast, but this is something that I believe I read or heard somewhere many times ago that there is a very simple solution here. We live in a society where we have private government and public citizens, whether it
+
+you know, private citizens and public government. And I think also me and Jaya talked about it also from NIME. And yeah, they're also by the way, a privacy network. I don't know what you think about it. Could that turn the tables around if the government was made to be public and the citizens could be by default private? Would that make a change in our society for a better?
+
+freQniK 
+Yeah, so government has a duty because it's supposedly elected by the people for the people. They have a duty to be transparent. Now, there's so much corruption in governments and so much war mongering. I'm from the United States and I mean, the United States, they just launch wars all the time. That's all they do. When you pay taxes,
+
+80% of that money goes to the military. And what they do with it with their black budgets and their CIA, it just goes beyond comprehension how ruthless governments can be to further their agenda. And the agenda by the United States is, you know, control. They want to be a world domination power. They control small states and big states as well.
+
+And so when you're paying your taxes in America, all that money is going to the military for advanced weapons research. And it's just absurd. You know, I mean, why can't we move past the idea of, I know there's conflict and people don't get along, but you know, there's, there's a lot better ways than just bombing the hell out of a town. Uh, you know, to install a puppet regime that
+
+um coincides with your ideals and ideology and some people you know patriots I guess you could call them there was one quote that uh I heard from uh an NPR which is a public radio he was talking about the MK Ultra uh project back in the 60s and 70s so that was um where a guy named Edward Hunter
+
+freQniK 
+after the Korean War in the 50s and testified in front of the Senate Committee on Un-American Activities. And he talked about something called CNOW, which is Chinese for wash brain. And it was the first...
+
+freQniK
+recognizable scientific discovery of where American soldiers were being captured and put in POW camps in Korea and they would come out a month later and show their support for Korean and Chinese communism. And the US military didn't understand why these people could, why these servicemen could
+
+freQniK 
+be compassionate about an enemy. So Edward Hunter testified about brainwashing and their idea of indoctrination. And so that would launch the big interest program into MKUltra. And so you have all these very coercive techniques by governments and stuff like that, and it's just spiraled out of control.
+
+And I think that governments have a duty to be transparent to the public, and the public should be able to have privacy to defend itself from tyranny.
+
+Citizen Web3 
+Just going to make one last note on what you were saying there before, before jumping on a slightly different subject. For anyone interested in MK Ultra, as you know, you can find references under the episode, show notes to whatever me and Friknik are going to mention here. But I'm going to mention this on purpose. So my team puts a note that in the episode notes, there is a recent documentary, not documentary, sorry. It's like...
+
+More of a more of a series mini series on Netflix that came out I mean, unfortunately, it's on Netflix, but it is on Netflix It's actually pretty cool if you're not familiar with MK ultra at all. And yeah Have a look and I think just like the last quote He was you know to finn I don't remember who said it but it was somebody from It was representative of the American government an extra presented if we said that whatever you think whatever bad things You and think your government is doing to you
+
+you will never imagine you will not even come close and imagining how bad the reality is and how terrible the reality is. But yeah, on that note, let's just try to move a little bit if you don't mind to a different subject. I want to ask you a little bit about a little bit more about your
+
+Citizen Web3
+stuck in one particular ecosystem. And this is a lot of what I've been trying to do. And a lot of other guys have been trying to do recently, you know, to spread the wings. So not in terms of like, we want to have a hand in every pocket, but it's in terms of understanding that the tech is out there. Like you said, you sell the crypto ecosystem is so vast. It's not stuck in one place. It's not stuck in one ecosystem. You can be involved directly, indirectly in either developing a market in many chains or at least provide an infrastructure for those chains, you know.
+
+And I'm curious, how does, I mean, of course, privacy tokens, you already said, you mentioned BitSong, and you mentioned Juckel, you mentioned D Center. So it's kind of like a very wide aspect. And we are very similar here, but I'm curious to your process of chain selection. And I'm not talking only about the things that, of course, your main thing will be values. I'm going to guess here something that relates to you, and correct me if I'm wrong. But what are the other aspects?
+
+Maybe more technical ones for anybody listening out there, trying to pick up some points on how to select chains in the correct or incorrect way. I don't know what the correct incorrect way is here. What's yours?
+
+freQniK
+Um, so I think, uh, for me specifically, I focus on things that I think will be bleeding edge kind of technology. Um, you know, the, the change, the switch from centralized VPNs to decentralized VPNs, that's obviously going to make an impact in the future. Um, permissionist permissionless networks, uh, specifically are important. So some, some networks, uh, only.
+
+a slight few people can upload smart contracts or something like that. So you have to check to see what the network is doing with their infrastructure, what they plan and what their goals are. So some of the networks, mostly it was kind of more of a...
+
+self satisfying adventure. You know, I just kind of played around with stuff and the interfaces that I thought were good that had potential like in Bitsong, they have really nice user interface designs. Very simple, very elegant. And it was heavily underdeveloped when I first joined, but I saw a lot of potential for it.
+
+And I liked the team. I think a lot of the team members are based out of Italy as well because a lot of the artists come from Italy and so My mom was Italian so I have a you know, I was raised as an Italian with Italian Ants and big dinners and so I have a passion for Italy, of course But but also I think it's important to understand the team behind
+
+the coin. So how transparent are they? How involved are they? Is their communication good? Who are the teams working with them? What's their reputation like? You know, so you definitely have to do your own research and it's not something that you ape into right away. If you're looking to become a validator.
+
+freQniK 
+Of course, like when I started, I looked for smaller networks because I didn't have much money. So smaller networks where I could potentially bring something to the table for them and get a, you know, get a head start on, you know, getting like $500 in coins and starting a validator. So smaller networks are good to start off on. And then you don't work from top down. You work from bottom up. Right. So you start off small and you eventually grow.
+
+Um, and, uh, so that's, that's also another interesting tidbit about where you should start. Um, but I think you really need to focus on the technology and its potential and, uh, the teams behind it.
+
+Citizen Web3 
+You mentioned quite a lot of the transparency, team, decentralization, use case, testing, the fact that it works and I love it. By the way, ironically, of course, we used to be called Citizen Cosmos and as you know, most of you know probably that listen to the show. Ironically, I totally agree with you, Fricknik, what you're saying here that you start, bottom grow big. Ironically, though, the case for our validator was completely different. It was starting with Cosmos.
+
+and started with a huge delegation of 600,000, I believe, some years ago. But it's nowhere near at this stage now. Actually, it's much better these days and we've actually been getting back. But this is my next question to you. How do you... I mean, you have personally described at the beginning your personal involvement and change, so it's quite obvious. Where would some of your delegations come in terms of like you're building a relationship with the...
+
+the team, the community, you commit, you publicly commit, and here you can attract delegations like that. What are other ways for you to attract delegations apart from... Well, I guess it's a strange question. It's a paradox, very paradoxical question. How do you get delegations apart from being involved? So maybe it sounds incorrect, it came out wrong, but what are your sort of go-to...
+
+the blockchain ways and attracting delegations apart from being directly involved and actually committing to the code.
+
+freQniK 
+Yeah, so just really getting to know the community and Marketing their products for them on Twitter, you know, I don't know I don't have Facebook I do have an Instagram, but I don't think web 3 is that big on those platforms yet I had a discussion with a guy in Italy about this. He says well Facebook people just kind of look at you weird when you mention like crypto
+
+So Twitter is your go-to and so you kind of want to focus on, you know, pushing the products. And, you know, the thing about pushing products like, you know, that a network offers is for me personally, like, it can be easy, but I have to believe in a product to push it. You know, I'm not, I would be a terrible car salesman because, like, I would not be able to sell a car that I didn't think was a good car. So, like.
+
+they can sell anything, car salesmen can sell anything. They can sell you a lemon and tell you it's the best car in the world. And I can't do that. It's just not in my nature to push things I don't believe in. So it's more of just something that I have to have an honest understanding and passion for and things that I believe is valuable for people to come along and use.
+
+Citizen Web3
+That makes sense. I think it's one of the most points people find it easier to connect to, right? If it connects to you, then you kind of like, okay, I can do this. If it starts to work, then it starts to bring you something in return. Okay, gets better. What about, I don't know if it's a topic for you. And I don't know. I mean, because you mentioned a lot of privacy things, and you mentioned a lot of proof of work.
+
+projects as well, not a lot, but several at least. And what do you do in terms of like the hardware? I wanna talk a little bit about cloud versus bare metal, which is a big topic for, well, not just lately, it's always been a big topic, but it's been grown, especially after past year, you know, where finally, not in a good way finally, but finally, you know, Hezner and some other providers have started to, you know, shut down.
+
+operations for either because they do crypto or because they come from a specific country or so the topic grows and grows and of course in terms of decentralization, in terms of privacy, in terms of security, I'm curious what types, if it's not a secret of course, what type of setups do you use? Do you use any bare metal? Are you only in the cloud? Do you have any plans for those kinds of things?
+
+freQniK 
+So I can't host anything from my house. It would be ideal for validators to do that because that's the ultimate decentralization, right? But I can't do it because we lose power often in the storms in the winter and in the summer. So I'd have to have a backup generator. And it's just not feasible whatsoever to run it out of my shed or my house or whatever. So...
+
+So I do run on some network and some providers, dedicated servers. I had one on Hetsnir, but because they actually, I had an API running on a blockchain with an RPC and they had frozen the server because it also ran queries of
+
+checking Sentinel IP addresses of the nodes to make sure they're running and they're, it would check the uptime of the nodes. And somebody had created a set of nodes on a whole subnet. And so when my queries would do a socket connect to those servers, Hetzner viewed it as a, like an NMAP scan. So they viewed it as a, yeah, as a like a threat, a network threat.
+
+And they froze my server. And so I lost like, I lost data metrics for like four days. I figured out a way around it. They, they never respond. They would not allow me, you know, I mentioned that I was running an API and they said, you cannot do anything with blockchain. You can't run anything with blockchain or crypto. Um, and so, you know, I kind of just weaseled my way out of it and, uh, cloned the cloud provider and, uh, relaunched it. So.
+
+But one provider is a big network and they're pretty lax on what you can do. And they're actually, I really like them. Their support is really good. And so I run some TMKMS, which is like a protecting your validator key. I run those on the cloud nodes there to protect the validator key of my validators. So it's like a remote storage of the validator key.
+
+freQniK 
+in a hash form, so it's not directly on the validator server. And I think those are essential. Unless you get a UB key or something like that, which are like $650 and you send it to the data center. Unless you're a big validator for Atom or something like that, I don't find that necessary because you've taken a mitigation risk with having a cloud TMKMS server that
+
+signs your commits to the validator remotely. So I think it's an extra layer of protection. I think that's good for most validators. But if you're on Atom where you're securing chains and side chains and stuff like that, it's good to have the extra hardware security involved. And also like the proxy nodes in front and stuff like that as well. I think those are important redundant architecture.
+
+We do have, like I had a dissenter, my dissenter, which is based, validator is based out of Singapore on Contabo, and they had trouble in their data center. And this was about six months ago. And my dissenter network went down. But luckily I have backup servers that I could spin up the dissenter validator on and continue.
+
+freQniK 
+and then you're committing blocks and signing blocks. The only problem with that is you have to be very careful not to have both running at the same time, otherwise you'll double sign and you'll be bricked. So when you do have redundant architecture, you have to take some precautions on when to start and when to stop and stuff like that. So yeah, like I said, we can't run anything from our offices or our house or anything like that, because it's just all the electrical lines are above ground where we're at. And so...
+
+there's a lot of trees in the neighborhood too. And it's just, it's a mess during the summer when we get storms and stuff like that. So I just don't have the, the setup for anything like that. And I don't think it's possible for the area I'm in, but it's ideal if you can't like, I know one validator Badger Byte for Sentinel, he runs it out of his office. And it's ideal because you get a ISP line.
+
+There's no restrictions on what you can run. If the company decides that they don't want you running crypto projects, well then you're shit out of luck. But if you're running it from your office or your house, then there's no restrictions on the kind of infrastructure that you can have.
+
+Citizen Web3
+We're now testing the local setups that we're doing. And part of the testing is I'm trying to connect the Starlink directly to a set of solar panels to see whether or not they're during a storm, because we also get storms where I live every now and again, not as often as you described, but once per year, like something serious for a day or so.
+
+sometimes a bit more often. And sometimes you have internet outrages. So I'm trying to see if I can connect the Starlink directly to some solar panels and to a battery UPS to see how long it will last. But so far, the tests have been OK, actually. So let's see. But of course, this is.
+
+in an area where storms are not an issue for more than a day per year or something like that. So I'm lucky in that sense. And by the way, for anybody, again, you mentioned the TKMS. I also want to mention for anybody listening to this and curious about it, the Horcrux. Check out both tools. They're both good tools for providing more security to your
+
+Citizen Web3 
+Yeah, it's a good thing for avoiding having to store the validator key directly on the validator. In both cases, they work in a slightly different way, but it's the same set of tools. What about, you know, what do you personally I mean, you mentioned so many interests, whether it's electronic music, privacy, you know, chains, privacy, talking, and maths, and
+
+Couple of other things, which is a lot to connect with the community and build a community around. But I guess that from my conversations again with other validators specifically, unfortunately, it's not as easy to build a community around interests as one would have imagined. At least in my case, definitely didn't work like that. And a lot of the guests that come on the show say that...
+
+It's unfortunately doesn't work like that. What's your case? If you like around, I mean, the community around the validator, around math nodes, how are you building it? Does it exist today? If it exists, how are you approaching to communicate with it? What do you do? Anything specific? I don't know, anything you want to mention in that direction.
+
+freQniK 
+So, yeah, so we have our website and I think the major outlet for our validators through our Telegram channel. We have a pretty strong following there. We get a in I think assistance for our application is the main topic there. So people come in and say they have a problem and I assist them or a community member assist them right away. And so I think
+
+The open end channels of communication directly with end users is essential for them to gain an understanding of what you're about and what you want to bring to the table. Of course, my first passion since I was three years old was always mathematics. And you know, I went to...
+
+undergrad and started doing computer science and I got to calculus too and I said no, math is my first passion and that's when I switched to mathematics. Unfortunately, I don't do much of that anymore. I do have a analytics dashboard where I, you know, do some basic algebra, but nothing like the advanced number theory I was doing or anything like that. So unfortunately, I don't get to express my passion for mathematics.
+
+like I used to be able to when I was in graduate school, I got to travel around the country, give talks, and I was 100% immersed in the thing I love most. And that is, there is no better experience than to be completely immersed in the thing that you're most passionate about. Because...
+
+Nothing else matters. Like I mean you don't care about any of the politics of the world You don't care about anything because you're so immersed in a certain idea that you have so much passion for that That that's the only driving force to keep you going every day and is a very strong force So unfortunately, I don't have I don't can't express my passion for mathematics as much anymore Because I'm just not directly involved in it with that like I used to be But so, you know my programming
+
+freQniK 
+background is strong. So, and you know, I like to work with the community and things on privacy are essential for me to communicate with people about. And so that's kind of where I found an outlet in my voice. And that's kind of how I'm going to further address the public.
+
+Citizen Web3
+What would make you close down the validator?
+
+freQniK 
+Like, some math notes validators?
+
+Citizen Web3 
+Yeah, like shut down tomorrow like you shut it down, something happened. What is that case if there is such a case that would make you tomorrow shut it down?
+
+freQniK
+Um...
+
+just frustration with uh it would have to be a lot because I get frustrated every day with uh regulatory oversight just I mean just you gotta take a break from twitter because you will go nuts if you read that thing every day man because there's just so much negative there there's a few positive posts on there but most of the stuff is like negative towards the community negative towards the ecosystem
+
+negative towards the world and it's just it's too much negative energy and uh you know that can really lead you to be frustrated and just want to throw in the towel and say you know there's no hope you know as much as impact as i can make we need an army and i don't know if you know that army is going to exist in the future um and it's true because the way the world is
+
+a lot of people that stand up and not, what's the word I'm looking for? Yeah, yeah, grow balls, yeah, exactly.
+
+Citizen Web3 
+Grow balls. For people to grow balls, man.
+
+Citizen Web3 
+I mean, come on. It's just, you know, the kind of like saying it directly as it is. But absolutely agreement. That's why I'm sorry if that was, of course, you were looking probably for something more mellow there. But yeah.
+
+freQniK 
+Yeah, I was gonna say don't consent, you know, just go against the grain because that's how things that's how development is foreign is by going against the grain. So but yeah, grow balls. Definitely. People need deaf. They definitely need to grow. There's, you know, like George, I watched a George Carlin thing a couple weeks ago, because the one thing I learned growing up is never trust anything the government ever tells you ever
+
+Citizen Web3 
+Yeah
+
+freQniK 
+And it's true because you know what? They're lying through their teeth and they're not looking out for you, man. So you gotta grow some balls and do your own thing and just push against the entity that is.
+
+Citizen Web3 
+Absolutely, absolutely, absolutely. 150 million percent of it. And again, I'm going to do a small second of self-promotion here to our episodes. If any listen, if you listen into this and you're interested, you're thinking, or you're curious and learning about, you know, the evils of statism and what is statism, you know, and about how governments work, I advise highly to listen to an episode we had recently with Derek Wills.
+
+author of the Liberty Solution and it's not crypto related as such. It's more about actually governments and privacy and I really highly suggest for any listeners interested in that to check it out. Friknik, what about, you know, another thing, you know, you mentioned community frustration and I totally understand, you know, what you're talking about. There are...
+
+points and cases, you know, where some people become very negative and a lot of it, at least so it feels to me, doesn't come from bad intentions of somebody, but from lacking knowledge usually of something, usually how something works or how something, you know, whether it's as complex as, I don't know, ecliptic curves or as simple as, I don't know, pressing a button somewhere. So the question is like this, if there was one thing you could pick to educate,
+
+proof of stake users or delegators on. And I know it sounds kind of harsh the way I put it, but it's not in a bad way. It's something that you could share with them. What would it be like? Something that you think is missing today on the market to improve public education level about proof of stake, about how validation works, about how they monetize, about how they build, how the networks work, how does...
+
+and so on and so forth. Was there was something that you think could improve that knowledge and improve and lower the toxicity maybe as a result of that? Is there something like that you can think of?
+
+freQniK 
+Um, that's kind of a little tricky question because kind of have to like see what's already available to people. You know, proof of stake is interesting. I'm a big proof of work guy as well, but proof of stake offers a lot of benefits and there's the world definitely exists for both. There's you know, I'm not one side or the other, I think.
+
+Citizen Web3 
+Thanks.
+
+Citizen Web3
+Expand the question. Let's expand the question for proof of stake and proof of work. What would you do in order to have more people receive better education about both? Sorry.
+
+freQniK 
+Yeah, so I think really the best education for any way is to get involved in it. And just, you know, you have to experience it to understand it. And so if you're just looking for a quick way to make money, whether it be mining, proof of work or staking on proof of stake, you're really not getting the understanding of what the technology offers.
+
+You really need to understand the in-depth consensus algorithms in proof of work versus proof of stake, how validators reach a consensus among the 80, 100, 150 validators securing the network. Whereas proof of work is much more distributed. A lot of proof of work focuses on high hash power and some focus on ASIC resistance.
+
+So what's ASIC resistance? Well, that's not allowing specialized computers to mine like on Bitcoin. So this allows people to mine with their home computers, which people do for Monero. And this allows a much larger decentralized network. It allows for more unstoppable ability because anybody doesn't need hundreds of thousands of dollars in a warehouse.
+
+to start up a mining network. They can contribute to the network just with their available hardware that they have at home. And so I think, and then proof of stake is really good because it allows people with not much income to delegate their coins to a validator. And I think validator selection is very important. Most people just pick like,
+
+in CosmoStation, it automatically selects CosmoStation as your validator. So I think that's why they have so many delegations. And I think, you know, I think before you get involved in anything technological, you need to understand how, not fully in depth, how it works, because that can be a lot of time, very time consuming to understand the nitty-gritty of a lot of the stuff that people take for granted every day.
+
+freQniK 
+Me personally, I always want to know how stuff works. Like, you know, I may, like when I was working with DEXs and like, you know, using them, I was like, how the fuck do these things work? Like, how do they balance their coins and all that? And like, most people don't ask that question and you really don't need to, but at the same time, me, I have an inquisitive nature. And so I want to know like how something works before I really get involved with it, because
+
+I want to understand what could go wrong as well as what goes right. And so I think, you know, looking at the pros and cons of proof of work and proof of stake, I think are essential for people to get an understanding of the technology. And just always, always try to understand to the best of your knowledge and take time. People are in such a rush these days. Everybody wants to have everything done for them.
+
+right on the spot. And I think, I think me personally, I tried to, I always used to say slow and methodical wins a race, right? So take your time, understand what you're doing and understand what it can achieve for you. And I think that's the best talking point on something like that is.
+
+Citizen Web3 
+I loved it. I love about the, you know, taking time and especially in crypto where an industry which runs 24 fucking seven, I think that's a very, very good piece of advice. And I think it's a good place to kind of come to a blitz. I'm going to do a quick blitz with three questions since we mentioned a lot of projects already. And that was the other question that I'm going to skip out of there. But again, all the projects that Fricknik and myself mentioned.
+
+are referenced in the show notes. So if you're interested in checking any of them, do. Or even better, do your own research, Dior, right? Like we say in crypto. So three questions. Give me one movie or book or song that carries an influence on you in life, throughout life.
+
+freQniK 
+I'll give you one of each so a film Persona by Ingmar Bergman it is It is mind-blowing. It's a Foreign film if you're a US citizen, but it is just the oh god It's just so mind-blowing but you know and then for American films. I'd say Lawrence of Arabia the life of Lawrence
+
+in Arabia in the World War I was so fascinating. It's such a beautiful film. And then that book, Seven Pillars of Wisdom by him, was one of the best books I ever read. But the best book I ever read was Don Quixote. It's a book that changed my, I've read a lot of Russian literature and I love Russian literature, 19th century Russian literature. I think it is.
+
+the best literature that I've ever read and I've read French literature, you know, Emile Zola, a very good author, but Don Chiodi, just that book written in 1605 and then the second volume was written in 1615, contemporary of Shakespeare and Newton and all that stuff. It's so, there's everything is in that book. You have poetry, you have romance, you have comedy, you have action,
+
+And then the second volume of that book is so meta. He's talking about a book that was written about him. And the second, it's just, the book is really fascinating. And there's, I remember writing down quotes in my little notebook of stuff that Don Quixote would say. You know, he lost his mind, but he was, he was just trying to help everybody, you know? And it's really fascinating. What was the book?
+
+film and what was the music? Yeah, so I think...
+
+Citizen Web3
+song or peace
+
+freQniK 
+song. That's tough, but there's like I said, I grew up in electronic music. So a lot of stuff would be like Jaguar by Rolando or Good Life by Kevin Sanderson Or if you want to go more into 60s 70s, uh, Wish You Were Here by Pink Floyd fucking phenomenal song. Pink Floyd has a that is my favorite like rock band of all time. They they were so cutting edge and
+
+Citizen Web3 
+Oh.
+
+freQniK 
+I mean, I just remember having times where I listened to an album from front to cover and was just blown away. It tells a whole story. And so those definitely have a spot in my heart.
+
+Citizen Web3 
+Absolutely, man. Absolutely. I agree to that as well. And I think some of the best albums when you listen to them all together, like Pink Floyd, the way they combine, the way they fucking take your mind to places is very crazy. What about the second one? What about a person? Give me one person again, not a guru, not somebody that you follow because it's not about following somebody, right? It's somebody that...
+
+And it doesn't have to be realistic, could be a made up person like Don Quixote. You know, somebody that you at least sometimes look up to or think that what they did was a good example of doing things. And it doesn't have to be a real person, could be made up, could be real.
+
+freQniK 
+Yes, so when you first asked the question, I was thinking of my favorite philosopher, Bertrand Russell, but I've prescribed to a lot of his ideologies, except for his ideology of a one world government, which at first in my 20s I thought was a good idea, but now I think it's not a good idea because it doesn't allow for individuality in the different cultures.
+
+But really then when you started seeing fictional characters, I think the ideal person to look up to is Alosha Kamazroff from the Russian book Brothers Karamazov. He is the absolute magnanimous individual, always trying to do the right thing, never quite succeeding in doing the ideal thing at the right time, but always...
+
+trying to get to that point of being somebody who brushes off sinister ways and looks out for the common individual. And I think that was a really good book, you know, amazing book by Dostoevsky. And I think if we could strive to be like Alosha, the world would be a better place.
+
+most people can reach to that level.
+
+Citizen Web3 
+Difficult writer is a very difficult writer. Okay, last question. One motivational thing that you would like to share with other people that you think, not that you think that you know, because it's for you, right? Well, helps Fricknik to, you know, be, remain curious, read book, get out of bed, validate networks and do everything else you do in your life. What is that one motivational thing you could
+
+share with other people that it is, that helps you at least to do all those things.
+
+freQniK 
+Um, so kind of been struggling with this question for the last couple of years because I went through a really hard time for a lot of years and I still go through hard times every day. Um, we don't need to get into any of that, but, uh, what keeps me going, um, is really it's friends and relationships. Um, and having altruistic.
+
+values with the people I love. I think that's the most important part of life. Life isn't about making a bunch of money. Do we need money? Yes, we do. We need money and securing what you can to secure a future where you can spend time enjoying nature, going out and traveling and building relationships, real life relationships, I think is really the...
+
+the important part of life and what allows you to do that. So if I continue building on Sentinel and other networks, as much time as I do spend on it, I always set aside time to watch a film with my dad because I lost my mom a year ago and I was really close to her and it was really hard last year. And I feel ever since I lost my mom, my dad is turning 82 this year.
+
+And so I want to enjoy life with them. As much as I work and sometimes I overwork myself, I need to take a break and enjoy the things that are around me that won't last. And I think that is the most important thing you can take out of life is understanding the impermanence of the people and things you do and recognizing that they will not be there forever. And so you need to.
+
+value them while they're here.
+
+Citizen Web3
+Man, that is a very touching and I think to the heart piece of advice that... It's to the heart, but when I said to the heart, the word heart started to sound and it's also hard sometimes to stop working, right? For all of us and to just enjoy what is around us. I totally, one billion percent can relate to that. On that note...
+
+Pryknyk, thank you very much for coming to the show and sharing not just the happy parts, but also the parts that make you more touchy and more yourself and all the difficult times as well, because that makes us who we are. So thank you for being yourself.
+
+freQniK 
+Yeah, yeah. Life is a journey and you take the good with the bad and you just value everything you can. So yeah, I really appreciate you taking the time and inviting me to the space. I'm going to have to check out. You mentioned some of the podcasts you did, so I'm going to check those out because it strikes a chord with my interest. So, you know, when I get some free time, I'll definitely check you guys out. But I really appreciate you inviting me to kick the shit.
+
+Citizen Web3 
+Please.
+
+Citizen Web3 
+Thanks.
+
+freQniK 
+And you know, just talk whatever we can talk about, just life and validating and crypto and the future of what can become.
+
+Citizen Web3 
+Before you hang up, we're just going to say bye to everybody who's listened to us. And guys, thank you for tuning in. Check out next week. Please don't hang up just yet. This is just bye for the show. And thank you everyone for tuning in.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

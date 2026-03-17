@@ -2,6 +2,9 @@ import { sleep } from '@cosmjs/utils';
 
 import db from '@/db';
 import logger from '@/logger';
+import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { aztecMainnet, aztecTestnet } from '@/server/tools/chains/aztec/utils/contracts/l1-contracts';
+import getL1ContractAddresses from '@/server/tools/chains/aztec/utils/get-l1-contract-addresses';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
 import chainNames from '@/server/tools/chains/chains';
 import { ecosystemParams, updateChainParamsUpdated } from '@/server/tools/chains/params';
@@ -167,6 +170,36 @@ async function main() {
     for (const chainName of chainNames) {
       const chainParamsUpdated = await updateChainParamsUpdated(chainName);
       await addNetwork(chainParamsUpdated);
+
+      if (isAztecChainName(chainName)) {
+        try {
+          logInfo(`${chainName}: Fetching L1 contract addresses from RPC...`);
+          const l1Addresses = await getL1ContractAddresses(chainName);
+
+          const hardcodedContracts = chainName === 'aztec' ? aztecMainnet : aztecTestnet;
+          const addressesToStore = l1Addresses
+            ? { ...l1Addresses, stakingRegistryAddress: hardcodedContracts.stakingRegistryAddress }
+            : { ...hardcodedContracts };
+
+          delete (addressesToStore as any).tokenAddress;
+
+          const dbChain = await db.chain.findFirst({
+            where: { name: chainName },
+            include: { params: true },
+          });
+
+          if (dbChain?.params) {
+            await db.chainParams.update({
+              where: { id: dbChain.params.id },
+              data: { l1ContractsAddresses: JSON.stringify(addressesToStore) },
+            });
+            logInfo(`${chainName}: L1 contract addresses saved to DB`);
+          }
+        } catch (e: any) {
+          logError(`${chainName}: Failed to fetch L1 contract addresses: ${e.message}`);
+        }
+      }
+
       await sleep(3000);
     }
 

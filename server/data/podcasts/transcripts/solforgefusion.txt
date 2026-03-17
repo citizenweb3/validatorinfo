@@ -1,0 +1,409 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/solforgefusion
+
+Episode name:
+Your Idea is Wrong, Embracing Discomfort and Web3 with Justin Gary 
+
+Citizen Web3
+Welcome everyone to a new episode of the Citizen Web3 podcast. Today I have Justin Garry with me, the creator, and I'm going to highlight it. And Garry, Justin Garry will tell us in a second why it needs to be highlighted for Soulforge Fusion. Justin Garry, welcome to the show.
+
+Justin Gary 
+Thanks, it's my pleasure to be here.
+
+Citizen Web3
+couldn't help myself. I'm sorry, I had to do it. So this is going to be your first quiz. You know what? No, no, no, no, no, no, you know, we're gonna go this is going to be your second question. So so so there we go. But the first traditional is please introduce yourself for the audience for myself. Tell us everything you do, what you would like, of course, people to know about you. And how did you get into Web3 also?
+
+Justin Gary 
+Heheheheh.
+
+Justin Gary 
+Yeah, yeah, so a decent amount of story there. So, you know, probably at my core, I'm a gamer and a game designer. I started off as a magic. I was the youngest ever Magic the Gathering US national champion when I was 17 years old. So some people may be familiar with the collectible card game created by Richard Garfield. I traveled around the world and paid my way through college all the way up to winning a world championships and the World Team Championships in 2003.
+
+I then leveraged that after a brief and ill -advised stint at law school to become a game designer. I dropped out of law school, moved across the country, started working on games, worked on the Marvel and DC trading card games, World of Warcraft trading card game, and miniatures games. And after working for a while working for somebody else, I decided to quit and start my own company. That was 15 years ago. I have since launched games best known for probably Ascension, Shards of Infinity.
+
+And then I partnered with Richard Garfield, the very guy who created the game that changed the course of my life to create Soulforge Fusion. And the original version of Soulforge was the first TCG to come to mobile back in 2012. And then we brought it back in a new form, which is Soulforge Fusion, which is what we call a hybrid deck game where we created a physical game.
+
+that uses algorithmically generated cards. So every card is digitally printed. So they're all one of a kind. They can all be scanned into an online account and played like a classic web two game. And they can very soon be brought into web three and turned into NFTs. And we'll have our own token launch and everything like that. And in addition to that, I also teach design and creativity. I wrote a book called Think Like a Game Designer. I work with the Wharton School of Business. We do design and creativity consulting.
+
+for companies like Google, Zillow, Twitter, things like that. I found that the things that I've learned over the years on how I make games are the exact same way that you create businesses and write books and build new projects and build creative, interesting things in the world. And so that's the kind of short two minute version of what I'm about in the world.
+
+Citizen Web3 (02:36.294)
+I like that you're like, it's 200 % that's it, 120 seconds. I love it. I love it. I love it. Well, it is a crazy industry, gaming and Web3 and gaming Web3 together, I guess, creates a crazier industry. So I guess this is going to be somewhat of an interesting experience for you. I mean, this podcast, because I'm not a gamer personally. And I have been a gamer when I was, and I know about your gaming background, of course, I did my research, but I have played games, obviously, and different types of games. So...
+
+But I will try to focus this for you on a slightly different. This is why I say it's going to be interesting for you because I'm my, my goal here is to try to show the, the design and, and I want to talk to you about it. I want to see what's, what's your opinions in, in like coming from the traditional kind of industry into the web industry. But, but like I promised, my first question is when I introduced you, I said, creator.
+
+And for you, it was important why the title creator is important to you.
+
+Justin Gary
+Yeah, so I mean, to me, that's like at the heart of what I'm here to do in the world, right? Create, contribute, and learn and grow. So like our company motto, then we say it every week at our team meeting, we say it every, I reinforce it everywhere, is work with awesome people, make awesome things, help each other grow. And I think that though I do a lot of stuff, right? As a CEO, as a founder, as a, you know, I have to lead and manage and I have to do operations, I have to, all the things I do, but at my heart,
+
+I'm a creator and and it's and it's a big deal because you know, let me I'll just go back a little bit to a little bit of a longer version of part of my story, right. So when I was in law school, right, I went to law school because that's what I thought I was supposed to do in the world, right. My parents were lawyers, my mom's lawyer, my dad's lawyer, my stepdad's lawyer, like I was like, I was gonna be a lawyer. And I went on this path because I thought that's what I was supposed to do. And I could I could do it. So why not? And I was miserable. And I
+
+I literally was I mean, one particular moment where I'm like, I'm going to NYU law, and I, it's snowing in the morning. And I'm like, have to bundle up and like, trudge my way in. And just the only warmth I have is like my cup of coffee and my like, Boston cream donut that I would eat every morning. I was about 40 pounds heavier than I am now. So it was not a great lifestyle. And I go into the library and they have this back when you had to read books, like real books, you know, as this big cavernous library, and I'm reading this case law. And it's like,
+
+honestly, like, I don't know how many hours I was there. But I all of a sudden, I'm like, I'm bent over doing thing. And I look up and I'm like, my god, I'm late for class. And I'm like, get up to move. And this jolt of pain, like the agonizing pain shoots up my spine. And I literally can't I can't move like everything is in agony. And I have to hobble my way out of the library. And I realized that I threw my back out from reading, right? Like, this is the most like insane thing. And what it was, is my body was telling me like I was miserable.
+
+Like I was just in, I was trapping myself in this horrible kind of existence. Again, not to blame other people that it could be a great existence for, but it wasn't for me. And so I had to make a drastic change. And so, yeah, again, I quit, I quit law school. I mean, my mom cried when I left and I had to move across the country to become a game designer. Now I didn't know anything about design. I was a pro player, so I was good at playing games, but they're very different skills. And in my mind,
+
+Justin Gary 
+creative people, the people who design stuff was like, that was some magic secret sauce, right? Somebody else is a creative person. And I'm just like, an analytical person, right? I just think through style, I'm not a creative person. And so I had to, because I was so desperate not to go back to law school, I was so desperate to succeed in that space, I had to research creativity and break down the principles of creativity. And I spent I spent hundreds of probably thousands of hours at that point, now that to figure out what this process is, and then I realized that's no magic.
+
+It's just like a step by step process. Every single person in the world can be creative. Every single person in the world can do it. It's not something that somebody else in the world has that you don't. It's just about following a basic step by step process and then being willing to put yourself out there. That's the real hard part, right? Because whenever you create something, a lot of times it's not going to work. Most of the time it's not going to work. And being willing and able to do that. And so I define myself as creative and I put that out there, you know, proudly because I want to help inspire other people because we all have that within us.
+
+Citizen Web3 
+I have so many questions now from that, but I'm trying to think which way to go, not what to ask. I'm going to ask you this. Before I have a question to you about being a lawyer and about creativity. I think I'm going to go with the creativity for now. Do you, as a person who strives, you put such a big highlight and for a reason, as far as I can hear it on creativity, I guess a big topic.
+
+over the last years on the podcast has been the faults of the system and the benefits of the system and to a lot of people that come from different places. Now, the reason I say that is because you mentioned studying and you mentioned specifically law, which requires a lot of studying. Now, there is such an opinion that school kills creativity.
+
+that it cuts down the wing. Now, I would like to ask you, what do you think of their opinion? And do you agree with it, disagree with it, or any comments at all in general on how to become creative?
+
+Justin Gary 
+Yeah. Yeah, yeah. So it's a it's a big, it's a big question. And I think that there's, you know, the answer is kind of yes and no, right? There is definitely a path and I fell into this trap myself that school kind of puts a scoreboard in front of you, right. And I'm a competitive person by nature. And so if it's like, okay, I need to check this box, I need to read this thing, I need to spit back the answers that the teacher wants and do exactly what they say. And that gets me my high score, then.
+
+I did that. And I did that for many, many years. And that, I think, is a problem. Because it doesn't train you to think outside the box, doesn't train you to realize that it's not just one right answer for any important problem. There's actually many different right answers. And you should be looking for the third right answer, not the first right answer. But I also think that there's opportunity out there for those that are willing to take it. So for example, I went to Dartmouth College. And I started off, again, doing the things that you would expect to be.
+
+like someone who was destined to be a lawyer, you know, I went to kind of look into sort of government and pre law and looked in those things. And I found those to be equally boring and mind numbing. But then I discovered philosophy. And my philosophy classes made me forced me to think they were not designed to say spit back the right answer. It was like, give me whatever answer you want, but be able to defend your answer. And throughout school, I had always found different ways to find that. So I was very active in debate. I was captain of my debate team. I was very active in
+
+sports and in different arenas. And I think those finding areas where you can challenge yourself in something that's a little bit more open ended. And that's true for I think sports true for things like debates true for things like games. I mean, I honestly imagine the gathering and being able to play in tournaments and travel around the world like testing yourself against the world is the way that you learn who you are. And that I think is opportunities that exist out there. And so the right types of education, I mean, look, we have more access to information and knowledge than
+
+ever before in all of history. I mean, you can just YouTube alone, you can just learn everything that you could possibly need to know in the world, right? And let alone that you can ask now AI for a bunch of whatever you want, right? But so knowledge is not the problem. The problem is being able to actively put that knowledge to work, being able to put yourself into situations where you will fail, and then having the resilience to build back up. There's a formula I use for this, which is like I just recently wrote about people that want to
+
+Justin Gary 
+get dive deeper and go to my sub stack just Justin Gary design dot sub stack .com or just Justin Gary design .com. But I, I call it the core attributes, right. And so anybody who is familiar with gaming will know like, if you ever played like a role playing game, you know, like Dungeons and Dragons, or one of those, right, you have core attributes, you have like, you know, you got your, your strength and your charisma and your wisdom and whatever, right. And there's tell you how well you do in the world, like when you want to try to
+
+achieve something you that's what tells you what you do. So I have core attributes, I think for life, and I use the acronym core C O R E, curiosity, obsession, resilience, and empathy. Right. And I this is the formula in that order that I encourage people to really cultivate. And again, I give a lot of steps on how to do this. But like, the basic idea is that you use curiosity to just like find things in the world that gets you excited, right? What you asked earlier, like, why did I get into web three, I started back in the web three back in 2017 2018, because I was fascinated by like, what was possible there.
+
+And I even designed an early like prototype game just to try it. But like the idea that we could build these systems that don't require trust between individuals, but could build entire societies and collaborations and great organizations and great communities. Like that's fascinating to me. And so I dug deep, dug deep, dug deep. I didn't have any like specific agenda with it. I wasn't trying to, you know, I wasn't day trading. I wasn't trying to build anything specific at that point, but I was curious about it. And then years later, when it made sense to bring Soulful Refusion to life and the kind of stars line. Now that curiosity all of a sudden became part of the biggest project I'm working.
+
+right. And so finding stuff that you love when you're a kid, right, whether that's games, whether that's flowers, whether that's whatever, like things that make you come alive. And then when you find the right thing, then you become super obsessed, right? Magic, the gathering was that for me, right? It became like, once I discovered that, and like, I saw some friends playing a game, and I sat down and played my first game, I was frickin hooked. And I was like, playing all the time. And I was scribbling in the in class in my notebooks, like different deck ideas. And I was like, just go, go, go, go, go. And like very much like, you know, putting in to become not just like,
+
+a curious dilettante, but like an actual focused expert. And then, then resilience, right? And resilience, man, this is why I love competition in general, because that forces you like I would make mistakes that would cost me like $20 ,000 as a kid, like I'm in I'm 19, you know, and it's like, boy, do you have to learn how to bounce back, right? And no matter what you do, that's meaningful in life, right? I'm sure you can relate to this, whatever you're reading on this, be it a podcast or a web three project, whatever, you're gonna hit a wall, life is gonna punch you in the face, and you gotta figure out how you're gonna get back up again.
+
+Justin Gary
+or you're not going to really achieve anything of substance. And the last thing, and this one's probably the most important, but took me the longest to learn, is empathy, right? There's a lot of people, especially if you're a younger guy, you typically do things and you think about the world as in like, what can I get out of the world? How can I be successful? How can I get the money and the girl and the success and the fame and the blah, blah, blah. And when you start to realize that what's actually important in the world, everything you actually want in the world is going to become more valuable when you start focusing on other people instead of focusing on yourself and like understanding.
+
+the needs of other people really listening to other people, changing your focus from saying, what can I get to what can I give? And that shifts everything. And you and it's like a counterintuitive because by doing that, you actually end up getting the things you wanted in the first place. And if you're building a project out there for people out there that are like building your web three projects, right? Don't just build because you think this is a cool idea. You want to find out who your ideal customers are. Listen to them, understand what they want, what they need.
+
+use their exact language when you're actually marketing and putting yourself out there. So you learn how to enroll others and bring others in by actively listening, by actively serving. And I think that core formula for me, when you talk about what education should be, it's got to be training those things.
+
+Citizen Web3 
+Absolutely. Amen. And it's quite a typical thing that I see, not just in young people, but I think also in adults confusing the words empathy and sympathy. And I'm not talking about the meaning in English. It's in every language. It's not about the language, linguistics here. It's about the semantics of the meaning. And a lot of people think, I'm sympathetic. I'm empathic. Well, no, those are two different things. Unfortunately, I don't think we get enough education in our young age to understand what empathy is. We understand, be sympathetic.
+
+empathic, like be sorry, be thankful, but not they're not talking about and you're saying exactly what I think, you know, but on that kind of note, you know, and slightly on that note, I guess, and you mentioned at the beginning, and I'm talking about achieving here because a lot of what you were saying about being curious about being empathic about and not achieving materialistically, but achieving, I guess, as a self -reflection wise, I don't know how to exactly describe it.
+
+You mentioned anyways, working with Richard Garfield. And I'm going to ask from a different perspective, how is it achieving something that you were dreaming about? How do you feel, not Richard Garfield himself, but it was more about like the thing of, okay, I want that. And then boom, it's happened. How does it feel?
+
+Justin Gary
+dude.
+
+Justin Gary 
+It still feels surreal to this day. So I'll tell you another story about how this got started, right? So this is where it went down. So I was, again, we're in 2011. I had just released my first game, like on my own as my own company, the first version of Ascension the year before. And I'm invited to speak at a developer conference called PAX Dev, which is like a bunch of game designers, developers, creators. And Richard Garfield's giving a talk.
+
+there. So of course, I'm gonna go listen to Richard Garfield talk. I mean, he's the master, right? I'm gonna go I'm gonna go listen. So I'm just one of the people in the crowd just listening to his talk. And then at the end of the talk, he does a q &a. And somebody asked him, What's your favorite game right now? And he said Ascension. And I literally like jump up in the crowd and go whoo, whoo, like, like a little kid, like everybody laughs and you know, whatever. But it was then it gave me my in to talk to him. So after the talk was over, I went up and say, Hey, I'm Justin creator of Ascension. And we started talking.
+
+about game design. And we talked for like three hours. And it was so clear that we like both had the same vision for what was next. Like it just everything else fell away. And it was just like right about like the craft of design and the idea that we had. And so we were so excited. We're like, Okay, let's make it let's do it. Let's do this. And so we that started this partnership now that we have had for what is it 13 years. And it's just such an honor, like, first of all, just getting to talk to him in general, like it starts the conversation starts at such a high level. And so that's like, it
+
+makes me better right at what I do. Because if I can, he will not let me get away with fuzzy thinking, he won't let me get away with missing, missing stuff. And I'm saying right now I can challenge him now too. And so you know, to your broader question, like, what does it feel like? It's a, it's a huge honor. You know, seven, there are various points where I, you know, get the various imposter syndromes that show up that I'm, I'm, you know, at this level and having this conversation with this person. But it's, it's one of the things that has served me the best over the course of my life.
+
+is I have always surrounded myself by people who are better than me and people who are smarter than me. And that has forced me to get better and has forced me to get smarter. And I don't think I can do much better than Richard. So it's been a real honor, a real privilege. And I'm grateful to call him a friend as well as a co -creator.
+
+Citizen Web3 
+nice, man. I think that when as humans we achieve, sometimes there is a side effect, like the second, the other side of the stick. Sometimes people say that when they achieve things, they start to be lost. They're like, well, I've achieved that. I don't know what I want anymore. Like what do I want now? I need to want something. Damn it. I need to want something. So, you know, it's nice to hear that it didn't happen, that it was like a positive experience that made you stronger.
+
+Justin Gary 
+Well, well, this is this goes back to what I was talking about earlier about the core formula, the core attributes, because like, when you're lost, it's totally normal to be lost. I don't want to pretend like I've never been lost. I definitely have. Right? I think every seven to 10 years, almost certainly it's going to happen to everybody. And that's when you dig back into your curiosity that you can be like lit, like sit back, you know, you can.
+
+take the time to say, all right, I don't know what I'm doing right now. Let me see what sparks my interest and just go down some rabbit holes and find some things. And then at some point, you will find something that will hook you again and pull you back. And so just being comfortable for a little while in the not knowing. And then when you do find something, you know, listen, pay attention to like when your body and your you know, because sometimes it's okay to just rest and just chill like you did something appreciate it, chill. You don't always have to be super driven. I know that's the default for a lot of us and for me too.
+
+But but once you use that curiosity to like open up and find out what's what's life need from you next, right? What do you need to bring to the world next? I mean, I again, I didn't expect to want I didn't expect to bring Soulforge back in this new form of Soulforge Fusion, you know, even six years ago, but then once the technology started coming together and like the possibilities of what was, you know, nobody's ever done this before, right? Nobody's ever created a game that has a tabletop version and a web two version and a web three version, and they all link together. You know, and so it was a massive undergoing project. If I had
+
+thought about how much work it was going to be. I don't know if I never would have gotten started, but I was just got curious like, what if I did this? how would this work? how would this work? And then suddenly it becomes like, okay, now I'm excited enough. I'm willing to do the hard work to bring this thing to life. And it's been an incredible road.
+
+Citizen Web3 
+I definitely have a couple of questions lined up about the mechanics, but I will get to them, I promise. It's kind of not ironic, I guess. I don't know what the right word is here. It's curious. No, that's not the right word here because it's going to be usable. I don't even know what the right word to describe the feeling is here you talk about curiosity because I haven't met many people putting curiosity as...
+
+At much of a center as you are because i'm like that and to me it's actually actually have a very powerful personal believe that curiosity is the strongest feeling that is the feeling for me curiosity is equals intelligence if you're curious your intelligence it's like it one has to derive from another if you're not curious you cannot become. Intelligence pieces because you won't be curious what's outside my my little box is there more food there is there more more more more animals to catch more things to hunt you know.
+
+more trees to climb. So I really love to hear that opinion. It's really cool to hear it from such an artistic perspective rather than my own is slightly boring. I'm more of a, okay, it's like that. It's about hunting and stuff, so it's cute. And this is my actual next question to you about the artistic kind of thing, a side of things. I did say I'm not a gamer.
+
+But I have played games before, and obviously I've played RPGs before when I was younger. Many, many RPGs, many days and weeks and months wasted on that. Or actually not wasted, I don't think it's wasted. But anyways, we are actually building a tool now that has, it's not a game, but it has a lot of gamification, and I believe that without it you cannot make people curious. And it has a lot of like, anyways.
+
+And one of the biggest bottles, and this is going to be so personal kind of question, I'm going to still hear the show to myself, is not a bottle, but it's a difficult process. We are self -designing everything, like really from the pixel up. What does it take to think like a designer who cares about user experience and user interfaces and the user in general?
+
+Citizen Web3 
+I know it was a very long question to get to that, I'm sorry Justin, but hey.
+
+Justin Gary 
+No, it's a great question. It's a great question that I think will be of use to a lot of people, right? Because we all want to create something in the world. We all want to make a difference and kind of serve those that we care about. So I wrote about this extensively in my book, Think Like a Game Designer. But the basic principles are you need to approach this with a core design loop. And the core design loop has six steps. One is inspiration. Two is framing.
+
+Three is brainstorming, four is prototyping, five is testing, and six is iterating. And I'll give a brief description of each, right? So step one is inspiration, right? What is it that you're really trying to do here? What is it that, why are you doing this thing? What is the point? And you want to find out. And so this usually can come in the form of like your core elevator pitch, right? Or just saying, you know, like I, you know, Soulforce Fusion, right? I want to bring the best of tabletop gaming to digital and the best of digital gaming to tabletop, right? I want to be able to have a great core experience that unites a community and.
+
+provides really interesting, fun, unique gameplay. And so at a core, what am I doing? Then framing is where you put stuff into a box. And this is really, really important. A lot of people miss this. You want to make sure you have some parameters around what you're trying to do. Because I want to make a great game. I want to make a great DeFi project. I want a great, it's too big. It's too big. And so by giving yourself some kind of frame, like, OK, you know what? I want to make sure that my.
+
+project really helps people who don't know a lot about Web3 and makes it very easy for them to get their first Web3 wallet and, you know, NFTs or whatever. I want to make sure that this is I have a first prototype in three months, making deadlines, right? I'm going to spend three, I'm going to spend six months and, you know, $20 ,000 to hire somebody to do this, whatever it is, right? Put a frame around it because constraints, most people think creativity is about like open spaces and do whatever you want. It's not. Creativity breeds constraints.
+
+So then you go to brainstorming. And brainstorming, I have a very specific process for, but basically it breaks down into kind of three phases. You want to first generate as many ideas as possible. Like turn off the part of your brain that says things are bad ideas. Like just shut that part off that limits you. You just want to make as many ideas as possible. Doesn't matter how crazy they are. It doesn't matter how bad they are. Then you want to find connections and organize those ideas. So you kind of like start to find patterns and group them and kind of mind map them into something that makes some sense. And then there'll be some gaps you'll fill in.
+
+Justin Gary 
+And then you eliminate and then you like basically then you you turn on that that critic part of your brain again, and you ruthlessly cut down to be like, what's the least amount of thing that I can prototype and create to see if my idea is right? Because almost certainly, your idea is wrong, at least some amount, right? You're never right, right out of the gate, you got to test it. So prototyping is about is about being as like simple and lazy as possible. Like what's the you know, the MVP and classic kind of production for that you want to make the smallest thing to test your hypothesis.
+
+Then you actually test, right? And this is how you actually have to get feedback from users because you don't know the truth. You don't know the truth. Your users are the truth. You're not. You're just hypothesizing. You're a scientist. You're running experiments. Then you run the tests. You get feedback from the tests. Then you take that, and then you use that to iterate. And then it doesn't mean, like, I have to go back to step one because my idea was wrong. Or does it mean I just need to, like, fix my prototype because there was something wrong with the prototype? Does it mean I need to go and change my scope? Whatever it is, right? And you go through this loop again and again and again and again.
+
+And then each one goes through a different phase where you'll start with just like very big picture, very big changes. Like, am I even on the right path? Is there even an audience or a customer base for this? Is this game even fun? Whatever the big picture stuff. And then you start refining, refining, refining to like, OK, you know what? This pixel should be blue and not red. This pixel here, you don't do it. Don't worry about pixel color until you get very, very late in the process and you make sure what you're building makes any sense. And so that's kind of a quick version of how I approach these problems. And.
+
+And again, it's not just me, like this is from my decade of research and like talking to other creatives. And I've had people on my podcast be, you know, like authors like Steven Pressfield and, you know, music producers like Morgan Page and game, all the game designers and people in the industry is all over. They all have the same process. It's not like I didn't invent it. I just wrote it down.
+
+Citizen Web3 
+I was just following it. And no, I think it is important because over the last, I don't know, four, four and a half years, whatever, I say four, but it's been probably longer. I think the second, I believe, person who identifies today, it's popular to talk about identification, right, is a designer. So I'm smiling with the identification.
+
+But yeah, you know, it's important I think because it brings it brings a lot it brings a perspective that people sometimes overlook and and the last Guy who I said look I'm a designer and that's my kind of like essence, right? He's a fella who used to work for a web tree project and then he also was talking a lot about the design You know, he was making the same emphasis kind of design is not about
+
+Hey, like you say, curiosity is about creativity, not necessarily, or creativity is just about like going, pim pim pim, no. Creates constraints and those constraints have to be, either you understand them or you don't see them. And that's when, you know, you start to fail in whatever it is. Well, you don't necessarily fail, but you start to kind of fall off those steps that you are walking up to if you don't manage to, if you don't, if you cannot manage those constraints. I want to ask you here about,
+
+UI and what you're doing with Soulforge. For example, and particularly, of course, let's talk about the deck and Web2 as well. Feel free, welcome to feel sorry, welcome. I don't know what I said there, but I feel welcome to include those in the answer, but particularly from the Web3 perspective, because it seems that Web3 is kind of...
+
+adopted like the pixel 80s 90s kind of thing but a lot of people say when they come to like I don't like it I don't want that so well what's what's your take and what are you guys doing in soulforge to attract users
+
+Justin Gary 
+Yeah, well, so, you know, choosing your aesthetic style and how those get adopted, I think is a there's a there's a lot that goes into that. My suspicion is a lot of the Web3 stuff is using more pixelated 80s style projects because they're cheaper to make. And because people that are building in Web3, especially the early people that are building in Web3 started with their primarily interested in the back end technology and the front end is like, how can I get this done as quickly as possible? So I think some of that is just an artifact of.
+
+the fact that it's a young industry and so people are more evolved design and designers and resources are coming. In terms of how I have done this for Soulfort Fusion, I mean, I have brought in some of the best designers and creatives in the world to make this. I brought in Jeremy Cranford, who was the person who was the designer. He was one of the creative leads at Blizzard and did work for Magic the Gathering and has done...
+
+you know, very classically trained and I brought in a bunch of other great creative directors like George Rockwell. And those we we take that seriously, we build a world and make a world that people care about. So if you go to soulforgefusion .com, go to the click on story or just go to slash story. We have an awesome trailer video and a world and lore that we've created. We work with great artists from around the world. We spend a lot of time and energy building characters that you will care about. And we go further and make a world that you can actually participate in.
+
+So we have storyline events that people can participate in either in person or digitally and globally. And they will change the way the fate of the world goes. And they'll change which cards appear in future releases. And if you use one of your decks, because one of the unique things about Soulful Refusion is every deck is algorithmically generated to be one of a kind. So every collectible is a one of one. If you use your deck in a tournament and you have a major event and a storyline event, we will write a custom story for you and then attach it to the NFT of your deck.
+
+And so it will be permanently there as part of your collectible that you change the world and you had a big impact there. And so, you know, does that if you're just a core gamer or a core collector, does that how much does that impact you? I don't know. But if it's someone that you like are immersed in this world and you want to become a part of it, then now you're super engaged. And it's one of the things I think about when I build games and I build the, you know, it's this ties into UI UX to like, I want to build stuff that appeals to.
+
+Justin Gary 
+a wide audience, right? So some people who are going to love the fact that you really own your collectibles, and you've got NFTs and tokens, there's some people are going to love the fact that you can get immersed in the world and the story. There's some people are going to love the fact that the game is, you know, a very deep gameplay that you can like learn about and continue to go to learn about forever. Some people are gonna love that's very easy to get into. There's no you just shuffle two decks together and play and you get started. We have a whole PvE campaign mode where you never have to play against another human, but we'll have algorithmically generated challenges for you. And you can level up your deck and gain XP and get like
+
+trigger all those classic role playing game things that we all love, right. And so not everything is for everybody. But I'm trying to build something that can have something that appeals to a whole lot of people. And then those people come together to form a community. And so I think a lot of web three design is catching up in the sense that it's like got the cool tokenomics, it's got the cool like I can see what my you know, my returns are on these things are really fascinated with the technology for technology sake.
+
+And then it's going to evolve over time and be like, okay, wait, how do I make this appealing to the user who doesn't care about the technology? In fact, doesn't even want to know what's going on with the technology behind that. I just want to be able to interact with this cool app or this cool game. I want to be able to have fun or, you know, manage my money or do whatever it is the app's trying to do. And so I think, you know, with UIUX, I think it's really you want to make it easy to understand what you can do, make it easy to do what you want to do and make it enjoyable to interact with the system.
+
+Those are my three principles for UI UX in general. And then just understanding who your audience is, who your target market is, and making sure that those things are true for all of those people is the heart of good design.
+
+Citizen Web3 
+Kind of like actually a web blockchain related question. How do you choose as somebody who comes from the web to industry into this and is attached to a lot of the sites like you mentioned, you know, the NFT, the economical things, that are there, understand all the where it's going. How do you from the side choose what blockchain you're going to use as a register, what blockchain you're going to use as a protocol for your game?
+
+I mean, how do you evaluate them without? I mean, again, I'm going to make an assumption here and I really apologize for making it. Let's think about it more as an assumption about you, but a general question, because I think it will also help people. If I don't know the industry, even if I have an expert next to me, they have subjective opinions. So without really understanding the ins and outs of every blockchain, how do I make a decision?
+
+as a game designer, how where to run my game.
+
+Justin Gary 
+Yeah, so I mean, it takes research. I spent a lot of time researching the different blockchains, different options, different tools that were available. And I, you know, Brett and experts, we brought in, you know, John was from he was basically a he was one of the co creators of shape shift, and then was part of the process of transferring it into a DAO and has a lot of experience in the space to help us, you know, navigate web three. And he's been a good partner in
+
+you know, kind of co -workers throughout this process. But honestly, after doing the research, I mean, the goal of Soulful Fusion over time is to be cross, you know, cross chain and multi -chain. But we chose Solana as our launch chain because the tech, from my perspective as a developer, the tech was better. I mean, it's cheaper to be able to mint and run the tokens and NFTs on there. It was very easy to get up and running. It was very...
+
+It felt like it was going to be easier and faster and cheaper to build there than it was on, you know, Ethereum main net or something where, you know, one of the layer twos, which we've been looking, we were also looking at. So even though there's a bigger audience, you know, potentially on Ethereum, we found that the Solana community was great. The technology was great. And, it, and again, we didn't, we only knew this from researching, right? From spending time actively looking into, okay, what would it take to build modeling out what it would take to run the system and what are, what we would expect our players to have to.
+
+play and pay and do. And so that was, it was just, you know, it just takes research and you're never going to know a hundred percent, you know, that so you can't be certain that you're making the right choice, but you got to spend, again, put some frame around it, say, okay, I like, I'm going to spend six months researching and learning and talking to developers and talking to some of the platforms themselves. And, you know, of course, you know, Richard and I are, relatively known quantities. And so a lot of these platforms were, you know, excited to talk to us and try to woo us over. And so we, we spent a good amount of time talking to all of them. And.
+
+Solana came out on top for us.
+
+Citizen Web3 
+I'm glad to hear that you're thinking multi -chain in the future that's inspiring because I like people with agnosticism towards those kind of things. It's the way it should be. It's the way it will be. They will take time, of course. I believe so at least, but we'll get there.
+
+Justin Gary 
+Yeah, it's fact. The technology is fascinating. I mean, like we're still so much in the early stages here, man, like I mean, like the promise of blockchain is we are barely scratched the surface. And of course, that ability to smoothly move from protocol to protocol, the ability to, you know, connect disparate communities. And, you know, the way I view it is, you know, we're, we're, in many ways, we're disrupting, you know, classic societal infrastructure, right. And so the idea that we have,
+
+you know, a nation and different states that work together or different nation states that can can have correlations. I think we're gonna have the same thing with all of these different blockchains that will sort of connect and say, okay, here's the rules that we want to live and govern by. And here's the rules that we want to be live live and be governed by. And then we're gonna Okay, we're gonna have rules and treaties across platforms to be able to say, okay, here's how we're gonna, you know, work together. And, you know, traditionally, you have to have, you know, politicians and lawyers and people with guns to do all of that. And now we have, you know,
+
+code and, you know, and algorithms to help us to ensure that those co coexistence and different models will work and then they'll compete in the classic marketplace, right? So there'll be some that will, you know, just be better and serve people better and those will grow and the others ones will shrink and new ones will come up and you know, in the best case scenario, this is the sort of ideal of how humans can coordinate and collaborate. And so I think that's where we're headed. You know, how long it takes to get there, how bumpy the road is that I can't tell you, but that's where we're headed.
+
+Citizen Web3 
+Amen again. Not many people living deep in the industry make the connection of nation states and blockchains. I mean, it's right now, the last two years, that connection has become more obvious to more people. But if you would have made that connection five, six years ago, people would look at you as you are absolutely out of your mind. Even today, sometimes when people talk about that, they're still like, what?
+
+It's cool to hear that more and more and more and more that people see that. And it's ironic even if you look at the price and I don't like, I'm not, this is, I've pretty much never talked about price. It's probably one of the first time I talked about price in a long time. But ironically, if you look at any price correlation of any token in blockchain, it correlates with the amount of active accounts, which is the same as GDP.
+
+So it's basically there, it's in front of you. People are like, well, but OK. Yeah, sorry, I'm going off topic here. Yeah.
+
+Justin Gary 
+That's fine. We're having a fun discussion about the you know, the future not just of web three, but of the world, right? This is like, you know, and it's an important observation, right? To say, hey, what's the value of a thing? Well, it depends on how many people use the thing because that is the way the the proxy for value that we have, right? If people are using it, clearly they must be perceiving some value in it. So that makes sense, right? It doesn't matter that the specifics of the of the price. But you know, I also obviously I come at this as a game designer, right? So I think about this like game design.
+
+Citizen Web3 
+That's true.
+
+Justin Gary 
+Right? When I make a game, my what's my job, right? My job is to like create rules and interaction between rules and systems and players to create the experience that I want. Right? So I want you to be able to have fun. So I'm making up rules that make you do things that make you have a good time and make you want to play the game. Blockchain, same thing, right? I'm trying to make rules and systems that encourage user behavior to do what it is that I want them to do. Right? So they can be engaged. It can be to grow the system. It can be to
+
+you know, stake things, whatever, like, you know, we're, that's exactly what we're doing. So I view what I'm creating with Soulful Fusion, like there's the game Soulful Fusion, which you could just play. And again, we made it so that like, you can play it totally web to never pay attention to web three is totally fine. You play it totally tabletop, never pay attention to digital at all. It's totally fine. But I think of the web three piece as a whole other game that I'm designing, saying, okay, how do I build a system that encourages the right kind of behavior, where people are actually supporting each other, where they're growing the system, where there's enough, you know, utility for the token that we're making that makes it
+
+worthwhile and desirable for people, not because I care about price. I don't care about price. I want it to be something that's that is a fun thing that you're excited to have. And that helps you to encourage you and pushes you in the direction of doing things that you're going to enjoy, like joining a great community joining our active discord, playing in events that really help you become engaged in part of your part of your identity. Or if you talked to you joked about how do you identify like, you know, I do identify as a gamer identify. And when you play these kinds of games, like I'm a magic player, I'm a World of Warcraft player, I'm whatever, like these become part of who you are. And I want
+
+that to be something people feel good about when they say, I am a software fusion player.
+
+Citizen Web3 
+Oops, I like that. I'm a self -force fusion player. Who are you? It's funny, man. Two years ago, I think it was in Boom. Boom is one of the biggest Cytron festivals. It's the biggest one in Europe. And it's in Portugal. And this was at the peak of the bull market. And I remember on the third, it goes on for eight days. And it's a bit like me and my friends were calling it Walla Halla because it's what we would imagine Walla Halla to be like. It's like, yeah.
+
+But on the third or the fourth day, I think it was the fourth already day and it was for a week, obviously no sleep pretty much. There was a guy who comes up to me and we start talking, we're dancing and we start just talking. And I asked him, I think at one point, like, so what do you identify as? Who are you? And he goes, well, I'm a GPG trader.
+
+Justin Gary 
+that sounds like a lot of fun, man.
+
+Citizen Web3 
+And I go, well, what's a GPG trader then? And obviously, he was talking about NFTs, but it turned out to be an interesting like, so I'm a GPG trader. This is the identification of that. And I just realized that, but in a sense, I think it's cool. I don't think, yeah, OK, it's a mixture, mixed signals of values. But I think in a way, it's cool that people, that the things that we've
+
+didn't think about 50 years ago, like gaming can bring you a life, livelihood, right? Like, I mean, 50 or 60 years ago, you would be probably like, you know, sent to the mines to get more coal, right? Like, and then slapped on your bum bum a couple of times. Okay, maybe not 60 years ago, but you know what I mean. I want to ask you actually something, sorry to divert the conversation a little, but I want to ask you about Soulforge because I want to understand the motivation here a little bit.
+
+Now, as far as I understand, like in Soulforge, and also you mentioned that, right? There is an interactive story where players help to create the world by making different actions. Now, in sort of cool, I'm doing some brackets here for the audience, you know, like cool blockchain gaming, like advanced blockchain gaming, what they've been trying to do and trying to achieve, they are referencing here as game designers in Web3, is to use blockchain.
+
+So basically, depending on the actions the user takes, their character changes. So complete randomization of the game. The motivation usually to include something like that, and because there is almost nothing like that today, there is barely one, two games that do that, is like quite, you know, it's the kind of things we're talking about, but on a surface, you know, it's like that curiosity, decentralization, what's going to happen next? What's the motivation for Soulforge to do that?
+
+to do something similar like that to allow players to participate in the creation of the world? Why allow, like why? Why do there's a lot of whys here, I guess, for the, why did you do that?
+
+Justin Gary
+Yeah, I mean the short version is it's freaking cool, man. I mean, you know, like I, yeah, like I'm not, you know, I can talk about, you know, the principles of design and how we're appealing to different aspects of psychographic profiles and what's going to draw the, but there's just, I thought it was cool and I wanted to do it, you know, and I, so that's the baseline answer. To give a little bit more, slightly more sophisticated answer, I'd say, you know, we,
+
+Citizen Web3 
+It's fucking awesome.
+
+Justin Gary
+as humans love to play in the space between the familiar and the unknown, right? And we want to have stuff that hooks us. It's like, okay, I know, I know I'm in this box, I understand. And then there's this new discovery that's coming, right? And so that's where with the campaign mode that we built in Soulful Refusion, it's got this rogue like element, right? This whole category of game called rogue likes and road lights, where basically it's, there's a, that you're, it's a formula and but it's kind of procedurally generated.
+
+what happens inside of this adventure that you're going on. And then from within that you have to make decisions and react. And so that creates a really fun hook for your brain to try to like, okay, wait, I kind of know what's going on here, but I kind of don't. And I have to just like, you're throwing things at me and I got to deal with it. And so like, if I just talk a little bit about Soulforge Fusion, the heart the heart of the game is these algorithmically generated decks. And so to zoom back to what I felt,
+
+when I was a kid and I first opened my first pack of magic cards, right? The first collectible. So maybe some people out there that's Yu -Gi or Pokemon or whatever, you open that first pack of cards and you have the sense of discovery. You're like, my God, I've never seen this before. Like, I can't believe this card exists. This is so cool. Right? That's that, that feeling of just like pure joy is amazing. And it's something that is one of the things that hooked me on magic in the first place. Now, nowadays with
+
+that our super connected world, right? Because this was pre internet days, right? This was like, you know, there was early internet was very early anyway. Now you get a, you have spoiler alerts to tell you everything in every card and everything that's happening. You have game walkthroughs to show you everything that could happen in every game, right? That, and we, we want those things because we want to learn and get better, but the magic, the discovery is gone. But with Soulforce Fusion, because we algorithmically generate every deck, no one will ever have the same deck as you.
+
+every single time you purchase a new Soulforce Fusion deck, it's brand new, no one's ever seen it. And you get that discovery process all over again, like, wow, okay, that's possible, right? There's more deck permutations than there are atoms in the universe. And so it creates that like, wonder that magic, that excitement. And then, and so that was at the heart of the idea of why we brought this game to the way it is. And then once we started thinking what falls out of that, and the fact that every deck is one of a kind, we're like, okay, well, what can we do with one of the kind decks that we couldn't do before? And
+
+Justin Gary 
+I was like, well, what if we made them like story relevant, like they're legendary, like a legendary artifact, this like cool thing that you could find, like you can't do this with a traditional trading card game, because everybody, even if I know that I've got this copy of a card, there's a there's a million other copies of that same card. And so it's not the same. But here, it's like, no, no, this is my deck, this one has a name, and this has a thing, and this participated in this event and was a world champion, and it changed the course of history by doing this. And like, we can tie all that together in a immutable blockchain and have that all.
+
+be part of the digital collectible, it just kind of fell out and each step kind of fell off like, wouldn't it be cool if, wouldn't it be cool if, wouldn't it be cool if, because of trying to get that heart of infinite discovery and that joy that I had when I was a kid and I opened up my first packet cards.
+
+Citizen Web3 
+I guess what I'm trying to dig here a little bit is the same question of why Web3? And I mean, why Web3 or why allow players to take randomized actions which influence the story of the actual world? I think what I'm trying to dig here is what's inside because nobody just wakes up and says, hey,
+
+I'm going to make my game also work on Web3 or I'm also going to make it the players allow them to, just because it's cool, just so they can say there is something that drives you. And that's what I'm trying to dig here. What is the bigger value there? And I'm trying, I think, to dig to that, I guess.
+
+Justin Gary 
+Well, if you want to, so there's lots of like individual little pieces here. So, if you want to talk about why web three, I can answer that question, which is a separate question, right? And I think for me, this one all. Yeah. There's a couple of reasons. one, and I'll just tell the story that for me about the original soul forges I mentioned, we first created, we're started working together in 2011. We created the original version of soul forage in 2012. And that was a digital trading card game was like the first digital trading card game before things like hearthstone and magic.
+
+Citizen Web3
+Why is that important?
+
+Justin Gary
+arena and stuff like that. And it was really cool and really fun. And we ran it for like five years. And then after five years, the servers costs were pretty expensive. And there wasn't as much of it, you know, we had to shut it down. And I have worked on games a long time, right? But like, if I stopped making like Ascension, right, with a physical version of my game, then that's fine. You still have it, you still play with it, you still own your thing. But when I shut those servers down, everybody lost everything. And that was
+
+terrible. That was like the most painful thing that's ever happened to me in my career. And of course, like for the fans and the players, like they were obviously upset, it sucked like this whole community, this great community of people, this great game was gone like that. And it was crushing. And so when I was going to bring I still believed in soul forward, I still thought the game was great. But if I was thinking, how would I bring this back, I want to bring it back in a way that it can never be taken away again. And so, so what web three is that answer, right? And that it will be this immutable version of the game that exists.
+
+And so the long -term vision of what I want to build is not just like that there's a NFT and there's a token, but that eventually this becomes, you know, community run, the servers are run by the community and there's, you know, the community build. We have the largest part of our token pool is allocated to the community fund and let them control it and help to do, to decide value. And though I think I still have an important role to play in the design and the creation of the thing and driving it forward. I want to build something that will last and stand the test of time. And so.
+
+To me, that was like the main driver to bring me to Web3. And I felt it viscerally what the problem case is. And I think that the long term, over the long term, Web3 will help solve that.
+
+Citizen Web3 
+that mute button is my enemy. People who listen to the podcast, I'm sorry, they already know, but the mute button is really my enemy. I get carried away listening and then I'm like, I need to say something. I'm going to annoy you here. I should be saying thanks for the answer, but I'm going to dig deeper. I like my devil's advocate hat. I love it. Why is it important to you to make things last? What drives Justin to, why does Justin want not to be the central person who can switch off the hook?
+
+Why doesn't Justin want to be that person?
+
+Justin Gary 
+Ooh, we're getting deep now. Yeah, I think... No, no, no. I don't mind answering the question. I mean, it's just, you know, there are certain things that when you dig deep in your own psyche, you can't justify beyond just, this is what is important to me. And so for me, things like creating and learning,
+
+Citizen Web3 
+You don't have to, you don't have to go deeper, you can answer on any level you feel comfortable.
+
+Justin Gary 
+and contributing. I value all of those things. I value them at their core. I don't care if they serve another purpose outside of that. They're just part of who I am. They're part of what I want. And when I tell you that my company motto is work with awesome people, make awesome things and help each other grow, we have an internal document that breaks those things down. And when I say make awesome things, one of the things one of the principles of making something awesome is it delivers lifelong value and delight and lifelong value and delight is something it's like you know that if you have this thing you can enjoy it.
+
+forever. You like I again, let me like Ascension I have been making for 15 years I've been working on this for launched 14 years ago. And I have people come up to me at shows and tell me that they are now playing the game with their kid who wasn't born when I launched the game originally. And they've created that bond together. Right? I've created like the people who got married over the over games of Ascension people have tattoos of my characters, people have like things that where it becomes a part of who they are and brings like this joy and consistency and I I
+
+I love that. That's what makes me come alive. And so why do I want to make something that lasts forever? Like that's a part of what it is that makes me me. So, you know, you want to talk about getting deep. That's about as deep as I can get.
+
+Citizen Web3
+Thank you for answering that. That's good. I, I once you were saying about, you know, the characters and I actually bought four, no, three years ago, three and a half years ago for the first time in my life. I did say it used to be a gamer. My, my games were used to be heroes and civilization, stuff like that. And I actually met a guy and he was, like in a group of friends and,
+
+Actually, it was me and another guy. We met this guy and he was the first guy for both of us in our lives who said what you said. He was raised by his father on a game that we played as kids. And that was like, boom, that was like, it was an interesting connection. It was like, man, your father, what, like, how does it even work, man? It was like crazy. So yeah, I understand. Okay, Justin.
+
+Let me run you through a slow, I say slow because I call it the blitz, but it's not a blitz of you. You can say the first thing that comes to your mind, but I call it slow blitz. Give me please one industry besides blockchain and besides game design, obviously for you, I'm going to cross that out, that you are curious in and you like to research.
+
+Justin Gary 
+music. I I'm very passionate about music. I love how visceral the feeling is right. We do talked about being at the boom festival. I was just recently at Electric Daisy Carnival and I go to festivals all the time and I love that like that feeling of like connection and unity and just being in the moment and bliss and power that comes from music like it's the most I love I think games are really powerful force. I think stories are really powerful force. I think you know, there's a lot of things but I think there's nothing quite like music.
+
+So if I were not doing any of the things I do now, I would probably be diving deep into that.
+
+Citizen Web3
+Nice, nice, nice. As you can see, I'm sitting here in a padded room that says everything. I'm not crazy, I promise. Well, that's a lie. Give me one book or one song or one movie that has a positive influence on you throughout your life.
+
+Justin Gary 
+I will say meditations by Marcus Aurelius. I specifically encourage the Gregory Hayes translation. I tried to read others that were like freely available on the web and they were a little too archaic to me. The translation matters a lot. But he, you know, for those that don't know, you know, he was the president, you know, the emperor of the Roman Empire during some of the height of its power faced unbelievable hardships and assassination attempts and wars and illness and all the difficulties and he wrote this book not as a book.
+
+Citizen Web3 
+Strong!
+
+Justin Gary 
+for somebody else to read. He wrote it as a journal for himself. And it talks about the principles of like how you can live a good life and that you, you know, focus on the things that you can do. Don't worry about the stuff that other people do. Don't let these other things impact you. And it's such a powerful book. I reread it every year. It really helps. And the fact that it came from someone whose problems were definitely way bigger than mine. And if he can have that equanimity and virtue, so can I.
+
+Citizen Web3 
+that strong answer. I like that. I'm going to change the next question for you a little bit. Give me one game that is not a well known game, not like a top played game that you personally think is cool. And why?
+
+Justin Gary 
+there's a lot of those, I'll pick.
+
+Citizen Web3 
+One that stands out for you calls out to you. So whenever you're like, they're doing it in a cool way.
+
+Justin Gary 
+Yeah.
+
+Yeah, I'll take a weird tack with this. I'll use a game. There's a game called cash flow. And it was designed by the guy that does a rich dad poor dad guy that did that financial book. And not Yeah, yeah. And it's like a board game. There's a there's a web version you can play for free. And it just like, it very viscerally teaches you like how to like the problems of being in the rat race and what it means to get out of the rat race.
+
+Citizen Web3 
+Robert Kisaki.
+
+Justin Gary 
+and how to be able to kind of build passive income. And it's interesting to me because it's a, again, it's just like a board game, you roll dice, you move around the board, but because you're playing it and you're doing it, it teaches the lesson embeds itself in a way that's different than if you just read a book or somebody just tells you. And so I'm fascinated by this games as teaching tool. I've made some myself, I made a game called the Breakthrough Game when I was working with the Wharton School of Business that walks people through this brainstorming and ideation process as a group, because we learned that people actually in groups.
+
+you put a bunch of smart people into a room, they generally get dumber, they come up with worse answers. And so this is a process, a game you play that helps you be better about that. And so I think things like things like that, I think are really fascinating to me. So it's a bit off off the wall answer, but felt like that appropriate for the moment.
+
+Citizen Web3 
+I think it was perfect, to be honest with you. Thank you for it. By the way, this is for all the listeners of the show, of course. Please find all the things that me and Justin mentioned in his show notes to the episode so you can click and discover whatever it is, a game or a book or an author or the game or Justin's projects, of course. Okay, last two, I promise. Give me one motivational thing that is something you could share with other people that helped Justin to...
+
+Keep on designing games, looking for new solutions, being curious.
+
+Justin Gary 
+Yeah, I'll share one of my mantras. This is something I repeat to myself literally every day. I think it's been a very powerful thing to help me and it is to cultivate comfort with uncertainty and impermanence. To cultivate comfort with uncertainty and impermanence. If you pay attention to the things you do in life, most of the time you are straining because you're trying to be certain.
+
+You're trying to figure out exactly what's going to happen and be sure that you're in control and you're trying to hold on to things and you don't want things to change. You want to be able to like make sure you don't lose what you have. And that's what we struggle. We feel the strain in our lives. And the truth is that you never know what's going to happen. You never anything you could you could get and you and also you're going to lose everything, right? You're going to die at some point. Like you're going to lose everything you have. So everything's going to change and you never can have certainty. And if you can be OK with that, then you get to flow and play in the world.
+
+You get to enjoy the game of existence. You get to actually go out there and create and try stuff because you just don't hold on quite so tightly. And so that's what I would advise and hope that resonates with other people.
+
+Citizen Web3 
+And in martial arts, sometimes they say, feel the pain. Like you have to leave it. I mean, it's basically, it's a weird way of saying what you said because it was a bit different. But yeah, I loved it. I connected a lot.
+
+Justin Gary 
+Yeah. No, the embrace embracing discomfort is part of it. Embracing discomfort is part of it. That's another that's another key, key side of the puzzle, right? We in fact, this is an area for me. It took me until my like, late 30s to figure this out. To be honest, like where I was like pre prior to that, I would just seek comfort, I would just want to be comfortable. I want to have obviously, of course, I want the nicest things. I want everything to be easy. And then I realized, wait a minute, everything that I love in my life, everything that I'm passionate about my life, everything I love about myself came from
+
+discomfort and hardship. It came from the challenges that I had. And so once I realized that, I was like, wait a minute, I should actively be seeking discomfort. So I actually put myself, like, I didn't have to make Soulful Artusia. I didn't have to try to build the world's first hybrid deck game and new technology for algorithmically generating things that connect me to what they, I've been successful enough. I don't need to do that. But I do it because it's like, okay, I'm going to choose to do the things that are hard, because it's going to make me better. And it's going to make my life better. It's going to make the people's lives around me better. And so that's, it is an important.
+
+another important corollary to what will help you move forward with the things that matter.
+
+Citizen Web3 
+I think it's crazy ironic to understand that people learn most about themselves when they're alone and people are so afraid of being alone and they're always looking for a partner or to call somebody or a partner in life or a girlfriend or a boyfriend or a dog or whatever. But the reality is that it's only when we stay with ourselves and then we start to suddenly the mind goes, but okay, last one. I promise, promise, promise, promise, promise is the last one. It's going to be a bit weird.
+
+But no no no for you. It's not gonna be worth. No no no you're a gamer. It's not gonna be worth for you. You will love it Give me one person or character dead alive made up Family member writer cartoon from a different universe who is not a guru because I don't know gurus are a bit loud somebody though whether they're dead or alive or made up who whatever you're sometimes like
+
+in that state where you look for the next answer, you kind of like, yeah, you look up, not ask what they would do, but you look up to that character or person and get something positive out of it for yourself.
+
+Justin Gary 
+Well, first thing that comes up for me is my grandfather. He is, he was a huge inspiration for me. He was always one of the like most joyous, playful, like fun, loving people that I've ever known. And he spread that through our family. And what I learned, you know, as he got older, and I mean, this was like a guy who was like, you know, in his 80s, and was the life of the party and still like had
+
+you know, social gatherings with the other, you know, people that did nearby and would play go out play cards and travel and he was super into technology and like super sharp. But I found out that it was the things that he had went through in his life. He had went he was fought in World War Two at the Battle of the Bulge or some of the worst fighting there he had lost a son to a tragic car accident. He lost his wife he lost he had a lost his business he had went through so many challenges and difficulties that are the types of things that we all like.
+
+imagine could our life ending way worse again than anything that he was gonna imagine. And I didn't learn that till later on. But the fact that he had that spark of joy that he could bring that zest for life throughout his whole existence and spread it through all of us through the whole family through everybody that knew him with again facing that hardship facing the discomfort is something whenever whatever I'm facing in life whenever I face difficulties, I bring him to mind. And that actually you can that you for people that you can't they're not watching but that that
+
+frame in the back is one of the trees we had planted for him when he passed. So I keep him with me and keep his fruit with me always.
+
+Citizen Web3 
+That's very touching and very beautiful. I like that a lot. Thank you. Thank you for sharing that. And Justin, on this beautiful note, I think I'm going to say thank you to you for your time and thank you for joining. And thank you everybody for listening in and hope to catch up with everyone soon. Thank you. Thanks, Justin.
+
+Justin Gary 
+Thank you.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 

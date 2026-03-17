@@ -1,0 +1,436 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cephalopod
+
+Episode name:
+Breaking Software, VR and Validating as a Business with Mircea Colonescu
+
+Citizen Web3 
+Welcome to the show man. Mircea is the guy taking care of cephalopod equipment He's also one of the lead engineers for informal systems. Am I am I right?
+
+mircea 
+Yes, yes. We don't really have leads per se. We're very hipster that way. have not a flat org, yeah, titles aren't that important. But I'm one of the engineers at Informal. I do take care of Cephalopods infrastructure and shit talk on the internet with people. So it's basically what we all do.
+
+Citizen Web3 
+I'm really excited about this one because like you want, I think you work for like one of the core organizations that's commit so much to Cosmos. And I would love to hear like your thoughts and your opinions here. And you're taking care of one of, well, not the biggest, biggest in proof of stakes, but I guess like you're one of the top and like, I mean, what's your 27 and Cosmos hub, right? And what's, what's your TVL right now? Do you know? Sorry for the pop question.
+
+mircea 
+No, I don't actually know. It's a couple of million atoms there. I think we're 20. I think I just looked last week and we were 20 something like that. We're on a couple of other networks too. We're definitely not the biggest. We're a fairly independent operation, so to speak. There's other more conglomerate validators on the network. But we like it this way. We try to be the centralization of it.
+
+Citizen Web3 
+What's the relation between informal systems and cephalopod equipment?
+
+mircea 
+well, it's a, it's complicated relationship. Let's put it that way. That's how it started out. the, founders of Cephalopod also are the founders of Informal. And, currently we're, we're working towards making Cephalopod just a subsidiary, to, simplify accounting and, just make it, make it like easier. It's also, it's easier to explain to people, right? Everybody's confused. but then again, I guess that's, know, the case in Cosmos, Cosmos Hub, Cosmos.
+
+Citizen Web3 
+My guess that it was especially like since like speaking to Ethan and then speaking to a couple of more guys from Informal, like my stab at it and like, of course, correct me if I'm wrong, that at one point, the validator obviously was probably started by Ethan. And then essentially, which was like the idea was to give it to the collective that you guys have it in Formal. Is that, am I somewhere right or am I completely wrong?
+
+mircea 
+I don't actually know. wasn't privy with the Cephalopod itself. It was started by Ethan with two other people from formerly known as, when they were still at Tendermint AIB. So it was supposed to be dogfooding your own network. Informal also has the idea that every business or
+
+or every avenue that they're in will eventually spin out in its own business. So that still is the case. They're currently spinning it in because it's easier, as soon as it's more, as soon as it's able to stand more on its own, idea is that it will spin out again and be independent. But yeah, that's pretty much the short of it. It was concocted at while we were all working at Tinderman. So three years ago, something like that. Four years ago, huh?
+
+Citizen Web3 
+What about yourself? mean, you said like the idea of informal is that each business ends up as their own branch. about, I mean, obviously somebody who works with informal, I don't want to say for, it sounds a bit too much. But what about your opinion? Is that what you also believe in? That like each business that starts should develop eventually at the side and not in the center? Or what's your view on that?
+
+mircea 
+Well, personally, I'm probably, I'm just a tech guy. I thoroughly dislike the business side of business. So, but, but I see that as a natural thing, right? As, as something gets larger and more, you know, heftier to manage, eventually it will have its own interests. That may diverge from the initial, the initial operation or simply just to keep things, you know, less complicated.
+
+Citizen Web3 
+Ha ha ha.
+
+mircea 
+Or I should say for more focused right and when you're part of a larger organization eventually you can get pulled this way or that way Maybe you want to spin up and just focus on your core your core activity So
+
+mircea 
+that hasn't happened yet. So this is the concept that still needs to be tested. So we'll see how that works.
+
+Citizen Web3 
+Let's talk to you as a validator now for a second, like take off the hat off and formal. What's your like mission goal ideas in terms of the technical sides where do you see Cephalopod put like developing in that side? More like making tools or more to provide an infrastructure work or anything else at all?
+
+mircea 
+Both to start. I'm going to reiterate that I'm a technical guy. So where I see Cephalopod going is being one of multiple node operators and relay operators and tools developer. I think it's already a pretty well-known fact that the community itself really likes diversity. So we'd like to be, well, not just us. We would also like to collaborate and empower other smaller validators to be a
+
+mircea 
+true community of outliers, right? Rather than conglomerate into one giant thing, which these tend, these usually things like this tend to do that, right? It's easier to operate at scale from one entity rather than many. It's very hard to, how do you say that, to cooperate when there's so many different people in different parts of the world. But ideally that's what Cephalopod is trying to work to.
+
+being just one member of a bigger community of node operators, relay operators, and validators too. That being said, you would also eventually like to start offering things like white label validation, where if you have a number of tokens on a network, you don't necessarily want to also take care of operating infrastructure. So you just come to us and we do it for you. But these are long-term goals. We'll see.
+
+Very unclear right now where things are hitting.
+
+Citizen Web3 
+I had definitely noticed that think Cephalopod is one of those validators who, let's say, I see you guys all the time in the media space on Twitter and stuff, not just talking about the network that you validate, but you always try to mention other things and repost things, repost people.
+
+And I've noticed that yeah, again, this is not the technical side of things, but still, I think it helps to show people that, you don't only need to concentrate, I guess, on what you're doing and maybe like spread more love kind of thing. But, like going to the technical side, as, somebody who, who like you already pointed yourself out as, more of the tech guy, I like that.
+
+Let's talk about relaying and about the way that relaying is structured architecture right now. Do you think that that could be improved or do you think that that's a good architecture and that's perfect and we can take it to the end of the world and...
+
+mircea 
+Is that a trick question. There's always room for improvement, right? The current state of relaying definitely is just an embryo of what it's going to be. Everything from the way that the software operates to the fees that are charged to even the model, right? Where we're kind of poking at things and see what works. There's the initial relay model.
+
+there's a relayer for between two networks. And if any network wants to connect to another network, they have to do it directly. There's also Jack from Strangelove also introduced the concept of the hub as a router or maybe another chain, but the hub would be best as a router for IVC, right? So if a chain wants to connect to another chain, it's cheaper for it to connect to the hub first than from how it goes there. So that's the technical side of it. There's also, like I said, the feed side is very expensive now.
+
+Even that still, there's lots of bugs to be ironed out so that there's a lot of extra fees being spent right now on an IBC transaction that can be practically eliminated once the software is in a better state. Specifically relating to having two or more IBC transactions for the same message that everybody, all of the relayers that operate on that channel will pay the transaction fee when only one of them actually does it.
+
+So guess that's in the short future, that's the biggest game that we have to do. yeah, from there on, we'll see. It depends on the volume of IBC, right? It keeps going up and we keep needing more nodes. We'll see where that leads.
+
+Citizen Web3 
+I don't remember who this conversation was with. It was between me and somebody on Twitter. and, maybe it was Jack. don't remember to be honest, a little while ago and about talking exactly what you mentioned, that, and well, I think we can safely assume to, to a big extent that that number of ABC transactions is going to grow. mean, we can already like, you know,
+
+based on the statistics that we have. And I think essentially we will have to come to a point where the bandwidth protocol needs some level of communication as well between those relays. I think we still don't understand how big it's going to be. And it would be interesting to see where the market and the development take it kind of thing. That's why I'm really curious at poking your thoughts about the modeling.
+
+Cause I know you guys at Informal always work on those things. you do like some with Hermes and you do like all the other work. So that's why I know you probably have some information that I'm trying to get out, you know.
+
+mircea 
+Well, personally, think that relaying should be the responsibility of validators. So eventually, I don't see relaying being as a market by itself. I mean, it's possible that it turns out that way. It's possible that users accept paying their own fees and picking and choosing which relayer to relay their transaction. But that, to me personally, feels like a very, ...
+
+heavy-handed way to handle this. should be, from where I see it, should be a validator's responsibility on any network to relay to and from the network. And it should be fairly transparent to the users, right? mean, when you're on the internet, you're not choosing who your DNS server... I mean, yes, you can, but your average internet user doesn't care. And they pay their ISP a fee a month, and then that's it.
+
+The same with this, you delegate your tokens to some validator, have them take care of everything, right? That's it. There's the IBC there and it feels a bit complex. It's already complex as a user, right? It's already so many things you have to keep track of. You always have to be aware of addresses, wallets, a little mistake can leave you broke. Adding more more stuff to that feels like it's just encumbered the user. So I'd like it to see.
+
+I'd like it to go the other way, where it's a one-click thing and the user doesn't care.
+
+Citizen Web3
+When you say validator responsibilities, because you did use... I'm not going to stick to those words. Feel free to change them. I'm curious from the technical side. Of course, from the technical side of things, it's quite obvious. We have the uptime. We have the architecture the way you put the sentry nodes and the nodes and so on and so forth, whatever. You sign in transactions. Everything is good. So the technical side is more or less, I guess, plus you added relayn.
+
+Citizen Web3 
+more or less understood, would you add anything else to those responsibilities that you think it should be validators, operators or validators responsibility?
+
+mircea 
+Well, I can't think of other things right now. I'm sure there'll be other operations for the network, other use cases for the network when they come up. And the reason I use that word pretty deliberately, responsibility, right? It's their network. That's where the validator is. That's where their business is. And the IBC was a core part of this network from the start, even though it didn't come with it. from the start. Batteries weren't included. But this was understood to be where it was set.
+
+It's supposed to be the internet blockchain and the validators are the bedrocks of that internet. I don't see why they wouldn't operate a relayer. I mean, it depends on the software too. Who knows in two, three years where the software is and how it's run. But as it is right now, validators should, as much as they can, obviously, it's also expensive to run a relayer. Try to run it and try to keep the channels open. But that being said, it is expensive.
+
+to run a relay, you need nodes on every network, you need backup nodes on every network, you need archive nodes on every network, because if know something happens to your main node, then you need to backtrack and clear the channel. it takes a lot of effort. You know, financial, people-wise, you have to keep an eye on it all the time. So yeah, while it is a responsibility, it's a very big responsibility. So 
+
+I can understand how right now only larger operations, maybe such as ourselves, are able to do it.
+
+Citizen Web3 
+I totally agree because I mean, we currently validate, well, like main nets too, which is like Cosmos hub and cyber. And we wanted to launch a relayer because they only have like Notional and another from Bro and Bro. And it wasn't more about the money. It was more about like the operational power physically have no chance of like doing it. And I understand 
+
+It's crazy. Totally I'm going to ask like a strange, crazy question. Do you think that in the future with development of well, everything really, do you think that future relayers will be in the form of DAOs and not in the form of like standalone or a couple of servers or whatever? it would be like a collective kind of thing, which is some distributed relayer?
+
+which is managed by a distributed, I don't know what cryptography you would need for that, but yeah.
+
+mircea 
+Well, it's definitely getting there. I think people are starting to realize that, like I said, you need nodes, right? That's what we really need, nodes on the network. And to take it back to what I was saying about the community, if validators and relayer operators, if they all started offering nodes on the network publicly available, then anybody can pick up a... Running the relayer itself isn't that hard. Keeping the nodes that the relayer connects to, that's the...
+
+complexed part of it. So if and when those nodes start to be publicly available, which in and of itself is hard, keeping it public, especially with the state of the software right now where, know, blasting a node with queries can easily just stop it eventually. So keeping a node public on the internet is double hard because as soon as you're open to the internet, you're open to all the script kiddies out there that, you know.
+
+I scan all the reports all the time and send all sorts of junk traffic to you. So it's a tough problem to solve, especially when we're talking about most operations are, you know, just like you guys, a couple of people. And so are we. We're just, we're just growing our team now, which find it incredibly hard and just a couple of people. So it's hard to do that. And most of the other like Lavender or Crypto Crew, Notional, Notional went on high rate. Rito, they're four or five now.
+
+Citizen Web3 
+I don't want to ask you to, give a lecture, but I'm going to ask you like a question, which I, as a operator or a validator or as a validator, don't know, everybody prefers their own like fancy names, get asked a lot. So I'm going to ask you as somebody who's a professional, what, what's is your first, security advice for somebody?
+
+who wants to start out a Cosmos validator. Doesn't necessarily Cosmos Hub any Cosmos ecosystem. What's your security advices for them?
+
+mircea 
+Buy an HSM, the hardware security module. That's basically it. Start from there, and that's 50 % of your security, Other than that, try to not keep all your sentries in the same cloud. If you're well-funded, try to not keep sentries in the cloud at all and have some data centers around the world. Local machines, yeah.
+
+Citizen Web3 
+Yeah, local machines. 
+
+mircea 
+I mean, don't keep local machines. Try to keep it in the data center somewhere.
+
+Citizen Web3 
+If you have five big cables, if you have all the super cables in the world, transatlantic internet cable, that's good advice.
+
+mircea 
+Yeah, if you can hook in straight into that, you hook in straight into the transatlantic cable, then you're good.
+
+Citizen Web3
+It's funny, like I reside on Madeira, which is like an Atlantic ocean. It's an island and we have actually a lot of transatlantic cables like that go through Madeira, apparently most of them. So if anything, I can just like pull out the cable quickly and have a good connection. it's like a switch off America. Yeah, that's it. That's it. Switch off Europe. That's it. Yeah.
+
+mircea 
+Yeah, he can also even censor a whole continent from there.
+
+Citizen Web3 
+I thought about this before. just didn't want to the conversation this way, but we were talking briefly. You mentioned like ISPs and DNS and that you can choose your own. I don't know if you ever, and I keep mentioning them at the podcast, but it's just because I really like the project. Have you ever had a project called Urbit?
+
+mircea 
+No actually 
+
+Citizen Web3
+Check it out. These guys, do, like, I don't want to get advertised too much, but just check it out. And it's a lot about like the servers, the DNS, the like a separate thing. And it's interesting. It's like an old project. And it's exactly what, what, what you mentioned that where a computer is actually able to choose their own DNS or actually is able to leave their own like ISP provider DNS. So that's pretty cool. But
+
+Back to you, back to Cosmos. Man, I'm going to read this out because there was something in your description somewhere which I wanted to ask you about. There we go. He specializes in designing and implementing infrastructure solutions on many platforms and at breaking software. I like that. So let's talk about breaking software, Let's talk about that.
+
+mircea 
+It goes to my beginnings in the space. I used to be a QA engineer. And well, in a video game tester before even that. So yeah, breaking software is basically just use it in ways that it's not meant to be used to see how it's going to break, So yeah. I didn't expect this question.
+
+So yeah, so take notes, for example, try to stress test them, see when they break, see when they memory leak, all sorts of crazy stuff. But the one thing I don't like, which we do a lot in this ecosystem is doing that in production. It goes back to the fact that there's not a lot of people working on here. Organizations are slim, so having to maintain a whole dev environment isn't usually a thing that is afforded.
+
+so you have to test the production. you do put, you know, let's swap out database backend. well, let's see. see fingers crossed. Or, let's see. I mean, we're going that way, right? We're now, we're now streaming events to the Postgres and that's probably going to be the layer that serves. It makes sense to the node itself in the database.
+
+Citizen Web3 
+Bring back normal databases, yes, bring them back.
+
+mircea 
+for the blockchain isn't really particularly suited for doing queries like that. And we can see too that that's one of the reasons why IBC is so tender right now is because it relies on these nodes to query historical state. Whereas if it was a traditional relational database, would be much cheaper to do that much faster too. It could handle a lot more queries. But yeah, breaking software. So
+
+It's as simple as it is, know, stake it and do stuff with it that is not meant to be done with it and then see where it breaks or where it can move fast.
+
+Citizen Web3 
+Talking about databases, do you think in theory though, let's again do some like fantasy here, fantasizing. Well, we're already doing a lot in blockchain, but let's do a little bit more. over time of explaining like to...
+
+people who are not into blockchain about blockchain, I found that, well, the easiest thing is not to talk about blockchain. But one of the easiest way is just to explain to a person that it's just a superior database in some meaning. But obviously, being on a technical side, we all understand that, well, there is the cost of querying, is the speed, the bandwidth with which it all can work. So in your opinion, can blockchain
+
+become a superior database to a regular database in all of the senses, whether this is like security, bandwidth, speed, cost of use, whatever, everything else. And will everybody be using blockchains instead of normal databases in, I don't know, in five years or 10 years?
+
+mircea
+The short answer to that is hell no, like everything in software, right? Like people tend to do this in software sometimes. They're like, this is going to be in the state. No man, what the hell. It's a distributed database. That's when people ask me what blockchain I'm saying it's a new model of distributed database. That's basically it. And when it gets down to the technical side of it, it's not much more than that. It's very like, it might be, you know, the best thing there is for some use cases. And I'm sure that it will be that.
+
+Citizen Web3
+Damn no!
+
+mircea 
+for some use cases, but for others, definitely not. And you can already see it, like I said, we're already putting a relational layer in between blockchain and the user, because it's not meant for that. It's to be a ledger, it's meant to be distributed. So for what it's meant to be, it's going to be great. For what it's not meant to be, you shouldn't try to shoehorn it in there, because that's how we end up with all sorts of garbage software out there already, right?
+
+I don't know it on the server.
+
+Citizen Web3 
+Talking about distributed software in general, it's not funny, I guess, but maybe ironic in some way that people try to attach magical things, attributes to a database, which again, yes, in a sense, there is some things that are cool, like consensus.
+
+like. Distributed consensus, like timestamps and everything like that. a lot of people, when they ask, how do you evaluate a blockchain project? Well, very simple. It's a computer. If you have bandwidth storage and computation, it's going to work. If you don't, it's not going to work. this is actually a big question to you. guess you have a lot of, or some definitely, from what I hear and read, experience in building distributed software.
+
+Where do you think we are in terms of, and it's like a million dollar question, know, some people say we're like at the infrastructure level. Some people say, the infrastructure is ready. Let's like start building applications now. Where in your opinion are we like in terms of like building distributed or decentralized software that is actually going to be used?
+
+mircea 
+Definitely, there's not one before the other, right? You can't build the infrastructure first. In order to build the infrastructure, you have to know what's going to be on top of it. So sure, can come, we can start with some ideas, which we have, right? We have DeFi and, you know, digital ID and the song, whatever music writes, what's its song. And it all kind of concentrated in this, you know, digital asset space.
+
+mircea
+So now we're kind of building the infrastructure towards that, right? With assumptions about uptime and accessibility and the speed of transactions and whatnot. But that doesn't really compare to something like gaming, for example, right? For gaming, the distributed database doesn't make too much sense. It might for some particular types of games, for example, but...
+
+For first person shooter, you don't need a blockchain. You might need it for the store, for the NFDs and whatnot, but to run the actual application on top of it, you don't. So to answer your question, we're at the very beginning of finding out what infrastructure to build for what apps, which is why I keep poking people all of the time. Guys, try to develop something for it.
+
+do an application and let's see how it handles and see if it's appropriate for your use case. So it should be both at the same time, right? And when we have a basic infrastructure, what we really, really need now is more apps on top of it to see how it behaves so that we can inform ourselves where to go from here. That being said, there's definitely big wins still to be had. So it's far from anywhere. It's any perfect state, right?
+
+There's still easy ones to be had, but we definitely need to start having applications on top of it so we know where to go.
+
+Citizen Web3
+For sure. mass adoptions have always happened on application level. I mean, it's never been, I don't think there's been a case in the history of humankind where I cannot think of one on top of my head. No, not for sure. Staying on the subject as an engineer for informal system, what are you currently most excited about that you can share in terms of what you're working on?
+
+behind the scenes or not behind the scenes whatever you feel like sharing
+
+mircea 
+Definitely. aside from Cephalopod, the most excited I am about is our formal verification methods and language that is being worked on. So that's the one thing I understand least about, but that excites me the most because it teases the possibility that software can be a lot more reliable, right? Where 
+
+You can run a model based tester on your software and you can be reasonably certain that it's not going to lose all your tokens or something like that, you know, that you won't get into hacks and all sorts of things. So it's a reasonable bet that your software is secure. That being said, like I said, I don't understand it. It's something that bigger brains than mine work on.
+
+But it's very, very exciting. So yeah, so informal systems, that's what I'm hoping our biggest export, aside from cephalopod, will be formal verification. And I hope that more more blockchains actually, or more blockchain projects, should say, resort to this kind. Don't just see it as, a thing. We have to do an audit. like, they get excited about it.
+
+they get excited about because I was talking about breaking software. That's, that's what verification does comes in and says, Hey, your software is going to break there. So I hope everybody gets excited about this because that's how good software gets made. And, and, and we do have to brag a little, we have some very big brain and informal working on this. I'm always not, I'm always the least smartest in the room when these heads get together for sure.
+
+Citizen Web3 
+Usually when people say that, means you have to pay attention more to them. but, like to everybody who's listening, definitely guys, like we have an episode with, with jarco from informal systems where we talk about like for 25, 30 minutes about formal verifications, because it's, is, it is a very interesting thing that I think will be very, very exciting to see or implement what implemented. I how it's, mean, I can imagine though that the
+
+mircea 
+Yeah
+
+Citizen Web3
+It's interesting that it makes the assumption that we're going to see a lot of shit coming to Cosmos that we really need. But it's true, right? I mean, if you create something that's adopted and used, you get things from everywhere, I guess. But man, you mentioned gaming. And I read, I think, somewhere that when you're not busy breaking software, you're into Rocket League. 
+
+mircea 
+Yeah, probably too much, yes.
+
+Citizen Web3 
+ha ha
+
+mircea 
+I'm a huge gamer. I've been a gamer for 30 years now. Before Rocket League, was League of Legends. Before that, was StarCraft. And my Steam collection is very large. So let me put is that way. Oh Zerg
+
+Citizen Web3 
+Which side did you pray Starcraft on?
+
+Okay, okay, okay. I wasn't a big StarCraft gamer, I did, but so I do remember it. But why football? mean, how did you go from StarCraft to, or is it about the strategy and not about the context for you?
+
+mircea 
+No, it's about the football. I'm also a big football fan. I'm Eastern European, well, Romanian in particular. I'm very football crazy. Soccer, for the people that are in North America. So I've been football crazy since I was 10. And then football and video games and remote control cars. And it's also very competitive. I get very competitive with games, so it tickled everything for me.
+
+Citizen Web3
+Ha ha
+
+Citizen Web3 
+Have you ever built your own remote? Because I know a lot of engineers who I know from younger age. Quite everybody I know used to try and build their own remote control cars or their own robots. Have you also done that?
+
+mircea 
+When I was a kid, I gave it a shot, the resources back then weren't available that much. I ended up with computers because those were more readily available. And you could tinker with a computer without needing to take it apart that much. could go into buy-offs and overclock it. So that's... yeah.
+
+Citizen Web3 
+Ha
+
+Just nuke the bias and that's it.
+
+mircea 
+especially once you're at that computer and pay like, you your salary for it.
+
+Citizen Web3 
+Yeah, I remember very, very well growing up in Eastern Europe and computers and how crazy that was and how rare lucky you would be to have access to a real computer and not to one of the typing machines that I have a typing machine.
+
+mircea 
+I know man, it goes to that community feeling, right? We used to have a neighbor with one of the kids would get a computer or a PlayStation and then everybody was at their house doing it.
+
+Citizen Web3 
+What's the first game that you remember playing?
+
+mircea
+I can't remember how it's called. was this side 2D side scroller where you played a wizard. It was on a 286 and then also pinball. Same 286 had pinball.
+
+Citizen Web3 
+Nice, nice, And I remember what about shooters? you, said that shooters don't need a blockchain, right? So especially not for the computing, like whatever the graphics is designed in there. What was the first shooter you played? Do you remember?
+
+mircea
+that one is for sure. That was Quake. That's where I guess I got the competitive edge going because it was Quake and then Quake Arena. We used to have a LAN, right? I would throw the ethernet cable from seventh floor down to my fourth floor neighbor and then from his first floor neighbor and then we would do a LAN party in the building.
+
+Citizen Web3 
+Nice, nice.
+
+Citizen Web3
+So To take it back to Cosmos, do you think that... Well, I personally don't like the word metaverse. mean, to me, it's just like an analog of the word internet, but let's use the word metaverse for the sake of it. Do you think that we will see the central and style metaverses or let's call it that develop?
+
+on Cosmos in the near future.
+
+mircea 
+Are you asking me specifically about the VR world or?
+
+Citizen Web3 
+I mean, something that size, something that is big and really has use in terms of decentralized, guess is probably the best example we have today, Of a decentralized or as close to that system that's working in that direction. And would be interesting, do you think that Cosmos would also see those kinds of things?
+
+mircea 
+I haven't given it much thought to be honest with you. It's a metaverse and the whole that that whole scene is to me is kind of like, you know, so I haven't really thought about it that much to be honest with you. It's always been something that people talk about. It's been really interesting. You know, I played Second Life a couple of times. That was my biggest experience.
+
+Citizen Web3 
+Ha ha.
+
+Citizen Web3 
+they still alive? are they still around? Second life?
+
+mircea 
+yeah, for sure.
+
+mircea 
+no, I don't know. Like I said, I only tried a couple of times, but they're still around. They're still going. They have a very dedicated following.
+
+Citizen Web3 
+Because I remember they had a huge problem with all the legal sides. And at one point, the users kept on dropping like rock stone because of all the legal problems. maybe a question about still in the same direction about developing software for decentralized or distributed environments.
+
+I mean, in security, spoke about securities use, you know, keys, hardware wallets, HSMs, UB keys, whatever. But like, what about like the, in general, the develop developing software in the distributed realm? Is it different in your opinion to developing software in the normal realm and how, and what's your advice here to people who try to only learn the world of blockchain in terms of development? mean.
+
+mircea 
+The, biggest difference in development is testing. It's hard to test a distributed system because you don't, when you're in your local environment, it's hard to simulate it. And as soon as you try to get out of your local environment, you need other people, or you need the resources to have your network distributed on a truly distributed network, right? In order to truly test something like that, you would need to have, you know, a in the cloud, one in data center and one on your laptop.
+
+one across the world, you know, on another continent. So it's really hard to properly test. And we've seen this a lot, right? In my thinking, a lot of blockchain issues, like you see all projects now and then, got hacked, there's a bug, this and that. I think a big part of that is the lack of testing infrastructure for something like this.
+
+the hardest thing in distributed system, as far as I'm concerned. That's why I'm also, to double back to that, very excited about formal verification because it would ease the burden of this on this. A lot of edge cases that you probably wouldn't run into until the network is live and you have a truly distributed system may come up during formal verification. So yeah, plus one for that. Other than that, I don't think it's that different.
+
+You do have to think a bit more about consensus. Whereas when you're writing an app that's not distributed, that's not there. So you're not worrying, but that's the beauty of Tendermen, right? You develop your app and then Tendermen takes part, takes care of consensus. So you don't really have to care about it that much.
+
+Citizen Web3 
+It's interesting because you're definitely by far not the first and definitely not the last person that talks about testing. And I've over the last five or six years like working in the blockchain industry, like I have seen so many fuck ups with that are done at those stages and like the assumptions and the presumptions of the ability of the networks are much larger of the capacity of what they are able to do, able to process.
+
+to the reality of where the network actually is working and the channels are, you know, like we talked about the internet and everything. And there's so many little things that people don't think about then. But if you, if you could like now give an advice to yourself that, know, you're just like starting out working in blockchain some years ago, whenever it was actually didn't ask you, which I want to still ask you before we still have time. Like, what would it be in terms of like a developer who, who's just, just so blockchain, like I want to.
+
+go and be a tester or a developer in blockchain? What would you say to yourself? Like go and read or study what?
+
+mircea 
+Going by Adam at the ICO. But other than that, I wish I would have actually read more about distributed systems, more about more old school, you know, actually, I don't even know what to tell you the truth to drop names right now. Go read this book. Basically, in general, go read more about distributed systems.
+
+mircea 
+Go read more about consensus algorithms. So you can understand what it's about. Because once you do that, it kind of makes sense what blockchain is. You don't really have to think about it too much. And I guess when you think about it, it's not the first consensus algorithm out there, nor the last. It's the one that we work with and it has, and again, it's the one that says two thirds, as long as you have two thirds of your network running, your network's fine. So it addresses a specific case.
+
+mircea
+Whereas you have other algorithms that address different use cases like Raft or a bunch of others. But yeah, that's definitely one of the things. Go read up on distributed systems so you understand how they work. And then you can understand if your application is a fit for it.
+
+Citizen Web3
+For sure I think IT is definitely was that one thing that just understanding computing, not IT, sorry, but computing and the way architectures work makes life so much simpler to understand. blockchains understand that there is no magical little gnome that sits inside of the database and does something. I still want to ask you that because I didn't really go that way. But I can briefly, how did you even, I mean, you mentioned Romania.
+
+You mentioned informal systems. mentioned Cephalopod already started after informal systems. You mentioned gaming a lot. So I'm kind of trying like to glue it all together. I don't want to like get too personal, obviously, where you don't want to go. like, what's the story?
+
+mircea
+It was an accident purely. I was in a traditional FinTech corporation around 2014 and then Greg, a colleague of mine quit and started to work for Tendermint. Not really sure exactly how he got into it. I think he may have gotten just recruited. He was also from a traditional FinTech background. He used to work at Morgan Stanley.
+
+Citizen Web3 
+Wow, wow, cool, 
+
+mircea 
+So he started working there and we had a soccer game that we played every week and he kept talking about it and talking about it. And then at some point when I got, like, I kind of got fed up with the mood where I was working, I started working at an investment fund and I wasn't exactly super happy there. And he was like, Hey, you want to come work for blockchain? At first I was, how many people in the DevOps and SRE industry are like Google blockchain? its a scam
+
+Leave me alone." And then he kept badgering me and then he brought me in. And I guess I met Ethan on the first day, which is always a good introduction to the ecosystem. So from there on, I had started talking to him and it wasn't even about blockchain, was about work in general and how hard we make it for ourselves right now.
+
+how inefficient and how exploitative everything is. You know, we went down that rabbit hole and I was like, wow, what is this even all about? And I did not know that these are the kinds of things that these people talk about at work. So I was hooked from day one. That was it. It wasn't even the technical side. was talking about work and how to work and how to treat your employees better and how to not work, to disconnect from, that's probably one of the...
+
+the biggest flaws that I see right now with the ecosystem is that they're always connected. There's no second that which they're not, you know, it's on. So my personal goal is to preach this from the top, the highest mountain is like slow down, man. Take the day off. Think about other things, know, ideas will come that way.
+
+Citizen Web3 
+It's a huge topic, I think, that more and more people are coming to the realization of that. And it started, think, think I read somewhere a while ago. So I'm going to sell it as it is. And then this is something that I heard, the amount of information of data.
+
+that our brain processes on an average day, just by reading, let's say, for example, the New York Times Sunday paper from core to core is more than 100 years ago than the amount of data that the person would process during their lifetime. And like that bombardment with data is essentially like, well, I mean, yes, the brain has so much capacity to store information, but only to probably, and I guess this is like where...
+
+blockchain comes in and like being like a 24 seven kind of thing. And like, it's crazy. It's crazy. I totally understand. Is that what, what you mean? Like the amount of things that we have to remember and process or
+
+mircea
+Well, that's that's one that's definitely one of them but I mean just in general people don't take a break You know, they always think about it so it's I find it's a bit unhealthy right because then you get into this bubble and you kind of forget that there and then The reason why it's important is because if you want to make blockchain work You have to understand where it with the rest of the world, right? You can't just live on the blockchain have to incorporate it into
+
+I guess what I'm getting at it has to be, it's a tool. can't become our life. It's just a tool, right?
+
+Citizen Web3
+Sorryy to interrupt. It's my favorite sentence. It's a tool. It's not the goal. man, like, it's just totally agree with it. 
+
+mircea 
+Yeah, the goal as I see right now, probably the biggest thing that can come up, that's more, that's the most obvious that will come out of blockchain, I think, is that the way we organize ourselves and the way we cooperate. So I think that's where we should focus our attention, to use this tool to better cooperate, to better understand, you know, without having, always having this misinformation, like use the tool to understand and trust, use the tool to understand and trust, which is funny.
+
+because blockchain is all about not trusting anything. But ideally, that's what it would end up in, increasing the trust between people, which would solve, you not to go there, but it would solve all of our problems.
+
+Citizen Web3 
+Interesting that a lot of things assume that automatically blockchain is a P2P. It's not a P2P technology. It's the man in the middle between the two people. It's called a blockchain P2P. If I like exchange something, thoughts with you and then it be P2P. but because we don't I totally agree with every single word there because it's sad when people forget that the goal is...
+
+humanity and not, you know, not money, not anything else, not technology, whatever, but it's just like the survival. Well, I guess survival at some places, but whatever, man, but what do you do? being obviously breaking software at some points, developing software, taking care of a huge validator, in my opinion, even though you guys, and I like that you don't have a lot of networks, which means you can like concentrate on bringing value to.
+
+the ones that you do instead of like validating every single thing just because you can put up a node there. What do you do to help you not to burn out and not to completely go crazy?
+
+mircea 
+I have mastered the art of disconnecting. When I consider my day over, it's done. And obviously I'm on call, so servers don't care about humanity. But other than that, I completely just get disconnected. I stop reading about anything. play with my daughter, play Legos, go for walking. It's very underrated. People really need to start walking more, know, go outside.
+
+And then not alone too. I mean, you can do it alone. That's also for meditation, but, walk, and talk with people. it's a very underrated activity. but in general, just, you know, socialize with people and just go outside. Talk to people and go to their houses, I guess, play board games, something not completely unrelated. I almost burnt out a couple of times years as the years passed and I found that.
+
+It has to be done. just have to completely disconnect. Turn off your notifications. Put your phone on. I leave it without my phone. I leave my phone at home when I leave many times, straight up disconnect. Don't don't overdo it. And I know it's hard, right? I still have that tugging feeling of like, man, what did I So it's always in the back of my head. Like I could have done this. Like what did the news line say?
+
+Citizen Web3
+Man, this is very, very, very good. I like the inside because everybody mentions burnout, but sometimes when you ask a lot of guests, like, what do you guys then do? We'll get very like, I don't know. And then, and then, you know, it just shows that.
+
+People really do burn out and they really do need a break. They really do need to understand that, yeah, yeah, yeah, guys, is a whole different world out there. Is there anything else that you would like to add in terms of like the work that you guys do that I didn't ask in Cephalopod that you would like to mention or to talk about or at informal maybe some news that you want to share or anything like that?
+
+mircea
+Well, we're definitely so to your point about being on networks that you're not just throwing a note up. The ones that we're on, we're looking to make a significant contribution outside of just a note. And in particular, the name cephalopod, we're actually going to fully embrace that. We plan to we've been looking at I should say  
+
+mircea 
+A number of organizations that do deep sea studies that look at ways to clean up the ocean. So we're looking at ways to contribute to that, either financially, some of them are asking for donations, or in any other way possible, maybe even see if there's any way to combine science with what we do. So we're going full bore into that. We do need more people because it's a hard thing to keep track. But yeah.
+
+We plan to embrace it with all of our seven or eight arms, depending on what type of octopus you are.
+
+Citizen Web3
+That's really cool. That's really interesting to see validators starting to reach out to the real world as well. And kind of like, try to not just say we're going to change the world, but we're not going to like.
+
+mircea 
+Yeah.
+
+Citizen Web3 
+have anything to do with the real world. It's interesting. It's cool that you guys are going that way. Man, thanks for this really honest, very, very honest opinions and very honest conversations from some, from, from the technical, not, the very technical side, but the somewhat technical side. And, and it's always cool to see like a different opinion. Always cool to hear it. I enjoyed it a lot. Thanks.
+
+mircea 
+Well, thanks for having me here. now that I did it once, I'm getting a taste for it. I'll say it's maybe because you're such a great host. You kind of let me do my thing.
+
+Citizen Web3 
+Yeah!
+
+Thanks very much man.
+
+mircea 
+Thanks again.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

@@ -1,0 +1,291 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/peng-tendermint
+
+Episode name: 
+Management, power abuse and naming with Peng Zhong
+
+Anna
+hey it's citizen cosmos we're serg and anna and we discover cosmos by chatting with awesome people from various teams and communities join us if you're curious how dreams and ambitions become code 
+
+Citizen Web3
+hi everyone it's serge and today we have Peng zhong with us today the ceo and president of tendermint inc if i'm correct he was also tenderman's first employee and is the member of the newly formed board of directors at tendermint and if i'm also correct you're the original developer of the voyager wallet is that correct peng 
+
+Peng
+hey serj hey anna it's great to be here that is correct 
+
+Citizen Web3
+do you want to introduce yourself a little bit and talk a little bit what you do for tell everybody about your new position maybe straight away or maybe just have some chit chat about what you're up to lately and then how will you be and how is the situation with corona before we jump into the questions where are you at by the way 
+
+Peng
+yeah the situation where corona is getting better i'm in toronto and in canada and uh the cases are going down every day and we're able to go outside and go inside of grocery stores and and such but our restaurants and movie theaters are still closed 
+
+Citizen Web3
+yeah because we were in berlin a while ago and berlin got opened and then um we kind of moved from berlin right now to a different place here is everything open as well so we're hoping that we don't get somewhere where it's closed now but anyways so the first question that i do want to ask you is like the biggest thing that happened to you as far as like i would put it you became the ceo of tendermint and for about a month now care to share the story and how did it happen how how's it going so far 
+
+Peng
+yeah so i was uh promoted a ceo in a board call around the end of may so i've been operating in that position for uh what is it like almost two months now like a month and a half or so it's been really busy and uh it's been you know quite a departure from my last role which was very much focused only on visual design and user experience so now i get a better idea of what everyone in the company is doing it's a lot to keep track of but i'm very happy to have a great team that is able to to work on a lot of things independently so i don't have to you know micromanage any of them they're they're really awesome to work with one of the the biggest things i've been working with lately is uh getting everyone on the same page getting everyone working on the same mission we've had a lot of projects within the company and it's a matter of figuring out which ones you know align with our mission and which ones could be made to align with our mission because i think everyone still wants the same thing which is to bring about the internet or blockchains so it's mainly a matter of aligning people on that 
+
+Citizen Web3
+i think like everybody who listens to these podcasts and yourself as well everybody has heard how ceos work in the fiat world but obviously tendermint is a bit of a special vehicle i would say right it's a special company you just mentioned the intended blockchains and what is your mission as a ceo on a position at this vehicle which is tendermint which is not a usual world company what would you say your mission is for the world for the company or for the world or whatever how you want to describe it maybe 
+
+Peng
+yeah i think everyone at the company and myself included would still love to see the internet of blockchains happen like i mentioned before and how do we make that happen right there's ibc coming but that's you know not being developed by our team but there are a lot of ways that we can help that happen with the talents that we do have in the company and my mission right there is three things uh one is to continue to invest in engineering whether that's uh you know by hiring engineers or by investing in external engineering teams i want to continue improving the developer experience i believe there's a lot of low-hanging fruit in terms of usability of the sdk and how we approach developers especially developers without blockchain experience and then lastly to grow the value of the cosmos ecosystem i mean right now the value of the cosmos ecosystem is uh just the atom but we hope there will be many more tokens in the future so that's really exciting for me 
+
+Citizen Web3
+do you think there will be additional tokens on the cosmos hub itself 
+
+Peng
+um with ibc i believe there will be lots and lots of different types of tokens on the hub and i'm excited to see what people end up putting on the hubs 
+
+Citizen Web3
+i was referring more to the photon right if i'm not mistaken the idea of the photon is still alive at all 
+
+Peng
+that idea is still alive in the minds of many and we're working with uh chain safe which has been spearheading the the ethernet project so we haven't gotten into the details of token distribution or even what the token will be called yet but you know one of our original ideas way back then i don't know 2017 or something that was that there will be a fee token on the hub and it would be called the photon but you know three years have passed which is an eternity in blockchain land so i think we're still having to figure out what that might end up being but we're really excited to bring the evm to cosmos through collaborating with chainsafe 
+
+Citizen Web3
+chainsafe are quite cool we actually recorded a podcast with them in regards to the aragon chain and it was really exciting they shared a lot of insights going back to your position as a ceo i know it might sound boring to you but i think it's actually quite interesting to understand what you do because it's i know like i said it's an unusual vehicle and um is it the same you know like in a normal well i don't want to use the word normal maybe like in the real world of fiat again real world for me is blockchain so in a fiat world like we usually when a co comes into a company it usually either you know sweeps the state clean isn't like says everybody okay now we're gonna change everything and rebuild everything from scratch and there's the ceos that come into the company and they kind of try to understand what's going on and build on top of what is already happening so what kind of a co are you are you like the first kind or the second kind or maybe expand a little bit if you want 
+
+Peng
+oh yeah there's definitely very little of sweeping the slate clean i believe that what we've been working on and what the community is working on is very valuable and important and my goal is to continue to build on that right as as the community continues to build on ibc continue to work on the cosmos sdk continue to build and tendermint core a lot of those core engineers are not in our company anymore but the tools we want to build and the you know the community we want to build relies very heavily on those tools so in my role as ceo one of the things i've been working on not sweeping the slate clean but um seeing how i can connect these tools and improve the user experience of using those tools so we actually have a an alpha product launch coming within a week or two i think maybe by the end of the month i can't announce it yet here right that would be um i would be pre-announcing it by the time this podcast goes out i think people may already know what it is and it's meant to be a tool built on top of the cosmos sdk that makes it very simple and easy for any developer to build a blockchain yeah coming from a design background i really care about accessibility and ease of use and user experience and um with this sort of background you know i've come into cosmos and um i think the sdk could be much easier to use so this product will make it much faster to get you from an idea to a blockchain on the realm of minutes instead of hours or days 
+
+Citizen Web3
+it sounds something very impressive because obviously inside our projects we use cusoms decay and i'm familiar with a lot of people who use the cosmos decay in one way or the other i even know projects who form cosmos sdk and use their own alternatives but everybody is already saying that it's one of the easiest tools to use and i'm really excited and i can understand what you say when it's not easy i can definitely relate to that as somebody who's not an engineer who's like self well i try to learn but i'm rubbish my code doesn't go to production that's that's for sure but um but yeah but i can definitely relate and i'm really excited to see 
+
+Peng
+i understand i think the people who will listen to this podcast you know if they're developers especially they might already know how to use the sdk and you know this tool is not meant for them it's not meant for people already in the ecosystem my goal with this tool is to bring cosmos to mainstream developers in particular web developers there are such a huge number of you know web developers around the world today and application developers we did you know very very rough research on this recently and uh there's roughly maybe 24 million you know developers in the world but when you talk about blockchain developers i don't think it's a million i don't even think it's a hundred thousand and when you talk about cosmos developers that's like much less than that maybe i don't know within the thousands or you know even sub 1 000 so you know there's this vast gap between people who already know and love cosmos us a few thousands and the world who could benefit from a decentralized framework for building apps in the multi tens of millions so that's my goal right to bridge that gap to bring cosmos to many more people and we're hopeful that with a better better initial tutorial better experience a much faster experience to getting your first blockchain running we can make some of this happen 
+
+Citizen Web3
+i definitely agree that web development is the correct well in my opinion anyways that's the correct way to move forward because we saw what web development did to the internet at least right and to the whole world of development 
+
+Peng
+yeah and what are we building here right it's the internet of blockchains it shouldn't be a very difficult idea i think with you know how amazing tcp tcpip has made it to easily connect web pages and get people browsing around the entire web and figuring out in all these use cases that are made possible by internet by lowering the the barrier to entry and by approaching more and more developers with the idea of a very easy to use simple tutorial and a scaffolding tool i'm hoping to to get you know the same explosion of ideas and tools and companies onto the internet of blockchains as the internet today 
+
+Citizen Web3
+yeah and we have well i'll say we as somebody who's like a cosmos uh ecosystem member um so i think because we have ibc which is to me is like a best replacement for tcpap in terms of the way you don't have permission anymore to go to one from the one database to the other that's it that's like a win-win situation and with what you said i think that's it will be amazing if there is a tool that can like on board a developer who doesn't have any blockchain experience just like as a web developer just boom and he's there and i think that's that's gonna be big i'm really excited 
+
+Peng
+i'm really excited about you know the upcoming stargate upgrade to the the cosmos sdk and to the hub and you know the test nets that precede that because you know like you said before that includes ibc it includes ibc 1.0 and this is really fulfilling the original vision that we that we set out three years ago you know blockchains that can very easily and permissionlessly connect to the cosmos hub and to other hubs 
+
+Citizen Web3
+yeah 
+
+Anna
+so the work of ceo is a tricky thing really everything is on fire like all the time all pretty much all the time for you personally what part of see your role is more difficult or you feel that it's a more important part of your role 
+
+Peng
+yeah i think there are many very difficult decisions that um that ceo needs to make one of them is related to you know alignment so what do i mean by alignment i mean that people in a company have expectations of other people and uh i guess it's very closely related to communication but if you don't communicate enough then then both sides are left with different sets of expectations of the other and especially um if you have a manager and an ic individual contributor who have different expectations of what they're supposed to deliver that can cause a lot of conflict so resolving that in a manner that you know makes the manager feel like they're being listened to by the employee and to make the employee feel like they're empowered and what they're doing and they're passionate about their work is one of the things i'm focusing on 
+
+Citizen Web3
+would you say that you had to make a decision already that you did not want to make by now in the last two months maybe not you not wanted to make but a decision that you had a hard time like come into it but you had to do it as a ceo that you wouldn't have done as if you were not a ceo 
+
+Peng
+yeah yeah i've had a number of these decisions you know difficult decisions to make within the company and uh that's that's expected of what this ceo is supposed to do but uh what really helps me and what really helps everyone in the company uh is to you know align on a set of set of missions and to align our vision and so if you go into every decision with this vision in mind as the end goal it becomes very clear how to make decisions and of course you know to make the best decisions you need to communicate as much as often and over communicate whenever you can because especially with a remote company what you grow to understand is that not everyone is listening not everyone is in the meeting with you not everyone checks that channel on slack if people reads what you're typing on slack you know maybe they didn't understand it maybe they scanned it over so the more you're able to repeat yourself you know the exact same message the more it actually helps your team align on the same goal 
+
+Citizen Web3
+i can't really relate to what you just said i think i can as well we both like current oh my god because i see owed a blockchain remote project before and the most difficult thing i found is what you just said promote teams do not read what is there it's just especially this is the crazy thing especially your the best developers the best people on your team they pay less attention to that
+
+Peng
+Ha ha ha
+
+Citizen Web3
+how do you fix that apart from repeating yourself obviously you said you repeat yourself but but is there a way to automate it or to fix that 
+
+Peng
+yeah it's it's a difficult problem and uh just blasting what you say in public channels or in group meetings with lots of people is not always the best way to talk to someone right it's valuable but it's also very expensive to conduct as many one-on-ones as you can with people you feel like maybe are not you know getting the message that you're putting out there for everyone else so doing these one-on-ones aligning people personally understanding where they're coming from and making them feel like they're listening to that's another really important thing to do in a remote org because if you don't have on these one-on-ones right people are not really going to voice to you you know things they're unable to voice in a group setting 
+
+Anna
+yeah do you have some life hacks or some best methodics or things like you still okay it works really cool like this special thing or this special methodology it's lots of them but maybe you have some best for you 
+
+Peng
+it's probably a pretty common hack but i think taking care of yourself and prioritizing yourself is really important right you shouldn't make your life about work and i'm not expecting anyone in my company to work overtime to work on the weekend and that expectation goes for any any new person we hire and it's something i try to reiterate to my employees who may be very excited about getting something done but i always recommend for them to you know take it take it slow we're trying to build a long-term project here we're trying to build something that will last maybe even outlast all of us and that's not going to happen if you burn yourself out you know running running a sprint instead of a marathon 
+
+Anna
+hmm it's a really important thing but uh what drives you apart from the work what is what kind of hobby and what kind of things that you feel that okay it's keep me going and it's currently it's the best thing that i can do to motivate myself 
+
+Peng
+especially with the chronovirus with covert 19 right i don't get enough time outside and also with working from home like if you're not paying attention you may end up spending all your days and all the daylight hours at home so i think going out there you know getting some fresh air going for a hike if you can or exercise outdoors in the way that you prefer is extremely important i used to have other hobbies but you know with the workload that a ceo puts on you i have fewer hobbies now and i think just getting some fresh air you know seeing the sunset and enjoying nature especially during the summer right is really important and it'll help you keep grounded you know as you struggle with some maybe difficult decisions in work 
+
+Citizen Web3
+Hmm by the way we didn't ask you how you actually got into like your story how you got into distributed ledger technologies or blockchain or whatever you want to call it right these days everybody has their own term what's what's your story how did you get into that 
+
+Peng
+yeah i heard about bitcoin a long time ago i think in 2011 when uh i spent a lot of time on hacker news back then and then there was a there's a post that popped up says oh bitcoin just hit one dollar and everyone's like what the hell is bitcoin and i was the same that was sort of the first time i knew bitcoin existed uh of course i didn't invest nobody invested in bitcoin back then unless you're like totally crazy but they're they're greatly rewarded now 
+
+Citizen Web3
+well i actually have a story for you after you tell your story i have a small story for you 
+
+Peng
+yeah so and then over time it gained more and more legitimacy in you know in the early adopter crowd i put a few dollars in bitcoin i think what is it in 2013 14 or something i don't remember anymore of course i sold it all when it crashed around 2014. but um around the same time this guy contacted me over email i used to work with him and in a startup i was actually contract contracted by his startup in 2010 to build a website for his team and it was this like office productivity app but anyway in 2014 i was contacted by this guy he said hey i have this really interesting project and it's in blockchain do you want to work on it with me and i was like oh yeah blockchain seems really interesting like i just always felt intimidated that you know i'm not at least back then i was not a developer i mainly messed with you know html css primarily web design stuff so i always felt intimidated by cryptocurrency and i you know i had no idea where to get started if i wanted to actually dig into developing crypto so i was like all right this guy seems like a sound developer and i worked with him in the past and i liked his idea in the past so let's let's try it and see what happens and turns out this was when was this this was like late 2015. turns out this company was tendermint and that person i was talking to was jay kuan 
+
+Citizen Web3
+wow 
+
+Peng
+and i was the first employee of that company 
+
+Citizen Web3
+that's really cool what did you guys talk about is that if it's not confidential of course 
+
+Peng
+no it's not confidential for quite a while until we you know stumbled like across the idea of doing something like cosmos we really were trying to figure out potential use cases for blockchain and one of the use cases that we that we thought might work was you know using blockchain enterprise settings so a lot of my early work was devoted to building some sort of blockchain monitoring interface for enterprise to use uh we we thought that you know maybe enterprises would be interested in a hosted blockchain solution in a similar way that web apps and such are hosted on google cloud or aws right we would be the blockchain backend provider for companies that want to use it well over time that you know that didn't really get anywhere i believe jay and ethan you know approach investors about this uh about this crypto for um for enterprise idea and we didn't get much in the way of traction the idea completely pivoted to something like cosmos which ended up being much more exciting and got much more traction with uh i'm sure it's already been explained many times on your channel with the sort of 17 million we raised in btc and eth over the course of 30 minutes i think this is 2017 right yeah 27. 
+
+Citizen Web3
+yeah it was 17 yeah it was 27. 
+
+Peng
+Ha ha
+
+Citizen Web3
+think i think as well ha ha
+
+Peng
+struggled for a long time trying to find good use cases for this project and uh you know doing a fundraiser was clearly the right way to go 
+
+Citizen Web3
+what was the most obscure use case that comes to your mind right now that you remember the one that you were like oh my god really or maybe you came up with it yourself 
+
+Peng
+oh i mean we didn't go that much into details about the various use cases of crypto i was really very much focused on the enterprise blockchain hosting idea and i think what's funny in some ways is that i think maybe we're just too ahead of the curve because i believe there's still a market for enterprise blockchain hosting it's an area we're still looking into actively within the company so i think it's going to be funny later when i show my employees the the sort of ui i built five years ago laugh at how much you know the space has uh has moved around since then 
+
+Citizen Web3
+yeah we spoke with ethan when we had ethan on he he was saying the story about the whole idea behind the enterprise blockchain and uh i think it was the single with this come train that he spoke about that related to this somehow i can't remember how he related that but i'm sure he somehow related it but it's interesting because i mean isn't i don't know if it's the correct way to describe it but i would say that polka dot is probably looking more at enterprise in terms of what cosmos does then i don't know i don't know if it's the correct way to put it because it's i'm putting it right now not from a technical point of view but rather from uh rather from somebody who's in the market for a while and like obviously with the costs that polka charges for security and you know it's a bit harder in my opinion for small projects well maybe i'm wrong but and maybe it will be different but let's see how it evolves it sounds to me like they're more about enterprise and cosmos is more about right now about like the bigger picture 
+
+Peng
+yeah i'm hopeful that you know polka dot and cosmos can interoperate i believe what is it chorus one has a contract icf to implement ibc onto substrate so you know i'm open to any blockchain framework and blockchain team that wants it you know interoperate with cosmos chains through ipc i think ibc really is the killer app you know in the end we're all really targeting the same same people right you know while shared security in polkadot seems like it might be very expensive it's also you know a really great way of securing high value chains and you know to be honest like we've in cosmos been thinking about shared security as well and i'm sure we'll have some variation of shared security implemented on to the sdk so there are many ways you know solve the same problem you know as long as we're able to get projects to support ibc i think we're going to see a lot of great things happen and a lot of ideas that we never could have thought could exist 
+
+Citizen Web3
+you mentioned yesterday on twitter you mentioned centralized twitter i have some secrets super secret information but by the time these podcasts come out it's not gonna be secret anymore do you think that it's possible to make uh the centralized version of twitter using the cosmos sdk or 
+
+Peng
+yeah i think it's possible i think there are well from what i can tell there's several teams working on this whether it's the decentralized twitter or decentralized slack or decentralized facebook um all these ideas have been have been going through people's minds in various capacities around the ecosystem and i'm excited to see you know which solution ends up winning out i think some some of the people listening to this call might also realize that i built something like this uh in the recent past this thing called dither right it was a very early alpha version of a decentralized twitter built on the sdk um we're now re-pivoting what githur is and thinking of a way to make it even more useful for people one of the core issues i found while developing dither as maybe almost an exact twitter clone or as exact as possible on the sdk is that twitter is built for very high amounts of interaction with low amounts of transactions with low value i'm not saying that you know tweets are worthless but what i'm saying is that compared to a transaction where you send 1 000 adam to somebody and you compare that to a tweet generally you know in most cases the the transaction setting tokens is much more valuable than the contents of the tweet and so if you zoom out and look at twitter as you exist today there is a massive scalability problem with the current sdk and how it would be able to support something as big as twitter are you expecting you know all the validators of a different zone for example to store you know these hundreds of millions and billions of messages right well you know the cosmos hub currently doesn't even have that many transactions and validators are complaining that these blocks are taking up too much hard drive space 
+
+Citizen Web3
+what about using an external storage like ipfs or anything else well obviously we need some incentives and let's let's imagine that file coin is existing already so it's in place i mean it could be like a variant to move everything i'm not sure if this actually uses ipfs or not because i've used it like very i've looked at the code briefly i haven't tried it out so i've only looked around it 
+
+Peng
+yeah i think you brought up some great possible solutions right with ipfs or filecoin dither uses none of those it's really like an early proof of concept and actually uses google firebase to collect different specific transactions that happen on the hub so that i mean that's clearly not the right solution there but we just wanted to get that out there to see what could be possible using just the the memo field of cosmos hub transactions but yeah you know the ideal solution is definitely its own blockchain with its own custom message types and uh a decentralized storage method 
+
+Citizen Web3
+that sounds like i'm not gonna say anything but it's cool and you'll like in a few days 
+
+Peng
+i'm hearing their hands here i'm hearing a lot of hints so i'm excited to see you 
+
+Citizen Web3
+i'm gonna stop but and off top questions it's not often because it relates to design and obviously i've seen you describe yourself as a minimalist a few times in a few places well you're obviously a professional when it comes to user ui or ux or whatever i'll always get those two words cross chris they're gonna probably gonna kill me when if i mix them up but you know for an onlooker sometimes ui and ux gets crisscrossed but anyways the question it doesn't relate to that it relates to the fact that in terms of products and design in our sort of circles we've been discussing lately a lot blockchains and off-chain work and the idea that blockchain should be designed in a way where if somebody's cut from the power centralized power source and is cut from the state he should still be able to work somehow or like sign transactions for example then he can broadcast them later to the network when he's connected and he's synced but those tools have to be comfortable and they have to be in place because right now like when we look at most blockchains well pretty much no one has that that is like about three or four blockchains that are more or less able to provide some tools to work with an off state and then that's any anyways i think you get where i'm where i'm going with this this is cosmos planning anything like that 
+
+Peng
+so first of all i agree with you fully i think not everyone has an always-on internet connection there are people within countries living with poor infrastructure which makes that impossible or let's say they're they're traveling you know and their connections on and off but they still want to be productive and i think supporting you know an offline first user experience is really important i'm not working on this i don't believe anyone on my team is working on it but you know especially as we get more developers building using the cosmos sdk this situation is going to come up more and more excited that you're thinking about this and uh we definitely need to come up with a solution for this for cosmos chains i think it's mainly ui based right i mean you can already using the cli create as many offline transactions as you want to broadcast in a later stage but that sort of functionality is not really being revealed to blockchain users or token holders who are not familiar with cli but yeah like i'll give a concrete example right before we move on i think for those people who are maybe less technical maybe a concrete example of this is let's say you have a notes app on your phone even that's powered by the sdk you're definitely going to want to be able to create notes offline when you don't have access to to a cell signal or wi-fi right requiring a notes app to need to be always online and connected to the chain is really sub-optimal so so this sort of um feature that search is proposing is something that needs to exist 
+
+Anna
+yeah what is the most important thing for you support best quality user experience is it something that we need some big object that we need to try to do first or maybe something else just to say okay it's the best quality we can provide for the moment in terms of user experience 
+
+Peng
+okay yeah so this question is really broad i want to focus on one part of it which is user experience of the sdk you know developer experience i think that we want to have an internet of blockchains but unless building a blockchain is really easy right i think one benchmark for me is you know when when i was like 11 and 12 years old i got into into web design and you know i had i took a class on html and it was pretty easy to figure out how to use html i use tables right and i grabbed gifs from the internet and i sent them this table and i was like oh this is so cool now it's a website you know having future 11 year olds and 12 year olds be able to actually use the sdk and build a blockchain and deploy it this is the sort of level of usability we need to reach with with blockchain development if we want to have any sort of greater traction right we need to make it super accessible we need to make it easy to use for people you know i understand a lot of you know cosmos documentation is in english right now but we need to translate it right to other languages as well because we want this to be a worldwide web right of blockchains so any way we can make it easier take less time require you know less complex terminology ideally require no you know background in blockchain development at all and we reframe it as you know a way of building a decentralized app the sort of more attraction we'll get and uh the more blockchains will enter our ecosystem you might argue that you know with young people they're not going to build anything of value well that's true but to be able to get people started and to introduce them to something they can use as a beginner and make them feel like they're empowered while using it is the way you know to in the future get them excited about a career about building this to serve real business use cases you know in a serious product that will solve real problems 
+
+Citizen Web3
+you mentioned a lot obviously interactions with blockchain and you mentioned developers and can you imagine for a second or maybe have some kind of visualization obviously been coming from the ui part of the field as well how it will be for the developers of the future who are still kids right now will they be like where have put their vr glasses on and interact with the cosmos sdk from inside of the vr or how will it look can you imagine some anything like that or is it too far-fetched 
+
+Peng
+yeah i can totally imagine that it is quite far out you know i have um an oculus quest headset myself it's very early on right it's only for early adopters right now but i'm assuming over time as hardware becomes more powerful the device becomes smaller and lighter more easy to use i i hear apple alright it's coming out with ar glasses in the next couple of years or so which sound like they're gonna be much lighter and easier to use and more accessible you know than current vr goggles today primarily because you can see through them to see the outside world i think there's plenty of opportunities for blockchain to get involved and to be used through ar and vr i don't know what it looks like right now but you know i would expect that even 20 years out a lot of people are still going to be developing code in front of a some sort of screen with a keyboard hardware keyboard in front of them i don't think everything will be happening in vr 
+
+Citizen Web3
+totally have you seen the gpt3 demo on twitter from the host's name he showed how he didn't reveal the code and he said you could only like basically what it was in the demo like if the guy just writes give me google sign button in yellow big and i want in the middle to say subscribe and he writes that and then he presses enter and it gives them the codes right that's amazing 
+
+Peng
+yeah that is amazing i saw that it got posted in our company slack as well it's really incredible you know how far eri has gotten i'm excited to see what happens to it in the near future i actually signed up to get beta access to gpg3 there's like this open ai website i think that's where people are getting access and using gpg3 in the various you know sort of small hobbyist projects that get viral on twitter so if i get a chance to try it i'll give it a shot i don't know how that relates to to blockchain yet but you know it's clear that content creation at least some sort of some sort of content creation is already possible gpg3 you know given like a short text summary of what you want they can build an entire article about it or they can build you know like you said a button or a set of html elements based on what you described um i don't think it's going to be replacing jobs especially in design anytime soon i was pretty funny looking at that looking at that tool as a designer because um i've had many cases without an ai you know design being poorly translated into code so that was pretty funny 
+
+Citizen Web3
+i can imagine i can imagine you say give me a balloon it keeps giving you like red or whatever you know like something silly like that like that's blue especially with subjectiveness you know an ai like with its open ai where you have like a lot of subjective opinions and you know like but anyways let's talk about looney for a second and uh obviously it was called voyager back in the day if i'm correct this is information i only personally found out when me and anna started to research information about you before the podcast i didn't actually know that you were involved in looney is that correct at all 
+
+Peng
+yeah that's correct before looney there was cosmos voyager and before cosmos voyager it was called cosmos ui before cosmos ui it was called base coin ui and before base coin ui it was called tendermint ui it's gone through very many revisions and um i'm not sure if the good history has been deleted or not but if you go through the looney source code you might be able to find some of these initial commits you know way back in 2015 where it was meant to be an enterprise blockchain explorer so that's yeah that's the sort of high level history of it um i guess what most people might be interested in is how you know looney became its own separate product outside of tenement so it was originally built in house by me way back in 2015 and as we expanded over time especially you know after we did the cosmos fundraiser well i guess before the cosmos fundraiser we already had this question in our mind of you know how are people going to interact with cosmos blockchains and of course the obvious answer is a wallet so we knew a wallet needed to exist and you know after we pivoted away from in a chain from enterprise blockchain hosting right we decided okay we need a wallet of some sort we're going to call this a wallet it's called base coin ui but right and i was working on that with matt bell who is part of nomic right now and working on i think a bitcoin side chain but anyway we built this wallet it was usable for you know the various test sets that we had way back then
+
+and then over time right as our team expanded especially after the fundraiser we got more people to work on this wallet make it look great make it more usable we started supporting features like you know on-chain governance and uh you know delegating tokens to validators i guess even back then you know we were one of the very first proof-of-stake projects so we had to come up with our own way of thinking of how people would interact with validators and how to make staking as easy and as simple as possible so that's always been the purpose of basecoin ui which later became possible to ui and later became cosmos voyager like as we got closer to you know the first launch of cosmos hub right cosmos have one uh we have this thing called cosmos voyager and people used it to interact with uh with the hub over time it became clear that you know there were very many great ideas within the company as to how we can make cosmos more accessible and uh how can make the technology stack more powerful and we had to think about how to allocate resources and there was a discussion that happened where you know we decided as a company back then that we wanted to really focus on being core infrastructure and that meant that a project like cosmos voyager um was in danger of like not having enough funding not being able to hire enough people to be able to build the best wallet ever for cosmos chains and so two employees at the time who were working on looney more than me at the time because i was moving more towards corporate design and user experience they decided you know with the help of the interchange foundation to spin out to form you know learning systems and uh to take the original cosmos voyager source code and continue maintaining it under the rebranded name of looney so those two people jordan bibla and uh fabian weber they're really great to work with i think they're you know he was a great designer jordan was a great designer and fabian is a great developer and we still talk to them they're still on our slack and i'm still figuring out ways of collaborating as our team right now focuses on getting more developers to the cosmos ecosystem you know they're all going to need a wallet so we're still in discussions about how we can work together to ensure that developers are very well supported by things like wallets and other infrastructure that's needed like you know block explorers to launch a successful chain 
+
+Citizen Web3
+by the way what was the name voyager change to luna i mean voyager sounds so much cooler 
+
+Peng
+well that was not my decision right because we have fewer resources within the company to work on voyager you know the looney team that was funded by the icf sort of had free reign to name it anything they wanted i believe they're also focusing on you know being the best taking interface for all proof of stake blockchains so maybe it's better than not cosmos voyager because that ties them too closely just the cosmos 
+
+Citizen Web3
+yeah you mentioned i think it was you who mentioned uh interaction design right i'm not sure if it was on twitter or if it was in one of your blogs where i saw that are you planning to implement interaction design or is it already implemented somehow in the customer's hub 
+
+Peng
+yeah interaction design is a really broad topic i believe it may be you found it on my website as such as ceo right i have less day-to-day work involving interaction design but um it's a very broad topic i think one way of describing it is any way you have interfacing with the cosmos ecosystem is an instance of interaction design so whether that's you following adriana for example and reading her today in cosmos tweets or whether that's you clicking on the cosmos website and reading about what exists in the cosmos ecosystem or you know if you download a wallet a wallet that supports cosmos atoms and and uses those atoms to perform a seeking transaction or vote on a proposal like any time you're using anything related to cosmos it's really a part you know within the umbrella of interaction design so now you see how broad it is i think making interactions with cosmos as pleasant as possible as intuitive as possible and as headache-free as possible is one of the goals of the company and i mean tender cannot control every single access point to to cosmos right it's a community project so it's about working with the community helping out where we can to make the process of discovering the sdk and using the sdk easier for everyone it's a very ambitious goal but i will help out however we can
+
+Anna
+yeah speaking about uh goals and community i think it was adriana who told us that i'm born by the community i know that there are a lot of open positions at tendermint right now so could you tell us uh what are you looking and why and who is the person who can just have a perfect match with the tendermint 
+
+Peng
+okay perfect match to tendermint well that's a very tall order you know we're not specifically at least for the non-developers we're not specifically looking for people with cosmos experience i think it's really great to welcome more diverse opinions and uh to be able to get other perspectives from outside the blockchain space into the company because one of the biggest problems i think blockchain has right now is its image to the world at large right the reason bitcoin hack on twitter has not been helpful in that respect right it makes it look like bitcoin is related to scams and that's the connection that's maybe in a lot of people's minds so the more we can help people understand whether even that's by hiring people who are outside of blockchain and get them into this space the more we can you know adequately tell the story we want to tell about blockchain development and why it matters so yeah i don't think the perfect candidate exists but um we're hiring a lot of people primarily because there are deliverables we need to make to the icf we're working on several projects that i think will add you know greater liquidity to the cosmos ecosystem um whether that's through ex like new types of tokens or just by bringing on more people more you know potential token holders to the cosmos ecosystem so we have nothing to announce in these in these areas yet they'll have more over time 
+
+Citizen Web3
+i have a bit of a controversial question i think um relating to the board of directors i'm gonna be devil's advocate here um don't you think that the board of directors actually centralizes things rather than decentralizes them 
+
+Peng
+yeah that's a good question maybe it wasn't clear enough in the way we presented it so we can work on that but um up until you know yeah up until the board was announced actually the only board member we had was jake juan right he was the sole board member and the ceo so that actually means that any effort we take to create a board with more than one person is actually further decentralizing the you know the ownership of the company and the leadership of the company so we're actually doing what we can you know to decentralize because before there's only one person on the board i'm happy to say that there was a recent board call i believe actually just monday of this week in which we expanded the board seats to five and uh now we have five people we're adding um yeah we're in claire hoff who is a former vp of udemy and she also worked previously at a apollo graphql and we've also added nick tomeno founder at oneconformation and previously at coinbase i think both of them will really help us grow as a company because they they come in with perspectives of working at much larger companies and they can you know they can see possible trajectories for tendermint that can lead us in a positive direction so i'm really happy to work with him on the board meetings 
+
+Citizen Web3
+why specifically uh these people was there any reason or 
+
+Peng
+yeah of course we talk to our team internally and then ask for potential leads on people who may want to join a board so that's where that's where some of them come about and then for nick specifically he's one of our series a investors and then he expressed interest in taking a closer look at what we're doing and helping guide us 
+
+Citizen Web3
+i know not by from my own experience that working with a set with a decentralist community is probably one of the toughest tasks i've had to do because you have to especially when you have a project which is an ico and you're trying to be decentralized about everything you're doing and you're trying to put everything an open way up keeping with all those i will come back to the board of directors in a second you will see how i'm going to connect this it's not easy to connect all the dots you have the investors you have the like series like maybe the pre-sale round investors then you have the open sale the ico investors then you have just the community who's came to the market later on then you have the developers and and so on and so on it's not like there's no hierarchy really just a lot of everybody all together so so the question is which does relate to the board of directors in that sense do you think it's crazy at this stage or at any stage at all to say uh to add to the board of directors people who are just regular members of the community to come and say okay let's have a vote on chain vote on the cosmos hub to propose a validator somebody or maybe somebody who's not even writing a validator maybe just some random person to say okay let's get this guy into the board of directors and everybody says yes with a stake and does it make sense i don't know 
+
+Peng
+yeah that makes a lot of sense i think if you're asking specifically you know if we can just add community members to the that tendermint board of directors i think i have to get back to you on that have to talk to our team first but uh in terms of using the software that we build you know to create corporations right i think it's a really compelling idea i think you know there is a way to use something like the cosmos sdk in in a similar way to gaia right to actually have gaia or something like gaia act as a corporation you know where token holders are actually shareholders where something like the token on the chain is actually called one share right and uh depending on the number of shares you have you can influence decisions through on-chain governance and there's definitely some way of mapping that to you know a real corporation or maybe in this case we should call it a distributed autonomous organization right dao's so i'm really interested about research in this area and i think it's a really great use case of the sdk so i'm excited to see what people come up with in this respect it's something where you know we're thinking about internally as well how much do we want to use our own product we can there's been discussions of creating a Tendermint blockchain you know just to serve the employees of the company and we'll play around with that and see what sort of uh maybe polls or on-chain governance decisions we can make using this sort of mini employee-only blockchain 
+
+Citizen Web3
+Hmmm because i'm personally excited about arrogant chain starting to work together with leatherman that will bring taos to cosmos obviously 
+
+Peng
+yeah i think aragon has had a really clear idea and i'm excited to see what they're executing on especially as they bring over you know all their smart contracts over to ethernet 
+
+Citizen Web3
+i mean that's the only reason if i'm not mistaken chains they've started to develop ethereum because of arrogant chain essentially and then it became they got a grant from the ic i'm not really sure about the story here but this is what i know as an outsider so but this doesn't matter really i have a question which um and relates to all of that um and relates to cosmos at all questions about prison because i'm a bit of um a lot of people describe me as somebody with like strong views i don't know what that means but whatever and um i could say i'm probably a little bit auntie like a corporation kind of guy and all that i don't know what it means obviously anyways but what's about prison does it can you tell us what is it and does it still exist do you plan to work on praise more because it to me it seemed really interesting 
+
+Peng
+yeah so prison break came out of um edward snowden's revelations about nsa spying on basically everyone anything they can get their hands on and that was in 2002 i gained quite a bit of traction they reached number one on reddit our technology and um it's gotten millions and millions of views i'm not maintaining it anymore myself but it's being run by community which i think is really cool i guess it's sort of one of the the first open source projects that i've built that that is sort of running by itself now so i'm really proud of what they're doing you know maintaining the list of projects that can be used instead of these closed source proprietary projects that may or may not be sending all their data or giving access to to various state governments i still find that you know a really compelling reason to use decentralized software happy to be more directly involved in building tools that that work against government surveillance and support privacy 
+
+Citizen Web3
+but personally sorry for me it's like really touchy topic because i think that's the only reason that is one of the main reasons why i personally been in this space for about like 10 years well since the beginning pretty much the very beginning maybe like i missed the first year and a half or whatever what got you into that subject i mean obviously govern surveillance but what personally motivated you to create it was pain was that something that happened in your life or was that something you came across i mean you don't have to answer obviously but i'm curious what motivated you to create prism 
+
+Peng
+there was definitely no personal experience that led me to create prism it just i feel and still feel you know very idealistic about the importance of privacy i've read and seen various ways lack of privacy is abused by people with authority over those without authority right i don't i don't have any quotes to mine but um you know there's when you have access to all the information about someone you can easily build a case against them you know using selective pieces of information that point to them as being a guilty party when they're not actually at fault it's just too much power to have other people so i you know i'm supportive of ways where you know the common person can um can use tools that make them that safeguard them against that against abuses of power and privilege
+
+Anna
+yeah and we have the kind of traditional question about free projects that you excited about right now and obviously this blockchain project but not related to cosmos or ethereum or bitcoin what projects 
+
+Peng
+yeah um there are a lot of really interesting projects out there but i think two in particular that have caught my eye is uh is near protocol and avalanche i think near protocol is doing a really great job of making their tools very accessible to you know javascript and typescript developers in which there are a lot of in the world and this is the sort of developer experience i'm hoping that um the cosmos ecosystem is able to provide as well you know having very simple actionable tutorials that solve real problems using a stack that you know a lot of people are familiar with yeah they look pretty interesting and then with avalanche their their consensus protocol looks very elegant and clean and it's easy to understand so i'm excited to see what comes of that i mean they're both in the end potential competitors to the cosmos ecosystem but um all of their code and all of our code is open source so you know i'm just happy for the for the blockchain ecosystem as a whole to move forward with these areas of research 
+
+Anna
+yeah amazing thank you 
+
+Citizen Web3
+yeah i do think avalanche is very interesting i was excited a lot when i first heard and professor i cannot pronounce emer's surname when i first heard him talk it was very very interesting to see like how it's different from in consensus terms from what existed then is there anything else you you want to share with us that we didn't ask you maybe 
+
+Peng
+there are so many projects we're working on internally that i've loved to share but uh i'm not able to share yet you know just just uh follow our twitter handle and uh i'll be able to share them as soon as we can 
+
+Citizen Web3
+thanks for agreeing to uh come on and grab a piece of your own time because obviously as you said ceos are busy and i hope that we didn't steal your time from the sunshine which was your obviously free time i know i don't have a lot of it so thanks for agreeing to come on and thanks for sharing the info with us 
+
+Peng
+hey serg and anna thank you for bringing me on and you know thank you for asking these questions i think you know the community probably wants to hear something from me right being the ceo of tendermint and uh i'm grateful for the opportunity that you guys have given me to do that 
+
+Anna
+thank you 
+
+Citizen Web3
+thanks everybody who's uh listened to us today and join us next time for citizen customers time bye bye
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

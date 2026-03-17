@@ -1,0 +1,416 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/davidpinger
+
+Episode name:
+Code Replacing Banks, Convergence of Blockchain and AI with David Pinger
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. And today I'm glad to have David from Warden Protocol with me. David, hi, welcome to the show,
+
+David Pinger
+Hey guys, very happy to be here. Thank you guys for having me.
+
+Citizen Web3 
+Glad to have you on. You're not an easy person to catch. But we did it. We did it. it. Got to catch them all, right? Sorry. So let's start with a kick off of the traditional thing. David, could you please introduce yourself to myself for the listeners? And also, if I can ask you to include in your intro story your Web3 story. How did you get into Web3? And of course, what you are currently working on.
+
+David Pinger 
+Haha
+
+David Pinger 
+Sure, sure thing man. My Web3 story, it began a long time ago and I'm going to have to go back to the very origin of where everything started. So when I started, when I got out of university, right, I kind of began, my first job was in venture capital and private equity. And really my role there was all about like
+
+how do we make investment decisions? right That's what I was doing. I was an investment manager. So this was all about making investments into startups or into equities or into public markets, whatever. And I think what excited me at the time was, I love this analytical challenge of using data and statistics to make some type of trading decision. But then,
+
+think over time and maybe with age as I got older, I really started to question like the system that I was a part of. And I kept wondering like, who am I? Well, who's anyone for that matter to be the gatekeeper for which kind of ideas get funded, which founders become successful. And I had this, this reflection. And at the same time,
+
+that this was like in 2008, the financial crisis really left like a big impression on me and it impacted me and my family. And I discovered the Bitcoin white paper and something just clicked for me. This idea of having like a decentralized trust minimized financial system that's a bit less like reliant.
+
+on these intermediaries is just something that like deeply resonated with me. It was kind of like an answer to everything that I had become frustrated with in my last job. So I left my job behind and my curiosity led me to join Binance. That was kind of the start of my Web3 story. And I joined Binance when I was still very small and young company.
+
+David Pinger 
+I was kind of working at this intersection of like product data and analytics and we were going through hyper growth and I really loved it. And I think from Binance, I kind of dove like deeper and deeper into decentralized finance. And eventually I found myself managing and leading a big blockchain research division. So we had some like
+
+20 engineers, and we were exploring all kinds of like cutting edge kind of technologies. So we had a team that was focusing on zero knowledge proofs. We had a team that was focusing on multi-party computation, and we had a team that was working on artificial intelligence. And I think it was for me really during that project when I noticed that I had this realization that blockchain and AI were starting to converge.
+
+And I saw this as like a big opportunity. And I also understood then and there that there isn't really infrastructure to support this change. So, I mean, what has been happening since I left my job, I gathered, I called up all of my friends that I have been working with throughout my career. And from bootstrapping Warden ever since, it's kind of become like our little baby. So,
+
+I'm working seven days a week on it for the last, I think, 12 or 13 months now. And that's really, yeah, that's who I am.
+
+Citizen Web3 
+I'm going to dig a little bit if you don't mind. you mentioned VC and I had a question here jotted down about that actually. What was the
+
+David Pinger 
+Yeah.
+
+Citizen Web3
+The most valuable I would ask lesson that working for traditional VCs gave you that you took away into Web3 with you.
+
+David Pinger
+The most valuable lesson that I had is that you're not the founder. So oftentimes, you know, I think that that was one of the things that I got frustrated with is because essentially sitting there on the other side of the table and you are making recommendations and suggestions and you mean well, but you don't know what it's like to be in the shoe of the founder.
+
+Citizen Web3 
+Yeah.
+
+David Pinger 
+You haven't been there. So I think there is a large disconnect between what a venture capitalist sees in a company and the realities that are on the ground from the point of view of a founder. So that was a bit like, I think that that was my biggest takeaway. And that was also what drove me towards this change of saying, hey,
+
+I'm not content anymore with being a passive investor. I want to get active. I want to get out there and I want to try this out myself. So I think that that would be my biggest lesson from traditional VC world towards towards becoming a founder.
+
+Citizen Web3 
+I remember recently speaking to one of my guests on the show and we were talking about the difficulties that sometimes are often unnoticed for founders, especially as a worker, you could always leave the company. You could just quit if you are sick of it. As a founder, you just mentioned, Warden has been your little baby for like 12, 13 months, seven days a week.
+
+And so apart from doing the work, you you have your life on the line. So I can assume, you know, I not assume, but do you think that there is that Web3 founders risk more or is that an overstatement?
+
+David Pinger 
+No, I think as as a web three founder, you're kind of putting everything on the line, right? Like for me, you know, I have about like 15, 16 years of work experience now. I've got kids to feed, man. you, when you are in web three and when you are a founder in web three, I mean, the reality is the majority of startups fail. The statistics are undeniable. Right? So I think in web.
+
+and as a founder in general, mean, you're forced to act like an owner. It's not enough to rent the apartment. You need to own the house. And that means clocking out is not an option. It means that you are end-to-end responsible for everything that you have going for your company, right? This is like you said, it's your baby. And that means, you know, that
+
+means sometimes you work on the weekends, sometimes you have sleepless nights, sometimes you don't know the direction that you're heading in, sometimes things are uncertain. If everything was predictable and we knew the answers, and this would be easier, and this would be a walk in the park, but that's not how it is.
+
+Citizen Web3 
+I mean, I totally agree. mean, being a Web3 founder for several years, not several, but quite some years now, and I've seen the difficulties and experienced those difficulties hand on as you talk about. But if we look on the other side, is there something that in your opinion Web3 founders have it easier than Web2 founders?
+
+David Pinger 
+I think the, one of the advantages that you have in web three as a founder and I kind of like, mean, kind of know like a bit of both sides of the table, right? I was working in web two and I transitioned into web three eventually. I think that I cannot. Understate the importance of having a community to share this stuff with. That's not like how it is in web two. When I have a complicated problem on word.
+
+and I don't know the answer, then I can go out, lean on our community, solicit feedback from them, ask them for their advice, and they can provide that instantly. Having such a channel in web two, there's different ways to go about it, but it's less direct, it's less quick, it's less impactful, I would say. So I think a big difference for me being founder would be you
+
+can lean on the community. I think that also brings with it some challenges. It's a lot faster paced, right? There's a lot more new technologies that get introduced. You're very much at the edge of what's possible. Sometimes the nature of Web3 and I guess innovation is sometimes you're running down a direction and then it turns out that the technology isn't capable enough yet.
+
+So that I would say that that's kind of the flip side to Web3.
+
+Citizen Web3 
+Okay, let me put you on a small, I mean, it's a kind of a humorous question, but let me put you on the spotlight here since we're talking about community and development. A theoretical, hypothetical situation, you need to choose between, you're building an application or a project and you need to choose between three developers that are super efficient and they know your stack or a community of 5,000 active people, but with no dev experience at all and they will never be developers. What do you choose?
+
+David Pinger 
+That's a tricky one. I think, you know what?
+
+I think I'd go for the community. I think I'd go for the community. Having said that, I mean, I don't want to undermine the contributions of the developers, right? But I feel like it has to start with the problem of the community, not with the developer building a solution. It has to start with understanding what is...
+
+Citizen Web3 
+It is tricky.
+
+David Pinger 
+the thing that's holding the community back at the moment, what type of problems are they facing? And then you can go into the development of it and building it. So I very much believe in a market pull rather than a technology push. And I think that the community is in a better position to provide that.
+
+Citizen Web3
+interesting for you and for the listeners. Some personal, intuitional statistics of asking this question for many years. I do ask it sometimes, not every time, but it's interesting what I noticed. People who build tools tend to answer developers. People who build protocols tend to answer community. I have noticed that already. You followed it, so thank you. It means we're establishing a ground.
+
+David Pinger 
+Yeah.
+
+Citizen Web3
+Ok Since since I mean, last kind of well, I don't know if last or not, but but more or less kind of to to to wrap the the Web3 story. One more kind of tricky ish question. Do you think that I mean, because because you're what people tend to I hate that word OG, but you know, what people what people call OG. And it's true, you've been here, you know, you said you discovered the white paper very early, you've been here since the very beginning, you've seen ups downs. And you're
+
+David Pinger 
+I've lost paper wallets,
+
+Citizen Web3 
+And that's important. That's important. wait, wait. You're gonna, then wait, we'll go back to that. This is a good one. But, but, wait, wait, wait, wait. Hand on your heart. Do you think that, I mean, I'm sorry to go from humor to more serious question, but kind of, kind of thing, a bit cheesy, but hand on your heart. Do you think that since you've joined this industry and it doesn't matter what role you've joined the industry, but since you joined it,
+
+David Pinger 
+Yeah.
+
+Citizen Web3
+You said yourself, you joined it for certain intuitional values that were drawing you to here. Do you think that lives of people who are not today into blockchain have been changed by this industry and what it does for the good, of course, not for the bad?
+
+David Pinger 
+So have like web 2 people been impacted by blockchain's development, right?
+
+Citizen Web3 
+Yes. Yes.
+
+Citizen Web3 
+But do you think so?
+
+David Pinger
+Yeah, I'm thinking about my answer. from my point of view, yes, it has been impacted. I think that with blockchain, there are a couple of, like when you really look at like the fundamentals of what are the principles that blockchain upholds, right? The terms that come to mind are things like
+
+self-custody, right Terms that come to mind are decentralization, verifiability, permissionlessness, autonomy. And there's a reason why those technologies were introduced around shortly after the time of the financial crisis, right? There was a decline in trust after the Lehman crisis. And since then, I mean,
+
+How different is the line from Lehman compared to the line of people waiting to get their money out of FTX? So I think that there is a, there is meaning to blockchain and there is meaning for why we do the things that we do. Does that mean blockchain is the panacea for all types of problems? No, but there are use cases where distributed systems make sense. And I think that
+
+To answer your question, yes, I think it has touched people profoundly. And I'm glad that we're seeing this pickup of like even more traditional finance embracing blockchain technologies and cryptocurrencies, right?
+
+Citizen Web3 
+You once, I think it was on a podcast, if I'm not mistaken, at least, you know, my research on the internet showed it to me. I didn't listen to the podcast, I must say, but you had a phrase, blockchain isn't for humans. now but AI agents, right? The rest of it. So it kind of reminded me when I was a kid, I used to love sci-fi, still love sci-fi books and
+
+Arthur C. Clarke, one of his books famously says that stars are not for humans. And is that what you meant by that phrase or did you mean something else? So let me ask more directly, what did the phrase mean? Why did you say that? Well, what's the
+
+David Pinger 
+Yeah, mean, blockchains aren't for humans was kind of like the North Star for why we created Ward. And it's kind of afterwards that this trend of agents started to coalesce. So what do I mean by that? When you look at blockchain and AI, right? Those are two types of technologies that kind of developed in silos from one another.
+
+Right? So, you know, both of these types of technologies didn't give that much like consideration to each other. They kind of, you know, they did their own thing in their own domain. and then really it was, it wasn't until I think last year that those silos were starting to break up. And I remember I had this, I remember going to token 20, 49 in Singapore. then suddenly, you know, there, I found myself among like.
+
+Suddenly there's like hundreds of AI side events. And I think, and those were all centered around, around AI. So there was this convergence of both of these technologies and it's happening now, it's happening in real time and it's changing the web three narrative. It's been a blockchain based web three narrative. And I think slowly AI is being
+
+folded into it. So blockchain isn't for humans. Our idea of saying, hey, what if the users of blockchains and blockchain based applications aren't actually people anymore? What if they will be agents acting on behalf of people and kind of starting to replace the app paradigm that we have created in the first place?
+
+So that was the story behind that phrase.
+
+Citizen Web3 
+If I'm not mistaken, it kind of aligns with some of Vitalik's earlier plans for Ethereum. mean, earlier in terms of it was done long ago, but the papers were written while ago. But we're talking about the future with Ethereum where, you know, I'm pretty sure that at some points he mentioned and papers, not papers, but his blog, you know, where he writes a lot.
+
+And he talks that the Ethereum L1 is not really meant for human interaction. The L1 is meant for machine to machine interaction. that's the whole point. So is that where you kind of head in with that?
+
+David Pinger
+So actually, we looked at it and I would say in the in the convergence of, can think about it like this, like basically both of these big technologies, looking for solutions to each other's problems. Whether that is the centralization in AI or whether it is something like throughput and finality optimization on the L1 side.
+
+The intersection where I think, and that's the one that Warden is focusing on the most, is at the application level. So today, and I mean, you will notice there's hundreds of projects building at the intersection of AI and crypto. But when you're looking at the applications, they really haven't had their AI moment yet. I mean, show me the blockchain app that's using AI today.
+
+So why is that? It's not because AI doesn't hold promise. If you want to bring AI on chain and use it in an application, then that's foremost a very complicated deep tech challenge. Building like a truly intelligent crypto app today, it's nearly impossible with the types of blockchain integrations that we have. So...
+
+With Warden, we have this belief that I think ultimately every crypto application is going to use some type of AI. And I think that this type of machine learning and artificial intelligence can unlock a new and different type of intelligent application that will replace the app paradigm that we know and use today. And that's why we built Warden. So that's the intersection that we are focusing on. We, period.
+
+Citizen Web3 
+No doubt you are absolutely right in terms of, at least in my opinion of course, that every app will use, know, just like we see in Web2, every app has jumped on the bandwagon of using AI, whether it's even WhatsApp for God, don't ask me why I have WhatsApp on one of my phones, but I do. And probably shouldn't, but here we'll, I need to talk to the wife somehow, right?
+
+David Pinger 
+Hahaha!
+
+Citizen Web3 
+I'm sorry, I'm sorry, I'm sorry. But even they added their own AI right now, right? I was like, what? They upgraded it and it has like now you can ask things. So I definitely agree that, I mean, for example, you know, we've been building an explorer, a different type of a blockchain explorer for some time now. And our idea has been to integrate AI since the beginning into it. But, but, but you mentioned something important you mentioned in my opinion, at least once again, AI centralization. For me, those two,
+
+that those two words ring a lot of bells. And I want to talk a little bit about that because you're the man to talk to about this. So, I mean, you did say that Warden will focus on the application layer. No problem. Let's maybe we can, you can again talk about Warden, but it's more of a general question, I guess. How do we decentralize the consensus layer on Chain AI? How do we make models transparent? How do we teach the models in a way
+
+where it's not a black box but an open box and all do it all on blockchain on chain.
+
+David Pinger 
+Yeah, think that, you know, a big picture, Decentralizing AI.
+
+I think that it's a noble mission and it's something that needs to happen. And I think if the projected impact of AI is really as big as we think it is, then it shouldn't be in the hands of a few companies, period. It's dangerous. So how do we get there? Luckily, blockchain has given us
+
+technologies to be able to go there. So
+
+Where do I start with this? mean, when we first designed Warden, our idea was how can we use AI to enable more intelligent applications? And in the process of that, how can we try to have more open, transparent and verifiable models? And in the course of that, we quickly came to understand that, you know, general purpose blockchains, whether that's Ethereum, Solano, whatever.
+
+They're entirely not well equipped to handle AI. So what do I mean by that? Blockchain and AI can't naturally talk to each other. So they are very fundamentally different systems. You have AI on the one side, and this is generating probabilistic outputs. It's relying on very complicated, large scale calculations. That's the AI side.
+
+David Pinger 
+Blockchain, on the other hand, there is no such thing as probability. This is deterministic. Same thing input, same thing output. You undergo consensus and there are limitations that you have on finality and throughput, for example. So if you want to solve this, some of the questions that you need to think about are, you know, some of the questions that we have been thinking about throughout the last like 12 or 13 months is
+
+How do you handle these heavy, long running computations without blocking the chain, for example? If you have an inference for chat GPT that takes 20 seconds, are you going to block your chain and just stop all of the transactions through it? That's a That's a non-starter. A second one is, for example, how do you verify reach consensus on something like an LLM?
+
+that produces a different response every time you ask. So those are some of these really like fundamental questions at this intersection of blockchain and AI that you need to bring together. And when we've literally hired NASA engineers, PhD cryptographers to try to get an answer to that. luckily, I mean, there are solutions for it.
+
+It's not like this is something that is technically impossible. It just requires a complicated deep tech challenge to create a robust AI and blockchain integration.
+
+Citizen Web3 
+I noticed though a trend that is not very positive and I'm partially gonna be devil's advocate, partially serious. So the trend goes something like this, that you mentioned about 10 minutes ago, a lot of AI side events and there was, I don't remember where I was, I think I was in Berlin, actually I was in Berlin, I think, I'm pretty sure.
+
+last year and I also noticed that, you know, I was like, what the hell is going on? know, there's this thousands of AI side events, literally like, and even more so interesting, each one contains cool developers. I mean, they are really cool developers, but this the moment, you know, you try to touch on those subjects like, okay, but how do we open up the black box? How do we, it seemed that, and it seemed that, you know, it's not about not having an answer because I have actually seen
+
+and a lot of different ideas and proposals online, you know, to do that. And some work, some don't. And there is a lot. The thing is, is that a lot of them don't follow the current hype. And my question is going to be a little bit with a twist. Considering, you know, AI is hype now, right? And will we suffer when AI and blockchain do integrate? Or, I mean, it's not when they are already integrating. Could they potentially suffer the same
+
+problem and rather than develop in a decentralized well a way sorry into decentralization rather than thinking about okay How do we open up decentralization? How do we make things really decentralized not a black box instead of that? They will follow the hype and a lot of the time unfortunately hype takes us not to those places But yeah, I think you understand more or less what I'm kind of trying to draw the the bad picture here Let me know if it if I did draw it well
+
+David Pinger 
+No, I I understand it. I mean, first of all, let me say like this intersection, it's full of buzzwords, right? I mean, it's probably like the most, one of the most buzzword heavy intersections in crypto that I've seen. and for us, mean, at Warden, right, it was for me personally,
+
+If I'm going to like spend my time with this, I want to cut through the noise. so we have, actually, we took like great, great number of days and weeks to find like proper AI and blockchain talent. That can kind of help us distinguish between, hey, what's noise and what actually has utility. And I think to go to your
+
+question when I look at 2024, right? I mean I let's start with what was out there. So if you have been like scrolling on X, there was a lot of buzz around, know, truth terminal, prazer, AI, XBT. And these were, I think that they had their place. They were cleverly marketed. had these experiments, but they
+
+They are not the autonomous agents that we want or that I'm striving for, not even close. These were more like, kind of a bit like scripted bots that were wrapped up in this mystique and kind of had like a person behind the scenes pulling the strings, right? So I think in 2024, there was this big excitement and this promise of agents that will revolutionize everything, but
+
+that promise remains largely unfulfilled today. It's not like, it's not at least not from my point of view, it's not the type of agents that I want to see. Right. So I think that there was a lot of, of, of buzz and excitement when this convergence happened. But I think in 2025 now as these companies are maturing as companies like us are maturing.
+
+David Pinger 
+those will become more robust. You will see new types of use cases and new types of intelligent applications that that live up to this.
+
+Citizen Web3 
+You know what it kind of what when you were explaining just what you were sorry answering what you were answering, I kind of thought about, know, that it reminded me of and you will understand very well considering the amount of time you've been in the scene. And I'm sorry to I'm going to point names here a little bit, but it kind of reminds me about the protocols, right? Where you had the early big in quotations protocols like now yours and all of them. Right. And yeah, kind of what happened to them.
+
+And you have the protocols that are today, like Polkadot, like Cosmos, which are near, which in my opinion, at least, actually have utility. I mean, the utility is subjective, of course, to builders, to users, but still, it kind of seems the same with AI. Those that were early on the scene, and here I'm not going to name names because it's not that nice, I Well, you know they were marketplaces, essentially, for you know
+
+launching centralized models on somebody's cloud computer and call themselves blockchain AI. So they benefited a lot from those buzz, whether protocols such as, guess, Warden yourselves and you know others that are building now, having to fight through the market and to get on the top. And here is the kind of question to you, because with all of those, I mean, I can slack off and but where is the value, I guess, in the question, right? And here's the value.
+
+for me at least, how do you personally, once again, as somebody with all that experience with, that has been there and have been thinking about this since the beginning, how do you define or, sorry, divide between, how should users, not how should you, sorry, how do you, but how should an average, I guess, user draw the line between hopium and optimism and technology that comes with it?
+
+David Pinger
+I for us, right? I can tell you how I feel about this. I might be divisive for other people, but I think.
+
+David Pinger 
+I don't want to compromise on the things that uphold blockchain, right? Like there is a reason why we have a community of 500 validators and why we're taking the hard route to solve these problems. Now this isn't about like, Hey, I want to get something quick out there. I'm going to create a wrapper around chat GPT that will cut short the
+
+value of what we want to bring. right And I think that I think that what these types of thought experiments have given us and these POCs is they've given us a glimpse into what can be possible right. And at the same time, they've also exposed some of the weaknesses that are there. like For example, you know
+
+If I'm the agent developer, can shut down this agent anytime I want. can, I can block your withdrawals. I can claim to use a model without you knowing. I can, for all you know, I can override the decision to serve my interest. So I think that that's what these thought experiments and these, these, that that's what they've given us. And I think now it's up to us to make this more robust through blockchain technologies.
+
+So I'm not willing to rush to market with something that would not underline what the principles that I want to uphold.
+
+Citizen Web3 
+It makes even I think it makes perfect sense because I think that's that talks about maturity of the market at least for me, right and I Don't have probably as much of web to experiences. I have web three experience So this is the weird thing right to say today, but it's true I've been in this industry for a while But I definitely seen for me that has been maturity where founders are not ready to jump onto the market with a product Just because it's hyped. I don't know
+
+So I don't know if you want to comment that or I can move.
+
+David Pinger 
+I mean, I think when I look at like this intersection of crypto and AI, it's really started last year, right? Started about like, don't know, maybe one or two years ago, not much more than that. That's when this kind of started to develop. And I think now for the first time, you are getting to this place where teams are established, teams have...
+
+a better understanding of where those two technologies are intersecting, where they create value and where they don't create value. There's a lot of places you know where blockchain and AI have been integrated in superficial ways that don't really contribute anything. So I think now is the first time when these players are starting to think about, hey, okay, how can I...
+
+How can I take a product to market? How can I go beyond messaging the technology and how can I actually create a product out of what I've built? And how do I generate product market fit with that? That's something that will happen in 2025. 2024 was very much about like building thought experiments, POCing, prototyping, iterating. 2025 is about maturing, understanding.
+
+what type of problems do customers have and how do we meet them and how do we find product market fit with what we've built.
+
+Citizen Web3 
+I definitely hope that will be like that, right? Because we have seen a lot of like flops and ups, know, and I think the market really needs to see, to feel that projects are maturing. And not just for the sake of the market to go up or down or sideways. It's more about proving to the world that this industry isn't just about hype, isn't just about buzzwords, right? And I think it's important to fully.
+
+David Pinger 
+I mean, you have this incredible like treasure trove that is available that I kind of see, you you have like decades of AI research, decades of AI research from traditional software engineers that's plain unavailable to smart contract engineers because of the limitations that we have that were placed upon us from smart contracts, et cetera. If you can break up that.
+
+That's going to be the wave of a new generation of applications that I think will be key to even onboarding web two types of users. So that's the thing that I, that we believe in, that I believe in.
+
+Citizen Web3 
+I think it's a good place to ask. I have some questions written down here. One of them is about the challenges or the opportunities, I guess, with building communities around Web3 developers. and you know It's difficult. know not by, again, from personal experience, sorry, that developers and building developer teams is crazy difficult.
+
+Developers want to eat all the time, right? And blockchains are not economically, greatly economically sustainable yet, right? I mean, we have like things like fees that produce revenue. could do inflationary tokens, so on and so forth. yeah, anyways, question to you. How do you guys in Warden Protocol focus on building a Web3 builder community? And even more so maybe how do you keep tribalism away? Because
+
+If you really want to build a cross-chain community, a big community, you have to ignore tribalism, which unfortunately, at least in my experience, in my experience, I'm to put a full stop there, is really crazy in Web3. And sometimes people just don't want to go just because they hold in a certain chain. They don't even want to look in another chain. Anyways, so the question about developers and how do you build it.
+
+David Pinger 
+I mean the truth is, think...
+
+If you build a great product, they're not going to come. So the sad reality is that you can have an amazing piece of technology, but unless you are able to grow your community, gain mind share, engage with the developers and co-create with them, you're not going to use it. So does that mean that great technology doesn't matter? No.
+
+It means from my point of view, you need both. need a great piece of technology coupled with a strong go-to market where you can talk about it, have, get other developers excited about it and make sure that you are building for their needs. So where we started, and that's kind of the stage that we're in. I think inside of Warden, we.
+
+We're by all means, think we are our hardest critics. So we have very, I would say talented engineers and we kind of battle it out with each other around how can we create, how can we turn this from a technology where you'd say, this looks interesting to a technology that goes, hey, this is amazing. How can I prototype this in the next?
+
+30 minutes. So that's the type of transition that we want to make. And I think for that, we're using a couple of different tools. I mean, we have a developer community that we're leaning on today that we're co-developing with. are asking them for feedback. We have regular hackathons where we are showcasing what we've built and we are getting feedback from areas that we need to improve on. And I think
+
+David Pinger 
+For us, from the very start, it was critical for us to have this open source ethos. right If you're really interested in Warding, you could go to our GitHub issues today, comment on them, and start to interact with our lead developers. They'll answer. So I think that this was kind of the way in which we are.
+
+that we've approached this problem and that's what's been working for us so far.
+
+Citizen Web3
+Just a small second for the listeners, by the way, everything and mean David mentioned all the will be linked under the show notes. So GitHub links people projects. So if you want to do your own research and of course follow that, please do. Do you think, did you encounter or not? you encounter, of course you'd encounter challenges while doing that. What's your biggest has been challenged in terms of building a developer community? What has been the biggest
+
+David Pinger 
+Definitely.
+
+Citizen Web3 
+cornerstone that you are still not able to break.
+
+David Pinger 
+I think the biggest challenge that we have, right? mean...
+
+When you're building in L1, there is a lot of challenges that you have to go through. It starts with having a reliable, validated community, but then you need to get your blockchain up and running. You need to enrich your blockchain with smart contract functionalities. You need to innovate, create new technologies. And really, I think one of the biggest challenges that we've had is you need to be able to message
+
+very complicated and advanced deep tech challenges to an audience who might not necessarily, who might not understand or care that much. The audience wants to see the end product. They don't necessarily care so much around how this stuff works in the background. So I think one of the challenges that we're working on is
+
+How can we simplify our messaging? How can we give people the output and the benefits of what we're building rather than the technology that's enabling it? And there we have some things that we're working on right now, for example, right? We're working on the Warden app, which is leveraging or let me let me start.
+
+I mean, with the Worden app, DeFi today is very complicated for newcomers, especially when you're considering that a lot of applications are multi-chain. And I think that this is creating problems for users. right Users, from my point of view, have quite a difficult time when this infrastructure, which should be inside of the application, of poke its head out and bother the user. Now, whether that is...
+
+David Pinger 
+gas fees, network switches, complicated interfaces. I anybody that uses DeFi knows of these headaches. And I think as we are maturing and as the space is growing, especially for new users that are used to AI from web tool, they're going to reject those types of experiences. They plain won't onboard. So we decided to build an application that kind of shows what
+
+AI can do to make DeFi simpler. And with the Warden app, can do, you know, complicated web three actions, like, know, cross-chain swaps, for example, with chat and voice commands, where the LLMs and the machine learning models in the background are doing the complex and heavy lifting for you to problem solve what you want to accomplish. So I think that
+
+I think that that's been kind of our challenges moving from building the technology towards shipping a finished product that people can get their hands on and that they understand the value from day one instant.
+
+Citizen Web3 
+I think for anybody who has been for a while in blockchain and still today sometimes, it used to be back in the old days, something with bit shares when you wanted to swap one token for another and you would be using some crazy dexes back in 2014 that are like, I don't know how to work this. And then you would lock yourself. But it still happens today. That's the crazy thing. So what you're saying would be, I think, a great product because sometimes even today, you want to bridge avoiding success from one place to another.
+
+and not easy even for an advanced user. So I can imagine. Yeah.
+
+David Pinger 
+I mean how would you like, I mean, maybe it's naive, but I always go back to this idea of like, how would I explain this to my mother? Like, how do I explain to my mom that's never ever like thought about blockchain or crypto about the intricacies of dealing with cross-chain swaps and different wallet providers and different networks? I think that
+
+That's what I mean when I say like this app paradigm that we've come to know and use in web three. I think that that will get replaced. I think that in the future, we're going to see much more machine learning and artificial intelligence models taking that type of headache away from us.
+
+Citizen Web3 
+That makes sense. Makes a lot of sense. You mentioned validators a couple of times already. As a validator myself on Warden, I cannot help to ask, what is today your... Let's say, mean, other potential validators are listening to this or developers. don't know what today Worden is looking for in validators. What does it take for somebody to become a validator on Warden? I'm not talking about permissionless...
+
+not permissionless. more talking about what are you as a chain apart from developers, of course. You mentioned infrastructure a few times. Are you interested in what are you guys looking for?
+
+David Pinger
+I think our validator community is incredibly important to what we do from day one, actually, because it goes back to what you were mentioning in the beginning about the importance of decentralizing AI. We've done a great deal of work on being able to verify inferences and AI model outputs.
+
+using a distributed system of validators. And in a way, our validators are kind of acting like a firewall to verify AI model outputs and responses. So this is an incredibly important piece for what I think is necessary to be able to decentralize AI. And you want to make sure that you have
+
+absolute certainty that the model that you've requested is the model that you're getting and you get what you paid for. You can only do that by having a community of validators that are helping you protect against this stuff. So our validator community is essential for verifying and making sure that AI model outputs are reliable. So they kind of
+
+play a critical role in removing the trust assumptions and opening the black box and also in enabling more incorruptible applications that are less susceptible to manipulations by bad actors and malicious hackers. So I think of our validator community as the firewall that helps Warden in its mission to decentralize AI.
+
+Citizen Web3 
+Kind of a last wrapping up question before we jump into a blitz. Do you think... I'm going to play devil... Like I said, we're a Validator ourselves, so I'm going to play a bit of devil's advocate here. Do you think that networks and change should strive towards building decentralized Validator sets? And what I mean is...
+
+A lot of the times today we look at certain networks and most of them host in data centers. So sometimes it's up to 80 % or 85%. Doesn't it kind of create another point of failure for a network or what should a network do in this case to promote or encourage decentralizations, geographical decentralizations stake, I guess.
+
+David Pinger 
+Yeah. I mean, you want to make sure, right? That you have like a diverse set of validators and any points of centralization. That I think needs to be clear in web three so far. Centralization points are choke points and they will get exploited. Now we know that story from bridges already. It's all already been done before and it will happen in AI as well. So.
+
+unless you have a decentralized validator set, you're running this risk of creating centralized choke points. And I think that there, it's important to be able to be backed by bare metal validators that take the stuff serious, as serious as we do. And that's really what I would want to have from our validator set helping us in our journey.
+
+Citizen Web3 
+completely. So three questions. Blitz, they're going to kind of take us out of the blockchain conversation. Well, it's still blockchain a little bit related, but you will see. They're going to be a bit weird. So bear with me. So first one. So first one, David, give me please, either a book or a song or a movie that has had a positive influence on your work.
+
+David Pinger
+I love it.
+
+David Pinger
+On my work, I'm a big Lord of the Rings fan. I probably watched this movie like a couple of times every year for the last, ever since it's come out. And there's this scene where you have this Palant here where Saruman is kind of looking into it and Gandalf is trying to look into it. Kind of predicts the future, right? And.
+
+Citizen Web3 
+Yes.
+
+David Pinger
+That's always been a bit of like an inspiration for my founder's journey because it's in a way, you want to have this capability yourself and you're kind of forced to do it without having that crystal ball. So I think that that's what's given me inspiration.
+
+Citizen Web3 
+I like it a lot actually that was a very good one actually. Okay, the second one. Can you please name one motivational thing that of course you can share with us that has been keeping David up out of bed, know, for the last what 13-14 years waking up building for better future hoping for a better future, you know, in the last few years working on warden and trying to build
+
+a mature protocol as we spoke and while keeping ethos and values basically what's motivating to do what you are doing today.
+
+David Pinger 
+My motivation to work in DeFi was that I was frustrated with the financial system that I had become a part of. And I didn't want to be part of something that I no longer believed in. And I saw an opportunity of joining a movement that valued the same principles that I had. And that's the thing that's kept me going.
+
+Citizen Web3 
+Let me dig this a little bit because maybe I asked it in the wrong way. Is there something specific as in, let's say, going out for a walk every day or rewatching Lord of the Rings once a year that helps you to focus on that motivation and keep within that goal that you set for yourself?
+
+David Pinger 
+okay.
+
+David Pinger 
+Okay
+
+David Pinger 
+Yeah, I have that. So for me, this is exercise. If I don't regularly exercise, I go insane because I'm hit with a million messages all the time from all kinds of different community members or engineers. So there's a lot of context switching. really, whenever I go out and exercise, have these like...
+
+mini epiphanies and I return and suddenly there's this moment of clarity and you're like, of course it's like that. So I'm often, I'm the guy on the treadmill that goes off the treadmill, grabs the little notebook, starts to write things down and then resumes exercise.
+
+Citizen Web3
+I'm laughing so much because there is literally I don't know if I should complain on open internet about my back pain but because recently I've not been able to exercise for the last months and a half I've been breaking down man and so I totally understand everything you say completely 100 % okay last one I promise last one is a bit of the weirdest one so
+
+dead or alive, real or a made up person. It could be a family member, could be a book author, a developer, it doesn't matter. Not a guru, but a personage who when you are stuck professionally, kind of helps you to think about that persona and it helps you to progress from where you stuck at.
+
+David Pinger
+I think the, if I, when I was in university, I studied theoretical computer science and I think that kind of instilled with me, I think if I hadn't studied that, I would have studied physics because I value the scientific method. And oftentimes when I get stuck on complicated problems, I think through it from the lens
+
+of someone that is involved from the scientific point of view. So I think the people that come to my mind would be people like Niels Bohr, Einstein, know, less so Shakespeare, but more on the scientific side. And I think the reason for that is they argue from first principles. And in physics, you're forced to think through things.
+
+in a logical and methodological matter. There's no there's no There's quite little room for going off and and becoming irrational in that sense. So I think that it helps me to think through these things and take a breather every now and then and think through step by step.
+
+So I think that that's the type of people that I would look for support.
+
+Citizen Web3 
+think that was a very good point to finish it off. And David, I want to thank you first of all for finding the time to join us today and of course to finding the time and the patience to answer all my questions. And this is going to be a goodbye just for the listeners, for everybody else who joined and tuned in. Thank you very much and see you guys next week. 
+
+David Pinger 
+Thank you so much, guys. 
+
+Citizen Web3 
+Thanks, David.
+
+David Pinger
+Thank you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

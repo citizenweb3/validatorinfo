@@ -1,0 +1,455 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/iansmith
+
+Episode name:
+Quantum Computing, 2038 and Blockchain with Ian Smith
+
+Citizen Web3
+Hi everyone, welcome to a new episode of the Citizen Web three Podcast. Today I have Ian Smith from QEVM. I have said twice today, today I have, today I have. It doesn't matter, but I have a very cool guest with me today. It's Ian Smith from QEVM. Ian, hi, welcome to the show. Sorry for the slow intro, how are you?
+
+Ian Smith 
+doing well thank you how are you Serj
+
+Citizen Web3 
+I'm good. It's a nice, nice day outside. It's a bit hot. We have a lot of fires here locally, but other than that, I hope that the fire is going to concentrate on our conversation and not on the outside. Ian, first question is first, traditional thing, very boring, but please introduce for myself, for the listeners yourself, everything you do. How did you get to Web3? How did you get to quantum computing? Anything you want us to know about you, please.
+
+Ian Smith 
+No more studios.
+
+Ian Smith 
+So I studied back in the 90s and most of the things I studied just weren't very relevant as physics changed. But I did start into technology and I was just very low level. In the 90s I was doing tech support for big companies, learned operating systems very well in the 90s. And I started doing
+
+fixes that you normally wouldn't attempt. Like I used a hex editor to fix my partition table system booted okay, which was rough. I had to look at a working partition table to figure out how to make that work. there's, I've always had this low level approach to technology and I ended up in Silicon Valley in 2000 for the boom and the bust.
+
+And I was working on firewalls and I was working on VPNs and clustering and high availability such as had existed at the time, which was, buy two of every piece of Cisco equipment, it's great. And then, I had to turn them all on and configure five different pieces of Cisco equipment from the router to the firewall to the...
+
+high -availability system, usually people unplugged it and threw it away because it didn't work right. The switches and all this, all configured for failover and then they have two web servers behind it. Now it's massively different. But that foundation in scalability was really good because we had to do everything manually. We had to do the hardcore low -level stuff. And you'll see like,
+
+Celestia's original design for their high availability data layer was based off of a proxy paradigm, where the proxy server would kind of fetch your data for you. The earliest versions, you had to go fetch it yourself. Now it's based off of the clustered file system architecture, and it's almost identical to the clustered file systems that I worked on back in 2000, 2001.
+
+Ian Smith 
+So, unfortunately I'm also seeing parallels in terms of like investing and what is this website for .com is my favorite comment on the whiteboards. So there's a lot of technology background that I have and that's led me to some very strange places. I once had an armed guard watch me work. It was great. If I touched the wrong cable, the bullet on the gun was for me.
+
+Citizen Web3 
+serious that is serious what was what was that work talk about it more in detail well if you can of course
+
+Ian Smith 
+I was working on the backbone of the internet. We had a packed .NET hub, that's Palo Alto Internet Exchange, sort of like where MCI, Worldcom, Met, AT &T, and it's also because of the way that the fiber optic cables are laid, they drop all of the endpoints usually in harbors, and the harbor tends to be in a city.
+
+And instead of having two or three fiber drops, they all put all the fiber drops in one location. So this was, at the time, 127 different ISPs that were all sort of joined together in an unmarked building with security in the elevator and a no name on the door outside. One guy is like, hi, how are you? Do you have ID? Okay, you're on the list.
+
+door opens and there's a security guard with a gun. You go down the elevator, you're walking past all of the big names in Silicon Valley and all of the, only the biggest names, but you're walking past the fiber connections that people were using. And then I'd go work on only my routers. I didn't touch any other cables. And then I'm typing on a keyboard.
+
+with my fingers near my chin trying to get the thing back online after a hardware failure. And then I'm escorted out of the building. But yeah, it's kind of nervous when you know that if you touch the wrong thing, the internet is off and I've got bullets at me.
+
+Citizen Web3
+It reminds me of this picture from the server from the 90s, which was one of the first HTTP servers. It was Tim Berners personal computer. And he has this picture of that computer, Tim Berners -Lee, where he says, please don't switch it off. The internet is running on this computer.
+
+Ian Smith 
+Years ago, you had this thing called bang style addressing before we had the PGP that runs the backbone routing today. And what this meant is that you had to know the name of every machine between you and your target. And then you would put an exclamation mark between each of the host names.
+
+Citizen Web3
+Yeah.
+
+Ian Smith
+and the traffic would be routed by each of the machines that you chose in order to get to the destination. Many a university was angry when one of those names was down.
+
+Ian Smith
+So it's very important that we have uptime on all of the machines and the older architectures.
+
+Citizen Web3 
+Yeah, it makes sense.  But what I did want to still ask you and what I still miss a little bit, how did in all of that story, know, building basically the most important tool innovation humanity today has, at least in my humble opinion, how did you get to Web3 and how did you progress from there to, you know, dealing with quantum computers?
+
+Ian Smith
+So after Silicon Valley crashed, and I saw it crashing ahead of time because my customers stopped paying me. And I was consulting at a bunch of companies downtown in San Jose, San Francisco, and every city in between, Mountain View, Sunnyvale. So I ended up going to just work on my own stuff for a little bit.
+
+And one of my ideas was something to replace PayPal so there wouldn't be a central authority. And that was this idea of minting cryptocurrency as pieces of RSA cryptography. And they would be non -fungible and each one would have a different denomination. Like one would be $10 and another would be $100. And this public key is worth $1 ,000 and this public key is worth $100.
+
+And I had this idea, but I couldn't solve double spend to my satisfaction. I came up with this idea of whitelists and blacklists and responses and offline mode and an online mode. And I just couldn't get the system to perform the way I think it needed to. So what I ended up doing was figuring out different ways of attacking my system.
+
+And one of those was the number field sieve, which I delved into quite a bit, which is a really good method to factor large numbers, but it only factors. It doesn't actually do anything with discrete logs. So I also became aware of quantum computers at the same time.
+
+Citizen Web3 
+What was a time, like what time are we talking about? Just for me to understand and for the listeners to understand the time scale here. What year is that?
+
+Ian Smith 
+2002, I was worried that the up -and -coming PlayStation 3s might be capable of running the second round of the number field sieve on the cell processors so that a cluster of PlayStation 3s might be capable of breaking RSA. And considering the number one buyer of the cell processors and PlayStation 3s was actually the NSA, I think that my concerns were valid.
+
+Citizen Web3
+Okay.
+
+Citizen Web3
+What is that? I have so many questions to go deeper into that. But I'm going to probably do something very, which is for you, probably something you answered many times. So it's going to be simple for you. But let's take a step, zoom out here. Before we go deeper into asking you and explaining about quantum computing, I want you to explain to me, pretend that I'm a kid in, I don't know, let's say,
+
+beginning of high school, you know, I've just started high school. So I'm aware of a little bit simple mathematics algebra, you know, I understand some equations and stuff like that. But I'm a kid in high school and you are coming to talk to us to this class about quantum computers. How would you explain to this class what on earth is quantum computing and why it's important to be aware of what is quantum computing today?
+
+Ian Smith
+So I haven't ever heard a really good explanation of this. This is the explanation that I try to use. When you look at silicon computing, you're looking at only two things. It can only add and compare, like greater than, less than, equal to. And in addition, that's it. It just does it really fast. All of the games, all of the graphics, all of those things are just addition and comparison. It's the only two fundamental operations we have in silicon.
+
+When you look at quantum computing, it's kind of like a magic eight ball where you have to prepare a question, you have to prepare the machine. It has a delay that could be months or it could be seconds. And then it comes up with some answer that might be correct. Now, in that pause where you're waiting for the answer, it's physics itself that's
+
+doing the computation. And so we have to prepare our questions to become the language of the universe. And after we've taken some arbitrary question and reworded it into the kind of math equation that we're looking for, quantum computers don't do addition and comparison. There is this multiple state thing that's all valid, coherence, de -coherence, all valid.
+
+but it's physics that's doing the actual mathematics. And then we're able to do very complex mathematics using quantum computers. They're much more complex than doing just simple addition or repeated addition or addition of exponents or things like that.
+
+Citizen Web3 
+Why is it important?
+
+Ian Smith 
+So, well, there's a lot of things that are really important about this. People talk about the computing power spent on AI, but around 100 times as much was spent just trying to figure out how molecules work. And that was at Los Alamos Laboratories. They ran massive clusters for many years and used more power than Bitcoin, just trying to figure out how does molecules work?
+
+And they came up with some successes, but it's very hard to classically stimulate a quantum system. It's really hard to do these predictions. Now, once you've done those predictions accurately, you're able to come up with crazy stuff. For example, there's now a diamond that uses the nitrogen cavities in order to produce microwave radiation. It's a maser.
+
+Microwaves are normally a broadcast system. This is literally a laser beam of microwaves coming from a diamond. That's hard math, and the fruits of hard math. That's really important for satellite communications. You can have point -to -point satellite. Microwaves travel really well, so we could possibly...
+
+have communication to the moon that's literally point to point with almost no energy loss. But then there's other things. Sure, sure. There was a simulation done two years ago where they tried to make the equations involved in wormholes and gravity to be simulated on
+
+Citizen Web3 
+No, please go on,
+
+Ian Smith 
+a quantum computer at the time. It was only like 53 qubits. It was a really small one. But they had enough runtime to actually send a message from one quantum computer to another quantum computer with nothing plugged in between them. And this meant that they were, they call it a wormhole or a holographic message or a couple other things. None of them are quite right.
+
+The reason that they don't like the wormhole explanation is because the equations of gravity weren't involved and we're assuming that gravity is necessary for wormholes.
+
+Citizen Web3 
+Mm -hmm. Yeah.
+
+Ian Smith
+But we just send a message in violation of the speed of light over 1 ,000 kilometers. So we might have point -to -point communication between us and spaceships in real time, or us and Mars, which is 22 to 38 light -minutes away.
+
+Citizen Web3
+So basically, basically.
+
+Allow me to sort of summarize what you're saying here. And correct me if I'm wrong, please, by all means. So basically, to elify quantum computing and why it's important, because quantum computing will allow us to have mathematical solutions that we cannot solve today. Sorry, to solve mathematical problems that we cannot solve with the use of the computers today, right?
+
+Ian Smith 
+Essentially, yes. And some people say, well, it's the same stuff we do, but faster. No, it's like things we can't do. It's... And some of those things are cryptography, right? Some of those things are... You can't turn a public key into a private key in classical computing. And that's one of the solutions that can clearly be done using quantum computers. It's a discrete log.
+
+Ian Smith 
+and the Shor's algorithm on pretty much every cryptography we've got except for the very newest stuff that is going to be formalized later this month.
+
+Citizen Web3 
+So basically, reason why it's important today, and I'm not talking from the perspective of what it can solve, but from the perspective of what can attack, is the fact that the most important piece of, in my opinion, cryptography we have today, public and private keeper, can be basically attacked, not attacked, but can be compromised by quantum computers, right?
+
+Ian Smith
+Right, and the compromise is so significant that instead of, you know, like maybe spending a lot of computation time to decrypt one message, the result is after this, they're you. It means that you could forge a web server, you can do man in the middle attacks, you could decrypt old messages, all of them, not just one of them.
+
+And you can also spend money out of people's wallets. If they've done a transaction in Web3 or in Bitcoin and there's money left in the wallet at that address, then they're able to take and solve that public key and get the private key out of
+
+Citizen Web3 
+Of Yeah, this is just for everybody out there guys. yeah, of course, if we're breaking out, as far as I understand, at least if you break private and public pair, you if you compromise that, not break, right? Compromise, let's say, then everything is compromised because everything is based on that. know, there is a couple of things I want to carry on like logically from here, because there are some things I want to like, you know, demystify, so to speak. And I'm getting there like step by step. And I know for you, it's probably like...
+
+really on the surface, I promise I'm going to get deeper with it. we understand now that we have a simple explanation of what are quantum computers and why it's important and what they can compromise and what can be built on top of those compromises. The next question is this. So, and this is going to be a devil's advocate question, but I have to ask it and I want to demystify it. And I think you are the man to help me out here. So, you know, there is such a thing, think it's Q day as well, right? And
+
+Q day refers to the point, if I'm correct again, where quantum computers will be able to do what we just spoke about. Is that correct?
+
+Ian Smith 
+Yeah, that, and there's also the idea of proving it, but yes, Q day is when you can break the cryptography we need using a quantum computer.
+
+Citizen Web3 
+Okay.
+
+Citizen Web3 
+Okay, so now the devil's advocate point and here is the long thing I was getting to. My apologies for it, but I want to make it really simple. So, and I'm going to highlight this again. I'm going to be devil's advocate here, but I really, really want you to explain this. So over the last, let's say 30, 40, 50 years as a society, we've been all told by many things, by many, sir, by many different parties of different...
+
+occasions or different events to expect which will change the world, whether it was Y2K or whether it was Al Gore talking about the ice caps melting, whether it was Skynet taking over the world, which we actually more realistically can see now. And of course, there is quantum computing as well. Quantum computing since, I mean, I'm not that young, but I remember
+
+I don't remember since my childhood because I wasn't much into it, but I do remember like later on, know, people talking about it and scaring me with it, you know. And so today what I want to ask you, and once again, I want to highlight that this is devil's advocate question. What I want to ask you is how does the society of today, how do we as computer users, sorry, a society that is dependent on computer usage because we cannot survive without it, obviously, not today at least.
+
+How do we, you know, I know this sounds silly to you as somebody who's an expert in this field, but this is exactly what I'm asking. How do we quotations understand that quantum computing is real, that it will be here and there is a danger to our modern systems? Because as a society, once again, you know, we've been told for 30 years, you know, this is going to happen and you're going to die because of this. You're going to die because of this. This is going to change the world. And none of these things happen. So.
+
+How do we understand that this is real? This is not a myth, know, there is physics and mathematics behind it. How do we get it out to the world? This is the question.
+
+Ian Smith
+I have a quick side story which will probably highlight my point a little bit better. So Y2K was about three years of preparation. There was a frenzied amount of preparation in the first, in the last like 18 months before Y2K and I was involved in that. And there was essentially only around 5 % of the computers were actually at risk.
+
+Ian Smith
+But that 5 % that risk had millions and millions of devices that were updated or replaced. There were some that still had issues. In England, there was ATM spitting out cash. Just cash kept coming out, no idea why the error. And NORAD was down for 18 and a half hours.
+
+That's the North American missile defense system. We didn't talk about it because we didn't want to reveal our vulnerability. And we'd spent so much time in preparation, we wanted to have a success. So the news played along and they didn't talk about it. They didn't talk about the issues. There was preppers with generators in the hills with, you know, a thousand cans of corned beef, but...
+
+Citizen Web3
+You
+
+Ian Smith 
+the majority of people didn't, never knew that there was actually severe problems. And this is really important to understand that there's only 5 % of machines because the year 2038 problem is going to affect about 95 % of computers. If it's a 32 -bit clock or has a 32 -bit sensor, then it's going to around
+
+know, 95%. Conversely, Y2K affected things mostly with a keyboard. And the year 2038 is going to affect things that don't have a keyboard. So the sensors in the walls, the anti -lock brakes, your HVAC units, your air conditioner, these are all gonna have to be replaced.
+
+Citizen Web3 
+Sorry, ENY 2038.
+
+Ian Smith 
+sorry, it's the end of 32 -bit time. For a signed 32 -bit integer, there's about 2 .1 billion seconds.
+
+And those 2 .1 billion seconds counting from the year 1970 will finish in January of the year 2038. And then all those machines will think it's the year 1908. So that's a massive, massive effect. Now quantum computers will only affect a very small number of machines in what they can attack.
+
+And I'll give a list of the things that can be hit from these cryptography systems. Your messages in like Telegram, but signals already moved to post -quantum in order to prevent a harvest -now decrypt later situation. Your web browser is going to be safe. Google, Apple have already moved to post -quantum cryptography.
+
+So you have it as part of your Chrome browser today. That means only Firefox is left. It's the only not Chrome browser out there.
+
+So you're also looking at things like the Kanban bus in cars. They'll be able to decrypt the messages and they'll be able to basically unlock cars and drive off with them if a quantum computer has attacked the RSA key that protects the system bios to the vehicle. And they only have to do that once and then they're going to be able to just drive all the cars that have that same public -private key, literally.
+
+Ian Smith
+So it's important that the cars get an update in order to prevent some other government releasing, hey, here's Ford's key, so you can just mess with America, right? Now, which is entirely possible. And it would be a political fiasco, but I mean, there's a lot of other things that also are.
+
+Citizen Web3
+Yeah.
+
+Ian Smith 
+It's something that a foreign government could easily do. I don't think that the major companies would want to attack and release car company information. But IoT devices will also be vulnerable. And that's kind of like this, it's a trusted system. The way that we're gathering data and we're using it for certain things. For example, if you watch a great show that's in
+
+realistic Mr. Robot. They control the heat and cooling of the building in order to destroy a bunch of tape drives, which was the backups for financial records. They just do this by increasing the temperature of the room and that's done not using a quantum computer but just by lying to the sensors what the temperature was.
+
+Citizen Web3
+Sure.
+
+Citizen Web3 
+Yeah.
+
+Ian Smith 
+And then you're going to see some phone networks that will need to be upgraded. And some of those are going to be hard. Some are going to be easy. Blockchain is completely vulnerable at this point. There's only four projects that are legitimate that are working on post -quantum stuff. you're also going to see web servers will need to update. That's easy because the public -private keys are centralized.
+
+and they can just issue new keys, the browsers will understand it, no problem. One of the harder problems to solve, and I don't know how, my information is very old in this regard, but it's very hard to change, and that's the friend or foe identification system for missiles. So if China attacks the US cryptography, the US missiles would stop hitting Chinese planes, and vice versa.
+
+So there is a, in order to fix that, you're gonna have to either, I don't know if you have to replace all of the missile chips or if you just have to replace the ones in the planes, but that's a big problem, right? If the missiles don't chase the enemy aircraft anymore, because right now, I mean, all aircraft fight is done at range with missiles. So it'd be a problem if they didn't chase planes.
+
+Citizen Web3 
+No.
+
+Citizen Web3
+guess that the far that remains very still open to me is obviously those are all kind of clear issues and it makes a lot of sense. It's something that we've all, especially people who are involved in computing, you kind of hear about it, you read about it. What still remains at large to me, and when I say at large, mean something that I cannot swallow that pill.
+
+is the following thing, you we're talking like, you're talking like 15 years ahead now, you know, and 15 years, you know, for Mozilla to update is a long time. And the same thing, you know, you mentioned examples of like, you know, the enemy attacks, that, that, that, and I remember like, this throws me back into my childhood, you know, when I was like in the early 90s, in the late 80s in school, and, you know, they were always talking about the enemy.
+
+There's going to be an enemy. It's going to be attacking you. You have to hide from the enemy. What you're to do when the enemy invades? Well, the enemy didn't invade. It didn't happen. Those things didn't happen. Even, you know, with the break of the Soviet Union, it didn't really happen. And what I realized as I grew up, I realized that the real enemy, you know, was not potential Chinese plane planes where where there was a lot more enemy, you know, back home, you know, with kind of like, you know, decentralization and, you know, Facebook and so on and so forth. Now, what I'm trying to get it
+
+is for foreign person. So let's say the average person that uses computer, know, the average person living around the world, not necessarily in America, not necessarily in Africa or in Europe, doesn't matter where. How will this influence their daily, you know, the Q day, so to speak, you the Q day that's going to happen in whenever it's going to happen, whether it's 1038 or whether it's before.
+
+Ian Smith
+you
+
+Citizen Web3 
+How will that influence them? Let's forget for a second about planes, China, America and all that. In terms of their daily bank accounts, you mentioned their cars, of course, that was a good example. But what about the education system, the banking system, I don't know, the medical care system? Will they be also affected? Will there also be a problem?
+
+Ian Smith 
+So sometimes there's cryptography baked into the protocol. And this is like really old protocols. I worked on the fixed protocol version 4 .4, but 4 .2 is still like most used. And this is a financial inter -exchange protocol. If a bank can talk about an asset, it's in fix. Because there's a limited number of parties involved, they'll be able to update the systems.
+
+SSL, education, those updated systems. Or you'll be forced to restart. Or next time you open your browser, you'll have the post -quantum cryptography. It's really, really not a big deal. The operating systems, they've already done some mitigations. Your phones are not only migrating towards post -quantum. Samsung has two phones that they're hailing as quantum.
+
+phones because they had quantum safe cryptography. But they're also year 238 protected. When there's a company that's responsible, a lot of times they protect the users in order to prevent them from suffering financial loss when their users get angry. So you're really not going to see much impact there. Now, within the geopolitical landscape,
+
+Yeah, there's been a lot of fear -mongering. But the problem is that when you see a lot of debates and you see a lot of, you know, negotiations, a lot of the things that they use is the technological superiority or the economic advantages, being the West versus China respectively. We have technology. They've got economy.
+
+Well, China spent like $18 billion that they claim on quantum computers. And if you remember the Indian moon vehicle, they did it for a fraction of the cost. And the Indian space agency managed to, know, for just millions do what other countries couldn't do with billions. And China spent
+
+Citizen Web3 
+Yes.
+
+Ian Smith 
+billions on quantum computing. This they see this as their means of achieving technological superiority and they're either ahead of us or equal with us. So it's not just fear -mongering, it's a position of power. And that position of power then turns into policy, which then turns into trade agreements. And the trade agreements affect your cost of everyday things. So even if it's completely abstracted, it still has some relevance.
+
+Citizen Web3
+It's definitely, definitely, definitely, definitely. There is one more thing in all of that story that I want you to demystify and it's the word qubits themselves, because you have used it a couple of times and you know, there is a lot of misconceptions, at least definitely for me personally. And I can tell you that a lot of the time when I get into conversation with a person about quantum computing, it's very rare.
+
+Citizen Web3 
+for different people to explain the word qubits in the same way. Even when I go online and I look at it, another person will be like, no, that's incorrect. Let me explain to you what it means. So can you please explain from your perspective what are qubits? And when people say 32, 15, 12, because sometimes you say those numbers and people are like, no, you don't know what you're talking about. There's 20 ,000 already. So can you please talk a little bit about qubits, what they are?
+
+Citizen Web3 
+and how are they measured because I think there's a lot of misconceptions about that as well.
+
+Ian Smith
+Yeah, there's a ton of misconceptions and the sad part is that it's such a big topic that when people try to explain it, most people are right. It's just that they're explaining one part of the animal that you can't see. And every person thinks that the only part that they can explain is the whole thing. Cubits are a method of entangling two particles, molecules,
+
+gaps or reactions. And in order for me to be somewhat complete, I have to be really vague there. When the smallest things do stuff, or when superconducting things do stuff, they don't necessarily do it in isolation. And when they do it together, the particles are entangled in certain circumstances, not always, but often. And we can measure
+
+the age of distant stars by measuring pairs of photons that come from them. And when we're talking about pairs, we're really talking about two entangled photons, and they have properties. And so, for example, to be a little bit pedantic here, there's like left to right spin entanglement for electrons, but not up -down entanglement that we've seen so far.
+
+And the left -right spin is literally a property that we have noticed. There's also like color and strangeness and a bunch of other properties of electrons that we don't talk about very much. But all of these may be potential methods of doing quantum computation. The problem is you have to like have a silicon, you know, bridge that talks to whatever that thing is. In the case of D -Wave computers, which is by many accounts not a quantum computer,
+
+so like a quantum approximator. They use these chunks of liquid or of a solid superconducting niobium and they're running very close to absolute zero. That is, you know, I think it's 0 .002 Kelvin. So those systems, when that niobium gets really cold, it starts to behave like an atom and stops behaving like a superconductor.
+
+Ian Smith 
+they attached wires to it. So they found a process that allowed them to talk to the little things and the little things communicated with each other and we managed to attach cables to it and ask it questions. And so D -Wave's been making these superconducting qubit systems for over two decades and they've been available for sale I think since 2007 or so.
+
+Now they actually have qubits, but what they don't have is computation. The system will... The colder it gets, the closer to a right answer it gets, which is approximation. It's not calculation. It's not coming up with a finite solution. The colder you can get it, the more probably close to correct or ideal or optimized you are.
+
+It still uses qubits. And each qubit is the superposition of a potential state. So I'll try to explain that a little bit. There's this thing called the Copenhagen interpretation from quantum physics. when you, like, Schrodinger's cat is an example. Those are three quantum physics references that people might have heard of.
+
+The Schrodinger's cat is both alive and dead inside of a box because there is a neutrino that when it decays or some other radioactive element that when it decays it will kill the cat. Based on the percentage chance of the neutrino or other radioactive material, the neutrino being emitted from a radioactive decay, then the cat is either alive or dead. As a percentage,
+
+The creepy thing is that that percentage is actually expressed as a field and the field of cat deadness and cat liveness are both real and we can measure them. And so those fields surrounding that eventual solution are actually both true. And only after the...
+
+Ian Smith
+the cat is observed, do we know if the cat is alive or dead? And that superposition has resolved to a single state. And this is the Copenhagen interpretation for basically quantum mechanics. That you have lots of potential states and then only through the act of observation do you get the answer, is the cat alive or dead? So a qubit is the ability to ask
+
+part of a question using multiple states and the smallest calculations that are possible in order to decide a finite answer. Now, I'm skipping D -Wave in order to come up with like an answer. It may be correct or not, but those qubits exist based off their probability.
+
+And then if they achieve decoherence, in other words, if they fail, if they error, you don't get your answer. The amount of time it takes that field to turn into a result varies a lot on a lot of things. And then we have to observe the result, and that sometimes breaks the result. And each of the qubits needs to be independently observed.
+
+we have come up with error correction. And that's my current homework is reading a book that came out last year on quantum error correction. So the problem here is that there's many explanations of that process and all of them are pieces of the correct answer. That's most of the correct answer.
+
+Citizen Web3 
+Thank you for that. is actually a very, in my opinion, it's a very powerful explanation, very good explanation that can be used. It's not too complex as well. But, you know, just one last question to this, to finish off the qubit explanation. So when basically people, when experts, when articles refer to the amount of qubits, sometimes they say like, you know, 15 qubits and sometimes they say, I don't know.
+
+and a completely different number. Why do some different articles show numbers in thousands, for example, when they refer to the same thing as when somebody else speaks of 15, 30, 45? Is there a difference of what they are talking about or they are still talking about the same qubits but using different types of explanations?
+
+Of course, it's hard without the examples, but sorry. But yeah.
+
+Ian Smith 
+So there is, no, no, I have some hard examples for you. There's over 30 companies that are working on this, plus a bunch of labs, plus a bunch of governments. And they're all at different stages in their research and their production. Then they're using about 10 different methods. Some of, you can say that, you know, there's like four different ways of measuring and entangling photons. As a result,
+
+There is a lot of variation in the ways in which you measure those things. There's also physical qubits versus logical qubits. The physical qubits can be done to perform calculations, but there's no error correction. And the way that we set up like a rate array of like 200 qubits to come up with like one logical qubit that we can reliably ask.
+
+questions. So if you have, when you look at the literature, they're measuring their two qubit coherence rates. These are like 99 .7 or something like this. But that means that after a thousand operations, you've errored three times on average, and a single error destroys the whole calculation. So they'll take
+
+What Google did is they took and combined multiple qubits in order to form logical qubits. And this was back 2019. They had a really good result. And they said, this is our platform. The Sycamore platform is our platform. I think they had something like 53 qubits at the time. And then they were talking about 127 qubits later. And they would actually present two numbers, the physical qubits and the logical qubits. The physical qubits are, you know, are...
+
+note -taking and the logical qubits are the answer that we were able to present with error correction. Now IBM and Atom Computing presented much larger numbers. Last year they came up with 11, 25, and 12, 52 qubits respectively. So they had much larger machines, but without error correction.
+
+Citizen Web3 
+Makes sense. Makes sense.
+
+Ian Smith
+This year you've got Oxford Ionics making machines with 256 qubits and they're selling them with... or they said they're going to sell them with no error correction present and they're also claiming they're not needed. I would say there's definitely some needed. It's just a question of what you can ask. So when you're referring to qubits and the calculations of qubits, there's a lot of variety. Now...
+
+Citizen Web3 
+interested.
+
+Ian Smith
+There's been three different metrics that people have come up with in the industry in order to try to measure this more correctly. And they're talking about calculation depth. It turns out you can have with a higher rate and tens of thousands of qubits, you get around the same amount of calculations that you'd get out of a much smaller but same.
+
+same performance because they're both going to error after a certain number of operations. It doesn't matter how big the thing is.
+
+Citizen Web3
+Understood? Understood.
+
+Ian Smith 
+So people have migrated terminologies three times in last five years, and I think the terminology that is most relevant to cryptography would be active volume. And this is the ability to take a bunch of small devices and use them as one gigantic super, super computer. And there's still amount of bookkeeping required for each device.
+
+So the devices have to be, in order to break Bitcoin, 1152 qubits. And anything that is 1152 or higher can join into an active volume where the large question is broken into shared responsibility. It's not smaller questions. It's simply shared in a different way.
+
+And that shared responsibility still has to be maintained. It's, you know, non -error state. And there's error correction that can be performed at multiple layers, but each company is making a different choice on where that error correction is performed. And the result is that active volume is able to use a bunch of devices to crack Bitcoin in the next like year and a half to two and a half years.
+
+Citizen Web3 
+Understood.
+
+Ian Smith 
+So Q -Days is going to come very, very close, but it's not necessarily a measure of qubits or logical qubits that's most relevant. It's the total size of the volume. And that's again measured in qubits, but it's based off of how those systems are connected, designed, arranged, and with shared responsibility. So.
+
+Citizen Web3
+Okay.
+
+Ian Smith
+The old method of doing things is that you had to physically connect every qubit to each other. The logical qubits were basically they would connect physically connect like a hundred physical qubits and in together to form one logical qubit which then got connected to all of the other logical qubits. With active volume, you're able they're able to at cyclotum use optical switching
+
+in order to selectively merge or entangle different systems in order to form coherent answers. Which means they can use fiber optics without having to have millions or billions of wires connecting these things together. So the active volume architecture is both expressed in the minimum number of kbits per machine, but also the total volume.
+
+And if you read some of the algorithm papers, by tripling the total active volume, by just adding three times as many machines, you're actually coming up with a 6 to 8x performance gain, depending on the algorithm. So it makes sense to just make massive, massive, massive networks of small quantum devices and get that performance increase.
+
+Citizen Web3 
+There is a question that springs up to mind right on this place. And I guess it's kind of like the last big question, but it's a question that I cannot help to ask. considering you're talking about computation power, if I understand correctly, in a sense, at least a bigger computational power. And you also mentioned clusters before. And I'm going to take it a little step on a zoom out, again, I might be wrong here.
+
+But again, please do correct me if I'm wrong. But here's the question, so to speak. So when we look at AI and we look at what, you know, meta, et cetera, you know, Amazon are building all those clusters for computation, basically. And the question that springs up to mind from people, at least who watch the industry, you know, at least to me is where on earth are you going to take the electricity from? So, you know, the question here is the same and I might be wrong.
+
+But if we are talking about so much computational power about companies or whether it's going to be small companies or research centers increasing their computational power in order to get those mathematical equations or those computers to work, will we need again a big rise in computational power for that? And if so, how on earth are we planning to do it? Where is the electricity going to come from?
+
+Ian Smith
+So there's different power profiles for each architecture. I'll talk about AI briefly, but I don't want to delve into what other people are going to cover for hours better. Elon Musk is, at the time of this recording, trying to build a large NVIDIA cluster for running Grok, the AI that's on X slash Twitter.
+
+That network requires very rapid changes in power because it's an orchestrated consumption of power. And it's difficult to have the power available at the time frames that are necessary because you're talking about millisecond changes, you 100 milliseconds, suddenly power all ships. The systems aren't designed for that very well.
+
+We're going to need a bunch of raw power for AI clusters, and you're also going to need a bunch of sensitive power. And the sensitive power is more of a difficult challenge, because we're not used to performing in that way. When you're talking sensitive power, you're really talking like capacitors. When you're talking raw power, you're talking wind and solar.
+
+And ideally we do also include like, you know, the rotation of the earth and a bunch of other methods of generating electricity. I think that the best generation of electricity will come from, you know, the sun and the inertia from the rotation of the earth. However, AI's power requirements are still not that bad...
+
+There's a lot of power being used, but as Bitcoin goes away, there will actually be, you know, in 2028, 2029, there'll be a surplus of power used to attack Bitcoin from the power that was, by subtracting the power that was used to mine Bitcoin. So the way that they're going to get the power to run these supercomputers in 2027, 2028,
+
+Ian Smith 
+is going to be the fact that Bitcoin is gone and there's no longer money. So the capacity that the world needs is going to shift. AI will probably soak up most of that in terms of just raw power generation in China and other places because there's a lot of Bitcoin mined in China. China is building nuclear reactors. There's tons of engineering going on for power production.
+
+Profiles of quantum computers are dramatically different. So when you look at Oxford Ionics, they have a quantum computer that will run at room temperature. It's 256 qubits and it uses a significant amount of power because it runs off of superconductors, excuse me, magnetic fields and lasers. And that's how they run the system and it remains stable.
+
+at room temperature. You don't need to cool it close to zero. When you look at PsiQuantum, they've actually engineered their power profile to be very small. They're manufacturing the machines they're currently making for this year in order to crack Bitcoin in 2027, or maybe earlier if they add more manufacturing.
+
+Those machines are consuming 10 watts per small entangled pair of photons. And they're more worried about expressing the power cooling than the power consumption. They're using liquid hydrogen, but they're also able to use liquid helium. Hydrogen is extremely plentiful. Liquid helium is kind of hard to make, but not too bad.
+
+When you're looking at their competitors, like Intel with their giant wafers that they're currently mass producing that use electron spin, they're making these massive wafers. We don't know how many qubits are on them. And the amount of power consumption per qubit will probably be lower because it's a single wafer that runs the whole system. But their cooling is going to be insane, same as most companies.
+
+Ian Smith 
+And they need to be very close to absolute zero. They need to use liquid helium -3 and liquid helium -4, which are radioactive isotopes that come from nuclear reactors. And so it's the supply of helium that's going to be more scarce than the power necessary to run the devices. But who gets there first? I think that Oxford Ionics, Intel,
+
+Citizen Web3 
+Interesting.
+
+Ian Smith
+and PsiQuantum are all neck and neck in terms of the race to get to breaking Bitcoin first, but an elliptical curve cryptography, all 256 -bit cryptography, that's public -private key pair. But RSA 2048 is going to be another few months or year, maybe two years after elliptical curves.
+
+Citizen Web3 
+Yeah, I always wondered like, you know, whether or not, know, something in the electric field has to, you know, has a big change, you know, like, you know, a house, you know, plant, you know, like a small tiny one, but you say it's gonna be different. So this is interesting. Also, it's interesting to hear.
+
+Ian Smith
+No.
+
+Citizen Web3
+So, like just to wrap it up kinda like, you know, do you think that the whole, you know, P2P sort of field that exists today, and I'm talking about, you know, people running, you know, Bitcoin, for example, from their houses, of course, if Bitcoin is broken in terms of quantum computing, will those people have to now run
+
+quantum computers to run Bitcoin on? It's a bit confusing. Confusing question, I'm sorry, but I don't know if it makes sense. Let me know if it does.
+
+Ian Smith 
+I'll try to sort it out. So there's been a lot of talk for different things and people tend to optimize the wrong question and come up with the correct answer to the wrong question. And running Bitcoin on quantum computers was one of the talks because someone saw a math equation. It's not really a relevant issue.
+
+Part of the reason it's being discussed is because there's a small quantum advantage to doing hash collisions. And that small advantage doesn't translate well into silicon. Or excuse me, doesn't translate well into performing the same sort of tasks that we demand of silicon. When you look at the cryptographic security, not Bitcoin mining, it's...
+
+Far better to use a distributed pre -compute hash. Daniel Bernstein has some papers around this. He runs cr .yp .to and he's done this analysis and an enormous number of papers regarding different forms of security for different cryptography systems. I highly recommend his site. includes some of the best papers in the field.
+
+His argument is that if you're attacking SHA -256 or SHA -160 or 160 -bit truncated hash of a SHA -256, you're far better off at the 160 -bit level to just run a pre -compute on a large network that has to have very little communication between the parts. When you start talking quantum computing,
+
+the system's scale by their size. you get diminishing returns for classical systems for silicon, but you get increasing returns for quantum.
+
+Ian Smith
+So it's when you're talking on time scale for the end of this decade, think Bitcoin is just going to be gone. But there might be a resurgence. There's a possibility it could be saved, but the people in charge would have to wake up and change their mind. And then they would have to begin a migration that would probably take between six months to three years. They haven't even agreed. They haven't even begun evaluating cryptography.
+
+systems in public. There hasn't been a proposals discussion or anything else. And it's because they're not doing that preparation similar to the YTK preparation that Bitcoin is likely to die. And it's purely the people in charge that are being slow to act and they're not being defensive and they're not planning ahead. Could there be a migration? Yes, but it takes a long time and it's really hard to do a migration in place.
+
+Could you use quantum computers to mine Bitcoin? Theoretically, yes, but you, depending on the system, may also need a large supply of liquid helium -3 and -4 that only comes from nuclear reactors. Both the machines and the helium are both considered munitions. So you wouldn't be, you're not allowed to purchase them or you're not allowed to export them. England recently passed a law saying that you can't export
+
+Citizen Web3
+Let me.
+
+Ian Smith 
+quantum computers were, I think it was like 25 or 30 qubits or something, because they realized that they're dangerous and they don't want people to learn from the designs of any system that's able to answer even rudimentary questions. In terms of the farther future, say 2030 to 2035, you'll likely have quantum computers that run at room temperature in your house, but they'll be for novelty purposes.
+
+And then there'll be quantum versions of blockchain that are able to do quantum cryptography, which is different. Banks currently do this. South Korea Telecom currently has a quantum key distribution network. It's all quantum network and includes the cryptography and the key exchange. Those systems will begin to scale up.
+
+so that we'll have enough members that could join in order to have some participation from the public. And the machines, you'll have to buy a significant machine. However, they still will have this scaling possibility where the bigger they are, the faster they scale, not diminishing returns. So data centers and people who can buy liquid helium.
+
+operate liquid helium are going to be at the forefront of that technology. But the advantage is, like you can query multiple questions to a large machine and will answer all of them simultaneously as long as you have the slots to hold the answers. And that kind of parallelization is the opposite of what we get in silicon. So it makes sense to have a large number of small machines in silicon and it makes sense to have
+
+very large machines, super supercomputers, and quantum. However, the Web3 space is going to be extremely vulnerable because they can't change their public -private key systems. I think that by adopting NIST post -quantum cryptography, we will have blockchains that operate with bridges in data centers.
+
+Ian Smith 
+And those bridges will communicate between the classical post -quantum blockchains and the fully quantum blockchains as bridges, as a source of truth. blockchain will have the ability to bridge those two networks in a trustless way. And I think that's one of the huge advantages of distributed ledgers and having these peer systems is you'll be able to have peers
+
+in post -quantum cryptography that operate in conjunction with other systems in order to establish a system you can trust without having to trust the operator that runs it. And that's what we have today is basically a system of trust where you can trust the math instead of trusting the operator. And that principle will continue, but it will change shape.
+
+Citizen Web3 
+Thank you for explaining that because this is also something that is a big misconception. And I guess a lot of things around quantum computing are that it needed to be educated, not necessarily better, but maybe in a way which will, like you did today, which will help to demystify those misconceptions. On that note though, for the listeners,
+
+All the please check out the show notes. There was a lot of terms here today and a lot of references. So please check out the show notes. Everything me or Ian mentioned are going to be there. So check out those links, check out, learn more, read more. And hopefully, you know, if you can afford Helium 3, buy Helium 3, start stalking. But of course, you know, joking aside.
+
+Ian, I want to thank you very much for your time and very much for your answers. And please don't hang up just yet. This is just a goodbye for the listeners, for everybody else out there. Thank you and see you next week. Ian, thanks.
+
+Ian Smith
+Thank you, Sergey.
+
+Citizen Web3 
+Thanks. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+
+

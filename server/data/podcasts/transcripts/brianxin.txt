@@ -1,0 +1,350 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/brianxin
+
+Episode name:
+The Web3 Mindset, Adoption and Monopolies with Brian Xin
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web Three Podcast. Today I have the founder of Optic Brian with me today on the show. I'm very glad to have you on Brian. Hi.
+
+Brian
+Hi, Serge, very glad to be here and say hello to everybody on the show.
+
+Citizen Web3 
+Before I'm gonna let you introduce yourself and ask you, I just wanna say for the listeners, Brian is not alone today. He's got a very, very, very, very cool guest with him together. He's a ginger guest with mustache that like we love. I'm not gonna talk about him too much, but I can just tell you the listeners, he's a very, very, very sexy guest as well. He's right there looking at the camera, I can see him. But Brian, I'm gonna stop talking about the cat and I'm gonna let you introduce yourself. Please tell us.
+
+Me and the listeners, everything you want us to know about you. How did you get into Web3 and what are you working on right now?
+
+Brian 
+Okay, sure, sure. Yes. Glad to have the chance to talk here. So I think this is a big question, but I think it's good for me to introduce myself in this way and so people can know me and about this project. I'm Brian. Actually, I'm an internet veteran, I will say. So I entered internet business back to 1997.
+
+So that was the early days of Internet One, I would say, in Silicon Valley. So I started a company, early stage company in 1999, do the information retrieval on the e-commerce website. actually, know, Amazon was one of our early stage customers. So we still have that check framed on the wall.
+
+back to Santa Clara in Silicon Valley. Yeah, so that was my early days. I would say that's also the learning of what is internet and how it can grow and what kind of benefits it can bring to our everyday life. So, you know, after 2000, the internet bubble burst. So actually, you know,
+
+This also connects to what we have right now. basically before 2000, the internet was, I would say, a lot of fancy stuff, but people feel it's going nowhere. But after the bubble burst, the real thing starts. The real valuable thing starts. So yeah, I will keep it short. So after that...
+
+That company actually got acquired by another big one. So then I and my partner went to Asia, China, to do another startup in China in 2005. So that time was early days of, I would say, internet, wireless value added service.
+
+Brian 
+like a short message, right? So if you in that age, you can remember this as some reality show, like in US, the American Idol. So people use a short message to vote for their celebrity, right? So that we also did something in China also. So that was the, I would say, biggest selection, election in China for the celebrity. So that
+
+That was a phenomenon, quite successful. And that company actually went to Nasdaq shortly in one year. So after that, we just keep going. So I joined another startup to do the online health care management. that one actually, now it's becoming the biggest health check center chain in China.
+
+So it also went to Nasdaq after 10 years of its startup. So that actually bring me a lot of domain knowledge, not only the internet, but also internet, class enterprise, and some vertical domain knowledge. So after that, I actually was invited by a local MSN, Microsoft.
+
+In the Great China area, I became the CTO of MSN China. So that was that bring brought me back to the center of the internet so Windows Live Messenger Bing search MSN website all those old good stuff, right? So but unfortunately, it's not that shining right now anymore, but
+
+But that brings me a lot of experience from different angles. So after that, we started our own company again. basically, we focused on the social media marketing. So at that time, like a Windows Live Messenger, we have a pretty good social graph and the social active users. But still, it's not connected to the real economy.
+
+Brian 
+So that's why we want to do the social media marketing, connect to the local merchant promotion and marketing or whatever they do. So that actually brought me to almost 10 years journey on the way. So at that time, I guess you guys might remember some company called Groupon. So it's a group buy.
+
+website. So that's also using the social power to boost the merchant business, local merchant. We call it O2O, online to offline. So we spend a lot of time and efforts on this kind of business in China and also in the Great China and the Southeast Asia region. So some of my friends did very successfully also. So we are
+
+friends and competitors. So some already became the giant in the East Asia market. But unfortunately for our business, we didn't grow that big because of the Web2.0 business, the nature of that is platform-centric. So you have to raise a lot of money.
+
+So you can use the VC money to acquire users and to compete with your competitors. But actually, it's not really bringing the big benefits to the merchants in the first place. And later, it becomes this platform-centric, platform monopoly. So that actually...
+
+brought me some ideas. So what should we do for the next generation of e-commerce or O2O? So that was such a natural thought in my mind. So we need to do some decentralized commerce platform for the next generation of internet because that will bring the merchants, consumers together and without a big monopoly role.
+
+Brian 
+inside. So that will bring the benefits to everybody. at that time, 2017 to 2018, we actually find the blockchain technology is the best choice. It actually brings the technology down to this business model level. So it can ensure us to do something pretty
+
+innovative, but without really depending on the huge VC money. So blockchain technology, smart contract and the tokenomics. So I would say those are three basic elements is changing the game rules. So that actually make us very excited and the jumping to that bring in bring our existing solution. We want to convert it into the web three. So but
+
+Well, that's another journey started. but the problem is, know, so we were probably one of the first group of people using NFT to do the show tickets on Ethereum back to 2018, right after CryptoKitty. So it was very, well, exciting, but the problem is that the performance on Ethereum at that time was so poor.
+
+Right. So we even talked to like a ticket master, some some partners that you do want to do some test in China and Asian market. But what it it to remain as a war discussion because it's it's it's never going to that commercial level to serve every consumer well. So that actually brought us some more ideas. So how
+
+Can we make this kind of idea into the reality? So you know, step by step, it pushing us to the ground to check out what should we do? If we just build the application, it doesn't really go anywhere. Especially heavily depends on the base platform and infrastructure.
+
+Brian
+At that time, other blockchain platform is also just growing. And if you guys remember the terror and the FTX and the cost of Solana, the ecosystem just collapsed. So that actually makes us feel, if we don't have a solid ground to build the business on top of that, it's difficult.
+
+to convince any real business move into that. So we are just defining the case by ourself and enjoy self-entertaining by ourself. It's really not going to break the circle and to cause the massive adoption. that's something we feel okay. In this case, we should not just focus on that case, but we should
+
+focus more on the infrastructure. So that's the beginning of the Optic network. So we chose to build our base layer with Cosmos SDK and also building the cross-chain bridges to make the interoperability ready. Because we believe we should not build another separate island. We should build an internet of blockchain.
+
+interconnected world. So there are so many great ecosystems existing already. So we should not just compete but more to collaborate together. So that was the vision in our mind. So we built it and the optic chain is up and running but still it's not enough. you know in traditional software engineering we all talk about middleware. So middleware is the
+
+I would say transformer, right? So from the business logic into a platform can enable the app layer application can run smoothly. So again, the middle layer is also required in the Web3 world. Well, someone just say, OK, so it's more like a protocol layer, right? So we can build a bunch of protocol with some business logic built inside and to power the Web3.
+
+Brian 
+Yeah, that's true. So that's why we have a protocol layer, but still not enough. So we just found, not every application and business, they really want to join the pure decentralization type of application, but because of the performance and there's so many other factors. So that's why we want to build, we try to build another layer on top of protocol, which is Optic Service.
+
+the service can be pretty centralized and provided through the crowd. But that actually will be very comfortable for the traditional developer to build application on top of that. Yeah, that's our approach. Yeah, this is basically the optical infrastructure we have been building for over three and a half years already. Yeah, so...
+
+Yeah, that's where we are. So now we have our core application, which is a marketplace on top of that, and also the wallet on top of that. We just feel, OK, so those two are also two essential parts for any type of business. with that, now we are ready to expand to the ecosystem development phase. So we want to work with partners to build a real world.
+
+use cases on top of that. Yeah, because we feel the current crypto or web3 industry really has been growing up so well. So some technologies are getting mature. But the problem is that we need to make it business ready. Right? Just like we need to make sure it's a usability, it's ready for the normal business and the normal users.
+
+So that's something I think we need to really focus on. Otherwise, the massive adoption will be still a story. Yeah, so that's something working out, keep us pretty busy.
+
+Citizen Web3 
+I definitely am going to ask you about adoption. But before we go there, I have a few questions from the introduction you were doing. The first one is going to be a very easy question. Would you consider yourself a digital entrepreneur or an internet entrepreneur?
+
+Brian
+Of course, I consider myself an internet entrepreneur because my whole career has been in this industry for 25 years. So this Optic Network project is my number five start-up on the road.
+
+Citizen Web3
+It's an amazing story because, know, it's not very, I don't say I don't think it's very often. I think it's 50-50. You have like in crypto today in Web3, it's 50-50. Usually you have the founders who are like 14, 15, 16, 17. And then you have, you know, the founders like yourself with a lot of experience who are entrepreneurs. And it's very interesting to see that combination of energy. Did you notice that? Do you think that there is like
+
+a big difference between those type of founders? Do you think that's maybe because sometimes, you know, people say there are different communities within Web3, right? There is like community that does this, a community that is more interested in values, a community that more interested in money, a community that is more interested in infrastructure, whatever. Do you think it's because of the background of the people who build these projects or it's more about the community and social factors and stuff like that?
+
+Why is there big differences?
+
+Brian 
+Well, yeah, I think that I do believe there's a big differences between the different founders, different projects. And also because of the projects and the founders, they will connect to or build different communities. So I would say actually to myself, I would say the difference is pretty good.
+
+So we need to learn from different projects. For example, some projects are very crypto native, right? So they don't need to have previous experience on the hard journey we had before, but they are pretty native to think about token, tokenomics and the DeFi, all those things together to build some, maybe first is pretty fancy.
+
+but very creative. It has think differently, right? To build something new. So actually I also learn a lot from them. So in this case, actually I always ask myself, like especially four or five years ago, I need to think in the way they think. So then I can really understand what they're doing, right? So not just like some old guys, other old guys just feel this a bunch of
+
+crazy people doing some nonsense stuff. this is actually the, I would say the Web3 mindset change. So if we really want to work in Web3 industry, we need to change our mindset. So the old journey, old credit, well, still worth a lot, but it's not by default, we can bring it into Web3. So we need to learn Web3 in the Web3 way.
+
+with Web3 folks. At the same time, I think with that in place, my past experience might be a little plus for us because we have been through several cycles of industry, product and business. So we might know a little bit more on the hurdles, especially on the operations side. How can a real
+
+Brian 
+project can land into the industry and also be sustainable in the long run. It's not just a simple model and up and running, but usually it's up and down. So that's something we learned in the past experience. So together, would say, combining them together maybe gives us some advantage to make something sustainable.
+
+So I always believe Web3 is not a parallel world to the rest of the world. So it should be part of the next generation of Internet. So if that's the case, we need to make sure it will be sustainable. So that's the same to Web1 and Web2 time frame. So that's my feel. So I think the difference is good.
+
+Web3 is changing a lot on the business model side. So with that kind of diversified players, communities, that can actually really bring us some insights, So innovative ideas to do things differently, right? So just like people say, OK, if you do Web3 or if
+
+You just move web2 application into web3. What's the value of that? Right? So in my case, I just say, okay, this probably there's no value. It's not necessary to do such shift because just you want to do web3. So we need to do something different and a new in web3. So that's why, you know, actually recently we are working on several web3 economy models.
+
+So that's also very important for us to bring the right methodology into the Web3 to support different vertical categories and the large scale softwares and bring them into the reality.
+
+Citizen Web3
+I wasn't going to ask this question, but I forgot about it. It's a question that, but while you were talking about Web2 and Web3, it's definitely the question that I want to ask you now. I was asking this question a lot of founders. I did like this series of interview a few years ago in Lisbon blockchain week. And actually there was a lot of Cosmos founders mainly.
+
+And it was like a series of five questions, which, you know, they were like, they didn't know that they were being asked the same questions, but it was the same questions pretty much. And there is one question now that I remember from there. And I want to ask you that question. It's a very easy and a very difficult question at the same time. as somebody who like yourself, Brian, who has spent, you know, not one and not two and not three years trying to build a product.
+
+and a product that obviously from the way you talk, the way you tell about it, it's obviously, I don't know how it's perceived to people who listen, but when you look at the person, you can tell that the person is alive, they're talking about it and it's something that is there. But the question is like this, do you think, it's a weird question, but I want you to think about it. Do you think that
+
+what you are building and what you have built in blockchain has changed the life of at least one person for the good who is not from blockchain. A person who never heard of blockchain but because of Uptick or because of what Brian was building. The question is in a different way to ask this question that I was asking the founders. I was saying, okay, some of you guys and myself including have spent 10, 5, 10 years in this industry.
+
+Do we really think that what we are doing, the people who never heard of this, do they care about it? Is it going to change their lives? And it's a hard question, but it's an easy and hard question at the same time. What do you think?
+
+Brian
+Yeah, I think this is a very interesting question. So you make me think what happened in the past few years. I would say, well, the approach I did in Uptick project is not very typical compared to many Web3 projects or crypto projects.
+
+There's pros and cons, I would say. The good side is we keep our philosophy and the value system try to move forward. because we, I would say, we are a firm believer of Web3 will lead to the next generation of internet. So that requires patience, just like back to
+
+2000, right? So at that time, we experienced once. So I would say the history won't be the same, but it will repeat in cycles. So that actually makes me believe we are doing something valuable and will change the game for the next generation of internet. But the negative side, I would say not negative, but little
+
+downside is we didn't act so quickly, right? So compared to other crypto projects. So in that case, so we looks pretty traditional in the web3 troop, but it's okay. So we just be ourself. back to your question. yeah, so that's exactly what we really want to do to influence people.
+
+to bring people into this journey. So basically, first in our team. So most team member with me has been working with me for 10 years. So we are together as a family, just like a family. So they were not crypto people at all before. So because they believe this vision and they believe this kind of methodology.
+
+Brian
+And gradually, we move into this industry. And now they become the key contributor from different angles. And also some of my business partners before. In the past, even right now, a lot of business people in the traditional business or Web2, they don't believe Web3. They just feel Web3 is just, well...
+
+fancy place, right? So it's not going to change anything, but just a bunch of people playing the tokens. But when they work with me, when I talk to them, for example, talk about how to do the Web2 to Web3 transformation, and why blockchain technology, smart contract, and the tokenomics can help them to upgrade their business model.
+
+and why tokenomics can really accelerate their user acquisition and user maintenance without really going out to raising huge money from the investors. So actually they are convinced, some of them are convinced. So they like to do some experiment with us. So in this part, I will say we do influence some people.
+
+make some business people believe that something real in the Web3 at this stage, even though it's pretty early stage. I remember I gave a talk to British Chamber of Commerce in Shanghai last year. So there's a group of entrepreneurs and the business and the executives in the audience. So after that,
+
+Even though we didn't really talk about very specific models, but they become very interested in what we discussed, which is called Web3 transformation to change the business from traditional to Web3. So from that, actually, we made a lot of good friends. I would say those are the good
+
+Brian
+resources we have, or you can say the future ecosystem partners we might have. Yeah, so that's the approach I'm making. So I don't mind people agree to it or not. We just keep doing. And also when people see, OK, you guys have been working in the field for three or five years, that means something. Right. otherwise, basically
+
+if it doesn't work well, well, or if it's not a real story, usually, entrepreneur will change direction, right? So maybe after six months, I would present them a second project and the third project, fourth project. But they still see us, okay, you guys are still working on this one. And we see the progress and yeah, that's some achievement, I would say.
+
+pretty encouraging us. Another thing is, let me share with you another small story. I have a team member from UK. So this guy, actually, I have never talked to him through voice and we never see each other face to face.
+
+He is a very key member of our team. So we just share the common vision and discuss the business and work together. Even I don't know where he is right now, probably somewhere in Southeast Asia, but it doesn't matter. So this also brings us the, well, just like a web3 model, right? Dow model. So how can we reshape?
+
+the future structure of our team to make sure it fits into Web3 business. Yeah, so I'm so glad. So I made friends like these people and we have been working together for over four years. So yeah, so I'm not sure I answered your question or not, but I do see there's pretty good changes from the people around me.
+
+Citizen Web3 
+I you have and I think it's interesting that I have been asking this question. I haven't asked it for about a year, anyone, but I have been asking this question people for two, three years. And I personally didn't think and nobody that I asked did think of saying people I work with. So it's a very, very simple answer, but it's right there. it's good. But I want to ask you like in sort of like, you know,
+
+And continuing to what you said, you know, about working more than three and even close to five years, you know, in the industry on the same project. That is quite rare today. And there are today some projects that are starting to reach that mark. There are some that are older, some alive, some not alive. What is your from your experience, you know, because from your story, your experiences
+
+has been some ups, some downs, you know, but you are more on the positive side, which is a great thing to see. And I think a lot of people, some people who listen to this, least, right, I know that they are also founders or potential founders. And if they were to listen to you today, if you could give them maybe one thing what to do as a crypto founder and one thing what not to do.
+
+What would you say from the experience of Uptick? Something that is definitely people should do and something people definitely should not do when they build in a crypto project and trying to really to become crypto native, not just any crypto project, not running after VC money, but really trying to integrate their project into the web 3 economy like yourself.
+
+Brian 
+Yeah, yeah. I would say, yeah, so we are still in the middle of the journey. So I'm not sure it's successful or not. But we just believe that the direction is correct. Then it really depends on ourselves how to do it well. Sometimes it may also be not that smooth.
+
+to the people, to the entrepreneurs, founders in this industry or want to jump into this industry, I would say, well, if you really believe it, just do it. Because if you believe something, you are not going to change your mind frequently. So that it will step by step, you can see the big change. And also on the web three,
+
+I would say Web3 native projects like DeFi, FinTech related, they're very creative. But again, no matter it's a Web3 native or Web2 to Web3 transforming projects, the business nature is the same, I would say, right? From the thousands years of human history, the business logic are the same.
+
+So we just using the different technology in different age to do it. So don't forget this. So we need to follow the business logic, business nature, which means the buyer and the seller. So merchant and consumer, they need to be served well. Just like maybe a thousand years ago, people also
+
+doing the word of mouth marketing and word of mouth commerce. So when you try to buy something, you will ask your cousin, is that good? So did you try it? So then in the web too, so you will have social media commerce, social commerce. In the web three, same thing. So I see some social protocols try to focus on this area because of the decentralization of
+
+Brian 
+data, personal data, personal identity, the game is different. But no matter if it's a person, decentralized data or centralized data, the business side, they still want to have a good traffic, good recommendation. So again, they want to get social media, social graph. So even though we are using the technology to do them differently, but still we need to serve the purpose.
+
+of the merchants and also protect the consumers well. So I would say, yeah, so that's my logic. I could be wrong. But I would say just think about the nature of business you want to do. So whether it can really benefit all the parties who participate. If that's OK, then just do it.
+
+there will be a lot of hurdles. Basically, you know, we are doing online projects, online business to power the real economy. So there will be huge hurdle on any type of operations. The internet business really depends on the operation. It's not just a product ready, then go. So that's the starting point of the real journey. So operation will be
+
+the hard journey. So we have to go through that. So to support you go through that, you have to believe you are doing the right thing. So sometimes, you know, I go to different parties, especially rooftop parties, Web3. So people are very excited to listen to different projects, different approaches. But again, so
+
+If you are changing your mind so quickly, maybe you need to ask yourself whether you are in the right one, or maybe you can do something very short term, but it's not going to change too much in the industry. If we really want to change the industry and bring them into the next generation of internet, let's keep the face, to think about the nature of the business.
+
+Citizen Web3 
+I love the rooftop party reference there. Web3 slash rooftop parties. I love that. That was amazing. You know, I want to ask you a question in a slightly different direction. You talk, not you personally, but the website of Uptick, if I go on the Uptick documentation or website. By the way, here is something that should be interesting to you.
+
+Citizen Web3 
+I found out about Uptick from a podcast interview. I was doing an interview with somebody and then I found out about Uptick like this about maybe half a year ago or something. But anyways, no, no, no, no, no, this is just some useful information for you. But, know, there is a lot of information about decentralized, not information, but there is a lot of mention about decentralized infrastructure. And when I listen to your talks, there is also a lot of mention.
+
+about adoption and I don't mean today, but I mean, in general, you there are some things you sent me before and there are some things when I go online and I can find, know, and I don't have a very specific question as such in here, but I'm going to make like a statement and I want to see what would tell me what your thoughts are about it. And it's mostly about decentralized infrastructure because the centralized infrastructure has, I guess,
+
+several layers of understanding. We can be referring to the software, we can be referring to the hardware. And I've noticed at least personally lately a trend. Maybe the trend is, mean, right now is like for the listeners, you know, this has been recorded at the beginning of October. So there is a trend on Twitter right now on crypto Twitter from self hosting, especially in the Ethereum community and home hosting and about the benefits that it can bring or cannot bring now.
+
+Also being personally, we are also, we are a self-hosted bare metal validator who has off-the-grid capabilities. But what we noticed is that that value, that sort of weight that we can bring to the table is not as important. We noticed that a lot of projects, and it's not just I who noticed that. I think I feel that at least, and this is what I want to... I'm going to make a question out of this. I'm sorry, Brian.
+
+It's just a small intro and then I make a proper question. I guess that the question is how important do you think decentralized infrastructure, what role, sorry, what role does decentralized infrastructure plays today in Web3? And do you think that within that concept of decentralized infrastructure, what role
+
+Brian 
+Sure, sure.
+
+Citizen Web3 
+do providers play, people who provide the infrastructure? Should the chains aim to decentralize their infrastructure or should they all, I don't know, like stay in heads and be super, you know, have a very high liveliness and a very high ping and rely on centralized infrastructure? Is that what you mean by decentralized infrastructure at all? So it's a lot of questions together, but
+
+I don't know. Feel free to pick on whatever part you want to pick on and talk about it. I apologize for kind of not making it very specific.
+
+Brian 
+Mm-hmm.
+
+Brian 
+Yeah, I think this is a great topic. I would say, in my view, decentralized infrastructure will become successful. It's not just because they are decentralized, well, named, right? So because of the nature of that. And also for the Web2,
+
+industry moving to web3. It's not just because of this fancy word web3 or decentralization. So we need to see the core value that we can bring to them. I would say it's still back to the basic the blockchain technology. It can build a decentralized ledger system to bring people together even though they don't trust each other. Right.
+
+to make sure they can make contributions to keep the network safe and also power the business on top of that. And also the smart contracts side. Still, it's using the technology to building some kind of business logic into that. Then it still can bring the trustless world into a trustable business. So that's the key for that.
+
+The third one, would say the tokenomics, The tokenomics can really bring the value to each participant, no matter it's a consumer or a service provider. So they are paid based on their contribution in a, I would say, pretty fair way. So with that, let's go back to see the current business model, which part we need to optimize it.
+
+which part we need to even change it, right? It sometimes be disruptive. So I think that's the value that Web3 and the decentralization can bring to the upgrade of the current business models, especially the platform-centric part. And the other part is the ownership, I would say. So we all talk about the crypto, right? So it's basically it's the ownership.
+
+Brian 
+confirmation. So you own your data, then you own your asset, and eventually you own your real business. So that's the ownership protected by the technology, not a paper of a legal contract. So that's again, bring the trust into the trustless world. So I would say those are the essential part when we think about the
+
+doing the real business in the Web3 world, the value it can bring to us. But still, I would say decentralization doesn't mean we need to remove the middleman. So because of the middleman, there's so many business can be done right now. But again, they are providing some valuable service. If their service is valuable, they are still paid. So basically, I would say,
+
+We are changing the monopoly platform into a technology driven platform, decentralized platform, while all past middlemen become a service provider inside. So they are still providing the service and they earn the fair money they should earn. While we also distribute the benefits back to the consumer and the business side.
+
+So I would say probably that's actually that's our vision to do this kind of infrastructure. But again, when we talk about infrastructure, there's so many infrastructures in the market, right? So it's a general term. So what we really want to do is connect to the real business because that's the future of internet. But again,
+
+When we do this infrastructure, should we consider us be a future monopoly party or not? If you really believe in web3, we should not do that. So basically, we building a decentralized infrastructure, means it's a public infrastructure. It's a public infrastructure open to everybody. So everybody can have a fair share inside.
+
+Brian 
+and to do their business, including us. So we build it doesn't mean we own it. So if we believe this kind of philosophy, then other business and the service providers, they will feel, okay, it's a fair chance to work together. Yeah, I would say, yeah, decentralized infrastructure, the beauty of that is
+
+while those are based blockchain, tokenomics, customer contract, and the DID ownership, your own your data kind of concept and the protected by technology. At the same time, on the project side, on the project side, we need to also have the decentralized infrastructure mindset that we will never be the monopoly person and we should build the public infrastructure.
+
+which benefit everybody, including us. Because in some crypto projects, basically some projects, I don't think they are real Web3 projects, but they are using the Web3 technology to do the token sale, token stuff. But again, they want to own everything. They want to own as many as they can. even back in the past, I would say, I'm not sure it's...
+
+right or wrong, but my opinion is in the past, the NFT market, it began, it excited everybody, right? Especially the creators in the very beginning. Then people feel, okay, my IP, my digital works got confirmed by my ownership and I can get my fair share in the future trade, right?
+
+So that's so beautiful. It's a big problem for decades. But again, if the industry move too fast on the token price side, you can see it's losing the spirit. So even some creators, they finally say, OK, we are not in the center of this game at all.
+
+Brian 
+become another victim inside because our loyalty never got respected. Some platform, they want to boost the sales. They even ignore the loyalty share with the creators. So that actually hurt a lot of the creators. So I think on this side, we need to rethink how can we really bring those
+
+real contributors into the center of the stage. When they are all in, no matter it's from creator economy side, from sharing economy side, or even from loyalty, fan economy side, if we can really bring the right people into the center of the stage, then the real business will grow. So this kind of a decentralized infrastructure, I would say, will be sustainable.
+
+Citizen Web3
+There is a few more things I want to ask you about, and I'm thinking that probably won't be able to, so I'm trying to pick the one question to concentrate on. I think that what I want to ask is this. Considering that Uptick, everything that you were saying now about building Web3 projects in a decentralized way and attracting the right...
+
+providing the businesses and the customers, know, the infrastructure which is not owned by anybody. This sounds like, you know, lot of different parties with a lot of different interests, which brings me to the community question. How to it's very, me, tribalism has been one of the biggest problems in crypto and in blockchain in general. know, people are very emotional about their tokens. People are very
+
+They're ready to kill you, you know, like if you just say the wrong thing about their talking, they will take a knife and murder you. Of course, I'm over exaggerating people. I love everybody. Let's not kill anybody. you know, the question is, know, jokes aside, how do you in a project, is obvious, who's in my opinion, at least whose goal is to incorporate the more the better and to provide
+
+like a marketplace or so to speak, is the people communicate the platform where people can exchange goods, businesses, services, whatever. How do you concentrate on building a multi-chain community without, you know, yeah, without all the problems that sometimes can arise when you build a multi-chain community because Ethereum people, Cosmos people, Bitcoin people, Polkadot people, Nier people, know, whatever. How do you make it all work together?
+
+Brian 
+Yeah, very good question. So I would say this is very, very challenge in our life. So even in Uptick community, we're not doing that very well yet. So I would say in the past few years, right, so all the community they want to grow.
+
+inside the community or bring more people into their community to grow. again, this becomes the people compete with each other. Actually, when we try to use Cosmos SDK to build our base layer, I really like the vision of the Internet or blockchain. There's no separate island.
+
+So we, and you cannot be the monopoly, even though it's a decentralized blockchain community. So we need to work together. We need to have, just like in Uptick, it's a small one, but we will build it as a small, just like a small country, like small economy zone. So we are not focusing on everything. We want to focus on some special area to make it best.
+
+So back to the community building. So this is quite challenging. So that's why we try to build Discord channel and our Telegram channel. But in Discord channel, we try to have multiple channels inside. So we want to have a quality topic over there. But still, I don't see too many, frankly speaking.
+
+But on the general main chat in the telegram, they are more focusing on the, well, for example, token or some marketing event things. not many people talk about the cross-chain interoperability, the base layer, protocol layer, some business models. But still, I think that's normal.
+
+Brian 
+to me eventually. Just like we are in a democratic society, right? So people have different voices. Key contributors are always minimal, a small amount of people, right? Small group of people. And the other people will listen, will help to promote. And also we might have some people disagree with what we are doing.
+
+and some people will challenge our strategy. So I think that's all good pressures on every project. yeah, so that's, we also experienced some in the recent months. So people might question whether are you moving too slow or are you thinking about
+
+the real web3 way? Are you really going to deliver this kind of infrastructure and connect to the real economy? Yeah, so I think those challenges are pretty, sometimes it's pretty strong. But I think that's a pressure on me and on my team. So if we are already working on this one for four years, so we...
+
+Really, we need to deliver something as soon as possible. But on the other side, we need to control the quality. We want to make sure, again, the right use cases should come in. We should not invent something by ourselves and pretend it's a good one. So that's, well, every day we're doing the trade-offs. Even the team, they have been working with me for long time.
+
+If any people need to be rewarded, they probably are the first group of people deserve it. So does our validators and also other community members. So I think that's creating a very positive pressure on us. So for the interoperability part, we want to unite other ecosystems.
+
+Brian
+community. So it's not just stealing people from one way to another, but we want to tell them, okay, if we are connected, you might get more benefits from that. So even though we are focused on different vertical categories, but still we can grow together. One plus one should be bigger than two. That's the
+
+philosophy we want to deliver to different economies.
+
+Citizen Web3
+It makes sense. think that philosophy of together we will achieve more is something that definitely should work. I can see it work. Brian, two very quick different questions to finish. This is going to be completely different questions. So it's like a very quick blitz question. This is like to finish the conversation, to take us out of this. One, please recommend.
+
+Citizen Web3
+a good book that you have, that has a positive influence on you over the last, I don't know, five, 10, whatever years, something you would recommend with a positive influence or a song. It could be a song or a book. It doesn't matter. Or a movie also. Just one.
+
+Brian 
+Hmm.
+
+I would say if you say just one book, would say one influenced me a lot was a pretty useful book called A Sovereign Individual. So that was an interesting book, right? So I guess you also know it. Yeah, it was was published in 97, I guess.
+
+Citizen Web3
+That's a good answer.
+
+Brian
+That was the early days of Internet. But because of the information revolution, microchips and Internet, they predicted the direction of the future world. So and even including some part of the crypto and right. So I would say this actually influenced me a lot. That's the strength.
+
+inside me that to move forward because we believe this is the direction to go. Otherwise, what an awful waste would have been working in this industry. The industry, the business all need to go back to its nature. Web3 actually is the solution to that. I would say this book is a good one.
+
+and I highly recommend it to people who didn't know it.
+
+Citizen Web3
+Just for all the listeners guys, just to remind you guys, girls, under the show notes on the podcast, you can find all the links to everything. Me and Brian mentioned the books, the project. So please go on there and have a look. Brian, one last question, I promise, in the same sort of style. Give me one motivational thing, something motivational that keeps Brian every day waking up, getting out of bed, trying to build, you know,
+
+decentralized economy, decentralized infrastructure, trying to bring web two and web three together and, you know, being a digital entrepreneur and everything that you stand for. What is this? Not necessarily the thing, but something motivational that helps you make that happen every day.
+
+Brian 
+Well, I would say the biggest thing for me is every day I need to wake up. First, I believe we are doing the right thing in the right direction. The second part, the pressure on me is to really to make sure that people following me or believe me, they won't go wrong. Right. So that's the real pressure on me.
+
+And also, think it's a very positive pressure. At the same time, know, right now, after several cycles in crypto industry, I would say this year, when people talk about narratives, so it seems to me not too many good ones or no too many new ones. Right. So, but in my view, actually, the old narrative still is the big one.
+
+which is the massive adoption. So if we can really do that in the next year, so that will bring the real Web3 into the everyday life. So that's why we work so hard for so many years. And I also believe this might already, might be the right timing to think about that and to discuss with the industry and also bring the infrastructure.
+
+to make sure it will happen one way or another. Yeah, so yeah, that's what encouraging me every day.
+
+Citizen Web3
+Even even I just want to say even the notification, even your notification sounds agree. It was quiet all this hour. And then as soon as you said that, if you can ping, it's like, yes, please. No, no, no, no, no, no. I was I was no, no, no, no. Sorry. It was just a funny moment. was exactly the right time to do that. The ping. Brian, this is that is a very good nice answer. At least I thoughtfully enjoyed it. That last answer for sure. Very positive in my opinion.
+
+Brian
+Alright, well I'm back.
+
+Brian
+Okay.
+
+Citizen Web3 
+I want to thank you for your time and I want to thank you everybody for listening and everybody until next time and Brian please don't hang up just yet and everybody else thank you and see you next week goodbye. Bye bye.
+
+Brian 
+Yeah, thank you. Thank you for giving me this chance to talk. Yeah, let's keep in touch.
+
+Citizen Web3 
+Thanks, Brian. Please don't hang up just yet. Bye bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

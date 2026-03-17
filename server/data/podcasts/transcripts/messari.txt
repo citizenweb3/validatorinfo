@@ -1,0 +1,407 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/messari
+
+Episode name:
+Messari, decentralization and research with Wilson Withiam
+
+Anna: 
+Hey, it's Citizen Cosmos, US Serge and Anna, and we discover cosmos by chatting with awesome people from various teams and community. Join us if you're curious how dreams and ambitions become code. 
+
+Wilson Withiam: 
+So I don't disagree with the standpoint of you should have freedom of expression, you should be able to make your own language like this. You can't readily pull out your assets or recolateralize as quickly because maybe you don't have assets on the chain and you have to port it over. 
+
+Citizen Web3: 
+So I don't know what's going on. We make things happen, yes. 
+
+Citizen Web3: 
+Before we rock it off into the next episode, we are glad to announce our new podcast sponsor, Cyber. With the help of such technology as Tendermint, IPFS, and Cosmos SDK, Cyber is building a super intelligent, decentralized AI protocol with the name of helping users to gain back control over their data and over the internet by creating a transparent and user-managed base layer for the future web. To learn more about Cyber head over to Cyber.page, there's some of the cool apps it has to offer already. Learn how you can help to build a new decentralized web and participate in Cyber's incentivized testnet to earn rewards. 
+
+Citizen Web3: 
+Good space time to you, Cosmonauts. 
+
+Welcome to you in episode of Citizen Cosmos. And Today, we are joined by Wilson Withiam, and I hope I pronounced it correctly, is the senior researcher at Misari, the senior research analyst at Misari. I'm sure you all heard about Misari if you haven't. Wilson is going to tell us everything you did know about it today. Welcome to the show, Wilson. 
+
+Wilson Withiam: 
+Thank you. Thank you for having me. Listen to a couple of podcasts, big fan. So thank you for having me on. 
+
+Citizen Web3: 
+You're putting yourself in a spotlight again because I'm now going to ask you about the podcast that you've listened to. But I'm not because we did it before we started recording for one who's listening and Wilson has actually proved that he has listened to the podcast. So really, thanks for coming on and really glad to have you because you're going to be surprised by it. 
+
+I'm actually your fan because I follow Misari for a long, long time and I read a lot of the things you do. So that's really cool. 
+
+Wilson Withiam: 
+Thank you. That's always awesome to hear. 
+
+Citizen Web3: 
+Before we start with the questions, do you want to introduce Misari and yourself, maybe talk a little bit about your background, whatever you feel like saying. 
+
+Wilson Withiam: 
+Yeah. So I guess a little background what I do now. So researcher and Misari, Misari, we have multiple fronts of what we can provide. So we have a data aggregator website where you can come and get pricing, on-chain data for any sort of asset that you might be looking at. And then the other side is we have the research arm where we put out research reports, deep insights on various assets or themes. 
+
+So we have those two different angles. If you come to the site, you'll definitely get all your data needs and then any research need on the other side. We have our research team is about 13. Now we've grown quite a bit over the last year. And what we've really done is we kind of broke it down into different sectors. The crypto space is so big now. It's so tough to follow it just from like a general standpoint. 
+
+So we broke it up. So a couple of people focused on DeFi, a couple of people focused on Web3 and NFTs. And I went and took the role of looking at various layer ones and interoperability solutions as well as scaling. So that's where I spent most of my time kind of at the protocol level and looking at the various strategies, designs that networks have put out there. And then a little bit into my background is like, how did I even like get into this? 
+
+My background is just kind of like the typical story of all Roads lead to crypto. I wanted to go to medical school. I was actually in like the last round of interviews. I joined a startup that was working in sports technology, kind of joined on the medical side. And then I really got involved with the company and enjoyed building out the technical product. And I was just like, I need to learn this. Decided to go back to school briefly to learn how to code. And it just happened to me mid 2017 when crypto was running wild. I'm your typical 2017 bandwagon fan and jumped on at that time. I kind of got my toes wet, coding a little bit in solidity. 
+
+Nothing too great. But then I ended up starting a community in my hometown in Connecticut, the US. And that was mainly just to teach other developers about Ethereum and how to build applications on Ethereum. And from there, I started researching and writing. That's where I kind of got my first stint in crypto. Ended up working for Circle Research for about nine months. And then I joined Masari almost two years ago now back in 2019. 
+
+Citizen Web3: 
+Wow, that's a cool intro. Thanks for that, man. But before I'm going to put you in the spotlight again, you have to explain to everybody to ask them to everybody who's listening to it. What is the study of kinesiology? I hope I'm pronouncing it correctly. That's your degree, right? In kinesiology. What is it? 
+
+Wilson Withiam: 
+Yeah, you said it right. So it's basically the study of human movement. How are we going to improve our physical health going forward? So it can be for training for any sort of sport or longevity, just to stay relatively healthy. And so what is the right way to train your body? And then it also obviously overlaps with a lot with nutrition, mental health. So it was really just kind of like a general broad study of health, but it kind of focused more on the physical nature. 
+
+Citizen Web3: 
+Cool, man. Were you disappointed that you didn't finish your study and went into crypto or did crypto kind of pay off? 
+
+Wilson Withiam: 
+No, I'm not disappointed at all. I still love it. I mean, I still like the health side. I still pay attention. I definitely still work out regularly, but I think it was just something about what kind of drew me to Kinesial in the same place. But what I loved about crypto is it's the intersection of so many different topics. And there's so much to learn. 
+
+When you first look at this, you're like, oh man, there's a lot of philosophical standpoints. There's the technical side that I want to learn. There's a financial side that I was just so unfamiliar with. And I just looked at it and I was like, this is so cool. 
+
+I really, really need to take the time to dig in and learn this because these are just some topics that I really hadn't taken the time to study. And I just found it incredibly interesting. And you can see the trend of where everything was going, both from a technological standpoint, but a financial standpoint. 
+
+And that's why I just see it like the shiniest object in the room at the time that you could also see it playing a much bigger role in the future. So I wanted to get in and learn as soon as I could. 
+
+Citizen Web3: 
+You mentioned right now that there is a lot of topics. And in your intro, you said that there's a lot of data too. And I totally agree that at this time, it's way ahead of a hills what a one person can process in a single day. What at least not in the 24 hours. 
+
+And normal Earth Day provides us. So as a senior researcher of like research companies in crypto, what are you other resources that you take information from apart from Missouri? Of course, could you highlight some of your favorite that you would recommend to others? 
+
+Wilson Withiam: 
+I love this question because there are so many amazing researchers that are out there. And while I say like, I'm sorry, it's fantastic. Please come check out our stuff. But there are some great other resources on the data side. I love some of those aggregation websites like DeFi Pulse was a DeFi station from Minskan has done a great job. DeFi Lama is coming along and they're integrating with a lot of different chains. I think trying to pull data from multiple chains right now is a sorely needed area. And I'd love to see more projects that tackle this and kind of solve this problem because it's going to become more important as the crypto industry grows. 
+
+On the other side, on like the more tangible research side, where you're actually ingesting and written information. I don't know if you know Hasu from Hasu, that fantastic person. Definitely go follow him on Twitter, read his research. He just started working alongside Paradigm with a lot of his reports. The team at Delphi Digital also has a couple of fantastic reports. 
+
+So they have a daily report that they put out every day. And that's almost like a must read for anyone that kind of wants to get a grasp of everything that's going on. And I know those are like my two main resources. 
+
+They're also some Ethereum, such as ones from like Defiant and Bankless have some great reports as well. And they really do a good job of breaking it down into very simple terms because this is very complex stuff. So not only is it just a lot of information coming out of you, but the complex topics, new terminology, a lot of jargon getting thrown around. So how do you create a lot of analogy so people can really wrap their head around something that is relatively intangible? 
+
+Citizen Web3: 
+Talking about the complexity, Massari itself can be quite scary at first sight. And I'll be honest with you. I mean, I've been in crypto forever since the beginning. And at first when I saw Massari, I was like, whoa, what's all this like click buttons? 
+
+It just seemed like a little bit scary to me. But now I can't imagine my analysis without using most of Massari tools. So for somebody who is not necessarily in newbie or doesn't matter what level of understanding he has, what is the one Massari tool service that you would like say, guys, go and check this out or read this because your life is going to become easier when you're going to use that V1 thing from Massari. 
+
+Wilson Withiam: 
+For sure. It's kind of something narrowed down to one. So I'm going to give you two because there are two different aspects. One is we a lot of the research is behind a paywall. We have a pro service. You know, we spent a lot of time in these reports and part of the business model. 
+
+But we do have a bunch of free ones. We have a couple of explain it like I'm five pieces, one for DeFi, one for Web three, and I highly recommend anyone going and checking those out. That would give you a good idea of some of the products in the space. And what's the goal of these particular sectors? 
+
+That's easy to read research. The other one is I love this feature on Massari from the data side is we have this feature called Watchlist, which is basically you can kind of create your own portfolio and you can even create it one that caters to your portfolio. Or maybe it's like assets that you want to particularly look at and that you find interesting and then you can actually customize eventually it's starting to get that way, but you can customize the front page of the network to actually show you the assets that you want to see. 
+
+And so that's just kind of like an easy way. If you're trying to narrow down the scope of how many assets there are out there, you can kind of narrow down and get a closer look at some of the assets that you can grog. 
+
+Anna: 
+Do you feel that there are some differences between complex thing and complexity of any kind of system? Because sometimes I can see that for some projects, there are so complex. Yeah, there are a lot of layers in that system. 
+
+So that makes it incredible to understand it. And sometimes they're difficult, but there are a lot, a lot of mess in their documentation, GitHub repository, how anyone can feel the differences is going to be a lack of time to organize everything or it's just super complex and super difficult thing as a project to understand and to get deeper into it. 
+
+Wilson Withiam: 
+It's amazing because this complexity like compounds, because like every new project comes in and they have their own terminology for anything. So it's like, how do you explain that in simple terms and how can you relate to other projects, to other projects that are similar projects so people can say, maybe I can understand Cosmos now, but how can I understand Polkedot when there's so many different ways they explain this? And there are some similarities that you can try and help people put it together and basically understand from a general standpoint how these things are related while removing the jargon. And I think that's part of what we've been trying to do by putting things into, by bucketing different projects into sectors. So it gives you an idea of what is their goal? 
+
+What are they trying to accomplish? And kind of what's the market around them? So if you're looking at it from an investor standpoint, I want to know what's the competitive landscape for some of these projects. And that's a good place to start looking. 
+
+Obviously, it might go deep from there. There might be some nuances, but I think trying to bucket them into sectors is a good place to start. And then to your point, documentation across different projects is can be messy. There are some that have fantastic documentation. 
+
+I'll keep bringing up Cosmos and Polkedot have great ones. Tara has great documentation. Theorium's done a really good job with what they're working at. Obviously, they're like some of the top projects that have a couple more resources and can put more time into this. But that really, really matters because when I usually tell someone if they really want to look at a project, I send them to the documentation because that's where you're going to get your best resources if you want to do it in depth research or something. So if you're a project, the best thing you could possibly do is really spend the time to build out that documentation. 
+
+Citizen Web3: 
+That total error that I think that without the documentation sometimes, even when I see code and code that I understand and like, and it doesn't have a documentation, I just keep it because I'm like, guys, I mean, if you didn't document what you were trying to tell the world, then who else is going to do it for you? But I do have like devil's advocate kind of questions. You mentioned that the jargon is different and you brought Polkadot here. And of course, like you have a fisherman and Polkadot and Cosmos. And I understand exactly what you're talking about, but isn't decentralization is all about the freedom of expression? Well, kind of the philosophical side. And when somebody tries to gather all the jargon from everyone and say, no, no, no, no, no, we're not going to call that like fisherman or a relay or whatever. And I know it's not exactly the same things. But when somebody does that, aren't they kind of taken away from the decentralization? 
+
+Or no
+
+Wilson Withiam: 
+I'm going to come at this with two angles. I think one thing when you kind of have, you come up with this like this different language in a some sense, it might also be a good thing to help develop a community. Because once someone understands that, they feel like they're one of 1000 people. 
+
+Or however many people that would actually understand this stuff. And all of a sudden you can gravitate and understand other people in the community. And it's a good way to kind of build that up. 
+
+But if you're looking to actually grow crypto and bring in more people who don't understand this, that's going to be a huge learning curve, a huge hurdle. There are some people like us sitting here who look at that. They're like, that's interesting. I don't understand it. 
+
+I want to learn that. Most people will look at that and just be like, that's way too much right now. I got too much on my plate and I'm going to go to something that's a little bit easier to understand. So I don't disagree with the standpoint of you should have freedom of expression. You should be able to make your own language like this. Like I think the best one was like, urban, like totally changed. 
+
+Citizen Web3: 
+You just took the words out of my mouth. And so I'm a huge fan. 
+
+Wilson Withiam: 
+It's so cool. I like changing up the binary code to just like mess with everyone. And it kind of creates this cult like following. But at the same time, how do you grow beyond that niche group into something that's bigger and more welcoming long term? 
+
+Citizen Web3: 
+Sorry to interrupt you. I'm just a huge fan of orbit. And yeah, I kind of got excited when you mentioned it because I was going to ask you. So what do you do with projects like orbit? Because I still personally trying to get my head around sometimes, even though I did like the first whom course when this just started out. Who is the language for everybody who's wondering what on earth am I trying to say? It's the coding language that's over bit is using. 
+
+They invented their own and called. So do check it out. But going back to decentralization and with the freedom of expression. As a researcher, you probably have tons of projects that you look through. And how do you distinguish between the centralized project and a project that pretends to be decentralized? 
+
+Wilson Withiam: 
+This is a great question because there are so many different aspects of the decentralization and we always seem to pack it into just one term. Decentralization and what does that actually mean? 
+
+I know Vitalik did a really good job of trying to define it a couple of years ago by saying, hey, there are a couple of ways you can look at this. It's architectural decentralization. Basically, where are the nodes of the network located? Located geographically? Are they all in one location? 
+
+But are they more spread out? There's logical centralization decentralization. So where essentially, like, how does a state machine work and sit? 
+
+Like, where does the data go? Is it spread across different shards? Or is it all in a single layer? It's a single stack system. And then the last one is the idea of political decentralization. So who actually, like, governs the network? To be honest, like, the first two, one of the partners over at A16Z wrote a great article on this and broke down how the first one, geographic distribution, is more about redundancy. 
+
+It's just another word for it. And so in the long term, maybe that doesn't matter that much. The second one, we're starting to trend towards the fact that maybe we do have to shard state long term. So maybe logical centralization isn't possible or isn't viable. 
+
+We'll see. There are some projects working on this. The last one is what really matters and is like, who actually governs and has a say in the network. And so that's when I think about decentralization versus centralization. 
+
+That's what I'm looking at. And so, and this can apply to networks, protocols, and can apply to applications. Essentially, who is governing? Who has a say? Who can help direct the future direction of the network? And so as a holder of a certain token, can I vote on proposals or can I submit proposals to the network and have a say in what goes on? And obviously you want to have the number of people that can have a say be more dispersed. But obviously a catch to that is as that gets more widely distributed, it takes a lot longer to get some of these changes enacted. So there might be a balance to everything, but that's generally how I look at it. 
+
+And so when I look at something, just I'm going to throw it out because I know I put a tweet thread about it. When I look at something like Binance Smart Chain, you're looking at the topology of the network. They cut down the nodes for the network down to 21 different nodes. And actually that node subset runs on Binance Chain, which is a separate chain. A lot of people, I know it's kind of tough to differentiate and that runs pretty much on 11 different nodes. And we don't really know who operates those nodes. 
+
+And it's under the assumption that maybe Binance does. But anyway, that you're saying like maybe a single entity has a very strong influence over the network. And so that would probably live more towards the political centralization side of the spectrum, whereas maybe some other networks that like an Ethereum would live more towards the right side where anyone could potentially have a say and voice their opinion in like an awkward desk meeting or something. 
+
+Anna: 
+I just want to talk about Binance and what kind of consensus do they have, how they relate it to Cosmos and really is it possible yet to all that bridges that we now can see between Ethereum and Binance and why we don't have bridges between Binance and Cosmos or if that's going to happen in some not close future, but maybe in some years to come. 
+
+Wilson Withiam: 
+It's interesting because the way I've seen it is Binance's two chains actually operate differently. There are two completely different chains. Binance Smart Chain, the one that has grown in popularity and that may probably people will have used when Ethereum fees shot up to what were unreasonable levels for most people, that is actually a fork of geth, which is the primary client for Ethereum, for people unfamiliar. So essentially it's a fork of Ethereum. Essentially what it uses to actually verify blocks and verify transactions is a limited validator set of 21 nodes. How those nodes get selected actually operates on a different chain. So Binance Smart Chain has a separate consensus layer from its execution layer. Consensus layer actually lives on Binance Chain. Binance Chain is built using Cosmos SDK. And so in that sense, it has the opportunity to input like an IBC module and connect to the Cosmos Hub or any other Cosmos chain. 
+
+So it has the potential to do that. I think the focus of Binance Smart Chain right now is the fact that it's really almost just trying to be like a copycat of Ethereum. It's being an Ethereum load balancer in a sense that as activity on Ethereum and fees skyrocket, Binance Smart Chain is going to be the first outlet that most people would potentially go to. So it has the most active ecosystem outside of Ethereum. And so I think that's where most of the focus is right now. 
+
+It's kind of tough. It'll start looking to bridge to other chains once the opportunity is out there. And I think that will come once more chains actually start implementing an IBC connection with the Cosmos Hub. So right now, I mean, you've seen Iris Hub connected. I think Akash just connected. 
+
+I can't remember. I know there was one more in there, but looking at some of the other chains, Akava, Thor Chain, Band, Terra, they're still in development as far as like, when are we going to add IBC to the chain? Because they're planning future upgrades for the next for the rest of the year. And then after that, then they would have to enable transfers. And so I think they're still working through some early development stages on their side before they actually activate these bridges to the Cosmos Hub. And once that activity, like the cross chain activity starts to pick up, in my sense, that's when Cosmos, that's when Binance Smart Chain and Binance Chain would actually look to start to bridge to other networks. Because right now it's being very successful at pretty much feeding off of being an overflow network for Ethereum. 
+
+So I think its focus really should be on one, continuing to build out its application layer to finding a way to find a more sustainable model with its node infrastructure. But I do think there's definitely a play in the cards as the Cosmos ecosystem starts to connect with one another and IBC picks up more traction that there will be an opportunity where they bridge to other networks. 
+
+Citizen Web3: 
+There's actually a website for everybody who might be wondering, which is called I think when mainnet and a country member of its.com or.org, which is done by the guys from Chain Appsys and it's not spelled when as in W-H-E-N, it's spelled when as in W-E-N and it actually tells you more or less when IBC is launching on different Cosmos chains and when is the mainnet going to launch. So it's a typical question when mainnet went Binance, but when IBC sir, yeah, and so on and so forth. 
+
+The guys from Chain Appsys ones are doing Kepler, which is like a metamask-like extension for the Cosmos blade chains. They did like this small website and it just tells people when is IBC going to be launched. So if you ever wondered, I hope you can find it. If not, I will send you a link later and we will add it to the description as well. 
+
+Wilson Withiam: 
+That's so cool. Have you also seen, was it Map of Zones, that visualization? 
+
+Citizen Web3: 
+Of course. 
+
+Wilson Withiam: 
+Yeah. OK. 
+
+Citizen Web3: 
+Citizen Cosmos, we just actually organized a hackathon, a Cosmos hackathon together with Thandermint for primarily Russian speaker, Hackers, but it was actually like multilingual and the team from Map of Zones, they were, they did another project, which pretty much won like half of the prizes. So yeah, they're a great team. 
+
+Wilson Withiam: 
+That's awesome. I love that product. 
+
+Citizen Web3: 
+Anyways, come back to you. Something I would love to talk about, I think something everybody would love to hear from you as a researcher. It's not DeFi, no, it's not DeFi. NFTs, a lot of people predicted or tried to predict or make an educational guess, whatever you want to call it, that the following year is going to be an NFT year or maybe even this year. Now, in my opinion, and something that we recorded Constantine, the founder of P2P, or he mentioned that as well on our podcast, which is something I share, that it's not like that because NFT doesn't have a product market fit. 
+
+What would you say to that as a researcher? Would you say that NFT does have a product market fit or is it still going to be looking for the product market fit and it's going to only become popular when it finds it? 
+
+Wilson Withiam: 
+It's hard to say it's not popular right now. You're getting news exposure and it almost feels like there's more attention being driven towards NFTs than when Bitcoin made its run up in 2017. So they're definitely wildly popular and it's incredible to see because these projects have been building out for many, many years and people keep saying, oh, NFTs are around the corner. They're going to happen. They're going to be huge. 
+
+And now he's finally starting to get that first taste of it. But realistically, where are they? So in some senses, I can kind of understand it. If it's like an art, if you're trying to buy an NFT art piece, the art market, it's unique. People will, if they find a piece that they like and speaks to them, they'll almost pay whatever they want for it and then just hold on to it. 
+
+And that's just the way the art market works. And I don't see why if you're attaching it to an NFT, why that would be really any different. It's really just kind of buying ownership of digital art. But I feel like the infrastructure around NFTs isn't quite there right now. What's the point of like buying an NFT and holding on to it? 
+
+That's not art. You want to use it for something. I just don't see the infrastructure there. Like I, as maybe like metaverses start to get built out, these virtual worlds that we keep talking about, all of a sudden it's like, hey, your NFT of a photo or something you can put in a digital museum or something, or it can be in an advertisement in there and actually be like revenue generating. Or we started actually getting more blockchain based games out there. 
+
+And your NFT is an item or a character that can go between different games very seamlessly. And we're heading there. I can kind of see this vision for the future, but it's not quite there. So a lot of, a lot of the stuff that people are buying and bidding up right now, unfortunately, it might be this year's ICO. I think in the long run, there's definitely an opportunity where NFTs can have a role from that standpoint. I also think there's a lot of other areas where NFTs can infiltrate even in the financial sector, as far as like what they would represent. NFTs obviously are very popular from the art and gaming standpoint, but there are other areas where NFTs can fit in. I'm a little unfamiliar with it. I'd love to kind of explore more, but I've heard people a lot smarter than me to talk about it. So just something to keep in mind. 
+
+Citizen Web3: 
+By the way, orbit idea NFTs. No Let's not talk about it. 
+
+Wilson Withiam: 
+Yeah, exactly. Yeah. Happy to talk about it. 
+
+Citizen Web3: 
+No, I'm kidding. I'm kidding. I'm kidding. I just said, let's not talk about it anymore. It was a joke. 
+
+But let's go back to Cosmos and DeFi as well. And I think it was your infographic a while ago that first said before the last sort of big jump in crypto happened. It was before that, I think. 
+
+I think it's actually pinned to your Twitter. So you were one of the first people outside of the Cosmos community who said, guys, look Cosmos. There is a whole big DeFi thing brewing up there, and you already mentioned Kava, Terra, and by now everybody knows about Terra, of course. What do you think? Have you actually personally recently researched DeFi space in Cosmos since you have done that infographic? 
+
+Wilson Withiam: 
+I would love to do another deep dive, and it's in the works, I really want to. But I've kept up with a lot of these projects, because you saw them when we first looked at them about over a year ago. You could see it was kind of teaming with these very, very interesting chains in various applications, and it was hard to ignore. 
+
+It all of a sudden realized, wow, like you really need to pay attention. These things are radically different. They are applications that, like the design of how they operated weren't possible on Ethereum, and so they needed their own separate network, and it just made a lot of sense, because at the time everyone was so Ethereum centric, and it's like, hey, there are other possibilities, and like, what else is out there? So definitely kept up with the space and what's going on. Terra's gone from pretty much a stable coin generation protocol to a full DeFi platform with MIR and Anchor protocol launching within the last few months. 
+
+They have a couple more on the way, and I'm trying to remember their names. Alice was one, there's another derivatives platform. 
+
+Citizen Web3: 
+Chai. 
+
+Wilson Withiam: 
+Yes, Chai, the payments application that has probably one of the largest user bases in all of crypto, and it's been incredible to see that develop over time. 
+
+I mean, Terra is just one example. You're watching Kava, they have hard protocol now, a lending protocol built on top of their stablecoin system, and they'll continue to grow. I know ThorChain just launched their main net, and they've already talked about a couple of applications, like PegToken or Synthetics that they can build on top of their MMM. I look at it as kind of like a DeFi primitive in the space, so you can really kind of build on top of that and maximize this interchange world. It's incredible to see that these platforms have really evolved over time and to the standpoint of where, if we're going to do another report, it would probably be one just on Terra or one just on ThorChain, because that's just how big they've gotten within the last year. 
+
+So, it kept up. I would love to do more of a deep dive on them, but it's been incredible to see some of these other projects pop up and you now have like this full suite of projects out there. So, if we redid the infographic, there wouldn't just be like one in each category. There would probably be multiple ones in each category now. 
+
+Citizen Web3: 
+Yeah, totally. I mean In fact, I consider myself to be quite deep into the Cosmos ecosystem, but sometimes I get surprised. Somebody sends me this project and says, have you heard about like this DeFi project on Cosmos? 
+
+I'm like, no, what's that? One question that derives from the previous one, what about interoperable DeFi? I mean, how dangerous is that in terms of... Somebody labels Ethereum as the dark forest, right? And I agree with it. I mean, I'm a DeFi user, but I still agree with that, right? This is the truth. I don't think this is a bad thing necessarily, but I think this is us still learning a lot about it. But what about interoperable DeFi? How will that look in your opinion? And would it be more dangerous than traditional DeFi that we use today? 
+
+Wilson Withiam: 
+It's going to be interesting to see how that works because you have two essentially sovereign chains transacting back and forth. So, basically, you're trusting that that other chain is not going to fail. That ass is still going to be there. And it's not like whatever's being held in there is not going to be worth anything. Or it's going to be worth something long-term. 
+
+It's not going to lose all of its value. I get when you have some of these larger cosmos chains or other layer ones that plug in to IPC, they seem to be a little bit more secure. And I could see them making direct connections and being totally okay with transacting freely with that. 
+
+But it's a lot of these smaller chains. That's where I think the shared security model really comes into play. And we've talked about this as being a huge fundamental change for Atom and the Cosmos Hub. But it's also for the security long-term of a lot of these interchange interactions. Because being able to actually secure these chains and making sure that they don't fail is going to be critical to enable this interchange DeFi world. 
+
+I think another note on top of that is I do wonder what are some of the other risk factors that are going to be out there? Because one thing that it won't have some of the same risk factors as Ethereum. Because Ethereum has this synchronous composability, this ability to touch multiple transactions, touch multiple contracts in the same block, which is why something like flash loans can exist. You won't necessarily have that on Cosmos, at least to start or maybe if ever, maybe some of these kind of like Oracle attacks that happen within the same block or within two blocks may not be as possible. 
+
+I don't know if that limits the risk or if it just opens up different surface attack factors. And then the last one is, I know Paradigm did a really good job at this, explaining this in their Cosmos thesis, which if anyone hasn't read, go read. Very, very good in-depth report there. But they talked about the MEV, which is a minor extract of value. I don't know if it's so much of an issue on Ethereum or if it's just a thing. But everyone says it could have some implication on security long-term, if the value that miners can extract from the network somehow exceeds. 
+
+It disrupts in some way, like how miners kind of would process transactions in a way that they would be going after the extract of a value instead of trying to process transactions as they come in and being not as, being a little bit more true to the network. But in Cosmos' sense, a lot of these validator groups are relatively known. And if they start doing this, I mean, you can pretty much spot this right away. So there's a way like in a sense that Cosmos chains won't have this same MEV issue long-term. 
+
+So I did just kind of like multiple ways to look at it. I think there are some of the ways that Interchain and DeFi has removed some of the risks that Ethereum has posed. I'm really curious to know what are more of those risks that opened up because of this? Because I think there's just a lot of unknowns. 
+
+Citizen Web3: 
+I think the most logical one that springs up to mind, as I speak, is, you know, I guess it derives not so much from MEV or smart contracts or anything like that. It derives more from how far one person is willing to push themselves. You know, is when you take a loan in one place, put it in another one, then overcollator, or undercollatorize it, or don't collate, well, not under, but you know, you live in a health factor of really low health factor, going to another farm and another farm. And then if we add Interchain to that, and you know, like at one point, and it's not the danger for the chain itself, on one hand. But if a lot of people start, let's call it liquidation, right? Start to get liquidated because on their chain of actions, somewhere along the line, they were undercollatorized or not collatorized enough, could that pose some kind of risk to the whole ecosystem? I don't know personally, but this is what I think about. 
+
+Wilson Withiam: 
+That's a really interesting thought. I mean, the more I just thought about it, even from like a usability standpoint, like is there going to be like a single wallet that I'll be able to like easily port between applications? Or like, do I have to point to each new chain that I go to? And is that just kind of like a hurdle that may not want me to use Interchain DeFi as readily? And maybe I just stay to one chain. That series of liquidations across multiple chains, and it's kind of like terrifying to think about. 
+
+Citizen Web3: 
+Yeah, it's crazy. 
+
+Wilson Withiam: 
+Yeah, when you think about cascading liquidations, just in the market that we saw the other day, I mean, yeah, what happens when you can't readily pull out your assets or recolateralize as quickly because maybe you don't have assets on the chain and you have to port it over? Yeah, I think there's a lot of things that I think through. 
+
+Citizen Web3: 
+We'll see. We'll see.
+
+Wilson Withiam: 
+We'll see. It's one of those things where like stuff's going to happen. It's going to. That's kind of what happened with Ethereum. Hacks are going to happen. Different attacks. And you kind of have to look at those as just like bug boundaries. They're going to and it's all of a bit of a learning process. But as you're starting to see as things get more battle tested, there's some of these protocols like makers have been around for four years, compound three years. 
+
+And I mean, other than some, you know, Oracle issues along the way, a couple of hiccups, but, you know, no major bugs along the way. And so it's just a matter of longevity. And like over time, a lot of these kinks will get worked out because I think the rate of innovation is astounding. And it's one of those things that we'll figure it out. 
+
+Anna: 
+So I want to ask you because when we speak about defy I one question just pop up in my mind, it's about your research process. How usually you structure rise the research because now every day some we can see in your project, especially defy projects, because now they're like forks, not the chain, but forks of ideas. Yeah. And we can see that clone just emerging every day. So could you highlight a little bit your own research process as a researcher? 
+
+Wilson Withiam: 
+I kind of like to look at certain trends first. I think that's a good way to kind of like narrow down because I mean, like you said, there's so much going on. 
+
+People are forking off. Like there are new defy projects popping up every day. And like, how do you even stay on top of this? And so you're trying to look at what are the relative trends and where things are heading right now and what could be? What are those those missing areas that people are looking to access and use or certain pieces of technology or tool sets that we desperately need for like the one I brought up was like some sort of like in an interchange aggregator solution. Or obviously the big one is, you know, scalability and cosmos. It's, you know, how do we find some way to have some sort of like shared state? 
+
+And so you have something like lazy ledger like that. So you can see like different trends going off and like, what are the topic? What are the projects in those particular areas that are looking to help those problems? And that's why I like to try and narrow it down because it's tough to just look at all the new products that are popping up. And it's like, oh, you know, which ones have the best yields? 
+
+Yields are great. But I mean, eventually you're going to get into a bit of a race to the bottom on that. Or like basically, or in another way, just inflate your token massively to try and attract liquidity. 
+
+And eventually if you have to lock that down or else you just inflate it to oblivion. I think you want to look at which ones are actually building products that are trying to solve a problem, but also which ones are people actually looking to use at that time? And what areas, what particular narratives or themes are popping up in people looking for? And so that's where you start. And then and then just kind of breaking down what are the different projects in those sectors? What's the token model? 
+
+If it has one, what's the design behind it? What's their go to market strategy? And what's the competitive landscape around it? And why each one is kind of positioned or where it is positioned to actually catch a part of the market? Are they actually competitors or are they complementary? Because in a lot of cases they could get there might be some overlap, but maybe they could build off each other. 
+
+That's kind of how we look at it. Just try and narrow it down to start and then maybe go a little bit deeper in certain projects that start to look interesting. 
+
+Anna: 
+And how many hours do you spend on your research process? Because I can guess that it's way more than eight hours. 
+
+Wilson Withiam: 
+Yeah, let's just say I'll say it for the podcast. I'm actually getting married later this week. 
+
+Citizen Web3: 
+Yes, you are.
+
+Wilson Withiam:
+On Saturday. 
+
+Citizen Web3: 
+I forgot
+
+Anna: 
+congratulations. then 
+
+Wilson Withiam:
+Yeah, thank you. My fiancee, she's not very happy with the work life, but it's one of those things where it's just it's more of like a passion than anything. Because you look at these cryptos just like it envelops you and that proverbial rabbit hole that everyone falls down. It's so true because there's just so much going on and it's moving at such a fast pace, but everything is incredibly fun and interesting to learn about. 
+
+And in all these problems that are being solved in real time, like what are their industries is kind of moving at this rapid pace? And so it's kind of just like a labor of love in a way. So definitely it's more than eight hours in a day. Most days I highly encourage everyone to take mental breaks at times. You don't want to burn out, but it's hard not to like somehow you don't want to miss anything at the same time. And it's really just kind of enjoyable to be around this. And I'll say one other thing is hard to get removed because I've met so many amazing people in this industry. And so it like having the opportunity, even on like a Saturday to hop in like a clubhouse or something with a bunch of analysts or project teams and kind of learn about what they're doing or even just talking in the discord. A lot of them. So it's kind of like as ideas pop up, you almost want to act on them right there. 
+
+And it seems like everyone kind of has like the same I don't want to say like work happens, but it's just kind of like the same love and passion for it that it kind of transcends normal working hours. 
+
+Citizen Web3: 
+Bye the way, congratulations. First of all, I'm getting married soon and just whoever is listening to us. If you ever want to get married, come on Citizen Cosmos because Wilson is by far not the first and not the second guest who's telling us he's going to get married within the next few weeks. So I don't know what's going on. We make things happen. Yes. I hope that you don't have any crypto speeches during the wedding. 
+
+Wilson Withiam: 
+There might be a joke or an inner vows that might be a joke or two. 
+
+Citizen Web3: 
+OK, do you also want to talk about anything that we didn't mention or didn't ask anything? We do have like one resume question for you. 
+
+Wilson Withiam: 
+Yeah, I was wondering today and there was a good tweet thread that came out today. A guy named Adrian Brink. I don't know if you got a chance to see it. He came out with this interesting theory and I want to explore it more. He's looking at both the shared security standpoint, so getting validators that are work across multiple chains and the IBC. So connecting through like a hub type system are simply commodities in a sense that you don't necessarily need a hub and maybe shared security isn't as all it's kind of cut out to be because setting up a validator set may not be as difficult as advert advertised. 
+
+If you have a lot of these professional validators that are already willing to do this, as long as they're getting some money out of it. And on the other side, if you have all these big chains that may not want to plug into a hub and connect to smaller chains because you have to worry about their security model as well, they would just plug in directly to other big chains that actually get some exposure and increase liquidity in the network. So I was wondering with that explanation, how do you kind of look at that thesis? And if you had to, how would you defend in a sense that that IBC and the hubs role? 
+
+Citizen Web3: 
+I like that because we are validators as well. We validate Cosmos Hub. We validate a couple of other smaller chains in the Cosmos ecosystem and have personally validated previously several years ago when it was still deep. 
+
+It was like the dump, deep-boss, slashing, you know, anything. And one thing that kind of scares me away, I'm going to answer this in a longish way, like one thing that scares me away about validating and validators. And it's a thing that's made out of two separate things. One is because the crypto, not the crypto, but crypto as it is, became so huge. And each validator now is processing not millions of dollars, but sometimes billions of dollars of value. And in combination with that, the security level of the setup of a validator. 
+
+And I know you mentioned that it's not that difficult, but to be honest, it hasn't changed that much. I mean, and one of the only few validators I know in the Cosmos ecosystem that is, I think it's Polychain, who have a very crazy setup where it's basically a multi-signature setup where apart from using, well, they're not the only ones we use UBTs to make anything. But in fact, the whole setup is like a multi-signature setup. 
+
+So you need more than to attack more than one set of machines to achieve anything. So when we go into the IBC world and when we kind of like think about, well, how is all of that going to look? And aren't we going to have the problem of where a small chain comes in, just a new chain and like, I don't know, like somebody is going to like try to attack it. And they could easily attack it because if they're going to have all this validating power from all the other chains, it is hard to imagine because it's not dead yet. 
+
+Right. And what do you think about like the security problem and validating in the IBC? Well, do you think it might cause some issues that we haven't heard of yet? Or do you think that actually IBC will actually help validators and share security? Well, whenever it comes along, of course, I don't think it's going to be within one or two years. But yeah, 
+
+Wilson Withiam: 
+I don't know if I 100% agree with the idea that a validator set is commodity. I think it's a little bit harder to actually get together a validator set. Like you said, then you expect because at one way, obviously you want validators to they want to revenue. 
+
+But I mean, at the same time, you don't want to continue inflation forever. You want to actually build an application ecosystem and professional validators aren't just going to join any network. They want to see like there's actually some activity you roadmap behind it. 
+
+So there's got to be a lot more to it than just kind of like spinning up a Cosmos SDK chain and then just expecting people to come if you just offer inflation. So I do think that's a little bit harder to keep them long term from that standpoint. So I think, yes, you can't avoid it. There will be more security risk between chains because they have to set up their own validator set. I think that's where shared security comes and solves a huge problem because you have some chains that may not be able to get there. And so that way they'll be able to share the validator set of the Cosmos Hub or maybe other chains adopted as well. And you know, they can share it and list some other chains. I think it just kind of opens up this very interesting experiment that technically, yes, will offer more security holes and more of an attack surface. But like I said, I think over time it's going to trend towards a more secure network. 
+
+I also want it to follow up. I don't disagree with what Adrian said in that if you're a larger network, you would probably just plug in directly or bridge directly to another network because you know that network is probably going to be safe and you know where you're going to get out of return for that. You may not necessarily want to plug into smaller networks. But all those smaller networks are going to want to bridge to something like Terra, to something like Doorchain, to some of these other networks. I see the Cosmos Hub as a way almost being like that long tail connection to a bunch of different chains out there in the same way. Like I don't know if this analogy works, but in the same way that Uniswap was kind of like this long tail exchange for assets, where a centralized exchange is they pretty much work at the top end of assets and only listed a certain number of them. 
+
+Uniswap, anyone could list it. In this case, anyone could plug into Cosmos and then tie into the liquidity available on the Gravity Dex whenever it launches or some of these other larger chains. That's kind of my opinion, but I thought it was an interesting analysis. So thanks for taking the time to answer. 
+
+Citizen Web3: 
+No, I would love to talk about it more. I just haven't read it yet and I'm looking at it as we talk, as we speak. And I know who Adrian is, of course. It's interesting you mentioned hubs there and you mentioned Cosmos Hub becoming a common that long tail Uniswap became for exchange in ERC20 tokens. There is a long discussion, not just within the Cosmos ecosystem, but within like the interoperability space, what makes or what will make a hub successful. 
+
+And there is like a pre-probably I've read Ethan article about cities and ports. I know you have because I think that's what you're commenting. I think of something like that, or you retweet it, or you're commenting or something like that. But it's interesting that, yeah, this is one analogy. But again, playing devil's advocate coming from a point of view of someone who has launched blockchains before. I don't think that's enough to make a successful hub. I think that a successful hub will not happen within a year or within the next like year and a half. I think it will take some time where people will, it's like with Uniswap. 
+
+And I think you mentioned the perfect example. Uniswap, it wasn't planned. Okay, of course, it kind of came to that, that the market said we need that. And they came at the right time and they came at the right place and said, there you go. This is the right product for the market that everybody wants to see. And everybody's like, oh my God, yes, that's what we want. I think this is the same things with hubs and going back to the validator and shared security, it will just happen, I think, when the market needs it, when those hacks will happen, when those holes will happen, when we will suffer and cry and somebody will come and say, I know the perfect recipe for a hub. And I know the perfect recipe for shared security. And I'm sure I'm pretty sure that Ethereum, Polkadot cosmos and maybe even Avalanche, maybe even Cardano and who else knows will share probably a very similar architecture with slight trade-offs here and there. But let's see. And totally. I hope that you guys make more research into it and then we can all rate about it and learn from you guys. 
+
+Wilson Withiam: 
+Soon, I don't think that's playing Devil's Advocate, because I agree. We keep talking about these things like they're coming tomorrow. And no, they're not. We can be realistic. It's going to take time to build up. I mean, Uniswap, still in the scheme of things, it took three years. Or two and a half years to be one of the largest exchanges in the world, which in the scheme of things, it doesn't seem too long. It's incredibly fast. But during the time, it definitely felt a lot longer because you're kind of waiting. I was like, when is DeFi? When are DeX is going to be a thing? 
+
+And then all of a sudden they were. And I almost think that's going to be the same path in that it's going to take a while. There's going to be a lot of infrastructure that needs to be built out. But when the time comes and the demand is there, all of a sudden it's going to happen like that. 
+
+Citizen Web3: 
+Even if we'd be more honest, not even talking about scalability, but talking about transactional cost, and we see what's happening with Uniswap right now and why people are changing to things like Binance. And of course, they're making a terrible tradeoff, but it's up to them because this is a decentralized space. And I think talking about scalability, Uniswap isn't that big, right? I mean, in the space of the economical world system. 
+
+I mean, what's Uniswap and ICE, for example, in comparison to them? So I think we are still going. And this is why the equipment release. Well, I'm good talking about the same thing. But yeah, totally. 
+
+Wilson Withiam: 
+Yeah. I'll say largest crypto exchange. 
+
+Citizen Web3: 
+Sure. Sure. 
+
+Wilson Withiam: 
+Yeah, you're right. You're right. That was good. Don't want to confuse anyone. 
+
+Citizen Web3: 
+One thing that is going to be a very interesting question to you, because well, this is a resume question that we ask all the guests. But you're a researcher and this is going to be interesting. And I'm going to make a twist to that question for you. 
+
+And I think we did it for other people as well, but for you especially. You haven't heard the question yet, but don't mention any big household names because it isn't fair. 
+
+You're a researcher. What are some of crypto projects that currently excite you? It doesn't matter for which reasons, doesn't matter why. And you can, of course, mention Ethereum, Terra or Kava, but it'll be more interesting if you mention something that maybe no one has heard about yet at all. 
+
+Wilson Withiam: 
+I think a lot of the ones I mentioned, I am very excited about, maybe other than Binance Marching. Hey, people still use it. I totally get it. It's a great user experience. Understand. Just philosophically. I disagree with it. 
+
+So, but all the other ones that I agree. So I think two ones that I'm particularly interested in, I desperately want to do a deep dive on lazy ledger. I think this idea of having a shared state for sovereign blockchains is very interesting. Has a lot of great people that have been working on the project and the way I understand it, it essentially just be a data availability layer, a very simple platform that would just enable these chains to have some sort of shared state, which is what I thought cosmos chains were lacking. 
+
+At the moment. And so this, I just see that as like a huge solution to a very real problem. The other project that really excites me is a project called Audius. Maybe most people have heard it, but I don't think a lot of people kind of understand where it can kind of go from here and like the options that it can potentially offer. So right now it's a music streaming service and it has a token that's supposed to be like a governance token. 
+
+So you can vote on the future direction of the protocol. But what's going to happen is it's not going to live in isolation. It is right now. It lives on Xdai network, which is a layer two network on top of Ethereum. It's technically a side chain if we want to get technical talk about the terminology, but anyway, it's going to move to Solana soon. And once it does that, it's going to be up the plug into some of the exchanges there. And so long term, what you'll probably be able to see is it being one of those applications that really helps build out the creator economy. So if I'm an artist and I want to build out my community of followers, maybe I offer some sort of social token and I'm going to have some sort of social token offering that goes through one of the exchanges on Solana. And that'd be like a way to distribute it. You can even set up decentralized autonomous label organizations that are able to like represent some of these various artists on the platform. So I was just kind of looking at it as like, you can see this as being a bit of an ecosystem in itself and that you can have these other projects and other products built off of what it is. Very simple. Like it's not so, but simple in the sense that it's just like a music streaming service right now. It'll be kind of cool to see where it potentially go. 
+
+And so that's just one option. I think there are other creator economy projects out there. One like mirror.xyz, very, very cool project. But yeah, I'm pretty excited about the Web3 aspects of crypto. 
+
+Citizen Web3: 
+It's actually just again, for all of our listeners and for you as well, there is a similar project. I don't know much about audios, but there is a project called BitSong on the Cosmos ecosystem and that sounds like it's very similar. So you guys check it out. And yeah, for everybody who's been listening to it, one thing I do want to say and Misari is not paying me for that, but do check the premium services Misari is offering because I've been avoiding them for a year or so, even more after I found Misari and after I discovered it, I was very happy with what I see and what I get. So it does pay back. 
+
+So do guys check it out. Wilson, thanks so much for coming on. And it's been a huge pleasure talking to you. I hope that your wedding day goes according to plan without any rug pulling and other crypto. Sorry, I had to say that, you know. I hope that goes really fine. And guys, thank you very much for joining us and see you next time on Citizen Cosmos. Thanks. Bye. 
+
+Anna: 
+Thank you, everyone. And bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

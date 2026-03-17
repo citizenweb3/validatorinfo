@@ -1,0 +1,502 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/vishmodali
+
+Episode name:
+Liquid Staking, Privacy and Revolutionizing Money with Vish Modali
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of a Citizen Cosmos podcast and today I have Wish with me from Quicksilver. Wish, hi man, welcome to the show. Hey, hey, great to be here. Yeah, man, it's not the first time we have a guest from Quicksilver, but it's definitely the first time we have you on. So I'm going to ask you to do the most obvious thing and...
+
+Vish Quicksilver 
+Hey, hey, great to be here.
+
+Citizen Web3 
+to give a little introduction about yourself. And if you can, please tell us, you know, not just what you do for work, but tell us anything you want to, you know, people to know about yourself, who you are, what your interests, what you do, what you work with. Yeah.
+
+Vish Quicksilver 
+Yeah, for sure. I guess, hey guys, I'm Vish. I'm one of the founders of Quicksilver. My background is in economics, mainly research. I used to do a bunch of monetary economics and research around that in Australia. That's when I started getting interested in the crypto. It felt like...
+
+really an alternative paradigm of not just money, but like assets and like value creation in general. So that really sort of excited me. So I dropped everything. I mean, I did finish my uni, but I pretty much dropped it and then moved to
+
+moved to London where I started working for a bunch of cool hip FinTech startups, which are trying to revolutionize money. You know, I mess with everything, gold backed currencies, you know, digital currencies, which are not cryptographic, all of that. And then I sort of built like my expertise and payments, so to say, and then I moved into some fear to crypto on off-ramp type.
+
+company and that's, you know, while I was like talking to some clients that I realized, you know, holy shit, like there's so much to this space and, you know, there's so much going on that I should really get into this. And that's what I found Corus One, right? Corus One was doing a bunch of stuff in Cosmos and I was already getting into Cosmos, right? Because while I did economics, I'm really into like politics and like...
+
+sort of like human organization level things. And this was really like kicking off in Cosmos. And when I was getting into it, like governance was really taking off. And then like Corus One was looking for someone to do research for them. And I jumped on that, right? So Corus One, if you guys aren't familiar, is a pretty big ballerator in the space. So I joined Corus One, I did a lot of like governance level research, but I also did like liquid staking research.
+
+Vish Quicksilver 
+especially. And that's where we started building the bare bones of Quicksilver. And these were very early days. Interchain accounts had just come out and we had just realized that, okay, you know what? You can actually stake assets cross-chain. You could do ICA staking. What can you do with ICA staking? Liquid staking. And this was really, really early days. And we sort of took that ICA staking concept and like...
+
+thought we'd spin out this sovereign chain, sovereign team, all of that. And then me and a couple of others at Corus One spun out to sort of form Quicksilver. In 2022, I think, Feb, we launched our white paper, which was really the first time there was a technical description of how to use ICAs, what our interchange queries are, how you can stake with ICAs and all of that. So yeah, and then we just had heads down building since then.
+
+Citizen Web3
+unmute. Man, I hope that most of the listeners are familiar with Chorus One. We had Brian on and we had other people from Chorus One here. Well, it wasn't like a full episode with Brian. We definitely had a full episode. So I definitely suggest to all the listeners to check out that episode. It's not actually about liquid staking as such, but there is a lot of governance talk there for sure and definitely cool.
+
+Man, you gave your intro with relation already to blockchain. How did you get into Web3 though? I mean, at which point? I mean, you said, you know, currencies, digital currencies, but, you know, I mean, you don't have to go into it, but it sounded like you were very brief there. I'm quite curious though. How did you get into Web3 and why?
+
+Yeah, I mean, I guess.
+
+Vish Quicksilver
+Yeah, I mean, I guess there's just a few things that like, sure, like I had this background, like monetary economics and research around that, which obviously one of the parts as, you know, as a young and slightly radical person into these things you can take is to go into like that tree. Right. But I think the greater thing that I was to like, actually I could probably divide it into two things. And one, like it was extremely exciting, like that there is a new way to create economic value.
+
+It really is economic value and the most theoretical description of value, right? What we're doing here and what any other Web3 entities is doing. So that really appealed to me, right? We have a shot to do things different. And that's how I really got into all of these Web3 circles online, right? And the second thing, it...
+
+To me, it made a lot of economic sense. You are someone who really believes in like the free market way of things. Just the fact that you can launch things and go run with it without much scrutiny and regulation was like a massive, massive draw for me. I mean, to give you some context, right? Like I come from India where regulation is, you know, serious fucking problem. And.
+
+It is timing like a lot of economic value creation, right? With a country with so much potential. So I guess coming from that context, it, you know, this sort of industry really felt like the way forward for optimal value creation for humanity.
+
+Citizen Web3 
+Ah, again, I'm gonna say it every episode. The people are used to it already. Me and Andriutis is a funny thing. Can I put you on the spot a little bit, if you don't mind? What is value when it comes to money for you? Considering your educational background, you don't have to answer from an educational background. Like, I would like to know your personal opinion. What is value when it comes to money for you?
+
+Vish Quicksilver 
+Absolutely.
+
+Vish Quicksilver 
+Yeah, I think when you're trying to find value, it's best to be like as simplistic as possible. And in this case, it's really like if somebody demands something anywhere in the world, so completely borderless and you can meet that demand, you're creating value and you're creating utility for that person. And it just needs to be as simple as that.
+
+Citizen Web3
+I absolutely agree on that, man. I think the only thing I would add there is without a third party, I think to me, money can have value as long as I can buy measured by the amount of goods and services I can buy for it without any third party. So of course, if I take a pack of dollars and go to any country in the world, they will most likely, unfortunately, get accepted because people know that they can. Unfortunately, I say of course because of, well.
+
+other reasons not that they will get accepted. But yeah, but of course, if you try to do it with the Russian ruble or with Indian rupee, I'm unsure that any person in the world would want to accept them, unfortunately, again. But yeah. Yeah, man. And so but did when you went already like to study economics and, you know,
+
+Vish Quicksilver 
+Haha
+
+Vish Quicksilver
+That's right, yeah.
+
+Citizen Web3
+Were you already interested in those kind of things? Was it something that was like dub bringing in India pushed you towards those things? Or was it something inside of you that you wanted to like rebel? I don't know. What was before that even, you know? I'm sorry to dig into it, but I'm curious.
+
+Vish Quicksilver 
+Yeah, no, go for it. No. Yeah. I think like I was always into like the free market economics and like sort of like a deregulation space, like economics from India, like the deregulation is like the clear big, big research question and how do you deregulate? Uh, so that I was always interested, but I really wasn't aware that the digital currencies are like digital assets were the way to do it. And more like decentralized assets.
+
+Citizen Web3 
+I think like I was always in.
+
+and like it's not going to be deregulation space like economics from India like deregulation is like the clear big research question.
+
+Citizen Web3 
+So I was always interested, but I really wasn't aware that digital currencies are like digital assets for the way they do it.
+
+Vish Quicksilver 
+were the way to do it. Like I always viewed like anything that's a digitalized form of a real world asset to be a UX simplicity rather than like a fundamentally different way to do things. But that sort of changed, like when I looked more into like, you know, what decentralization actually meant in the sense of like, you know, having multiple entities maintaining a ledger and all of that. So I guess just looking into the technicalities sort of opens you up to the
+
+to like the technical possibility of, okay, you know what, you don't need a third party. You don't need an intermediary for the economy.
+
+Citizen Web3 
+I'm curious. Usually I ask this towards the end, but since we are already on the topic and since we're already talking, this is actually something I asked when I was talking with, I believe it was Felix from Curse 1, I was in Lisbon talking with him and I asked him this question. Do you think they're saying all those things because you're saying on one level quite simple things, on the other level they're...
+
+quite serious, you know, this is quite serious shit you're talking about. And I'm curious, you know, after like, I don't know how many years has passed since, you know, you first showed interest towards economics, and then you went to study and then you went Corus one and, you know, silver essentially liquid staking. Do you think that, you know, what you are doing today solves those things, you know, does it at least contribute towards bringing value?
+
+in a distributed, decentralized manner away from... You know, I mean, you mentioned a lot of points and I'm curious whether you think that what you're doing now with Quicksilver, does it internally at least satisfy that desire to solve...
+
+Citizen Web3
+It does. I think it does, right? Like, in many ways, it's like we're trying to build, like, building.
+
+Vish Quicksilver (10:30.998)
+I think it does, right? Like, like in, in many ways it's like, we're trying to build like building blocks of like a very big thing, right? I think it's very easy to say, you know, I'm going to take the biggest thing that solves my ideology and stab straight at it, but that is likely to be met with the least chance of success. And if everyone does that collectively, that will lead to the least chance of success. So I, again, this is like sort of the.
+
+Citizen Web3 
+it's very easy to say you know I'm
+
+Vish Quicksilver 
+free market way, right? Like where you have multiple people and like multiple organizations targeting specific sort of problems to solve, right? Towards like a greater goal. And I think there is that satisfaction of solving greater goal because, you know, we're not building Quicksilver in isolation, right? We are in an ecosystem, you know, we talk to people like, you know, we talk to partners where, you know, we...
+
+sort of contributing to the ecosystem development of Cosmos as a whole. We're in the conversations, we're participating. So it's not like a vacuum chamber that we're in. Like we're in a bunch of things and like our product plays a part of like the grander sort of ecosystem.
+
+Citizen Web3
+And when it's like slightly different topic, of course, but still kind of like, you know, some general chit chat, I guess. You mentioned India yourself and you mentioned and actually recently had a couple of episodes that I was recording with people from the one of the latest one is with Omniflix with Sisla. And, you know, we had the big conversation about.
+
+like India and what is the current situation in terms of like all the crypto regulations and decentralization and what is your opinion? I mean now considering you're in a different country right now, for example, can you compare between where you are now and India? And yeah, okay, let's start with that and then I will dig a little bit more into that.
+
+Vish Quicksilver
+Yeah, I mean, I'm not going to go much into the comparison of UAE and India. I think the circumstance are completely different. UAE is in many ways like a business hub rather than a fully functional state or a country. So the comparison is not really, really valid. But I think one of the things that's interesting about crypto regulation in India is that India is a country with many opinions. It's not akin to China where
+
+you can have one entity essentially shut down or keep up crypto. And there's many competing interests in the country. Like the Reserve Bank seems to be relatively hostile to crypto because obviously that challenges sort of their authority and like, uh, you have the government, which is sort of being lobbied by a lot of big crypto exchanges. And
+
+and has won a large election mandate with the promise of a digital economy. That seems to be the calling card of India right now. So they're keen to embrace it, but there is competing interests. I think the current approach in many ways is a very Indian one, which is let's tax it. Why lose out on the revenue and figure out how to regulate it in the time being. So it is taxed.
+
+you're doing anything in crypto, you can pay a tax and you can have the stamp of approval from the government, but they are figuring out how to regulate it. And it's very likely they'll see how Micah goes in the EU, see what the SEC does in the US and see how all that plays out and take the most economical stand. There's a lot of crypto companies looking to move from the US after the SEC debacle.
+
+maybe there'll be a more favorable regulation in India. I think that's the way the government looks at it.
+
+Citizen Web3
+I think one of the most, like, biggest, sorry, one of the largest reasons or the biggest reasons I'm fascinated with... Because I usually, like, believe it or not, considering we have guests, like, from all over the world, I usually don't really go into that very rarely. And the reason with India is because I think India is a really great example of a really decentralized country. If we think about all the castas, all the languages, all the areas, all the culture...
+
+Like there isn't another country in the world that has the same amount of diversity within such, okay, not a small space, but such a space. And I think that's why India to me was always like, kind of like, okay, like it has that same vibe in a way. I don't know how to explain it. I don't know. Like I think what you understand, like what I'm getting at this is like where the curiosity comes from. Yeah, I know what you're saying.
+
+Vish Quicksilver 
+Yeah, I know what you're saying. In many ways, I think India represents also a challenge with decentralized systems. I think it's a good case study because you compare India with China, China being very centralized. And they were able to use that centralization, jumpstart something really big, but at what cost. So it's a good case study to be made between.
+
+Citizen Web3 
+In many ways, I think India represents also a challenge with decentralized systems. I think it's a good study because you compare India with China, China being very centralized. And they were able to use that centralization, jumpstart something really big, but at what cost. So it's a good case study to be made between a decentralized system and a centralized system.
+
+Vish Quicksilver 
+a decentralized system and a centralized system, how it benefits short-term gain and how it benefits like long-term.
+
+Citizen Web3 
+system, what term gain and how it benefits like long term.
+
+Vish Quicksilver 
+came and that's something that really is yet to play out.
+
+Citizen Web3 
+and that's something I really share with you. Definitely, man. Man, let's see, let's see how it evolves. I'm curious to watch those things. I mean, unfortunately, governments usually don't care about culture, right? They usually just, like you said, let's tax it. But man, it says in your Twitter description, by the way, Community Maxi, what does it mean for you? And...
+
+What are you trying to refer to by that? I'm curious when people put tags on themselves, I always try and ask what does the tag mean? Yeah, I think.
+
+Vish Quicksilver
+Yeah, I think what I mean by community maxi is that at the end of the day, we have blockchain systems to serve humans, right? And to aid in human organization, because in large way, that's what an economy is. That's what any sort of system is, right? It's a way of human organization. So what I mean, community maxi, I mean, like, you know, it's social consensus for the wit, right? And at the end of the day,
+
+It's the users of a particular system that are the stakeholders of a particular system that, that matter, not the system itself. And this is like another area of like, I wouldn't really say debate, but sort of like exploration in like the web three space, you know, is it social consensus? Is it like, you know, hard coded consensus? You know, what, what is the source of truth? Uh, and I think I firmly stand on it. It's to do with humans rather than.
+
+more to do with humans, more so rather than any hard-coded consensus.
+
+Citizen Web3 
+It's interesting that you say that. I mean, my mission, well, my personal mission at Citizen Cosmos, and I guess the mission of Citizen Cosmos is, at least that's what we want it to be, is to bridge like the layer zero, because layer zero is the community, not an architecture. And because this is a communication, right, protocol, regardless of, I mean, blockchain, right, of what we want to think.
+
+But what is the source of truth in your opinion? I mean, you said that humans are probably, you incline more towards humans being the social consensus being more of the source of truth. What are the other ingredients in your opinion, let's say in that recipe that is the source of truth? I think that's a difficult question. It is.
+
+Vish Quicksilver 
+I think that's a difficult question because it depends on what you're trying to find the source of truth of. But like, I guess like there's always like a sort of conflict between, okay, like if we sort of narrow it down to like the like blockchains in general, right? Are we like really concerned about consensus between two systems or are we concerned?
+
+Citizen Web3 
+But like, I guess there's always a sort of conflict between, okay, if we sort of narrow it down to like blockchains in general, right? Are we really concerned about consensus between two systems or are we more concerned about consensus between two people, right? Like if I send you X amount of something, is that a consensus between both of us?
+
+Vish Quicksilver 
+more concerned about consensus between two people, right? Like if I send you X amount of something, is that a consensus between both of us? Or is that a consensus between both of our systems, right? And what's the alignment between that, right? Because there are gonna be times where there will be some conflict of choice. And I know I've taken like a very, very small example that can be scaled to like very broad protocol level stuff.
+
+Citizen Web3 
+Or is that a consensus between both of our systems?
+
+what's the alignment between that, right? Because there are gonna be times where there will be some conflict of choice. And I know I've taken like a very, very small example, that can be scaled to like- That's good, that's good, I like it. A lot of stuff. Sure, but yeah, I guess that's sort of the thing. And I think like, and that's what I-
+
+Vish Quicksilver 
+Sure. But yeah, I guess that's sort of the thing. And I think like, and that's where I stand, where I think it's source of truth is consensus between two people.
+
+Citizen Web3 
+Because it's again, it's a curious point because, you know, I'm going to say something that I think I've mentioned before some years ago, but and every time I say that phrase, let's just say that it's not the most welcomed phrase in the Web3 space. Blockchain is not P2P technology. P2P is when me and you, you know, you tell me, Serge, build me a house and I'm like, well, Vish, pay me $100. And you're like, of course, finish the work and I'll pay you.
+
+And we agree, but that's not going to happen because we as humans don't trust each other. So we need at least a blockchain, which is not P2P technology, because it's a man in the middle. It's a decentralized man in the middle, but it's a man in the middle. And yeah, I totally agree with you that the source of truth should be between the end of the day. We should learn, at least strive as humans to somehow get to that point. Do you think, by the way, that humans is a species or is, I don't know?
+
+As asked, can we get to that point ever? Just P2P.
+
+Vish Quicksilver 
+Yeah, yeah, of course. Of course. We've gotten to that point at like very small scales, right? If you look at sort of economic relationships, I should go back like a few hundred years, or if you look at
+
+Citizen Web3 
+We've got a.
+
+small scales, right? If you look at the sort of economic relationships, and if you go back like a few hundred years, or if you look at, we developed a context today, right? You have a lot of economic relationships which are.
+
+Vish Quicksilver 
+We're developing countries today, right? You have a lot of economic relationships which are not contractually mandated, but are very real economic relationships. And they happen peer to peer. There is no entity enforcing any of that. Right? Economic relationships between family, economic relationships in the community. Right? So it's been done, right? And that can be done again, right? But with just more formalized structures.
+
+and structures which don't need like a local sort of interaction. You ideally want it to be global. So it can be done.
+
+Citizen Web3 
+I remember I was, like a few years ago, excuse me, I was in north of Portugal and it was like towards the Spanish border and it was an area, it doesn't matter, but maybe I shouldn't really even say where it was because of the next thing that I'm going to say.
+
+But what impressed me was that this was 2019, I think. So it's very, very recent, just before COVID. And what really impressed me that in that area, in the middle of the European Union, in the middle of Schengen Zone, yes, it's a bit of a secluded area, people almost didn't use fiat money. They were using goods and services, literally. One person would teach one person riding horses, or their kids, the other person would give them
+
+meat, you know, or and they would like and it was really widespread and I was like, whoa, that is cool, man. People are like, it's still working. Yeah, I guess it really goes to show like how many ways that
+
+Vish Quicksilver 
+Yeah, I guess it really goes to show like how many ways there are to do coordination, right? Like, I think in today's world, we're absolutely certain that, you know, fiat money and contracts enforced by a government are the only way to make anything happen. But, you know, it's actually a much bigger slate out there.
+
+Citizen Web3 
+I think in today's world we are absolutely certain that we have money and contracts enforced by a government.
+
+make anything happen.
+
+It's actually a much bigger slate. Let's talk about, you mentioned government. Let's talk a little bit about governance. And I know you like governance. I know you like governance. So I will get to liquids taken, but I know you like governance too. So I've seen several of your retweets or I don't think they were yours. I think they were more your retweets of other people's opinions. And it's hard obviously to say.
+
+Vish Quicksilver 
+This is, yeah.
+
+Citizen Web3 
+from a retweet, what does a person think? But I'm curious because there's one particular here that I have. It's not about a retweet, it's more about a question. Do you think that governance needs to be structured in a way where other aspects of social consensus or any other constructs have to be sacrificed, for example, privacy?
+
+Vish Quicksilver 
+Okay. Now, I mean, this is a very bit controversial, right? And the way that I think governance and social consensus is the ultimate goal. Right now there is some conflict there with privacy. And I know people, and I know that people in general are like very big on privacy, but I guess my sort of argument is if there is no central sort of policing authority.
+
+Citizen Web3 
+I think this is a bit controversial, right? And the way that I think governance and
+
+Vish Quicksilver 
+the value of, is the value of privacy diminished? It's a question, I don't know, right? And if you have like a self-governing system, do you need privacy? Because like one of the fundamental thesis of privacy also is that it's protection, right? But if there is nothing to protect you from, what is the value of privacy versus a completely open system? So I think in blockchain, this has been there, right? There's an inherent conflict.
+
+There's an inherent conflict on the philosophical side and also on the technical side, between privacy and openness. With all of these privacy protocols coming up, it's very difficult to do things, like query the state of particular accounts and match that with a user on a different chain. This is something we at Quixel would do for a lot of our features. So there's a conflict at the philosophical level and also at a technical level. And I think the cool thing about it
+
+sort of the multi-chain, right, which I definitely espouse, espouse rather, it's that you can have both, right? If you are a user that wants to stick to privacy and you think that you believe that there is utility in that, then you're free to do that.
+
+But if you want to be part of like ultra open, radically transparent systems, you're also free to do that. And if that's something in the middle, you can also do that. So it's that choice. I think that matters the most.
+
+Citizen Web3 
+What do you think about the sentence? You know, I want to try to phrase it like, so there is a lot of, we are used to living in a world where the government has secrets and the citizens should be open. What do you think about the other way around? Why shouldn't the citizens be private? Everything to do with citizens, transactions, voting, anything, everything private and the government should be open.
+
+Shouldn't it be the other way around? Do you think that that's a way? A possibility at least. I don't think that makes sense.
+
+Vish Quicksilver 
+I think that makes sense. It's just that there needs to be choice of granularity. Because government, I know we sort of view government as one entity and people as another. But if you really think about it, government is just another institution, an institution that's weakening very dramatically around the world. There's multinational companies that are...
+
+Citizen Web3 
+It's just that there needs to be choice of granularity. I agree. I know we sort of view government as one entity and people as another. But if you really think about it, government is just another institution.
+
+Vish Quicksilver 
+just as structured and influential as governments. So now you have like multi-polarity in terms of institutions also, right? So the privacy there should really be a choice for all of these institutions. I mean, currently government has an unfair advantage, but you know, cause they have the exclusive right to force, but in an ideal world, you should have like, every institution should get its choice of privacy and-
+
+everyone else should be able to place that trust in that institution based on that choice.
+
+Citizen Web3 
+I agree in a sense, I would only change the forced thing to monopoly on violence. Sorry, sorry, sorry. It was a bit of a push in there. No, but I understand what you say. And to be honest with you, I have a different personal opinion, but I do agree that when it comes to decentralization, it should be decentralized, which means that everybody should have a choice of if they want their government to be open, then the government should be open. If they want...
+
+Vish Quicksilver
+Yeah, right.
+
+Citizen Web3 
+their elected rep... I don't like the word government. If they want the people who work for them that they elected to be, they give them their money to be open, they should be. If not, they shouldn't be. You know, I don't really... I cannot say that I'm one of those anarchists that agree with the phrase, let's demolish the banks, because that's not very about anarchy. That's like... If people choose that freely, then they have that freedom of choice, in my opinion, and that's about the anarchy. It's about...
+
+having things in order. So, yeah, I know it's a bit... What's your current opinion on the current state of governance? I'm talking, of course, with validators in the Cosmos... Let's talk Cosmos Hub. And maybe you can talk a little bit about Quicksilver as well, if you guys are doing things differently, because Quicksilver is an interesting project in terms of... Like, it's original with Liquids taken and a lot of questions to how some of the things are going to be shaped. So...
+
+What's your opinion about the governance currently in Cosmos Hub? And maybe you can also, like I said, mention some of the things you guys do at Quicksilver or Plan and Quicksilver in relation to that.
+
+Vish Quicksilver 
+Yeah, I think governance in the Cosmos ecosystem in general is very functional. It works. And I think Felix posted recently some statistic about Cosmos being one of the chains with like the highest active governance, wallets with the highest active governance participants. So, right. It's very functional and clearly a lot of people care, right? You've really had a lot of...
+
+hot governance topics, so to say, that people are very passionately voted about. And that passion is really a feature, right? It's not a bug as some people thought. And this is actually a nice segue into the protocol design philosophy of Quicksilver, right? Because what we were talking about earlier was really about agency, like you being able to choose. And this is what Quicksilver is all about, right?
+
+We know governance is a pretty big deal. So if you liquid stake, you need to be able to choose which validator will inherit your voting power if you don't vote, right? That's a pretty big thing, which is lost with all other liquid staking sort of implementations. Now, and the second thing that we also pioneered is if you want to vote, you should be able to vote with your staking derivatives anywhere, right? You should have that choice to either vote or choose your validator to vote for you, right?
+
+And I guess it sort of comes into my background at Corus One. You know, a lot of people did care about governance. A lot of people asked us how is Corus One voting. Or a lot of people asked us questions about them not being sure if this proposal is in the right direction and what us as a validator thinks on this. So a validator's opinion does matter, because they are in some ways like sentries, right? They act as public representatives. So.
+
+The key word there is agency, right? Everyone should have that agency.
+
+Citizen Web3 
+Do you think that... Well, there is an opinion and especially I think now, at least for the listeners who are listening to the recording, of course, we're recording in June and around that time there's talks about the fork of cosmos and one of the ideas...
+
+There are two ideas that I want to ask you about that are in my opinion interesting in that fork. One of them is removing validators from voting from governance. And I think one of the first conversations I had about this was some years ago as well with somebody. And I kind of agree, because I mean validators are centralized entities with selfish interest of... Yeah, they work...
+
+with the network, but end of the day, they want to improve themselves. They want to make more money. They are centralized entities. They're not decentralized. And do you think that validators have to, well, should they participate in governance? Shouldn't they? Is there a case for both opinions? I think validators should be.
+
+Vish Quicksilver 
+I think validators should participate in governance. I actually don't know who's trying to abolish that, but it's not a good idea in my opinion, because there's two things to balance. In an absolutely ideal world, everyone would vote. Everyone would participate in governance. Everyone's fully aware of the implications of each governance proposal, but we don't live in that world.
+
+And I don't think we'll ever live in that world, right? Because there is so many people coming into Cosmos with different levels of context, different levels of knowledge, and different levels of interest, right? So if you remove validators from a governance role, no proposal would meet quorum, right? That's what would end up happening. So you need some entity that you can trust, right? And this is another slightly controversial opinion that you shouldn't have completely trustless systems.
+
+but you should have agency over who you can trust. I think that's what barilator, that's the role barilators play in Cosmos.
+
+Citizen Web3 
+I think that's all about it. That's the goal. But doesn't that contradict the point of where we will never then reach a P2P point of system which will work? Because technically if there is always going to be somebody we depend on, as far as if I'm understanding you correctly, then how can we ever reach that state where we remove a third party that we don't trust and we start working P2P?
+
+It depends on like what you're placing that trust in. I'm not placing, if I delegate to Valorator X, I'm not placing my entire trust in them. I'm hoping that they make the right.
+
+Vish Quicksilver 
+It depends on what you're placing that trust in. If I delegate to Valorator X, I'm not placing my entire trust in them. I'm hoping that they make the right Valorator choices. I'm hoping that they don't act maliciously and fork the chain. But that's sort of where it stops. And
+
+I think that's a fair amount of trust assumption to make because we have seen in crypto projects that have gone the other way, right? Which is everyone has their own node. And that really hasn't worked because UX is a thing, right? People also want things to happen smoothly. So, because again, like I was just saying, if you want things to be completely, I own my block production capacity, then everyone transacting should have their own node.
+
+Fundamentally, right? And there are actually some projects working towards this. I think it's like Orbit, or Orbit trying to sort of make that happen, you know, where every user sort of has their own. That's right. It's interesting, isn't it? Where every user has their own node and start or plan it to sort of kick it off from there. But I think as it stands out, this is a fair trust compromise to make because it's still your choice in who you trust.
+
+Citizen Web3 
+make that happen in a way that is not as a- My favorite project.
+
+Citizen Web3
+The second question that is, in my opinion, even more controversial in that proposal is the proposition to remove the accounts of AIB, ICF, and so on. And now before I ask the question, I'm going to make a little preambula. Now my question has nothing to do with particularly ICF, AIB, or anything else. What do you think in general?
+
+about when a chain launches and then says, okay, we're gonna be the most decentralized chain, but we're gonna manually remove accounts, X, Y, Z from the distribution. Do you think that's fair? Or do you think they should give, and forget about, let's forget about ICF and IAB for a second, let's call them X, Y, Z and ABC. Do you think they should have been given the same chance in that new chain or it's a good thing and they should have removed them and start their own decentralized revolution or whatever it's there.
+
+Vish Quicksilver 
+Actually, what's the context here? Are we trying to take away funds from ICF? And what's going on?
+
+Citizen Web3 
+Actually, what's the context here? Are we trying to take away funds from ICF? So this is particularly what is... sorry, I must have assumed... I apologize. So in talking about the fork that is of Cosmos that is supposed to happen, from what I understand, one of the propositions, there was a lot of questions to the team.
+
+And one of them was what's going to happen with the accounts that belong to ICF, to INB, and a similar thing we already seen in Juneau with the removal of the whale from the chain. So my question is, what's your opinion here when people manually remove from blockchains accounts? Do you think there is use cases for that? Or do you think that it is unacceptable or there is in between whatever?
+
+Vish Quicksilver
+Yeah, yeah. So another controversial opinion, and I think that many of my team itself would disagree with me, but I think there is ground for that, right? I think it makes sense, but it should not be a part that is trifled on lightly. Because as I said, right, like if the mass of users, if the mass of voting power believes that a said actor was malicious, or a said account has funds that it shouldn't have.
+
+This could be due to an attack. This could be due to a hack, right? This should have the power as governance to sort of ratify that for the greater good. But again, that should be like very, very governance based. And then this also then comes into how decentralized the chain is, right? If the chain is very centralized and your security guarantee on that chain itself is very low, but you have a decentralized chain that votes.
+
+to remove something from an account or take an action, take a governance-related action that sort of pulls back the chain, I think that's fine.
+
+Citizen Web3
+Ironically, with all my anarchist views that I personally, like for example with Juno when it happened, I voted no with Vito and I took out all my stake, which wasn't small, but wasn't big, wasn't small, but it was a nice stake. I sold it. I didn't care about the price. I didn't care about anything. At the same time, though, I am totally agreeing with what you say. I mean, a chain should have the right to defend itself. I might not agree with those actions, but...
+
+Vish Quicksilver 
+Good timing.
+
+Citizen Web3 
+I think that the chain should have the right to defend. That's why the consensus is there. If it wasn't there, then how on earth are you supposed to defend yourself? You know, just the choice of then the person to say, okay, this chain is a bit removing funds from accounts. Maybe I should not be or whatever. But yeah, man, liquid staking. You guys at Quicksilver and well, we already had had.
+
+this small discussion when we had the liquid stake in debate with you and with all the other big three protocols, which is persistence and I'm going to forget names now and that's why I'm not even going to say them because I'm just going to stick to Quicksilver right now. I want to go really, really basic here.
+
+because there is still a lot of misconceptions and a lot of misunderstandings in my opinion for a lot of users about when it comes to liquid staking. Let's go really, really basic. What is liquid staking? L5 it like, and I'm sure you've probably done it before, but like really L5 liquid staking. Yeah.
+
+Vish Quicksilver 
+Yeah, so liquid staking is essentially like, okay, when you use a liquid staking protocol, you receive a staking derivative, right? The staking derivative essentially is a representation of your staked asset, right? And it is in fundamental terms, a derivative, like a one-to-one backed derivative. And this provides you liquidity on your staked asset, right? You have...
+
+In proof of stake systems, you need to lock up assets to secure the chain. But if you have most of your assets locked, then none of it is in DeFi. Right? So you have a fundamental compromise between DeFi and security. And what liquidating does is try to break that compromise. It says you can have the assets locked, you can have them secure the chain, but you can also use them in DeFi. So it's literally just a representation of your staked assets.
+
+Citizen Web3 
+Now that seems very logical but with that you know like a million questions spring to mind and before though I ask them I'm gonna let you a little bit talk. What is your personal opinion on the dangers or the pros and cons of liquid staking because you know hearing it from somebody who is building one of the first I don't know who was first tried you or whatever
+
+The protocols there I think is very important here. And I want to hear like you personally say, what is in your opinion, the dangers and the pluses of course as well of liquid stakes.
+
+Vish Quicksilver 
+Okay. I'll start with the dangers first. I mean, there's a few things. There's obviously like protocol risks. Uh, I mean, whenever you use any DeFi protocol, there's always protocol. It's kind of the fact that the protocol might get hacked. It might have some vulnerability in it. Uh, and this is why I guess every team that builds on in DeFi, we invest a lot in audits and security and that sort of thing. Right. So there's that one sort of obvious technical risk.
+
+And there's also like a risk of, I guess, economic attack vectors. Right. And these attack vectors are really only possible when a lot of a stake assets lands with one provider, one validator, or there's in general, an overfinancialization of the staking derivative. And by overfinancialization, I mean that you have 60% of. Atom.
+
+liquid in one liquidity pool, right? That always creates attack vectors, right? And you have short positions that are huge or much larger than the total liquidity the asset has itself. So I think these are some attack factors, but I think we can collectively sort of look at them and prevent them. But there's a lot of benefits, right? Like there's no way a proof of stake system
+
+a proof-of-stake chain can ever support a DeFi ecosystem without liquid staking. You have the biggest DeFi ecosystem on Ethereum, where it was proof of work. And now, SDETH is one of the centerpieces of ETH DeFi. So DeFi needs liquid staking. It's almost a prerequisite. So I guess that's a massive benefit of liquid staking.
+
+Citizen Web3 
+It's an interesting statement. It's a very strong statement. I'm going to ask you the same question, which I think I already asked all of the liquid-staking protocols' guests. Again, it's not going to be easy. Sorry.
+
+Citizen Web3 
+Most of the rewards, sorry, all the rewards currently, as far as I understand, in any liquid staking, well, it's not just about liquid staking, to be honest, but we're going to stick to liquid staking. They come from inflation, right? But that's not super value building, right? That's not like, do you know what I mean? I mean like...
+
+It's not a cure. It's not real value occurrence, right? Or would you completely disagree with that statement? Or would you say that it is value occurrence and there is no difference between where those rewards come from? So staking inflation is essentially what the chain pays for security.
+
+Vish Quicksilver 
+So staking inflation is essentially what a chain pays for security, right? And I guess the way proof of stake change were designed as a whole is that we'll move away from the system where we have transaction fees generate maybe two, 3%, 4% yield, and that would be your staking rewards, right? And the only way we can do that is again, by liquid staking, right?
+
+If you have very high stakes supply and then in the future, if the chain does gain that sort of transaction volume or any other source of revenue that they then distribute to stakeholders, right? Like on Quixel, where we distribute all staking reward revenue back to quick stakers, right? So if there's a chain like ICS on Cosmos Hub, right, they're distributing revenue. You know, you use QAtom, you get ICS rewards.
+
+If inflation goes away, there are other rewards, but that's really, you know, like the business of the protocol itself, right? If they feel inflation is the way to bootstrap security, then a liquid staking protocol can live with that. Uh, if there's other revenue coming that users think is valuable, a liquid staking protocol can live with that too. You know, it doesn't make the liquid staking model. It doesn't impact the liquid staking model fundamentally.
+
+Citizen Web3 
+Can you also do me a small favor? Like imagine right now, I'm a Cosmos user, but believe it or not, I come across a lot of Cosmos users that are not familiar with Liquids Taken. So let's say one of our listeners or somebody who jumps into this conversation by chance from a middle has some atom. How can they today benefit from
+
+you know, liquids taken and of course, feel free to give, you know, Quicksilver as an example. What do they need to do? Where do they go? What do they... It seems confusing to a lot of people still, so it seems. Yeah, I think there is a...
+
+Vish Quicksilver 
+Yeah, I think there's a bunch of like foresight and planning required. You're like, you're going to understand what you're trying to do with your atom in general, right? Like let's say today you have some atom, you can come on Quicksilver, you can stake it and get Q atom, right? And you can take these Q atom and deposit it in the atom Q atom pool, right? To earn.
+
+on like swap fees and osmo rewards and quick rewards that we give on liquidity pools. Now alternatively you can also go to UMI, right, where you can deposit this Q atom and then borrow some more atom and then stake that for Q atom and then sort of repeat the cycle until you hit like UMI's loan to value ratio, right. So you can, this is like vibrant lending market that you can kick off with your Q atoms, right.
+
+And you can also do things like leveraged LPing. You have Atom, but you don't want to hold Q-Atom. You think that's a protocol risk. You're a risk-averse person. You don't want to take it. You can deposit your Atom in something like UMI, or lending protocol, borrow a Q-Atom. And now the liquidation risk on that is very, very low because Atom and Q-Atom are fundamentally the same asset. You can borrow that Q-Atom and then LP it on the Q-Atom atom pool. And
+
+still benefit from liquid staking DeFi without gaining exposure to liquid staking. So there's a whole bunch of things you can do. And I do agree that there's more education, more DeFi education that's needed in the Cosmos ecosystem, I think appears in Ethereum are thoroughly degen. And we haven't gotten to that level yet, but there's a lot to do.
+
+Citizen Web3 
+We'll get there. That's one of our missions, you know, to degen the world, right? No, it's true. I think people should be aware of those tools and people should be more and more people aware of those tools. But let me ask you one last thing, controversial thing for today for sure. Considering what you're saying, which is, by the way, really cool. And I think everybody, regardless if it's for...
+
+Vish Quicksilver 
+Hehehe
+
+Citizen Web3 
+educational purposes or for purposes to earn profit should really go and try that out because it teaches you how a lot of things work in the process in my opinion. And one question though that I will ask that I again I've asked before I've heard an answer but again I want to hear yours. Imagine that along that line where you describe it and this is by no means to put anyone away from doing this. This is to you know to be honest and to understand that
+
+what could be the implication. In theory, that is... Imagine one of those assets was in one of those pools. I don't know, you went, you borrowed. And let's forget Quicksilver for a second. Let's use something else. You went to Stride, you put Atom, you got your ST Atom, and then you went, I don't know, with that you put it somewhere, borrowed. I'm going to make this up. You borrowed USD, it's back.
+
+And then you went and took your ST, put it with 20% and then bam. So what happens when this case, you ST is gone. You know, what happens to the whole chain is the whole chain fucked pretty much. It depends on.
+
+Vish Quicksilver 
+It depends on the BAM. If it was in the specific case you described, if it was USD that went bust, then you're fine. Because you don't have exposure to the USD because you've borrowed it with atom. As long as atom is fine, you can redeem that. But if atom went BAM, then you have a problem there. Because the value of your collateral now, it just dropped.
+
+Citizen Web3 
+if it was in the specific case you described, if it was USC that went bust.
+
+You're fine, because you don't have exposure to the US team, because you've borrowed.
+
+As long as atom is fine, you can redeem that. Okay. Right? But if atom went bad, then you have a problem there because the value of your collateral now just dropped. So you have to keep in mind like what you have exposure to and do you trust that.
+
+Vish Quicksilver 
+So you have to keep in mind like what you have exposure to and do you trust that.
+
+Citizen Web3 
+I think if Atom goes BAM we definitely have a problem and I think not just we, the whole world, we have a big problem. Yeah, let's keep an eye on that guys. Wish, let's go into the Blitz. Three questions. So first one, give me three, I used to say crypto projects, but now I just say projects because there is other more interesting things which technologically could be from the perspective of governance or economics or anything else you want.
+
+Vish Quicksilver 
+We have a big, big problem, yeah.
+
+Citizen Web3 
+three things, three projects today that arouse interest with Wish.
+
+Vish Quicksilver 
+Three projects, okay. Polymer is one of them. Polymer, they do ZK-IBC. That's really cool that it's gonna take IBC many other chains and they're thinking about some very cool stuff. Babylon, also very cool. Though I guess there's a lot yet to be released, but.
+
+super, super cool stuff. So, you know, as far as I can see, it's very interesting because what Babylon does is it removes the need for economic security, right? And it seems like every day we're batting for more economic security. But if they remove that, that can really change the game. And for a third one, maybe Eigen layer is also very interesting. Also many similar themes, you know.
+
+Citizen Web3
+The daily layout is also very interesting. Also many similar themes, you know, staking, security, and so on. Nice, nice man. Okay, next one. Two motivational things in your daily life that keep you building, well, not just liquid staking, but keep you, you know, aroused your curiosity in building different economic models and, you know, doing everything we were just talking about. What are those two things?
+
+Vish Quicksilver 
+staking security, that sort of thing.
+
+Vish Quicksilver
+I guess alcohol definitely helps. It keeps the spirit going. In fact, if I had to, I was.
+
+Citizen Web3 
+alcohol that the others do. Man well done thank you well done thank you for saying that man.
+
+Citizen Web3 
+And the other one? I guess it wouldn't match up to that. I guess it's having time to yourself. Thank you for being honest because you know, not, I love when guests give a pretty answer, a beautiful answer. I love it, but you know, there aren't, you, you are the second guest in like hundreds of people who have just said, like, and honestly, like there was one guy who said, you know, microdose and sell it, Sabins.
+
+Vish Quicksilver
+Left over. Oh. I guess it wouldn't match up to that, but I guess it's having time to yourself, right? Like being locked in a room, being bored really helps.
+
+Citizen Web3 
+You know, and then alcohol. I was like, guys, thank you for being honest, because like, fuck, man, some, I love beautiful answers, don't get me wrong, but you know, we have to be honest with ourselves too. Ha ha ha. Last one was, dead or alive, real or made up, developer, cartoon character, movie character, doesn't matter who it is. One person, not your icon that you follow, not.
+
+Vish Quicksilver 
+Yeah.
+
+Vish Quicksilver 
+Yeah, yeah, but really honest. Yeah.
+
+Citizen Web3
+but inspires you, you know, that you draw inspiration from.
+
+Vish Quicksilver 
+Hmm.
+
+Citizen Web3 
+Doesn't have to be alive, doesn't have to be real. It could be a cartoon character, it could be a writer, it could be a GitHub developer, it could be Joe. I don't know, it could be anyone, it could be family or whatever.
+
+Vish Quicksilver 
+Yeah.
+
+Vish Quicksilver 
+That's an interesting question. I think.
+
+Citizen Web3 
+I think.
+
+Vish Quicksilver
+a bunch of sort of thinking between Da Vinci
+
+Citizen Web3 
+sort of thinking between Da Vinci. Okay.
+
+Vish Quicksilver 
+Ow.
+
+Citizen Web3 
+Yeah, maybe the Vintio. Okay, man, I like that answer, man. That's cool. Love it, love it. It's one of mine too, by the way. So yeah, for sure. For sure understand that. Weish, man, thank you very much for all your answers. I'm sorry for if some of the questions were a bit harsh. I hope it was all good. Thank you for your time and thank you for your answers, man. And thank you everybody for listening.
+
+Vish Quicksilver 
+Yeah, maybe Da Vinci.
+
+Vish Quicksilver 
+Oh no.
+
+Vish Quicksilver 
+That, thanks for having me.
+
+Citizen Web3 
+Thanks man, bye.
+
+Vish Quicksilver 
+Bye.
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.
+

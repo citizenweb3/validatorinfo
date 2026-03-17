@@ -1,0 +1,629 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/viksharma
+
+Episode name:
+Ignoring Experts, Recklessness and Freedom with Vik Sharɱa
+
+Citizen Web3
+Hi everybody, welcome to a new episode of the Citizen Web three Podcast. Today I'm glad to have Wick, Wick, Wick, I don't know how Wick happened with Vic being the obvious, I don't know my W and my Vs. of course I Wick Sharma from Cakewallet, sorry about this, Vic, how are you? Good, good, how are you? I'm glad to have you on the W thing was a fun, it's common really, it's a common mistake.
+
+Vik Sharma 
+Yeah.
+
+Vik Sharma 
+Very common. Good, good. How are you? Thanks for having me on.
+
+Vik Sharma
+Yes, very common.
+
+Citizen Web3 
+I must say it was not a mistake it was was a slip of the VW on my end it was not
+
+Vik Sharma 
+Mm.
+
+No, I actually notice, you know, I'm Indian descendant, of course, and I notice Indians doing that quite a bit. And my advice is always just think the other letter is there. people consistently just flip them around. just do the opposite.
+
+Citizen Web3
+Vic, let me please get out the typical stuff out of the way. I'm going to ask you to introduce yourself for me, for the listeners, in as much detail as you want. Of course, focusing on web 3, possibly, and anything else you want us to know about you.
+
+Vik Sharma
+Mm-hmm.
+
+Vik Sharma 
+Sure. My name's Vik Sharma. I'm the founder of Cake Wallet. We also I also founded Monero.com wallet, which is a Monero only wallet, whereas Cake Wallet is a multi-currency self-custody, what I call a true blockchain wallet. I'm also the chairman of Liberty Steel US, which is a steel producer here in the United States. Yeah, I've been a
+
+I've been in crypto since, well, specifically Bitcoin since 2013. Launched Cake Wallet, well, started building it in 2017, launched in January of 2018. And it's been a fun ride.
+
+Citizen Web3 
+That is... I mean, I know of course about the steel, but I was wondering if you were going to bring it up because I usually don't try to go directions which guests don't want me to go. But since you brought it up, my first question is going to be a bit strange. How on earth does those two things combine into one human being? mean, Monero and then steel. How does it work?
+
+Vik Sharma 
+Yeah, I mean, I can start with steel. I grew up in a city called Pittsburgh, which was the steel capital of the United States and maybe the whole world at some point, I think probably for 100 years. So steel I got into mainly because of family influence, right? My dad started a company back in 1980, which is a steel engineering and design company.
+
+where we designed and made rolling mills for the steel industry. So in that company, we didn't make steel, but we made the machinery to make steel. And when I graduated from engineering, I joined the family business right away. And then obviously that led me, and that business didn't close down since my dad passed away, but that route led me to consulting and advising other steel companies and Liberty Steel being one of them. I started at
+
+just advising them and being a consultant, helping them expand into the United States. and But in that journey, I served as president, as CEO, as CEO again, and being on the board, and now I'm the chairman. On the on the tech side, I mean, since the 80s, I've been a little bit of a nerd.
+
+In the eighties, you know, I taught myself when I was in high school, I taught myself basic assembly, Pascal even went down to machine language and nothing taught. Nothing was taught in the school as this was me going to the University of Pittsburgh library and, picking out books and, teaching myself. But I think the last time I coded anything was probably 1992, long time ago. How many years is that? 30.
+
+30 some years ago. And I think at that time, I did an object-oriented database for our steel company. And that was the last coding. But since then, I I'm a techie at heart. I've always tried to read up and keep up with everything going on. Even in the late 90s, I had an IT company with 100 people in Pittsburgh doing networking and network security, which was new and cutting edge at that time.
+
+Vik Sharma 
+that ended up selling that company. But I've always dabbled here and there. Even before Cakewallet, I had different apps that I was just playing around with. But in 2013, when I really dug into Bitcoin, it just clicked for me. I was like, this is the future. mean, permissionless self-custody money, it was mind blowing. And I can't stop thinking about anything else since then.
+
+so yeah, I've been juggling. I've been juggling both routes, the steel route and the Cake wallet route.
+
+Citizen Web3 
+Ironically, I'm sorry if it's gonna sound wrong, but ironically, think selling machinery for steel production and making a wallet for cryptocurrency is more or less the same thing because it's like selling shovels to the gold miners. I think it's a service. It's not rather. So it's cool to see that. I know it might sound a little bit wrong the way I'm saying it, but I'm not trying to make it sound wrong.
+
+Vik Sharma 
+No, yeah, I think you're absolutely right. why a wallet, right? I mean, if you want to get into that right away. So you have this magical mysterious thing called a blockchain, which is living in the cloud somewhere, you know, for a non-techie. How do you access that? How do you manipulate that? How do you write to that? How do you, as an individual, how do you...
+
+use it. How do you use this blockchain? And I realized a wallet is self custody. Maybe some people argue with me, but I like to use the term a true blockchain wallet. It is the way you communicate with the blockchain. It's how you send out instructions and how you receive instructions as a user. And I think I realized that early on and
+
+I wanted to step in and be that tool to be able to do that.
+
+Citizen Web3
+Absolutely. think that wallets along with explorers and of course infrastructure, physical infrastructure are the three big pillars to adoption. I the infrastructure aside now, doesn't matter how... I mean, not that I want it to be like that, but it doesn't matter how blockchains will look in the future, centralized, decentralized, you still need a wallet and an explorer to access that. So yeah, without that, guess we're not going to be there.
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Sure, and of course, know, nodes and miners are equally or more important, but just looking at it from a consumer standpoint, I think the wallet is is the tool to have.
+
+Citizen Web3 
+Absolutely. Why did... I I'm gonna try to soften the question. I have it written down in one way, but I try to soften it up. I mean, because privacy, to become important for somebody, takes time. and not just time, in my opinion, it takes an event, like in life to happen. Something needs to like boom and then suddenly... Or I was born into a family that raised me up like that, of course, that could be a possibility. I guess what I'm trying to ask is what event...
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Mm-hmm. Mm-hmm.
+
+Citizen Web3 
+or how did privacy become important to you personally in your life? Why did it become important to you?
+
+Vik Sharma 
+Hmm.
+
+Vik Sharma 
+I think generally speaking, privacy, everybody practices whether they like it or not. They're not publishing their bank balance anywhere. They're not revealing all their transactions they did on you know their bank account. You're normally practicing privacy, I feel. you know You're putting a password on your Gmail account. you know That's privacy to some level. right You're not allowing everyone to read your emails.
+
+So number one, I think you're practicing anyway. Number two, me personally, if we want to talk about cryptocurrencies and specifically, was when I tried to buy something off the dark web. And it was antibiotics. And I tell this story all the time. And I sent Bitcoin directly from my Coinbase account to a darknet address. And I blame my wife. She didn't want to go to a doctor. She's like, just get me antibiotics. We know what we want.
+
+And Coinbase closed my account immediately. And that's when I kind of woke up to the traceability and traceability being practiced in Bitcoin, you know, by chain analysis companies and these large exchanges. So that event was a wake up call to me.
+
+Citizen Web3 
+It's ironic that you bring in antibiotics. Like literally, I don't know, 15 minutes ago, like a minute before we started the interview, I was replying to... with an example about antibiotics and privacy and the fact that, on Twitter that, you know, I mean, it's ridiculous that the game is rigged in the EU and people don't think about it like that. I antibiotics, which can potentially save somebody's life, need the permission, let alone...
+
+Vik Sharma 
+Ha ha.
+
+Vik Sharma 
+Mm-hmm.
+
+Citizen Web3 
+It's ridiculous. mean, people are playing with people's lives and it's not like you need a genius doctor to prescribe antibiotics. You just need to understand what's wrong with your body.
+
+Vik Sharma
+Right. And that's that's when I go to Mexico or go to Dubai, I load up on a bunch of prescription medicine, you know, which is impossible to get in the US.
+
+Citizen Web3
+prescription medicine.
+
+Citizen Web3 
+Absolutely, absolutely. I understand you completely. I'm in the EU and I usually either do those things or all my friends know where to bring their leftover pills. So... Please go on, please.
+
+Vik Sharma 
+Yeah. If I address the event, some event happening where it makes people do something, right? Even Bitcoin was born out of an event happening. It's the financial crisis in 2008 when it was the CEO of Goldman Sachs, was it Paulson? He stood up there with, was it Bush at the time?
+
+And we gave out all these tax money to bailout insurance companies, Wall Street players. And Bitcoin was born out of that, saying we need money that can't be screwed with and manipulated. So that event happened and everybody got into Bitcoin for that reason. But I feel people have forgotten about that event. And Bitcoin has become this number go up and
+
+store of value thing, which is cool. Everything evolves. Everything has a place. I just thought of that when you talked about a specific event happening which makes people do things and was kind of interesting that Bitcoin stemmed out of that.
+
+Citizen Web3 
+I think I think that understanding that something is wrong with Bitcoin back in 2018, personally for me, was. I've been long time in crypto as well. So but like understanding that something is wrong happened to me in 2018, roughly with Bitcoin. And that was the moment where I understood that I need to start doing my own projects and I need to start building infrastructure and stuff like that. I don't know how it was related in my head, but since then, that's what I've been doing because
+
+Vik Sharma
+Mm-hmm. Mm-hmm.
+
+Citizen Web3 
+that event exactly of looking of people. And I was speaking to Seth, you know, from your colleague and absolutely fascinating interview, by the way. And for all the people listening to this also, please check the Seth's interview, of course. And you can find it under the show notes as everything Vick will mention. But, you know, there was a point, that Seth mentioned that I want to ask you about. There was something he said that...
+
+Influenced me a lot because I kept asking him like, know, look at Bitcoin Look at what has become look at a surveillance machine. Look at all the court cases. Look at Tornado cash look at the other and then he said something that like really blew me out He said yeah, it means we're winning and I was like what and he's like but if we have the court cases if There that means they're afraid that means we are actually winning. It means the war on privacy is there Do you think so? Do you believe that that we are?
+
+winning the war on privacy or do you think we have a long way to go until we can say something?
+
+Vik Sharma
+Well, I mean, think generally over time, maybe not in one generation or, but I think eventually it happens. The will of the people does win out. And I'm not a weed smoker myself, but you know, I'm fine with other people doing it. But I always use that as an example, right? When I was growing up in the eighties and nineties, we were like scared, like, you know, if we were smoking weed and we saw a cop drive by, you know, you'd panic and say,
+
+10 years in prison minimum. So, but I think over time, the regime changed, the people in the government changed, and the truth comes out and now it's everywhere. So I'm probably not as pessimistic as a lot of people in crypto are about this dystopian, know, boot on the neck future. actually, I'm very positive about the future.
+
+And I agree with Seth, the fact that these court cases are happening and these issues are being recognized and authority is being forced to deal with these issues in a way is definitely winning. That this is coming to the forefront, you know, and we're asking the question, are you going to give us privacy or not? So
+
+Just the fact that it's on the table is being discussed, is being debated, is being tried, is, agree with Seth, 100%. It is a form of winning.
+
+Citizen Web3 
+It makes me happy to hear more people say that. I must say, for me, was not a revelation as such, but I never put it that way. you know I like to think of my own projects as focused on privacy, whether it's validation or doing some mining operation because we believe in those things or anything else or building tools. but like I also can't not help...
+
+not to notice the amount of guests that come to my show over the years. And I'm not talking about Seth or yourself right now, obviously, people, okay, Monero maybe aside, but a lot of other guests who are afraid to speak, who are afraid to mention things because they are well, for obvious reasons. And this is, guess, my next question to you being, you know, a CEO, right, of a legal company, right, with some legal requirements and
+
+legal bounds and at the same time being, you know, I'm not saying those are two different things, but I'm trying to work them differently on purpose. Being the founder of probably the most used privacy wallet today, a privacy focused wallet today. I mean, you can understand the disambiguity, right? The paradox. How do you, yeah.
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma
+Yeah.
+
+Vik Sharma 
+Well, luckily, Steel is a private company. It's not public at all. It's one shareholder who's one of my best friends from childhood. so yeah, mean, if it was a public company, could some public regulators have issue with involvement in a privacy coin? Maybe. But
+
+In the United States, Monero is not illegal. we have to remind, know, Seth could talk about this for hours. We get on a call with potential third party partners and the first question we asked them, do you support Monero? And surprisingly, a lot of people have said, no, we try to keep it clean or we try to stay legal. And we're like, what are you talking about? What the fuck is this? Monero is clean and it's legal. There's no issue with it. So
+
+For me personally, it hasn't been an issue yet. I mean, I did receive a letter with the IRS the other day saying, we have information you own cryptocurrency accounts. So I'm kind of losing sleep over that now. But again, I'm not hiding anything. Everything's on the up and up. I do try to report everything. So what was your question? I kind of rambled there. about me.
+
+feeling any pressure. No, I'm lucky. Like if I was a public company, maybe there would be an issue. Who knows? But not yet.
+
+Citizen Web3
+Let me stick in a very quick question because of the rumbling. Private government and public citizens or private citizens and public government?
+
+Vik Sharma 
+What do mean?
+
+Citizen Web3
+What's for you? What's for you more? Do you think that the way the society should be is where we have public citizens and a private government that doesn't have to be public if it doesn't want to? Or the other way around, we need to have the world where we have private citizens and public governments.
+
+Vik Sharma
+Mmm.
+
+Vik Sharma
+Governments should, if I'm understanding your question correctly, governments should 100 % be public and transparent and open. I mean, in the end, are representatives from the population, which are doing the will of the people. Ideally, obviously that doesn't happen all the time. Whereas corporations and individuals, of course, should be private.
+
+I mean, that's the point. Now, of course, if you're a publicly traded company, yes, there are some rules for transparency, but that's a choice a company makes. If you want to tap into capital markets and equity markets, then yes, of course, you have to have some transparency to your investors and players and founders and backers and what have you.
+
+Citizen Web3 
+I'm glad you said it because not not not you know, it's surprising that a Lot of I wanted you to take the question as you understood that that's why I didn't give any more explanation But it's exactly what I meant and I'm surprised that a lot of people that are building in this space are actually of a different opinion and and I was very surprised to learn that that
+
+Vik Sharma 
+Mm-hmm. Mm.
+
+Citizen Web3 
+And I understand the worries and I understand, but it's like with Coinbase, right? I was just, again, know, making it fun in quotations, tweets about that, you know, about because they were saying, what did they get? The only got the IDs, the addresses. And I was like, oh, but OK, but only criminals hide data. Yeah, only criminals hide data, right? So basically we don't need nothing to worry about. I mean, it's just criminal data that they got, just addresses and public government IDs.
+
+Vik Sharma 
+Oof.
+
+Vik Sharma 
+in one percent. Great.
+
+Citizen Web3 
+Fucking hell, though. I mean, this is ridiculous, right? Like, fuck.
+
+Vik Sharma 
+It's shocking. It's shocking that a company like Coinbase that is managing funds of almost every ETF, I mean, even forget about our small little individual people, but ETFs that are storing billions of dollars worth of Bitcoin with them and they can allow something like this to happen. Again, you shouldn't judge anybody, but it's just shocking. I mean, you would think they would have better OpsSec and...
+
+Citizen Web3
+I mean, you would think.
+
+Vik Sharma
+better security. Maybe we should send Seth over there to fix that system.
+
+Citizen Web3 
+Maybe we should send stuff.
+
+For sure, that would probably help, know, for sure it would help. I'm gonna have a weird question for you. I'm gonna give it a small like one minute, like 30 second answer to the question. I was lucky enough to... lucky enough, I don't know if that's the right word. I had the pleasure of meeting the founder of Monorugio back in 2019 in Chaos Communication Congress and...
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Yeah.
+
+Citizen Web3
+It's ironic to see how different you guys are in terms of, don't know personally, mean like, know, as a representation in terms of you have a still, you work with steel and then I'm talking about, you know, builders of Monero wallets and then Monorouge are very, very different in terms of how he represents himself, how he's dressed, you know, how he talks, what he does. And here's the question. Wait, wait, wait, wait, wait for the question. Wait, there's no judgment there. I promise this is, it's for the question.
+
+And this is the first part to it. Second part, I noticed over the years of being in this industry that a lot of founders build projects and each founder, of course, has their own personal goals. It's not just money. It could be proving myself or, you know, something else. long story short, long story short, putting those two things in mind. I've seen a lot of projects that are being built by founders who essentially fulfill
+
+whatever it was for them to fulfill and they basically kind of not disappear together with the projects. They're not scummers. They're just, you know, they're not interested in one. Now you are a person. What I'm trying to get at all of those explanations. You're obviously come across as a man who, well, to me, I apologize if I make the wrong judgment, the self-fulfilled. You come as a person who, you know, with the character, with the story, with what's your goal?
+
+Vik Sharma
+Mm-hmm.
+
+Citizen Web3 
+in building a cake in all of this story? Why do you care about it? why aren't you going to disappear? Because once again, not that you are a bad person, it's just like you seem to me like a person who is not after something the kid is after. I don't know if I'm explaining myself correctly and sorry for the long question.
+
+Vik Sharma 
+Hmm.
+
+Vik Sharma 
+Let me address Manarua first. The founder of Manarua is a really good friend of mine. We get along very well. We help each other. It's funny, he was in New York one time. He called me up. We met for lunch. And I was like, you probably don't expect an old guy like me running a crypto privacy space wallet. And he was like, and he told me his age.
+
+And we're like a year apart, and we laughed. We're like, oh, a bunch of old guys running these, like, know, cypherpunk type wallets. So we had a good laugh about it, but we get along really well. We share a lot of info. You know, we even work with one of his, you Andres, you know, we collaborate with him a lot. I just paid for his flight to Monero Con, you know, so we, you know.
+
+He does great work. So we get along really well. We With all the wallets, we really have a good relationship. Even Stack Wallet, which initially they started out working our Monero code, which have changed since then. But great relationship. Diego was tremendous help when I first started Cake Wallet. So we have a good relationship with everyone. Even Exodus Wallet, right? You probably heard we took over their
+
+Monero users, great guy. JP is wonderful, wonderful guy. So getting back to me, mean, why am I not going to disappear? I'd probably disappear from Steel first, to be honest with you. And that's definitely on the roadmap to disappear from there and do Cake all the time, which I'm doing Cake all the time. I don't know if my team is excited about me being around all the time, but it could be good.
+
+Citizen Web3
+Let me slightly twist the question instead of the disappearing part because that was more of an analogy. What is you what is VIX private personal goal about making privacy important and Monero, for example, because it looks like Monero is in the front row for you over here.
+
+Vik Sharma
+Yeah, I mean, even before privacy, I want to make it easy as possible for people to self-custody their crypto and use their cryptocurrency. That's number one. And try to make that safe, easy. You know I always say cake while it is easy enough for noobs, but you know, it's got a bunch of advanced feature for advanced users. Right. So, and I think we've balanced that pretty well.
+
+But that's my goal, and I don't think we're done yet. I think we still have a long way to go. Still a lot of wallet stuff has to be done within CakeWallet. So overall goal, that's what it is. It's to make Bitcoin and Monero and other cryptocurrencies less intimidating for non-techie people. That's our goal.
+
+Citizen Web3 
+Just to vouch for it and my listeners know I don't do this very often. Over the last five and a half years maybe I've done it only a couple of times. Definitely Cakewallet is in terms of Monero and I haven't used it for Bitcoin or Litecoin but in terms of Monero you guys are spot on. Monorooja also but you guys are spot on and like I said I don't do this very often but this is definitely vouching. It's great to hear. 
+
+Vik Sharma 
+Mm.
+
+Vik Sharma 
+That's great to hear. Thank you.
+
+Citizen Web3 
+By the way, I met the founder of Moneroosio in Chaos Communication Congress on a dancing floor of a techno thing. were with Max's girlfriend, think, dancing. And then, like, it was him and Andreas. And we started to talk, because I was mostly hanging out with the Monero guys. And yeah, it was an awesome, awesome thing. We went to the zoo with him. I think we went to the Berlin zoo. think if you will talk about this with him, the way he will remember this, we went to the Berlin zoo.
+
+Vik Sharma
+That's cool.
+
+Citizen Web3
+at the very first week that COVID started. And when we were going around, we were thinking, if this shit is going to turn out real, maybe we shouldn't be going to the fucking Berlin zoo, right? mean, that doesn't make any fucking sense. But OK. I wanted to ask you a question about regrets. And what I mean by regrets is or challenges. I talked to once, like I told you to a lot of founders.
+
+Vik Sharma 
+Yeah.
+
+Citizen Web3 
+and I listened to lot of stories and you guys have built a product that is very niche but it's usable and not many people have succeeded before. In fact, only one person succeeded before you. You're the second one in my opinion. What are your regrets and challenges that you would advise other builders in the space that are listening to this now or in the future to...
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Mm-hmm.
+
+Citizen Web3 
+focus or avoid or whatever it is you're going to choose to talk about.
+
+Vik Sharma 
+Hmm challenges that we had.
+
+Vik Sharma 
+I would say having an external audit is important. I think that goes a long way, especially when you're handling other people's, when your app is handling other people's money, not that you're handling other people's money. Advice I would give to other founders is don't listen to other people. Do what your gut tells you. Sometimes you know what you're doing.
+
+You know, it's okay. Listen to yourself, trust yourself and build it. And the other thing which I went through was don't worry about if somebody else is doing it. Cause you know, when, I started building cake wallet, there was no Monero wallet on iOS, no open source Monero wallet on iOS. And I didn't go to the Monero sub reddit that much.
+
+I'd, know, once in a while go on it and I saw that the community was funding some iOS wallet. And I would feel like, the community's funding it. What am I doing? They're never going to accept my wallet. And, you know, and I would just turn it off. I would just, I just stopped going to the sub Reddit because I didn't want to know. I didn't want to get influenced by that. And I was committed to doing this and, and we did it and we beat that wallet to, to the app store. and the rest is history. So.
+
+I would say don't be scared, listen to yourself, don't worry about what other people are doing because it's a big chance you might do it better or differently or cater to a different crowd. But number one is listen to yourself. Listen to yourself.
+
+Citizen Web3 
+So stay home, finish the product basically, like you said.
+
+Vik Sharma 
+Yep. And the other thing is, sometimes you don't know the end picture, right? I mean, looking at now, we just put in silent payments for Bitcoin, right? And we're putting a joint for Bitcoin. If you would have asked me 2017, are you going to put in Bitcoin technologies? I would have been like, what are you talking about? You know, so and this space is evolving so fast. There's new things, new tools.
+
+new people, new needs, new third party services, everything coming up every day. So, I guess two things I would say, listen to yourself and start, just start. Even if you're just building one little feature, just start because other things will fall into place. People will contact you, hey, do you want to do this? Do you want to do that? People reach out and then things will grow. So yeah, good question.
+
+Citizen Web3 
+Do you think there is a difference in terms of not advice, but maybe the way that founders should proceed with when, well, I'm going to try and, sorry. Let's say if I was building a protocol or building a tool like wallet or an Explorer is one thing. And in my opinion, when somebody is building a wallet and Explorer tool, I think what we're talking about is perfect. Now, on the other hand, then I cannot
+
+Vik Sharma 
+Mm-hmm.
+
+Citizen Web3 
+agree with everything, right? So on the other hand, a lot of the people building protocols out there, like, I mean, by protocols, mean, Ethereum or I don't know, any other blockchain, Cosmos, whatever, Polkadot, whatever, would say probably, well, if I'm staying home, then how the hell am going to build a community? Now, do you think that it's the argument is just because the person doesn't know how to do it online? Or do you think there is a difference for people who are like ourselves building tools and
+
+for builders that are building such things as the protocols themselves.
+
+Vik Sharma 
+Yeah, I mean you saw my tweet yesterday or the day before. I said, advice to founders, stay home or in your office and build your tool and then go to the conferences. And I recognize every tool has a different need, you know, but I think even if you're building a protocol or something, I think everything can happen online.
+
+Even though I was a Bitcoiner since 2013, I used to hang out at the Bitcoin Center here in Wall Street in New York City, but I never really went to a Bitcoin conference until 2020 or something, 2021 or something like that. And everything was done online. So I think in this space, especially, everything can be done online. The conferences just seem like more of just like a party. you know
+
+And look, some things come out of there. I've met some great people at conferences that we ended up collaborating with. But I had the foundation down first before I was able to work with other people. So, and you know, I think it also depends on your personality. If you're more an in-person type person talking to people, but I don't think it's needed. I think you can do it all online.
+
+Citizen Web3
+I I I can't help to million times agree because I mean, in the beginning, especially that I used to, when I started to work in crypto, it's a long time ago, I started community work and I used to be so many and as a community manager or as a founder or as a CEO or whatever, I was always in conferences and then I stopped because I started my own project and I realized it's not needed. And I went on without conferences for probably like, I don't know.
+
+three, four years and then recently, like half a year ago, I went to Lisbon to a couple of events and my God, what a trash. Like, I'm sorry, but those words just like would echo right now in my mind. Like if I was gonna do it again, just don't do it. Don't do it, you know?
+
+Vik Sharma 
+Yeah, yeah, yeah, but they're fun. mean, I'm having said that, you know, definitely come out and see us in Bitcoin Vegas, Bitcoin Prague, Litecoin Vegas, Monero Con in Prague. So we'll be at all those. We'll be at Bitcoin Hong Kong as well. So yeah.
+
+Citizen Web3 
+Yeah, but they're fine.
+
+Citizen Web3 
+We'll be at bit.
+
+There is conferences and conferences, right? And I guess this is what I was going to say that there is like places where you go and you meet other builders and you meet people like-minded to you and there are places that you go and you know, people all talk about is marketing budgets and it's kind of, yeah. Anyways, let me ask you another question too. We spoke about adoption, not adoption, we spoke about the importance of wallets a couple of times and I guess the question is about adoption.
+
+Vik Sharma 
+Mm-hmm.
+
+Citizen Web3 
+How do you see, do you think by the way, let's start with the easy because there are a few camps in that group, sorry, in the adoption group. Those who, for example, do you think grandmothers need to use the blockchain or is that something that we don't need today? Yeah.
+
+Vik Sharma 
+Grandmothers, you're saying? Grandmothers? I think they need to use the blockchain, but they don't need to know what it does, what's happening in the background. They need to be able to use it as simply as they do with Venmo or PayPal or something like that. I know how to drive my car. I don't know how to fix it. It should be like that.
+
+Citizen Web3 
+It should be like that. Then the follow-up question from that, because it was dependent on the answer. Because today, looks like a lot of the wallets, for example, in general, they've succeeded in progressing from how wallet used to look 12 years ago, a standalone wallet, was absolutely unusable, really. You had to be an expert a little bit to understand what you're doing. I'm not talking about CLI, of course.
+
+Vik Sharma
+Mm-hmm.
+
+Vik Sharma 
+Mm-hmm.
+
+Citizen Web3 
+to what they are today, multi-portfolio wallets with ability to use different types of password mechanics and so on and so forth. So wallets have done it. Now, explorers are slowly trying to catch up, probably still have another few years to get there. Infrastructure, though, and this was my question about adoption. How do we reach adoption? How do we, I mean, okay, we hide...
+
+for grandmothers the things they don't need to see in blockchain. Okay, so we do that. But it looks like all of the infrastructure today, including by those who run explorers and wallets, for example, are run by single beneficiary for-profit companies and not in a decentralized manner. So do we need this to reach adoption? And if we do need this to reach adoption, then how on earth do we reteach people
+
+Vik Sharma 
+Mm-hmm. Mm-hmm.
+
+Vik Sharma
+Mm-hmm.
+
+Vik Sharma 
+Mm-hmm. Mm-hmm.
+
+Citizen Web3 
+even in this space that the centralised infrastructure is important for adoption.
+
+Vik Sharma 
+So from the wallet side adoption, I could address that first, even if you don't care about privacy, which I find baffling, but let's say even if you don't, and people don't, right? You look at, you go on Venmo, people have all their transactions transparent where there is an option in the settings to hide your transactions, but nobody does it. I tell all my friends, hey, like go into settings.
+
+and put that lock on. don't want everyone to see that you pay your barber 10 bucks. So even if you don't care about privacy, think the biggest feature of Bitcoin and Monero and cryptocurrency is self-custody. I still think people more and more will come around to that, right? Because everybody at some point in their life is going to face some restriction from their bank.
+
+Whether it's a wire they want to do or receive or withdrawal they want to do, they're going to face some restriction. And maybe they won't go all 100 % self custody blockchain, right? But maybe they'll say, okay, maybe some of my funds I should control myself. So I think that narrative and that feature should be pushed more often because privacy scares people. I have nothing to hide. You hear that from people.
+
+Let's take baby steps. Forget about privacy for a second. What about self custody? Do you want to ask your bank every time you want to use and send your money? So that should be the first thing. As far as infrastructure goes, now here comes back to your grandmother. Is a grandmother going to run her own node? No, probably not.
+
+Unless we get to a point, let's say, I don't know, 20, 30 years from now, your phone is so powerful and internet speeds are great. And that's going to happen, right? mean, Moore's law or whatever the new law is called is, you know, that's going to continue to happen. until then, what do we do? Right. Until then, you give an option for that user to connect to any infrastructure that they want.
+
+Vik Sharma 
+and or that they trust. I mean, Cakewallet, we run our own nodes, but we give an option to the user to connect to another node or to their own node. right Yeah, that part is still pretty techy right now. But it's getting better and better every day.
+
+Citizen Web3
+Do you think we will get to a part where even the UI is going to be the front, is going to be decentralized as well? Because it's also a part that supposedly could be run by different parties, like different user interfaces or I don't know.
+
+Vik Sharma 
+Hmm. I don't know how the front of a wallet could be decentralized.
+
+I mean, it kind of already is, right? I mean, you can choose Manarujo or Cakewallet if it's your same seed or the manar.com.
+
+Citizen Web3 
+Not necessarily about Cakewallet. I'm sorry that I might have highlighted it too much, but for example, we could take Uniswap, for example, right? Or I mean, Uniswap has examples of decentralized front-ends, if I believe so, at least. Not that people use them, but I believe that it does have such examples. And do you think that applications in general and tools should aim for...
+
+Citizen Web3
+to become as decentralized as possible from any end? Or is there, what I'm trying to get here is do you think that there is some part that doesn't require to be decentralized? Because in many people's views, decentralization is a spectrum, which it is, and I agree with that. But one thing is to decentralize everything, and one thing is to decentralize maybe certain things. So what I'm trying to understand is, do you think there is a limit
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma
+Mm-hmm. Mm-hmm.
+
+Citizen Web3 
+to decentralization and adoption that will come out of adoption of decentralization.
+
+Vik Sharma 
+Yeah, you know, I always find predicting the future is you're always predicting it on technology that you have today, right? right And I always use the example of when you watch old sci-fi movies from the 70s and 80s and on the spaceship they have for the monitors, they have old CRT monitors, right? mean,
+
+Even when we watch Blade Runner, know, and they're reading the eyeball reading, they're using like a CRT and a dot matrix printer, you know, because that was the technology at that time. They didn't envision flat screens or laser printers or no printers, right? So...
+
+So, I mean, today to say, everything be decentralized? Definitely the back end.
+
+Swaps, like Soraya is coming up for Manero. That all, we can see the future right now where we're sitting and that's happening. As far as everything, including the apps and front end that you're using, yeah, I don't see why not.
+
+Yeah, I'm sure it's possible. I don't have a clear path to it in my mind right now, but we'll definitely think about it.
+
+Citizen Web3 
+By the way, for the validators or operators listening to this, I suggest to check out also SRI. That is a very interesting, Dex with a very interesting proposition. Not easy to get into, but it's a nice learning curve. How do you tell, by the way, your friends about... I because your friends... I'm not going to make any judgments here. I don't want to make any guesses who are your circle of friends because this is very subjective.
+
+Vik Sharma 
+Mm-hmm. Mm-hmm. Mm-hmm.
+
+Citizen Web3
+Still, know, like, doesn't matter where they come from, who they are. I guess that, you know, when they look at the news and they hear about things like Libra coin or, I don't know, like Trump coin or whatever, and then suddenly there is you with like, my God, values, privacy, like how on earth do you tell your friends and how do you keep, how do you keep like a serious face while explaining to them about serious stuff that we are talking about right now?
+
+Vik Sharma 
+Mm.
+
+Vik Sharma 
+Hmm.
+
+Citizen Web3 
+when all they hear about around themselves is like Trump coin and a Melanie coin, whatever there is other shit there is.
+
+Vik Sharma 
+Well, let's just start with Bitcoin, right? I question I always get from other people who are not into Bitcoin yet, or don't understand is, should I buy Bitcoin now? And I always struggled how to answer that, right? Because I don't want to lead them wrong, but at the same time, I want them to buy it. So my answer, I came up with the best answer. I said, I'm the wrong person to ask because I'm always buying, right?
+
+shows that, hey, yes, anytime's a good buy, I'm always buying, but I'm pushing off the responsibility of advising them to buy. So, I mean, outside the crypto space, in my steel world and regular world, most of my talks are teaching people about how crypto, you know, Bitcoin works. And I always start with Bitcoin. People know the name, people know it's established. And
+
+I take a little bit of pride in explaining how Bitcoin works to people. And I ask them to rate me afterwards. Even my friends, I'm like, how did I do? Where did I confuse you? Because I love it. I love explaining to people how Bitcoin works. I love teaching people about it. So that's one. And if somebody does bring up, Trump coin, this and that, clearly tell them, look, it's a gamble.
+
+you want to try to hit the lottery, yeah, go ahead and buy it. I own some, why not? You never know. But if somebody really asks what should I buy, of course, they're only buying it just purely for investment and no other use. They're just going to leave it on their Coinbase or Kraken and never touch it. you know I just tell them to go for the safe stuff. I'll say, buy Bitcoin, buy Monero.
+
+And then they're like, how about Ethereum? I was like, eh, I don't have any, but you should, you can. You know, I made that big announcement last year, right? I've sold all my Ethereum for Bitcoin, not all, I'm held onto some, of course, you never know. Yeah.
+
+Citizen Web3 
+You never know. never know. You have, I mean, let's disregard for a second the real world and talk about crypto. Now you had at least the internet. mean, and the internet lies all the time, of course, but you know, you had a fascinating journey, like from, you know, DigiByte to Monero to CakeWallet to like, this is what I could find at least, right?
+
+Vik Sharma 
+Mm-hmm.
+
+Citizen Web3 
+It looks like you are... I don't know if you consider yourself a community manager, but you are building communities. And my question is, like, know, like looking at your journey in crypto, this is what you do, you build communities. And right now, that's the question, basically, what do you find fascinating about building community? Because you said also that you like teaching people, and I guess that kind of goes along with it. Why do you find it fascinating? Why does it drive you?
+
+Vik Sharma
+Mm-hmm.
+
+Vik Sharma 
+In the end, it's people, I'm not building this for Tesla robots to use, right? We're building this for regular humans to use. even Bitcoin was created for people to have financial freedom. So I think without that, it's meaningless. I mean, what good is it, tech, if people can't use it?
+
+You know, if only a few select, and I say this in the nicest way, and I'm using this word out of respect, nerds, only if, nerds that know command line, you know, type of work and just that community uses it, that's great, but it's got to break out of there at some point and gain, you know, wider adoption.
+
+So that's why I like community. And then for me personally, regards to CakeWallet, I love talking to our users. When I started Cake, it was just me and another guy, right? And I did everything. did the support. I used to talk about our support staff, but it was me. So I love talking to Cake users. I love learning how they're using it. and I get 
+
+great messages, you know, people telling me that they're able to send money to their mother in South America or something. I love stories like that and it me going. But in the end, I'm building it for our users. So I love the feedback. So I think that community is important. Then the wider community, Monero, since I believe in the coin so much and its mission, that community is important to me.
+
+I mean, a lot of things in Cakewallet we did and didn't do because the community liked it or didn't like it. That community is important to me. And that's why I fund, you know, for many years and the largest sponsor of MoneroCon, MoneroTalk, Monerotopia, you name it. I mean, so many different Monero podcasts. We fund development. We donate to Monero Research Lab.
+
+Vik Sharma 
+We donate to the general fund. We donate to individual fundraisers, know, CS or CCS or CSS, whatever it's called. So yeah, the community is important.
+
+Citizen Web3 
+I was actually smiling at the beginning that you said that when you mentioned Tesla and I was thinking I can just envision two robots, Tesla, early Tesla robots in 50 years from now, like talking to each other. I go, yeah, yeah, I got someone there on a dark web. Let me ask you one last question before I'm going to jump into a small blitz to finish this off because it's about community. I personally, I am not...
+
+Vik Sharma
+you
+
+Citizen Web3
+Fun is a very big understatement of what Monero is for me. I've been on Monero Talk, for example, as a guest some years ago. five years ago, think, or something like that. so, I'm a big fanboy of Monero. But lately, I can't help not to notice the tribalism that is emerging in Monero community. Now, we're talking about communities and you are not...
+
+Vik Sharma 
+Okay.
+
+Citizen Web3
+Monero to us did but the person I thought I don't I don't want to put like the responsibility of your answer to that but you know still you know, we're talking about one error right now and We're talking about how important communities and it's weird to me to see that It's painful for me to see that it's the same Slippery route the Bitcoin community is went by five or six years ago turned to sorry five or six years ago How do you think we can avoid it?
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Mm-hmm. Mm-hmm.
+
+Citizen Web3 
+in the Monero community and do we need to avoid it?
+
+Vik Sharma
+I think more than anything, comes down to, I'm not speaking for everyone who's, know, has a tribalism mentality or Monero or for Zcash or whatever. But I think a lot of it just comes down to the human need of wanting to feel like you belong to a group. So that's probably the biggest factor. We just want to belong as human beings. We want to know we're part of a group and accept it. That's one thing.
+
+But specifically for Monero, let's talk about, I know you're hinting at Zcash. thats you probably know the story. Years ago, Zcash offered us a grant to add Zcash to Cakewallet. And I was ready to do it. But the Monero community was very vocal. Cakewallet was like,
+
+the darling of the Monero community. like I said, I value that community. I didn't want to let them down. And we said, okay. And we turned down the grant. And by the way, Zuko has blocked me on Twitter. I don't know why I actually liked the guy and he and I talked a lot and, and, and Zcash in general. mean, I think, look, if you'd leave the dev tax aside, if you leave the
+
+marketing company or whatever the CEO whatever they have if you look at purely the tech, it's okay. I mean, it's Yeah, so
+
+But I think the tribalism hurts both communities, not just Monero, not just Zcash. We should We have to realize we're on the same team, maybe taking different paths and different technologies. But in the end, we're on the same team. We're to provide privacy for everyone. Will Zcash come to cake at some point? Probably. Most likely.
+
+Vik Sharma 
+We'd probably do it differently than other wallets do Zcash. We'd probably emphasize the shielded transactions, the shielded Zcash more than anything else. And maybe even limit to just that, but we haven't decided that yet. But going back to your tribalism, yeah, I think it's damaging for the communities. Also social media, people just love to pile in.
+
+You you notice that about, especially on Twitter and Reddit, Twitter more than anything, just one thing just sets off a spark and, know, and just people have never even heard of just pile in on stuff, whether it's racism or Russia or Trump or politics or vaccines or whatever, you know, people love to just pile in. And again, maybe it just comes back to that whole thing of
+
+wanting to feel like you're involved and your voice is heard. So I think what happens online should be taken with a grain of salt.
+
+Vik Sharma 
+But a lot of people in Monero community say when this full chain membership proof++ gets implemented into Monero, then there's no looking back. we'll see.
+
+Citizen Web3
+Thank you.
+
+Citizen Web3 
+I actually think that we will be smiling at all those things in like 20 years from now. But I mean, it's inevitable. It's inevitable. I mean, it's just otherwise you cannot I mean, look at the internet, right? Look at any technology, the way it was developed, and it's inevitable. anyways, otherwise, I'll go on on on there's a dear topic to me and I'll go on in another hour of conversation. Sorry about this. Let me go to the blitz three questions non related to crypto. This is to take us out of the conversation and
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Yeah.
+
+Vik Sharma
+Yeah.
+
+Citizen Web3 
+to yeah so first one it doesn't have to be you don't have to answer quick I call it blitz but yeah yeah I've ignored it the first question Vic please give me either a song or a movie or a book that has had a positive influence on your work life and your success
+
+Vik Sharma 
+okay.
+
+Vik Sharma 
+Book wise, would have to be Warren Buffett's biography called The Making of an American Capitalist. I read that in my early 20s and that was huge. Another book which people laugh at because it's so basic. I went to school for engineering. I didn't go for finance or money or anything like that. So Rich Dad, Poor Dad, I know it's kitsch, but it's
+
+I think everybody should read that book. It just opens your mind up about how money works.
+
+Vik Sharma 
+I'd have to think about that.
+
+Citizen Web3 
+have to think about Books is good. By the way, I was over there because to me, I do a lot what I used to do. I don't do anymore. Like I said, conference is not my thing anymore. But I used to do a lot of public talking and it was related to a lot of different things. And one of the things I used to say, was about reach that poor dad is, as kitschy as it is, it opens up your thinking, it changes it, it twitches your thinking, throws you out of there. Unless you grow up in something like that already, it doesn't, of course. But if you haven't,
+
+just goes, bam, so absolutely, 100%. Second question, Vic. Please, something you can share, of course, with me and the audience, motivational, that keeps Vic waking out of bed every day, keep on focusing on privacy, on Monero, and doing something good for the world.
+
+Vik Sharma
+Yeah.
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma 
+Yeah, I mean, as we said earlier, number one, I do wake up for Cake Wallet. That's why I wake up, of course, my wife and daughter as well, wake up for them as well. But waking up for cake definitely is part of that. Like I said, I mean, I think we still have a lot of work to do in Cake Wallet. I think we still have a long way to go. Like you said, to get the grandmothers to use it. That's the ultimate goal.
+
+So I don't think we're done yet. think that's what keeps me going.
+
+Citizen Web3 
+I like that answer. We're not done yet. I like that. Last question is going to be the weirdest one, I promise. Last one, but I also promise. Not a guru, because I don't believe in gurus. I don't think gurus are a thing. I think that we should follow our own path. But dead or alive, made up or a real persona, family member, a developer, it doesn't matter, character from a book, somebody...
+
+Vik Sharma 
+Mm-hmm.
+
+Vik Sharma
+Hmm.
+
+Citizen Web3
+who a personage who when you professionally stuck it kind of helps you to think about that personage and you it helps you to progress doesn't matter how stuck you are or what you stuck in but professionally particularly
+
+Vik Sharma
+Mm-hmm.
+
+Vik Sharma 
+Hmm.
+
+Again, probably the first one, the public figure. Again, it's going to be a cliche answer. But in terms of business, right? You're talking in terms of business and building. It's definitely Steve Jobs. I liked his philosophy on making, and we addressed this earlier, right? Making products for people to use. And one of his philosophies that I really liked is people don't know what they want.
+
+or they can't see the next week, right? We talked about seeing things in the future based on today's technology as compared to imagining what the future technology is gonna be. So I really liked that mindset. I try to get into that mindset quite often. And then from a personal figure, I would say my dad, what I liked about his mentality is do it now. Now is the best time. You wanna do something?
+
+Do it right now, pick up the phone, call. I definitely learned that from him. what else? We could do a whole hour podcast on lessons I've learned from my dad. So yeah, I'd have to say those two people business-wise have had the most impact. And Warren Buffett, as I said earlier.
+
+Citizen Web3 
+So.
+
+Citizen Web3 
+and warn about.
+
+Can't forget Warren Buffett. By the way, it's surprising how few people name... I'm not judging again, but it's surprising how few people name family members on that question. It's an interesting thing. Okay, Vic, and for the listeners, thank you, first of all, Vic, coming to answer my questions and finding the time to answer my questions. This is going to be a goodbye for the listeners. Please don't hang up just yet. For everybody else who tuned in and listened to us, goodbye.
+
+Vik Sharma 
+Hmm
+
+Vik Sharma 
+Hmm.
+
+Citizen Web3 
+and see you in a couple of weeks or next week or whatever, next tuning guys. Vic, thank you very much. Thank you. Thanks for having me on. Thanks everybody.
+
+Vik Sharma 
+Thank you, thanks for having me on. That was fun.
+
+Citizen Web3 
+Bye
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

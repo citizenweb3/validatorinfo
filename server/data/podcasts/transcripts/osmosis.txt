@@ -1,0 +1,416 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/osmosis
+
+Episode name:
+DeFi, AMM & the future with Sunny Aggarwal
+
+Anna: 
+Hey, it's Citizen Cosmos. We are Serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+Before we rock it off into our next episode, we are glad to announce the sponsor of our podcast Cyber. Cyber is building a superintelligent decentralized AI protocol. It has managed data relevance layer built using web 3 technology by the users and not by corporations. To learn more about the future of the great web, head over to cib.ai, connect with the app and start testing now. 
+
+Citizen Web3: 
+And good space time to you all and welcome to new not just an episode but a new season of the Citizen Cosmos podcast and we didn't think of a much better way to kick of the new season with pretty much in my opinion first interchain project that's founded by Sunny Aggarwal and we are joined by him today Hey, Sunny. 
+
+Sunny Aggarwal: 
+Hey guys, nice to be on again. It's been a while since I've been on, maybe over a year. So yeah, happy to always come back and do follow-ups. 
+
+Citizen Web3: 
+It's been slightly over a year, I guess, right? 
+
+Sunny Aggarwal: 
+Yeah. It's always nice to come on the second time because it's like, you know, the first time you have to go through your intro and background and everything. The second time you just like it's straight to it. 
+
+Citizen Web3:
+Ha ha ha Just get straight to it. Let's not talk to it. 
+
+Citizen Web3: 
+But you're the first coming back guest. So you are our first second. How does that sound? Okay, so we have quite a few questions lined up for you. But of course, our kind of specialties on not just talking about the technology, but on talking what motivates you to do it and how they're all start. But I will like kick off with the first question and then I'll just give it all to you. And then you can sort of start to imagine which way you want to take it from here. So the first question is, well, obviously described because today you're here as the founder of osmosis. 
+
+And I would like you not to just describe osmosis, but to say where in your opinion does osmosis stand in terms of infrastructure? Is it an application? Is it a lab as you describe it? What is a lab? Is it a layer three, four, five? Let's talk about this for a little bit. 
+
+Sunny Aggarwal: 
+Yeah. So osmosis is application specific blockchain, which is I guess always been the vision of cosmos that we're going to have all these application specific blockchains. And osmosis was basically the first one to do that with like IDC enabled. So I actually left the tender. I don't remember when exactly we did it last time. 
+
+I left the tenement team almost about a year ago back in June of 2020. And I was figuring out what I wanted to do after that. And I saw all the defi summer happening on Ethereum. And I was like, oh, how do we bring defi to cosmos now? And so we were figuring out how to do that. And we're like, well, okay, what are the primitives that we need? Wanted to get a lending foreign protocol, you need a dex, you need some stable coins. And the one that I found the most interesting was the dex side of things just because this whole AMM thing seemed so fascinating to me. 
+
+And so we just started working on that. And yeah, I mean, is it a layer? I call it technically a layer one. 
+
+Like, you know, if you want to use a technical term, that's what it is, right? It's a sovereign blockchain and all sovereign blockchains are their own layer one. If you talk about it from like a UX approach, you can treat it as a layer two to any other blockchain, right? Where it's like, it's not a layer one in the sense that like we expect people to be building on top of it, right? It's more like this idea that it's like you have tokens on a different chain, a cash network, it's like, okay, we're a layer two application to you, like in the sense that it's like, you know, we're just this utility that you move on to our chain, do some utility swapping trading, and then go back to your own home chain. And especially once we went, we're able to connect with Ethereum coming up pretty soon to the users on Ethereum, it will feel like a layer two, similar to how they might go to Polygon or something like this, they'll come to Osmosis to do their trading. 
+
+Citizen Web3: 
+You mentioned the word Ethereum, and I'm not sure how many of our listeners follow you Twitter. I hope that all of them, if you guys don't follow Sunny's Twitter, there will be a link, obviously, to it. And you really should because there is a lot of not just technical things under there's quite a funny things in there as well. But you recently tweeted about the addresses. And this question has actually been going on for a while and a lot of peoples heads, do you want to talk a little bit about it? How are you going to towards the idea you have to do it? 
+
+Sunny Aggarwal: 
+I guess maybe they zoom me out from just the addresses. I think like, what is this larger thing that we're trying to tackle right now with Osmosis is Cosmos has always pitched this idea of interchain and user flows are going to happen across many chains. And I think the rest of the ecosystem is getting that now that used to be a radical idea four years ago. Today, it's not a radical idea today. 
+
+That's the expected idea. But I think one of the main things that still concerns people is they're worried about the UX of cross chain, where they're worried that the UX of doing flows across multiple chains is just going to be inferior to the flow of doing things on a single chain. It's true that it's harder building user flows and good UX across chain is going to be harder. And one of the goals of Osmosis is to prove to the world that, hey, the UX of cross chain things can be as good as on a single chain. So for that reason, that's why we focus very heavily on the cross chain UX. 
+
+So our team is also maintains Kepler, Josh and Tony, they're on our team as well. And so we think a lot about like, how does the user interact with things? So if you guys are familiar with Gravity Bridge, Gravity Bridge is the bridge from Cosmos Chains or Ethereum, that bridge should be coming online very soon within the next month and a half or so. Once that bridge is live, we expect a lot of Ethereum users to start flowing onto Osmosis for different reasons right now, maybe just for like, get access to a lot of tokens that are only available on Cosmos. But then in the future, once we have more features like our privacy and front running, then no, they'll come for that, those reasons as well. But how do we make the UX for them like really good? And so most Ethereum users are using Ethereum wallets, usually most popular as MetaMask. 
+
+And to currently to use Osmosis, you have to download Kepler as a wallet. My rule is every additional step you make users do, you lose 50% of your users. And so in the process of making them install a new wallet, it's a burden on them. And so what we did was we actually made an update to our version of the Cosmos SDK where you can actually use MetaMask to make transactions on the Cosmos SDK. And it uses the sign message functionality of Ethereum wallets. So if you ever go on like OpenSea or time you go on a site where like, you know, you can ask MetaMask to sign a message, don't broadcast it as a transaction or anything. 
+
+So we kind of like hack that functionality to make it sign Cosmos SDK transactions for us. So great, we have MetaMask working. But now the only weird problem is the address that you see on MetaMask is this hex encoded address. 
+
+But your address on Osmosis or any Cosmos can you're using this with is this like back 32 address, and they look completely entirely different. You know, I want to make sure the wallet and the application are synchronized and they're using the same out design because that happens sometimes if I use like a lot of Ethereum dApps like I'll let's say I use like one inch or something. Oftentimes I'll notice like, wait, I have many Ethereum wallets. And so it's like the app thinks I'm using this wall address, but like my wallet is thinking I'm using this one. They're like not talking to each other correctly. And I can see that visually because I can see the addresses are different. 
+
+And for the problem is it's hard to right now to tell visually that Osmosis address is the same as the hex address that's on Ethereum. And so that's why I propose a way of like, it's kind of a really hacky way of doing it. It's kind of a little silly. But what if we like, you know, made them look more similar so people could see like, Oh, yeah, those look like they're the same address at least. 
+
+Citizen Web3: 
+I think what you're doing is actually to be honest, it's in my opinion, the good hack in this way. And to be honest, while you were talking about the user interfaces, there's one thing I really want to tell you. I personally have been following and dreaming the idea of the interchain for many years. And in fact, I would say that it came to not of course to just my head, but to everybody's headway before the first paper of Tendermint, even when I would have been in the blockchain. And I really want to guys congratulate you because what you guys did with the UI of Osmosis and when people first saw it, remember the first day taking my ledger and seeing that, you know, when you're like, Whoa, that flight works. 
+
+Citizen Web3: 
+Oh my God, it really does work. 
+
+Citizen Web3: 
+You know, everybody was like, Oh my God, it really works. So guys, you did a fantastic job. So I think you're on the right track there. So congratulations on that. 
+
+Anna: 
+And of course, we would like to speak about DeFi. And before we speak about any specific DeFi projects, I would like to discuss the term interchain DeFi. So do you think that interchain defined terms already shaped or it's still ongoing process and we need to define what is going on in this field? 
+
+Sunny Aggarwal: 
+Yeah, I actually really like the term interchain DeFi. I just love the term interchain in general. And I think one of the things I'm now trying to push now is this idea of interchain DeFi versus multi chain DeFi. And I think that these are like sort of two different concepts where, like I said, right now, everyone in crypto is now coming around to the idea that many chains is the future and there's no way around that. 
+
+But I think the now how to tackle that is still different across different teams. So multi chain DeFi is what I'll say is like, if you look at what like sushi swap is doing, for example, right? Sushi swap is saying like, Hey, let's take our sushi swap contracts, we're going to deploy them on obviously main net Ethereum, but then let's go deploy the same contract on BSE and on polygon and on arbitram. And I don't know if they're going to deploy an optimism. I don't know if you saw that drama, but there's a thing we're going to deploy the same thing many places. And I think like other protocols are saying, there's other people following this multi chain path as well. Like I think Ave is doing that too. I saw that they deployed the same thing on different chains. 
+
+But there's this different thing, which is like what I'd call the interchain vision, which I think the big Ethereum project that gets it is compound compound said, no, we're not going to deploy the same thing on every chain. That's going to split up our liquidity and just not be helpful. We're going to create a new chain called compound chain. And that's where our borrowing and lending facility is going to be. And then everyone else, everything will just connect to us, borrow and lend here and then go back to their chain. I think that's the interchain vision. 
+
+And obviously, I think that's sort of what cosmos projects understand as well, right? You have chains like for change, right? Like they're also building an interchain debt. You have Tara, they're building this like interchain like stablecoin where like, you know, you see that they're trying to take their USD minting it on Tara chain, but then getting that USD being used on like many other chains. That's why I like the term interchain, because I think it really does sort of express that this is like, you're not just interacting with many protocols on separate chains, but the user flows are actually this thing that's happening on many chains at the same time. 
+
+Citizen Web3: 
+You mentioned sushi swap. And I have a question about Emery's as well. But is it just me or you are quite fascinated by sushi swap when you take a lot of ideas and not ideas as in a copying them, but I mean, are you inspired by sushi swap? Do you think it's a project that's inspired osmosis? 
+
+Sunny Aggarwal: 
+I would say with osmosis, we spent a lot of time researching all the biggest AMMs currently. And I say if I have to say something we're inspired by the most is balancer, like our the implementation of osmosis currently is basically a re-implementation of the balancer white paper. So we have like the multi asset pools and the weighted pools, even like their LBP stuff. 
+
+I think balancer is the most cosmos-esque design for AMMs, like where they believe in like, oh, many AMMs as much flexibility as possible. And then you let the market decide which pools become useful. That's why we just like that vision. And so that's why we re-implemented it in osmosis. And now we're like starting to make changes to like make new things. But that's not to say that we didn't take a lot of ideas from other things as well. We definitely took a lot of ideas from sushi around just we look at their idea of how they I mean, they started the idea of AMM liquidity mining basically, or like native liquidity mining. You should definitely check out this. 
+
+I did an epicenter episode with Kane and Hasu maybe three, four months ago, one of the best episodes. So I think that's really great on liquidity mining. Yeah, so sushi took a lot of ideas on like how they do liquidity mining, took ideas from curve, you know, curve has these like time lock based things. And so a lot of our like lock bonded liquidity positions are like based off of ideas from them, economic design ideas and like also some like token issuance ideas that came from Thor chain. So yeah, we definitely took ideas from a lot of different protocols and like applied to them. 
+
+Citizen Web3: 
+That's actually great, in my opinion. I think that shows that open source works and it doesn't mean that the project is this I had this opinion when people love open source, you mean that people go and copy. That's the whole beauty of it, right? 
+
+It's the whole beauty of like working together and creating a much better product. I mean, I remember actually our conversation last year, and it was before you left tendermint. And I remember the sushi swap drama well sushi drama, sushi swap or whatever started right after that. And I was loving every second of it. I remember like, you know, getting into it so much like, yeah,
+
+Sunny Aggarwal: 
+I love the idea of sushi, sushi and yearn. I think there are just this like idea that can douse create protocols. And I will say I'm a little bit disappointed to try to the sushi like the pitch that they made tried in is their latest v2 of sushi that they announced at ETC. And they're like, Oh, we're not just a fork anymore. And we're going to announce all these new AMM types. And I feel like every six months, we see new AMM types being created. So, you know, this year, we had uni v3 already, and you have curve v2, which is also a very new like AMM type. And I was excited like, okay, I'm excited to see what the sushi swap team will come up with what new AMM innovation. And then they like announced three new AMMs, which are balancer clone, uniswap v3 clone, and curve clone. And it's like, oh, you know, I shouldn't actually creating. So I really love to see how sushi swap is innovating on dows can douse deploy protocols. 
+
+But what I'm also very curious to watch right now is to see this idea of can douse innovate. I had a little back. So I did an epicenter episode with Vitalik maybe two weeks ago. And we had a little back and forth about this idea of so he P puts entities into like a couple categories, but one of the spectrums is about conformist versus non conformist. And we talked about our dows, or at least, you know, the current instantiation of dows, which are usually token holder, their votes and all this kind of stuff. Are they sort of naturally conformist rather than non conformist? Yeah. So I think this is an interesting thing to keep an eye on right now is can douse innovate? 
+
+Citizen Web3: 
+This is actually a great question because I mean, it's a deep rabbit hole to talk about. And I think that I want to say yes, like, I know you're not asking, but I would love to like say, yes, of course, they can innovate, but you're right. Because mostly what we see is dows thinking, okay, I'm going to like you said, announce a new AMM, but it's just a different version of the AMM that's already been done. What did Vitalik say? What was the public opinion? 
+
+Sunny Aggarwal: 
+I think Vitalik seemed to think that the current instantiation are tend to be too conformist, where if you have token holder voting, they're very short term thinking. And I kind of agree with this, right? I think token holder voting based dows, which includes many cosmos chains right now for how they govern their community pool, are not long term thinking enough. I know Vitalik actually just published a post like maybe a day or two ago about like other types of dow governance other than token voting, I have not gotten a chance to read it yet. It's on my, I have an open tab or that somewhere. I think that was this take primarily. 
+
+Citizen Web3: 
+How many tabs do you open on your computer right now? 
+
+Sunny Aggarwal: 
+Part of the reason we started late was I was like my computer was frozen a little bit because it was dealing with all the tabs. 
+
+Citizen Web3: 
+And I don't know, you need like a gigabit of rum for each tab these days, right? It's like, I actually read Vitalik's post virtually two days ago, I think. So it's interesting. I'm really hoping to see that some of these things being implemented. 
+
+But anyways, I do have a question about MRS, which people will hate me if I don't ask because I don't know when this episode is going to come out live, but it's being recorded like a day after MRS beta has come out, the first frontend for the gravity decks, so to speak. And I'm trying to be politically correct here or politically incorrect. I don't know why because I'm usually not. 
+
+So I'm not going to be. There's been some first initial comments about MRS. And a lot of the comments I have seen in chats haven't been the most positive. And people obviously comparing them to you. And of course, you guys have a different architecture. 
+
+And I understand that. And obviously, your architecture allows you to work much quicker because you have the zone, like you said, you attract everything. But what do you think personally about MRS and what do you think personally are the key differences between MRS and osmosis? 
+
+Sunny Aggarwal: 
+I think it's worth noting that MRS is not competing with osmosis because MRS is the wallet. I really like the idea of MRS. And I think it's really cool where having this larger dashboard, there's rough edges right now. But that's to be expected. There were so many rough edges on osmosis when we launched. But I do like the user flow of that. I like the UX that, like, hey, with MRS, I can actually see my balances across all Cosmos chains. 
+
+I think this has always been a problem. If you use Kepler today, like the pure Kepler, I don't like this idea that, like, oh, I have to, I mean, first obviously, I have to select my key, but then I have to select which chain I'm interacting with. And I think that's a slightly annoying user flow. 
+
+We fixed that from the osmosis front end, but even just ascend tokens. If I want to send tokens from one address to another, I open, I click my key, and then I have to be like, oh, wait, I've got switched to the right chain to do the send. I think to get this interchange UX, you want to abstract that away for the user. They shouldn't have to care that much about what chain their tokens are on because it should just be able to move easily between them. So I think that's something that the MRS team has done really well in building out that UX flow. I think the wallet interface is really good. 
+
+And I imagine it will just keep getting better and better. I'm trying to figure out how to set up the dark mode because I open it and I have a light mode on. 
+
+Citizen Web3:
+I did. I figured it out. I figured it out yesterday. Yes. 
+
+Sunny Aggarwal: 
+Oh, you did. Okay.
+
+Citizen Web3:  
+I think if I'm not mistaken, it's not open in front of me, but I think on the top right corner, there is like a little settings wheel button and you click it and there is like a toggle dark mode thing there. I think it was there. 
+
+Sunny Aggarwal: 
+Oh, I see. I got it. Cool. Yeah. Okay. This looks cool right now. 
+
+
+Citizen Web3:  
+Right?
+
+Sunny Aggarwal: 
+Yeah. Yeah. I think this is great. I'm really excited that what MRS is trying to build is this generalized interface where it's supposed to be like this cross defy thing. Currently, they only support gravity decks, but if we take them on their word for it, their goal is to be a neutral platform and maybe we'll get osmosis integrated into it. Maybe we'll get like more and more defy protocols integrated into it. Now, the question is obviously I have this belief about like application specific blockchains. To be honest, I've not thought about it before, but like, what is the UX differences going to be between generalized dashboards versus application specific front ends? 
+
+Right? Like, what are the things that we can do on osmosis front end because it's so tightly coupled with our application that maybe will be difficult to do on MRS? Maybe there's better routing that's being done. 
+
+I don't know yet. I think right now that osmosis front end is not that complicated and it's actually very easy for people to build equivalent integrations. Right? So Cosmos station has, I think just yesterday, they integrated swaps into their wallet, which is cool for osmosis. We had this cool project called Rango exchange. 
+
+Yeah. It just came out of nowhere, but they're like a cross chain aggregator and they actually built a swap for osmosis as well, which is cool. Shapeshift is currently working on integrating osmosis into their service. So osmosis is supposed to be a utility that's supposed to be plugged into other systems. 
+
+And, you know, the goal of any deck should be integrated into as many wallets as possible. This is something we're trying to figure out internally. It's like, we're trying to decide, hey, should we invest in building a mobile app for osmosis? Like, is that something that's useful? Or should we just focus on getting integrated into other people's wallets? What are we giving up by not having our special, like maybe the mobile app or the our front end, adapt to being something that's designed more for pro users, right? Maybe like, you know, other dashboards are great for basic swapping and stuff. But if you want very specialized sort of things, we can build that on our front end. 
+
+As an example, right? You know, like the way that bonding works in osmosis, that might be a heavy lift for like someone like Emmerich to implement while we know our chain roadmap. And so we can easily build our front end to match that chain roadmap. So yeah, I don't know, we'll see. I think both approaches are probably going to go forward. 
+
+Citizen Web3: 
+It's a good thing you took it this way. Would you say that osmosis is product-orientated? And if not, what is the orientation of osmosis? Do you shape it on technology? Do you shape it on the more IMMs and yield tools the better? What is your strategy? 
+
+Sunny Aggarwal: 
+I would say we have a parallel approach where I said we're very product-oriented and technology-oriented. So for anyone who's not aware, osmosis actually basically started as a joint project between my validator company Sica and Chainapsus, which is the company that made Kepler. So that's Dogemos and Tony, they're the co-founders of that. 
+
+And we basically merged teams at this point. And I think what's really cool is that Dave, who's one of the co-founders, he's like very, very deep on tech technology. like He was doing research with Alessandro Ciesa on snark research. So he understands very low-level stuff. And I think me and Dave really like to wrap on mechanism design. 
+
+You can put me in front of a whiteboard. I'll be all day designing new AMM types and things like that. Which I think is really cool for how to be pushing ahead on the innovation. But I think what's really awesome about Dogemos is that he has super product orientation. 
+
+This is why everyone raves about Kepler. And I think he has a really good eye or intuition maybe for about how to design products that users really like to use. So I'm the CEO, but then Dave leads everything that's on the chain side of things. So all the back-end engineering, while Dogemos leads everything that's on the front-end side, which is everything that the user sees. So that includes the front-end, that includes onboarding and user support and all this kind of stuff. So I think having different personality types as co-founders who can focus on different things allows you to have approach it from both angles. 
+
+Anna: 
+Good answer. And who attacks the final product more than others? 
+
+Sunny Aggarwal: 
+It looks a little bit of a back-and-forth where we have a meeting every single day where we talk about road map stuff and planning and strategizing stuff. I think the product side does usually take priority where we have these very interesting innovative technical stuff that we're working on, like our threshold encryption and stuff. 
+
+But that's like sort of these longer-term things. But I will say that when it comes push to shove, it's like, okay, well, we need this product thing next week because of some user experience stuff versus like, hey, here's this threshold encryption feature that we wanted eventually. The product side will usually get priority. So as an example, I think right now we are spending some time prioritizing getting this Ethereum UX integration really good because we know that the gravity bridge is coming very soon. And so we want to make sure that as soon as gravity bridge is ready, we have that user flow just like really well nailed down. So I would say number one is like making sure like the product and customers are happy. 
+
+Citizen Web3: 
+It's good in my opinion and direction. And you can see that I mean, I love the way Dolmos does small front-end things with this little, you know, who does the drawings? Is it him? 
+
+Sunny Aggarwal: 
+No, so that's actually his name is Kevin. He contracted with us back at Tendermint. And he was actually the first person we hired back at Sica when Dave and I started it. 
+
+We were like, oh, shouldn't we like hire an engineer or something? And then whatever I advise, like, no, no, no, trust me, like just hire Kevin, he'll be amazing. He'll come in handy at some point. And he's just been amazing. I think the illustrations and design of Osmosis has just been a very important part of its like brand identity. 
+
+Citizen Web3: 
+I don't know if you ever heard there is a party games and there's a party game called pick your poison. This is like one of those weird old party games. And actually, as we speak, because the height of my camera wasn't high enough, I have the pick your poison box. And the thing is, unfortunately, I can't show it. But whoever has seen it, there are the drawings on the box are just exactly not just realized as we spoke, they're literally exactly from the same kind of like that guy that pour in the colds and everything else. 
+
+Anna: 
+And let's talk a little bit about design of Osmosis because I know a lot of people who tell me that the design is really amazing is so cool. So how much time you spend to build to the product from scratch 
+
+Sunny Aggarwal: 
+on the design side or just the overall product side? 
+
+Anna: 
+Let's speak in general, and then maybe about design specifically. 
+
+Sunny Aggarwal: 
+Yeah, sure. So the project actually started depending on what form you say the project, right? Like, maybe the project was Cosmos, maybe this is this part of Cosmos, so it started five years ago. 
+
+But as a more specifically last summer, Dave and I were like, okay, defy on Cosmos and like just what's missing? What is the problem that we can solve that's not already being solved? And so, you know, what were the biggest problems in blockchain when we started Cosmos? 
+
+We were like, all right, proof of stake. All right, well, we solve that. Okay, scalability, you know, that's in progress. 
+
+A lot of people are making good work on that privacy, you know, privacy is something that people are missing right now. And like, I don't think there's any good solutions for. And so, we kind of like, okay, let's focus in on that. We started designing like shielded pools and the Cosmos, okay, and all this stuff. 
+
+But from talking to people, I think what people or we realized people wanted the most is front running resistance. And we're like, oh, I think we can figure out how to do that. And we created like a mechanism for mempool privacy, where like transactions in the mempool are encrypted. 
+
+And then only once they're on chain, committed, then they're decrypted and executed. Dave and I spent like basically all a fall designing this like mechanism to do this. Then in parallel, the Chain Opses team, so Tony, one of the co founders of Chain Opses, he built a prototype MVP of Osmosis as a hackathon project in November of 2020. 
+
+So at one of the hack atoms. And so after that, they kind of like reached out to us in December, they're like, hey, do you want to help us build this? And this is actually really great for us because, you know, this whole threshold encryption, mempool privacy stuff that Dave and I were building, there's a feature without a product. And so we're like, okay, well, yeah, this is great, because we can combine these efforts with Osmosis to be like, well, okay, this is how we bring it to market. 
+
+That's sort of when the project's combined. We started working in January, really, we had this deadline of we wanted to do that airdrop. And so we kind of had to announce the airdrop, and we needed a lot of our branding. And we wanted to do the airdrop on like some special day, you know, we don't want to just take a random day and like be like, all right, here's the airdrop, you know, I always think that everything has to have like meaning. We said, okay, let's do the snapshot on the upgrade. 
+
+So like when we go from Cosmos Hub three to Cosmos Hub four, like that's when like IBC is enabled, and here's like this, like what we've been working for, let's reward everyone who's had atoms prior to that IBC being enabled. And so we took the snapshot that day, that was I think February 18. And so we had to have a lot of the design and branding stuff at least figured out by then. 
+
+So I think a lot of January we actually spent like with Kevin iterating over multiple designs and like coming up with like what the visuals we wanted. I mean, even the name, I think those most came up with the name Osmosis and you know, we were like, okay, should that be the name that we're going to use? I think it's an amazing name because it has cosmos, osmosis, and just the atoms and chemistry. 
+
+I think it fits the theme really well. We've spent a lot of time and then got that going. That's the design process. We went through a couple of iterations on what we wanted the design language to go around. That was around the same time. 
+
+This January, February was when the whole Wall Street bets, like, GameStop stuff was happening. That's the scientist guy. He has the Wall Street bets guy hair and everything. I think all those kind of things contributed to it. Going back, we basically spent the next four or five months building out the product, especially on the chain side of things. Tony is just the most badass engineer ever because he basically built that entire front end in one month, almost single-handedly. And so
+
+He's just amazing at this kind of stuff. Then we were able to launch in June, which is actually a pretty fast turnaround for a project, I think. Starting a project in January and launching in June, basically like a six months, maybe it's not that fast for an Ethereum project. 
+
+I've seen Ethereum projects start and launch in a month or two, but especially for launching a sovereign chain. 
+
+Citizen Web3:
+Sushi slope. ha ha ha Sushi slope
+
+Sunny Aggarwal: 
+Yeah, exactly. Yeah, exactly One of my close friends, he was one of the people behind YAM protocol. That was literally a week of work and they launched it. It's a 6 billion dollar thing. It's a pretty fast turnaround for launching a new chain. 
+
+Citizen Web3: 
+I have a bit of a, not controversial, but a little bit. We spoke 10 or 15 minutes ago about DAO's being able to implement things and about how you spoke with Vitalik about how the voting and everything and where does the DAO come in, doesn't come in. So long story short, I mean, I can see that you're so excited about this. I mean, I remember our last conversation and you were excited about technology in general, but now I can see how your eyes are literally lit when you're talking about Osmosis. and It's really cool. But question is at which point does a DAO come in and take over the roadmap, take over the design, take over everything? When does it happen? 
+
+Sunny Aggarwal: 
+Yeah, I think it happens eventually. Even now, I think it's this like dialectic process with the core development team and the DAO. I think there's some change will be like, oh, there's no such thing as a core development team and everything is coordinated by the DAO. And I think that's actually sort of what like, things like SushiSwap started with. 
+
+And I think even they realized over time that, hey, we need to have like a core development team. So, you know, when Joseph DeLong, I've known him from before. And when he was like, oh, when I saw like, oh, he's the CTO of SushiSwap, he like changed his like Twitter headline to that. I'm like, oh, wait, what? SushiSwap has a CTO? 
+
+Like that's like, I thought it was this DAO. But it's like, no, okay, even SushiSwap realized that like, okay, we have to start like building a little bit more of a coordinated team. I will say this, I believe in this idea of like cultural evolution. I believe in evolution as a concept. Another way of saying is I believe in Lindy, right? 
+
+Like I believe in the Lindy effect where things that last long probably have properties to them that make them very well suited towards survival. And the current corporate form has existed and been successful for the last like 300 years. And the Delaware C Corporation, it's just this like piece of coordination technology that's been sort of iterated on really well. And so I think that obviously I want to move more towards DAO systems, but we do have to respect the sort of efficiency of existing coordination mechanisms such as corporations. 
+
+And so I think the way of doing this, of like innovating new products is to take this like sort of on osmosis, we actually did like instantiate the idea of a development team, right? Like there is an allocation to a development team, but we're sort of contracted by the DAO, right? Where we made the ability where the DAO can basically fire us whenever they want, right? 
+
+They can make a governance proposal saying cut off the development team funding or they can point it to a new development team if they want to. And so I think that's sort of like at the end of the day, the DAO still has that decision making. And that makes it so that we still have to take into account the DAO's preferences. I think, and we can't just push anything through, we still have to get the DAO's permission to do features. I think we engage with them as a feedback process of like, okay, what do you think we should be prioritizing? 
+
+And we try to engage as actively as we can with the community there. Yeah, in general, I think that's why you need like parallel systems, basically. I think that's the process to go down. That's why, like, you know, if you see that we have this, like, there's the community pool, which is a 5% of all tokens are like going to be in that community pool and probably more once the claim airdrop period ends. So all the unclaimed tokens are going to be reclaimed back into the community pool. You know, there's a big pool of funds there that people can spend from. But there's also this thing called the strategic reserve, which is a separate 5% of tokens. That sort of is at the discretion of the team of the foundation and the development team to sort of decide how to spend that. 
+
+And it's been mostly been used so far to like give grants, like we've been, you know, we gave a grant to map of zones to like improve their stuff. Once again, just because like I said, unclear if DAO's can do long-term thinking. I think we're going to see a great test of this right now where I think there should be a proposal coming up hopefully today on shapeshift, where like shapeshift basically wants to integrate it. So I don't know if you've been following shapeshift is going through this very interesting process where they're power-finding their entire company, which is really interesting to watch. 
+
+And I'm very curious to see how that goes. I think how they work now is like, oh, every time someone wants to do something on shapeshift, they make a Fox Bounty proposal and then employees will kind of go start working on those and claim the Fox bounties. And so they put up a hundred thirty thousand dollars worth of Fox tokens as a bounty to whoever implements Osmosis, integrates Osmosis into their product. And so we have a tool called Commonwealth, which is like a place to it's a forum where you know, gov.osmosis .zone. It's a place where people can sort of iterate on proposals. So one of the proposals there is actually to match the shapeshift proposal. So so the shapeshift I was putting up a hundred thirty thousand dollars worth of Fox tokens as a bounty. We're proposing that the community pool also sort of puts up a hundred thirty thousand dollars worth of Osmo tokens to add on to that bounty. And so I think this will be an interesting test to see will the Osmosis community pool be able to engage in this sort of more long term thinking. 
+
+And by the way, you know, I know we've already talked a lot about like, you know, that proposal where the cyber team like made a proposal on. 
+
+Citizen Web3: 
+I wasn't going to. 
+
+Sunny Aggarwal: 
+I take full responsibility for that. I think that was one of the biggest mistakes I've made in governance so far. 
+
+Citizen Web3: 
+Well, I don't know if you know neither me or Anna have anything to do with the cyber congress team officially, although the podcast is sponsored partially by the cyber congress team and we still validate the citizen cosmos, the chain and obviously work with them as much as I work with cosmos. In terms of like trying to build the ecosystem. Well, both of us me and Anna do, but I think that this like you say long term thinking sometimes it might not be seen from the very beginning. 
+
+And I think that the sustainability for dows in long term. This is one mistake. This one big mistake I did in my opinion. And I was going to write huge, huge post like a year and a half ago when it happened on how I think sustainability in dows should develop. And I didn't. I think that the cyber team does want to come back and try and do it.
+
+Sunny Aggarwal:
+I will support it this time. It's been on my to do list actually to write a sort of a retrospective on that governance proposal because I think that was probably the most important governance proposal in the history of cosmos. And I think I voted the wrong way on that. 
+
+Citizen Web3: 
+I don't think there's a right or wrong way, but in my opinion, I agree with you. Not just because I was part of this proposal. Well, partially, of course, I'm biased, but I do think that we guessed the direction because we came with this proposal before the whole thing started in the whole blockchain ecosystem everywhere. We were like a month or two months before and everybody was like, no, you don't do those things. And then everybody was like, yes, you do. That is what you do. 
+
+Sunny Aggarwal: 
+Yeah, sometimes it's just some of those things that are just so ahead of their time, you know, like I've just encountered so many of them at this point where it's like, I think that was just another example of one. 
+
+What am I friend? She like came up with the idea of yield farming two years before like it was a thing. She like had this idea of like, I'm going to make a game. It was like called cow something and it was going to be like similar to farmville. You're going to go like a crew, your crops and stuff and going to go milk cows or something. 
+
+But it's in the back end, it's going to be like getting yield from like different protocols on chain. And I'm like, that's so stupid. Why would anyone want to use that? Like, why are you making this farmville style game on top of it? And then like two years later, it's like yield farming is how we just talk about all of the crypto is in this terms of like farming metaphor. And it's like, wow, okay, she was just ahead of her time on that. 
+
+Citizen Web3: 
+That is true. There is a lot of all these tools that people think about and sometimes you look at it and you think, what on earth is that? And then you're like, oh my God, that's really catching up. But I'm going to hate myself. I'm not going to ask you that. And I don't know if you've been asked this before or are you avoiding this specifically? And if you are feel free to avoid it, of course, I am. Let's talk about I am and what is the purpose of hope of pronouncing correctly. 
+
+And first, if you don't mind, I will try and kind of give my opinion. My guess was Yefi. Why? Sorry. If I talk in and I was thinking that this is what you're trying to play it. Am I right? Or am I completely off the bucket here?
+
+Sunny Aggarwal:
+I don't know. 
+
+Citizen Web3: 
+I was hoping you were going to say that. 
+
+Sunny Aggarwal: 
+I'll tell you what Ion is. I'll tell you the story behind it and then we can figure out what it is. Ion was this idea that I just like the name Ion. I thought it was cool. I thought it's like, oh, it'll be like atoms and Ion. And so I wanted the smallest denomination of Osmo to be called Ion. 
+
+So similar to how you have way and sats. And then Josh Dogemos was like, no, please don't do that. It'll make the life of wallets harder. Just stick to the standard within Cosmos, which is like you Osmo or you Adams and that kind of thing. So I'm like, okay, fine. But I was sad. 
+
+I still wanted to use the name Ion. But so that, you know, test nets came around and, you know, when we were like making our test net, it's an AMM. We need at least two tokens in order to make a test net on, you know, we're testing our AMM. So on the test net, I would make you Osmo and then I would create a second token called Ion. It's just as a testing mechanism for the thing. 
+
+And then two days before launch, like before the Genesis file went out, it was a crazy week that launch week. And so I was like, I need to just do something else for a little bit. And I guess what I did was do more coding. But I was like, wouldn't it be funny if I just added this Ion token that's in all of our testing people who were like somewhere early like integration partners. They were like, oh, what is this Ion thing? I was like, oh, it's just something for the test net to like, you know, test the AMM. But like, oh, okay, cool. 
+
+And then I was like, Hey, wouldn't it be funny if I just added this to the Genesis file, the main net Genesis file as well without telling anyone what it is? Or why they have it or anything? And it had no purpose. Like it just didn't have any reason to exist. But I was like, let's just do it. 
+
+It'll be funny. And then we came up with a distribution. I basically pulled an all nighter like build, like getting that token distribution. 
+
+I can share it now because basically the community has already reversed engineered it. So basically how it worked is you got one Ion for every governance proposal that you voted on on the Cosmos Hub. And then you got one Ion for every upgrade during which you were delegated to SICA. 
+
+So it's a little maybe a little bit biased towards SICA delegators. But in all fairness, our team never raised money. We never had to get VC funding or anything like that. And it's because we were basically funded by SICA validator commission. And so if SICA helped fund Osmosis being created, it was sort of like a little thank you to all the SICA delegators of being like, Hey, thank you guys for like supporting us and getting to this point. 
+
+Here's a little thank you gift. So that's why the distribution went primarily. Yeah, it's a combination of governance and to SICA delegators. And then we lost the token. Don't know what it's for. 
+
+Most people didn't know why it existed. And what's really cool then is I mentioned this Commonwealth tool earlier, which is like our governance forums for Osmosis. I'm actually an investor in, you know, it's one of my friends project. It's funny. I'm friends with them because two years ago I forked their blockchain once. 
+
+That's what like straight edge was. But anyway, so now they're working on this thing called Commonwealth and they had this whole thesis called like token curated communities. I was intrigued. That's why I invested in them. I don't know if I really bought into it fully because I was like, Oh, how can you just form a community around a token to token each has some purpose first. 
+
+But no, no, no, no, we think that this will work. And then it's like, I accidentally created one where like with this ion thing, this is whole community that like sprouted around it. That telegram group is like one of the most active telegram groups I've ever seen. They have like community calls on a weekly basis. They've been writing governance proposals. And basically what they're trying to do right now is they're trying to figure out the use case for IONs. They're like built, they're designing protocols. I think they have the design. 
+
+So I haven't personally been too active and closely watching it. But from what I understand, they have like they're working on governance proposals on how to turn this into like a stable coin mechanism, like something more like maker. I really love synthetic platforms. And I think like synths are this thing that need, I think you evolve into that because I think stable coins, it's a special type of synthetic. It's a USD synthetic. 
+
+But you know, once you get that down, you can start to build any type of synthetic. We'll see what it ends up being. But I think what's really cool is it just seems to be this like, if I have to answer what it is right now, it's a token curated community. 
+
+Citizen Web3: 
+Of course, the governance thing has been like a diverse engineered, but it's interesting that a lot of obviously the most ions were voted to validate addresses. But there is a small controversy here. Maybe just I'm overthinking it, but maybe I'm missing something out. But for example, like how a validator address obviously got more tokens than my personal address, right? Because we vote more of the validator. But to claim them, I would need to reveal to import my private key or the validator into something like, and I'm not going to do it. Of course, I'm not going to take the validator private key and import it anywhere. But you see where, I'm going with it. 
+
+And I don't know if many people thought, I don't know. I don't know how the other validators did it or if they did it or if they had to change the keys because of that. But it is an interesting thing that if most of the tokens went to the validators and in order to claim them because the claim has a short period and then has decay time or whatever, you had to import the private key and you obviously not going to do it for security reasons. That means that the ion supply is actually going to be smaller. 
+
+Sunny Aggarwal: 
+So what do you mean by import the private key? 
+
+Citizen Web3: 
+Let's see if I can try to reverse this thing in my head. Maybe I'm missing something out here. So let's imagine there is a validator X exists and this validator X gets, let's say, 10 ions dropped onto him or air drop onto him. Now, in order for him to claim that, he needs to use Kepler and Osmosis. But in order to do that, he needs to import his private key into Kepler to the claim, but no single validator in their right mind is going to do that. 
+
+Sunny Aggarwal: 
+Okay, so yeah, a couple of things. One, you can interact with Osmosis from, first of all, I don't know why you show your validator key. You don't have to share that. But if it's on a ledger or something like that. So keep in mind, this is the operator key, right? It's not your consensus key. 
+
+And so you operate a key. I don't know if it's on a ledger or something. You can use ledger with Osmosis right now, right? 
+
+Kepler uses a ledger and you can use it with CLI if you wanted to as well. The other piece is technically right now, ion does not have a claim period. So Osmo has the claim period, but ion does not yet. It's actually a very controversial proposal right now within the ion community of should we copy the claim period of Osmo for ions? Where like Osmo was very clear that if you don't claim within six months, they're gone. Now the question is, do we do that for ions as well? 
+
+And so part of it was Osmo has this well designed token model of how to incentivize long term development and has inflation and all this stuff. Ions does not. Ion was, like I said, it existed as a token in the Genesis file. There's like no code around ions. There's no inflation. 
+
+It was a sunny hackathon one night, all nighter project. And so it basically has this fixed supply of 21,293, I think, and nothing can be minted. And I think the fixed supply is what attracted people to it. They're like, oh, look, here's this like super fixed supply token. 
+
+And that's part of what got the meme going a little bit. So I don't think people want to inflate tokens. If you want to build the stable coin thing, right? 
+
+We need a fund development of this. I don't think people want to inflate the token. So I think the other option then is to what's being thrown around is to reclaim any unclaimed ions. Now, what does it mean to unclaimed, right? Like Osmo has this claim process and it's actually built in already to reclaim those tokens into the community pool. You know, we'd have to make a governance proposal saying like, hey, maybe any Genesis account with ions that has never made a transaction on osmosis for six months, then we'll go ahead and reclaim all those ions into a community pool, but like an ion community pool that's governed by the current ion holders rather than the osmo holders. It's a very controversial thing because I think some people are very much like, oh, this is like an irregular state transition and you're taking coins out of someone's account. 
+
+And it's like, I don't know. I don't buy that to be honest. I think that like if I had time and I had thought of it, I would have probably just went ahead and like implemented that as well. But there's just such a last minute thing that I didn't. 
+
+Going back, I should have done that. And I'm in support of reclaiming any unused ions. Like it's better than just letting them sit there never being claimed. I mean, if they never get claimed, it acts like a burn basically, but like unknown. I think reclaiming them to fund development, I think is a great idea. 
+
+Citizen Web3: 
+I think this is what I missed. I missed when I did it. I didn't have a claim period. And I actually thought that this was done on purpose for validators who have difficult distributed setups where like some people are spread around the world or whatever, but they're ledgers or whether they're newbie keys or whatever. And they have to think, shit, how am I going to claim that? How am I going to claim that? That's an end period. You know, okay, it's not that, but I missed it. 
+
+Okay, one question before we're probably going to start to wrap it up that I have for you because you spoke so much about IMS is in your opinion, this is kind of a vague question, but you can choose to concentrate on whatever you want on that. What are the yield tools of the future? 
+
+Sunny Aggarwal: 
+The yield tools of the future. 
+
+Citizen Web3: 
+I'm meant to yield tools in your opinion. When you go with the market, like you said, you know, you go into the drawing board and Josh and Tony start talking about the product and about the front end and you just draw in the like, okay, I'm going to put that into the laboratory. What does your mind take you with it? 
+
+Sunny Aggarwal: 
+Sure. So on the DeFi side, I would say one of the things we're thinking about is how to make things more continuous. I think a lot of what DeFi is doing, maybe just finance in general, is taking these discrete tools that we have, these discrete financial instruments and making them this more continuous thing. 
+
+So as an example, this is not even DeFi. This is just like perps, right? Perpetual future perps, which is like the biggest product that's traded on like all centralized exchanges right now. They basically took the idea of futures, which were these like discrete things that have like expiry dates, and they basically invented a way of making them this like continuous thing where they're like, okay, normally you have to take these futures and if you want a long term position, you have to like keep rolling over futures and everything. 
+
+And it's like, okay, well, how do you make these more a single asset that you don't have to keep rolling over every single time? And so I think that was really cool. And I think that a lot of DeFi is moving towards that direction. So one of my best friends, his Zubin, he works on a project called Open. It's like the largest options protocol on Ethereum. And so they've been doing a lot of work with the paradigm team on understanding something called everlasting options, which is basically the similar thing that you have in futures where you have to keep rolling them over and perpetual sort of solve that. They're trying to do that with options right now, whereas like options still have this expiry date. How can you make it so we can automatically roll that? Like, can we create a new type of financial instrument that acts like an option, but in a perpetual way? 
+
+I think that's really fascinating. In general, like I think part of the reason why I make these things continuous is if you do believe that AMMs are like the future, AMMs usually need some way of, you know, the more liquidity that you with an option, right? If you have different options, different expiry dates, they technically all need different AMMs because like they're not the same asset. 
+
+They should all be priced differently. You're splitting up your liquidity. But meanwhile, if you have like a single asset type, then it's like, okay, you can put more liquidity in one AMM. And so you want to having this more like singular asset is valuable for the liquidity side there. 
+
+Yeah. So how do we make financial assets more continuous? One of the things I've been thinking about recently is on income to like funding rates. Currently, most like exchanges will do a funding rate once every eight hours or something. 
+
+So I don't know if I'm going too much into perpetuals. I don't know if people know how funding rates work and stuff, but basically it's like, you know, it's a time where like people who are long an asset pay the people who are short or the other way around the short to pay the longs. And this happens once every eight hours. But when you start to design this in like a DeFi world, there's like odd things that happen to the price right around the funding rate time, like the price of an asset at funding rate minus epsilon time. And the funding rate at epsilon time, it has this like weird disjoint nature to it. And the problem with AMMs is like, once you have things that have disjoint spots, AMMs act weirdly. 
+
+That's where you get suffer the highest IL and stuff. And when prices jump randomly and do permanent jumps. So what if you can have a more continuous funding rate that happens on a per block basis? 
+
+Well, how would things start to change there? I don't know if this is a good idea. I'm just saying that these are the kind of things that we're thinking about right now. And then on the AMM side, I really like the stuff that uni v3 is doing with the active liquidity. 
+
+But I think that we're just a little bit not as developed and mature yet. And I think that for the stage that we are at right now, we just want to bring in as much passive liquidity as possible. The idea of concentrating liquidity is really cool. And so what's funny is we were actually working on a design for doing passive concentrated liquidity. 
+
+And then curve v2 came out and I'm like, ah, cool. You guys are thinking along similar lines as us. It's not exactly the same, but like, you know, the same general ideas. And so I think it was good because it gives us a sense that we're not going off in like the wrong direction completely. 
+
+Not just sort of some the general roadmap of things. Oh, sorry, one more thing, bonding curves. I love bonding curves. I think like AMMs are cool, but bonding curves are really cool. I think compound is acting probably, I can't say it's underrated, but I think people under, you know, don't appreciate its mechanism design enough where it's like what it did was it combined the minting and burning. So one of the problems that open has been facing for a while as well. But I think open shapes a lot of my stuff because I just talked to Suvin so much. 
+
+They have a protocol for minting options and then they've been spending a long time designing an AMM to trade those options. These is that we have of can you combine those two things into one process and does that make not thesis a hypothesis that we have of can we combine those things into one process? And make things easier somehow. So a bonding curve is a way of basically combining the minting of a financial instrument with the marketplace for the financial instrument because the pricing happens on the bonding curve itself. That's what we're trying to think of like, OK, is there a way of options that you mint and burn them on a bonding curve and that sets the pricing so you don't have to create an external AMM, which is kind of what compound did where they didn't say like, hey, let's mint these bonds and then sell these bonds on an AMM. They're like, hey, let's sell bonds on a bonding curve. And I think that's really cool. So that's sort of another direction we're thinking about. 
+
+Citizen Web3: 
+It's actually, this was a great five minute in my opinion because well, now I kind of feel guilty for not going that way a little bit more. 
+
+But you just gave me an idea to change the traditional question that we had in season one a little bit. And I'm going to ask you that and maybe that will help me personally and I hope everybody was listening to it to get more into that. So instead of asking you what are the projects that currently fascinate you, you currently just named like so many interesting things about economics, but funding rates, passive and concentrated liquidity, bonding curves, options. What are the resources that fascinate you in this field and what would you recommend to somebody out there? 
+
+Doesn't matter what level they are on currently to go and really look and read, maybe books, maybe specific author, maybe something like that in the direction that you're just talking about. 
+
+Sunny Aggarwal: 
+Hmm That's a good question. And to be honest, I'm not sure I have the right answer right now. I'll say that like usually the best thing to do is white paper circles. There's not be white papers. I think the resource is actually less important than the idea of reading it and discussing it with a group. I think you can sit and read everything you can internally, but unless you have people to talk about it with, I think that's how you make sure you actually understand. Really, the best way to know if you understand something is to try to explain it to someone else. When you try to explain it, then you're like, oh wait, actually, this is real. I don't think I understand how this works properly. 
+
+And so once you're at the point where you can explain it to someone else and they get it, then I think that's the right place to be. So yeah, I mean, I would say honestly, no one writes white papers anymore. Osmosis doesn't even have a white paper. So I guess blog posts really are going to be like what you look at nowadays. And there's like some amazing blog posts out there, right? And Vitalik has some great ones. The Paradigm blog is really great. 
+
+Tarun has these complicated to read papers, but they're pretty good. And we started doing this internally with our team as well. Like once a week, we'll have a white paper circle where everyone will like read a paper and we'll all discuss it. 
+
+So we just did one on compound actually recently. And so yeah, I think it's just the discussion part and like being able to ask questions and be like, hey, okay, you know, I read this paper and this part just doesn't make sense. Like I or like, not that it doesn't make sense, but I just don't understand where this came from. Like why is it done like this? And I think just being able to talk it through with other people, usually that helps you figure out these implicit assumptions that the author made without stating them explicitly. 
+
+Citizen Web3: 
+I would love to hear those discussions that you guys have inside, you know, going out on YouTube, like a dev diary or something like that, you know, like reading the paper and then discussing it. That would be amazing. Sunny, it's been a huge pleasure once again, and I'm really excited where you guys take in this. And I'm really excited to see how you're going to come up with the gravity and combine osmosis together with the gravity decks. Thanks very much for joining us. 
+
+Sunny Aggarwal: 
+Thank you so much for having me again. It's really fun. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

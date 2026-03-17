@@ -17,6 +17,12 @@ export interface L1ContractAddresses {
   governanceProposerAddress: string;
   governanceAddress: string;
   gseAddress: string;
+  feeAssetHandlerAddress?: string;
+  slashFactoryAddress?: string;
+  stakingAssetHandlerAddress?: string;
+  zkPassportVerifierAddress?: string;
+  dateGatedRelayerAddress?: string;
+  stakingRegistryAddress: string;
 }
 
 const getL1ContractAddresses = async (chainName: string): Promise<L1ContractAddresses | null> => {

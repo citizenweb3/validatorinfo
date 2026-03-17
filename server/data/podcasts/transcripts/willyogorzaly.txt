@@ -1,0 +1,454 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/willyogorzaly
+
+Episode name:
+The Best Day Ever, Dank Meme's and Airdrops with Willy Ogorzaly
+
+Citizen Web3 
+welcome everyone to a new episode of the citizen cosmos podcasstas i forget what i'm doing where i am but we are here the citizen cosmos podcast really high welcome to the show again welcome back to the show shall i say
+
+willy 
+GM search, happy to be back. Thanks for inviting me.
+
+Citizen Web3 
+yea so just for the listeners out there we have really with us from shape shift well i don't know if i should introduce it like that any more shall i shall i still say shape shift or shall i now use the name of the upcoming chain or what shall i do man how shall i introduce you
+
+willy 
+It's a good question. Well, I'm just a member. I'm a community member of shapeshift. I'm a community member of Arcio. Technically, I'm the head of decentralization for the Fox Foundation. But a lot of people aren't familiar with the Fox Foundation. So shapeshift is probably the most recognized brand. And Arcio is the new one that I'm excited to chat about a little bit today too.
+
+Citizen Web3 
+so
+
+a man well first thing is first before the recording you already told me best they ever shall we you know what you know what let's let's let's let's let's let's go step back way i'm unfair i'm being unfair because i think i'm being unfair to all the listeners because well the last time we recorded with you is been like over here right and i didn't do you you introduction my opinion so i'm going to ask you to introduce yourself to say anything you want about yourself not just maybe a lit more than a community member because i know
+
+willy 
+Hehehe
+
+Citizen Web3 
+are a lot shy people that's great the shy people are the best i do all the work so i've got to let you introduce yourself really i apologize for this shifty introduction i'm sorry go on please
+
+willy
+Yeah.
+
+willy 
+No, I appreciate it search I Like it would you introduce me better it's better. But yeah, I'll do my best My name is Willie. I am having the best day ever like surge mentioned I hope you're all having the best day ever too. I've been in crypto for about five years now so I joined Back in 2017 happened to get my first taste of crypto. Ethereum was the first token I bought and
+
+Citizen Web3 
+uh
+
+willy 
+pretty quickly became obsessed. At the end of 2017, I had just sold my first startup. And over the course of the year I've become very obsessed with crypto. Started going to the meetups and drinking from the fire hose, learning everything I could. And so that same month that we sold my first startup, which was just legal, I started a tool called Bitfract with some friends. And Bitfract was the first tool where you could trade Bitcoin for multiple digital assets at once in a single transaction. And it was built on top of ShapeShift. So...
+
+It was pretty exciting going from my first startup journey, which was like a five year uphill battle. And even though we sold, it wasn't a huge win for the team. We paid back the investors and it was a very small win for the team. And then going to Bitfract, which was a six month journey from having the idea to getting acquired. And it was like instant product market fit. People loved Bitfract. It was a free tool. It was generating revenues on day one though, because ShapeJif had an affiliate revenue program. And it was an awesome journey, especially working with friends. We didn't raise any money. It was a much bigger win for the team.
+
+And that's what got me involved with ShapeShift. So I joined ShapeShift June 2018. I was a product manager there for three years until we decentralized and launched the DAO, which was another best day ever. And that kicked off the six month transition of kind of winding down ShapeShift's operations and transitioning a lot of that over to the DAO. And then in January, after ShapeShift had pretty much terminated all of its remaining employees, including myself, helped start the Fox Foundation.
+
+which is a not-for-profit organization dedicated to supporting ShapeShift DAO and achieving full decentralization. So it's a separate entity, has no control over the DAO, but we're there to support the DAO, and we're also responsible for maintaining a lot of the legacy centralized infrastructure, which kind of brings us over to Arcio, which is now this new project. So a big part of kind of the remaining bits of ShapeShift's centralized infrastructure is the node bit. And it's run by different community members, so I wouldn't say it's fully centralized right now.
+
+we want to further decentralize it. And that's what Arceo is, is a network. It's a Cosmos L1 app chain designed to incentivize node operators to run this node infrastructure and to provide blockchain data to users and to broadcast their transactions so that end users don't have to run their own node and dApps don't have to rely on centralized infrastructure or run their own nodes. It's making it easy for anyone to just plug into this decentralized node network. So yeah, it's, last thing I'll say about Arceo is that it's taking
+
+willy 
+the node infrastructure that ShapeShift has been developing for almost a decade now, basically, because ShapeShift was first started in 2014. It's an open source library called Unchained, and Archaeo basically is incentivizing the node operators to run this unchained software. So, the network itself is new. It's been under development for over a year now between ShapeShift DAO and Coinbase Cloud. Really awesome partnership there.
+
+And, but it's building on top of years and it's taking this existing open source technology that currently powers shape shifts node infrastructure. And then just decentralizing that and incentivizing a distributed network to run that software.
+
+Citizen Web3 
+i'm going to kill i'm i'm seriously the person who is going to invent an you and mute button i will personally send them a million dollars because like really man i mean i mean i thort of call to action i'm sorry i'm sorry really but like happens all the time the guest does you know huge talk and i'm having my notes down and i'm like so excited and then i'm like i'm on mute and i've been on mute for about ten seconds so first of all for all the guests that that just here in really for the first time an maybe not for the first time i want to say something you know guys this is like our ninetieth part
+
+cast with guests but we have recorded thousands of hours because we listen to record podcast we have streams and we have other things and so on and so forth and last time when we had the podcast with willy really really made this deep impression on me like i'm really serious like this sentence of i'm having the best they ever i think like a person that says that this is like i know you are right in front of me and i'm talking about your third person not very nice i get it but like it really did impress me and i think like when you talk to people
+
+that you understand that there industry builders as a person can and i'm not right now giving you compliments that really did impress me so much that i went out there talking to people about it i was like for for for for still until today sometimes at a conference i like talking to somebody and i'm like you know really you know what told me he told me he's havin the best were for seven years and he's been saying it every day so yeah guys just saying you know like you know there are different people out there but the reason i'm talking about it i think right
+
+tly and this is the question i'm goin at the first question i'm going to ask you so recently i saw on twitter i think it was two days ago it was the second or the third time i saw paul that says oh crypto is like bla bla bla how do you between the founders out of all the projects there's so many cums out there how do you deferinshit how do you filter my answer before you give yours i'm going to say straight where it's going to be easy it's the values the values of the people that built and this is the first question
+
+i know it hasn't got a lot to do with what you said yet but i will connect at all i promise as usual so my first question to you is out of all this like crazy market out there right now so many builders how do we filter between all those builders between the people that are well good what is good okay and bad but let's just try and keep in those black and white stigmas for a second
+
+willy 
+think you kind of nailed it with the values. I would agree with that. I think it's its mission, vision, values. But to your point, there's so much noise in the space, like how do you actually connect and communicate that to just your audience members to somebody on crypto Twitter, who is getting flooded with a newsfeed of all this new stuff getting built. And so I would say, ultimately, it boils down to the memes, you got to have dank memes. And when I say memes, I don't just mean like the images with the text that make people laugh, but like that higher level.
+
+It's like, it's that mission, the value, the vision. And then how do you translate that into digestible tidbits, these messages, these powerful memes that will resonate with your target audience, with your community? And especially for DAOs, I think it's like, that is one of the key pieces to nail. And it's really hard, it's much easier said than done. I think at ShapeShift, we do so much, we still need to figure out, like what is our really dank meme? What is that message that resonates with people? But like some good examples, I think Gitcoin.
+
+funding open source public goods, right? And give it to like the ultimate donation platform or rewarding those who give. Those are really clear memes. And what that enables is people all around the world to like share that vision, those values, that mission can hear that meme and then recognize like, oh, this is the community that I should be a part of. This is the community that aligns with my values and mission. So first step to building a aligned community. Thank you.
+
+is to have some dank ass memes.
+
+Citizen Web3 
+i love that little i'll do the same to me my cat come on pass me a bale of are now i'm joking i skin so whoever passed your ball of ore that was amazing sorry the coup of my no this is a great thing you say because there is sometimes so many like what seemed to be i'm really like scared to use those words i'm going to be using right now because they're very stigmatic but i want to to ask the question i have to use them to make the point and like you know
+
+willy 
+Yeah
+
+Citizen Web3
+there is so many things sometimes you've seen on crypto twitter like the thing about the mims which in my opinion about the values what you say it just makes sense like you mentioned open source for example and i know that you are very big open source max like you you are last time we talked about give it we talked about you know the whole process of how you saw the foundation you know the central ee and you know and who by the way whoever is listening guys get out there check check the previous interview with it with willis on our website
+
+um and it's fantastic but you know back to open source well i didn't back to open source one and one other thing i'm keep on saying recently a lot a lot a lot on twitter is for some reason i don't know if it's a marketing move and maybe you can explain it from your perspective is a lot of people and we three starting to doubt the efficiency of open source yet if we just go out there you know even wekapedia is good enough resource to understan
+
+and that actually it's eighty twenty open source eighty close source twenty it's just the twenty source of close source facebooks you tubes and song that we use every day that everybody uses and that's why we so used to that what about you i mean i mean i know you are a big max of open source why is that in your opinion we are seen or might even see even one or two people in crypt suddenly doubt the efficiency of open source
+
+willy 
+That's a really good question. I think we can touch on some cool stuff there. I think in the Web 2 world, closed source was a much more defensible position. First of all, you're not holding people's funds. They're not putting too much trust in you, other than the data that they're giving you. So that's whereas in Web 3, when you're actually building applications that are responsible for holding users' funds, it's so much more important to be open source. And as a user, even though the end user
+
+might not know, like a user is safer, I would argue, using an open source DAP or wallet or whatever, then they are using a closed source one, just because even if they don't understand how to review the code, there's people out there who do. And especially if you combine that with like a bug bounty program and stuff, now there's an incentive for white hat hackers to like peruse this and find this and report it and fix it. And that's what we have a shape shift. And yeah, I would, I feel much more comfortable personally using these open source technologies than the closed source technologies.
+
+Um, also, yeah, in the web two world, um, you can, you create these wild gardens and you can charge fees, but in the web three world, we have much more of an ethos of like building these public goods. And that's something that I'm so passionate about. I think the best type of software is free software and as software developers, um, and product builders, we can, that's one of the best ways that we can have a positive impact on the world. Um, like software is such a good fit for being a public good because you write the software and
+
+unless you impose walls or you impose fees and ways to extract value, it is the public good that anybody can access and anybody can use and your use of it doesn't hurt my use of that public good. So I think that there is, that's a big part of why public goods and open source are part of the ethos for web three. Maybe why they get some pushback is that it's hard to capture value. And I think we're still as an industry trying to figure out like, okay, if you do build
+
+an open source public good, or even just any open source app, how do you capture the value from it? And how do you create a sustainable, defensible competitive advantage so that if you do figure out a way to find product market fit or to capture value, someone can't just come fork that and take that. And because then it becomes very hard to actually capture value. And it's really hard to solve these problems, right?
+
+willy 
+even in the Web 2 world, where there's huge incentives to solve these problems. Like most startups fail. And that's with that really big incentive of like, if you solve this problem, then you can capture all the value from, from that you create. Um, and so in the Web 3 world, maybe it's hard for people to see like, Oh, why should I go build this open source thing if someone can just come fork it? And so for that, I think, I think the answer is similar to what it is in Web 2 is network effects. Like that's ultimately.
+
+the most sustainable, defensible competitive advantage for an open source web three project is you need to figure out a way to develop network effects because while your code can be forked, those network effects cannot be, the community cannot be. And so just like in the web two world, network effects are what enables like Uber and Lyft to be able to charge fees and defend from someone else just coming and launching a similar app that has the same technology, but without that network of riders and drivers, very hard for a new entrance into the market to come disrupt.
+
+and steal market share away from Uber and Lyft. And the Web3 world is similar. You need to develop those network effects because it's even easier for someone to come copy your code and deploy it competitively.
+
+Citizen Web3 
+i'm gonna dig slightly over here if you don't mind do you think that the problem might arise much earlier like i mean if you look at educational system and to copy from somebody in the example is a crime you know it's like it's a crime the hardest crime you could probably do apart from caving i'm not even sure what what's more difficult right for a teacher with a student whose type school or a student who copies from other people so i think it's a bill
+
+and to us i think that that like desire to believe that you can achieve more than you can achieve with somebody else together or you know that the belief that if i build five walls around myself five i'm in the roof you know six with the floor or whatever you know four walls around myself i will be more you know safer than than somebody it's not like that right in real life and i think i really like in my opinion i don't know
+
+love to know yours of course here but i think it's much much cheaper and it goes back really to the roots of the way were being raised the skids the things were being told you know like follow the rules you have to do that you cannot think outside the box you know you have to say it's like
+
+willy 
+I appreciate it.
+
+willy 
+Yeah, it's super interesting concepts we're getting to like in school, there are these rules that you can't, can't copy. And those are the rules. So you got to play by the rules. And in software, it's like we there's, there's copyright laws, and then there's licenses that apply to software and stuff. And so sometimes you are breaking the rules by copying some software. And there's a delicate balance, because the reason that those rules exist is because it's important for there to be incentive, like in capitalistic market, like we need there to be incentive.
+
+Otherwise, no one's going to build the stuff to solve these problems. Right. And so these laws help protect the innovators and the builders who do create value and make sure that they can actually capture that value. And it can't just be taken because otherwise maybe no one would ever build anything. Um, but I'm like kind of a utilitarian, like on the other side, like it's for the end user, it's great. Like if someone copies code, people are going to use it if there's some improvement, right. And so you.
+
+Like as long as you have to find that balance of like, where is there still incentive for people to come innovate and create value? But at the same time, how can you encourage people? Like as long as people are copying stuff and improving it, I think that's great, but you still just need to make sure that there's incentive for people to do that. And that's kind of, I think, the balance that we're trying to find in Web3.
+
+Citizen Web3 
+i think the first time somebody contacted me was about two and a half three years ago it was the founder of a project that i want to name names right now but he asked me that he has a project now that project exists and it's not a small project and he was like oh i love what you're doing you know but i cannot touch any of your work you don't have a license and i was like well you can i'm telling you you can do whatever you want for free and he's like no but you need to put a license so i actually went in an our get help
+
+there's a license called being good and part of it says that i invented it and part of it says that you can do whatever you want but if you copy our work and make money from it and don't share with us you're a bit of an ass hole it literally says that like you know it literally our bed but you know like what's the point of messing around i'm not like i'm saying hey it's free but if you want to make money from it and it's just from my work you didn't do anything to it be nice if you shared a couple of shekels with me you know if you don't it's up to you and then
+
+willy 
+I love that philosophy.
+
+Citizen Web3
+license you know but and this is
+
+willy 
+I love that because what are you going to do? Are you really going to go out there and like sue somebody like, you know, maybe, but it's, I love that you're saying that because it's so similar to, I think, the situation that a lot of Dows have right now, because shape shift as a Dow without any legal entity, we're in the same boat. I always say come fork any of our stuff, come copy any of our stuff that applies to our software that applies to our governance process, like anything come fork it. And part of the reason I say that is because we don't have any mechanism of actually defending.
+
+Citizen Web3 
+exactly
+
+willy 
+Anyways, and not only do I believe in it, I love being able to promote that, but in reality, the DAO does not have a legal entity. It does not have the ability to actually go sue somebody who copied all of our stuff. So I love your philosophy, and it's kind of like the status quo for DAOs, for open source DAOs without legal entities.
+
+Citizen Web3 
+here is my next question which's going to bring us back to the shape and the next one is about project market get ready but before that before that let's talk a little bit about what we just spoke about about the ability i mean let alone my views and what i believe in what you believe in but there is the foundation there is a project and you have mentioned it since the very beginning even in your description you said the words not profit organization then as you carried on speaking u use the word public goods positive impact a
+
+and i love it you love it we all love it let's play but i'm going to play devil's advocate where is the money lebovski like i mean what's going on right i mean to the person out there that looks at all that and says hey great this guys are building non profit war a second what are they earning right and it's like a whole thing so why the question is why is it a non profit the foundation why it cannot why in general may be foundations
+
+decide to be on profit in your opinion should they actually be for profit foundations like etherium foundation or or anything else i don't know yeah let's talk a little bit about that
+
+willy 
+It's a really awesome topic and it's very timely because we're having a lot of these discussions or even debates right now in ShapeShift DAO. So first of all, the foundation is non-profit and it's separate from the DAO. So the reason the foundation is not for profit is that really we started with 7.5% of the total Fox supply. So we were funded as part of kind of a DAOgenesis and we have a specific mission to support ShapeShift DAO in achieving full decentralization.
+
+Once that mission is done, there's no reason for the foundation to exist. And our intention is to dissolve the foundation and transfer any remaining funds that we have to the Dow treasury. ShapeShift Dow, although it's a public good, it's up to the community to decide if it should be a nonprofit, non-profit, or if it should be profit seeking. And I love public goods. I think that's the best type of software, but I do think that I believe in rewarding innovators and stuff for the value that they create. And I think there's room for both.
+
+And I actually believe personally that ShapeShift can generate the most profit, the most value by being an open source public good. I think if ShapeShift, and I think about it from first principles, ShapeShift DAO's vision right now and mission is to build the ultimate interface to the decentralized universe. So what does that interface look like? Right? What does the ultimate interface to centralize the universe look like? I don't think we're there yet. Like I love MetaMask. I don't think MetaMask is it because not only is it a privately held app, it's not completely open source anymore, but it's only, it only supports EVX. Right?
+
+And so I think the ultimate interface to the decentralized universe from first principles will be multi-chain. It will support multiple wallets too. Like I love Ledger Live, but it just supports Ledger. So that's not gonna be the ultimate interface to the decentralized universe. Non-custodial, of course, that's a given. Open source, we talked about that. Community owned. I don't think that the ultimate interface is gonna be owned by Coinbase or some private organization. I think it's gonna be owned by the users, the community. Private is a big piece of it too. I think that's a big differentiator.
+
+On shape shift, you can go to private dot shape shift dot com zero data whatsoever is collected on you. And. Decentralized and that's where archaeo comes in, like if, if we, if the very interface that essentialize the universe itself is centralized, like what's the point, you can still be censored. And then free. I believe that's just such an obvious thing to me. And a perfect example of it is that shape shift. Again, we talked about this earlier, like if shape shift were to put fees on top of these decentralized protocols and we were to get product market fit with that.
+
+willy 
+it'd be very compelling for a single engineer to just come fork ShapeShift, deploy their own new governance token, their own new DAO, and say, hey, guess what? There's no fees, I'm taking away the fees. And instead, this is the strategy that I think ShapeShift should do, and that we're kind of on track for. But there's a debate happening right now on whether ShapeShift DAO should add fees, specifically on top of Thropechain swaps. So there's a proposal up that just passed ideation, which is the second out of three stages in our governance.
+
+to add 25 basis points of fees on top of Thor chain swaps. I put up a counter proposal to say no fees, because I'm very passionate about not adding fees. I don't think that's a winning model. And I'll tell you what I think is the winning model in a second. But my counter proposal is to not add fees and instead add optional donations on top of these Thor chain swaps or really any of the features that the DAO wants to monetize. Because part of the argument for fees is that
+
+Some users don't care. Some users would be more than happy to support ShapeGift in this open source project with a small amount on these transactions that we're helping them and facilitating. And so if that's the case, cool, let's give them that option. Let's even make it the default so that by default, if you don't check a box and opt out, you're gonna donate 25 basis points on your ThorChain Swaps or any of these other swaps that we decide to add optional donations to. And that way we can still be free. We can still be a public good.
+
+But for the users that are happy to support ShapeShift, we could have an additional revenue stream to help us survive this bear market and fund further development. So I think that's a nice compromise between the community members that like, do want to experiment with fees and the community members like myself that are like, no, fees are dumb, they're evil. It's, it could really, they're not gonna make the DAO successful because right now we don't have enough usage where fees will actually make us profitable, but they could break us. They could make it very hard to find this product market fit. And the reason for that, that I believe that so passionately,
+
+is this next model that I'm so excited about, which is no fees plus Fox rewards. So right now, the Dow already has affiliate revenue partnerships with a number of different partners, everything from buying and selling crypto, trading, earning yields, buying hardware wallets, buying swag, like you name it. We already have affiliate revenue agreements in place for like some of the main things that crypto users want to do. And the affiliate revenue model can apply to any kind
+
+willy 
+organization that generates revenue, generates profit. We don't care how that protocol or service generates revenue, we just want a slice for the value that shapeshift drives. It's the same model that shapeshift used to offer to integrators like Bitfract. And it's awesome because it enables an interface to not put added fees on, which I just think is like Metamask. Yes, they do it because they have those network effects already established, so they can justify these fees, like we talked about earlier. And Metamask charges 0.875% on top of every swap that goes to their wallet.
+
+which is more than the protocol's charge. And yes, they're able to generate a lot, but I don't think that's because it's a good model. And I don't think if they didn't have those network effects and started with that, which is kind of where ShapeShift is right now, like we're trying to get users from Metamask to come over to ShapeShift. And like, could we charge a little bit less fees than Metamask? Sure, but it's a race to the bottom. And instead, I think we can front run that race, make our fees zero, generate affiliate revenues, which we're already doing, and then reward users who generate affiliate revenues for the Dow.
+
+proportionally with Fox tokens. That can make ShapeShift objectively the best way to use the growing number of protocols and services. So take Osmo for example, or staking Osmo. ShapeShift DAO right now has a validator on the Osmosis network with 5% commissions, which is a minimum amount of commissions that you can have for a validator on Osmosis. What I would like to see the DAO do is that if you delegate to the ShapeShift DAO validator, you earn extra Fox tokens that you wouldn't earn. So now it's like the best way for you to stake your Osmos.
+
+Osmo is basically to the ShapeShift DAO validator, because now you're getting those Osmo rewards, and you're also getting Fox tokens. And now when you hear that, you would have to be crazy as a user to not go stake your Osmo to ShapeShift DAO's validator. It's very different than if ShapeShift were to put fees, extra fees on top of staking to the Osmo validator in our interface. That would be super lame, I think. And even if we were to add fees and then reward Fox to offset the fees, I think it's a big difference from just like,
+
+being free, not putting any fees on top of these protocols or services, still generating affiliate revenues, which we have in place for Cosmo, Osmosis, Juno, for these validators we run. We could do it for any validator that we run. And then rewarding the users who generate revenue with Fox tokens, actually giving them ownership in this awesome open source public good. That I think is a disruptive winning model. And we're so close to finally, actually if you have doubt, being able to prioritize and release that.
+
+Citizen Web3 
+i have a question about this model quick question before though but it's really a quick question because just i want your thoughts can is there a bit of a paradox for a decentralized universe to have an ultimate interface or not i mean ultimate decentralized kind of like paradox al now
+
+willy 
+Well, I think there will be, right? It's inevitable that there will be a winner, like the main interface that people use to connect, yeah, to explore the decentralized universe. And I think it's valuable too. I think there's a lot of value in building that. I think there's still a lot of problems right now that we have with kind of the interfaces out there to the centralized universe that needs to be solved before we can get mass adoption and before we can have what I believe is like, what I get excited about using myself basically. We're still not quite there yet.
+
+And I think like the Ethereum and Cosmos, the fact that there's not really a lot of great interfaces that support both is a perfect example of that. And that's one of the problems that Shapedhip is eagerly trying to solve basically. And it's, yeah, even just being able to see your whole portfolio. Like if you're a Power DeFi user, but you also have some Bitcoin and you also have some Cosmos stake, like where can you actually see all of your positions? Zapper and Zerion do a great job showing you your DeFi positions in Ethereum, but they don't do a great job supporting these other networks.
+
+And those are the opportunities that Shapeshift is like laser focused on solving this next year.
+
+Citizen Web3 
+i think the one of the reasons i'm like secretly routing for you really secretly because i'm the centralization maxisom against ultimate interfaces but in secret elm routing for you is because you're early is because it's not because of your philosophy not just the value i think i'm answering my own question kind of here right now the first question i asked you you know i think it's about sometimes being what's the right word not early but explore exyouknow
+
+having this the love for exploration because pioneer and exploration you know this is what humanity is about because you know all i mentioned upper you mentioned like who else did you say supper and zrionthat's right and if i'm not mistaken one of them comes from eastern europe so i think i met the team one of the teams early on and you know it's a thing a lot of those teams they stick to those things like like i don't want to like bit coin off right now but like to bet coin you know
+
+willy 
+Pioneering.
+
+willy 
+Zerion.
+
+Citizen Web3 
+and they stick to it religiously and they lose in that process the irony is that all of the thing about exploration and pioneering and about going on an exploring you know and building for the centralization kind of becomes them now in the in the same place as whoever before them was there you know the web to people that were saying oh webtreisn't going work now the web tree people are coming and saying webtre is going to work but only our web tree is going to work and your web tree is going to fail so it's like this is why i'm kind of secret
+
+routing for shape ship but it's a secret so don't tell anyone about your model wait because otherwise we're going to wonder of and i'm sorry i still want ask you about our chinabout product market fit and about your model i have one question for you so while you were talking i wrote something down here and you you talked about cash back or reward model which is a perfectly great model you know i have to i have to ask and i'm not going to be myself if i don't i don't know if it exists that kind of model in
+
+willy 
+Yeah.
+
+Citizen Web3 
+financial world i haven't seen one for sure maybe n f t is a little bit similar but i think that there is a better model than cashbukreward and this is a question to you emotional and experience model something that gives back not rewards in cash but in emotions if you could in shape shift could you know for using shapeshapeshape ip was rewarding me in emotions then i think than the users would definitely go back because there is nothing else better than more important than that
+
+willy
+I like where you guys are. I mean, ultimately it's all like those endorphins. How come we get endorphins released in our users' brain? And maybe it's maybe that's like a monetary reward. Maybe it's a confetti explosion. Maybe a little bit of both, right? Like why not both? But yeah, ultimately that's what we're trying to do here. And yeah, I do think there is nothing like a financial incentive. That is probably one of the most powerful things. And we've seen that like when the moment SushiSwap launched and it was a better place to provide liquidity than Uniswap because the token rewards.
+
+Citizen Web3 
+m m
+
+Citizen Web3 
+uh
+
+Citizen Web3 
+of course
+
+willy 
+And one week, over half of Uniswap's liquidity was drained and sucked over to SushiSwap and a vampire attack. So like these DeFi users, they care about the bottom line. But what I think is especially powerful about this model is that we're not just giving them Fox tokens, which do have a value, but we're giving them ownership in this platform that they're using. And I think it's a great way to build the community, right? Like you can come into Shapeshift, use Shapeshift, it doesn't cost you anything extra, you got all these awesome features. And guess what? You're actually earning Fox. It doesn't cost you any extra to use these protocols. And if you went directly to them.
+
+And now you're earning Fox tokens. You're actually becoming a member of this community for this platform that you're using, which hopefully you love. And that I think is really powerful. And then the perfect flywheel is like, okay, you wanna earn some more Fox? Cool, keep using the platform and guess what? Come participate in the community, come add value to ShapeShift. Like what skills do you have? What can you offer? That I think is like the winning model. And back to like the first principles of what's gonna be the ultimate interface. We said it's gonna be community owned, right? So.
+
+whichever interface has the strongest community, basically. That I think is a key part to being the ultimate interface to the decentralized universe.
+
+Citizen Web3 
+absolutely and i think the community comes the emotions right but let's let's get let's get slowly to product market fit and i know this is another one of your lovely favorite topics but i know you like the topic i know that because i already spoken with you before that and i know that i love the topic and this is a good point to bring us to archer as well what is the product market fit of archer and what before we even talk about archer let's let's keep
+
+willy 
+It's a buzzword right now. I think every Dow is like. Yeah.
+
+I love it, yeah.
+
+Citizen Web3 
+right to this let's what is the product market fit of art for both not you know no no no no let me refer aise that what is the product market fit of art i'm sorry this is three times of the same question in the web tree space not particularly for costomars not particularly for thereum in the web tree space what is this product market fit
+
+willy 
+Yes, well, so anybody who's ever run a node knows how challenging it is to do this, especially to keep your node running, to keep your node updated and stuff, and then to do it at scale when you have an application that you know, users, thousands of users depend on. Keeping that node infrastructure running is probably one of the hardest challenges for any Web3 DApp. And that's why most DApps just like rely on something like Inferior basically. And I know Inferior is trying to decentralize and that's awesome to see that they're working towards that.
+
+But again, still, that's just for EVMs. And basically, what Archaeo is, is decentralized Infura for all the chains. It's chain agnostic. And it's pretty cool. It's like, if there's demand from users for a certain chain to be decentralized, then there's incentive for any of the node operators on Archaeo to then run that node and provide that data. And you don't need every node operator on Archaeo to run nodes for every single chain. You just need at least one node operator to be running infrastructure for that chain for it not to be available.
+
+And then if there's demand for more, for more, then that won't incentivize more node operators to come online. So that's kind of all the crux of the problem that Archaeo is solving. It's something that end users can use, but probably most end users are just gonna be using it through a DAP, such a shape shift that is powered by Archaeo. So DAPs are obviously a big kind of target market and really for like any DAP that wants to be truly decentralized.
+
+which a lot of dApps right now are not. Behind the scenes, they are even relying on centralized node operators. Another thing that's not decentralized is the interface piece too. And so it's like we talk about DeFi and stuff, and secretly, one of the unspoken secrets is that it's not all decentralized yet. And that's like a big problem. That's where we need to get to eventually. So that's kind of like the underlying problem that ShapedRiff is trying to solve with Archaeo.
+
+And then of course, just developers, just if you're a developer and you just need a node for any purpose and stuff, Archaeo will be a great solution. There will be free tiers. And then if you need additional data for whatever you're doing, then you can pay for that with Archaeo tokens.
+
+Citizen Web3 
+so basically arco is the centralized in flora
+
+willy
+Exactly. For an extreme agnostic.
+
+Citizen Web3 
+right right right which and it's which end you can own a part of it because it has i'm assumably it will have some kind of a token which will give you some ownership right right as any talking does i'm not this is no legalities dropped the legalities plays around all of the words i'm saying right now so i'm talking about in you know web three stigmas right now right
+
+willy 
+Yes, there will be a token and there will be an airdrop too. You should probably mention that. Just search ArchaeoAirdrop, there's a bunch of good information on it. But we're really trying to reward kind of a big scope of users. So of course, Fox Token holders, because Fox Token holders incubated this project, but also Cosmos Stakers, Osmosis Stakers, Juno Stakers, Osmosis liquidity providers, Thorchain liquidity providers, all of those will be eligible for an ArchaeoAirdrop when the network goes live.
+
+and the snapshot is rolling. So if you're already one of those in one of those buckets, great, you're probably gonna get an airdrop. Don't take my word for it. Make sure you look at all the details for what will qualify you because there are some asterisks. And then, yeah, if you're not one of those yet, you still have time to become one of those. The Arcio airdrop is a rolling snapshot that started November 29th of 2022 and is rolling until 30 days prior to the launch of Arcio, which is still TBD but is estimated for Q2.
+
+of this year.
+
+Citizen Web3 
+i'm curious but i usually don't ask questions about a drops but since we are slightly on the top and it's not going to be like a question of how much is the end report not for sure not in your experience and opinion what are the because drops in my opinion are a very cool way of acquiring users if we're talking right now in corporate terms which i hate but you know it is it is the same thing as a userrequisition instead of
+
+you know you're letting the user test your product and this is what they've been rewarded for have you it's very difficult especially a man there is a huge project this day's it's mass you know rabbit hole of user all types of users have there been in your opinion any good ways to you know pick and and do an air drop sorry apologize for my for my words getting lost today but
+
+your opinion has there been really a way to do an air brow that stood out let's let's make the question simple
+
+willy 
+Yeah, I've always been a big fan of airdrops. I've been fortunate to be included in multiple airdrops and stuff. And I will say I'm always impressed by the airdrops that kind of do a good job of telling you about what the project is and what the token does before you claim it. So I think some good example of that, of course, ShapeShift, but also Giveth did a really great job with this. ENS did a great job. Most recently, like SafeAirdrop, I thought they did a really great job.
+
+And so yeah, when you do an airdrop, it's worth being thoughtful, right? So you're launching a new token, you're launching a new chain. One of the main things, one of the main purposes of the airdrop isn't just to acquire users, it's great for that. But also if the purpose of your token is a governance token, then it's essential that you have a distributed community of owners. And these people that you're airdropping to, these are the original governors of your protocol, at least the people who hold that token. So...
+
+It's a really great way to kickstart the decentralization in the community of whatever this project is. And you have the opportunity to really be thoughtful about, who are you going to reward? I love how Giveth did this. Shapeship, of course, a lot of projects reward their past users. That's a given. So if you already have users and you don't have a token yet, giving your token to past users is a no-brainer, in my opinion. But then also, what Giveth did was it tried to find any Ethereum address that had a token.
+
+done social good that had donated on Gitcoin or donated on CLR fund or donated on the giving block. Like whenever we could, whatever Giveth could find, if Giveth could tell that this address had participated in public goods, it's like Giveth wanted you to have some gift tokens, basically. Another really cool thing that Giveth did is that it didn't just give you all the tokens up front, but it gave you 10% of the tokens up front. And then the rest, we didn't call it vesting.
+
+which is a strategic move because vesting feels like, okay, like some of this stuff is locked. It's almost like it's being taken from me. Instead it was just the give stream. So it's like, hey, here's some tokens. And guess what? You're gonna get more tokens for the next five years, which is also a really great way to encourage people to stay involved basically, and to support Give It for the longterm. So I thought that was a pretty cool strategy.
+
+willy 
+There's some downsides to that though too. And probably the main downside is that some people who get your airdrop are just gonna sell it immediately. And if you do have a vesting period, then those same people, although the best thing I might discourage some of those people to dump, because they're kind of like dumping on their future self, it also can result in like ongoing sell pressure just throughout the period of whatever that stream or vesting is.
+
+Citizen Web3 
+one of the craziest thing solution by the way i love i must say onitintalking on obvious so that's like wasting gas why did nobody think about it before one of the craziest solutions i think was i've seen it still is you can claim the drop but you will only get it once a hundred thousand users have claimed the rope that's like you know it's like but it's cool you know at
+
+willy 
+Ah, interesting.
+
+Citizen Web3 
+i'm not saying it's good solution i don't say it's great i'm not judging it right now i'm just saying it's crazy in terms of like i've seen like you know direct drop from amos for example i've seen one from from from different teams out there and one you mention it sounds really cool just weird of amount of things you can do to to to retain retain use use retention shall i say and this is actually my next question about arco who is arcos
+
+users and what is currently the foundation behind shape shift shall i say it's them who are having the biggest focus right now doing to attract and to retain those users in place apart from the drop of course
+
+willy 
+Yeah, so I will say Archaeo is probably mainly focused on the B2B side, or maybe like B2D, B2DAO. But it's also B2C. It's B2D in terms of developers. But I think its main focus, and probably, yeah, will be getting projects who have applications to use Archaeo to power their node infrastructure. One really interesting thing is that in this open source world,
+
+it's possible that community members will decide to kind of just deploy open source front ends that are powered by Archaeo, even without the permission of that protocol or project. So like you could imagine like the Archaeo development team or a community member might just deploy a Uniswap front end that is powered by Archaeo without any input from the Uniswap community. But then ultimately the hope would be that the, you know, you could reach out to the Uniswap community and say, Hey, check out this awesome decentralized version of your interface. And then that
+
+that would encourage them to adopt it for their official interface. That would kind of be the perfect scenario. And then as a result, any of the Uswap users would then be users of Arceo, but wouldn't actually like be paying for it themselves. They might not even know that Arceo is what's powering the app behind the scenes.
+
+Citizen Web3 
+interesting i'm curious because it's it's interesting because the whole centralized know operation thing this day is quite the big discussion in the cosmosychosystem especially there's been some drama over there i mean in cosmos love drama it's good the more drama more participation by the looks of it the more drama the more the price goes up i'm not saying i'm a price person but it does look to work so it's a big topic of discussion and especially with the whole methamasku thing like a few months ago right
+
+where they could crip if you did some swap so whatever i don't remember exactly what it was or if you of course you had to use on flora for that no not a customer and point but it's interesting that that you guys are looking that is an industry that you've seen in that direction so much development already so early on that that that's i think what's exciting in my opinion
+
+willy 
+Totally, and it really is something that ShapeShift has a lot of experience in and is well positioned to solve. ShapeShift has been running nodes since 2014 for a ton of different blockchains. So it's one of the things that we've always done very, very well, and doing it in an open source way with Unchained, which you can see right now. It is what powers the current app.shapeshift.com. So yeah, it's basically like, it made a lot of sense. And we realized that ShapeShift needed this for our own interface, in order for ShapeShift's interface to be truly decentralized, something like Archeo needs to exist.
+
+and there wasn't a solution out there. So that kind of led Michael Perklin, who is well known in the Cosmos space and was the former chief information and security officer for Shapeshift to kind of start thinking about Archeo and how not only could this network solve Shapeshift's decentralization needs, but also any interface that wants to be truly decentralized could tap into Archeo. And yeah, I should mention too, the lead developer is Chad from Chad Berreford from ThorChain.
+
+which also is another protocol that has a lot of experience, basically, not only building Cosmos app chains, but running all these different nodes for the different chains that ThorChain supports. So could not have hoped for a better lead developer than for Archeo, than ThorChad.
+
+Citizen Web3 
+for all the listeners again my last record in what we chat so i just say that this is the irony of things of life is always great and again for all the listeners and viewers in the audience to day as well i know there's only like four of you right now but still there is people here that listening to this interview already were just released today stable coing discussion with chat involved so if you're interesting to hear to chat so the person that well is mentioning go
+
+willy 
+Thank you.
+
+Citizen Web3 
+our you tube it's not on our website it's not a podcast it's a stream a debate for mat and they're talking about table coins and chat is actually probably one of probably the most active character out there so yeah definitely go and listen and shut some very interesting thoughts really really like it do you have i mean i know i know i'm really apologizing for the next question but do you have a rough our arch i know it's stupid question in development but still
+
+willy 
+Q2 2023 is what I've heard. So yeah, it's all happening in the open. So all the development, you can go to like GitHub and look at Archaeo network. It's all open source already. You can track progress there. Also probably the best way to stay up to date is there's Archaeo Twitter, or right now it doesn't even have its own Discord yet. It's that early, but there's Archaeo channels in the ShapeShift Discord where you can follow along and even get involved if you're interested.
+
+Citizen Web3 
+okay okay cool
+
+Citizen Web3 
+oh thanks and last time by the way and by the way guys sorry again to all the listeners out there all those links that willis mentioning the are in the notes for the podcast so if you miss the out right now when will send it don't have to write it down you can go to the podcast notes have look at it and it's over there last time we spoke a little bit about lari remember that and i remember since then a lot of people did remove lazars what about you you still have
+
+willy 
+I'm going to go ahead and close the video.
+
+Citizen Web3
+rum name and lazar or you decided to stay only with one or you removed all of them
+
+willy 
+Yeah, I'm trying to I think we did the last podcast, I think I had just removed my laser eyes. Um, yes. And I think that was right around the time that not only was I like, okay, I'm not it might be a while before Bitcoin gets to 100k. But I think it was right around the time too, where I was like, you know what, I love Bitcoin, but I really think that Ethereum is gonna flip in Bitcoin. And like all the things that I loved about Bitcoin, I think like now Ethereum is doing better, basically. And I think
+
+Citizen Web3
+oh yes yes you just removed the laser ice and you had the ether yes i'm sorry sorry
+
+Citizen Web3 
+oh
+
+willy 
+Bitcoin's main value prop is like store value. And at this point, and I think like with EIP 1559, I think like I believe sound money is great. I think ultrasound money is going to be even better, basically. And not only do you have that use case, but you have infinite more use cases over in Ethereum. And that's where all the innovation is happening now. Like Bitcoin's like another one of Bitcoin's main value props now is that it's so resistant to change and so unlikely to innovate and change.
+
+And that's, you know, that might be valuable to some people, but for me, I'm much more interested in the spirit of innovation and experimentation that is so alive in the Ethereum community. So Ethereum and Cosmos, those are my favorites these days. And Bitcoin, I still have some Bitcoin, but yeah, I'm much more bullish on both Ethereum and Cosmos going forward.
+
+Citizen Web3
+absolutely i mean if you this is i'm not even sure how some people are still so stuck and i really don't want to put in it is a personal opinion of course it is i don't want to put a judgment but it does feel sometimes i already spoke about that people are really stuck sometimes that you know progress is what we do is humans right nature doesn't go back you don't see a tree become a root suddenly you see it given new roots but progressing growing right and i have a question
+
+you in this direction which is kind of like the last question to summarize what we spoke about it's not about arch it's about your personal opinion about product market fits and about the whole kind of web three space we're talking about bitcon we're talking about product market feets we're talking about you know networks which provide services the centralized services in the future like arch about echo systems like cosmos etherium others out the nepulcra bla la lah it seems
+
+and and take this into mind this is like you know given one given to is the whole things were saying with centralized exchanges which is kind of office and this is where we come to of course the shape shift as well and you know it was kind of expected from everybody who was expecting central ecenges to crush big time i'm still exchange still expecting them to crush i still think the more i crash the more adoption we grow nevertheless this is number two the given number two it hits happen
+
+and you know it's there so the question is more or less like that what's in our opinion the next kind of evolutionary state in bridging how will bridges convince users to stop using success because we have discussed this the last time but we didn't discussed this thing there wasn't so many crashes from centre exchanging when last i our discussion so what is the innovation that in our opinion the central exchange is apart from reward and users because it doesn't seem
+
+so far so far it does not seem to be the winning thing that gets users going to to excess how will texes and bridges and whatever not change at all and finally get all the users to stop using sexes
+
+willy 
+Yeah, it's a really great question. And I don't know if I have the answer. I think if anyone has the answer, please let us know because it's a great question. But I do think there's some reasons that I haven't been super surprised that users still tend to migrate to sexes. I think we're making a lot of progress. But if you think about 2014, when Shapeshift was started, there really wasn't a way back then to trade your crypto outside of a centralized exchange.
+
+And so in trading was like by far the most popular use case at the time. So obviously that was kind of the status quo. That's where we started in terms of momentum. That's where the inertia was. But we've come a long way already since then. So now it's 2023 and not only are there more use cases in crypto besides just trading, but you actually can trade.
+
+And not just through like through shape shifts across chain, but through completely decentralized protocols and not just like, you know, swap and stuff on Ethereum. But now with ThorChain, you can trade across chain and with Osmosis and Axelar, like now there's actually some competition. And there's much more liquidity. I remember that was something like even when ShapeShift had to implement KYC in 2018, there were people experimenting with like atomic swaps, but they weren't feasible to like replace ShapeShift's existing volume because the liquidity just wasn't there. It would have been way more expensive for end users. And like, again, like
+
+All things created equal. Basically, yeah, it wasn't compelling enough for the benefits that you got from doing it in a decentralized way. It was not compelling enough for most users to pay that extra cost. Now, it's 2023, we've come even farther. We have all of DeFi, and in many ways, DeFi, as we can see, has competitive APRs or yields, competitive liquidity, and you don't have to trust anybody. And you don't get burned. Like...
+
+But there's still the risk of hacks and stuff. So there's still some risk, we're not quite there. But I can see where things are moving. And I think as DeFi continues to mature, as these protocols become more battle tested and secure, and as liquidity grows, which I think can happen. I think especially when institutional players realize, okay, we can get the same yield in DeFi, and it's actually more secure, more safe, more trustless. Then...
+
+willy 
+DeFi is gonna win there and as more liquidity comes, then that's gonna, like ultimately that's what we need. Another piece I think that's really big is the account abstraction basically. So like we need more liquidity, we need better user experience. Basically, and we're getting there, like DeFi is going to be able to offer all the same stuff that C-Fi does but better. In fact, I always think about like, how will C-Fi compete with DeFi once we get to that point? Like it can, I think.
+
+But the other big piece, of course, is account abstraction. And that's still something that I don't know exactly what the best solution is, but there's a lot of different projects working on improving that. Right now, these 12-word seed phrases are still so risky that for a lot of users, it actually is, it actually, they might be less likely to use their funds on a sex than if they had their own seed phrase, right? With great power comes great responsibility. So I think that's another critical piece to solve. Once we have solved those pieces,
+
+then yeah, I really think that DeFi will replace DeFi. But there's still a couple of things that we need to, as an industry, fix and improve on.
+
+Citizen Web3 
+definitely and last question i've already asked you before so i'm going to have a slight change in it it's a it's a set of a couple of questions so has anything changed in the projects apart from shape shift and arch and cosmos and ethereum and bit coin that you find interesting under any new project that you are watching out there in like technologically i mean that are developing something really you know an innovating pioneering that
+
+that you are taken an influence from or inspired by
+
+willy
+Yeah, one that came to mind when you said that is a get coin passport. Um, I think it's really awesome. And they're really focused on solving this, this challenge, um, which is another one of the big problems we have in, in defire crypto right now of, um, civil attacks, basically. And, uh, right now, like there's not a great way, especially in a decentralized way to know that like an address on a blockchain belongs to a unique individual. Um, and because of that, it makes it very hard to do things like that you can do and see if I have like, you know,
+
+For example, giving incentives to a user, like $10 signup reward, basically, because Coinbase can do that, because they KYC everybody, and they have a pretty good idea that this account belongs to a unique individual. But for a decentralized project to do that, anytime that you have some reward program where people could, for example, put in $1 and get a dollar and a penny out, or put in $0 and get a penny out, it's very vulnerable to civil attacks, and very quickly all your rewards will get drained, not by real users, but by bots, basically, by one.
+
+one algorithm, one guy named Al. So Gitcoin Passport is solving that. And I'm really excited that they're focused on that because now projects like ShapeShift can just tap into it. We don't have to solve that huge problem ourselves. They can just say, hey, go get a Gitcoin Passport. And based on whatever the project is trying to do, it can require a different score. So different levels of like proof from the end user that they are a unique human. So very excited about the work happening over at Gitcoin Passport.
+
+Citizen Web3 
+nice and has there been any new people again dead or alive that could have you might have found them an author that inspired you that was inspirational for you or a colder that you found inspirational of maybe you read something
+
+willy 
+Um, that's a yeah. So, um, I just moved down to Austin, Texas, and I've been really impressed by ATX Dow. Um, crystal gravy dot ETH is the, uh, kind of main, main person I've been interfacing with over there, um, to get, to get familiar with ATX Dow. So shout out to him. Um, it's pretty cool. It's like a Dow, uh, you have to have NFT membership and the Dow organizes a ton of events. So I'm going to one this afternoon, going to one on Friday and then went to some last week. So super active. Yep.
+
+Citizen Web3 
+somebody that inspired you this year
+
+willy
+The events are awesome. The community is awesome. The Dow has gone in front of the Austin Congress and like, uh, presented on behalf of web three to help inform some of their decisions, which is really awesome to see. So that's cool. And, uh, yeah, I had to be a member of it and I got my NFT, uh, which I'm grateful for it because there were only like 150 out there. Now the floor, there's only one NFT available on open sea right now. And the floor is 250,000 ETH. So, um, it's very, yeah, like nobody right now that's part of this community wants to sell basically. So, um,
+
+I was very grateful to get, I only paid a little bit less than one ETH, which was expensive. It's probably one of the most expensive NFTs I've got, but like, I really wanted to be a part of this community and I'm sure the value that will come out of it will exceed
+
+Citizen Web3 
+i'm curious if in the future you know something like post stamp collecting nifty collecting will be compared to one another and the next generation will be collecting you know something else i'm just curious what it's going to be i really want to know is the i collect in tis two but post tom sometimes is there a dog wait way is that a dog let's see the dog wait before we finish this come on come on come on we have to yeahlet's let's see it's sam
+
+willy 
+Oh yeah, one sec, I got two dogs for you. One second.
+
+Citizen Web3
+hey for the listeners outer will is right now trying to catch a dog it will change camera it's beautiful
+
+willy 
+Okay, here's Chit Show.
+
+willy 
+Oh, it's beautiful. And then here's Ollie. This is my parents' dog. Cause I'm house sitting for my parents right now. So this is my parents' dog. Oh, both really good pups. Yeah. Oh, so.
+
+Citizen Web3
+hey
+
+Citizen Web3 
+awesome
+
+really the puppies are nice people already saying that in the audience i want to show you my katy but it's somewhere wandering of like all kittens are is there anything else you want to add to our conversation
+
+willy 
+Willy, the puppies are nice. People are already saying that in the audience. I want to show you my kitty, but it's somewhere wondering of like all kittens. Um, is there anything else you want to add to our conversation? No, I really appreciate it. Serge, thank you. Thank you everyone who was listening. Um, yeah, if you like what you're hearing, please, I invite all of you guys to come hang out in the shapeshift community.
+
+We're super active, we got an awesome community, and we have meetings in public pretty much every weekday. So yeah, we'd love to see some of you guys come join in the ShapeShift Discord and get involved.
+
+Citizen Web3 
+bye
+
+willy 
+Bye. Bye, Serge. Much love, everyone.
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.
+

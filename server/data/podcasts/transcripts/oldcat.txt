@@ -1,0 +1,587 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/oldcat
+
+Episode name:
+Humanity, Stupid Decisions and AI with Oldcat
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. Today I have a fellow validator guest with me on the show, Old Cat. He's a very independent and a very old cat validator out there. And I'm very excited to record you, man, and have you on the show. Hi, how are you?
+
+Oldcat 
+Yeah.
+
+Oldcat
+Hello, how are you? Actually, this is my pleasure to attend your podcast. This is my honor, to be honest.
+
+Citizen Web3 
+I'm very glad to have you, man. I've been like we've been talking about the recording, you know, I've seen you around Cosmos for a while and it's my pleasure to speak to every independent validator out there. Can you tell me and our listeners a little bit about your story of how you became a validator and a little bit about yourself?
+
+Oldcat 
+Okay, yes, okay. So, actually, I don't know what is a validator, okay, until maybe 1999, 2020, something like that. Okay, yeah, so I joined as the first validators were in 2020, okay, something like in October. This is the first time and I don't have any idea what's that, but okay, because I know the night chain, okay.
+
+this is a small chain. Okay, I will not say small chain. Okay, at least I think they're doing something very great. So I, but I like the decentralization concept and I want to do something, okay, with my luxury, given that I have a room so that I build up the first, okay, validators in my chain. Then that's it. And I think I start the second one, maybe half a year or even one year, because I don't,
+
+mean to run a business of validator, to be honest. Okay, I just, okay, to be honest, I really like the concept of decentralized system work free. I think that's something make people, hopefully make people to be more free, because okay, we can control more on our own. Of course, even though it's not free, okay, free is not free, free is not free of charge, okay. We just, okay, we just have free of charge when we do the cherry picking.
+
+Okay, we need to have our own responsibility. But anyway, I want to do something. And I have the luxury, I have the resources, and I don't mind putting some money and some effort to be a validator. So I try that. Okay. So for the first year, I mostly concentrate in the light con thing. Okay, I would do weekly report. Okay, I really like the governance of feature of Cosmo.
+
+Okay, because it's a very effective way to have the opinions of the community. Okay, even though there's a lot of problem, okay, it's not perfect, but this is a very effective way. At the same time, okay, something like 2019, okay, say Hong Kong has some election by the public, okay, they will have...
+
+Oldcat
+They arranged a lot of resources to try to get some opinion around some public opinion, some council. So when I know the way Cosmo does the governance, I was like, wow, it's very effective. We can have a governance proposal and propose that then can get us the opinion of the community.
+
+Even though, as I said, okay, it's not perfect. Okay, we need time to develop those things, but it's totally effective. And so for me, I only do Cosmo thing. I think the, the government feature is something amazing. And I thought around one and a half year, why the reports regarding the governance of Nikon in Chinese, okay, to.
+
+mainly Hong Kong and Taiwan is the audience because We're Free is very new to, I think to the world, of course, particularly for the Asian region, Hong Kong, and they may just think, oh, there's something mysterious or something just talking about price, but I think it's more than that. And so for that time, I would write a weekly report to all those okay, community so that they will know what happens, what is...
+
+What actually governance is? It's not talking about only what happens, but they even don't know, okay, oh, they can vote, okay. What's that represent? Okay. How they operate, how to operate the wallet, all are very new experience for them. And even for me, okay. So I spent quite some time to learn, okay. Then, and you know, some rare case I would know, oh, I can be a validator of some other chain. I don't know that. I don't know what's the meaning of the permission at the time.
+
+And I'm not permissionless, okay? So, and I will look around, okay, some chain I can join, okay, with say I can swap some token, then I can join, and I start my journey as a validator. This is the original of the old cat validator story, okay? Yeah.
+
+Citizen Web3 
+It's I can I can connect to a lot of things you say, for example, for my journey personally between my first validator, which was Cosmos Hub by chance. It's a bit long story to my second validator was one and a half years. So I totally understand why people take that take that pose and then do it. But I want to go go to your story. Wait, so but wait, you mentioned several times.
+
+decentralized values. And those values are probably the largest topic we discussed on the podcast. And I want to dig a little bit in that direction. You said that's how you became a validator, but you started to talk a little bit about why. And, you know, a lot of people, nobody wakes up one day and says, hey, well, I have some resource, I have some space, I'm going to go and be a validator in blockchain, right?
+
+Oldcat
+Mm -hmm.
+
+Citizen Web3 
+It's still something what I mean, you said that governance attracts you and I can totally understand what was going on in Hong Kong in 2019, 2020. I remember the situation and you know, it's something I can understand how the governance there started to shine. But was there something else? How did what what did attract you to initially starting to be interested in Web3? Forget about Validator for a second. Why Web3? Why?
+
+Oldcat 
+Okay.
+
+Citizen Web3 
+Why not do anything else in the world? I mean, it's such a complicated place to be sometimes, right? At least for me, I know that. So I go crazy sometimes.
+
+Oldcat 
+Okay, so I just, I first time when I really know token, okay, maybe cryptocurrency, maybe something like 2017, okay. Also the Lycon story, okay. Yeah, I also, okay, the very early bird, okay, buyer of Lycon, okay. It lost, okay, but this is totally fine. I have no complaint. I even know that I even,
+
+really believe that it would be okay at the end of the day, but don't expect things happen fast. This is okay, we don't talk about the price first, but okay, so I know that, okay, I know the founder and I know he's doing something, always doing something good. Okay, he's my friend. Anyway, so I have no question. Okay, I just put some money, I buy something, I don't know. Okay, I...
+
+Okay, so this is the first thing. My first thing is not Bitcoin. I don't know Bitcoin at the time. Maybe I heard about that, but what the heck is that? But okay, I don't like coin, but to be honest, I don't know like coin. I just know the founder. I believe that he is doing something good. So I know that. Okay, 1927 is a high price to be honest. Then it's down. 18, 19 is okay.
+
+price is nowhere as I when I when I yes at the time the Nikon is in the not the Cosmo because the Cosmo has not happened yet if I I don't remember wrong I do remember I remember correctly yeah we are in the ERC220 okay I okay I want to disclaim okay I'm not a guy of Nikon okay I'm a validator I know them okay I support them in the community way but I have nothing to do with them I'm not yeah.
+
+I'm not a team member or so ever. So I'm not trying to help them in any way. I just share my experience. So then I heard about, so for me, I would not like to use the term, verfy mostly in my language. I would like the term, botch. The term verfy is very confusing now.
+
+Oldcat 
+many guys think something like cryptocurrency, then the price, then certifications. To me, in that sense, this is the fourth kind of asset besides the equity, the bond, the commodity, then the fourth asset is the cryptocurrency. But this is not in my dictionary. So I would like you to use the word blockchain. And I know the feature of like coin.
+
+then I know the feature or maybe the Cosmos actually. So I like Cosmo much. OK. Then I can add a bit more later on. Then I know there's some governance thing. Then I like Web3. This is a very different path. OK. My Web3 is not from Bitcoin, but from that feature. Then I know the signing. I know the wallet. Then I know that, OK, I take my own accountabilities.
+
+I don't need the intermediate, then that's something at the end of the day, that's something that every individuals in certain senses can control themselves. Of course, I'm not, I think there's always a dynamic, okay, the centralization has some effectiveness, it's efficiency, but at the same time, you've got some sacrifice of the freedom. And I would not say that, okay, we're free as the God and we only embrace the referee, but I think what,
+
+This is a very good feature so that we can put it into the human, the world of human beings so that we can have more tools, then we can have more freedom in some way when something not very good. So this is very different way from maybe the usual way of thinking. Yeah, I will from the governance and I can control, I can find it. Okay, even who, even the founder of the chain, they can't touch my stuff because I do the...
+
+I do the Sunlight Ong, but I think the accountability of my past phrase, okay, when I lost it, okay, I lost it. So I need to take accountability for myself. I need to save God damn. Yeah, this is the, and I believe that. Then that's the way I joined the biography. I don't know whether I answered my question, but this is the way I entered the world of the biography. Yeah, yes.
+
+Citizen Web3 
+No, no, it does. It's perfect. It's perfect. I think that is really what I was looking for to understand what connects you to here. And a lot of, you know, I had over the last four years, you know, we had so many different guests on and different guests have different connections. Somebody talks about money. Somebody talks about values. Somebody talks about work. Somebody talks about people. Somebody talks about politics. And it's normal, but, you know, it's interesting to see.
+
+Oldcat 
+Yes.
+
+Oldcat 
+Mm -hmm.
+
+Oldcat
+Yeah.
+
+Citizen Web3
+that all roads lead to Rome, you know, at the end, at the end of the day, everybody ends up in the same place. And of course, I'm calling, you know, Web3, Rome here, but it's interesting. Also, it's interesting to find out that less and less people are coming to Web3 via Bitcoin. Before it was almost everybody had to make this journey, Bitcoin, then Ethereum, then Cosmos.
+
+Oldcat 
+Mm -mm -mm.
+
+Yes!
+
+Citizen Web3 
+than Web3 or Polkadot or whatever. You know, today it's not like that. Today a lot of people that come to Web3 when I listen to their stories, I realize not many of them have a Bitcoin story. Yeah, maybe half, but not many. And it's interesting. I want to ask you, since you mentioned yourself governance so many times, usually I kind of leave those questions a little bit to the end, but...
+
+Oldcat 
+Okay.
+
+Oldcat 
+Hmm. Hmm. Hmm.
+
+Oldcat 
+Mm, just like.
+
+Citizen Web3 
+You already mentioned it a couple of times and governance is a very difficult topic. Like you mentioned yourself, Web3 offers some good things and some bad things and governance is a thing that gets all of us together talking, discussing and disagreeing and trying to find a solution. But sometimes, and we've seen this, governance can lead to
+
+Oldcat 
+Yes.
+
+Oldcat 
+Mm. Mm.
+
+Citizen Web3 
+not disasters, but you know, two not very good outcomes. What is your opinion? What is your opinion on the way that I mean, we are right now talking not necessarily just about Cosmos blockchain in general, but you said that you are more focused on Cosmos. So what is your opinion today on the state of the governance, the general, is it a decentralized type of governance or?
+
+Oldcat 
+We come across I guess.
+
+Oldcat 
+Mm -hmm.
+
+Citizen Web3 
+Is today's governance mainly lobbied by validators? And I'm saying it as a validator myself. So I'm kind of shooting myself in the foot here as well. But, you know, I have to be honest for me, you know, I don't want to say my own opinion before I hear you. Sorry. What is your opinion? How is it?
+
+Oldcat 
+Mm -hmm.
+
+Oldcat 
+Okay, I think first of all, okay, I like that feature and I also, okay, I just said that I like Cosmos much because I like the IPC, I like every even small crazy idea they can do a chain on their own. Of course there are some costs, okay. Say Ethereum has to do a lot of good things, they have a very big community and Cosmos sometimes has more chains would make them run very difficultly, run very difficult, okay.
+
+So there's something, but I like the way they can connect together. Every small groups can have their own control. Okay, with some still some problem. Okay, so there's something. Yeah. So I would say that, okay, I like that feature, but this is a long way to go. And as a validator, okay, one of my responsibilities, I think I owe my delegated or even the communities that I mostly for all.
+
+Governance, okay. I think this is my very important responsibility as a validator. Okay. But...
+
+you will see that, okay, may not many delegators would very keen on the governance. Okay, but there's a lot, that can be a lot of reasons. Sometimes some, of course, some governance is very routine sometimes. Okay, so I think that's the way, whether this is very useful. Okay, we do this routine work, okay. There's some upgrade we need to do the full otherwise, okay. Yes, and.
+
+In certain senses, they're also the trust of the delegator if they really delegate us, OK, because they trust us, not because only my icon, my beautiful icon. OK, but I think there's a long road. And this is something I write a lot to report regarding the four things in the light con in Chinese, because we need to communicate within the communities to to know about the chain. OK.
+
+Oldcat 
+There's some kind of first of information. There are some intention sometimes. Okay. We need to align their interests sometimes so that they really think that the governance is about is related to that. Okay. This is something very long roll. I don't think it's doing good for the time being. Yeah. But at least there's some features it happens.
+
+like the blockchain, blockchain has a lot of problem. It's faster, but not fast enough to be honest. But if we don't have this to start, if we don't have a lot of guys are doing something very maybe crazy, stupid, okay, it will not happen. This is the way I, this is my opinion, it's okay to be a validator. Yeah. So, so also for the, for the current setting, they also sometimes as you said, and we may come at cost sometimes.
+
+the guys make some very stupid decisions. But for me, that may be the history of the human beings is always having the stupid decisions. Okay, don't expect that's always good, but I would expect that the history will be spirally improved, okay? And people hope that even though it's a little like either people can learn a lesson from the old past. And if they don't do,
+
+good enough, maybe that's a problem of us, validators or even the city were free. Okay, we do not good, make the works okay, good enough so that the people's aligned their interests and people aware that the governance, the voting is actually is aligned with their interests. And of course there are some problem, say the trinity of the majority that's the mass, okay. And that may be some things we also need to improve.
+
+Okay, I do not enjoy the Ethereum much, but okay, say at least from the Ethereum, I know that they have a very good community. They have a lot of communication in that. And to be honest, Cosmo, in terms of Cosmo, there's smaller communities. Because, okay, we use IBC, we have small chain and some chains where the community is small. So this is a...
+
+Oldcat 
+of the community sides of the IPC thing. Yeah, but I don't know, but I hope that that, okay, say eventually some chain may be die, some chain may be survive and then the community may grow and also they learn a lot and we do better so that we can have, we can reach the level of better discussions. But I'm still optimistic, but I don't,
+
+don't expect it would take short times. Cosmo happens four years, five years. Yes, that's a very small time. And I think there's a long road, the mileage of changing, even the world free is a paradigm change. And many people, even they touch the Earth, they are still thinking, they are still thinking in a very centralized way, which makes sense, making sense. It's not, they're not that thought. But I would...
+
+they think that the web feed, the blockchain technologies, the way we are doing things would affect, okay, the generation may be next, but anyway, maybe not necessarily waiting for the next generation, but I've expected that it would take some time so that people would not only adopt the way the web feed doing. This is my thinking. So I am not very optimistic that things will happen very fast, but I would think that...
+
+it will happen eventually in a better way.
+
+Citizen Web3 
+I totally agree with you, actually. I think I have virtually, we might have different ways of coming to that opinion, but the end opinion is the same. I was yesterday giving a lecture on Web3, somebody asked me on some Discord community to talk about, and a lot of the questions were about validators and governance also, and I pretty much said the same. My final opinion was the same.
+
+Oldcat 
+Mm.
+
+Oldcat 
+Hmm.
+
+Citizen Web3 
+We are five years into it, give it time, give it, it's something that we are as humans so centralized. But anyways, I have one more question about governance before we go off. And it's a weird question. If today, we are already talking about, and we see, not talking, we see today in Polkadot, in Cosmos, in every chain that has on -chain governance, you are seeing not easy...
+
+And of course, like you just said, it needs time, but I want us to fantasize a little bit. And I actually asked this question, not on my podcast, I asked this question four years ago, some validators, and nobody understood what I was talking about, but I think now is much better. So do you think that...
+
+Oldcat
+you
+
+Citizen Web3 
+potentially in the future. You know, I mean, blockchains are now slowly starting to connect. I'm talking about ecosystems. You know, now we have IBC, then it's Cosmos now talking to, you know, Polkadot, Polkadot talking to Ethereum, Ethereum talking to Nier, Nier talking to Bitcoin. Do you think that one day we will see something crazy like interchain, cross -chain governance, you know, intergalactic, you know, I don't know, like, you know, a governance on top of bridges, not just on top of ecosystems.
+
+Oldcat
+Mm -hmm.
+
+Oldcat 
+Why not? Actually it happens in some way. I'm not a guy doing the attempt. So for me, I would, for my expectation or my imagination, I would not expect that there will only one chain exist. So I always discuss with my friends. The media always like to, who's the cool skill now? Okay, so Nana is the equilibrium killer. For me.
+
+Citizen Web3 
+But on top of bridges, there is bridge in those ecosystems.
+
+Oldcat 
+No such thing. They may die sometimes. I don't know. But we have a lot of them say, OK, OK, because I know like how much like, for example, for the current many changes doing some define thing, at least for time being. OK, but then you know, you theory. OK, that is not OK. I am not very keen on the define, but OK, it's very makes sense. It's a very good entry point for people to join the world.
+
+Say for the light con from day one, they concerned on their writing, they concerned on their publication. And you know what, sometimes I was told by some, okay, not personal friend, but okay, well, this is a scam. Okay, they are not doing anything. They are just, okay, the prices drop. Okay. But okay, of course I agree, but I know them because okay, I know what they happen. And of course there's some language barrier, a lot of things. Okay. But.
+
+Even for the light coin of the publication, there's a lot of attempt. So for me, first of all, I still come against the answer directly to your question. I think that there's a very natural way. OK, yeah. So the Bitcoin, they are they would have for me maybe very optimistic. They will have a very different very positions in different way. OK, some things very fast. Nice or not. I wish I like them. OK. And we even when.
+
+Two years ago, they always found the chain and many people said that they would be died and I don't think so. Okay. It's very new. Okay. New is not a skills, but this is a very natural reason that there's a natural learning curve. Okay. Even for the property, for the validator, for all of us. Okay. Yeah. So for me, I would expect that, okay, even different chain in some time, some...
+
+they will have a position for some way. Not a chain solely do all the things. That doesn't make sense. And okay, the world is not that simple as that. You can write your papers, you can the media, the newspaper because they need to eyeballs book it. But when you really look into the situation, I don't totally agree with that. For me, I am very open in the...
+
+Oldcat 
+So even in Cosmo, there's some very funny chain. They would do lucky draw or whatsoever. I think that is still good at time. I would still do the validator for them even I may lost money, but okay, I already that I can I can lost that small money in some ways. I knew I can't send. Okay, then okay, I quit. Okay, for the time being and you don't know, right? That's the activity of human being and...
+
+And some activity, even some activities is beyond our imagination. I always have a story to tell. I don't know what happens in other world, in Chinese, in China, in Chinese communities. We have the freedom of marriage around maybe for 15 years or maybe less than 100 years. And for the modern people, you can imagine how come my parents would...
+
+assign the husband or the wife to me. But it happened, say, look at about 50, 60 years. And for the people at those age, it's totally beyond their imagination. How can I choose my husband and wife freely? But for me, what free or blockchain is doing is the same. This is similar to the freedom of marriage. This is a basic need. The freedom is basic need.
+
+Okay, there's a lot of false, there's a traditional thought, blah, blah, blah. But this is the human need. And eventually, people will find a ways to make themselves freer. So for me, I will think that the blockchain would take as important part of the society. Meanwhile, different chain would in different way to survive. Some of course may die, which makes sense. I don't know who will die.
+
+Who will survive? I don't best guess to be honest. I really don't guess. I don't know. Okay. But at least, okay, there are different ways and eventually, the Cosmo may not be able to repay and should not, and it's not replaced by the Ethereum or WISO. They have different positions. Yeah, this is my way to see the connectivities of those bridge. I think, okay, I don't touch the Pokedolls. I know I'm not of guys who, who in,
+
+Oldcat 
+early in the field we do the Pogatars. Okay, now it's relatively a little voice to be honest, but I know that there's still a strong community supporting them. I'm not in that community, but so they are not dying actually, they are just maybe lost the eyeball of the mass media, but they still have their own position, they are doing something interesting. Arif have very good storage solutions, they are free.
+
+Not much people talking about, but they are doing something good. And I will use them. And of course, all we need to do in the communities is to make the solution, the possibilities, the usage, more broadens more easily so that people can adopt easily. I think this is it. But for me, that's very make sense to have bridge, whatever tunnel maybe. I don't know, maybe some tunnel eventually.
+
+Okay, so this is my thinking on the picture of the upper chain.
+
+Citizen Web3 
+It actually answers my next question that I had for you, which was why do you validate? And you kind of answered that, you know, I mean, from what I hear is, is to help the world be freer, right? This is the goal. This is the mission. If I'm hearing you correctly, right.
+
+Oldcat 
+That's something from my calling. For me, I don't take the chain usually. When I find them, of course I may have some selection because of my resources, time, money, and some judgment, but those judgment may be just maybe on the team or something like that. But mostly I would, and I would, maybe I'm stupid, I don't know that I can pay.
+
+you can easily pay, of course the good chain to be valid, okay? It's not easy. But you don't know. So for me, I would try to do more if I can, so that everybody grow and sometimes say for some chain from my experience, sometimes some chain will be very quiet, even the price, because they may not do the market making.
+
+but they may do some development at the back, okay? They might do something slowly, which it takes time. And man, you do four years and I do three and half in years. And as we have the same story that we have, when I did the second train, mostly maybe one year later, right? Then we accelerate, I do more maybe in last one and a half year. Yeah, I do now 36, what? 36 chain now, but before then, one, two.
+
+three, four, then I fail some, say osmosis, I fail a few times because it's very competitive. Then eventually, now I'm there, okay, even with the no tier, but at least I survive, okay, it's not easy, but you don't know, okay, osmosis, Australia, they're doing very good thing. They have a, a dex I use every day to be, almost the only dex I use, yeah, I don't use the sex usually, but I use the dex, and, but.
+
+But for some change you don't know and for me so we just not then growth and what I'm doing is okay with my resources, with my... and actually I enjoy it to be honest. It is something I enjoy it and I think the way I best stood at least for the time being to be the part of the community I am.
+
+Oldcat 
+I would not say that I only contribute, okay? I got money in some sense, I need to pay the rent, okay? I need to pay the virtual server, or even the bare bone, whatever, the electricity whatsoever. And it's okay, so I dare not say that I'm contribute, I dare not to say that, but okay, and it's okay, this is something meaningful and I do that. Yeah.
+
+Citizen Web3 
+I think that bringing that thinking that you have to the table sometimes is very important. Again, I don't want to say and I don't dare to say that something, type of thinking can be more important than contribution. I'm not the one to judge that every chain has to judge it by itself, but in my personal opinion, I think that sometimes...
+
+Oldcat 
+Yeah, yeah, yeah.
+
+Citizen Web3 
+It is required and it is contribution, providing that infrastructure, going around and trying to actually create interconnections as validator between those chains. I still see that. I have a big question for you about that, but before that, I want to ask you something we spoke a little bit before the recording about setups. About... and...
+
+Oldcat 
+Peace.
+
+Oldcat 
+Hmm.
+
+Oldcat 
+Mm -hmm.
+
+Citizen Web3
+I have previously spoke with several validators based in the same area as you. And yeah, the area has its own difficulties, of course. We all know that the geopolitical situation that is happening in Southeast Asia. But still, I'm curious, what is your situation in terms of not the politics, but in terms of I can imagine that holding bare metal servers in Hong Kong is not...
+
+Oldcat 
+OK.
+
+Oldcat 
+Mm -hmm. It's not Yeah
+
+Citizen Web3 
+the most safest thing in the world to do. So my question is about setups in general, if you can talk about it, if you want to talk about it and yeah.
+
+Oldcat 
+Okay, let's shoot.
+
+Okay, simply say I use the service provider mostly. Okay, it's not very practical in Hong Kong to host them. Okay, first of things, course is the issues. Okay, yeah, well, the data is not, you and me are very detailed. We know that it's not a big business, that we are not having a big number of cash, to be honest, okay.
+
+Our income is easily to be checked by everybody. Okay, right. So, it's not very practical to use that thing. And I also I usually the service provider in different, I've used a field for the decentralization and also some backup and also some testing and actually sometimes first service provider is also something we need to take care when we do the.
+
+when we do the validating. I think so. Why you are moving to the metal with the bare bone maybe something. Okay, I feel sick of that and then I want to fully control that. Okay, but I don't have the necessary yet. Okay, and I still, yeah, I'm not moving in some place I can do so that I use the survice provider, I use a field and I use, I use some metal, okay, with the survice provider.
+
+Maybe one question, maybe one thing you may interested in. Actually, I do not put any service in Hong Kong. Yeah, so all of my server out of Hong Kong. Yeah, I don't know. Okay, nothing happened yet, but okay. I think it's more reasonable to put some place with a higher degree of security. And I don't know what the...
+
+Oldcat 
+government or they treat or they wills what we are doing. Okay, even though we are doing something totally legit, okay, but you don't know. Okay, so this is the way I'm doing. I would move around the server and that's it. And trying to get a balance, okay, the income and expenditure and the reliability, so everything bought and all those things, yeah. Can I answer the question?
+
+Citizen Web3 
+Do you think? Yeah, yeah, perfect. I was just going to ask something in continuing to that. Do you think that can happen a situation where not necessarily let's forget Hong Kong for a second, you know, where we wake up in a week or a month or a year and we wake up to the news that I don't know AWS, Hedstner.
+
+Oldcat 
+Ha ha.
+
+Oldcat
+Okay.
+
+Citizen Web3 
+I don't know who else, whatever, Scaleway and all the other bigger say, okay, that's it. We're going to start shutting down nodes right now. And they're going around and going, off, off, off, off, off, can this happen?
+
+Oldcat 
+So, okay, interesting. Okay, I would not, emergence, okay, you asked this question. Okay, I'm not prepared to be honest, I'm lazy, but okay, I don't use, I really don't use any big names, okay. Most of my setup, okay, I came from a traditional engineer background so that I do, to be honest, I do the Linux kernel before, or sometimes before, very long time ago. So that I...
+
+I build a server on my own, totally on Linux. I seldom use those. Now everybody use AWS and all those turnkey solutions and all those things, but I don't like that. First of all, I don't think that they have a... The cost effectiveness is not that good. Speed is okay. I don't think... Actually, I use some of them. I don't want them, but okay.
+
+I don't think that, okay, they have a good name, but sometimes performance is not that as good as I expected. So as my previous answers that I use a few service provider, so I keep that account for them. And now I have some good stuff, okay, also from the communities also that look down, I can rebuild very fast from somewhere else. And so that try to make...
+
+in some sense to make it more resilient. Say, as you said, okay, maybe some, sometimes not political, sometimes they just suck, okay, there's a surface for whatever, it's just some problem, okay. And we always, for me, okay, you and me, and you and I are also validator, and we, for me, double sign is a nightmare. Okay, it doesn't happen to me, okay, but so I would, I would, I would,
+
+make some mergers so that, okay, avoid them, even though the data center has some issues. Actually, as I come across some situations that the data center has one week shutdown for some of my holes. Then I have some mergers so that I can move around and move around to build the holes in some other data center. Meanwhile, those die the one and they will not suddenly come up with the double sign.
+
+Oldcat 
+You know what I mean, right? Yeah, yeah, it can happen. And they are not doing good. They come up, oh, man, that's too okay in the world. Then you die. And it's very, very bad and very, very irresponsible to the delegator. So that I would not, okay, I don't know, but I would not, hopefully I can still keep it not happen. Yeah, yeah, yeah, yeah. So that's.
+
+That's something that's some of my mergers so that I can yeah, I have several they DC so that any times I can build some new notes there, destroy the old notes, something like that. Yeah, this is the way and I don't use those all big name AI all those big names. I don't I don't use it.
+
+Citizen Web3 
+Do you have any recommendations of services of cloud services for anybody listening to this that you would say, hey, these guys are good or better avoid names?
+
+Oldcat
+Should we give them names? Should we discuss the names in here? Okay.
+
+Hahaha!
+
+Citizen Web3 
+This is this is no, this is no, I mean like in cloud I mean sometimes, you know Sometimes sometimes people people come up with very with very good especially like if it's a private privacy Orientated cloud provider. It's quite rare to find them and sometimes if you have any names and and you know the you hear of any Okay. Okay. Perfect. Perfect. No, no perfect Perfect
+
+Oldcat 
+Okay.
+
+Oldcat 
+Okay, I prefer not to name. Yeah, actually, yeah, okay, sorry that I think even for the for the validator, I always don't try to name any particular Yeah, sometimes it's not fair. Sometimes when they're doing good this time, then they may doing something bad later on. Yeah. And, and I think, to be honest, this is also part of the job of the validators to do experiment. Actually, I do a lot. Okay, recently, I do a lot. Okay.
+
+Citizen Web3 
+That's correct.
+
+Oldcat 
+I would build a solution and try for a while before I roll it out. Yeah, it takes some time, it takes time, and it also kills my time. But I think this is the way I'm doing things. And you know, I move around, and sometimes because they're getting expensive, and they're getting worse, and I move. So it may not be a very fair comment yet. Of course, and if anybody want to be a validator, I really recommend it. Do some...
+
+recommend do some research and don't expect that that whether they take some easy job then you can put a server up and up and run and like a fishing fishing led and get the money it is it can be I don't know okay but but but it may not be long and and it's not a big money to be honest yeah it is to be a big money maybe like me okay have a lot of a big change so every change you get
+
+100 and you can get some money. Something like that. Okay. But not an easy way you build up a server because we have a large update. You know that, we know that, okay, I have update calendars. Okay. Actually, I have different updates to upgrade and for the software and all those things. Yeah. So, okay. So I prefer not to name and personally, okay, I can share, but not in the public. Yeah. Yeah.
+
+Citizen Web3 
+Perfect. No, no, it's perfect. It's perfect. I think it's something that I really respect. That's why I ask. What about, you mentioned, I mean, automatization tools and one of the biggest pains, at least personally for me, is monitoring and alerting. Monitoring and alerting is, yeah, I hate it. I hate it. I'm sorry, everybody who loves it. I hate it. Hi.
+
+Oldcat 
+Okay.
+
+Okay.
+
+Citizen Web3 
+My name is Serge and I hate monitoring and alerting. No, and we have a very complex system that we set up and we always try to look for new things. We always try to automatize the monitoring, the alerting. What has been your personal experience in terms of monitoring and alerting?
+
+Oldcat 
+Mm -hmm.
+
+Oldcat 
+Mm -hmm. Okay, yeah, this I can share. Okay, yeah, yeah. Actually, it's okay. I mostly, okay, I use the SACBix, okay, Z -A -B -B -I -X. I don't know whether you come across that tools. Okay, I think I like that thing. Okay, it's not very, maybe that's not the de facto tools for Cosmo, okay? So Cosmo means you use those, actually, I don't touch those because of,
+
+they would see for me, okay, we need a few things, okay, as a validator, we need a few things to monitor. Of course, the up and downs of your server, okay, this also, but besides those technical stuff, besides the server is up and down and all those things, we need to monitor, say, voting. Okay, because as I said, I vote.
+
+You can check my record. I think I fold 95 or even 98. Sometimes I miss, okay, because I don't know, because I'm stupid. Anyway, so mostly I would fold man or thing. So I will write script to check all those things and put in the monitor. And I would also check the folding power.
+
+Okay, so that I will see that I'm doing the right thing or bad thing or doing something not good and something somebody moving out. Why? What's the reason? I don't know. So of course I will not call them or what's happening. And it's okay. Seems I got something wrong and seems okay. I got not doing the right thing. So I actually for myself as a small team, okay, I running around 36 main net. Okay. Currently night, uh, pass that.
+
+we are going to deploy the snapshot and also stay sane and also we are actually trying to produce some small size snapshot for some big snapshot. Say a chain, all chain I'm validating, they have a big, if you only do the snapshot, this is talking about say around 20 giga snapshot, okay. It's kind of big to be honest, okay, for everybody.
+
+Oldcat
+So we are doing something like, I'm trying to do some at -home spacing, then the snapshot is from the spacing, then do the snapshot so that we can produce a much smaller size for the community. So actually we are going, we are kind of doing some research. Actually we are going to finish so that, because a lot of guys doing snapshot already. So I don't, before that I don't do much snapshot because...
+
+everybody do a snapshot, seems that there's something they can take out of this equation. Okay, that's fine, but for me, there's two crowns sometimes, two ways of the resources. Okay, decentralized means that we have a lot, but not too many. You may have a 30 or 20 snapshot, and may sometimes have a very bad 30, and I don't like that. So we don't do the snapshot before, okay. But recently, we noticed some problem, like,
+
+say the test that you always, the test is always ignored. Okay. Recently I do the, the, the, the light contest led and okay. Some guys want to join the contest that they don't, but they don't find the test that they don't, they don't have the snapshot. Okay. So, okay. I create a selection. Oh, I really recognize. Okay. Seems that the test that has a more demand and that's the price for the snapshot.
+
+For the main net, we know that there's some big guy, very good guys. Everybody use them. At least he cover 60 to 890, but 24 hours. So I try to find some place less, more useful, maybe more effective so that I try, okay, I am doing also osmosis, spacing, snapshot thing so that we don't need to have another time to trigger.
+
+Okay, EWARDS is talking about 170GB or 250GB of snapshot. This is crazy. So I think that's the way we can do and also contribute to the community. And also the Tesla thing. Okay, actually when the Tesla happens, okay, no one cares, okay, whether you can be a no or not, okay. But I think that's a useful tool.
+
+Oldcat 
+to the community and also to the chain. So we are trying to do that kind of stuff. So this is something happens in our team to do some contributions to the community. But try the Starbucks. And if you need help, let me know. I run all my notes, I run all my notes using a single interface with the Starbucks.
+
+Citizen Web3 
+Let me ask you one...
+
+Oldcat 
+And I can see most of them. Yeah, please.
+
+Oldcat
+Yeah, I welcome anybody if they want the solution and I don't have the time to put all those things in a very good gig hub thing. I would like to share, but it's not that difficult. But I try to share to the relative of the light console for who is listening here and think that it's interesting. And I'm totally free to share with them how I do the thing so that if they think that the solution is useful for them to operate.
+
+Citizen Web3 
+nice nice nice nice i have i have one one one last one last no no go on go on go on please please please please please finish the what you were saying
+
+Oldcat
+Just, yeah, just, just, and I can even can run a note for them so that they can free of charge to use my service and to the side. So this is okay. Not that I've ever just been, but something's okay. If they think suffix is useful, then just try to use it. I use that things to manage. Yeah.
+
+Citizen Web3 
+Thanks, man. And I think it's important because even between validators, people saying that it's okay to reach out for help because I know that I have seen personally when young DevOps guys who just start working, they totally get lost. They try to like, what do I do? Where do I go?
+
+Oldcat 
+Hmm. Hmm. Hmm.
+
+Oldcat 
+Yeah.
+
+Citizen Web3
+Can I ask another guy, ask another one later? Oh no, how can I write to them? This is so scary, you know, and it's nice to know that, I know a lot more people are open to that. It's a good thing. But I want to ask you one last thing before we're going to jump quickly into the, into finishing it with the Blitz. And it's a kind of like, not an easy question, but it is an easy question.
+
+Oldcat 
+Okay, you're sure.
+
+Oldcat 
+Okay, okay, okay.
+
+Citizen Web3 
+And you mentioned several times throughout the interview, you know, you mentioned the word survive, maybe three times, two times or three times. And I can feel it, you know, because it's not easy. It really is not easy. You know, a lot of people do think I'm going to become a validator and I'm going to be making the same money as P2P or steak, fish or, you know, it doesn't work like that. There is, you know, you're right. So my question is, what do you do?
+
+Oldcat 
+Hehehe! Mmm.
+
+Oldcat 
+Mm.
+
+Oldcat 
+Hey.
+
+Oldcat 
+Mm -mm.
+
+Citizen Web3 
+as a validator. It's a very general question because this can of course take hours, but in a general, what do you do as a team as a validator in order to survive in order to be able to secure delegations? What is your not trick, not the way you know, but what do you try to focus on? What would be your advice maybe, you know, to survive as a validator?
+
+Oldcat 
+Okay. Okay. Okay. Okay. I think, okay. I'm, I'm confident. Okay. Um, this is a very interesting question and, and I think it's a very good questions for those who really want to jump into our camp and really do some things in this field. Okay. Um, I think survive, have a few aspect thing. Okay.
+
+For those, okay, now is, I don't know, I don't know whether it's a good time or bad time, okay, the price is dropping, but not too bad, okay. We will face, okay, the more, the worse scenario, okay, right? So, for some big chain, okay, okay, can I say, okay, for some big chain, it's like Cosmo Hub, okay, Osmosis, even Juno before, okay.
+
+You need big money. I don't know how big it is, but at least you need some money. It's not about a hundred bucks, not that money, maybe a little bit more. And you also need to survive because you always get kicked out by somebody else. Maybe you get kicked out by old cat. Usually when I joined the camp, usually I would try my best to stay in the activities. I mean, okay. I think...
+
+We know that survivors are forming activists. If you are an activist, in certain sense you are dying, you are not surviving. So for me, when we really joined that thing, usually we tried to survive, we really would put some money with it. This is not the advice of survival, but this is the perspective of how we will...
+
+when we joined the chain, okay. Actually, we just joined the EMOS, okay. EMOS also joined, dropped a lot, okay. Recently I joined them, but I did not announce it in my homepage for two weeks, okay, because we still not stabilizing it and there's a lot of problem, yeah, okay, whatever. So for that, okay, I do something, for me, I really care, okay, I don't want the...
+
+Oldcat 
+to waste their money. I think, I don't know, okay, like you can find me, I think the people, if you're talking about the delegators, how we retain, maybe, or maybe recruit, whatever, okay, I think it takes time. We spend three and half a year and you spend four years, okay. You can expect the poll would know you in the first day, no matter how.
+
+good logo, what you said, okay, zero free, okay, slash protection whatsoever. Okay, you can put a very good slogan in your monarchy. Okay, I don't know whether it's true or not, but okay, for me, I will even not put that, but to be honest for us, okay, every time we got jelted, okay, now we are more mature so that we don't have much experience.
+
+relatively much fewer. But before that, we have some discussed stuff. Every time we would compensate silently to every delegator, maybe even surpass the damage. I think that's very important. For me, I don't know who else, how they treat the way of this thing. But for me, I think I even don't... Okay, maybe the reason I was put chat.
+
+put chat because even though it's not good, but I think it's a, we know it should be honest and not everybody knows what we are doing. So we will put a Twitter, okay, those da da da da we have happened, okay, ba ba ba ba ba ba ba ba ba ba ba ba ba
+
+Oldcat 
+No matter how small, we treasure it. I don't know how effective or how... Okay, I'm not mean to retain them, but for me, that's our responsibility. I don't want that. And they don't... I don't want to penalize that because they choose us and got laws, okay? But I dare not to put slash pro -elections. I don't know whether I will bankrupt or bankrupt, okay?
+
+the bigger delegations and yeah but at least okay I try my best and for the time being every time that we do it and I don't know how our delegated know the perceived then to be honest I don't know many personally but I think how that they will feel okay what we how we treat the work of our validator is something if this is something we are doing.
+
+I suppose that seems that we are doing good in that sense. So we would, usually we are not the big amount with validators, but we have, usually we will have a big delegated size. So we have a lot of poor friend, but that's fine. I like it. Okay. I like it. So this is the way, I think, I think we don't know each other. We, all our communication, I, for the Twitter,
+
+usually, right, for the discount. Maybe email. Sometimes some people would send email to me and ask for help and I try to help. I don't know whether he's a delegator or not. Because work free is a very good tradition that helping each other. You just tell, okay, don't expect. In some way, it's not very business oriented. It's not a contract or something like that. Okay.
+
+I learned a lot from other guys. Okay, I use a lot of a snapshot from other guys and this is the way WebV is doing things. So for me, I stick with that tradition. That's also my calling and my way of doing and also we are trying to make the communities know more about the chain they are delegating. So notice that for maybe one year before, something like that, for every upgrade, we would...
+
+Oldcat
+we would do our notifications to the Twitter. Many people, many delegated, many community, they don't know the update. Okay, they may, the more eye -catching stuff is the price. But for the upgrade, maybe not relevant to them in sense of the working because most of the work are done by the validator. Upgrade means something. Upgrade means maybe new features, maybe some protection or whatsoever.
+
+It's good for people to know more about that chain and also connect this value, connect this knowledge with the delegator, then they would know they may have more incentive or more alignment of the interest with the chain and the communities. So this is also something we are doing. And I think this also have people, more people know us, okay, in that sense. Okay. So I do have a...
+
+golden rules for validator because different validator has a different approach. Actually some are fun. They have fun. They do some validations because they want to have the fame and someone to have a quick money and some cherry pick those, okay, profit making. I think there's a, I totally fine with a different way of doing validator. If I come back to your question,
+
+If you really want to be a validator, I would recommend, think about what's their intentions. For me, what intention is totally fine, but different intentions lead to different ways of doing things. If, say, some guy is doing only one chain, the profit -making one, totally fine to me, it's not a shame, not the e -force to do it that way, that makes sense to make a new thing.
+
+We also need to make these things to make the chain running. Whether it is the fundamental ways to make the chain run, if the chain does not run, all are bullshit. All are bullshit. So for me, this is more important regarding survival. Everybody have, I may have some resources so that I can fight the battle. For osmosis, I fight a lot so that I can keep it.
+
+Oldcat 
+long enough and people notice these guys are doing seems okay I don't know actually I don't know what they see see me at least okay I try to survive I participate I'm trying to do something and as usual and and and seems that there are more people when times go they would notice oh this is okay who is this and who's that and and you will notice that okay where does it come and come and go some okay when the market is not good.
+
+then they go away. Okay, we cannot blame them, but for me, okay, we still have the resources and I still enjoy this thing. Okay, even the market is very bad. Okay, I may loss, okay, in the position, but for me, it's a long road to go and just to stay there and see how it goes. I think I do not answer because I do not give the golden rules, but I think this is the way.
+
+whether this is a waste to do that. Yeah.
+
+Citizen Web3 
+This was, this was a perfect answer. Really. I really think that you have in your answer captured in the essence of what I've been doing with this podcast for four years is trying to understand and to share the intentions of people who build web three, especially validators and founders with the people who use those products or delegate to those people, because the intentions is really, really making the whole difference between what the
+
+Oldcat 
+Yes.
+
+Citizen Web3 
+Yeah, the final decision of good and bad. I'm going to, because we have to wrap up, so I'm going to jump into a quick blitz with you. So it's going to be three questions. They're going to be very random, but it used to be five, but I'm going to do the short version. So one, give me one project that you're... No, no, you know what? No, no, no, scrub that, forget that. Give me one area, one area.
+
+in technological area apart from blockchain, such as for example blockchain or machine learning that you have an interest in apart from Web3 and blockchain, something different.
+
+Oldcat 
+Okay.
+
+Actually, I'm personally, I actually also exploring some AI and machine learning stuff, to be honest, not because of the, actually, I always feel that the market is the mask is very funny. Okay, generative AI is not the whole of AI, to be honest, when I do some unfilled studies before actually, we talk about neural networks many, many years ago, but.
+
+At the time we don't have the data, we don't have the computational power. And so they may run the project for two days or something like that. But I would think that there would be something interesting to help people. But for me, AI is, I'm not very, not as a, yeah, so.
+
+Citizen Web3
+nice.
+
+Oldcat 
+But I think this is something useful, but not the way mostly people talking about for the time being. But I think there's something something can can do. Yeah. Yeah.
+
+Citizen Web3 
+I understand what you mean.
+
+Oldcat 
+Hmm. Hmm.
+
+Citizen Web3 
+I understand.
+
+Citizen Web3 
+Second one, so two more, second one, give me one motivational thing, something motivational that helps old cat to stay, you know, get out of bed every day and do what you do, you know, help to build a decentralized future, something motivational, maybe meditation, maybe family, maybe, I don't know, reading book or something. Give me something, one thing.
+
+Oldcat 
+Okay, what is the question to be honest? Okay. Yes, it's not easy. Okay. I think that's a two aspect. Okay. From the perspective of OCAD as a validator, I think we owe the resource abilities to the chain. When we jump in, okay, we have the fundamental function or fundamental roles to keep this chain run.
+
+Citizen Web3
+It's not easy.
+
+Oldcat 
+Okay, so usually I don't care about this agreement, the arguments amongst those communities because to be honest, I don't know. I'm not guy in the team, okay? Yes, we know we face some chain and I face occasions that some chain has some problem and people ask me, why you stay here? We should walk away and block the chain. My answer is actually that it's still confined in the discord. I think this is not...
+
+our decisions to decide whether the chain will survive or not. This is the decisions of the community. So for me, okay, from the micro aspect, okay, as a OCAD validator, so we owe the, when we commit these things, we owe the responsibility to make this chain one until it's given up. I come across chain given up. The team, even we want to keep the team, we have them, so we do it voluntarily. Okay, they just want to.
+
+they just betrayed that they want away the... Then we can't do anything more. But before then, okay, we just keep the chain row, no matter what happens, that this is a war or fighting on the chain. Okay, this is not... Yes, and also the delegators to do that. Okay, yeah, for... Okay, yeah.
+
+Okay, please.
+
+Citizen Web3 
+Responsibility. Responsibility. I like that. I like that. Last one. Last one. Wait, wait, wait. We still have one more. Last one. Give me one movie or one book or one song that has had some influence on you throughout your life.
+
+Oldcat
+Oh.
+
+Oldcat
+This is the biggest questions in this podcast. Okay. Okay. Okay. Okay. Um,
+
+Oldcat 
+Okay, so I guess there's a lot of books, okay, people and movies, you know, with me and some, yeah.
+
+Okay, okay maybe I share about another YouTube videos, okay not both because there are many both. There's a talk given by a lecturer in local universities talking about the Greek philosophers, right? Yes, yes he gives, actually this is a talk for the Department of Philosophy, yeah to the
+
+Citizen Web3 
+Give me one, one, just anyone, one that you like.
+
+Oldcat 
+So the student happens to them and this natural, okay, he share, okay, the story of Sarkis and how he choose, why he choose or the reason why he choose to stay for the penalty of the, you know, he was penalized for execution by the democracy, okay. It's very interesting. We talk about the voting and...
+
+Citizen Web3 
+Okay, okay, Socrates, uh -huh.
+
+Citizen Web3 
+Nice.
+
+Oldcat 
+And in essence, he got chance to walk away. He walk, he got extra circles, he got a chance to walk away. It's not that difficult, not now, okay. He can just, okay, jump, free others country, then country to others. But he stay, he stay, then he share, okay, what his will. And this is something I recently watch and it impressed me much, okay. I like reading, but.
+
+Citizen Web3 
+Mm -hmm. Mm -hmm. Mm -hmm. Mm -hmm.
+
+Oldcat 
+I don't know much about that thing. I'm not trained to be a philosophy student. But that's something. The essence is that he is doing something, what he needs to do, what he ought to do. What's the right thing to do? Maybe very old fashioned, but this is something. I have very anatomy and also strengthen me. What are people, what are human beings that should do things? It's more sharing.
+
+Citizen Web3 
+I like it.
+
+Citizen Web3 
+I like it.
+
+Oldcat 
+Okay, yeah.
+
+Citizen Web3 
+No, I love it. I love it. And we will try to link it up also if we can find it in the comment section. AltKat, man, I still have a lot of questions, but I would try to, we're going to wrap up and make a pause here. Stop here. I'm very, very, very thankful for you to find in the time and answering the questions. Please don't hang up just yet. So this is just goodbye for everybody who listened to us.
+
+Oldcat 
+Yes, thank you.
+
+Citizen Web3
+Thank you everybody for joining and listening to us and see you next time guys.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 

@@ -1,0 +1,439 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/neutron
+
+Episode name:
+Bitcoin in School, Incintives and Governance with Spaydh
+
+Citizen Web3 
+dramatic countdown. Hi, everybody. Welcome to a new episode of Citizen Cosmos. Today, I have Spaydh with me from Neutron. I don't know if you guys heard about it or not, but if you haven't, great. That means you're going to hear all about it today. And if you have, even better, because you're going to find out more stuff about it. Spaydh, man. Hi. Welcome to the show.
+
+spaydh
+Hey, thanks for having me. It's a pleasure to be here.
+
+Citizen Web3 
+Very, very glad actually, because Neutron is on like, you know, a tip of the tongue of a lot of people. Um, so I would like to talk about that, of course, but, um, I would like to talk a little bit more about you and about what you do and what you're planning. So first thing is first, introduce yourself and your own words, what you do and what is Neutron, at least in your own words.
+
+spaydh
+Yeah, sure. So I'm Spaydh, also known as Avril. I am deputy general manager at Neutron, which means that I basically get to do everything that is not development-related. The way our team works is that we have like 11 devs right now, plus me, so I do everything else. And yeah, like in a few words, Neutron is a small contract platform that is interchain secured by the Cosmos Hub,
+
+it shares, it benefits from the security of the Cosmos Hub in exchange for which it provides revenue to the Cosmos Hub. And that small contract platform has a few...
+
+spaydh 
+features, I guess, which are that the way it's structured allow you to easily create cross-chain protocols that acted like if they were just one protocol, right? In a unified manner, essentially, through interchain accounts, through interchain queries, which allow you to control accounts on other blockchains, execute transaction, track execution stages, and also receive data about that blockchain in a trust-minimized manner over IBC.
+
+Citizen Web3 
+That's cool, man. You guys have incorporated all the words that do with interchange. I get it now. I'm joking. It was a joke, of course.
+
+spaydh 
+I got it. You've got a bowl like this with like small papers in it like okay what's going to be our next project? Security. Security.
+
+Citizen Web3 
+I love it, man. I love it. We'll talk about all those things like in a little bit. Of course, not all of them we'll get to talk about. I hope we'll get to touch on some of them. First thing is first, I know you guys are incubated by P2P and I have a lot in connections to that, to Constantine in particularly. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about that. So, I'm going to talk about
+
+Of course, he was a guest on our podcast and of course we've worked together years and years before with Konstantin. So what's your story, man? How did you get to Neutron? Where did you come from? How did you get into blockchain? I mean, not like which part of the world, but like how did that pill hit you?
+
+spaydh 
+Yeah. So like, um, I guess since, so what actually got me into crypto was that since 2013, uh, with the Snowden thing is, you know, the revelations about like prison, the various government programs that we're doing, like large scale kind of like collection of data, um, across the world, not just in the U S but in various countries, um, and, and with my kind of like conviction that, you know, computer, uh, computers and code would take more and more.
+
+Um, of, um, an important place in our lives. I kind of always been, um, like since then being very, very interested in, um, one, well, computers, like, like computing systems, but also, um, privacy as a, as, as a, as a topic, as a question as how do you actually, you know, like what's kind of like the balance that you need, because obviously, well, I mean, we can get into this like later, but
+
+So basically I was interested in all of this. And during kind of like my long nights on the internet, I found out about Bitcoin 2016, 2017, I guess. I was pretty young at the time. So I, you know, I guess arguably I still am. So just researched Bitcoin, really liked the idea and then ended up finding about Ethereum. And then I was like, wow, you can actually make a wall computer and put every like tons of stuff on it. Like that's fascinating. Okay.
+
+So I was really sold on the idea of Ethereum, but I had like something like $30 of pocket change per month. So let's just say I didn't become a millionaire in the next bull market. But so that's kind of like what got me hooked, right? Like I like the ideas of Bitcoin removing the intermediaries between like financial transactions. I'm not a big fan of the banks, like a lot of people here in this ecosystem. So you know, that appealed to me. The idea that you could make a shared computer that wasn't fully decentralized across the world was also really cool.
+
+So all of these things got me into crypto. But then, you know, I was still like doing my studies. I was traveling, I was working kind of like as a journalist across the world. And so I was following very from a distance what was going on until DeFi summer and 2021 mostly where I...
+
+spaydh 
+kind of started hearing about it a bit more. So that piqued my interest. I came back, found my old wallet in which there was like $200 of Ethereum. Wow. And that was kind of like, okay, like, look, I have a reason to go back hard on this. And then suddenly Ethereum had completely changed. It was, you know, dozens of apps on top of Ethereum that you could use to do various DeFi stuff. And so, yeah, like suddenly you could have a full-time job just researching what was going on. So that's basically what I did.
+
+At the time I was living in Thailand already, but working as a teacher. And so I would teach English during the day and then research crypto basically as a full-time job at night. And so I became kind of like a very involved community member in Ethereum, but also in Terra at the time, ripped my portfolio.
+
+Um, but the, the, the cool thing about that is that like, because terror was like much smaller in terms of like how many people were interacting there and people were established. Um, it allowed me to like very, um, very quickly kind of like meets a lot of the, um, people who were like actively engaged in the ecosystem. I started participating in, um, AMAs helping like produce the briefs of what was, uh, said during the, the AMAs bringing like.
+
+giving them to the community so that people who had missed EMA could still have that information, participating on the forums, et cetera, et cetera. And so the way I got professionally into crypto was that one day there was this proposal on the Anchor forum about updating Biluna with a new version of the liquid staking derivative to STluna. And at the end of this post, there was this small mention that, oh, by the way, if you think you have skills that we could use, just send us a message and let's chat.
+
+And so it was like, I can read, I can write, I know this, this ecosystem pretty well. So perhaps there's something to be done here. And so I did message them and we chatted for a while and that's how I started as a community manager at Lido on Terra. So like the confusing thing here is that actually my employer is P2P from the start. Right. Because the, the way it works is that Lido as a DAO is a pretty big organization that kind of like coordinates everything that happens across all of Lido.
+
+spaydh 
+But in terms of development and active management, it's mostly focused on Ethereum's ecosystem, including L1s and L2s as well. And so to be able to expand, to have that bandwidth with limited amount of devs, what Lido does is that it often enters kind of like contractual relationships with other teams through governance. And so teams like this include while P2P, but also Chorus One.
+
+Mixbyte, Shard Labs and others who have done the deployments on Polkadot, Polygon, Solana, Terra. And so the way it works is that like, okay, we'll give you some LDO tokens to create the implementation and then if you can reach some degree of market cap, you'll get a bonus to motivate you to actually maintain and grow the protocol, right? And so like P2P had this kind of agreement with Lido for Lido and Terra and so that's why I joined P2P as a community manager. And so...
+
+Yeah, I mean, like the rest is kind of history, but basically, the team that was making Lighto Ontario was also researching like, well, how do you make proper liquid staking in Cosmos? Right. And in the course of their research, they, you know, they found a lot of ideas, like, okay, actually their thesis was that like, okay, we would like to do it as a small contract and we need some technical...
+
+you know, like prerequisites to, for this to be possible. And so like, okay, where can, like, which platform allows us to do this? Um, there are many platforms in Cosmos, but none of them allow, allow you to, you know, meet these requirements right now. And so, you know, we share knowledge a lot within P2P. And so
+
+spaydh 
+All of these kind of like criterias and these things that were blocking Lido, kind of like spread through the org. And the, the realization was that like, Hey, if one protocol like Lido is blocked on this, right, lack of security, lack of ability to interact with the block chains by entry and queries, lack of availability, like a ability to retrieve data from other block chains. Well, very likely there are other protocols that could deploy in cosmos that can't because they don't have access to these premises that they would be interested in having to deploy in cosmos.
+
+And so from there, we kind of, you know, we kind of started thinking like, okay, we could technically, we could build a blockchain that does this for like one protocol, we could build this with just a lighter team, but how about we actually take this and we make it a product that everybody can deploy on, right? Um, and so that's kind of like how the idea of Neutron was born. Um, and then we started kind of like working on it for a month and month and month, um, until prop 72 kind of like, you know,
+
+hit the forums and It kind of aligned with what we wanted for for for neutron, right? We wanted to be interested secured Because we saw it as one a way Of you know having much higher security from the get-go To but also as a way to have a very close alignment with the rest of the ecosystem, right? Like the nice property here is that is that you know, we're kind of aligned by by default so that means like if neutron
+
+goes rogue or becomes hurtful to the rest of the ecosystem, it's very easy for the hub to pull the plug. At the same time, the hub should not be incentivized to pull the plug on Neutron because if Neutron is successful, it should be driving a ton of revenue to Adam Stakers. And so you have this very nice property here that is that we have to cooperate, right? It's not just a meme. This zone is all about cooperation, essentially. So yeah, that's basically my story in Neutron in a nutshell.
+
+Citizen Web3 
+I guess, like you say, in a nutshell, that's pretty cool that the role of the neutron is cooperation because blockchains are a lot about reaching consensus, right? Cooperation in a way, whether it's cooperation of nodes or cooperation of governance or cooperation of other actors in whatever ecosystem is in question, that's kind of pretty cool.
+
+I wanted, while you were saying, like some questions did arise. One, I don't know how, not that I care about political correctness, but I'll try to, I'll try to pretend to be politically correct. It's a question that always was a curiosity of mine. And it's a bit off topic. And you, of course.
+
+how to answer that. I'm curious. You said that you were quite young when you got into the whole Bitcoin topic. And the question is like this, was that still school age or after? And the reason I'm asking, I'll explain it because I have been asking a lot of like with a lot of guests, we've been going through how the adoption level of crypto really turns around the world. And I think one really cool measurement for that is to see whether people...
+
+got into that in school or already they heard about it because of their like, you know, work and jobs or something like that. So I'm sorry to go off topic. I'm just really, really curious about that. So was it still like in school or was it already, already when you were already working and studying after that you got into crypto?
+
+spaydh 
+Well, like, I remember buying my first Bitcoin on Coinbase in the queue to the cafeteria of my high school. So.
+
+Citizen Web3 
+Fire, fire, fire, fire, because that to me means that adoption, I think that adoption is happening and happening especially among the generation that in my opinion can actually do something with it. I'm sorry to everybody and including my own generation here, but like it is I think more important that this happens like that and not only by your employer.
+
+or something like that. And again, sorry to go off topic. And of course, let's go back to the topic, but that was a very curious kind of thing to see how it did evolve.
+
+spaydh 
+I agree, like age of people when they discover like crypto is an interesting metric.
+
+Citizen Web3 
+It's for developers as well. It's interesting. I've seen like the first, um, I think it was actually in cyber house. Cyber house was a place in Minsk and Belorussia in 2016 or 15 where, uh, Constantine and other people than me. And we were, we used to meet, it was cyber fond and I remember it was a developer, a guy who, a kid, essentially he was.
+
+14 and it was like 17 or 16 16 still where he was already like, oh, I know smart contracts and I know like that and it was so cool because like, wow, man, like you, you, this means like it's, it's working. Damn, you know, it's working. And anyways, back, back, back to cooperation. And this is gone, gone, gone, please.
+
+spaydh 
+Yeah, that's pretty impressive.
+
+spaydh 
+Wait, no, what do you think about the 12 years old kid who made, like, I think he's from the US who made millions with like, you know, selling NFTs.
+
+Citizen Web3 
+Is that the bad- not the bad art, not the bad art, right? Not that guy, not the street bad art guy Oh, what was this? You don't- it's not that guy? No? Because-
+
+spaydh 
+I don't remember. I think it was like Pixel Whales or something.
+
+Citizen Web3 
+Oh no, yeah, but I didn't really get into the story. I did see it on Twitter and I was like, whoa, doll, you know, go kid, you know? And then like, uh, and, um, then, um, I did, I did recently see on Twitter, um, it was Josh, Josh Lee, the Kepler dogmas who tweeted about that. And it was that there is some, as far as I understand the kid, literally like also 12 or 13 year old kid, I think 12.
+
+spaydh
+Hahaha
+
+Citizen Web3 
+and it's called something bad street art and it draws like people from but kids are that's the one that kids are. Is that did I understand it correctly? Is the kid who draws cosmos? No, you're also like in the but it's working. There we go. That's the way. I'm also not them. So back to cooperation. And that's actually my my first.
+
+spaydh
+but kids are.
+
+spaydh 
+I'm not in the court club so I don't have a bad kids NFT so I don't know.
+
+Citizen Web3 
+question, I guess it relates to cooperation. What do you think personally? And of course you're welcome to talk about LIDO and about Neutron or P2P in this case. What are your thoughts in general on, let's call it decentralization of stake. And I have to be devil's advocate here a little bit and I will be throughout all my questions, so I apologize straight in advance. But, um,
+
+I think you know what I'm talking about, right? There was a lot of talk about LIDAR and a lot of talk about, hey, and I know this is about Ethereum, of course, but we are not just Cosmos Maxis. We are like all blockchain Maxis, decentralization Maxis, at least I am. And you know, like, you see those things, like, and then you see again, there was the same thing in the staking of some of the top atom validators. What are your thoughts in general, because you guys have obviously been somehow involved in all those stories. What do you think should that...
+
+Should we, because some people offer to slash, to punish. Some people say, no, let's not punish. Let's think of, in my opinion, for example, slashing is the bad solution because that's how you go wrong. Because if you punish people, they don't get rewarded and they don't do the job because they don't get rewarded. So what are your thoughts about centralization of stacks in blockchains in general? And what are your thoughts about what can be done about that? Sorry for the long question.
+
+spaydh 
+That's kind of the million dollar question in a way. But first, before we talk about it, I want to make very clear that Neutron itself does not actually deal with Stake validators or something. It's interesting to hear. So that's kind of like the Cosmos Hub does that, right? Lido and Neutron are very much separate products. Like Neutron is a smart contract platform. Lido is a liquid staking protocol as a smart contract that will most likely launch on top of Neutron, right? So what I'm going to say now is kind of like my personal belief.
+
+Citizen Web3 
+Hahaha
+
+Citizen Web3 
+Mm-hmm.
+
+Citizen Web3
+Okay.
+
+spaydh 
+which obviously has also, you know, like I've been in touch with validators and with, you know, the, well, Lido's node operator group when I was at Lido. So like all of this participates to my own experience and my own opinion about this thing. So like my take on this is that like,
+
+spaydh 
+like the way we, the way the staking mechanisms work in most blockchains actually do tend to centralize stake. And that's, you know, that's for multiple reasons. Like some of them are fairly trivial, like, oh, you know, on the UI, it's always the same validators who show up first. So that's easy to fix, but there are like, you know, more profound kind of like centralizing forces in, in, in, when it comes to, to stake distribution. And that's big. And that's kind of the fact that
+
+not all validators have access to the same kind of like, you know, communication channels, PR, but also not all of them have access to the same order flow. And I think that's actually the most significant point here is that if you're Coinbase, Binance, or Kraken, you already have a user base, and that user base is pretty huge. If they're going to be holding those tokens because they're speculating on them, or, you know, they're taking a long position on them, if they're going to be holding these tokens in your platform, they might as well just turn yield on them, right?
+
+And so you can make this very easy for them. And you can even like make it, you know, um, more comfortable than actually delegating directly, um, at the blockchain's level, because what you can do is you can, you know, you have a one click process or you choose your token and you, you stake the amount that you want. And then if you want to withdraw, you can do it instantly because instead of staking everything to their validator, they can keep a small part of it as a smoothing pool kind of.
+
+so that you can withdraw at any time so you don't even have to care about the bonding period unless everybody is, you know, living in drugs. And so like the, how streamlined the process is, how comfortable it is for you as a staker, like you don't have to care about on-boarding periods, you don't have to care about governance, you don't have to care about anything really. You can just be speculating and earning yield on stuff. That gives a tremendous advantage to...
+
+these entities who are able to have a vertically integrated kind of business model when it comes to staking. And so, what we see is that centralized exchanges have grown pretty fat on most of the blockchains they operate on. And that's even without liquid staking, right? So you stake, you get the yield, but you don't actually even get a token that you can use in other platforms, right?
+
+spaydh 
+Coinbase, I think, was the first one to recently enable this for Coinbase ETH, right? And the success of Coinbase ETH right now is pretty tremendously. It's the fastest growing liquid staking derivative in Ethereum. And so, obviously, some of it is probably just people who were already staking with Coinbase, but now are also getting the derivative, but some of it is most likely new growth as well. And so, the idea that you need...
+
+decentralized alternatives to centralized staking offers. And you need that alternative to be competitive enough to actually kind of meet that demand so that the absolute share of centralized actors represent in stake distribution doesn't grow at least, is I think like really crucial. So how do you make it competitive? Well, I guess there...
+
+There are really two things about this. The first one is that it needs to be able to scale with the demand for staking and not be limited by kind of like its internal kind of like way of dealing with stake, right? That's mostly relevant on Ethereum, but it's also kind of relevant in Cosmos. You want your protocol to be able to scale. That might include being able to onboard new zones quickly, although that's probably not where you'll find the most competition from the...
+
+from the most centralized actors like sexes because they take a while before they list new chains, I guess. But anyway, so you need the protocol to scale. You need to have a really good token, a really good derivative that is well integrated, very liquid, so that people actually want to have this token, use it, hold it. And you need the validator set underneath to be robust. And that's for multiple reasons. The first one is that.
+
+If your validator set management is really bad, you're going to actually hurt the network, right? And so either you're going to kind of destroy the network you're participating in, thereby also destroying your value, right? So it's kind of like, you know, destroying everybody, not great. Or the network itself in its community will react before that happens, hopefully, and will kind of like either fork you out, slash you, or find a way to, you know,
+
+spaydh 
+remove you from and stop you from hurting the network. So that's the first thing. And the second thing is that your token is only as good as your validator set, because if you have a shitty validator set with tons of validators who get jailed, others who get slashed, well, actually the APR of your liquid staking derivative is not gonna be competitive and it might even go negative if you're really, really bad. And so like...
+
+To sustain a good token, you need a good validator set. And so you have all of these things that I think can contribute to actually improving the concentration of stake. So that's kind of like on the liquid-staking front. Now, in terms of the way we do blockchains in general, I think having lower requirements to becoming a validator is a good thing. We see on Ethereum that the 32 ETH requirement has been a tremendous barrier to smaller validators.
+
+which kind of has been, you know, like Ethereum has this vision of everybody should be a validator eventually. Like it should run on your phone or whatever. We're going to make it like as lightweight as possible. I think this vision has tremendous value. Although Ethereum is very far from, from that state right now. And I think in Cosmos, we, you know, we have to deal with the limitations of tendermint, which is, you know, as you increase the size of the set, you increase latency and, and, you know,
+
+stops working so efficiently. So that's kind of one of the main hiccups there. And so in the meantime, before we figure out a way that we can have larger sets, which would be nice, I think there are interesting initiatives. Thighboard, a couple of months back, kind of led this initiative where they were trying to make some kind of a ranking, some kind of various interfaces so that people would have access to.
+
+differentiated tools and differentiated lists of validators with different profiles, so that people can select validators based on their own priorities without having to do three years of research, basically. And I think that that's really the key point. You need the information to be available and you need people to have access to it as easily as possible because the barrier on... the difference between staking with a centralized
+
+spaydh 
+and staking on your own is already massive. And so we need to do everything that we can to make it as easy as possible, whilst providing as much information as possible, but also recognizing that it will most probably never be possible to actually give all of the relevant information publicly, because some of the information that is relevant to actually making rational decisions about who to stake with is information that is really critical to the validator's business. For example, which jurisdiction are they under?
+
+Um, which country are they in, you know, where is, which servers do they use? What's their setup? You know, uh, that that's kind of like something that might be some, um, so you might see it as a best practice that should be shared, but you also might see it as a competitive advantage. If you have a better setup, that is more efficient, then you don't really want to share that, that information necessarily. Right. And so for, you know, for various reasons, like their personal safety, the safety of their business or their
+
+competitive advantage or whatever, or even the security of their infrastructure. Because, you know, um, for, for all of these reasons, validator will most probably not be fully comfortable sharing all of the information that is required to make an educated decision. And even if they did, most people would not have the time to actually, you know, go that in depth, like make charts about where the validators are distributed in the world and then kind of like aggregate stake based on this. Like
+
+This is not something that is available to just anyone. Me personally, I guess I'm somewhat deep in the context. I would still not be able to do that. So it's unrealistic to expect people to go that deep, basically.
+
+Citizen Web3 
+It's interesting that we came to that from that question because one of our, like in Citizen Cosmos, one of the targets and goals that we have is to try. And I think it's safe. I'm safe enough in saying that currently we have the biggest database in brackets. I'm talking of interviews, of talking to the top.
+
+founders or validators and asking them motivation, not just like what's your setting and what's your setup, because that's, like you say, private questions which can lead to security issues. But looking at those blockchains as nations and digital nations, and looking at those validators as businesses who build on those nations,
+
+then I want to know as a citizen of that nation, what is this business building in my nation? And I want to know whether this business is building an atomic bomb in their shed, you know, or whether they're really putting that money back into work. For example, building like an IMM zone, which will benefit me more, for example, right? And that's what we try to go into and really like try to, especially when we have like validators, we have now a separate like thing. We do like streams with validators where we're really...
+
+Ask them typical stuff, but we really try to get like profiles. But you're right. I mean, that's the thing people have no time and to, especially to listen to an hour long interview to an hour long content is even crazier in some way. Unless okay, if I'm like preparing to, I don't know, uh, if I have $10, that's one thing, but if I'm talking $10 million of stake in there, maybe I will go and do that research, but if I have 10, then I probably will not. And you're right. It's like, it's, it's a big.
+
+balance of weights which is like I don't know it's hard to understand which way it goes.
+
+let's get back and slightly different angle a little bit more about neutron and a little bit more about like the major topics out there and the next question I guess I have is.
+
+Citizen Web3 
+I like to break things down very literally. And sometimes I think it helps me and I hope other people to understand things a little bit better. And I'm gonna quote this one second. It says on the neutron Twitter, I believe, permissionless Cosm Wasm gateway to IBC. Now it sounds like all those words are kind of obvious, especially if you're from the field.
+
+I would like you to explain that sentence in your own words, like an le5 to that sentence, like really really le5. Like what is a permissionless, kozm, wasm gateway to IVC? What is that?
+
+spaydh 
+Okay, that's a good question actually. Okay, so Cosmosm is a virtual machine. It's basically a way that your blockchain can take pieces of code that have been written by other people that are not directly in the blockchain itself and run them to produce products and services or make pretty picture or whatever you want. The interesting thing about Cosmosm is that
+
+It's a module that you can put into your blockchain. And so that module, you can choose for it to be permissioned or permissionless. If you're permissioned, that means that for somebody to deploy a piece of code that can get executed in that virtual machine, they have to go through governance first. That's usually seen as a way to either improve the security of the zone by, you know, having some people who review the code before it's deployed, or a way to...
+
+only select the protocols that complement your zone the best, which makes a lot of sense, especially for app chains, like osmosis is doing it and it makes perfect sense. Osmosis doesn't really need to have, like, doesn't really need to have, you know, a very complex DeFi protocol that has nothing to do with the, their, their, their trading engine, for example. And so, um, what they want is to have.
+
+Other programs that come and compliment very closely, very, um, like make a symbiosis with their main kind of like product, essentially the permission is version of it is that anyone can come and you know, you have worked on your small contract, you're ready to deploy it while you can deploy it on your own. You, you know, you make a few transactions and then your contract starts existing on the blockchain. Good job. Um, the point here is that.
+
+We're building a whole ecosystem, not really just a one product that we want to compliment with sorts of like plugins. Um, we want, you know, we want to give anybody access to the technology, like to the IBC technologies that allow you to really interact with other blockchains very, um, very closely. Um, and so because of it, there is very little sense in, uh, for us in kind of like asking people to go through the hoops of governance, you know, presenting the whole thing and stuff.
+
+spaydh 
+You know, they can release their small contract. If they found vulnerabilities in them, they can migrate them to a new version where they patch it. They don't have to wait two weeks or whatever governance delay in between. And so if they improve their product or if they fix issues, they can just iterate, iterate, iterate, and get better essentially over time. And the overhead in terms of like the developer experience is much lower. Now the gateway to IBC part, what it means is that.
+
+spaydh 
+Well, I mean, there's a few ideas, but one of them is that building an App Chain today is much easier than it ever was, essentially. But it's still not a trivial amount of work. You need to learn how the Cosmos SDK works. You need to learn Go. You'll probably need to learn the rest down the line if you want to have small contracts as well. And
+
+And so, and like, you need to bootstrap your validator set, bootstrap the market cap of your token so that your zone is secure, et cetera, et cetera. There's a ton of considerations essentially. And so if you don't need an app chain, or if you don't have the means to have an app chain, then you can still enter Cosmos by just releasing a smart contract on Neutron. So it's a gateway in the sense that it's an easier way to enter Cosmos than, you know, spending up your whole blockchain, but it's also a gateway in the sense that once you're on Neutron,
+
+you actually still get access to basically all the technologies that AppChains enjoy, and also to all of the other zones that are connected by IBC. Not only can you transfer tokens, you can also, you know, execute transactions on every ICA enabled blockchain. You can retrieve data from any IBC blockchain actually, thanks to our implementation. And so, yeah, you can come to Cosmos to like on Neutron and then still enjoy the
+
+like ecosystem, basically.
+
+Citizen Web3 
+It's interesting. You mentioned quite several things while you were explaining the Interchain accounts and Interchain queries, I think you mentioned as well. Before, not this time, but you did mention it. And a lot of the things that you mentioned, or I would say that U-Tron mentions, are mentioned in the white paper 2.0 of Atom, right?
+
+And is that deliberate? Were you guys waiting to build those things? As I got confused here, sorry. But the question was something like that. Were you guys trying to align the release of the protocol and the test nets, the active nets, or the main net, or whatever with the release of the white paper? Or were you just
+
+piling the good technologies, so to speak, and put them all together.
+
+spaydh 
+No, actually, to be fully honest, we had zero visibility into the progress of Atom 2.0 itself, just like any other Cosmonauts who were looking forwards to it because exciting ways that align with Cosmos Vision to drive value to Atom is kind of an interesting topic. But at the same time, we weren't actively involved in it. We didn't have an idea of the timeline, so we didn't build our roadmap regard...
+
+With that in mind, the main thing actually for us was interchain security because it's going to, we didn't want to launch on our own validator set and then fire that validator set and then go to the validator set of the Cosmos Hub. We wanted to be interchain secured from the start. And so if we built our roadmap around anything, it's most probably interchain security. Now, in terms of Atom 2.0, I personally think that there's a lot of potential. Obviously there's a lot of risk as well.
+
+you know, that amount of money, if it's misappropriated or if the governance systems that control it are poorly designed, well, you know, there's a lot of bad things that could happen. At the same time, if we get it right, if we implement the right systems, if we, you know, come to consensus about how this is going to work, then I think there's tremendous potential. The allocator, for example, is something that I think synergizes tremendously well with Neutron.
+
+Because essentially you can have the hub that has this enormous treasury suddenly, right? And that treasury can be deployed to bootstrap the best projects and products, or even create kind of like, um, different systems that would not be possible in other circumstances, because the actors that would benefit from these systems would not have access to that amount of capital. Um, for example, um, for example, you can allow a money market to re-hypotheticate the cal the collateral.
+
+by liquid staking that collateral. The problem when you do this is that when the collateral needs to be recalled, then you have a 21 day, like, well, you either need to unstake and then that takes 21 days or you need to sell to the market, but you might not get price parity, right? And so you might actually take losses on your re-iProtection. That's something that you want to avoid. And so what can be done here is that potentially you could, that protocol could take a loan from the allocator for some capital.
+
+spaydh
+keep it as not staked tokens into a, some kind of a price stability module sort of things. And then when they need to unwind the positions, they basically swap through this at price parity. And then what the module does is just that it unstakes and then waits to 21 days and then it gets essentially all the tokens back. But the protocol is able to, you know, re-hypertiticate, generate more revenue without increasing the risk. And the price parity is not taking on risk either because it's just
+
+It's just unstaking stuff and waiting. And the Cosmos Hub itself is getting an interest rate on that capital that has been deployed. And so as long as the money market is able to generate more than the interest rate charged by the allocator, then that's a net benefit for everybody. The Hub gets money, the protocol gets money, Neutron gets transaction fees. So yeah, everybody's happy basically.
+
+Citizen Web3 
+So do you think things like the Interchain Allocator will help to make chains more... more community pools rather than chains more sustainable in the long run?
+
+spaydh 
+What do you mean?
+
+Citizen Web3 
+What I mean is that, for example, a few years ago, there was a lot of examples where, not a lot, but there were several examples where, you know, now we see DAOs buying DAOs kind of thing. We see one project swapping with another project, tokens inside a community pool, and that, in my opinion, makes the community pool a bit more sustainable because it's a bit more diversified. And now instead of...
+
+having, I don't know, just BTC or just Atom in the community pool and be open to the risks of the bear market, for example. And let's say in five years time when the chain is much bigger in terms of decentralization and the community pool only sustains a certain amount of money. And let's say that money is only in Atom and a bear market happens. Of course, we're going to have trouble because the price of Atom has fallen.
+
+It's not diversified enough. And a good example is what happened now, right? For example, if the Atom community was to diversify the community pool during the bull market when Atom was at a higher price, the community pool currently could have a lot more money in it to develop the chain, to feed more developers, to feed more projects, to theoretically, of course. So the question is, what some features, like the Interchain Allocator.
+
+could it help to achieve with the abilities that it has theoretically in an easier manner of just, oh, let's go and buy USDC or let's go and buy and you disinvest into new ICO as a community and hope that it does a one X 1000. That's the kind of sustainability I was talking about.
+
+spaydh 
+Yeah. Okay. So I think it makes sense. There's like, so it depends on what you mean by diversifying, like selling some of the tokens of a zone during the peak of a bull market, ideally, to stable coins, makes some sense, because these are not going to also decrease in value when the bull market comes, the bear market comes, right. But diversifying to other projects, like from like to other tokens from other projects.
+
+I don't think is very efficient in terms of protecting the value of the community pool in terms of their market for the simple reasons that most assets in crypto are very correlated. Most assets in Cosmos are even more correlated. And so like the same tide raises or lowers all ships essentially. It's especially true since Atom is kind of the most liquid, most established kind of token. And so it might not.
+
+suffer from the bear market as much as other list of established token like project tokens might as well. So like I think diversifying can be useful, but you need to do it kind of like carefully because well, you don't want to be buying stable coins at the bottom of the bear market. You don't want to be buying. So like what I'm trying to say here is that getting tokens from other projects into your community pool is a great thing to do, but not
+
+token for establishing diplomatic relationship between projects. Right. So what you want to do is you want to have close alignment with the projects that really you can synergize with. And so one way is you can do this is by making sure that they benefit from you kind of increasing in value and you benefit from them increasing in value. Right. So that's kind of like the way I see it. I don't see it mostly as a portfolio management thing.
+
+Citizen Web3 
+Although, although, although it wouldn't be that bad buying Atom at 10 cents or Ethereum at 10 cents, right? I mean, that would be a good buy if you could do it. But of course, of course, of course, but in your opinion, what would be like, the reason I was asking is to lead to this question, to the next question. And what would be in your opinion, a good way to help, community pools to secure value?
+
+spaydh 
+It's difficult to buy Adam with 10 cents with Adam though.
+
+Citizen Web3 
+in the long run. And I think in a sense, neutron is like you mentioned yourself, is all about helping accruing value to not just its own holders, but to the atom and the cosmos in general. So in your opinion, what could be those ways or what are you guys planning to do in neutron? I mean, like in terms of accruing that value and attracting that value to
+
+spaydh 
+Yeah. So I think like right now we're in the phase where, well, I mean, like in a few months we'll be in a phase where we're actually bridge strapping the ecosystem. Right. And so like, that's the phase of a project where essentially your network doesn't have the many users. It doesn't have that many projects yet. And so the, the appeal of joining the network is fairly low. Um, in traditional, like in like startups, we refer to this as the cold start problem or you need to start the engine. But.
+
+and it's not already running by itself, so it's much more difficult than just keeping it running red. So like in this specific phase of the project, most likely what we're going to do is we're going to give grants to projects that we think are promising to kind of like incentivize the first adopters to start and build the foundations of the ecosystem. It's likely that we'll have like...
+
+you know, like some very, very fundamental primitives that we will, um, like I think one of the models that makes sense for bootstrapping a zone is, um, you know, choosing a team that you can trust, like, you know, that has demonstrated their abilities already built interesting products or even preferably like built that kind of product. So a team that by all means, by doing your due diligence, you have a fairly high confidence that they will deliver something incredible. Then you give them.
+
+you know, a significant amount of the zone's tokens. Um, so that they know that over the next, obviously these tokens would be locked or vesting for a long period of time. But, you know, basically they get this incentive that, oh, okay. If I build this really cool premises and like premise, and then other people come and like develop the ecosystem, build on top of it, then not only am I, you know, generating a business that hopefully makes sense and is profitable, but I'm also
+
+you know, creating value for the whole zone. And because I have a large stake in that zone, um, you know, that that's going to be profitable for me too. But that state, like that grant, that huge grant at the beginning for like those kind of like strategic, um, like protocols should be, uh, close, like, like removable by governance. And that should be, um, something that should be known and well said from the beginning, right? And so the incentive you're creating here is that like, okay, if I do a great job and I build this zone up.
+
+spaydh 
+and I build my protocol up, then I'm going to get really rich. But if I fuck up or if I under deliver, then I'm going to lose it. Like all of the things that haven't been paid back to me. Right. So it's not like we're not going to take back what you've already been paid, but because it's gradually investing. If at some point, you know, we can demonstrably show that you're not doing what you were supposed to do, which was building an incredible product, then, you know, we can stop the relationship.
+
+and then try to find somebody else who will do a better job, essentially, by using those tokens again, or just remove them and take them back to the community pool so that they can be used there. So I think that's one of the first things. There are, for DeFi ecosystems in particular, there are a few fundamental kind of like premises that you need. You need a good DEX, you need a good money market, you need, you know...
+
+stable coin, you need bridges to other interesting ecosystems, you need an NFT marketplace, you need some way for DAOs to organize themselves, you probably need like liquid staking as well because they make like good collateral for a lot of these other use cases. And so like once you have this, then you have a lot of Legos that people can build on top of and create like more interesting, more complex or more innovative products, right? So that's kind of the way I see it. Like it's
+
+in the first phases of Neutron will most probably be, as a zone, as a project, we will most probably need to incentivize a few incredible teams to build these foundations so that other people can come then and then experiment to make new innovative stuff. The other idea here is that we're going to, Neutron as a protocol should reward people who are actively contributing value to it.
+
+And the way we do this is by having and like by proposing an incentives model where, you know, there are incentives in a pool, they can get distributed via governance to various protocol who have registered for a gauge. Once they receive these incentives, these incentives have to be distributed in totality, like in their entirety to the users, right? So they're not actually getting paid directly. Like the developers aren't getting paid directly from there. They can get grants and stuff.
+
+spaydh 
+But they're not getting paid with the incentives. What they're doing is that we help them bootstrap the adoption of their protocol, which generates fees for them because they should like, you know, they're monetizing their app, but we're also kind of like giving back value to the users themselves, right? And that value most probably they will use in the ecosystem. Um, or they might just like dump it and well, that's, that's, that's what happens with incentives and it's fine. As long as the ecosystem itself is growing and we're actually building the infrastructure that will make it, um, you know, competitive in the long run. I guess.
+
+And so the, there are like very interesting mechanisms here. Like the gauge system itself is kind of like a bit of a mind fuck, but like that's what I'm working on right now. So I like it. Um, but so like all that I've said, and a lot more that we haven't discussed yet. It really applies to a kind of like this phase of your bootstrapping a zone that doesn't really apply. For example, to the cosmos hub, the cosmos hub doesn't really need to do this. Osmosis doesn't really need to do this on the country because they already have. Well, especially as Moses.
+
+because they already have kind of like this established position in the market, they, they should be kind of like protecting the, their tokens, right. And kind of like only allocating the tokens where they're actually getting a large return on deployment, if you want, um, of these tokens so that they're not kind of like leaking out value everywhere, right? They should only be focused on growing the parts of the protocol that makes the most sense and actually.
+
+produces a better user experience, more revenue for the stakeholders, that kind of stuff.
+
+Citizen Web3 
+It's interesting that you went into bootstrapping zones because actually one of the next questions that I had was specifically about that. But on, let's say on the scale of the deputy general manager, because it's
+
+It's a very interesting thing with how blockchain projects get launched from a general perspective, because sometimes it takes like a garage story and sometimes it's a completely different cycle of 10 years. And there are still some projects like Hello2Matesafe or whatever that have been launching for God knows how many years. And then there is like ICP that have been launching for God knows how many years, but then don't really launch properly or do whatever happened to them. So.
+
+But the question was, in your experience now, that you got to, like you said, you started as a community manager. And I think I saw a cringe manager, which I really loved on your Twitter descriptions, that is kudos to that. Because I started as a community manager on blockchain as well. I think we had this conversation with Yelena, I think, from Informal Systems, that all the good people in crypto start as community managers. And it's true, man. So the question is such, I'm sorry.
+
+spaydh 
+I wouldn't say I'm necessarily a good people. Like my title is deputy general manager. My actual title is like chief LARP officer, right? CLO.
+
+Citizen Web3 
+We aren't!
+
+Citizen Web3 
+Man, my title is, what was it? I already forgot it. It was Chief of Looking Busy or Manager of Looking Busy or something like that. So it's, yeah, it's, you know, but the question back to it was something like, what, as somebody who now went through not just community management, but from, you know, you said you use the smart word bootstrap in a chain.
+
+spaydh 
+Well, that's a good one. That's a good one.
+
+Citizen Web3 
+I would like to maybe take it a little bit of zoom out from the development side and ask you, how was that experience? What would you suggest to somebody that just getting involved in it? What did you say don't ever do guys? Like if you're trying to launch a, whether it's a Cosmos project or something else, don't ever do this or definitely do that. Or something that you like to share that you experienced during the journey. This is still ongoing, of course. And, but, you know, whatever it's on your brain.
+
+spaydh 
+Well, like we have the million dollar question. This is the trillion dollar question, I guess.
+
+Citizen Web3 
+Damn!
+
+spaydh 
+I mean, like, so I think this is a topic that is like so complex and very unique to every project and the context in which they, you know, are built, their USB, the type of communities and developers that they appeal to, that there's no like, you know, one size fits all recipe. Like in 2021, we've seen that large incentives programs.
+
+seemed to work at bootstrapping, having protocols on the zones. We've also seen now that a lot of the activity that were on a lot of the blockchains that had these programs like Avalanche and Phantom, as unfortunately for these ecosystems left. And so like the...
+
+spaydh 
+I think it's a tremendously tricky question. I think there are multiple approaches to kind of trying to find the solution that is going to work best. I think first you need to have a good understanding of what has been tried before. You need to try and identify what worked, what didn't work, and which context these solutions were applied to. Like, for example, the Ethereum story of the whole thing bootstrapping itself is unlikely to repeat itself at scale.
+
+because there is so much competition right now. Why would you devote all your time with no expectation of an upside to building something on a completely new ecosystem when there is a very good one, actually multiple good ones on the sides with whatever language you want to code in, like Rust, Cosmos, or Solidity if you want, or whatever you can choose. This doesn't seem like it's...
+
+likely to happen again. Right. And so like, I think you need to learn from kind of like what happened before, try to take it into account. And that's why like, for Neutron, we want to have, like, basically, we want the incentives program to be inside the blockchain itself, and managed by the community itself, so that you can adjust over time to the circumstances that it's faced with. So yeah, I guess that's one of the one of the things then.
+
+There's really no one size fits all kind of thing. Like, we're trying our best. We're trying basically everything possible to make sure that Neutron will be successful. At the same time, you can never guarantee that these things will be. And so I think that's kind of the same problem that every founder or every kind of person launching a new project will be faced with. Like you have to make it honest and... Like...
+
+you know, kind of like evaluation of the market. And is there really a need for what you're building? Um, usually you only start building if your thesis is that, yes, there is the need our thesis is that, yes, there is a need for, uh, small contracts that exist across multiple blockchains and allow applications to behave across blockchains just as if they were one, uh, whilst being secure and everything. Um, and maybe we're wrong. I don't think we're wrong, but maybe we're wrong, you know, so you can, you can never know, we can just, um,
+
+spaydh 
+Try and learn from the past. Try to find, like improve those systems and try to implement them in a way that makes sense so that perhaps, you know, you're building the next, not the next Ethereum, I guess, but, you know, the next kind of like really cool ecosystem that you want to be participating in.
+
+Citizen Web3
+think one of the main things is definitely to get hotels with breakfast. I'm joking man. But for guys, for people who don't know what the joke was about is that before the conversation means paid we're talking about that it's a really bad thing that hotels don't do breakfast. And I think it's very important for the success of anything to eat breakfast. So I'm going to give you a small a small, sorry, excuse me, a tiny blitz. I know it's boring, but it's a tiny one.
+
+spaydh 
+Yeah.
+
+spaydh 
+No, that's good. That will save people from my long rents. So it's a good thing. Go on.
+
+Citizen Web3
+Give me... It's a resume blitz kind of thing. Because I know you people are busy. Founders, CTOs, general managers, GMs, everyone is busy. I know that. And I know especially you mentioned that you're in DEFCON. So of course, I understand that. But so, wait, it's a very small blitz. Three questions. So first one, give me three projects outside the top 20. And please don't say Atom.
+
+that you're interested in. They don't actually have to be blockchain. So if you're not naming blockchain projects, try not to name Tesla or something like that. Something, three things that you're curious in, whether it's blockchain projects or any technological or other projects out there.
+
+spaydh 
+Okay, I like, so I think like what the Anuma team has been building. Well, they're building basically everything. Like it's incredible. I don't know how they can, either they are spreading themselves too thin or they're just, you know, unhuman. But I like a lot of what they're doing. I'm not saying it will be necessarily successful or that it will fail. I don't know. I just like how crazy they go about their ideas. I like, what do I like?
+
+Citizen Web3
+It doesn't have to be blockchain, could be anything.
+
+spaydh 
+I mean, okay. Oh, that that's an even harder question than the three things you're in the world.
+
+Citizen Web3 
+Now let's take the VLOG SHAME! Let's take the VLOG SHAME! Let's take the VLOG SHAME! Come on! Go on, go on! Anyone that... Doesn't have to be three, it could be just the one! Just if you remember the one, it could be the one!
+
+spaydh
+I think I like what Gitcoin is doing with decentralized grants. That's a tremendous inspiration. I think it's a difficult question and I think it's a very good start to solving this question. I'm looking forward to seeing what kind of problems they will encounter, how they'll try to address them.
+
+spaydh 
+And I guess I really like what DOWDOW is doing as well. I think we're still a long road from having a fully integrated comprehensive DOW management kind of system that allows you to have people engage with the DOW, manage your treasury, manage the DOW's activity day to day, exist on multiple blockchains, everything. I think it's a very, very complex topic, but I think that's a topic that has been for a very long time underserved. And I think they're doing a really good job at...
+
+and, you know, tackling the problem.
+
+Citizen Web3 
+You're gonna hate the second question. I can already see that. Two things that motivate you in your daily life. That keep you going, waking up in bed, okay, learning stuff and
+
+spaydh 
+Yeah.
+
+spaydh
+Learning stuff. Yeah, learning stuff and, you know...
+
+spaydh 
+Oh, no, actually, because it's kind of the same thing. Learning stuff mostly, and coffee. Ha ha ha. Yes.
+
+Citizen Web3 
+Coffee, I love it. I love it. Coffee is good. And last time, give me one person that you recommend to follow that not many people have heard of. It could be one book to read, something that you would suggest to people out there, people if you want to be motivated and focused on whatever and have a happy life and go follow this guy or read this book, whatever. Something one that people, but not that many people have heard of.
+
+spaydh 
+Yeah. Paulo Coelho, The Alchemist. It's a short novel. It's easy to read. Yeah. It's a great one.
+
+Citizen Web3
+Nice, I read that actually, yay. I should succeed. It is, it is a great book. It is a great book. I really, really loved it. It was years ago I've read that, but I was obsessed with that book. Yes, for sure. For sure. Spade. Um, man, I would like to carry on for another hour. I guess so, but I guess then you probably will kill me, but, uh, uh,
+
+spaydh 
+Yeah, yeah, I think. It stuck with me though.
+
+spaydh 
+No, I wouldn't, but I probably would get killed for skipping my boost duties lot.
+
+Citizen Web3 
+Spade it's been a huge huge pleasure. Thank you for coming on
+
+spaydh 
+Yeah, thanks for having me. I enjoyed our chat a lot. I hope people will enjoy it as well.
+
+Citizen Web3
+Thanks! Yes, I hope you do give people and please leave comments if you find it interesting people. Thank you Bye everyone 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

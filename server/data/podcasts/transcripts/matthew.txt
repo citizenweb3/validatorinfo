@@ -1,0 +1,406 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/matthew
+
+Episode name:
+Winner's Bias, Decentralization Spectrum and Bitcoin with Matthew
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen Web3 podcast. Today, I have Matthew from Guardian Validator with me. Matthew, hi, welcome to the show.
+
+Matthew
+Hey, Serge, thank you guys so much for having me. Really excited to speak about it, yeah.
+
+Citizen Web3 
+Glad to have you on. I usually do a small categorization of guests lately that I don't know why I picked up that habit, like saying, we have game daves today or something like that. And you are more of Solano ecosystem. And I have to say, we don't get very, very, very many guests from the ecosystem, which is a big shame, in my opinion, because we've been trying to fix it lately with a lot of other ecosystems. But no pressure. No pressure.
+
+I'm going to ask you to a traditional thing and just introduce yourself and what I mean by that. Whatever you want people to know about you. How did you get into blockchain? How did you get into Web3? How did you get around to do whatever it is you're doing today and anything else you want us to know about you, please.
+
+Matthew 
+Yeah, man.
+
+Matthew 
+Sure, man. Yeah, thanks so much. guess, you know, Solana ecosystem native projects. Yeah, it is quite a tough space to interact with people. But one thing I can say about the Solana ecosystem is that everyone is really passionate and everyone is really motivated. you know, I think, you know, getting out there and chatting to Solana guys and yes, I've been, you know, in crypto for so I've actually been in crypto since around 2016. But
+
+you know, mainly the Solana space now. So yeah, I basically, I think I learned about Bitcoin while I was at school. So I'm 31 years old now, I think. And I learned about Bitcoin and I kind of dismissed it off the bat, know, immediately I was like, what is this digital money? This makes no sense. And so I learned about it, but I kind of ignored it.
+
+And then, you know, as I got into college around 2011, I think it was, I took a little bit of a deeper look, but still didn't, you know, purchase or jump in. And then I think my very first, and this is going to sound a little bit dodgy, but I think my very first Bitcoin transaction, I purchased some Bitcoin, I created a wallet and I purchased it.
+
+The reason was to actually buy some cannabis seeds from Amsterdam. There was an online website where you could purchase cannabis seeds and I was interested in growing cannabis back then. So it was kind of like my first introduction to Bitcoin. So I did that, the seeds arrived, my plants died, it was a huge failure. But ever since then, I've had my eye on it.
+
+I it was a year or two later, I logged back into that same wallet. think I put in like, I think it was probably $80 and I spent 79 of that $80 and I looked back and it was sitting back at $80 and that's when, you know, that's when it clicked. yeah, so that's sort of, you know, my introduction to crypto as I guess, you know, unsophisticated as it was, but yeah, so that's, that's sort of when I, when I started to look at it and
+
+Matthew 
+Yeah, think that's sort of where my interest lies. And then I started investing. I started purchasing all sorts of during the 2016 pre bull run and then the massive blow off top in 2017. That was sort of my first rodeo with crypto. So I got into all bunch of things, all the old coins that don't exist anymore and
+
+Yeah, basically, you know, just messing around, saw the potential and since then, yeah, that's how, that's basically how I got into it.
+
+Citizen Web3 
+I think that the amount of entry to the crypto world via Silkroad or anything similar to Silkroad, whether it was more subtle things like buying seeds, I think we are talking like 60 to 80 % of people, in my opinion. Like the cool people, let's say, right? At least like the people who end up doing things.
+
+Matthew 
+Yes.
+
+Matthew 
+Yes, yes, it's crazy and I think...
+
+Citizen Web3 
+Please please go on Matthew, please go on.
+
+Matthew 
+yeah, yeah, just exactly to that point. And I have a lot of friends that got into it through poker because, you know, cross border payments were extremely tough. you know, poker guys would just, you know, instead of sending money and takes a week, they would just send Bitcoin. So, yeah, exactly to your point. It's that sort of old, was slightly dodgy, but also not. So, yeah.
+
+Citizen Web3
+I also noticed that the poker guys, make fantastic traders. They're so fucking good, really. Like, I don't know, have you noticed that?
+
+Matthew 
+100%. So I'm actually so yeah, so I guess I haven't told my full story, but I went to college for to be a software developer. I did it for I think it was about two years. And I realized, you know, building business logic for other people is just draining me and it was just not fun. And I sort of branched out into a sort of a new ventures investment.
+
+sort of realm, I started working for a bunch of shareholders, and I learned a lot of business through that. And then, you know, I, from then I moved on to actually, you know, doing quite well in crypto. And then I eventually started learning how to trade. And so I actually I'm also a professional trader. And I can agree. So I used to play a lot of poker. And I can agree the mindset, you know, thinking of things in plus EV.
+
+and your risk management and playing the odds, of dismissing variance. I think that mindset lends really well to the trading mindset. And yeah, think poker players especially make excellent traders. I mean, maybe not myself, it took me three years to get profitable, but I know there are some guys who hop right over and they do amazing.
+
+Citizen Web3 
+I think risk management is like a super keyword that I think I've been like, well, I'm not going to call myself a professional trader by no means, but you know, I've been trading for many, many, many, many years, over a decade and not just crypto, but I've started with options back when it was a thing, but this was many years ago, really. And I think for me as somebody who didn't come from that background, I came from a completely different background, risk management was
+
+And still is today sometimes is a super complicated thing. mean, I can make a lot of jokes about it. I understand it, but, you know, deep down it feels like it's a very vital piece. think that a lot of traders should start from. I think like, yeah, please go on.
+
+Matthew 
+sorry Matt.
+
+Matthew
+Agreed. Yeah. Sorry, you cut out there for a second, but you came back. Agreed. Risk management, in my opinion, is by far the most important thing to learn. Also, think it's also one of the things that of clashes with human nature and your emotions a lot. So I think, obviously, the psychology side and the risk management side ties hand in hand to a degree. So my methodology when I trade is I'm a systems-based trader.
+
+So basically I'll develop a system similar to poker where you kind of know what your expected ROI is, your win percentages and obviously the past cannot predict the future, but you go based off statistics. And that cut out a lot of the emotion for me. It made it lot easier. You kind of set your take profits and your stop loss, if you will.
+
+And then, and you let it ride and you just do that over and over and over and over again based on statistics. I think, you know, understanding risk is super important to that style of trading and I guess all styles of trading. But yeah, I think risk, like you said, is one of the hardest things for people to grapple with. Not only because it can be extremely complicated.
+
+you know when you bring in leverage and you know your bankroll as poker players would say. But yeah I guess yeah that is definitely my number one thing when everyone when people ask me about should I get into trading I mostly say no but if you are going to make sure you dive deep into the risk management side of things before you even put a dollar in.
+
+Citizen Web3 
+The funny thing is nobody does, mean, everybody wants to be smarter than themselves, but I guess that's what leads to... No, no.
+
+Matthew 
+Nobody does, I agree. I also didn't. I paid my school fees. I think everyone does. Everyone goes, if you haven't lost your account at least three times, then you're not a trader.
+
+Citizen Web3 
+You know what they say? We say they, we, know, I don't know. Should I refer to it as we's or they or, but there is definitely saying in crypto, you know, that if you haven't, you know, lost your keys at least once, if you haven't forgotten your password at least once, you haven't locked yourself out of a wallet you changed once, you're not using crypto properly. Something is wrong there. You know, it has to happen. You have to lose some tokens. You have to lose some wallets. It has to happen.
+
+Matthew
+It has to happen. And this actually leads into sort of why I dived into the validator space a little bit. what, you know, I actually, yeah. So I found Solana at some point in 2020 or 2021. I'm not entirely sure exactly when, but, know, I sort of looked into it and I, you know, I was super bullish, really loved the idea, you know, this network, this supercomputer network for everyone to utilize.
+
+Citizen Web3 
+Please, please tell me.
+
+Matthew 
+It's just a beautiful thing. I really started to invest heavily into Solana and I sort of, you know, really, you know, dived in like, you know, 80 % of my attention was on Solana at the time. And this was all on FTX, believe it or not. I made the mistake of keeping all my Solana on FTX when it went down. yep.
+
+it can happen to the people that are the best of us. I mean, I was, you know, I'm very risk tolerant. I understood the risks, but, I guess, you know, when you get comfortable, you get comfortable and you make mistakes. So I had, I probably lost, I think 80 % of my net worth on FTX, which was a massive knock to myself. And most of it was actually in Solana at the time. So I guess, yeah, that happened.
+
+and I didn't, you know, it was obviously a hard knock, but I didn't let it take me out completely. I did have some, you know, funds in cold storage that I can still trade with. So, you know, I kept trading. But, you know, I sort of, I dived into the world of, you know, know, cold storage and hardware wallets after that. And I started looking and you know what I found was, and the reason, sorry, the reason I had
+
+my Solana on FTXs I was loaning it there or they were staking it or something like that. I was getting probably like six or seven percent and I didn't understand staking on Solana at the time and if I did we'd probably be in different place right now and I probably wouldn't have a node either because you know I would have just staked my Solana and been being happy. So when I found out that you know staking on Solana is is different from you know some other protocols
+
+where you actually delegate your Solana to a validator, which then votes on your behalf essentially. So your Solana never actually leaves your wallet when staking. You know, once I understood that, it got me interested and I started diving deep into what are validators? What is staking on Solana? How does it work? And yeah, I guess I was in a position where I'd lost most of my funds and I wanted to start something new.
+
+Matthew 
+Yes, I've still trade to the state trading right now. But yeah, it pushed me into learning about it. And once I understood it, I got super passionate. And I looked at the validator landscape and I saw, you know, there's potential. I wouldn't say problems, but there's potential value there that a lot of people are not taking advantage of. So that's what, you know, the sort of the spin where we're going on with our validator is, you know, sort of looking at the
+
+economic landscape and sort of sharing that with our stakers. basically there's two kinds of rewards, staking rewards on Solana or yeah I can just call them staking rewards. So Solana is actually inflationary. It started with the very first block in March 2020 and the inflation rates started at 8 % and it decreases by 15 % per year every year well every
+
+and every epoch year basically, which I think is about 182 and a half epochs, it decreases. So inflation comes down and inflationary rewards are actually what stakers see as their awards. So these newly minted tokens, they only get sent to stake accounts in proportionality to how much Solana is in the staking account and obviously how well the validator is voting.
+
+So that's one sort of set of staking rewards that users get. And the other is not really user-based, but more validator-sided, and that's block rewards. And this is mostly made up from the priority fees that users pay to, know, prioritize their transactions. yeah, so on Solana, 50 % of the priority fees are burnt, and then the other 50 % are given to the validator whose leader slot it is.
+
+And the leader slots is basically when it's your turn as a validator to produce a block. So those block rewards are actually increasing over time, whereas the inflationary rewards are decreasing. So Solana's inflation will cap out at 1.5 % after X amount of years. And the block rewards as the chain is being used more and as
+
+Matthew 
+the ecosystem grows, the block rewards keep increasing. So we've actually taken an approach and there are other validators that do this, but we've taken the approach of sharing our block rewards with our stakers. So that's sort of, you know, a spin, you know, that that's sort of the direction where we're going at the moment.
+
+Citizen Web3 
+I definitely have some questions for you lined up in that direction, but I want to dig a couple of more things if you allow me. One thing, by the way, I want to definitely comment while hearing your story about losing the fans on FTX. It reminds me somewhat of my own story and not to talk about it, about the morale. Because from what I hear from you, it's the same morale and I'm hoping that somebody is listening to this.
+
+If anything like that happened to you, of course, once again, I hope it hasn't. But if you do end up losing your funds and doesn't matter if it was five or 10 year, you know, progress or work that led you to build them up. Again, listening now to Matthew's story, to your story, Matthew, and remembering my own. I remember the words of my friends that got me out of when everything similar thing happened to me in 2019. You haven't lost your knowledge. And those simple words.
+
+I think are essential. Like, and in your story as well, you you lost 80 % of your funds. You looked around, you look what I have and you went on and you achieved more. And yeah, this is just for anyone that is struggling with anything like that. think that remembering that if you lose everything you have, you still haven't lost everything you have because it's you who has the everything and people, you know, we don't...
+
+Matthew 
+I love that. absolutely love that. Yeah, and I guess...
+
+Citizen Web3 
+Thank you. To be honest, it was my friend's words. But yeah. Not mine, but yeah.
+
+Matthew
+Yeah, I mean, I love those words. And that's the thing, you know, I kind of glossed over it because it happened. And, you know, I've kind of moved past it now. But you're absolutely right. It is incredibly devastating. I remember the day or the evening that it sunk in that the funds were really gone. I kind of just drove to a petrol station and I kind of just sat there at like 12 o'clock at night, know, in the, you know, quite everything's quiet and I kind of just
+
+processed it and it is extremely disheartening. I think I lost, I think it was two and a half to three years worth of funds that I had accumulated. And it is incredibly tough. And I had one or two friends that lost some money there too. And one of them is not in crypto anymore. So it is a mental battle and it is harder than, know, people lost their livelihoods. It's nothing to
+
+of gloss over but that's the thing you haven't lost your knowledge and if you've done it once you can do it again and it's just a learning experience as you know it it can be extremely I don't want to downplay how how hard it is and how devastating it can be but it is you can get through it there is nothing stopping you if you've done it once you can do it again
+
+Citizen Web3
+
+Matthew, let me ask you this. Let me ask you a little bit about the aspect of the business side of the Validator. And regardless of the stigmas around it, what you put into it, what is a Validator business, because there is all kinds of teams. There are, shall I say, basement tips with one guy. There are huge...
+
+teams that have investors and so on. Before deciding on that, guess the geographical location, a lot of the time plays a huge role. And South Africa is well known for all the problems with electricity, issues with access to Starlink. And there are many, many, many, other things. Sorry.
+
+Citizen Web3 
+My question to you, what I mean, it's this this kind of thing stop a lot of people. I'm glad to see that it doesn't stop you guys. I don't know if there is a question there, but like I guess what I'm trying to get at. Why? Yeah, yeah, go on, please, please, please, please, on, please, please, please do.
+
+Matthew 
+Yeah, I think.
+
+Matthew 
+Yeah, I think I understand what you're sort of speaking to and asking. So yeah, like you said, know, there are many different kinds of teams. You know, there's these big, what would you say, like industrial validators, know, these big guys like Galaxy and Coinbase and Bybit. And then there's, you know, your independent validators. Then there's ecosystem native team validators.
+
+So I think there is actually quite a broad spectrum of, you know, sort of running a validator and, know, what you're trying to accomplish with it. And obviously, like you said, the location is extremely important. So you are 100 % correct when you say South Africa, we do have lots of power problems. We have something called load shedding. We don't have it right now, but we have it very often where, you know, your power will be scheduled to be cut off.
+
+for a certain amount of hours per day into a sort of, you know, shed the load, I guess, and give, you know, everyone a chance for power. And, of course, you know, access to Starlink with our government's policies. They're sort of talking about that right now. But yeah, I think so. So we are a small team. So it's just myself and my partner. So we're in, I guess, what you would call an independent validator.
+
+And yeah, so we kind of looked at it and we sort of obviously did the economics of it. And for us, you know, there's two approaches. There's doing it the best capital efficient way possible. And then there's doing it, you know, the absolute best performance decentralization, you know, best for the network way possible. And I think we sort of took an approach that was, I would say,
+
+leaning towards better for the network but also capital efficient. So, you know, the best of neither world but slightly more towards, you know, performance. So for us, South Africa is a tough place to host our node. So it is possible. There are data centers that have backup power. You know, they have priority connections.
+
+Matthew 
+So, you know, these things never go offline and they've got a 99.999 % uptime So it is very possible to host your validator here. The only issue is it's expensive as you can imagine, you know, you know, you're paying probably Five to ten times more than you would if you were to purchase the hardware yourself and host it locally
+
+Citizen Web3
+Do you think that hosting locally is something more validators should do? This is actually a very interesting point for me. What's your thoughts on that?
+
+Matthew 
+Yeah, so in Solana, there's, you know, metric stake centralization, I guess you would you would say, and that's like, what percentage of stake is in your data center, right? And of course, if you're hosting locally, only your stake would be the data center, right? So spreading the stake around is very important. I don't think I sit on either side of the fence when it comes to, you know,
+
+you should be hosting locally or you shouldn't be hosting locally. I think there's pros and cons to both. And I think that, you know, decentralization wouldn't be impacted too much if you didn't host yourself locally. But yeah, I guess that's where I would, I would sit there. I'm not too passionate either which way.
+
+Citizen Web3
+I understand. guess it's a big dear subject to the heart, so I'm curious. what's think more, not more important, but it's kind of in the same direction, following from what you just said about decentralization. Would you say that the decentralization in general is a spectrum? Would you agree rather with the saying that decentralization is a spectrum?
+
+rather than there is just decentralized or centralized. And depending on the situation, there are all kinds of situations. And again, I guess this is more of a general question from following up talking about decentralized staking.
+
+Matthew 
+Mm.
+
+Matthew 
+Yeah, I think decentralization is a very hot topic and it's usually, you know, you've got maxis on one side and then people who don't seem to worry too much on the other. Your question is very interesting. I haven't thought about it before, but I do think decentralization is a spectrum to a degree. So I can give you an example of something, you know, one of these scenarios that you wouldn't consider and it may make Solana look good and it may
+
+make Solana look bad, but I'm going to tell it anyway, right? So recently there was, so Solana has, the validators have a client, right? And this client, there's only one real client on Solana at the moment, which you would consider bad for decentralization. Of course, there's also Fire Dancer coming and you know, there's the Jitso client, which is the Agave client, with a
+
+JETO extension essentially. So what happened recently is there was a flaw. I don't know the specifics because I didn't actually look at the code, but there was a vulnerability. The vulnerability wasn't, it's not gonna break Solana. It's not gonna cause anyone to lose many funds or anything like that. But if exploited, it could have bought Solana down for a couple of hours. And we all know Solana has had down times.
+
+over the last few years. So what happened was, this vulnerability was found. And now, now this is where we sort of speak to decentralization, right? So a lot of the validator community on Solana, especially the, you know, the bigger stake community, they, kind of all know each other. I wouldn't say everyone knows everyone, but you know, there's places where we hang out and we discuss things and
+
+So once this vulnerability was found, the guys that found it and the guys who were prepping to fix it, essentially they messaged all the super minority validators and they sort of got them to patch and upgrade their clients, their version, to sort of make sure that this vulnerability couldn't be exploited. And this was done sort of not in the public sphere. It was done privately. They messaged them.
+
+Matthew 
+They all came to a consensus and they all agreed that this, you know, is, you know, worth patching before, you know, putting it out into the public as putting it out into the public would, you know, potentially allow this vulnerability to get exploited. And so what happened was is they, the majority, you know, the top, I think it was like 33 % of stake had this patched in before they announced it to the public. And then all the other validators then upgraded the patch as well. And that was just sort of to secure.
+
+secure the network. that's like sort of an edge case where you would say, well, that's very centralized. If the super minority can kind of change things and do things without the public, that seems like a risk. But on the flip side, they're all sort of independents. They don't work together, but the code was shared open source. They told them this is the vulnerability. This is our fix.
+
+look at it and they kind of all came to consensus and agreed to patch it in. So I guess that's sort of on the spectrum of decentralization in a sense, but it's not directly tied to the chain itself. So I hope that makes sense.
+
+Citizen Web3 
+It does. It does. And I would say that what it brings to mind straight away is first of all, let me assure you that this happens on every network I've seen. And I've been validating networks since roughly 2016, since the post times. And it happens everywhere. And I think the word immutability when used in relation to blockchains has been very badly marketed because
+
+It's not immutable. It is mutable if there is consensus to change it. So the question is, know, what requires the consensus? So, yeah, it's like, yeah, you know, it's a thing. So I definitely agree with what you're saying. think that, you know, unfortunately, as much as I've dedicated pretty much, you know, like a third of my life to this or a quarter of my life to this. But
+
+Matthew
+Yes, agreed.
+
+Citizen Web3 
+I definitely think that the way sometimes we crypto folk use terms for the outside world builds a lot of fairy tales around them. I'd it be as it is and people are told as it is and they decide for themselves whether that's good or bad. So, but yeah, that's just my take anyway. So I definitely agree with every word you said there. I think that's on spectrum.
+
+Yeah, let me... Yeah, please go on. Please comment. Please comment, Matthew. Please comment. There's just a small lag between us.
+
+Matthew
+Yeah man, and yeah.
+
+Matthew 
+No, no, no. Yeah. So, yeah, I guess I was just going to say that, you know, the validator landscape on Solana, I can't speak to too many other networks, but I would say Solana is winning on the the decentralization front. But anyway, so let's carry on. Yeah.
+
+Citizen Web3 
+Sure, it's it will be an interesting I think, think to see how it's going to play out in the next five years. But yeah, what I want to ask you the next question I have for you is a little bit I guess on current affairs kind of thing. I don't know if you if you but you will understand what I mean in a second. Now, I want to know your opinion here. And I don't know if you follow like the latest crypto.
+
+crazy news, right? But lately there was, you know, this interview and today just again, this is for people who are listening to this in the podcast itself. They're recording. are now at the end of October, roughly 24 of October. you know, there was recently an interview with Sailor that came out and that girl who asked him and I want to upload by the way that girl because she did a great job, you know, at asking him the correct questions.
+
+And this guy whose company holds the biggest, apart from Satoshi, stake in Bitcoin. And suddenly this dude says that what we need is actually centralized entities to hold it. And in my opinion, what happened there was really like his true character coming out. And everybody who follows this dude or those things understands that it's not a surprise.
+
+The question that I want to ask you is, you think that, you know, the whole recent comments from Sailor about self-custody, do you think that this is where the future of Web3 and cryptocurrency is headed? Because a lot of people think, okay, it's players like him, like Sailor, who kind of decide where this goes. And a lot of people, unfortunately, listen to people like that. So my question to you is,
+
+I don't know if you heard these comments, but basically the guy just said that, yeah, fuck self-custody. We need crypto to be held by centralized entities. And it's hilarious coming from him, but expected. But anyways, what do you think about that? And where do you think it's going? Sorry.
+
+Matthew 
+Yeah.
+
+Matthew
+Yes, yeah, so I actually did see it, yes. I was a little bit shocked as well, to be honest. you know, I guess my reading from that situation is he sort of, this is not just personal opinion, obviously, I have no idea what he's actually thinking. But I think, I think what happened there is he's been so invested in in sort of his way of doing things. And, you know, he's sort of
+
+got his methodology. I don't want to go too much into it, but basically, know, he gets investors, he buys Bitcoin on leverage, and he basically ends up having a 0 % loan to pay back, and then he buys Bitcoin with that money. So I think, and then obviously his investors benefit via, you know, the MicroStrategy stock. So I think he's been so invested in what he's doing, and he's been so adamant about his methodology and its
+
+really working for him. So I think there's a little bit of a winner's bias there. And I think he's sort of forgotten, you know, what crypto is all about. so I, yeah, that's sort of my take on it. Do I think that this is the direction we're heading? I'm not sure. I mean, yes, the trend is in that direction. And I think, you know, obviously getting into crypto self custody is not
+
+an easy thing to do. It's, you know, it requires, you know, it requires, you know, effort and a lot of, what's the word I'm looking for? It's, there's, there's a lot of weight on your shoulders. There's a lot of pressure. There's a lot of time. And the responsibility was the word I was looking for. And I think, you know, in the current world, yeah, in the current world, I think
+
+Citizen Web3 
+Time.
+
+Citizen Web3 
+responsibilities.
+
+Matthew
+People are not used to having that sort of responsibility. They're used to banking, they're used to Apple Pay and they're used to all of these things. And I think that's the trend and now we've got a Bitcoin ETF. I don't think Bitcoin ever needed an ETF, but we have one. So I do think the trend is that direction, but I do not think that it's going to be a problem. think, you know,
+
+Bitcoin in my view has reached escape velocity. It's not going anywhere. It's established itself. It's proven itself. I think if you know, there are, I think there will always be people self-castigating and taking matters into their own hands. And I think people that don't will get burnt and the cycle will repeat itself. yeah, so I think, you know, the move towards freedom and the move towards owning your
+
+you actually owning your assets, actually really owning them and not, you know, you know what I mean? I think, I think that will, will win at the end of the day, but for convenience sake, people will pick, will pick institutionalized. Yeah. You know what I'm saying.
+
+Citizen Web3
+I'm gonna change the topic to your validator in a sec, but before I do that, I wanted to follow in what we just talked about for anybody again, once again, listening to this. I'm gonna read and quote the one, two, three, the fourth and the fifth lines from the Bitcoin, original Bitcoin white paper, just for everybody, just to kind of memorize this. Digital signatures provide part of the solution.
+
+Matthew 
+Awesome.
+
+Citizen Web3 
+Digital signatures provide part of the solution, but the main benefits are lost if a trusted third party is still required to prevent double signing. That's it. I'm just going to leave it there. whenever people think about what crypto has to be, I think it's right here. But the main benefits are lost if a trusted third party is still required. think people should really... It's there. It's the fourth line from the Bitcoin white paper. And I think people kind of like...
+
+let it go for some reason. And I hope that both me and you are wrong because I'm actually with you on the train thinking that that's where it's going to go. But I really hope for us that we are wrong. But I don't know if you want to comment that or if you want to.
+
+Matthew 
+Me too. 100 %! Yeah, yeah, you are 100 % correct. And like, what's the point of Bitcoin then? You know, people, yeah, it's... I mean, there are other points to Bitcoin, but yeah, it's, I agree 100%.
+
+Citizen Web3 
+Let me jump here to I'm going to play with the devil's advocate right now, Matthew. Yes, yes, like what happened with the X-Men. But let me let me play with the devil's advocate here. And I'm to talk a little bit about your validator. And it's going to be the longest question statement I made. But I'm going to try because it's in my head, but I'm going to try and put it together. Sorry. So I am all up. And I think, you know, the way pro.
+
+Matthew
+mean, look what happened with FTX. Yeah. OK.
+
+Citizen Web3 
+sort of decentralizing validators. In fact, I think that that's the way forward. We just spoke about it. think that validators are the last centralized entities that are keeping crypto from becoming more decentralized because every validator is a centralized entity with self-interest. And I'm saying it because I am one. So I know that my priorities is me, is my project, is the success of it, is making sure that people eat, is making sure that whatever we do,
+
+works. So we are a centralized entity. But I have seen lately a lot of, not just lately, but over the past few years, I've seen numerous attempts from all types of validators to create either some kind of economical, you know, railway or a different, I economical railway which returns, which gives the stakers a bit more
+
+incorporate NFTs, incorporate DAOs and many other things. I I think the tools are still not there, but it's going that way. looking at Guardian, and I know it's still not fully in motion. We spoke about it before the recording. What it reminds me of a little bit is there was a validator. I think they were called...
+
+Orbital Apes. Yes, they were called Orbital Apes on on Evmos. And they had a very huge launch with a very interesting mechanics, you know, giving money back to the stakers with NFTs and DAOs. And I think we even had an episode with these guys. And, you know, they were very business motivated dudes. very what I'm trying to say is, is that after the end, with all of that at the end,
+
+their experiment didn't succeed. Not in my opinion anyways, it didn't succeed. Though the amount of resources that, I'm sorry for taking so long, but I'm on promises, 30 more seconds. The amount of resources that it took them to achieve what they tried was, and I mean, I don't mean money, I don't mean materialistic resources, I mean the effort was gigantic. Now, looking at it back now, and this is where I'm coming to you, do you think that
+
+Citizen Web3 
+validators, because there are two types, more or less. You can always divide into different types, but there is one way of dividing it. Validators who just come and say, hey, we're just going to do the traditional thing. We're going to provide some infrastructure. don't know, maybe we're going to commit something to the code. And yeah, this is our thing. We're going to find some early stage test nets and grow with them. And there's the second type of validator, more like yourself, myself, to be honest, and a lot of other people who
+
+try to not reinvent the wheel, do something different. And it seems that sometimes, and again, I'm playing Delos Advocate, but this is the question to you. Do you think it's worth that effort? Do you think that what you guys are doing, what other validators that are trying to think outside of the box of just, hey, let's provide infrastructure and just get staking rewards?
+
+Is it worth it in terms of them running a business? It doesn't matter if they're or enterprise-grade validators.
+
+Matthew 
+It's yeah, so I think it's definitely worth it. So the reason being is not necessarily monetarily. I think innovation comes from trying something different, number one. Number two, think doing what's right for the ecosystem and for the network is extremely important.
+
+I think if you kind of just follow the status quo and go with the flow, you're not really sure you are contributing, but you're incentivized to make the most money possible. And I think it is definitely worth it to try and bridge the gap between profits and what we would call ethical decision-making.
+
+So I think that's important not only for, think, I do think that, you know, I'm going to make, you know, we're going to make more money in the long term doing that. But I also think that it's going to benefit more people and the network itself. So yes, there are, I guess, more risks and yes, it takes a little bit more effort, but I do think it's worth it at the end of the day. And I think even if we fail, even if a team similar to us fails,
+
+I think it was worth it and I think doing what we can for the network and its backers is the most important thing. So yeah.
+
+Citizen Web3
+Can you talk a little bit about, because again, I didn't go very deep into what you guys are planning, but I've noticed, like you mentioned, at the beginning of the conversation, sharing some profits with the Stakers. I've also noticed some NFTs there. Do you want to talk a little bit through the system you're planning or how is it different from others?
+
+Matthew
+Yeah, sure, I'd love to. So I guess we've already spoken about, you know, the sort of two forms of income that validators help provide, right? And that was the inflationary rewards, which go to stakers and the block rewards, which go to the validator. So there's no actually there's actually no way to natively share block rewards with stakers as of now on Solana. So yeah, so basically, our approach, right is
+
+Citizen Web3
+Yes.
+
+Matthew 
+We've created an NFT collection that is essentially a share of our block rewards. So how it works is each NFT is worth 0.03 % of all our block rewards and every epoch when we get paid our block rewards, we distribute those payments to the NFTs. And the reason we did this is, I guess, obviously to
+
+to raise some funds. Validators on Solana pay vote fees. So a validator on Solana votes every 400 milliseconds and it costs 5,000 land ports to vote. So that adds up to about 0.9 sol a day in vote fees. So, you know, we wanted to raise some additional money to be able to cover our initial vote fees as we pay almost one sol a day to vote.
+
+So that was goal number one. And then goal number two was to be able to share these block rewards with the people who supported us from the beginning. That's just the NFT section. We actually believe that sharing block rewards is real value. So there's inflation on Solana. If you stake, you're not necessarily beating inflation. So are those true rewards? Yes, you are beating inflation a little bit.
+
+The inflation rate is actually around 5%, but because only Staked Solana receives the inflationary rewards and not all Solana is staked, you get a little bit extra on top. And that's why we're kind of seeing between 7 % and 9 % APY staking rewards at the moment. So you're just beating inflation. That's not real value. Real value is capital made from the service itself, which is the block rewards. So sharing with that
+
+to stakers is important in our view. So we have another product. It's not really our product. It's a decentralized product. It's just a liquid staking token. I'm sure you understand them. And basically what we plan to do is share 50 % of all our block rewards with the holders of the liquid staking token. This can be done directly via us sending the funds to the...
+
+Matthew
+stake pool reserve accounts and that automatically gets distributed to the stake accounts inside that pool. So we plan on sharing more than half of our block rewards with the community, regardless if we sell any NFTs or not. But what makes the NFTs really cool is that you're earning block rewards, not staking rewards.
+
+So, you know, as block rewards increase in the future, so will your rewards and as we get more stakes, so will you. So it kind of, it also creates a community around our validator. It incentivizes, you know, holders of these NFTs to stake with us. And I think it's, yeah, it builds a good ecosystem of, you know, everyone, you know, working towards the same goal.
+
+Citizen Web3 
+This was actually my next and last question before we're going to jump into a small blitz. just before we go to that, I think here is I'm going to share something a bit silly with you. think we as a validator, by the way, we started to purchase stakes. And I'm talking about minute stakes.
+
+in every other possible validator. I had this idea, so why not? Somebody is going to make it. We decided whenever we see other validators selling stake, we decided, okay, we need to have an account for our validator where it's full of other validator stakes in other validators, whether it's in their DAO, in their NFTs, in their whatever. I don't know how it's going to happen. We're definitely going to look at your NFTs as well. This is just to say that, don't be surprised.
+
+Matthew 
+Yes.
+
+Matthew 
+That's amazing. So there are other validators on Solana that do share block rewards, But we see the way that it's happening and we think we can improve on it. So there's commission that people can take. you can set a commission on your validator.
+
+Citizen Web3 
+on please please please please Please please
+
+Matthew 
+to take a percentage of the inflationary rewards. So what we've seen some validators do is actually set a commission, but then also return block rewards, which is kind of a little bit backwards in our view as you're kind of making up the money you're giving away with the commission. And then there are some other guys that do it in a different way. But yeah, we think it's really important to be open and transparent about it.
+
+But sorry, to get to your point about owning other percentage of other validators, I love that idea. I've actually purchased other projects and other validator ecosystem native products as well. So I think it's a great idea. I think just improving the entire ecosystem is always great.
+
+Citizen Web3
+Nice, nice. So the last question, you kind of started to talk about it already during the last answer and now the comment, but basically a very quick question, which I find validators to big, you know, it's a challenge for validators. I don't know why, but it is a challenge. And my question is about community. What's your sort of go-to-market say strategy? Once again, I say go-to-market here because I know you guys are still...
+
+and unraveling yourselves or what sort of maybe you saw something that you wouldn't advise or would advise to other validators to do when it comes to trying to build a community around your validator.
+
+Matthew
+Sure. So I think, so I guess you touched on this point earlier where there's different kinds of validators. So they are validators that just run their node, they get stake from stake pools and potentially stake from people that find them along the way, right? And maybe some institutional stake. And then there are public facing validators that are, you know, active in the community and they share their thoughts and they, you know, share their, you know, what they're thinking and they get feedback. And I think
+
+creating a community around, so for us, it's about creating a community around educating people firstly, and then secondly, doing the ethical thing. So there's something called SIMDs on Solana, and it's in Solana improvement documents. And basically what these are, are validators can vote on them to make changes to the network. And I think for us, it's about giving our community the option to
+
+have a say in these votes. So when you delegate your Solana to a Solana validator, you're essentially trusting them, you know, with your vote. On top of the consensus votes, there's also, you know, actual voting that happens. And I think getting the community involved and educating them on what these changes really mean is important for the network. And I think it's important for, for, yeah. So what I would avoid, I would avoid
+
+I just on a surface level influences, would avoid, you know, cheap marketing campaigns. would, what I would go towards is a, what I would advise someone to do would be to, to grow organically through conversation, education, and just getting your, your voice out there, I think would be the two things that I would mention.
+
+Citizen Web3 
+Nice. I want to thank you for trying to say grow organically. A lot of people try to skip that part. Guilty, think all of us are guilty a little bit somewhere in that. But let me jump quickly to what we call the blitz. You don't have to answer very quickly. It's sort of three questions for us to finish the conversation and to take us out of the crypto world a little bit. So yeah, they're going to be a bit weird, but here they are.
+
+So first one, can you please share with me either a book, a movie or a song that has had a positive influence on Matthew throughout his life or in the last couple of years? Doesn't matter. It doesn't have to be a book, a movie or a song.
+
+Matthew
+I will go with a book. In fact, I'll go with a series of books. The author is Robert Green. 33 Strategies of War was a great book.
+
+Citizen Web3 
+Okay. Something I haven't read actually. So once again, guys, the listeners, girls, robots, if you exist and you're listening to us already, check out the show notes and you can find all the links, including the books and the projects we mentioned. And please go and have a look at what it is. So second question, they're going to get weird, Matthew, I do say. So second question, can you please share with us something motivational?
+
+Matthew 
+Hahaha.
+
+Citizen Web3 
+And what keeps waking you up every day out of bed, know, what keeps you trying to find innovative and more fair ways, I would say, of running validators, of trying, you know, to look at the world the way you look at it, something motivational.
+
+Matthew 
+Hmm, this is a, this is a quite a tough one. I, something motivational. think I was, yeah, I was going to say something. but I think, you know, what gets me up in the morning for me, it's constant learning and engaging with my brain, I guess. it's, it, you know, excites me and then, you know, just doing what's right for it to, to help the world. Like it.
+
+I can't speak to everyone but this is what motivates me is you know helping people in areas that you know they can't help themselves in so I think just making the world a better place and even no matter how hard you're down or what you're suffering getting up and and doing something good for somebody else will will make you feel like a million bucks and will keep you going.
+
+Citizen Web3
+Absolutely, amen. So one more, the weirdest one, I promise, is the last one, but it's a very weird one. So Dead or Alive, made up or real person, could be somebody you know, could be a neighbor, a family member, a writer, an author, a coder, project founder, could be an imaginary character, doesn't have to be real.
+
+So a character that is not a guru for you or somebody who is not a guru for you, because I personally don't believe in them, I always say that. But a personage that you, you know, sometimes when you feel stuck, you kind of look up, not up, but you kind of look into the head of that personage and it helps you, you know, to get out of the hole you're feeling stuck in, if that makes any sense.
+
+Matthew 
+Yeah, that is a weird one. think, yeah, it's, I, so there's a real person, I won't mention them by name, but they are, they think completely differently to me. And sometimes I will just go and speak to them about, you know, anything that I,
+
+I will soundboard off of them and during the soundboard... I hope this answers your question. They basically frame my situation in a different way, in a different light that allows me to see it differently. And I think that's important. I'm not sure if that answered your question or not.
+
+Citizen Web3
+It does.
+
+Citizen Web3 
+It does. It does. It does. It does. Perfect. It does. Perfect. It does. Perfect. It does. Perfect. And I want to thank you for the honesty and thank you also for respecting the privacy of whoever that person is, because I think it's also important. Matthew, I want to thank you very, very, very much for your time and the time to answer the questions, taking the time, sorry, to answer the questions. Please don't hang up just yet. This is just a goodbye for our listeners.
+
+For the listeners, thank you very much for tuning in and see you guys, girls next week. Thank you. Thank you, Matthew.
+
+Matthew 
+Thanks so much guys.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

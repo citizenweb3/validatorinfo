@@ -42,6 +42,7 @@ jobs:
           2. Read tsconfig.json to verify path aliases before flagging import issues
           3. Read the FULL files being changed (not just the diff) to understand context
           4. Check existing patterns in the codebase before claiming something is wrong
+          5. Run git blame on modified files to understand historical context and intent
 
           The PR diff is saved at /tmp/pr-diff.patch — read it first, then verify against actual files.
 
@@ -56,15 +57,31 @@ jobs:
           - API routes should only parse params, call service, return response
           - Check if existing services were reused vs duplicated logic
 
-          Do NOT flag:
+          Do NOT flag (false positives):
           - Import paths that are valid per tsconfig.json aliases (verify before flagging!)
           - Missing cn()/twMerge when className is a static string with no conditions
           - Both cn() and twMerge are acceptable for conditional classes
+          - Pre-existing issues that were NOT introduced in this PR
+          - Issues on lines that were NOT modified in this PR
+          - Issues that a linter, typechecker, or compiler would catch (imports, type errors, formatting) — these run separately in CI
+          - Pedantic nitpicks that a senior engineer would not call out
+          - General code quality issues (lack of tests, poor docs) unless explicitly required in CLAUDE.md
+          - Changes in functionality that are likely intentional or directly related to the PR's purpose
+          - Issues silenced by lint ignore comments
+
+          Confidence scoring:
+          For each potential issue, score your confidence 0-100:
+          - 0: false positive, does not hold up to scrutiny
+          - 25: might be real, but could not verify
+          - 50: real but minor, unlikely to matter in practice
+          - 75: verified real issue, will impact functionality, or directly mentioned in CLAUDE.md
+          - 100: confirmed bug with direct evidence, will happen in practice
+          Only include issues with confidence >= 80 in your report.
 
           Format: ## AI Review Summary
-          Use severity: [HIGH] blocking, [MED] should fix, [LOW] nice-to-have.
+          Use severity for included issues: [HIGH] blocking, [MED] should fix, [LOW] nice-to-have.
           HIGH or MED = REQUEST CHANGES (triggers auto-fix). LOW = approve.
-          If no issues found, write a clean summary and approve.
+          If no issues pass the confidence threshold, write a clean summary and approve.
           REVIEWEOF
 
           claude -p "$(cat "$REVIEW_PROMPT")" --model claude-opus-4-6 \

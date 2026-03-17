@@ -1,0 +1,643 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/moneyevery3days
+
+Episode name:
+Being Responsible, Sanctions and Alternatives with Leo MoneyEvery3Days
+
+Citizen Web3
+Hello, everybody. Welcome to a new episode of the Citizen WebTree Podcast. Today, I have a validator with me. We're going to do another interesting, I hope, validator interview. I'm very well prepared for it and very well hyped for it. Leo from Money Every Three Days. Hi, how are you, man?
+
+Leo
+Hey Serge, I'm well, thank you. How are you?
+
+Citizen Web3
+Good man, it's a nice lovely day where I am. I mean, unfortunately on the camera you can't see it because I'm as always in my dark studio in my little castle 
+
+
+Citizen Web3
+So you know, what about you? How is the weather wherever you are based? Tell us all about it. Where are you? And how did you get into Web3, man? This is the strong, difficult question. Where are you and how did you get here?
+
+Leo
+Excellent.
+
+Leo
+Well, I go back pretty early on from the, I've got roots in Bitcoin. So I started kind of diving down the Bitcoin rabbit hole quite early on. And was mining Bitcoin and back on the, back in the days when you could do it on your graphics card. And
+
+From Bitcoin, I found out about Ethereum and I didn't invest in the Ethereum initial sale. But I mean, I was following all the stuff like with the ICO bubble and around then that's when I started to get into Tezos. And then with the NFT kind of bubble, I guess.
+
+We can call that a bubble where there were NFTs selling for millions of dollars, tens of millions of dollars even. And I mean that's when I was kind of learning about NFTs and the Web3 stuff in Tezos.
+
+Citizen Web3 
+So you had like this perfect journey, pretty much Bitcoin, Ethereum, Tezos. And when I say perfect, it's like, you know, blockchain level one, blockchain level two, blockchain level three. Usually people either straight away jump to, you know, Polkadot, Cosmos, Tezos, NFTs or whatever, DeFi. They skip the Ethereum, Bitcoin stage. Now you have this, I would assume, a good understanding then. But I have a question for you about Bitcoin.
+
+I mean, I'm personally also from a little bit of the older blockchain people who remembers how it all was and whether it was good or bad, of course, is a subjective opinion. But you know, what at least to me personally, it seems that what Bitcoin and I don't want to by any chance, you know, say anything negative here. It's a question.
+
+Citizen Web3 
+You know, things around Bitcoin have changed a lot. And even at the beginning, Bitcoin was leading the industry, attracting people, leading decentralization. The narrative today, again, personal subjective opinion is slightly different, even negative in a little bit religious, I would say in some places. What's your take on that? What's your take on Bitcoin today and on the narrative that it's projecting to the rest of the industry?
+
+Leo 
+Well, um...
+
+Leo 
+I certainly think Bitcoin has failed to be a medium of exchange and be a decentralized medium of exchange. And it's kind of...
+
+Leo 
+It's kind of failed in adapting, I guess, and integrating new technologies. There's never going to be a privacy aspect anymore to Bitcoin. It's completely surveilled by law enforcement and exchanges. That may be a good thing if the goal is to catch criminals. But I mean...
+
+Bitcoin is just not able to innovate. And the way that it's chosen to scale, I just can't see it working. I can't see Bitcoin being used to buy coffee, but there's certainly other blockchains that I think were more well positioned to.
+
+Citizen Web3 
+I must say in protection of what I just said previously, because again, it's more of a subjective opinion. I mean, I can say openly, where I live, for example, and I didn't notice we had this huge Bitcoin conference, and I'm not a Bitcoin fan, but we do run as a moderator Bitcoin bridges and Bitcoin nodes, even bare metal. But still, that's a different thing. It's personal opinion. And the thing I'm going to say, I live in a small place. And after this conference, I found out that there are 70 businesses on the island.
+
+including coffee places that directly accept Bitcoin. And to me, that was a big surprise. I don't know how's it in Australia. Do they have a lot of vendors accepting Bitcoin?
+
+Leo 
+No, there's very few. I'm certainly in my state. I can't think of a single place that accepts. Oh, I can think of one place, probably a gin bar, but it's not practical. Bitcoin fees are what, like $10?
+
+Citizen Web3 
+No.
+
+Citizen Web3 
+Wait, the gene bar is very practical, at least you can go and you know, wait, if it's like really bear market, you're like fuck it, you know, just go and do the gene bar and...
+
+Leo 
+Sure, if you set all your tab at the end of the night and buy a lot of gin, might be worth playing. Bitcoin.
+
+Citizen Web3
+Investing to gin is another thing, right? But Leo, how did you get into all of this? I mean, you said your crypto journey, but how did you even get to crypto? How did you arrive in Web3? What was the thing that drew you to here?
+
+Leo 
+Well, a curious mind, I guess. My friend was telling me about the way that Bitcoin works with its limited supply. And it was at that time being used as a black market thing like the Silk
+
+Leo 
+there's something that people are using this alternative financial system for. And, and, um, and a lot of people actually, the majority of people in that black market were cannabis users. And I was using cannabis at that time. Um, and, and I, I just thought, I mean, cannabis use is, is pretty much a victimless crime. Um, and, and so.
+
+Yeah, Bitcoin was like the perfect currency for people to get access to cannabis. And I thought that was pretty cool.
+
+Citizen Web3 
+I think Silk Road has definitely been a big gateway point for so many people who are into crypto. I don't know if it's ironic or not because I'm and everybody, all my listeners, I think, know that I'm a cannabis user. I can say that, say it openly. There is live sessions where I smoke and I have nothing to hide. You know, we had, you know, and I don't care, you know, but it is what it is. But it's, I guess, socially.
+
+You know, like, let's look at the stigma of social society, right? It's a bit ironic that this industry that is supposed to make a big change in finance and in governance, right? Comes from Silk Road, right? I mean, I'm trying to play a little devil's advocate here, right? But it is a little bit ironic, I guess.
+
+Leo 
+We've got a lot of similarities. I mean, we're kind of like an outcast in mainstream society. People don't quite get us or get what we're trying to fight for. But yeah, there's certainly a crossover between the two communities.
+
+Citizen Web3 
+This is actually my question. My next question for you. You said very good words. It's a very big aspect of the podcast, I guess. Trying to fight for. What are you personally trying to fight for? What is that? What are you talking about? Tell me. Tell me more.
+
+Leo 
+Well, cryptocurrency is for me at least, it's about taking ownership of your funds, of your money and being responsible for safeguarding them. So you're not relying on any other person or entity to look after things for you. It's very much the opposite.
+
+of the bank, the banking system that we've got. And I always thought that the banking system is just very bad, like in terms of moral hazard, where the taxpayers are on the hook for excess speculation and the boom bust cycle that can cause us off. So I always think...
+
+cryptocurrencies is kind of like a, it's an important alternative. And I'm fighting for people to have an alternative to the banking system.
+
+Citizen Web3 
+Okay, let's carry on the devil's advocate a little bit because it's a good point in my opinion here. It's a question I ask often, but I usually ask it much later during the show, but it's a good place to ask it, I think. Considering you just mentioned how long you've been in this industry as well. Do you think that, I mean, you mentioned very important things, you know, like very big aspects of, you know, whether
+
+somebody considers them to be political or society like related or philosophical. It doesn't matter, right? We can slap any tug on it. We understand what we're talking about. But the question is this, do you think for, you know, people and when I say people out there, I mean, it doesn't matter if they heard about Bitcoin or not, but you know, people there that live their everyday life. And I don't mean just in Australia or in Portugal or in, uh, you know, what we.
+
+It's a society referred to as first world developed countries, because that's the least of the world. It's not the most. So do you think that those things we are here fighting for in this industry and for the past already 15 years, right? I mean, okay, I don't know if we can count right from 2009, but let's say 10 years, right? From the last 10 years. Do you think that...
+
+It changed anything for anybody. And I don't, I don't mean people who use crypto. Of course, for people who use crypto, it changed a lot of things. But honestly, hand on a heart. Do you think this is a devil's eye? I got that question because I'm just like you, but I want to know your opinion. Do you think that what those things you're mentioning for has, have we achieved that at least for one person out there who is not using crypto today or wasn't using crypto before and using crypto has changed that fight for him? Do you think it's real?
+
+Leo
+I do, I do, because although not everybody has started using crypto, now there is at least the option to and anybody who's missed the boat on crypto, like they see that there's something there, they see there's something they've missed out on. And I think people like that are going to.
+
+seek out opportunities in crypto and I think they will do well when they do.
+
+Citizen Web3
+I understand.
+
+Citizen Web3 
+Not doing well. Okay, people will do well or bad, but do you think that same thing that the banking system has brought and you know, I'm not going to I know the banking history very well, at least I like to think so. And I'm not going to protect anything here, but I'm sure
+
+That somewhere along the line, you know, the Medici, the OK, maybe not the Medici's, but I don't know, whoever else, you know, somewhere in the 18th or the 7th century. Maybe they were not all that bad. Maybe their thing wasn't too like maybe somebody was, but not everybody was right. And in crypto is the same. But I'm just afraid sometimes when I look at it that, you know, yeah, it's about the money, not about other things. And that's the question. Do you think there is more people out there who are hoping not just to succeed, but to?
+
+change things and really, yeah, I think I'm going to put a full stop to the question.
+
+Leo 
+I think there's a lot of...
+
+Leo 
+There's a lot of... None.
+
+I mean, people will.
+
+Leo 
+People will realize when they get crypto and it's in their own wallet, they have an advantage that they didn't have before with having money in a bank or a stock investment account.
+
+Um, yeah.
+
+Citizen Web3 
+I think I think I think I understand what you mean because I think incentive and reward plays It's funny to say that but it does play a huge role. Sometimes we like to like, you know, oh no No, let's not talk about the money separate whatever. Let's talk about it But it's okay because I think that I mean I have to be honest, you know If I mean if I ten years ago or whatever twelve years ago, whenever I started my journey if it didn't
+
+financially change what it did change for me, I wouldn't have been here today, you know, or maybe I would have, I don't know. But I understand what you mean. I guess that's what you mean, right? That it helps.
+
+Leo 
+You're right. Everybody in crypto starts their journey because they're interested in the financial aspect. When I first found out about Bitcoin, it was interesting to me because it had a market price. I could see the price was changing every day and it was changing very rapidly.
+
+Citizen Web3 
+sometimes too rapidly.
+
+Leo 
+It was crazy, crazy volatile. And I mean, now nowadays Bitcoin's kind of a bit more boring. I mean, especially for a lot of people who have been in the market for a while, because it's not so volatile anymore. But I think that's a good thing for like to have some stability in a world where stability is not going to be the norm.
+
+for a lot of people.
+
+Citizen Web3 
+When I was a kid studying philosophy in college, I used to have a favorite quote, insanity is a perfectly rational adjustment to an insane world. I think it was my favorite quote from, I don't remember who said that, which philosopher, but I always kind of found it correlating with the world we live in and all that. But yeah, but it's definitely, I mean, oh, sorry, go on.
+
+Leo 
+It's a great one.
+
+No, nothing. I was just saying that's a great quote.
+
+Citizen Web3 
+Thanks. I was just going to carry on your thought and agree to the point that I think when a person wants to change something, of course, when you're... And I'm sorry, I'm really not trying to put stigmas out there, but when I'm judging by myself, when I was a slave to a system where I could not afford even an hour of my life to do what I really want, how can you fucking change anything when...
+
+you are just, you know, digging the same, you know, mine every and I'm not talking about bit blockchain mining here, of course, you know, every fucking day. And at the end of the day, you know, well, if you don't have the time and the resource to do that, you know, it's very difficult to get out of that wheel, right? Like to and of course, I agree that finance helps, I understand. A question, your name of your validator, money every three days. Now, that's a very
+
+Leo 
+Yeah.
+
+Citizen Web3 
+ballsy name, I must say, very loud, you know, a question. Talk, talk, talk me through it. How did you, how did it happen? Very loud name. I like it.
+
+Leo 
+Well, I got the idea from a meme. It was the Batman, I think, slapping Robin.
+
+Leo 
+And I can't quite remember the top line. Um, it was something like.
+
+Uh, um.
+
+Leo 
+Might've been talking about the technology side of things. And the bottom line was money. It's money every three days. And that's what Tezos like that's the schedule for the rewards. They come in every 2.78 days, 10, 2.7, yeah, I think it's 2.74 or 2.78 days. So yeah. And it's, it does kind of have that, uh, I guess kind of basic income.
+
+connotation as well. I think I'm a big fan of UBI.
+
+Um, but it's, it also kind of appeals, I think, to people who are looking for a passive income.
+
+Citizen Web3 
+I definitely have actually quite a bit planned to ask you in that direction because, well, your website kind of talks about it. And at least you read it, even if it doesn't talk about it, kind of between the lines a little bit, UBI. But before, still a couple of cheat chat questions to that I want. My mission is always try to understand the operator, not just the validator, but the person who runs it. And I want to share.
+
+with my listeners and hopefully with other people who gradually join in to listen to our podcast, to share these stories. It's always interesting to begin and to see how much of depth there is to it. For example, just before we started recording, I'm seeing all this music equipment. We kind of had a couple of words exchanged before we recorded about it.
+
+If you don't mind, same question again, talk to me. This is quite serious music equipment that I'm seeing. Talk to me a little bit about your music background experience. Unfortunately, the listeners can't see it, but it's good. It's there. It's cool. It's fucking awesome. Tell me a little bit about your background in music.
+
+Leo 
+Thanks. So actually the same guy who told me about Bitcoin told me about Euro rack gear, like synth synthesizers. And so yeah, he showed me this place that you can go and build your own synth modules with a soldering iron and putting all the chips on the board. And it's, I mean, I've always loved electronic music.
+
+I was composing a lot on the computer, but this is just like a whole other world where you're twisting knobs and plugging in patch cables and it's just the crazy amount of the variety of sounds you get out of it. It's just mind-boggling.
+
+Citizen Web3 
+What software do you use?
+
+Leo 
+Oh, um, I, I mostly use Ableton live and sometimes I use bitwig.
+
+Citizen Web3 
+Albilton Live is a huge, it's a massive thing. It's so, I mean, and when I say massive as in like literally in terms of size, it's just that program is so, I have a problem with it yet. I'm still very young when it comes to music production. And it's, it's yeah. Albilton scares me a little bit.
+
+Leo 
+I started off on Reason actually. I really liked that.
+
+Citizen Web3
+Okay. It's, it's, it's less scary for sure. No, but I mean, I'm, I'm myself into music production a little bit. And my, my partner is more and then she, she's a DJ and then, you know, we were both into sound of course. And I love anything to do with music. We have musical instruments around the house. A lot of my friends are into music production and either, you know,
+
+amateur DJs or semi-professionals DJ, but it's something that is a big part of my life, so I totally can relate to it. And, oh, show me, show me, this is nice bassline.
+
+Leo 
+This is my most favorite synthesizer at the moment. It's a very gnarly sounding bass and it's got distortion and detune. It's a very flexible kind of, it's got a 16 step sequencer and you can come up with random patterns on the fly. It's a very flexible.
+
+Citizen Web3 
+Why?
+
+Citizen Web3
+Poof, poof, poof. Nice.
+
+Leo 
+It's called Baseline and it's by Erica Synths for your listeners.
+
+Citizen Web3 
+Nice, thank you. And for all the listeners, everything we mentioned, me and Leo, there you can find in the show notes link. So we will definitely mention that. And if you're interested in music, you should be. If you're not, no, I'm joking, guys, of course it's up to you. But this is another, by the way, interesting touch point, you know, mentioned Silk Road. And usually when we talk crypto with other validators, with founders, Silk Road is usually the first thing to mention because, well, it is what it is, right? But ironically, music is something that
+
+I can tell you that electronic music especially is something that crypto people have in common and I'm especially, people who are into the industry, like founders, industry, sorry, founders, validators, researchers, I would say 75% that people that I speak to or that I've met in the past 10 years have been doing some amateur digital de-gene or production like myself.
+
+It's interesting also right that there is another connection. Maybe it's our generation for Knows
+
+Leo 
+Yeah, it makes sense, right? Cause we're all interested in technology.
+
+Citizen Web3 
+Technologies got the word techno in it technically. There we go. Um, Leo, a question, um, a little bit moving to thesis. Uh, usually we on the show, we sometimes talk a lot about projects. Um, and usually I prefer talking about specific projects to people who don't build them directly. So for example, like yourself, because then you have a much more
+
+Leo 
+Yeah, we're all technical people.
+
+Citizen Web3
+clear opinion, in my opinion, sober opinion, and you're able to say constructive criticism that sometimes founders find difficult to let go of. So, Tezos is not a project we have discussed over the four years, many times on the show, yet before I let you like take it, just from my perspective, even though I have had at least questions with all the big scandal that was years ago with the...
+
+financing. Tezos was the first programmable computer, self-programmable computer, self-upgradable computer to say it correctly, sorry, excuse me. And it was a phenomenal white paper. And for anybody out there who was looking for things, Tezos didn't become as huge as I think I was at least expecting it to become.
+
+But it is a top project. It is definitely a project with an original idea that didn't... Yeah, everyone does it now, but Tezos came up with it, at least in the white paper. Maybe they didn't implement it first, but they did came up with it. And yeah, let's talk a little bit about Tezos, even though we don't do a lot of project talk on the podcast. But I would like to hear from your perspective, why Tezos? What's special about it? And anything else you want to, like, show me Tezos a little bit. Let's do some shilling.
+
+Leo 
+Yeah.
+
+Citizen Web3 
+But feel free to do some constructive criticism as well, of course, if you if you if you come into it.
+
+Leo 
+Sure. And just before I do start shilling Tezos, I just want to push back a bit on what you said about now every other blockchain does the, what was it, the upgrading, was it?
+
+Citizen Web3 
+Sure.
+
+Citizen Web3 
+The self-upgradable thing. Not every, sorry. I kind of like put it in a big blue, blew my words out of there, but myself, sorry. But it's all good, sorry.
+
+Leo 
+Yeah.
+
+That's okay. Yeah, I just wanted to point out that Tezos is still the only blockchain as far as I'm aware that can upgrade in the way that it does. So every other blockchain, as I understand, they pick up a block level. And they say at this level, we're going to hard fork to the software that is this version.
+
+Whereas in Tezos, it's quite special because the protocol has already been proposed and voted on and it's the code is actually distributed to all the validators and it upgrades automatically. Like there's no hard fork. There's literally no hard fork.
+
+Um, so what makes Tezos special? I mean, that's, that is one thing, but really, I think what makes Tezos special is its ability to scale and scale in a decentralized way. Um, so the way that Tezos has, has kind of gone, like the direction they've gone with scaling is to scale vertically.
+
+and have basically one big roll-up. I mean, there's the ability to have multiple different roll-ups, but.
+
+Leo 
+The main thing about the rollup is that it's enshrined. So there's no other token needed. You only need Tezos. You don't need any extra. So the incentives really make it much more workable and less likely for fragmentation.
+
+Citizen Web3
+It's an interesting point you mentioned about, I don't know if we're going to go into it because it's a whole different topic about upgrades. I was actually, yesterday I actually met up with a developer from, well, I would say it's not a small project. It's a project, I mean, face to face, we had a coffee and we're talking actually about that problem that...
+
+Citizen Web3 
+It's still, regardless of how the architecture upgrade is designed, it's still very difficult today for validator to be sure that the binary he's going to open is not going to contain some sort of whatever it is. And that problem is still not solved. Of course, that's nothing to do with Tezos, that's to do with computing. And there are some, you know, he was mentioning some interesting progress in that direction. But
+
+Yeah, it's definitely a huge topic, but I'm curious, how is the validator set in Tezos? Is it because I am really not as familiar as I would like to be, and I should be, and I will definitely something I need to change considering what we're building today. Is it more of a validator set that interacts, like smaller validators interacting with each other, operators, or...
+
+a mixture of industrial retail or how does it work with the validators in Tezos? What's the today's situation at least?
+
+Leo 
+So there's around 400 validators in the set. And I'd say maybe 10. I'm just kind of going off the top of my head. 10 of them are run by the foundation. And there's obviously the big exchanges like finance, coinbase, Kraken.
+
+They all run validators.
+
+Leo
+and
+
+There's a, there's a lot of small validators. So the minimum you need to, to bit, to start up a validator is about 6,000 Tezos, which is about probably about $10,000 US. Well, maybe 11, 9,000. Sorry. It's very cheap to be a validator on Tezos.
+
+Citizen Web3 
+Which is not that bad, it's not bad at all, comparison to a lot of the networks out there. I'm sorry to cut in there, but it's just, it's definitely not a lot.
+
+Leo
+It's accessible and it's decentralized. That's one of the things that kind of drew me to it as well. It's like they really care about decentralization. They're making it quite achievable for people to actually make their own blocks.
+
+Citizen Web3 
+Let's talk a little bit about validators and decentralization. Now, you have mentioned, well, not mentioned, but as you were talking, I think it's easy to pick up that you know how to use a solder and you know how to understand a little bit of the hardware, how it works and what goes where electronics. I guess I'm making an assumption here, but because you're smiling, I think my assumption is right.
+
+Leo 
+And no, I'm actually terrible with electronics. I failed DC fundamentals.
+
+Citizen Web3
+No, I was bad, damn it. Damn, man. This is how bad I did it. But still, I have a question. I'm still gonna ask the question. Are you running Validator bare metal or cloud? What's your setup?
+
+Leo 
+Damn metal.
+
+Citizen Web3 
+Ah, you see my assumption was correct. You look like a bare metal guy. You look like a bare metal guy to me. We are also bare metal. Talk me through, of course, I'm not need to know the secrets of your setup, but let's talk a little bit about running the Validator bare metal. And for you personally, what has been the difficulties, the challenges, the good things, the bad things.
+
+Leo 
+partially correct.
+
+Leo 
+Yeah, absolutely. The hardware I use is just a simple NUC or NUC, I don't know how you say it, just a little box mini PC. Any kind of mini PC is enough. You probably need about 16 gigs of RAM and 500 gigs of SSD hard drive and...
+
+a ledger. So you got the keys kind of protected in a secure environment. And the frustrations, I guess, early on, I would miss some of the endorsements. And that was very frustrating because I had no idea why.
+
+And if it was something that was wrong with my internet, oh, sorry, also a UPS, that's an uninterrupted power supply is pretty important. Because if the power goes out, you don't want your computer to like have a not clean shutdown. So yeah, the missing endorsements was annoying, but that's certainly gotten a lot better over time with the protocol upgrades. Now I've...
+
+I might miss one endorsement every, maybe every two cycles. And I'm fine with that. That's negligible loss in reward.
+
+Citizen Web3
+I think it's worth saying here, at least I would like to definitely make this comment for people who are listening to this. Of course, we have spoken and not just me and much more knowledgeable people have mentioned this on the podcast, but I would like to say it. Bare metal validators, it's difficult to get 100% uptime. It doesn't mean having 100% uptime that your validator you are seeing...
+
+somewhere out there is it doesn't mean it means good because there is a lot of like, um, key, uh, signing software, right? For example, like we have Horcrux and in cosmos or the KMS, or there's other things, you know, that actually lower the latency and, and in a lot of, I, I remember speaking to guests who would say, who even would make a brave statement of saying that if I'm seeing a validator with a hundred percent uptime, I would never delegate to them because something is, is cannot be right because
+
+If he's got a right setup with sentry nodes and they've got a key management system and something else and he's bare metal, there is no fucking way in the world he's going to get 99.8, 99.9, whatever, but not that hundred. And it's an interesting point that people are sometimes still afraid. Like, of course it's nicer to strive towards something that works a hundred percent, but yeah, then we have to think balance between decentralization and...
+
+Okay, if I'm running in cloud in AWS, I'm probably gonna get 100% you know with one server somewhere, but Yeah, this is the decentralization price we pay I guess
+
+Leo 
+Yeah, it's interesting as well. Tezos is in the next protocol upgrade going to reduce the block time from 15 seconds currently down to 10 seconds. So it'll be interesting to see how that latency plays out and if we'll see any more missed endorsements or attestations.
+
+Citizen Web3 
+From our experience, for you, it will be more misses, because we run, for example, networks with high throughput. For example, I think Evmos is the one we run with a super high throughput. And so far, we haven't moved it to bare metal, because the setup we're using with the key management system is already causing us all sorts of headaches. And they have super fast blocks. They go, pam, pam.
+
+And we are kind of wary of moving it to bare metal now, because we understand we're going to go even more missing blocks. So we kind of like, eh. But anyways, I hope that it works out better for you. Do you run, by the way, any other networks or just Tezos?
+
+Leo 
+Um, just has those, I actually, there was, there was another project that actually forked Tezos code, um, which is a pretty cool project. It's called decentralized pictures. And it's a, like a film funding platform. And I was running a node on that. Um, but I wasn't open to delegation. I was just, it was just a project I like to support because films, films.
+
+Citizen Web3
+Nice. Do you have any plans?
+
+Leo 
+Um, I'll look, I'd like to make it. I'd like to make a film one day. I think maybe about crypto.
+
+Citizen Web3 
+to let go.
+
+Citizen Web3 
+Nice, nice. I had this crazy idea once years ago, maybe this will help. But this was during the ICO stage. We had with some friends a crazy idea. I mean, we were pretty stoned when we came up with it, but this is what it is. To make a crypto movie, you know, from the first stage of the idea of the ICO to the very implementation, but actually following developers with real footage and like, you know, yeah.
+
+Leo 
+Okay.
+
+Citizen Web3
+Maybe a bit too private, but it was one of those.
+
+Leo 
+Crypto documentary would be so good, especially if it's like a mockumentary maybe, like with comedy. I think people would love to watch stuff like that.
+
+Citizen Web3 
+Absolutely. Especially if it's something with comedy for sure. I mean, crypto is a is I mean, we have we always take it with a smile, right? You look at it and like I've just spent $100 on gas, you know, I don't have the money to put petrol in my car. But hey, well, that's life, you know. And Leo What about you know, one topic that you know, we haven't talked about the big topic that I did promise to you also and I have questions to ask you about it.
+
+Leo 
+Hahaha.
+
+Citizen Web3 
+You mentioned it, UBI, you know, but I'm going to kind of wrap it in a bigger topic. And I'm going to write, I guess that validators on each network come into the same problems. And one of them is, of course, delegations. And of course, every validator builds their own, somebody works with foundations, somebody goes work with retail, somebody, I don't know, mixes it, somebody...
+
+tries to build their community around some sort of idea. I'm assuming yours is around, I'm going to make that assumption, please correct me if I'm wrong, UBI. But before there, please first of all correct me if I'm wrong and two, before we talk about that, what is for you UBI? Can you elify that really, really break it down and why we need it?
+
+Leo 
+Oh, that is a big question. Firstly,
+
+Citizen Web3 
+I know. Sorry.
+
+Leo 
+I haven't really put a lot of conscious thought or planning into bringing this concept to a UBI platform. But I think there's definitely the potential there to do that. And what is UBI? I mean, unconditional basic income.
+
+A lot of people call it universal basic income, but I mean, the unconditional, the unconditional, the unconditionality of it is really key. Um, I mean, I, I was, um, on benefits in my younger years for quite a long time. And, um, the, we have this thing in Australia called mutual obligation where if you get the payment, you're expected to go and look for work.
+
+Um, but it was just completely inefficient and very degrading. And so often what people would do, um, is apply for jobs that, that just have absolutely no interest in and are completely unqualified for, um, cause it's just, all you're doing is you're filling out a form saying, Oh, yeah, check the box and. And it's.
+
+It really comes to how people treat other people. Like how do the people with money want to treat the people who don't have money? And unfortunately, we have a kind of attitude here in Australia where we don't treat people who don't have money very well, and they often don't get the help that they need. There's a lot of mental health issues. So...
+
+I mean, a UBI would improve people's attitudes towards...
+
+Leo 
+getting or doing productive things in society, I think. There's always the argument that comes up that people will just do nothing and take drugs and waste their lives. But I mean, there's a lot of studies that show that that's not the case. When people are not having to constantly stress about the next paycheck, they...
+
+They do make better decisions. Yeah.
+
+Citizen Web3 
+gonna bring a different argument for you. You know, I'm gonna say it in one line, guns don't kill people, people do. What I'm trying to say is that like, okay, I want to understand your thinking. That's why I'm gonna dig a little bit into it. Like, okay, let's say that, you know, theoretically, UBI, we make the assumption that UBI will not make people lazy. I actually agree with that, by the way. What I...
+
+don't is that it will change opinions because I think, you know, people are greedy by default. People are unfortunately our society, our educational system, our, I mean, we teach kids that farmers are hillbillies because they own land and because they are independent of the grid. You know, we are scared of them. We are scared of our own shadow sometimes. So we're scared to say the wrong word, you know, in case we offend somebody. So...
+
+My argument here to you would be, okay, I totally agree with you that it would not make people lazy. We are already lazy in killing people and taking drugs. That's not going to change. But that's my argument. Like, do you think that the UBI would really change our thinking and our, like, I mean, our thinking will still be there. Okay. So today I'm thinking that, you know, I don't know, Tigers are bad, by the way. I think Tigers are cool. Tigers are bad.
+
+Leo 
+Okay
+
+Citizen Web3 
+If somebody gave me $3,000 every month, I would still be thinking tigers are bad. Wouldn't change my opinion about them. Again, devil's advocate. But what do you think about that?
+
+Leo 
+Um,
+
+Leo 
+Look, there's um.
+
+Leo 
+people, there's a, there's a scale of, of how to do UBI. Right. There's, and a lot of people will kind of like just latch onto like, Oh, you want to give unlimited money to, to everybody and, and it's, and like all hell will break loose. So there's definitely a midpoint where, um, where basic income makes sense.
+
+And.
+
+Leo 
+there's going to be people who, and changing your opinion, I guess, I'd stick with the work thing because I don't know how to bring tigers into this. But trying to change people's attitudes to being productive, I think...
+
+If we stop treating people like there's something wrong with the way that they're doing stuff, that will definitely change their opinions or their outlook to everything. It will make a huge change and I think people will be, they will have the time then when they're not constantly in this state of oh...
+
+I need to do this to get some money and it's complete bullshit and people are treating me like dog shit. I think people will, with all that free time, they will be able to more easier find something that clicks for them.
+
+Citizen Web3
+I definitely agree with you that the goal is to have a better society and to change those opinions. I do however think that will change with us growing balls, abolishing the educational system, not changing. There's nothing right about it at all.
+
+It's just a huge piece of block that was there designed for a very like the marriage Institute. It was designed thousands of years ago for a completely the I'm not saying that it shouldn't exist, but there should be some updates. You know, I mean, we've lived here for a few thousand years, but no, but then to go with what you say, I mean, you mentioned people are gonna people are scared that everything is going to break loose if you give them a limited money supply. Well, damn it, let me break it down to you. We've been having that for the past half a hundred years. They gave us an unlimited money supply.
+
+when the Federal Reserve in the 70s, sorry, kind of canceled the golden standard. We kind of have an unlimited money supply and all hell is broken loose. Damn it. Yeah, I agree with you.
+
+Leo
+Yeah, that happens. That happened. Absolutely right. But yeah, you're right about it. The education system is, is very narrow focused and, and we've got the internet now, I mean, like, I mean, sure. It's, it's good to have like places where people can be around other people and build people skills. That's, that's good thing. Sure. I mean, we should probably still keep schools around.
+
+But then there needs to be a radical update. Like universities cost so much money and they're very not fit for purpose. Like, unless you happen to be like academic, like there's a small percentage of people that model works for and it doesn't work for everyone.
+
+Citizen Web3 
+Absolutely. And it's crazy to see the differences, especially if you're bilingual or multilingual and then you even go on a Wikipedia page of different... And I'm not saying that it's a good or a bad thing, but we sometimes ask ourselves why are people afraid of things? Why are people like... Well, since you're a little kid and for the 25 first years of
+
+be quiet, shut up, raise your hand if you want to ask questions. And then your opinion should be based on other opinions that have been expressed before. And then we think, oh, well, why we have such a society? Well, maybe that's one of the reasons, you know, maybe, you know, trying to kind of, I definitely agree. But by the way, you know, going to, going back to UBI, you know, do you think that staking rewards?
+
+Because this is interesting. A lot of people would of course say, oh, no, this is not UBI because I have to go, it's not passive. Now, do you think that staking rewards are a form of UBI?
+
+Leo 
+Um...
+
+Leo 
+No, no, because you've got to put something at stake. And UBI is more about the conversation of money redistribution in the context of government spending. I mean, we do have a basic income for
+
+Leo 
+So it's more about making it more efficient and getting rid of all those forms. And I mean, that's gonna get rid of jobs, people who work in that sector, but it will streamline a lot of the distribution.
+
+Citizen Web3 
+I understand what you mean by that. And it's in a very, I think it's going to be a very, a lot of people say, oh, we live, sorry, I'm gonna change the sentence a little bit. But a lot of people say that, you know, all our times carried to live. And I think it's actually super interesting. I think we're super lucky, I think, to see how these things would evolve, like AI, blockchain, UBIs, you know, all that. We live in a time of crazy changes, I think. And I think we got very lucky to live in that.
+
+And yes, sometimes it's not easy, of course. But yes, yes. But I don't think, I don't think it's possible, you know, to have interesting things and not be, you know, I mean, things that we are scared of is usually something we don't know. So that's why we are scared of it, right? It's like, oh, like, I don't know what's going to happen. I don't want to go. And I understand you're talking about a little bit different things, but I think that makes it interesting, you know, that
+
+Leo 
+Certainly also a scary time though, like with all the climate stuff going on. It is very scary.
+
+Citizen Web3 
+curiosity, you know, and fear are the biggest drivers we have as human beings, you know, like, oh my God, what is it? Ooh, I'm so scared. I want to go see, you know, but I'm kind of like one last question before I jump into the blades. So for us to wrap up, what do you think the role of a validator in all of this? You know, we spoke about, you know, a little bit, but about some bigger topics. What do you think the role of a
+
+A validator, not particularly yours maybe, not how you see your personal role, but in all of this story.
+
+Leo 
+Um...
+
+Leo 
+think the role of the validator is, it should be to.
+
+Leo 
+decentralize further. So to provide resources for people who want to also become a validator. And, and, yeah, I mean, it's a point of failure to be a validator. It's a it's a very critical point of failure. And so it's incumbent on validators to decentralize and get more people to become validators as
+
+as fast as possible because there will come a time I'm sure where governments would just be like, we've had enough of validators not implementing sanctions or whatever kind of control they want to assert on blockchains. Just recently in our country, they were suggesting that validators staking nodes should...
+
+Leo 
+to sanctions.
+
+So like, he is coming. I think it's very important for validators to decentralize and get rid of the points of failure.
+
+Citizen Web3 
+I agree. It's, again, a huge point of discussion, separate discussion, decentralizing validators. And we on the show over the past year or so, not the first years, we had several teams from different ecosystems that are, it's interesting. I can't see that the solution is there, but.
+
+You know, it's interesting to see how they try to actually decentralize the entity. You know, somebody does it via DAOs, somebody does it via redistributing income. It's cool. It's cool to see that the wheels are slowly turning, you know. But yeah, totally. To jump to the Blitz, Leo, I have five questions for you. They're a bit weird, as people have been saying, but we like them.
+
+Leo 
+Yeah.
+
+Citizen Web3 
+So first one, very simple. For example, blockchain is a direction, technological direction. Give me another technological direction that interests you apart from blockchain.
+
+Leo 
+home.
+
+Um...
+
+Citizen Web3 
+Sound engineering? Music?
+
+Leo 
+No, no, actually I haven't been doing as much music lately because of tinnitus, unfortunately. As soon as it goes away I'm going to start getting back into it, but probably...
+
+Citizen Web3
+Mmm.
+
+Leo 
+Sorry, I know this is supposed to be fast. Faster.
+
+Citizen Web3 
+No, it's okay man, it's okay, no you don't have to be fast at all.
+
+Leo 
+Okay.
+
+I think image generation.
+
+Citizen Web3 
+Interesting. Want to expand on that or just leave it at full stop image generation?
+
+Leo 
+Yeah, sure. I'm happy to expand. I mean, Mid Journey is just great. And I think it's only going to get better. And I think it's going to open up the possibility of creating art for a lot of people. And obviously, like, there's the thing about it might take away a bit from artists.
+
+But I think it will inspire a lot of creativity and people will learn more and appreciate more about the arts. And people will have these tools to create really interesting narratives and stories about, like everyone's got a story to tell. So I think those tools are gonna be very exciting.
+
+Citizen Web3 
+Just the other day we were messing with a sound generator as well too and just to say those guys if you haven't go and check those things out. Those things are fascinating. What about one token? Oh, go go. Which one? Which one did you play with? Which one? Sorry. You remember? Wasn't so, was it Sora? Was it Sora?
+
+Leo 
+I was just playing with one.
+
+Leo 
+Oh, it wasn't, it wasn't. No, no, no. It wasn't Suno. It was like something like Suno, CD or something. Oh, I'm going to have to drop it in the show notes if you like. The one that I was, it was really good. Making songs about Tezos of course, like rap songs. It's so good.
+
+Citizen Web3
+Nice, nice, nice.
+
+And I was I was making fado songs about my cat fado is like a very sad Portuguese tune music and it was making me songs about it's crazy type in one line and then it has like a whole crazy. And what about one token apart from Tezos of course, of course, you can say Bitcoin, Ethereum or anything else, but it would be a bit boring.
+
+Leo 
+Awesome.
+
+Citizen Web3 
+not boring in terms of it's boring, but it would be cool to hear something not on the radar. Again, not a token you're waiting to grow on, but something that you saw out there that is interesting. You mentioned that project that forked the code of Tezos, but is there anything else out there you're following?
+
+Leo 
+There's a token on Tezos. Sorry to be boring. But it's a token on Tezos called Uevis. And I should disclose that I do hold some of the governance token. But it's a decentralized, a finance, synthetic assets platform.
+
+Citizen Web3 
+No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no
+
+Leo 
+So they've got stable coins that are backed by Tezos and it's got like Tezos kind of wrapped Bitcoin on there as well. And I just think they've built a really solid platform in terms of, well, I mean, they do get kind of slow because they're doing everything decentralized.
+
+So the oracles are all very decentralized. Sometimes it can be a bit slow to load the price feeds and stuff, but they're working on a new version 2.0 that's supposed to be coming out soon. It's been supposed to come out soon for a while, but I'm very bullish on this project. You'll hear.
+
+Citizen Web3 
+Nice, nice. It's always actually cool to hear about the ecosystems developing and a lot of them. And it's nice because like I said, Tezos isn't something we covered a lot over the past four years. So it's actually cool to hear about the ecosystem growing. Okay, the three last ones are going to be a bit weirder. They're going to be less technological and more abstract. So the first one is easy. Give me one movie or book or song that has been with you throughout.
+
+whenever how you remember yourself or movie or book or a song something you remember from a childhood and you still kind of go back to it and watch it or listen to it or read it
+
+Leo 
+Ah.
+
+That's a tough one. Um, cause I don't, I don't really listen to a lot of music with the tinnitus. Oh, not, I don't really rewatch movies that I, yeah.
+
+Citizen Web3
+A movie?
+
+Citizen Web3
+Okay, okay.
+
+Citizen Web3 
+that you would like to share with other people that motivates Leo to get out of bed every day and to live his life, you know, to fight the fight, to run nodes, you know, to produce music to do whatever it is you do every life, something motivational.
+
+Leo 
+Hmm, I've never really thought about that, so I'm gonna have to come up with something quickly.
+
+Um...
+
+Leo 
+I like to help people and um...
+
+Leo 
+I don't, I feel like I don't have a lot of friends, but I just like to.
+
+see who I can help today.
+
+Citizen Web3 
+I can totally understand that man and relate to that. Like I think being a validator and helping people kinda comes hand in hand a lot, at least for a lot of people. From, I mean, some maybe, you know, bigger industrial projects, I understand that it's different for them, but I totally understand what you mean. Okay, last one. I promise. Dead or alive, real or made up, doesn't matter.
+
+It could be somebody from that is realistic character. It could be made up character. It could be a movie character. It could be a writer. It could be somebody from your family. Doesn't matter. A persona, a person, a character, that is not your idol because I would like to avoid idols, but somebody or somebody who throughout your life, again, whether they're real or not, it doesn't matter.
+
+has had a positive influence on you.
+
+Leo 
+Mmm.
+
+Citizen Web3 
+If there is somebody like that, of course.
+
+Leo 
+Cool.
+
+Leo 
+Probably Julian Assange.
+
+Citizen Web3 
+Okay. It's a good answer. I like it. Okay. Strong answer. Why? I mean, I understand why, but what's, what's your why?
+
+Leo 
+He's just doing, he's just done the right thing and he's... I mean...
+
+Yeah, and it's just been completely...
+
+punished and it's very unfair. I'd like to meet him.
+
+Citizen Web3
+I think it's a good note also to wrap, to say that we are definitely... This industry is missing a lot of people who are up to doing the right thing. Thank you for sharing your answers, of course, and having the time to join us. And just to say to all the listeners, again, I've been saying this over and over again, but we had this one...
+
+guest who wasn't from crypto, he was an author, a Liberty author. And I like to bring those guests on the show because I like to remind people that also in this industry, we need to do the right things, like you say, like Julian Assange did. And I really think it's a good point here. But Lewa, thank you very much for your time. Thank you very much for your answers. I hope it was okay.
+
+Leo 
+Mm.
+
+Leo 
+to be on the show. Thank you so much Serge.
+
+Citizen Web3 
+Please don't hang up just yet, this is just goodbye for the listeners, thank you everybody, tune in next time and see you later, bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

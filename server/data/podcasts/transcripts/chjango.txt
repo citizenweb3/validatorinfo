@@ -1,0 +1,323 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/chjango
+
+Episode name:
+Memes, Wall Street and community marketing with Chjango Unchained
+
+Anna: 
+Hey, it's Citizen Cosmos. We're serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code. 
+
+Citizen Web3:
+Hey, Cosmonauts and welcome to a new episode of the Citizen Cosmos podcast. And today we are joined by the vice president of the ecosystem development of that tendermintt, Django. And hey Django, how are you? 
+
+Chjango: 
+Hi, nice to meet you. And you could just call me an ecosystem developer in general. That's just what I do for Cosmos. So 
+
+Citizen Web3: 
+sure, sure. Thanks for the correction. 
+
+Chjango: 
+I think the VP title sounds a little bit, you know, corporate. 
+
+Citizen Web3:
+I was trying to make it, you know, like a good entrence. And so, 
+
+Chjango: 
+Oh yeah. Yeah. Thank you. 
+
+Citizen Web3:
+I was contemplating whether to use the word the letters VP or not. But there we go. How's 2021 for you? Is it better than 2020? 
+
+Chjango: 
+Oh, you know, a couple days in and Bitcoin is at, I don't know, it's like broken 30,000s at 35 now, oscillating in between. So yeah, it's been a really good, it's been a really good right. I can't complain. You know, the world is crashing and burning. However, Bitcoin is up. So, you know, no complaints. I'll get there. 
+
+Citizen Web3: 
+That's our narrative, isn't it? The world is crashing, but crypto is growing. So we can carry on. So we actually have a lot of questions. And the first kind of question that I'm mostly interested in, because I'm also an ecosystem builder. And sometimes I find it really hard to explain exactly what I do to people. Because the role is kind of perceived as the role of like the gray cardinal, the person that glues it all together behind the shadows, I don't know, whatever. So in your own words, what is it that you do? And what is it that you don't do maybe as well? 
+
+Chjango: 
+Yeah, it's been a wild ride trying to sort of find my own like self identity, because how I came to this idea of just like titling myself, quote, ecosystem developer. And in fact, like starting a team inside Tender Mint, like that's called ecosystem development, I definitely had a momint of clarity, right? Because sort of during the midterm of my tenure at Tender Mint, I was sort of the, you know, quote, head of community. And I felt like calling yourself sort of community is sort of doing that occupation a disservice because the sort of legacy meaning of community or community management from 2017 was that, you know, all these different ICOs that came around all hired, quote, community managers. And all they did was really boost up their vanity metrics such as Twitter followers, or like they would get bots and, you know, manage a telegram group and just pump it full of bots in order to boost its telegram membership number. And so that's sort of the connotation you think of when you hear community manager. 
+
+And so that was around the time when I was dissatisfied with doing that with calling myself that, right? Because I felt like kind of trying to pursue this decentralized swarm full of different actors who have a single aligned mission, but all have different interests is kind of like a dark art. And so, you know, the way you would approach that has several prongs, you have to like, you know, partner with certain people, I don't like the word partnership either, but you definitely have to collaborate with key people in order to get get something through, you have to do a bit of marketing, there is community building aspects to it in that you're kind of being like a coordinator for a bunch of, you know, different tasks, right? 
+
+And then there's also stuff like allocating capital or funding resources to get something through like investment decisions. And so those sort of four prongs all lend itself to something that I ended up calling ecosystem development. And so that was how I came up with that title. And then after I basically like updated my LinkedIn, I was like, Okay, I'm an ecosystem developer. Then I saw in the crypto sphere, a bunch of different people calling themselves that like, Oh, yeah, I'm an ecosystem development. 
+
+And so that was sort of the next like logical iteration of what heads of community or like community managers sort of evolved into calling themselves. That's the way I think about this line of work that we do, like yourself, Siraj right, it's not only about hosting hackathons doing these tasks, including managing telegram groups, but it really is this kind of multi faceted occupation that requires you to have many different skill sets in order to communicate to the public that this project that you're sort of representing is really compelling, because you have to really believe in the thing that you're doing. And, you know, first and foremost, you have to be really passionate about it. And that speaks to your audience. That's really the best form of marketing there is is just like an evangelist really, but an evangelist that like has a high operational capacity to like get things pushed through. 
+
+Citizen Web3: 
+I like the use of the word evangelist there because that really connects with me. And on that note, I mean, it seems especially for people like yourself who have been for a while in the blockchain space, it kind of seems to me maybe it's just a misconception, but correct me if I'm wrong here. It seems that a lot of those who call themselves ecosystem developers today have kind of went through the same path in blockchain. First, there were community managers, then or maybe they were journalists at first and writing some content, then like you said, community managers, and then because of the whole evolution of not just being, you know, glued to the vanity metrics, but trying to glue it all together, we became what I like you said, ecosystem developers. Is that kind of the path for all of them? Is it a good thing, a bad thing? Or how does it work out? 
+
+Chjango: 
+Yeah, I see this as everyone has a different starting point, right? You entered into crypto through, you know, whatever, who knows, maybe it was even a meme like dogecoin that like spoke to you. 
+
+It doesn't matter what that was. But that initial spark of interest would get you and other people interested in the concept behind a project. And then later, as soon as you've been basically converted to being like a full on enthusiast, then you kind of started. 
+
+So what I'm explaining right now is if every single project has a sort of like marketing conversion funnel, at the top of that funnel would be a project has spoken to a really wide range of audiences. And maybe it was a meme, something very like simple, right? Like with Bitcoin, it was like, oh, like, you know, sound money, digital gold. So that would click with a lot of people. And then for some of those people, they're going to be so interested in that initial meme that they're going to like dig deeper and like find out more about it. And that ends up being them, you know, reading the white paper or like looking through the code base or something like that. There's always this initial funnel that captures a lot of people at the top. But then eventually, as soon as some people trickle down all the way to the bottom of the funnel, there's a conversion event that happens. And they turn into basically zealots, right? That's where you get like, at the extreme end, there's the maximalists of any particular cryptocurrency. And then they end up becoming like the most key community builders for that project. 
+
+And that's because they believe in it so much. And so when I think of community building, those are the types of people that are sort of best suited for that, no matter what walk of life they come from, they could be an engineer, like, you know, they could be front end developers, like protocol engineers, it doesn't really matter. Or they could be like a technical writer, like, like I was. And then they just go through that entire process of basically becoming converted into the religion of whatever cryptocurrency tribe you ended up in. And then they end up basically being so vocal, and their their passion just like speaks through all of their communication. And then that ends up raising awareness with a bunch of new people. And then those new people come back into the funnel. 
+
+And then it becomes this virtuous cycle. And so with community development, that's kind of the types of people who I've seen make them the biggest impact in developing any cryptocurrency project. And I'd say, Yeah, like, I'm definitely one of them. I think you guys are definitely those people as well, right? Like with this podcast, you're going to speak with your own audience, and they're going to be like, Ah, yeah, cosmos makes sense. Okay. And then, yeah, they'll go through that conversion event as well. 
+
+Anna: 
+Yeah, speaking about marketing funnel, what part of the funnel you think is the most important part where we can as people who try to build up the community have to pay a lot of attention? 
+
+Chjango: 
+Well, I actually think that the top of the funnel is the most important because it speaks to the like widest range of people possible. And so I tend to think that the most effective form of communicating or like marketing a project at the very top of the funnel is like meme worthiness, right? It's like, if you have a very strong meme or like a narrative that is really concise, it's very tight and like instantly makes sense. You know, that's also a branding exercise, right? 
+
+And so if you get that piece, right, then it's going to get the largest range of people possible getting interested in your project. That's why like Dogecoin was so effective. And it's why it hasn't died yet, even though no one's been working on it or upgraded it at all ever. 
+
+Citizen Web3: 
+It's just only Elon Musk, right? 
+
+Chjango: 
+Exactly, right? Like, well, here's the thing, like, Elon Musk, like barely understands Bitcoin, and he's talking about Dogecoin. 
+
+Citizen Web3: 
+That's true that's true  Absolutely agree with you. Totally. Totally. Well, while we are on a topic of marketing, I have this kind of difficult question. And Anna told me not to ask it, but I will ask it. As far as I perceive it, right? And this is just my perception. There's basically pretty much two types of marketing campaigns. Once they're a short focus, then basically, you know, they drive you to make the decision right now and then like, you see it, you buy it, right? Either buy, like you said, with maim, so with banners, so with like overflow of information, whatever. That's the second type, which a lot of people refer to as brand marketing, right? Which is what we do kind of like the podcasting, right? We kind of try to slowly and, you know, drive the person to the dark side. 
+
+And then eventually, like you said, he becomes religious and then you know, whatever, from your perceptions, first of all, are there any others? And second, what methods should be applied when? How does one understand what is the correct method of marketing to apply or maybe use a mix or whatever? From my perception, there is two main different tactics with marketing. One is the one that kind of concentrated on the short focus marketing 
+
+Chjango: 
+for speculators, 
+
+Citizen Web3: 
+right 
+
+For example, or the other one, which is kind of focused on the long term, right? Where we kind of slowly, first of all, you give the person a little bit of information, then you give another bit of information, then he goes and finds out some information somewhere else, reads an article, whatever. But slowly, he's kind of like, you know, developing a sense for whatever it is you're trying to market to him. 
+
+And eventually, he either buys or he doesn't buy, or maybe he buys the user's the service, whatever. At which point, do I use the first tactic? And in which point do I use the second tactic? Or should we always mix those tactics? What is your approach generally towards marketing? And how do you decide which tactic to use with which type of user? 
+
+Chjango: 
+So I'll explain my personal preference. 
+
+Citizen Web3: 
+yes
+
+Chjango: 
+And then I'll go into more of like, culture of a project, because that also dictates the way people sort of market strategically. So my personal preference is always that you need to find a good balance, right? Like up to 99% of all of the cryptocurrency market is speculation. And so it's really consequential, and you shouldn't dismiss it, obviously. Everyone is looking at your token price and checking coin market cap to look at your rank as an indicator of the health of your project. Some projects to their own detriment, because a lot of sort of religious zealots are also purists. And so they kind of look down on the speculative aspect of this market. And so to the project's detriment, they will just ignore that aspect completely, right? 
+
+Whereas to me, speculation provides a really strong moat as in defensibility for your project, right? It keeps out the competitors because liquidity for a coin is so like, intangibly valuable. I mean, it's tangibly valuable, but it's intangible in that it's really, really hard for any new coins to come in and instantly get liquidity, right? So liquidity for a coin is a really strong moat. And so from that perspective, you really have to address the speculative market. 
+
+And you do have to commit thought to the token price. So that's my personal take. On the other hand, there is this other force that comes in at play, which is the culture of the originating team, right? Every project starts with a core team or a core individual. And really, after a project passes a certain like phase of its lifespan, you know, when it becomes mature, even after years, it still is beholden to the sort of like, legacy and the history of the culture of the initial core team when it just began. And so if initially your core team says that, okay, no, you know, we're kind of we're purists, right? We want this coin to be just like completely pure. 
+
+It's only about the technology. And that's what we're going to do. So we're not going to cater to the speculators. But we're going to cater to the developers and people who really see the potential in this thing. And sometimes to their detriment in the future, right, after the project has launched, there's still reverberating effects then about that initial decision. Sometimes they they don't want to cater to the speculators. And so, you know, the token price doesn't necessarily reflect something very exciting to the speculators. Unfortunately, to me, I think, you know, marketing a coin has to include the coin market cap, the market cap of a coin, right? it has to saturate 
+
+Citizen Web3:
+I get it. 
+
+Chjango: 
+Yeah, need a balance. That would be my my take. 
+
+Citizen Web3:
+Totally totally. 
+
+Chjango: 
+Yeah, token price is the means to the ends, right? You know, unfortunately, you can't get to that like, you know, five year milestone where you get like massive mainstream adoption without initially making it compelling to early adopters. Fortunately, unfortunately, early adopters are speculators. 
+
+Citizen Web3:
+Yeah, 
+
+Chjango: 
+very few of them are like developers or like protocol engineers, you know, they're going to like, just understand your project and adopt it. There is that middle step that you do have to cross over. 
+
+Citizen Web3: 
+Absolutely. While we're on a topic of the hub, let's kind of move over there. Recently, I'm sure you've seen and you probably have took part in it. The draft of proposal 33 was published, which is if we are not mistaken, the first time we're using community spent proposal for marketing. So what do you think about it? And do you think it's going to succeed? Or do you think that needs some fixes? What are your thoughts? 
+
+Chjango: 
+Yeah, the general idea is very interesting, right? I really love the idea that you could take from community governed tax pool and distribute those funds for an initiative that community deems important, such as marketing and PR, right? You know, Cosmos needs more of that. And so that is a really strong signal that that's what the community wants. 
+
+And it should be addressed. What's alarming to me about proposal 33 specifically is this like extra recentralization factor, which is for some reason, the proposers have taken away the like distributed community funded mechanism to like recentralize the funds into a multi-sig that's controlled by just six signers for some reason. And for those six signers to then distribute the funds for marketing. So that's the part that is alarming to me, which is the question of like, why does that need to happen? Why couldn't the governance of that tax pool directly distribute it to those who should be doing the work? Why does it need to go through this like intermediary layer? That part to me really didn't make sense. 
+
+Citizen Web3: 
+I think with time, hopefully, we will get to the point where that improves as well. 
+
+Chjango: 
+I think in general, the idea is good, but it's unnecessary to allocate those funds to a multi-sig for that multi-sig to then redistribute it. 
+
+Anna: 
+Coming back to the hub, what would you say were the biggest wins and failures, if any, for TenderMint from your position as one of the most important people from ecosystem? 
+
+Chjango:
+Yeah, Cosmos Hub and the Cosmos Network kind of taking this really long term approach. It's so long term that it comes at the detriment of addressing immediate market demands, which is the market right now is hot on fire all about decentralized finance. And for Cosmos Network's infrastructure to not be where it needs to be today, to address the demands of users using DeFi, that is one of my greatest regrets. To be honest, that's it's something that is coming. It's something that I had been pushing internally for the last, you know, 10 months at TenderMint. It's really something that not very many people kind of grasp, I'd say, like in Cosmos. Maybe that might be a little bit too general. But you know, what I mean to say is that I wish we would have addressed DeFi in a more expedient way starting last year. 
+
+The reason Ethereum is so compelling and sort of like the shelling point of all like DeFi economic activity is just because it is so damn frictionless to build and deploy DeFi applications and derivatives that build on top of one another, which is what makes it compelling today. Unfortunately, there is more friction relative to that in Cosmos. And after IBC is ready and after we have like an automated market maker on the hub, maybe after we have had several, maybe we have after we have had something like the ability to near permissionlessly whitelist tokens as fee tokens on the Cosmos hub. And after a lot of different chains have been sort of connected to the hub and to each other post IBC. That's really when we're going to see some really interesting interchange DeFi happening in Cosmos in this sort of interoperable world. 
+
+But prior to that, we don't really have that. And yeah, I wish there was some thing we could have done to really like parallelize all of these efforts because well, what we're seeing in 2021, fortunately, is that IBC is going to launch right in the next few weeks. That really is the key to unlocking all of this new economic energy into Cosmos. You know, but at the same time, like addressing immediate market demands is really necessary. 
+
+And you know, Cosmos does have a very like long term research oriented outlook about it. There needs to be a balance. So that's kind of where we're at. And that's kind of what you're seeing in the market right now. Right. 
+
+Some people are saying Cosmos goes chain, whatever, whatever. But really, it's just that like infrastructure is still being built and it's on the way. And once it's there, then we're going to have really interesting, composable DeFi apps kind of emerge. And that's what I'm really excited about. 
+
+Anna: 
+By the way, what do you think about DeFi market as a phenomenon that during we have seen last year? Is it good for blockchain space or it's not so good because a lot of speculation took place last year and so on and so forth. So what is your general things about it of the top of your head? 
+
+Chjango: 
+Yeah, you know, a lot of people, myself included, have in the past denigrated DeFi for being this just just like a like a shit coin casino, right? Anything goes and like all it is is just speculative activity. However, looking at the results of what DeFi was able to do for all of cryptocurrency, it made cryptocurrency compelling to even just like the Wall Street types, the OG like institutions and funds from Wall Street that never batted in an eyelash at cryptocurrency before. But you know, after DeFi, they started looking at this and saying, hey, this is actually really interesting. And now they're looking at crypto and blockchain tech as this actually credible technology rather than the sort of anti money laundering rail that people like criminals could use to kind of fund their activities. I've come around and I've come around in a really hard way. 
+
+It's just like, right angle, 90 degree turn. I'm like, oh, yeah, I'm all about DeFi. OK, so it's like, it's really compelling because it is, to me, the next logical iteration of cryptocurrency because you know, like Bitcoin was the original DeFi product, right? It's just like this cryptography backed digital asset, which is a financial asset. And on top of that settlement layer, there's going to be all of these different applications and like financial derivatives is at the top of the list, like the most obvious iteration of that product, even though everyone's just speculating on that right now. You know, it really mirrors the Wall Street, right? It's like we are the next generation of kind of Wall Street financiers, you know, not that crypto people are financiers, but you know, that's the most compelling use case of Wall Street. So all that to say that yes, DeFi is a good thing. And I think the sooner people in crypto kind of embrace that fact, the better they are able to kind of capture a market mind share. That's been sort of the message that I've just been like pounding over the head with, you know, people at Cosmos. But 
+
+Citizen Web3: 
+I think all the smartest people, the cleverest people, they first of all didn't like the If you listen to our episode with Ethan, which took place back in the spring event before the big, big hype, right? The big DeFi hype. And me and Ethan were like, yeah, all this DeFi shit. What's that? Right? Like, I mean, don't don't get into those scams. 
+
+Chjango: 
+Ethan, if you talk to Ethan, he's the biggest purist there is. . 
+
+Citizen Web3: 
+Yeah Yeah. Yeah. Me and him were like ripping it. And then we're like, okay, let's not listen to that episode anymore. And it's like, yeah, let's delete that everywhere. Delete that. Delete that. 
+
+No, no, no. But you know, I mean, you mentioned great points there. And I mean, what DeFi has brought to this place like liquidity mining, just for liquidity mining. I mean, you can like say, whoa, oh my God, right guys, this is genius. 
+
+Chjango: 
+Yeah. Yeah. I just wanted to like talk about sort of my conversion event into DeFi, which is like liquidity mining. Okay. Like, what is that? Like, what do you mean mining liquidity? And this was just like so mind blowing when when I realized what it was, you know, like, you could just like programmable liquidity now. 
+
+What the fuck? I was actually looking at like, you know, YAM finance and all of these different like food coins. And I was like, oh man, this is just crap. 
+
+But then I looked deeper into sushi swap. And that was when I realized that, oh man, that was such a hack. Chef Nomi just like hacked it. And I say hack in the most respectful way, because to me hackers are some of the most innovative people in the world. They're the most creative, right? You're not like reinventing the wheel or creating anything new at all. 
+
+Satoshi was a hacker, you know, you just take whatever existed, you compiled them together in a really innovative way, and you hacked together this thing that ended up creating like a over trillion dollar economy. And so that's what I'm saying with with sushi swap. Okay, yeah, like I talked shit about it in the beginning, but I had to bite my tongue about that after I looked into it. They just like, okay, take take the liquidity of Uniswap and then just like migrated over to sushi swap. You could just like transfer liquidity that way. How? Anyway, I was mind blown. After I realized that that was when I tried using Dexys on my own and earning LP tokens and everything after I missed out on the Uni AirDrop. And that was when I realized, oh man, this stuff is really cool. That's just like my my story and 
+
+Citizen Web3: 
+did you get the one inch air drop? 
+
+Chjango: 
+No, I did not. No, no. Yeah. Yeah. You know, I hate to admit this and it's embarrassing to say because I'm such like a cryptocurrency maximalist and all about crypto to be like so late in the game and defy. Yeah. Well, that happened. 
+
+Anna:
+So
+
+Citizen Web3: 
+Yeah, I hear you. I hear you totally. I mean, I didn't miss on the air drops. Hey, but I hear you. I totally because I was really, really, really, really anti really anti for a long time and it took a lot of research and reading to to change. And suddenly when you realize, oh my God, what have I been saying? You're like, whoa, that's just fucking clever. 
+
+Chjango: 
+Yeah. So here's another story, which was back in 2018. I was thinking along the same lines as what ended up becoming yield farming, right? But didn't take product concept lifecycle to it's like most logical conclusion, which does end up being like yield farming on a decentralized exchange or like leverage yield farming, whatever. And that idea was at the end of 2018, I realized that it's going to be really crucial for adoption to just basically do like air drops on steroids for Adam holders. And that was what I really wanted to do with a project called Supernova. The whole idea was that you would incentivize greater staking of atoms by virtue of having all of these different Cosmos zones air drop some of their tokens to staked Adam holders. 
+
+That was like the conception of Supernova. And that was that's sort of like the key idea behind yield farming, right? It's just incentivized token locking or incentivized staking, basically. And so that was the whole idea. It's just that I didn't think the whole product through to like, you know, the whole interface and like how users would actually interact with it directly. But that was the idea behind that project, which is now defunct because we unfortunately were not able to fund the development of it. 
+
+Anna: 
+I think it's kind of game when you have some gameplay mechanics behind it and you get a success, even a small one and you start thinking, oh, okay, I will try something else and a little bit more and more and more. And we like playing it. I remember this article about, I think, that generation who start to trade shares in that super popular game like plant something or something like very, very simple game. But there are a part of it. It's trading. Very simple idea. And they start trading there and then start trading in real life. 
+
+And based on research, because I think that product metrics is super important. And then the analytics figured out that a lot of people just start from the game and then try to do it in real life. So I think it's kind of food coins because it seems like not the real technology. It's like a joke and like set the game and start doing this. And then you suddenly realize that, okay, but it's a part of the big idea behind it. 
+
+Chjango: 
+Yeah, totally gamified token locking. 
+
+Citizen Web3: 
+What about your plans for the Cosmos Hub 2021? Maybe something we still haven't announced or you have in mind that you want to talk about? 
+
+Chjango: 
+I can't announce anything specific yet. Just know that the high level strategic direction is refocusing on building the infrastructure that's needed for enabling DeFi to happen in Cosmos. It's really compelling, right? There needs to be, again, like all these critical building blocks that need to be provided in order for applications to start building things and stable coins and all of that and launching it on Cosmos. So in general, for us to provide the building blocks necessary, the Actus prerequisites for DeFi applications in Cosmos, that will be the focus of 2021. you know Unfortunately, it's a little bit late to the game, but I see a 18 month bull market ensuing. That was sparked by end of December, right? We're mirroring the conditions of 2016 exactly in 2017. So by the time November 2021 rolls around and Cosmos has all of the requisite pieces to provide infrastructure for DeFi to happen, it's still very compelling. 
+
+Citizen Web3: 
+You mentioned quite a lot of things there that can lead towards success. You mentioned DeFi a lot, obviously, we've been talking about DeFi for the last 20 minutes, which I have a question in the other direction. In your opinion, what are some of the things that people who want to build a hub on Cosmos, or those who already build in the hub on Cosmos, should avoid at all costs? Obviously, DeFi is something they should not avoid. What should they avoid? 
+
+Chjango: 
+MEV comes to mind. This is just like the minor extractable value, right? It's the problem that everyone paying attention to Ethereum is trying to solve. and so If you're trying to be a hub in Cosmos and trying to mitigate the risks of MEV as soon as you introduce all these different DeFi functionality on your hub chain, right including if you have stablecoins, if you have AMMs, all of that, just be sure to do it right at the start. 
+
+A lot of people are approaching MEV in a sort of misguided way. I think that if you get it right at the beginning, then you're going to have more long-term sustainability of your blockchain. 
+
+Citizen Web3: 
+One more question about ecosystem. In blockchain space in general, a lot of people tend to think that the word ecosystem is kind of overused. Some people hear ecosystem like, oh my God, I'm not even touching that because it has the word ecosystem on it. In your opinion, is there a difference between the word ecosystem and community or is it just like terminology and... 
+
+Chjango: 
+It's just semantics. Yeah, it's just semantics. Community does have different connotations to it. And I go back to what I said at the beginning of this podcast. It does remind people of 2017 community management, which isn't really at all what ecosystem building is really about. And there's also this notion of, okay, outside of cryptocurrency, there's also community managers. But the thing that they do is build communities of people who have similar interests and then maybe similar interests being like, okay, we love beer. 
+
+And so they host meetups, gatherings just tailored around going to drink different types of beer. That's also the kind of connotation that is associated with, quote, community management. There's like this fraternizing aspect to it, which to me is inaccurate when you're trying to use it to describe cryptocurrency community building. Because in cryptocurrency community building is really just the replacement for user-based building, right? Because in crypto, you have like a decentralized project. And if you map it to, I guess, the centralized startup world, startups have a product and the product addresses its user base, its customers, its paying customers. So in cryptocurrency, in any blockchain network, you don't have customers, right? 
+
+They're not paying. They are bought into your coin. And so your product is sort of the coin, the project, the idea and like the main net, the chain itself. But your customers are the community. So it's like, that's how you map it, but calling it community management. 
+
+It's a little bit different from like ecosystem building. It's not the hearing or there, it's just semantics. You know what I'm saying? Like I'm just like wrapping it up in like the entire like world of possibilities of how like people interpret the word and like the title and everything. But at the end of the day, is there just words? 
+
+Citizen Web3: 
+I can't remember who said it. But the sentence was that there are two types of industries where we call customers users. And that's the drug trade and social networks. But now it's also blockchain. So that's hope. That's the correct way to put it. And I think ecosystem kind of describes, like what you say, describes it in a broader term sense. 
+
+Chjango: 
+Yeah, there's social signaling involved in there too. Yeah. 
+
+Citizen Web3: 
+Is there any types, categories of users that are required for the success of any blockchain ecosystem? 
+
+Chjango: 
+Oh, yeah. At the very start of any project, you need that initial set of people who just get it. And for those people who just get it, they could see like the 10 year, the 20 year grand vision of the project, and they understand its potential. 
+
+And so at the very beginning of any project, that's the type of core group of tight knit people that's needed in order to evangelize this thing and spread it out. And that's what we've seen with the like adoption cycle of every cryptocurrency at the very, very beginning of Bitcoin. You know, there's Satoshi, there's like how Finney and then there's like, you know, all these Gavin and Driesen, the really initial early adopters of this thing. And then they ended up, you know, pushing progress of the product forward. And then they ended up again, going back to the marketing adoption funnel, these people are the ones who kind of like spread the word evangelize it to their friends. And like, a small percentage of them will end up getting it and they will end up themselves going through that conversion funnel. 
+
+And then it spreads exponentially from there. And so at the beginning of every single project, you need that initial core tribe to kind of get it, see its potential, and then evangelize it and spread it from there. And that's how every project, you know, responds to life at the end of the day. 
+
+Anna: 
+Interesting point of view, because any kind of project, it's not just something that happened, it's include the part of metrics and way how we analyze it and how we research it. Could you tell us a little bit more about your research method? I know that nowadays there is an overflow of information about blockchains, but going back into 2014, there wasn't as nearly as much of any available to the border market. What did you do to understand the technology and economy behind it and get into a blockchain space? 
+
+Chjango: 
+Yeah, sure. So back in 2014, that was the first time that I had heard about Bitcoin. One of my friends that I went to college with ended up mining Bitcoin at the time. At that time, I was thinking about quitting my job at NASA. And then I was thinking that I would just go on a solo travel trip around the world. And for that reason, I needed to find some sort of passive investment vehicle that's just going to make money while I sleep, because I wasn't going to be working and I wasn't planning to. 
+
+And so he told me about Bitcoin and he's going to talk about UTXOs and proof of work, caching algorithms in one night at like a bar. And so it just clicked for me at that very moment. Fast forward a year and I discovered that in Bali, Ireland and Indonesia, which is where I landed. In there, there was like a cryptocurrency community. And at that time, it was only Bitcoin. Bitcoin and Bitcoin forks. And so Ethereum was just like metallic was talking about like the idea at the time. 
+
+That's it. And so I found a small community there. And all we would do is just like talk about current events in crypto. And at the time, everyone was so afraid that this thing was going to die because the media and everything covered it and Mount Gox had happened. And so everyone was just talking about how it was just like such a scam and not seeing the innovation for what it was. But during that time, there were only a handful of books that were available that talked about this thing in like a positive and educational light. 
+
+The first book that I read about Bitcoin while I was there in Bali was Brian Kelly's book called The Bitcoin Big Bang. I read through that whole book and he talked about like the, you know, the potential. He saw this grand vision of it. And then, you know, he talked about DOWS and then his own coin. His own coin was called Obelisk coin. 
+
+Gosh, I can't believe I remember that. But that was like, sorry, Brian Kelly, if you're listening, but you know, that was like the first shit coin that you know, like that was developed like early on, you know, it was just like, it wasn't like really a product or anything. But it was like him tinkering with this idea of being able to launch your own token and Dow to be somehow like intertwined in it. Though and behold, months later that, you know, the Dow hack would happen on a theory. 
+
+So here I am right at the very beginning that the meme that I heard from my minor friend was that, okay, this is like sound money and there's all this complex technology that underlies it that makes this work work in the way that it does. And so that was me at the top of the funnel. I got interested in it. I converted by learning more about it reading the white paper and reading Brian Kelly's book. And then finally I went and just read through the entire Princeton Bitcoin book. Princeton had come out with this, I forget how many pages like several hundred page long book just diving into the technicals of Bitcoin, discussing its monetary policy and talking about the cryptography that underlies it and how it's hashing algorithm works and the entire token economics of it. So it was a really technical book. If you or any of the listeners have actually read through it, you'll know what I'm talking about. 
+
+That was really the conversion event. And so after I left Bali, I just went to San Francisco and that was where in 2017 at the time that was where the epicenter of like, you know, all the crypto meetups are happening in America, right? There were the very early like Ethereum and Bitcoin meetups there in like digital garage. 
+
+That was where I started to really network fully with like the early people. And so during that whole period, I was buttressing my knowledge of cryptocurrency by being a journalist and being a technical writer. And all of the theoretical knowledge I was accumulating became applied as soon as I started writing about it and trying to teach other people about it because, you know, as soon as you teach other people about a certain subject, that's when you realize where the holes in your understanding are. And that's where you realize you have to like supplement your knowledge there. And that was kind of how I came to where I am now. So and then and then I joined Tender Mint and then working on Cosmos and doing proof of stake stuff. 
+
+Citizen Web3: 
+That's the main part. But the main question I still have was Brian Kelly's coin better than Max coin, if you remember Max coin, right? I don't know. 
+
+Chjango: 
+Better than Max coin? 
+
+Citizen Web3:
+Of course. Can you remember Max coin Max Kaiser and he did this? Well, he says he didn't do it. He still says he didn't do it. 
+
+But there are a lot of questions. I don't know if you remember it. That was like 2013 or something. 
+
+That was like ridiculously back like so many years ago. Our like traditional sort of resume question that we love to ask all of our guests and especially most of our guests have been in crypto for so long. And I think it's a really interesting that the answer they give to everyone loves it. What are the projects in blockchain that inspire you and you can't say Cosmos because that's obviously too obvious, right? Maybe even outside of blockchain actually, by the way. 
+
+Chjango: 
+I can't emphasize this enough. It's just like how Bitcoin has changed my life. Bitcoin inspires me. Ethereum inspires me. Uniswap inspires me. And even though they had a liquidity war, Sushi swap actually inspires me because that was the thing gave me the aha moment about why DeFi is cool. Handshake inspires me and actually to some degree, Tether. 
+
+And I'll explain why. Even though there's all this, you know, mystique and taboo with Tether and the sketchiness of Bitfinex around it. I realized how innovative the idea of Tether was when I saw that it was the most highly liquid stable coin and it was the only one and then yeah, it has associations with Brock Pierce. He came up with that idea. 
+
+It doesn't detract from the fact that it was very innovative. Now in last year in 2020, all these stable coins kind of emerged, but the original one was Tether and Tether was so useful because the way traders were using it was like, that's where they would park their money anytime they like bought and sold out of another asset. I just sold Bitcoin at a good price. I converted it back in Tether to park it there temporarily, keep my liquidity inside of crypto assets so that I don't have off rent out and like keep that on the exchange until I find a better price to buy back in. 
+
+Anyway, I'm not going to praise Tether anymore. Again, like I'm a very rational, objective person. And so just viewing it in this light makes me realize that okay, yeah, it was like a very, it was a smart thing. 
+
+Citizen Web3: 
+I'm not just filtered that out filtered that out. I'm joking. 
+
+Anna: 
+I know. Yeah, we're down til there's that out. 
+
+Chjango: 
+I can't emphasize this enough about how Bitcoin has changed my life. It's just like, just like the moment I realized its potential, that was when it changed my life forever. As I was solo traveling as a digital nomad, you know, when I was using Bitcoin as a sort of like passive investment vehicle, I knew that this was going to change the world and that it was going to become the financial backbone of the future. 
+
+There was a point in my life where I came to like a fork in the road. I was like, okay, I'm either going to become a yoga teacher or I'm going to dedicate my career to cryptocurrency. Contributing whatever energy I have to making crypto go mainstream in whatever way possible. That's not to say I'm a Bitcoin maximum. 
+
+I think some people do think that I'm a Bitcoin maxi, but that's really not the case. It's more like I am a ardent believer of Satoshi and the innovation that he brought to the world and how he kind of spawned this new industry that ended up being worth over trillions of dollars. And for Bitcoin to be kind of this chaos hedge that as we've seen now in the entire world is slowly waking up to. And yeah, like Ethereum also really inspires me because gosh, it's like the foundation for like all these different applications. And so again, DeFi being enabled by Ethereum is what really got mainstream user adoption that we're seeing today into cryptocurrency and it benefited all of crypto for that matter. 
+
+And handshake. It's another new project that I find really, really compelling. From my perspective, a decentralized, uncensorable internet is going to be really compelling in the coming years. The market hasn't woken up to that fact yet, right? In 2014, I like instantly knew that Bitcoin is going to become a big fucking deal and that was why I got into it. And right now, 2020, I have the same conviction about handshake and that is because what we're seeing right now with the internet is lots of people are unhappy with the way things are currently being managed, right? 
+
+And so people want to find alternatives that give them a better user experience and more freedom for that matter. So in order for the internet to truly be decentralized, not in the like Web3 parity sense, but truly decentralized at the core infrastructure level of the internet protocol, you need native decentralized payment rail, which is Bitcoin. It's solved by Bitcoin. You need to decentralize at the DNS level, which is handshakes. 
+
+It just replaces the only single choke point there is at the DNS level, which is the root zone file. And then the last one is you need decentralized bandwidth. Dissentralized bandwidth, meaning right now the choke point for your internet bandwidth resides in ISPs. And so if you could decentralize that, then we actually have a free and open internet. And that's when you could do really cool things like you could build a Twitter alternative in a way that is totally censorship resistant. And so in the next two to three years, I think the market will start to come and wake up to that realization and then start to really like look at these things as viable products. Right now, there is not a viable project that addresses the decentralized bandwidth piece of the triad. 
+
+But I think in the future it can happen. So those are all the projects that I'm really excited about other than Cosmos that I think are really compelling. And that inspires me. 
+
+Citizen Web3: 
+That's a really good list, actually. I liked it. And with Django, it's been a huge, huge, huge pleasure talking to you. 
+
+Anna:
+Thank you. 
+
+Citizen Web3: 
+Thanks for joining us. 
+
+Chjango:
+Yeah, thank you guys for having me. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
