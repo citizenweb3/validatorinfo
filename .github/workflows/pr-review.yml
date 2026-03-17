@@ -57,7 +57,7 @@ jobs:
           - API routes should only parse params, call service, return response
           - Check if existing services were reused vs duplicated logic
 
-          Do NOT flag (false positives):
+          Do NOT flag:
           - Import paths that are valid per tsconfig.json aliases (verify before flagging!)
           - Missing cn()/twMerge when className is a static string with no conditions
           - Both cn() and twMerge are acceptable for conditional classes
