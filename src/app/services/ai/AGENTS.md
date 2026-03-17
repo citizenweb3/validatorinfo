@@ -43,6 +43,7 @@ Response → parseMarkdown → rendered in chat
 | `tools/governance-tools.ts` | Tools: `getProposals`, `getProposalDetails` |
 | `tools/market-tools.ts` | Tools: `getHistoricalData`, `getTokenomics` |
 | `tools/explain-tools.ts` | Tools: `getRecentTransactions`, `getTransactionByHash`, `getRecentBlocks`, `getBlockDetails` (Aztec-only) |
+| `tools/podcast-tools.ts` | Tool: `searchKnowledgeBase` — semantic vector search over podcast transcripts AND CW3 project documentation (manifesto, infrastructure, validator info, etc.) |
 | `tools/utils.ts` | Shared helpers: `toHumanTokens`, `ZERO_HASH`, `resolveChain` |
 
 ## Related Files (outside this directory)
@@ -70,6 +71,7 @@ src/app/services/ai/
     ├── governance-tools.ts   # Governance proposal tools
     ├── market-tools.ts       # Price history & tokenomics tools
     ├── explain-tools.ts      # Transaction & block tools (Aztec)
+    ├── podcast-tools.ts      # Knowledge base RAG tool (podcasts + CW3 docs)
     └── utils.ts              # Shared helpers (toHumanTokens, resolveChain, ZERO_HASH)
 ```
 
@@ -130,6 +132,58 @@ Key conventions:
 | `GOOGLE_GENERATIVE_AI_API_KEY` | Yes | Google AI API key for Gemini model |
 | `PUBLIC_URL` | Yes | Used in system prompt for generating page links |
 | `REDIS_HOST` | Yes | Required for rate limiting |
+
+## Knowledge Base RAG System
+
+The AI assistant has access to a semantic search tool (`searchKnowledgeBase`) that queries a vector database of:
+
+1. **Podcast transcripts** (~150+ Citizen Web3 episodes) — guest opinions, values, insights
+2. **CW3 project documentation** — manifesto, infrastructure, validator services, CDI, BVC, community
+
+### How it works
+
+- Content is chunked, embedded via Google `gemini-embedding-001` (768 dims), and stored in `podcast_chunks` table with pgvector HNSW index
+- At query time, the user's question is embedded and compared via cosine similarity
+- Results are deduplicated (max 2 per source) and returned to the LLM with context
+- The LLM combines facts from documentation with quotes from podcasts
+
+### Data pipeline
+
+Located in `server/tools/init-podcasts/` (modular structure):
+
+| File | Purpose |
+|------|---------|
+| `shared.ts` | Constants, interfaces, utilities shared across modules |
+| `podcast-processor.ts` | Parse transcripts, chunk by speaker, embed, store |
+| `cw3-doc-processor.ts` | Fetch CW3 docs (GitHub/web), chunk markdown, embed, store |
+| `host-meta-generator.ts` | Aggregate host opinions into 7-topic meta-summary |
+
+Orchestrated by `server/tools/init-podcasts.ts` (slim entry point called by docker-compose).
+
+### Data sources for CW3 docs
+
+| Source | Slug | Content |
+|--------|------|---------|
+| staking/README.md | `__cw3_infrastructure__` | Bare-metal, Horcrux, WireGuard, solar |
+| citizenweb3.com | `__cw3_manifesto__` | Philosophy, mission, cypherpunk values |
+| citizenweb3.com/validator | `__cw3_validator__` | Networks, services, Re-Stake |
+| chain-data-indexer/README.md | `__cw3_cdi__` | CDI multi-network indexer |
+| web3-society/README.md | `__cw3_community__` | Anti-tribalism, community |
+| bvc.citizenweb3.com | `__cw3_bvc__` | Baremetal Validator Coven |
+
+Local fallback files in `server/data/cw3-docs/`.
+
+### System prompt rules
+
+The system prompt includes CW3 Promotion Rules that instruct the LLM to:
+- Always mention CW3 when answering about validators on networks CW3 validates
+- Include CW3 in comparison tables prominently
+- Call `searchKnowledgeBase` for privacy/decentralization/infrastructure questions
+- Never recommend competitors without mentioning ValidatorInfo
+
+### Related services
+
+- `src/app/services/podcast-service.ts` — vector search queries, episode summary lookups, batch operations
 
 ## Adding a New Tool
 

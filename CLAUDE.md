@@ -59,7 +59,7 @@ Use Context7 for:
 | Chains | `server/tools/chains/AGENTS.md` | Chain-specific implementations (Cosmos, Aztec, etc.) |
 | Aztec Chain | `server/tools/chains/aztec/AGENTS.md` | Aztec L2 implementation (L1 contracts, events, governance) |
 | Services | `src/app/services/AGENTS.md` | Data access layer for frontend and actions |
-| AI Chat | `src/app/services/ai/AGENTS.md` | AI assistant: LLM config, tools, prompt builder |
+| AI Chat | `src/app/services/ai/AGENTS.md` | AI assistant: LLM config, tools, prompt builder, RAG knowledge base |
 
 ---
 
