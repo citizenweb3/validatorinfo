@@ -5,6 +5,8 @@ import SubDescription from '@/components/sub-description';
 import PageTitle from '@/components/common/page-title';
 import AccountTransactions
   from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/account-transactions';
+import TransactionsFilters
+  from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-filters';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -40,6 +42,9 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
     <div className="mb-14">
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <div className="mb-4 mt-2 flex justify-end">
+        <TransactionsFilters />
+      </div>
       <AccountTransactions chainName={name}
                            page={'TxSummaryPage'}
                            perPage={perPage}

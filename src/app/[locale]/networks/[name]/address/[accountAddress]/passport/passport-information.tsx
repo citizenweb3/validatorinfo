@@ -41,6 +41,10 @@ const PassportInformation: FC<OwnProps> = async ({ accountAddress }) => {
               <div className="mx-auto px-20 font-handjet text-xl text-highlight">$12.43K</div>
             </div>
           </Tooltip>
+          <div className="mt-2.5 flex items-center justify-between px-4 py-1 shadow-button">
+            <div className="font-sfpro text-lg">{t('join date')}:</div>
+            <div className="mx-auto px-20 font-handjet text-xl text-highlight">Jan 15, 2024</div>
+          </div>
         </div>
       </div>
     </div>

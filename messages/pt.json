@@ -1485,6 +1485,7 @@
       "Multichain Portfolio": "Carteira Multichain",
       "Claim Address": "Endereço do Pedido",
       "account value": "Valor da Conta",
+      "join date": "Data de Adesão",
       "token": "Token",
       "Merits": "Méritos",
       "Delegations": "Delegações",
@@ -1513,11 +1514,32 @@
     },
     "Transactions": {
       "title": "Histórico de Transações da Conta Blockchain",
-      "description": "O registo completo das transações está aqui. Detalhei todas as enviadas, recebidas e interações, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!"
+      "description": "O registo completo das transações está aqui. Detalhei todas as enviadas, recebidas e interações, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!",
+      "Customize": "Personalizar",
+      "filter-type": "Tipo",
+      "filter-date": "Data",
+      "filter-amount": "Valor",
+      "Click 3 times to reset all filters": "Clique 3 vezes para redefinir todos os filtros"
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",
-      "description": ""
+      "description": "",
+      "not-available-for-chain": "Informações de governança estão disponíveis apenas para a rede Aztec",
+      "slashing-history-title": "Histórico de Slashing",
+      "voting-history-title": "Histórico de Votação",
+      "network-impact-title": "Impacto na Rede",
+      "slashing-events-stat": "Eventos de Slashing",
+      "total-votes-stat": "Total de Votos",
+      "total-slashed-stat": "Total Cortado",
+      "no-governance-activity": "Nenhuma atividade de governança encontrada para este endereço",
+      "proposal-id-column": "ID da Proposta",
+      "Table": {
+        "Proposal ID": { "name": "ID da Proposta", "hint": "" },
+        "Title": { "name": "Título", "hint": "" },
+        "Vote": { "name": "Voto", "hint": "" },
+        "Network Impact": { "name": "Impacto na Rede", "hint": "" },
+        "Date": { "name": "Data", "hint": "" }
+      }
     },
     "Analytics": {
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",
