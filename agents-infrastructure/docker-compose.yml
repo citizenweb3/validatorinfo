@@ -3,11 +3,14 @@ services:
     build: .
     container_name: agent-builder
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - claude-data-builder:/root/.claude
       - runner-data-builder:/home/pwuser/actions-runner
       - ./workspace-builder:/root/workspace
       - monitoring-data:/data/monitoring
+      - gitnexus-data-builder:/home/pwuser/.gitnexus
     environment:
       - GITHUB_URL=${GITHUB_URL}
       - GITHUB_RUNNER_TOKEN=${GITHUB_RUNNER_TOKEN_BUILDER}
@@ -28,6 +31,8 @@ services:
     build: .
     container_name: agent-content
     restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     volumes:
       - claude-data-content:/root/.claude
       - runner-data-content:/home/pwuser/actions-runner
@@ -61,4 +66,5 @@ volumes:
   runner-data-builder:
   runner-data-content:
   monitoring-data:
+  gitnexus-data-builder:
   twitter-profiles:
