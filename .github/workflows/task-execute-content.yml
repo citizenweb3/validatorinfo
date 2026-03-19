@@ -31,7 +31,7 @@ jobs:
           fi
           npx prisma generate 2>/dev/null || true
           npx prisma generate --schema=prisma/events/schema.prisma 2>/dev/null || true
-          printf "DATABASE_URL=%s\nEVENTS_DATABASE_URL=%s\n" "$DATABASE_URL" "$EVENTS_DATABASE_URL" > .env.local
+          printf "DATABASE_URL=%s\nEVENTS_DATABASE_URL=%s\n" "$DATABASE_URL" "$EVENTS_DATABASE_URL" > .env
 
       - name: Determine role and execute
         env:
@@ -63,85 +63,8 @@ jobs:
             -- "${SYSTEM}
 
           TASK: ${ISSUE_TITLE}
-          DETAILS: ${BODY}
-
-          Instructions:
-          1. Read your context files listed in the agent prompt before starting
-          2. Read CLAUDE.md for project conventions
-          3. Query the database to discover available chains and data:
-             - First: SELECT name FROM chains to see what chains exist
-             - Then: query specific data relevant to the task
-             - NEVER hardcode chain names — always query the DB first
-          4. Verify data freshness — if data looks stale, note it or skip that data point
-          5. Create the content as specified in the task
-          6. Determine your autonomy level:
-             - Level 1: pure facts from DB (APR changed, new validator, slashing, TVL milestone)
-             - Level 2: responding to external content with our data
-             - Level 3: opinions, predictions, evaluations
-          7. Set autonomy label on this Issue:
-             gh issue edit ${ISSUE_NUMBER} --add-label 'autonomy:level-N'
-          8. Set content type label:
-             gh issue edit ${ISSUE_NUMBER} --add-label 'type:tweet' or 'type:thread'
-          9. Determine target platforms:
-             - Check labels: platform:twitter, platform:telegram, platform:discord
-             - If no platform labels: check task text for platform mentions
-             - If neither: post to ALL platforms (Twitter, Telegram, Discord)
-          10. If Level 1 or Level 2:
-              a. For EACH target platform, check if its API key is configured:
-                 - Twitter: TWITTER_API_KEY
-                 - Telegram: TELEGRAM_BOT_TOKEN
-                 - Discord: DISCORD_WEBHOOK_URL
-              b. Post to every platform where keys exist via agents-tools/post-twitter.js, post-telegram.js, post-discord.js
-                 After EACH post, log it:
-                 ./agents-tools/log-social.sh --agent ${ROLE} --platform <platform> --action post \
-                   --account therealvalinfo --content '<post text>' \
-                   --result <success|failure> --response '<json response>'
-              c. If at least one platform was posted to:
-                 - Comment on Issue with Content Report (include drafts for unposted platforms)
-                 - Set label: status:posted (NEVER combine with status:pending-review)
-                 - Set platform:* labels for each platform posted to
-                 - Close the Issue
-              d. If NO keys configured at all: fall through to Level 3 behavior
-          IMPORTANT: status:posted and status:pending-review are MUTUALLY EXCLUSIVE. Never set both.
-          11. If Level 3 (or NO keys configured at all):
-              a. Comment on Issue with Draft for Review (see format below)
-              b. Set label: status:pending-review (NEVER combine with status:posted)
-              c. Do NOT close the Issue
-              d. Do NOT post to any platform, even if keys are available
-
-          Content Report format (for Level 1-2, after posting):
-          ## Content Report
-          **Autonomy Level:** [1 or 2] ([reason])
-          **Platforms:** [list]
-          ### Content
-          > [posted text]
-          ### Data Sources
-          - [DB queries and sources used]
-          ### Published Links
-          - Twitter: [url]
-          - Telegram: [url]
-          - Discord: posted
-          ### Agent Notes
-          [any notes]
-
-          Draft for Review format (for Level 3 or no API keys):
-          ## Draft for Review
-          **Autonomy Level:** [level] ([reason])
-          **Target Platforms:** [list]
-          **Reason for review:** [why not auto-post]
-          ### Draft
-          > [content text]
-          ### Data Sources
-          - [DB queries and sources used]
-          ### Agent Notes
-          [any notes]
-
-          Rules:
-          - NEVER hardcode chain names — always query the DB first
-          - Always cite data sources (DB query results, URLs)
-          - Stay within indexed networks with live data on validatorinfo.com
-          - Max 1-2 emojis per post
-          - Do NOT use pkill, killall, or any command that kills processes by name"
+          ISSUE: #${ISSUE_NUMBER}
+          DETAILS: ${BODY}"
 
           if [ $? -ne 0 ]; then
             echo "Agent failed. See monitoring.db for details."

@@ -52,7 +52,8 @@ Use Context7 for:
 
 | Need | Tool                               |
 |------|------------------------------------|
-| Find code / execution flows | GitNexus (`query`, `context`)     |
+| Semantic search by meaning | DeepContext (`search_codebase`)    |
+| Code relationships / execution flows | GitNexus (`query`, `context`)     |
 | Impact before changes | GitNexus (`impact`, `detect_changes`) |
 | Library docs / examples | Context7                           |
 | Exact string match | grep                               |
