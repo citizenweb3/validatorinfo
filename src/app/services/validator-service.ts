@@ -528,31 +528,112 @@ const validatorSelect = {
   },
 };
 
-const searchByMoniker = async (query: string, take: number = 10) => {
-  const exact = await db.validator.findMany({
-    where: { moniker: { contains: query, mode: 'insensitive' } },
-    take,
-    select: validatorSelect,
-    orderBy: { moniker: 'asc' },
-  });
+const normalizeSearchValue = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[.\-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 
-  if (exact.length > 0) return exact;
-  const normalized = query.replace(/[.\-_]/g, ' ').trim();
-  const ids = await db.$queryRaw<{ id: number }[]>`
-    SELECT id FROM validators
-    WHERE LOWER(REPLACE(REPLACE(REPLACE(moniker, '.', ' '), '-', ' '), '_', ' '))
-      LIKE '%' || LOWER(${normalized}) || '%'
+const mergeUniqueIds = (groups: number[][]) => {
+  const seen = new Set<number>();
+  const orderedIds: number[] = [];
+
+  for (const group of groups) {
+    for (const id of group) {
+      if (seen.has(id)) {
+        continue;
+      }
+
+      seen.add(id);
+      orderedIds.push(id);
+    }
+  }
+
+  return orderedIds;
+};
+
+const getValidatorIdsByNormalizedMoniker = async (query: string, take: number): Promise<number[]> => {
+  const normalizedQuery = normalizeSearchValue(query);
+  if (!normalizedQuery) {
+    return [];
+  }
+
+  const matches = await db.$queryRaw<{ id: number }[]>`
+    SELECT id
+    FROM validators
+    WHERE LOWER(REGEXP_REPLACE(moniker, '[._-]+', ' ', 'g')) LIKE '%' || ${normalizedQuery} || '%'
     ORDER BY moniker ASC
     LIMIT ${take}
   `;
 
-  if (ids.length === 0) return [];
+  return matches.map((match) => match.id);
+};
 
-  return db.validator.findMany({
-    where: { id: { in: ids.map(r => r.id) } },
+const getValidatorIdsByFuzzyMoniker = async (query: string, take: number): Promise<number[]> => {
+  const normalizedQuery = normalizeSearchValue(query);
+  if (!normalizedQuery) {
+    return [];
+  }
+
+  const matches = await db.$queryRaw<{ id: number; score: number }[]>`
+    SELECT id, similarity(LOWER(moniker), ${normalizedQuery}) AS score
+    FROM validators
+    WHERE similarity(LOWER(moniker), ${normalizedQuery}) >= 0.3
+    ORDER BY score DESC, moniker ASC
+    LIMIT ${take}
+  `;
+
+  return matches.map((match) => match.id);
+};
+
+const searchByMoniker = async (query: string, take: number = 10) => {
+  const safeQuery = query.trim();
+  if (!safeQuery) {
+    return [];
+  }
+
+  const exact = await db.validator.findMany({
+    where: { moniker: { equals: safeQuery, mode: 'insensitive' } },
+    take: Math.max(take, 1),
     select: validatorSelect,
     orderBy: { moniker: 'asc' },
   });
+
+  const exactIds = exact.map((validator) => validator.id);
+  if (exactIds.length >= take) {
+    return exact;
+  }
+
+  const contains = await db.validator.findMany({
+    where: { moniker: { contains: safeQuery, mode: 'insensitive' } },
+    take: Math.max(take * 2, take),
+    select: { id: true },
+    orderBy: { moniker: 'asc' },
+  });
+
+  const normalizedIds = await getValidatorIdsByNormalizedMoniker(safeQuery, Math.max(take * 2, take));
+  const fuzzyIds = await getValidatorIdsByFuzzyMoniker(safeQuery, Math.max(take * 3, take));
+  const orderedIds = mergeUniqueIds([
+    exactIds,
+    contains.map((validator) => validator.id),
+    normalizedIds,
+    fuzzyIds,
+  ]).slice(0, take);
+
+  if (orderedIds.length === 0) {
+    return [];
+  }
+
+  const validators = await db.validator.findMany({
+    where: { id: { in: orderedIds } },
+    select: validatorSelect,
+  });
+
+  const validatorById = new Map(validators.map((validator) => [validator.id, validator]));
+  return orderedIds
+    .map((id) => validatorById.get(id))
+    .filter((validator): validator is NonNullable<typeof validator> => Boolean(validator));
 };
 
 const validatorService = {
