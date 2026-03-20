@@ -8,12 +8,32 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  execute:
+  route:
     if: >-
       github.event.label.name == 'agent:seo-vi' ||
       github.event.label.name == 'agent:seo-cw3' ||
       github.event.label.name == 'agent:biz-dev'
-    runs-on: [self-hosted, content]
+    runs-on: ubuntu-latest
+    outputs:
+      runner: ${{ steps.pick.outputs.runner }}
+    steps:
+      - name: Pick runner by label
+        id: pick
+        env:
+          LABEL: ${{ github.event.label.name }}
+        run: |
+          case "$LABEL" in
+            agent:seo-cw3)
+              echo "runner=content-cw3" >> $GITHUB_OUTPUT
+              ;;
+            *)
+              echo "runner=content" >> $GITHUB_OUTPUT
+              ;;
+          esac
+
+  execute:
+    needs: route
+    runs-on: [self-hosted, "${{ needs.route.outputs.runner }}"]
     steps:
       - uses: actions/checkout@v4
         with:

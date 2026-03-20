@@ -59,12 +59,53 @@ services:
       - TELEGRAM_CHANNEL_ID=${TELEGRAM_CHANNEL_ID}
       - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
       - DATABASE_URL=${DATABASE_URL}
+      - TWITTER_HANDLE=therealvalinfo
+      - RAG_API_TOKEN=${RAG_API_TOKEN}
+      - RAG_API_URL=http://frontend:3000
+
+  agent-content-cw3:
+    build: .
+    container_name: agent-content-cw3
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - claude-data-content-cw3:/root/.claude
+      - runner-data-content-cw3:/home/pwuser/actions-runner
+      - ./workspace-content-cw3:/root/workspace
+      - monitoring-data:/data/monitoring
+      - twitter-profiles:/data/twitter-profiles
+    environment:
+      - GITHUB_URL=${GITHUB_URL}
+      - GITHUB_RUNNER_TOKEN=${GITHUB_RUNNER_TOKEN_CONTENT_CW3}
+      - RUNNER_LABELS=self-hosted,content-cw3
+      - RUNNER_NAME=agent-content-cw3
+      - GH_TOKEN=${GITHUB_PERSONAL_ACCESS_TOKEN}
+      - TWITTER_API_KEY=${CW3_TWITTER_API_KEY}
+      - TWITTER_API_SECRET=${CW3_TWITTER_API_SECRET}
+      - TWITTER_BEARER_TOKEN=${CW3_TWITTER_BEARER_TOKEN}
+      - TWITTER_ACCESS_TOKEN=${CW3_TWITTER_ACCESS_TOKEN}
+      - TWITTER_ACCESS_TOKEN_SECRET=${CW3_TWITTER_ACCESS_TOKEN_SECRET}
+      - CONTAINER_ROLE=content-cw3
+      - CLAUDE_CODE_OAUTH_TOKEN=${CLAUDE_CODE_OAUTH_TOKEN}
+      - CLAUDE_ACCOUNT_UUID=${CLAUDE_ACCOUNT_UUID}
+      - CLAUDE_EMAIL=${CLAUDE_EMAIL}
+      - CLAUDE_ORG_UUID=${CLAUDE_ORG_UUID}
+      - TELEGRAM_BOT_TOKEN=${CW3_TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHANNEL_ID=${CW3_TELEGRAM_CHANNEL_ID}
+      - DISCORD_WEBHOOK_URL=${CW3_DISCORD_WEBHOOK_URL}
+      - DATABASE_URL=${DATABASE_URL}
+      - TWITTER_HANDLE=citizen_web3
+      - RAG_API_TOKEN=${RAG_API_TOKEN}
+      - RAG_API_URL=http://frontend:3000
 
 volumes:
   claude-data-builder:
   claude-data-content:
   runner-data-builder:
   runner-data-content:
+  claude-data-content-cw3:
+  runner-data-content-cw3:
   monitoring-data:
   gitnexus-data-builder:
   twitter-profiles:

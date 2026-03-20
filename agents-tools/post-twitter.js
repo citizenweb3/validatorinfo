@@ -7,7 +7,7 @@
 
 const { TwitterApi } = require('twitter-api-v2');
 
-const TWITTER_HANDLE = 'therealvalinfo';
+const TWITTER_HANDLE = process.env.TWITTER_HANDLE || 'therealvalinfo';
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
 
