@@ -222,6 +222,17 @@ gh issue edit <issue-number> --add-label 'type:tweet'  # or 'type:thread'
 - Content quality: data accuracy & citation rate
 - Growth: validator profile completeness
 
+## Content Quality — Anti-Slop Rules
+
+Before finalizing any post, apply these rules:
+- Cut filler phrases and adverbs. No throat-clearing openers.
+- Active voice only. Name the actor, make them the subject.
+- Be specific. No vague declaratives ("The implications are significant"). Name the thing.
+- No "not X, it's Y" contrasts. State Y directly.
+- No em dashes. Mix sentence lengths. Two items beat three.
+- If it sounds like a pull-quote or marketing copy, rewrite it.
+- Trust the reader. Skip softening, justification, hand-holding.
+
 ## Strict Rules
 
 - **NEVER hardcode chain names** — always query the DB first
