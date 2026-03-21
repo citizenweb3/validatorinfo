@@ -1,13 +1,10 @@
-import { embed } from 'ai';
-import { google } from '@ai-sdk/google';
-
 import logger from '@/logger';
 import ChainService from '@/services/chain-service';
 import SearchService from '@/services/search-service';
+import EmbeddingService from '@/services/embedding-service';
 import ValidatorService from '@/services/validator-service';
 import podcastService from '@/services/podcast-service';
 import { toHumanTokens } from '@/services/ai/tools/utils';
-import { PODCAST_EMBEDDING_DIMENSIONS, PODCAST_EMBEDDING_MODEL_ID } from '@/server/config/podcast-config';
 
 const { logError } = logger('value-search-service');
 
@@ -17,7 +14,6 @@ const DEFAULT_LIMIT = 5;
 const MAX_LIMIT = 10;
 const MAX_EVIDENCE_PER_CANDIDATE = 4;
 const OVERFETCH_MULTIPLIER = 12;
-const EMBEDDING_MODEL = google.textEmbeddingModel(PODCAST_EMBEDDING_MODEL_ID);
 
 type SpeakerRole = 'GUEST' | 'HOST' | 'ALL';
 
@@ -118,21 +114,6 @@ const truncateText = (value: string, limit: number) => {
 };
 
 const roundScore = (score: number) => Math.round(score * 100) / 100;
-
-const embedQuery = async (query: string): Promise<number[]> => {
-  const { embedding } = await embed({
-    model: EMBEDDING_MODEL,
-    value: query,
-    providerOptions: {
-      google: {
-        taskType: 'RETRIEVAL_QUERY',
-        outputDimensionality: PODCAST_EMBEDDING_DIMENSIONS,
-      },
-    },
-  });
-
-  return embedding;
-};
 
 const isCw3Doc = (episodeSlug: string) =>
   episodeSlug.startsWith('__cw3_') || episodeSlug === '__host_meta__';
@@ -240,7 +221,7 @@ const resolveChainTarget = async (chainName: string): Promise<ResolvedChain | nu
     return null;
   }
 
-  return exact ?? rankedChain;
+  return rankedChain;
 };
 
 const pickBestValidatorMatch = (
@@ -427,7 +408,7 @@ const findValidatorsByValues = async ({
       };
     }
 
-    const embedding = await embedQuery(safeQuery);
+    const embedding = await EmbeddingService.embedQuery(safeQuery);
     const raw = await podcastService.searchChunks(
       embedding,
       Math.max(take * OVERFETCH_MULTIPLIER, 30),
