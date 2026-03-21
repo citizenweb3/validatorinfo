@@ -7,7 +7,11 @@
 
 const { TwitterApi } = require('twitter-api-v2');
 
-const TWITTER_HANDLE = process.env.TWITTER_HANDLE || 'therealvalinfo';
+const TWITTER_HANDLE = process.env.TWITTER_HANDLE;
+if (!TWITTER_HANDLE) {
+  console.log(JSON.stringify({ success: false, error: 'TWITTER_HANDLE env var is required' }));
+  process.exit(1);
+}
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
 
