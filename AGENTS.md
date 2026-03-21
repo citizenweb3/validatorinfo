@@ -11,10 +11,9 @@ If an `AGENTS.md` file exists in the target directory:
 
 ## Code Search & Documentation
 
-### Finding Code (DeepContext)
+### Semantic Search (DeepContext)
 
-When you need to find code, understand relationships between files,
-or locate implementations — use DeepContext MCP tools:
+When you need to find code by meaning — use DeepContext MCP tools:
 
 1. First run `index_codebase` if not indexed yet
 2. Use `search_codebase` for semantic search queries
@@ -24,7 +23,18 @@ Examples:
 - "where is JWT validated" → search_codebase
 - "find all API endpoints" → search_codebase
 
-Prefer DeepContext over grep for conceptual searches.
+Use DeepContext when you don't know exact names and need to discover relevant code.
+
+### Code Relationships & Impact (GitNexus)
+
+When you need to understand how code connects — use GitNexus MCP tools:
+
+- `gitnexus_query({query: "concept"})` — find execution flows by concept
+- `gitnexus_context({name: "symbolName"})` — 360° view: callers, callees, processes
+- `gitnexus_impact({target: "functionName", direction: "upstream"})` — blast radius before editing
+- `gitnexus_detect_changes()` — pre-commit scope check
+
+Use GitNexus when you need to understand relationships, what will break, or trace execution flows.
 
 ### Library Documentation (Context7)
 
@@ -44,7 +54,9 @@ Use Context7 for:
 
 | Need | Tool                               |
 |------|------------------------------------|
-| Find code in this project | DeepContext                        |
+| Semantic search by meaning | DeepContext (`search_codebase`)    |
+| Code relationships / execution flows | GitNexus (`query`, `context`)     |
+| Impact before changes | GitNexus (`impact`, `detect_changes`) |
 | Library docs / examples | Context7                           |
 | Exact string match | grep                               |
 | Project architecture | Read CLAUDE.md and AGENTS.md files |
