@@ -52,7 +52,8 @@ Use Context7 for:
 
 | Need | Tool                               |
 |------|------------------------------------|
-| Find code / execution flows | GitNexus (`query`, `context`)     |
+| Semantic search by meaning | DeepContext (`search_codebase`)    |
+| Code relationships / execution flows | GitNexus (`query`, `context`)     |
 | Impact before changes | GitNexus (`impact`, `detect_changes`) |
 | Library docs / examples | Context7                           |
 | Exact string match | grep                               |
@@ -258,6 +259,7 @@ Optional:
 - `GOOGLE_GENERATIVE_AI_API_KEY`: For AI chat assistant (Gemini)
 - `GITHUB_API_TOKEN`: For fetching GitHub data
 - `SKIP_API_KEY`: For Skip Protocol integration
+- `RAG_API_TOKEN`: Shared secret for internal RAG search API (agent access)
 
 ---
 

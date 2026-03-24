@@ -1,22 +1,10 @@
-import { tool, embed } from 'ai';
-import { google } from '@ai-sdk/google';
+import { tool } from 'ai';
 import { z } from 'zod';
 import logger from '@/logger';
 import podcastService from '@/services/podcast-service';
-import { PODCAST_EMBEDDING_MODEL_ID, PODCAST_EMBEDDING_DIMENSIONS } from '@/server/config/podcast-config';
+import EmbeddingService from '@/services/embedding-service';
 
 const { logError } = logger('ai-tools:knowledge-base');
-
-const EMBEDDING_MODEL = google.textEmbeddingModel(PODCAST_EMBEDDING_MODEL_ID);
-
-const embedQuery = async (query: string): Promise<number[]> => {
-  const { embedding } = await embed({
-    model: EMBEDDING_MODEL,
-    value: query,
-    providerOptions: { google: { taskType: 'RETRIEVAL_QUERY', outputDimensionality: PODCAST_EMBEDDING_DIMENSIONS } },
-  });
-  return embedding;
-};
 
 export const podcastTools = {
   searchKnowledgeBase: tool({
@@ -30,10 +18,9 @@ export const podcastTools = {
     }),
     execute: async ({ query, validatorId, speakerRole }) => {
       try {
-        const embedding = await embedQuery(query);
+        const embedding = await EmbeddingService.embedQuery(query);
         const OVERFETCH = 40;
         const RESULT_LIMIT = 15;
-        const MAX_PER_SOURCE = 2;
 
         const raw = await podcastService.searchChunks(embedding, OVERFETCH, validatorId, speakerRole);
 
@@ -41,31 +28,7 @@ export const podcastTools = {
           return { results: [], message: 'No relevant knowledge base content found for this query.' };
         }
 
-        const episodeCounts = new Map<string, number>();
-        const deduped = raw.filter((r) => {
-          const key = r.episodeSlug;
-          const count = episodeCounts.get(key) || 0;
-          if (count >= MAX_PER_SOURCE) return false;
-          episodeCounts.set(key, count + 1);
-          return true;
-        });
-
-        const results = deduped.slice(0, RESULT_LIMIT);
-
-        const mapped = results.map((r) => ({
-          quote: r.content,
-          context: r.question,
-          speakerRole: r.speakerRole,
-          speakerName: r.speakerRole === 'HOST' ? 'Citizen Web3' : (r.speakerName || r.guestName),
-          validatorId: r.validatorId,
-          validatorMoniker: r.validatorMoniker,
-          mentionedEntities: r.mentionedEntities,
-          episodeTitle: r.episodeTitle,
-          episodeUrl: r.episodeUrl,
-          similarity: Math.round(r.similarity * 100) / 100,
-        }));
-
-        return { results: mapped };
+        return { results: podcastService.formatSearchResults(raw, RESULT_LIMIT) };
       } catch (error) {
         logError(`searchKnowledgeBase failed: ${error instanceof Error ? error.message : String(error)}`);
         return { error: 'Failed to search knowledge base' };

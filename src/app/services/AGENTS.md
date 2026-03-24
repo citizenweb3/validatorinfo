@@ -29,6 +29,7 @@
 | `aztec-governance-service.ts` | Aztec governance display (getGovernanceConfigDisplay, getVotingPowerDisplay, getRawGovernanceConfig, getRawTotalVotingPower) |
 | `aztec-governance-db.ts` | Aztec governance data reader (getAztecGovernanceDataFromDb, StoredGovernanceConfig, AztecGovernanceData types) |
 | `podcast-service.ts` | Podcast RAG: vector search over podcast chunks (pgvector), episode summary lookups by validator identity/moniker, batch operations |
+| `embedding-service.ts` | Shared text embedding via Google Gemini (used by podcast-tools, value-search, RAG route) |
 | `redis-cache.ts` | Redis caching utilities (cacheGet, cacheSet, cacheGetOrFetch, CACHE_KEYS, CACHE_TTL) |
 
 ## Dependencies

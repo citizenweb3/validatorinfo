@@ -27,6 +27,19 @@ interface PodcastChunkResult {
   similarity: number;
 }
 
+interface FormattedSearchResult {
+  quote: string;
+  context: string | null;
+  speakerRole: string;
+  speakerName: string | null;
+  validatorId: number | null;
+  validatorMoniker: string | null;
+  mentionedEntities: string[];
+  episodeTitle: string;
+  episodeUrl: string;
+  similarity: number;
+}
+
 interface EpisodeSummaryResult {
   summary: string;
   episodeUrl: string;
@@ -272,6 +285,35 @@ const podcastService = {
     }
 
     return result;
+  },
+  formatSearchResults(
+    rawResults: PodcastChunkResult[],
+    limit: number,
+    maxPerSource = 2,
+  ): FormattedSearchResult[] {
+    const episodeCounts = new Map<string, number>();
+    const deduped = rawResults.filter((r) => {
+      const count = episodeCounts.get(r.episodeSlug) ?? 0;
+      if (count >= maxPerSource) {
+        return false;
+      }
+
+      episodeCounts.set(r.episodeSlug, count + 1);
+      return true;
+    });
+
+    return deduped.slice(0, limit).map((r) => ({
+      quote: r.content,
+      context: r.question || r.contextPrefix || null,
+      speakerRole: r.speakerRole,
+      speakerName: r.speakerRole === 'HOST' ? 'Citizen Web3' : (r.speakerName || r.guestName),
+      validatorId: r.validatorId,
+      validatorMoniker: r.validatorMoniker,
+      mentionedEntities: r.mentionedEntities,
+      episodeTitle: r.episodeTitle,
+      episodeUrl: r.episodeUrl,
+      similarity: Math.round(r.similarity * 100) / 100,
+    }));
   },
 };
 

@@ -4,6 +4,7 @@ import { governanceTools } from './governance-tools';
 import { marketTools } from './market-tools';
 import { explainTools } from './explain-tools';
 import { podcastTools } from './podcast-tools';
+import { valueTools } from './value-tools';
 
 export const aiTools = {
   ...chainTools,
@@ -12,4 +13,5 @@ export const aiTools = {
   ...marketTools,
   ...explainTools,
   ...podcastTools,
+  ...valueTools,
 };
