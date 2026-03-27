@@ -971,6 +971,8 @@
     "websocket nodes": "WebSocket Ноды",
     "indexer nodes": "Ноды Индексаторы",
     "lcd nodes": "LCD Ноды",
+    "masp indexer nodes": "Узлы индексатора MASP",
+    "interface nodes": "Узлы интерфейса стейкинга",
     "relayer nodes": "Ноды Ретрансляторы",
     "archive nodes": "Архивные Ноды",
     "others nodes": "Другие Ноды",

@@ -17,6 +17,16 @@ interface NamadaMASPEntry {
   'GitHub Account'?: string;
 }
 
+interface NamadaInterfaceEntry {
+  'Interface Name': string;
+  'Interface URL': string;
+  'Available': string;
+  'Notes': string;
+  'Team or Contributor Name': string;
+  'Discord UserName'?: string;
+  'GitHub Account'?: string;
+}
+
 interface NamadaNode {
   type: ChainNodeType;
   url: string;
@@ -28,11 +38,19 @@ const NAMADA_REGISTRIES = {
     rpc: 'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/mainnet/rpc.json',
     indexer:
       'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/mainnet/namada-indexers.json',
+    maspIndexer:
+      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/mainnet/masp-indexers.json',
+    interface:
+      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/mainnet/interfaces.json',
   },
   testnet: {
     rpc: 'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/testnet/housefire/rpc.json',
     indexer:
       'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/testnet/housefire/namada-indexers.json',
+    maspIndexer:
+      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/testnet/housefire/masp-indexers.json',
+    interface:
+      'https://raw.githubusercontent.com/Luminara-Hub/namada-ecosystem/main/user-and-dev-tools/testnet/housefire/interfaces.json',
   },
 };
 
@@ -84,18 +102,68 @@ const fetchIndexerEndpoints = async (url: string): Promise<NamadaNode[]> => {
   }
 };
 
+const fetchMaspIndexerEndpoints = async (url: string): Promise<NamadaNode[]> => {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      logError(`Failed to fetch MASP indexer endpoints from ${url}: ${response.statusText}`);
+      return [];
+    }
+
+    const data = (await response.json()) as NamadaMASPEntry[];
+
+    return data
+      .filter((entry) => entry['Indexer API URL'] && entry['Team or Contributor Name'])
+      .map((entry) => ({
+        type: 'masp-indexer' as ChainNodeType,
+        url: entry['Indexer API URL'],
+        provider: entry['Team or Contributor Name'],
+      }));
+  } catch (error) {
+    logError(`Error fetching MASP indexer endpoints from ${url}:`, error);
+    return [];
+  }
+};
+
+const fetchInterfaceEndpoints = async (url: string): Promise<NamadaNode[]> => {
+  try {
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      logError(`Failed to fetch interface endpoints from ${url}: ${response.statusText}`);
+      return [];
+    }
+
+    const data = (await response.json()) as NamadaInterfaceEntry[];
+
+    return data
+      .filter((entry) => entry['Interface URL'] && entry['Team or Contributor Name'] && entry['Available']?.toLowerCase() === 'yes')
+      .map((entry) => ({
+        type: 'interface' as ChainNodeType,
+        url: entry['Interface URL'],
+        provider: entry['Team or Contributor Name'],
+      }));
+  } catch (error) {
+    logError(`Error fetching interface endpoints from ${url}:`, error);
+    return [];
+  }
+};
+
 export const fetchNamadaInfrastructure = async (chainName: string): Promise<NamadaNode[]> => {
   const isTestnet = chainName.toLowerCase().includes('housefire') || chainName.toLowerCase().includes('testnet');
 
   const network = isTestnet ? 'testnet' : 'mainnet';
   const registries = NAMADA_REGISTRIES[network];
 
-  const [rpcNodes, indexerNodes] = await Promise.all([
+  const [rpcNodes, indexerNodes, maspIndexerNodes, interfaceNodes] = await Promise.all([
     fetchRPCEndpoints(registries.rpc),
     fetchIndexerEndpoints(registries.indexer),
+    fetchMaspIndexerEndpoints(registries.maspIndexer),
+    fetchInterfaceEndpoints(registries.interface),
   ]);
 
-  return [...rpcNodes, ...indexerNodes];
+  return [...rpcNodes, ...indexerNodes, ...maspIndexerNodes, ...interfaceNodes];
 };
 
 export default fetchNamadaInfrastructure;

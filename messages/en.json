@@ -971,6 +971,8 @@
     "websocket nodes": "WebSocket Nodes",
     "indexer nodes": "Indexer Nodes",
     "lcd nodes": "LCD Nodes",
+    "masp indexer nodes": "MASP Indexer Nodes",
+    "interface nodes": "Staking Interface Nodes",
     "relayer nodes": "Relayer Nodes",
     "archive nodes": "Archive Nodes",
     "others nodes": "Other Nodes",
