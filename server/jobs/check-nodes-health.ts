@@ -235,7 +235,7 @@ async function checkWsHealth(url: string): Promise<HealthCheckResult> {
           const responseTime = Date.now() - startTime;
 
           if (error.message?.includes('upgrade') || error.code === 'ERR_INVALID_PROTOCOL') {
-            resolve({ success: true, responseTime });
+            return resolve({ success: true, responseTime });
           }
 
           resolve({ success: false, responseTime: null, error: error.message || 'WebSocket connection failed' });
