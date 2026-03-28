@@ -8,11 +8,11 @@ const yellowTextLayout: string = '#E5C46B';
 const delegation = (selfDelegation: number | null) => {
   if (selfDelegation !== null) {
     if (Number(selfDelegation) < 1000) {
-      return greenTextLayout;
+      return redTextLayout;
     } else if (Number(selfDelegation) < 2000 && Number(selfDelegation) >= 1000) {
       return yellowTextLayout;
     } else {
-      return redTextLayout;
+      return greenTextLayout;
     }
   }
 
