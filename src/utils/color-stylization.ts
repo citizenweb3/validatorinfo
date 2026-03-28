@@ -22,7 +22,7 @@ const uptime = (uptime: number | null) => {
   if (uptime != null) {
     if (uptime <= 50) {
       return redTextLayout;
-    } else if (uptime >= 80 && uptime <= 80) {
+    } else if (uptime > 50 && uptime < 80) {
       return yellowTextLayout;
     } else {
       return greenTextLayout;

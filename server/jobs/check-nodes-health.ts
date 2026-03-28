@@ -224,7 +224,7 @@ async function checkWsHealth(url: string): Promise<HealthCheckResult> {
           clearTimeout(timeoutId);
           const responseTime = Date.now() - startTime;
 
-          if (response.status === 101 || response.status === 200 || response.status === 426) {
+          if (response.status === 101) {
             resolve({ success: true, responseTime });
           } else {
             resolve({ success: false, responseTime: null, error: `HTTP ${response.status}` });
@@ -234,7 +234,7 @@ async function checkWsHealth(url: string): Promise<HealthCheckResult> {
           clearTimeout(timeoutId);
           const responseTime = Date.now() - startTime;
 
-          if (error.message?.includes('upgrade') || error.code === 'ERR_INVALID_PROTOCOL') {
+          if (error.code === 'ERR_INVALID_PROTOCOL') {
             return resolve({ success: true, responseTime });
           }
 
