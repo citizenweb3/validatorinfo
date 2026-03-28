@@ -977,6 +977,8 @@
     "websocket nodes": "Nós WebSocket",
     "indexer nodes": "Nós Indexadores",
     "lcd nodes": "Nós LCD",
+    "masp indexer nodes": "Nós de Indexador MASP",
+    "interface nodes": "Nós de Interface de Staking",
     "relayer nodes": "Nos de retransmissão",
     "archive nodes": "Nós de Arquivo",
     "others nodes": "Outros Nós",

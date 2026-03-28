@@ -6,7 +6,7 @@ import { Prisma } from '.prisma/client';
 import ProposalCreateInput = Prisma.ProposalCreateInput;
 import { Chain } from '@prisma/client';
 
-export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry';
+export type ChainNodeType = 'indexer' | 'rest' | 'rpc' | 'grpc' | 'ws' | 'exit' | 'entry' | 'masp-indexer' | 'interface';
 
 export interface StakingParams {
   unbondingTime: number | null;

@@ -45,6 +45,8 @@ const ValidatorNodes: FC<OwnProps> = async ({
     ws: 'websocket nodes',
     indexer: 'indexer nodes',
     lcd: 'lcd nodes',
+    'masp-indexer': 'masp indexer nodes',
+    interface: 'interface nodes',
   };
 
   const nodesList = Object.entries(groupedByType)
@@ -54,8 +56,8 @@ const ValidatorNodes: FC<OwnProps> = async ({
       nodes: typeNodes as InfrastructureNode[],
     }))
     .sort((a, b) => {
-      const isALast = a.type === 'grpc' || a.type === 'ws';
-      const isBLast = b.type === 'grpc' || b.type === 'ws';
+      const isALast = a.type === 'grpc' || a.type === 'ws' || a.type === 'interface';
+      const isBLast = b.type === 'grpc' || b.type === 'ws' || b.type === 'interface';
 
       if (isALast && !isBLast) return 1;
       if (!isALast && isBLast) return -1;
