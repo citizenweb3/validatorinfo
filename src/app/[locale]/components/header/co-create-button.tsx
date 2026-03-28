@@ -43,17 +43,14 @@ const CoCreateButton = () => {
         className="left-1/2 top-20 -translate-x-1/2 transform"
       >
       <div className="w-max max-w-[80vw] p-10 pt-5">
-        <p className="text-base">
+        <p className="mb-5 text-base">
           {t.rich('CoCreate.tagline', {
             github: (chunks) => (
               <TextLink href="https://github.com/citizenweb3/validatorinfo" content={chunks} target="_blank" />
             ),
           })}
         </p>
-        <p className="text-base mb-5">
-          {t('CoCreate.mission')}
-        </p>
-        <p className="text-base mb-5">
+        <p className="mb-5 text-base">
           {t.rich('CoCreate.description', {
             validator: (chunks) => (
               <TextLink href="https://www.citizenweb3.com/" content={chunks} target="_blank" />
@@ -66,24 +63,41 @@ const CoCreateButton = () => {
 
         <div>
           <p className="mb-4 text-base">{t('CoCreate.lookingFor')}</p>
-          <ul className="space-y-2 pl-2 mb-5">
+          <ul className="mb-5 space-y-2 pl-2">
             <ListItem>{t('CoCreate.partners')}</ListItem>
             <ListItem>{t('CoCreate.interns')}</ListItem>
             <ListItem>{t('CoCreate.delegators')}</ListItem>
           </ul>
         </div>
 
-        <p className="text-base">
+        <p className="mb-5 text-base font-bold">
           {t.rich('CoCreate.telegram', {
             tgLink: (chunks) => <TextLink href="https://t.me/citizenweb3" content={chunks} target="_blank" />,
           })}
         </p>
 
-        <p className="text-base">
-          {t.rich('CoCreate.support', {
-            stakingLink: (chunks) => <TextLink href="https://staking.citizenweb3.com/" content={chunks} target="_blank" />,
-          })}
-        </p>
+        <div>
+          <p className="mb-4 text-base">{t('CoCreate.supportIntro')}</p>
+          <ul className="space-y-2 pl-2">
+            <ListItem>
+              {t.rich('CoCreate.stakeWithUs', {
+                link: (chunks) => <TextLink href="https://staking.citizenweb3.com/" content={chunks} target="_blank" />,
+              })}
+            </ListItem>
+            <ListItem>
+              {t.rich('CoCreate.ghSponsorship', {
+                link: (chunks) => <TextLink href="https://github.com/sponsors/citizenweb3" content={chunks} target="_blank" />,
+              })}
+            </ListItem>
+            <ListItem>
+              {t('CoCreate.btcDonations')} ({t('CoCreate.btcAddress')})
+            </ListItem>
+            <ListItem>
+              {t('CoCreate.ethDonations')} ({t('CoCreate.ethAddress')})
+            </ListItem>
+            <ListItem>{t('CoCreate.xmrDonations')}</ListItem>
+          </ul>
+        </div>
       </div>
     </BaseModal>
     </>

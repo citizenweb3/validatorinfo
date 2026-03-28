@@ -51,15 +51,21 @@
     "Lucky!?": "Lucky!?",
     "Co-Create & Support": "Co-Create & Support",
     "CoCreate": {
-      "tagline": "<github>Open-source. Ad-free. Privacy-respecting. Self-hosted!</github>",
-      "mission": "We're doing this independently - and it's staying that way. The Explorer Web3 Deserves!",
-      "description": "We are a <validator>self-hosted, baremetal validator</validator>, focused on privacy networks and building for decentralization. We build unique, <infrastructure>off-the-grid-capable infrastructure</infrastructure> for networks and tools to offer precise, no-BS, on-chain monitoring of blockchain data.",
+      "tagline": "<github>Open-source. Ad-free. Privacy-respecting. Self-hosted!</github>. We're doing this independently - and it's staying that way. The Explorer Web3 Deserves!",
+      "description": "We operate <validator>self-hosted, baremetal validators</validator>, focused on privacy networks and building for decentralization. We build unique, <infrastructure>off-the-grid-capable infrastructure</infrastructure> for networks and tools to offer precise, no-BS, on-chain monitoring of blockchain data. We build powerful public-good tools, and work on the integration of autonomous AI agents.",
       "lookingFor": "We are looking for:",
       "partners": "Passionate partners",
       "interns": "Eager interns/contributors",
       "delegators": "Delegators who walk the decentralization talk",
       "telegram": "DM on Telegram: <tgLink>@citizenweb3</tgLink>",
-      "support": "This project is funded via our nodes. Support the project now, by <stakingLink>staking with us!</stakingLink>"
+      "supportIntro": "We do not have investors or VCs. Please support us, now:",
+      "stakeWithUs": "<link>Stake with us!</link>",
+      "ghSponsorship": "<link>GH Sponsorship</link>",
+      "btcDonations": "BTC donations",
+      "btcAddress": "bc1q6exvqpjevkgctq8dqquygdl9yuuecfxy7k99ws",
+      "ethDonations": "ETH donations",
+      "ethAddress": "0x92aC157Fa112f716C9368548441116DC64a170F5",
+      "xmrDonations": "XMR donations"
     },
     "search": {
       "Validators": "Validators",
