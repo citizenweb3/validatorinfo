@@ -28,7 +28,7 @@ const LayoutToggle: FC = () => {
   };
 
   return (
-    <div className="flex -mb-10 items-center" style={{ opacity: isPending ? 0.7 : 1 }}>
+    <div className="flex -mb-10 items-center" style={{ opacity: isPending ? 0.7 : 1 }} title="Switch between game and dev mode">
       <span className={`font-handjet text-lg ${!isDevMode ? 'text-highlight' : 'text-primary'}`}>{t('Game')}</span>
       <Switch value={isDevMode} onChange={handleToggle} />
       <span className={`font-handjet text-lg ${isDevMode ? 'text-highlight' : 'text-primary'}`}>{t('Dev')}</span>
