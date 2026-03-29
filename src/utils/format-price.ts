@@ -9,7 +9,8 @@
  * - < $0.001: 6 decimals ($0.000263)
  */
 const formatPrice = (value: number): string => {
-  if (value >= 1) return value.toFixed(2);
+  const defaultPrecision = 2;
+  if (value > 1) return value.toFixed(2);
   if (value >= 0.01) return value.toFixed(4);
   if (value >= 0.001) return value.toFixed(5);
   return value.toFixed(6);
