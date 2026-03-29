@@ -1580,8 +1580,17 @@
     "Search validator": "Найти валидатора",
     "APR comparison": "Сравнение APR",
     "Node count": "Количество нод",
+    "Most private validators": "Самые приватные валидаторы",
+    "Explain off-grid staking": "Объяснить автономный стейкинг",
+    "Help set up hardware": "Помощь с настройкой оборудования",
+    "Best bare-metal validators": "Лучшие bare-metal валидаторы",
+    "Compare ecosystems": "Сравнить экосистемы",
+    "Decentralization leaders": "Лидеры децентрализации",
+    "Validator infrastructure": "Инфраструктура валидаторов",
+    "Staking security tips": "Советы по безопасности стейкинга",
     "AI not configured": "AI ассистент сейчас недоступен",
-    "Request timed out": "Превышено время ожидания. Попробуйте ещё раз."
+    "Request timed out": "Превышено время ожидания. Попробуйте ещё раз.",
+    "New chat": "Новый чат"
   }
 }
 

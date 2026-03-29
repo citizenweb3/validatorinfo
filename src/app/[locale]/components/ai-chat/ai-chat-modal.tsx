@@ -7,6 +7,8 @@ import { useOnClickOutside } from 'usehooks-ts';
 import { useAiChat } from '@/hooks/use-ai-chat';
 import { useAiContext } from '@/hooks/use-ai-context';
 
+import RoundedButton from '@/components/common/rounded-button';
+
 import AiChatMessages from './ai-chat-messages';
 import AiChatInput from './ai-chat-input';
 import AiChatSuggestions from './ai-chat-suggestions';
@@ -20,7 +22,7 @@ interface OwnProps {
 const AiChatModal: FC<OwnProps> = ({ isOpen, onClose, initialMessage }) => {
   const t = useTranslations('AiChat');
   const context = useAiContext();
-  const { messages, isLoading, sendMessage } = useAiChat(context);
+  const { messages, isLoading, sendMessage, clearMessages } = useAiChat(context);
   const modalRef = useRef<HTMLDivElement>(null);
   const initialMessageSentRef = useRef(false);
 
@@ -81,13 +83,20 @@ const AiChatModal: FC<OwnProps> = ({ isOpen, onClose, initialMessage }) => {
             </svg>
             <span className="font-handjet text-lg text-highlight">{t('AI Assistant')}</span>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="h-9 w-9 bg-close bg-contain hover:bg-close_h active:bg-close_a"
-            aria-label="Close"
-            tabIndex={0}
-          />
+          <div className="flex items-center gap-3">
+            {messages.length > 0 && (
+              <RoundedButton onClick={clearMessages} contentClassName="!px-4 !py-1 text-sm">
+                {t('New chat')}
+              </RoundedButton>
+            )}
+            <button
+              type="button"
+              onClick={onClose}
+              className="h-9 w-9 bg-close bg-contain hover:bg-close_h active:bg-close_a"
+              aria-label="Close"
+              tabIndex={0}
+            />
+          </div>
         </div>
 
         {/* Messages */}

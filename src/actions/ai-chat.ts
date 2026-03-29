@@ -20,6 +20,16 @@ const { logDebug, logError, logWarn } = logger('ai-chat');
 
 const LLM_TIMEOUT = 60_000; // 60 seconds
 
+const FORUM_NUDGES = [
+  'Curious to dig deeper? The community at [forum.validatorinfo.com](https://forum.validatorinfo.com) discusses topics like this regularly.',
+  'If this sparked your interest, check out [forum.validatorinfo.com](https://forum.validatorinfo.com) — great conversations happening around this topic.',
+  'Want to explore this further with others? Head over to [forum.validatorinfo.com](https://forum.validatorinfo.com) and join the discussion.',
+  'The folks at [forum.validatorinfo.com](https://forum.validatorinfo.com) would enjoy this question — come share your thoughts there.',
+  'Enjoying the deep dive? The validator community at [forum.validatorinfo.com](https://forum.validatorinfo.com) loves these conversations.',
+];
+
+const getForumNudge = () => FORUM_NUDGES[Math.floor(Math.random() * FORUM_NUDGES.length)];
+
 export const askAgent = async (
   messages: ChatMessage[],
   context: PageContext,
@@ -57,6 +67,8 @@ export const askAgent = async (
     }
 
     const safeContext = sanitizeContext(context);
+    const userMessageCount = validatedMessages.filter(m => m.role === 'user').length;
+    const shouldNudgeForum = userMessageCount > 0 && userMessageCount % 3 === 0;
     const systemPrompt = AiService.buildSystemPrompt(safeContext);
 
     const estimateTokens = (msgs: ChatMessage[]) => {
@@ -123,7 +135,11 @@ export const askAgent = async (
 
         logDebug(`LLM response received, length: ${text.length}`);
 
-        return { ok: true, text };
+        const finalText = shouldNudgeForum && text.trim().length > 0
+          ? `${text}\n\n---\n${getForumNudge()}`
+          : text;
+
+        return { ok: true, text: finalText };
       } catch (error) {
         clearTimeout(timeoutId);
         if (error instanceof Error && error.name === 'AbortError') {

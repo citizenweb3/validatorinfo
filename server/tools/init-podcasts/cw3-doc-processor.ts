@@ -49,6 +49,63 @@ const fetchGitHubReadme = async (owner: string, repo: string): Promise<string> =
   }
 };
 
+const fetchGitHubProfile = async (username: string): Promise<string> => {
+  const fetchWithTimeout = async (url: string, options: RequestInit = {}): Promise<Response> => {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+    try {
+      const res = await fetch(url, { ...options, signal: controller.signal });
+      return res;
+    } finally {
+      clearTimeout(timeout);
+    }
+  };
+
+  const headers: Record<string, string> = {
+    Accept: 'application/vnd.github.v3+json',
+    ...(process.env.GITHUB_API_TOKEN
+      ? { Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}` }
+      : {}),
+  };
+
+  const profileRes = await fetchWithTimeout(
+    `https://api.github.com/users/${username}`,
+    { headers },
+  );
+  if (!profileRes.ok) throw new Error(`GitHub API ${profileRes.status}`);
+  const profile = await profileRes.json();
+
+  const reposRes = await fetchWithTimeout(
+    `https://api.github.com/users/${username}/repos?sort=updated&per_page=10`,
+    { headers },
+  );
+  if (!reposRes.ok) throw new Error(`GitHub repos API ${reposRes.status}`);
+  const repos = await reposRes.json();
+
+  const lines: string[] = [
+    `# ${profile.name || username}`,
+    '',
+    profile.bio ? profile.bio : '',
+    '',
+    profile.company ? `**Organization:** ${profile.company}` : '',
+    profile.blog ? `**Website:** ${profile.blog}` : '',
+    profile.location ? `**Location:** ${profile.location}` : '',
+    `**Public repos:** ${profile.public_repos}`,
+    '',
+    '## Notable Projects',
+    '',
+  ];
+
+  for (const repo of repos) {
+    if (repo.fork) continue;
+    lines.push(
+      `- **${repo.name}**: ${repo.description || 'No description'} (${repo.stargazers_count} stars)`,
+    );
+  }
+
+  return lines.filter(line => line !== null && line !== undefined).join('\n');
+};
+
 const fetchWebPage = async (url: string): Promise<string> => {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
@@ -137,6 +194,20 @@ export const CW3_DOC_SOURCES: CW3DocSource[] = [
     episodeUrl: 'https://bvc.citizenweb3.com',
     fetchFn: () => fetchWebPage('https://bvc.citizenweb3.com/getting-started/startpoint'),
     fallbackFile: 'bvc.md',
+  },
+  {
+    slug: '__cw3_serj_site__',
+    title: 'Serj from Citizen Web3 — Personal Site',
+    episodeUrl: 'https://serejandmyself.github.io/',
+    fetchFn: () => fetchWebPage('https://serejandmyself.github.io/'),
+    fallbackFile: 'serj-site.md',
+  },
+  {
+    slug: '__cw3_serj_github__',
+    title: 'Serj from Citizen Web3 — GitHub Projects',
+    episodeUrl: 'https://github.com/serejandmyself',
+    fetchFn: () => fetchGitHubProfile('serejandmyself'),
+    fallbackFile: 'serj-github.md',
   },
 ];
 

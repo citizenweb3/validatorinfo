@@ -1563,7 +1563,16 @@
     "Search validator": "Buscar validador",
     "APR comparison": "Comparação de APR",
     "Node count": "Contagem de nós",
+    "Most private validators": "Validadores mais privados",
+    "Explain off-grid staking": "Explicar staking off-grid",
+    "Help set up hardware": "Ajudar a configurar hardware",
+    "Best bare-metal validators": "Melhores validadores bare-metal",
+    "Compare ecosystems": "Comparar ecossistemas",
+    "Decentralization leaders": "Líderes em descentralização",
+    "Validator infrastructure": "Infraestrutura de validadores",
+    "Staking security tips": "Dicas de segurança para staking",
     "AI not configured": "Assistente AI não está disponível no momento",
-    "Request timed out": "Tempo limite excedido. Por favor, tente novamente."
+    "Request timed out": "Tempo limite excedido. Por favor, tente novamente.",
+    "New chat": "Novo chat"
   }
 }

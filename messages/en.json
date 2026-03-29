@@ -1579,8 +1579,17 @@
     "Search validator": "Search validator",
     "APR comparison": "APR comparison",
     "Node count": "Node count",
+    "Most private validators": "Most private validators",
+    "Explain off-grid staking": "Explain off-grid staking",
+    "Help set up hardware": "Help set up hardware",
+    "Best bare-metal validators": "Best bare-metal validators",
+    "Compare ecosystems": "Compare ecosystems",
+    "Decentralization leaders": "Decentralization leaders",
+    "Validator infrastructure": "Validator infrastructure",
+    "Staking security tips": "Staking security tips",
     "AI not configured": "AI assistant is not available at the moment",
-    "Request timed out": "Request timed out. Please try again."
+    "Request timed out": "Request timed out. Please try again.",
+    "New chat": "New chat"
   }
 }
 

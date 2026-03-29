@@ -246,13 +246,13 @@ async function checkWsHealth(url: string): Promise<HealthCheckResult> {
   });
 }
 
-async function checkNamadaIndexerHealth(url: string): Promise<HealthCheckResult> {
+async function checkNamadaIndexerHealth(url: string, healthPath: string = '/api/v1/chain/parameters'): Promise<HealthCheckResult> {
   const startTime = Date.now();
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 5000);
 
   try {
-    const endpoint = `${url}/api/v1/chain/parameters`;
+    const endpoint = `${url}${healthPath}`;
     const response = await fetch(endpoint, {
       signal: controller.signal,
     });
@@ -309,9 +309,13 @@ async function checkNodeHealth(
       result = await checkWsHealth(normalizedUrl);
       break;
     case 'masp-indexer':
-      result = await checkNamadaIndexerHealth(normalizedUrl);
+      result = await checkNamadaIndexerHealth(normalizedUrl, '/health');
       break;
     case 'indexer':
+      result = chainName === 'namada'
+        ? await checkNamadaIndexerHealth(normalizedUrl)
+        : await checkGenericHealth(normalizedUrl);
+      break;
     case 'interface':
     case 'entry':
     case 'exit':
