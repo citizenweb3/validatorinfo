@@ -12,10 +12,11 @@ concurrency:
 
 jobs:
   auto-fix:
-    # Trigger on: (1) changes_requested review, or (2) /fix comment on a PR from repo members
+    # Trigger on: (1) changes_requested review, or (2) /fix comment on a PR from repo members.
+    # Keep the member guard only on /fix comments: review-triggered auto-fix must not be skipped
+    # before the runner starts when the review comes from the dedicated review account.
     if: >-
-      (github.event_name == 'pull_request_review' && github.event.review.state == 'changes_requested' &&
-       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.review.author_association)) ||
+      (github.event_name == 'pull_request_review' && github.event.review.state == 'changes_requested') ||
       (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '/fix') &&
        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
     runs-on: [self-hosted, builder]

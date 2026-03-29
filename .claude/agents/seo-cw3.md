@@ -192,7 +192,7 @@ gh issue edit <issue-number> --add-label 'type:tweet'  # or 'type:thread'
 **If Level 1 or Level 2** — post directly:
 
 1. For EACH target platform, check if its API key is configured:
-   - Twitter: `TWITTER_API_KEY`
+   - Twitter: `TWITTER_OAUTH2_ACCESS_TOKEN` or legacy OAuth 1.0a keys (`TWITTER_API_KEY`, `TWITTER_API_SECRET`, `TWITTER_ACCESS_TOKEN`, `TWITTER_ACCESS_TOKEN_SECRET`)
    - Telegram: `TELEGRAM_BOT_TOKEN`
    - Discord: `DISCORD_WEBHOOK_URL`
 
