@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useMemo } from 'react';
+import { FC, useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { PageContext } from '@/hooks/use-ai-context';
@@ -28,30 +28,156 @@ type SuggestionKey =
   | 'Token price'
   | 'Search validator'
   | 'APR comparison'
-  | 'Node count';
+  | 'Node count'
+  | 'Most private validators'
+  | 'Explain off-grid staking'
+  | 'Help set up hardware'
+  | 'Best bare-metal validators'
+  | 'Compare ecosystems'
+  | 'Decentralization leaders'
+  | 'Validator infrastructure'
+  | 'Staking security tips';
 
 const SUGGESTION_MAP: Record<string, SuggestionKey[]> = {
-  overview: ['Key metrics', 'Top validators', 'Recent proposals', 'Token price'],
-  validators: ['Top validators', 'Most reliable', 'Lowest commission', 'Search validator'],
-  'validator-detail': ['Key metrics', 'Compare with others', 'Staking rewards'],
-  governance: ['Active proposals', 'Voting stats', 'Recent proposals'],
-  'proposal-detail': ['Active proposals', 'Voting stats'],
-  tokenomics: ['Supply breakdown', 'Inflation trend', 'Token price', 'APR comparison'],
-  blocks: ['Explain this block', 'Key metrics', 'Node count'],
-  'block-detail': ['Explain this block', 'What happened here'],
-  transactions: ['What happened here', 'Key metrics'],
-  'transaction-detail': ['What happened here', 'Explain this block'],
-  nodes: ['Node count', 'Top validators', 'Key metrics'],
+  overview: [
+    'Key metrics',
+    'Top validators',
+    'Recent proposals',
+    'Token price',
+    'Most private validators',
+    'Compare ecosystems',
+    'Decentralization leaders',
+    'Network overview',
+  ],
+  validators: [
+    'Top validators',
+    'Most reliable',
+    'Lowest commission',
+    'Search validator',
+    'Most private validators',
+    'Best bare-metal validators',
+    'Decentralization leaders',
+    'Validator infrastructure',
+  ],
+  'validator-detail': [
+    'Key metrics',
+    'Compare with others',
+    'Staking rewards',
+    'Most reliable',
+    'Best bare-metal validators',
+    'Validator infrastructure',
+    'Staking security tips',
+    'Decentralization leaders',
+  ],
+  governance: [
+    'Active proposals',
+    'Voting stats',
+    'Recent proposals',
+    'Network overview',
+    'Compare ecosystems',
+    'Decentralization leaders',
+    'Top validators',
+    'Key metrics',
+  ],
+  'proposal-detail': [
+    'Active proposals',
+    'Voting stats',
+    'Recent proposals',
+    'Network overview',
+    'Key metrics',
+    'Compare ecosystems',
+    'Decentralization leaders',
+    'Top validators',
+  ],
+  tokenomics: [
+    'Supply breakdown',
+    'Inflation trend',
+    'Token price',
+    'APR comparison',
+    'Staking rewards',
+    'Compare ecosystems',
+    'Staking security tips',
+    'Network overview',
+  ],
+  blocks: [
+    'Explain this block',
+    'Key metrics',
+    'Node count',
+    'Network overview',
+    'Top validators',
+    'Validator infrastructure',
+    'Most reliable',
+    'Decentralization leaders',
+  ],
+  'block-detail': [
+    'Explain this block',
+    'What happened here',
+    'Key metrics',
+    'Node count',
+    'Network overview',
+    'Top validators',
+    'Validator infrastructure',
+    'Most reliable',
+  ],
+  transactions: [
+    'What happened here',
+    'Key metrics',
+    'Network overview',
+    'Top validators',
+    'Node count',
+    'Token price',
+    'Search validator',
+    'Recent proposals',
+  ],
+  'transaction-detail': [
+    'What happened here',
+    'Explain this block',
+    'Key metrics',
+    'Network overview',
+    'Top validators',
+    'Node count',
+    'Token price',
+    'Search validator',
+  ],
+  nodes: [
+    'Node count',
+    'Top validators',
+    'Key metrics',
+    'Network overview',
+    'Validator infrastructure',
+    'Decentralization leaders',
+    'Best bare-metal validators',
+    'Most reliable',
+  ],
 };
 
-const DEFAULT_SUGGESTIONS: SuggestionKey[] = ['Network overview', 'Top validators', 'Search validator', 'APR comparison'];
+const DEFAULT_SUGGESTIONS: SuggestionKey[] = [
+  'Network overview',
+  'Top validators',
+  'Search validator',
+  'APR comparison',
+  'Most private validators',
+  'Explain off-grid staking',
+  'Compare ecosystems',
+  'Staking security tips',
+];
 
 const AiChatSuggestions: FC<OwnProps> = ({ context, onSelect }) => {
   const t = useTranslations('AiChat');
+  const [shuffleKey] = useState(() => Date.now());
 
   const suggestions = useMemo(() => {
-    return SUGGESTION_MAP[context.page] || DEFAULT_SUGGESTIONS;
-  }, [context.page]);
+    const pool = [...(SUGGESTION_MAP[context.page] || DEFAULT_SUGGESTIONS)];
+    let seed = shuffleKey % 2147483647;
+
+    for (let i = pool.length - 1; i > 0; i--) {
+      seed = (seed * 16807 + 0) % 2147483647;
+      const j = seed % (i + 1);
+      [pool[i], pool[j]] = [pool[j], pool[i]];
+    }
+
+    return pool.slice(0, 4);
+  }, [context.page, shuffleKey]);
 
   return (
     <div className="flex flex-wrap gap-2 px-4 pb-3">

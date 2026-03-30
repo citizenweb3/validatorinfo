@@ -1,3682 +1,3738 @@
 [
   {
+    "type": "constructor",
     "inputs": [
       {
-        "internalType": "contract IERC20",
         "name": "_feeAsset",
-        "type": "address"
+        "type": "address",
+        "internalType": "contract IERC20"
       },
       {
-        "internalType": "contract IERC20",
         "name": "_stakingAsset",
-        "type": "address"
+        "type": "address",
+        "internalType": "contract IERC20"
       },
       {
-        "internalType": "contract GSE",
         "name": "_gse",
-        "type": "address"
+        "type": "address",
+        "internalType": "contract GSE"
       },
       {
-        "internalType": "contract IVerifier",
         "name": "_epochProofVerifier",
-        "type": "address"
+        "type": "address",
+        "internalType": "contract IVerifier"
       },
       {
-        "internalType": "address",
         "name": "_governance",
-        "type": "address"
+        "type": "address",
+        "internalType": "address"
       },
       {
-        "components": [
-          {
-            "internalType": "bytes32",
-            "name": "vkTreeRoot",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "protocolContractTreeRoot",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "genesisArchiveRoot",
-            "type": "bytes32"
-          }
-        ],
-        "internalType": "struct GenesisState",
         "name": "_genesisState",
-        "type": "tuple"
-      },
-      {
+        "type": "tuple",
+        "internalType": "struct GenesisState",
         "components": [
           {
-            "internalType": "uint256",
-            "name": "aztecSlotDuration",
-            "type": "uint256"
+            "name": "vkTreeRoot",
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "internalType": "uint256",
-            "name": "aztecEpochDuration",
-            "type": "uint256"
+            "name": "protocolContractsHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "internalType": "uint256",
-            "name": "targetCommitteeSize",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "lagInEpochs",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "aztecProofSubmissionEpochs",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "slashingQuorum",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "slashingRoundSize",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "slashingLifetimeInRounds",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "slashingExecutionDelayInRounds",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256[3]",
-            "name": "slashAmounts",
-            "type": "uint256[3]"
-          },
-          {
-            "internalType": "uint256",
-            "name": "slashingOffsetInRounds",
-            "type": "uint256"
-          },
-          {
-            "internalType": "enum SlasherFlavor",
-            "name": "slasherFlavor",
-            "type": "uint8"
-          },
-          {
-            "internalType": "address",
-            "name": "slashingVetoer",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "slashingDisableDuration",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "manaTarget",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "exitDelaySeconds",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint32",
-            "name": "version",
-            "type": "uint32"
-          },
-          {
-            "internalType": "EthValue",
-            "name": "provingCostPerMana",
-            "type": "uint256"
-          },
-          {
-            "components": [
-              {
-                "internalType": "contract IRewardDistributor",
-                "name": "rewardDistributor",
-                "type": "address"
-              },
-              {
-                "internalType": "Bps",
-                "name": "sequencerBps",
-                "type": "uint32"
-              },
-              {
-                "internalType": "contract IBoosterCore",
-                "name": "booster",
-                "type": "address"
-              },
-              {
-                "internalType": "uint96",
-                "name": "blockReward",
-                "type": "uint96"
-              }
-            ],
-            "internalType": "struct RewardConfig",
-            "name": "rewardConfig",
-            "type": "tuple"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint32",
-                "name": "increment",
-                "type": "uint32"
-              },
-              {
-                "internalType": "uint32",
-                "name": "maxScore",
-                "type": "uint32"
-              },
-              {
-                "internalType": "uint32",
-                "name": "a",
-                "type": "uint32"
-              },
-              {
-                "internalType": "uint32",
-                "name": "minimum",
-                "type": "uint32"
-              },
-              {
-                "internalType": "uint32",
-                "name": "k",
-                "type": "uint32"
-              }
-            ],
-            "internalType": "struct RewardBoostConfig",
-            "name": "rewardBoostConfig",
-            "type": "tuple"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint256",
-                "name": "bootstrapValidatorSetSize",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "bootstrapFlushSize",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "normalFlushSizeMin",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "normalFlushSizeQuotient",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "maxQueueFlushSize",
-                "type": "uint256"
-              }
-            ],
-            "internalType": "struct StakingQueueConfig",
-            "name": "stakingQueueConfig",
-            "type": "tuple"
-          },
-          {
-            "internalType": "uint256",
-            "name": "localEjectionThreshold",
-            "type": "uint256"
-          },
-          {
-            "internalType": "Timestamp",
-            "name": "earliestRewardsClaimableTimestamp",
-            "type": "uint256"
+            "name": "genesisArchiveRoot",
+            "type": "bytes32",
+            "internalType": "bytes32"
           }
-        ],
+        ]
+      },
+      {
+        "name": "_config",
+        "type": "tuple",
         "internalType": "struct RollupConfigInput",
-        "name": "_config",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "constructor"
-  },
-  {
-    "inputs": [],
-    "name": "InvalidShortString",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "owner",
-        "type": "address"
-      }
-    ],
-    "name": "OwnableInvalidOwner",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
-    ],
-    "name": "OwnableUnauthorizedAccount",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "expected",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "actual",
-        "type": "uint256"
-      }
-    ],
-    "name": "Rollup__InvalidBlockNumber",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "minimum",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "provided",
-        "type": "uint256"
-      }
-    ],
-    "name": "Rollup__InvalidManaTarget",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "blockNumber",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "pendingBlockNumber",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "upperLimit",
-        "type": "uint256"
-      }
-    ],
-    "name": "Rollup__UnavailableTempBlockLog",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "int256",
-        "name": "value",
-        "type": "int256"
-      }
-    ],
-    "name": "SafeCastOverflowedIntToUint",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint8",
-        "name": "bits",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint256",
-        "name": "value",
-        "type": "uint256"
-      }
-    ],
-    "name": "SafeCastOverflowedUintDowncast",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "Staking__InvalidNormalFlushSizeQuotient",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "Staking__InvalidStakingQueueConfig",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "str",
-        "type": "string"
-      }
-    ],
-    "name": "StringTooLong",
-    "type": "error"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "blockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "BlockInvalidated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "attester",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "withdrawer",
-        "type": "address"
-      },
-      {
         "components": [
           {
-            "internalType": "uint256",
-            "name": "x",
-            "type": "uint256"
+            "name": "aztecSlotDuration",
+            "type": "uint256",
+            "internalType": "uint256"
           },
           {
-            "internalType": "uint256",
-            "name": "y",
-            "type": "uint256"
+            "name": "aztecEpochDuration",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "targetCommitteeSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "lagInEpochsForValidatorSet",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "lagInEpochsForRandao",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "aztecProofSubmissionEpochs",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "slashingQuorum",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "slashingRoundSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "slashingLifetimeInRounds",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "slashingExecutionDelayInRounds",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "slashAmounts",
+            "type": "uint256[3]",
+            "internalType": "uint256[3]"
+          },
+          {
+            "name": "slashingOffsetInRounds",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "slasherFlavor",
+            "type": "uint8",
+            "internalType": "enum SlasherFlavor"
+          },
+          {
+            "name": "slashingVetoer",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "slashingDisableDuration",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "manaTarget",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "exitDelaySeconds",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "version",
+            "type": "uint32",
+            "internalType": "uint32"
+          },
+          {
+            "name": "provingCostPerMana",
+            "type": "uint256",
+            "internalType": "EthValue"
+          },
+          {
+            "name": "initialEthPerFeeAsset",
+            "type": "uint256",
+            "internalType": "EthPerFeeAssetE12"
+          },
+          {
+            "name": "rewardConfig",
+            "type": "tuple",
+            "internalType": "struct RewardConfig",
+            "components": [
+              {
+                "name": "rewardDistributor",
+                "type": "address",
+                "internalType": "contract IRewardDistributor"
+              },
+              {
+                "name": "sequencerBps",
+                "type": "uint32",
+                "internalType": "Bps"
+              },
+              {
+                "name": "booster",
+                "type": "address",
+                "internalType": "contract IBoosterCore"
+              },
+              {
+                "name": "checkpointReward",
+                "type": "uint96",
+                "internalType": "uint96"
+              }
+            ]
+          },
+          {
+            "name": "rewardBoostConfig",
+            "type": "tuple",
+            "internalType": "struct RewardBoostConfig",
+            "components": [
+              {
+                "name": "increment",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "maxScore",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "a",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "minimum",
+                "type": "uint32",
+                "internalType": "uint32"
+              },
+              {
+                "name": "k",
+                "type": "uint32",
+                "internalType": "uint32"
+              }
+            ]
+          },
+          {
+            "name": "stakingQueueConfig",
+            "type": "tuple",
+            "internalType": "struct StakingQueueConfig",
+            "components": [
+              {
+                "name": "bootstrapValidatorSetSize",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "bootstrapFlushSize",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "normalFlushSizeMin",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "normalFlushSizeQuotient",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "maxQueueFlushSize",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          {
+            "name": "localEjectionThreshold",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "earliestRewardsClaimableTimestamp",
+            "type": "uint256",
+            "internalType": "Timestamp"
+          },
+          {
+            "name": "inboxLag",
+            "type": "uint256",
+            "internalType": "uint256"
           }
-        ],
-        "indexed": false,
-        "internalType": "struct G1Point",
-        "name": "publicKeyInG1",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x0",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "x1",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y0",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y1",
-            "type": "uint256"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct G2Point",
-        "name": "publicKeyInG2",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y",
-            "type": "uint256"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct G1Point",
-        "name": "proofOfPossession",
-        "type": "tuple"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
+        ]
       }
     ],
-    "name": "Deposit",
-    "type": "event"
+    "stateMutability": "nonpayable"
   },
   {
-    "anonymous": false,
-    "inputs": [],
-    "name": "EIP712DomainChanged",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "attester",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "withdrawer",
-        "type": "address"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y",
-            "type": "uint256"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct G1Point",
-        "name": "publicKeyInG1",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x0",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "x1",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y0",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y1",
-            "type": "uint256"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct G2Point",
-        "name": "publicKeyInG2",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y",
-            "type": "uint256"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct G1Point",
-        "name": "proofOfPossession",
-        "type": "tuple"
-      }
-    ],
-    "name": "FailedDeposit",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "blockNumber",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "bytes32",
-        "name": "archive",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32[]",
-        "name": "versionedBlobHashes",
-        "type": "bytes32[]"
-      }
-    ],
-    "name": "L2BlockProposed",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "blockNumber",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "proverId",
-        "type": "address"
-      }
-    ],
-    "name": "L2ProofVerified",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "oldLocalEjectionThreshold",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "newLocalEjectionThreshold",
-        "type": "uint256"
-      }
-    ],
-    "name": "LocalEjectionThresholdUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "manaTarget",
-        "type": "uint256"
-      }
-    ],
-    "name": "ManaTargetUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "previousOwner",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "newOwner",
-        "type": "address"
-      }
-    ],
-    "name": "OwnershipTransferred",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "provenBlockNumber",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "pendingBlockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "PrunedPending",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "contract IRewardDistributor",
-            "name": "rewardDistributor",
-            "type": "address"
-          },
-          {
-            "internalType": "Bps",
-            "name": "sequencerBps",
-            "type": "uint32"
-          },
-          {
-            "internalType": "contract IBoosterCore",
-            "name": "booster",
-            "type": "address"
-          },
-          {
-            "internalType": "uint96",
-            "name": "blockReward",
-            "type": "uint96"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct RewardConfig",
-        "name": "rewardConfig",
-        "type": "tuple"
-      }
-    ],
-    "name": "RewardConfigUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "bool",
-        "name": "isRewardsClaimable",
-        "type": "bool"
-      }
-    ],
-    "name": "RewardsClaimableUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "attester",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "Slashed",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "oldSlasher",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "newSlasher",
-        "type": "address"
-      }
-    ],
-    "name": "SlasherUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "bootstrapValidatorSetSize",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "bootstrapFlushSize",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "normalFlushSizeMin",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "normalFlushSizeQuotient",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "maxQueueFlushSize",
-            "type": "uint256"
-          }
-        ],
-        "indexed": false,
-        "internalType": "struct StakingQueueConfig",
-        "name": "config",
-        "type": "tuple"
-      }
-    ],
-    "name": "StakingQueueConfigUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "attester",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "withdrawer",
-        "type": "address"
-      }
-    ],
-    "name": "ValidatorQueued",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "attester",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "recipient",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "WithdrawFinalized",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "attester",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "recipient",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "WithdrawInitiated",
-    "type": "event"
-  },
-  {
-    "inputs": [],
+    "type": "function",
     "name": "L1_BLOCK_AT_GENESIS",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [],
+    "type": "function",
     "name": "archive",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "bytes32",
         "name": "",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "bytes32"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_blockNumber",
-        "type": "uint256"
-      }
-    ],
+    "type": "function",
     "name": "archiveAt",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_archive",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "_who",
-        "type": "address"
+        "name": "_checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
     "name": "canProposeAtTime",
-    "outputs": [
-      {
-        "internalType": "Slot",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "Timestamp",
         "name": "_ts",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "Timestamp"
+      },
+      {
+        "name": "_archive",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "_who",
+        "type": "address",
+        "internalType": "address"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Slot"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
     "name": "canPruneAtTime",
-    "outputs": [
+    "inputs": [
       {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
   },
   {
-    "inputs": [],
+    "type": "function",
     "name": "checkBlob",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "bool",
         "name": "",
-        "type": "bool"
+        "type": "bool",
+        "internalType": "bool"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [],
+    "type": "function",
     "name": "checkpointRandao",
+    "inputs": [],
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_coinbase",
-        "type": "address"
-      },
-      {
-        "internalType": "Epoch[]",
-        "name": "_epochs",
-        "type": "uint256[]"
-      }
-    ],
+    "type": "function",
     "name": "claimProverRewards",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "address",
         "name": "_coinbase",
-        "type": "address"
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_epochs",
+        "type": "uint256[]",
+        "internalType": "Epoch[]"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
     "name": "claimSequencerRewards",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_withdrawer",
-        "type": "address"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct G1Point",
-        "name": "_publicKeyInG1",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x0",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "x1",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y0",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y1",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct G2Point",
-        "name": "_publicKeyInG2",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "x",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "y",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct G1Point",
-        "name": "_proofOfPossession",
-        "type": "tuple"
-      },
-      {
-        "internalType": "bool",
-        "name": "_moveWithLatestRollup",
-        "type": "bool"
+        "name": "_coinbase",
+        "type": "address",
+        "internalType": "address"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
     "name": "deposit",
+    "inputs": [
+      {
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_withdrawer",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_publicKeyInG1",
+        "type": "tuple",
+        "internalType": "struct G1Point",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "_publicKeyInG2",
+        "type": "tuple",
+        "internalType": "struct G2Point",
+        "components": [
+          {
+            "name": "x0",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "x1",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y0",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y1",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "_proofOfPossession",
+        "type": "tuple",
+        "internalType": "struct G1Point",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "_moveWithLatestRollup",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   },
   {
-    "inputs": [],
+    "type": "function",
     "name": "eip712Domain",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "bytes1",
         "name": "fields",
-        "type": "bytes1"
+        "type": "bytes1",
+        "internalType": "bytes1"
       },
       {
-        "internalType": "string",
         "name": "name",
-        "type": "string"
+        "type": "string",
+        "internalType": "string"
       },
       {
-        "internalType": "string",
         "name": "version",
-        "type": "string"
+        "type": "string",
+        "internalType": "string"
       },
       {
-        "internalType": "uint256",
         "name": "chainId",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       },
       {
-        "internalType": "address",
         "name": "verifyingContract",
-        "type": "address"
+        "type": "address",
+        "internalType": "address"
       },
       {
-        "internalType": "bytes32",
         "name": "salt",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "bytes32"
       },
       {
-        "internalType": "uint256[]",
         "name": "extensions",
-        "type": "uint256[]"
+        "type": "uint256[]",
+        "internalType": "uint256[]"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      }
-    ],
+    "type": "function",
     "name": "finalizeWithdraw",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "flushEntryQueue",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "uint256",
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "flushEntryQueue",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "flushEntryQueue",
+    "inputs": [
+      {
         "name": "_toAdd",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "name": "flushEntryQueue",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   },
   {
-    "inputs": [],
+    "type": "function",
     "name": "getActivationThreshold",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [],
+    "type": "function",
     "name": "getActiveAttesterCount",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_index",
-        "type": "uint256"
-      }
-    ],
+    "type": "function",
     "name": "getAttesterAtIndex",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      }
-    ],
-    "name": "getAttesterView",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "enum Status",
-            "name": "status",
-            "type": "uint8"
-          },
-          {
-            "internalType": "uint256",
-            "name": "effectiveBalance",
-            "type": "uint256"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint256",
-                "name": "withdrawalId",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-              },
-              {
-                "internalType": "Timestamp",
-                "name": "exitableAt",
-                "type": "uint256"
-              },
-              {
-                "internalType": "address",
-                "name": "recipientOrWithdrawer",
-                "type": "address"
-              },
-              {
-                "internalType": "bool",
-                "name": "isRecipient",
-                "type": "bool"
-              },
-              {
-                "internalType": "bool",
-                "name": "exists",
-                "type": "bool"
-              }
-            ],
-            "internalType": "struct Exit",
-            "name": "exit",
-            "type": "tuple"
-          },
-          {
-            "components": [
-              {
-                "components": [
-                  {
-                    "internalType": "uint256",
-                    "name": "x",
-                    "type": "uint256"
-                  },
-                  {
-                    "internalType": "uint256",
-                    "name": "y",
-                    "type": "uint256"
-                  }
-                ],
-                "internalType": "struct G1Point",
-                "name": "publicKey",
-                "type": "tuple"
-              },
-              {
-                "internalType": "address",
-                "name": "withdrawer",
-                "type": "address"
-              }
-            ],
-            "internalType": "struct AttesterConfig",
-            "name": "config",
-            "type": "tuple"
-          }
-        ],
-        "internalType": "struct AttesterView",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getAvailableValidatorFlushes",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_blockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "getBlobCommitmentsHash",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_blockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "getBlock",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "bytes32",
-            "name": "archive",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "headerHash",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "blobCommitmentsHash",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "attestationsHash",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "payloadDigest",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "Slot",
-            "name": "slotNumber",
-            "type": "uint256"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint256",
-                "name": "excessMana",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "manaUsed",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "feeAssetPriceNumerator",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "congestionCost",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "proverCost",
-                "type": "uint256"
-              }
-            ],
-            "internalType": "struct FeeHeader",
-            "name": "feeHeader",
-            "type": "tuple"
-          }
-        ],
-        "internalType": "struct BlockLog",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getBlockReward",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getBurnAddress",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Epoch",
-        "name": "_epoch",
-        "type": "uint256"
-      }
-    ],
-    "name": "getCollectiveProverRewardsForEpoch",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
-      }
-    ],
-    "name": "getCommitteeAt",
-    "outputs": [
-      {
-        "internalType": "address[]",
-        "name": "",
-        "type": "address[]"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
-      }
-    ],
-    "name": "getCommitteeCommitmentAt",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      }
-    ],
-    "name": "getConfig",
-    "outputs": [
-      {
-        "components": [
-          {
-            "components": [
-              {
-                "internalType": "uint256",
-                "name": "x",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "y",
-                "type": "uint256"
-              }
-            ],
-            "internalType": "struct G1Point",
-            "name": "publicKey",
-            "type": "tuple"
-          },
-          {
-            "internalType": "address",
-            "name": "withdrawer",
-            "type": "address"
-          }
-        ],
-        "internalType": "struct AttesterConfig",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getCurrentBlobCommitmentsHash",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getCurrentEpoch",
-    "outputs": [
-      {
-        "internalType": "Epoch",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getCurrentEpochCommittee",
-    "outputs": [
-      {
-        "internalType": "address[]",
-        "name": "",
-        "type": "address[]"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getCurrentProposer",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getCurrentSampleSeed",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getCurrentSlot",
-    "outputs": [
-      {
-        "internalType": "Slot",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getEarliestRewardsClaimableTimestamp",
-    "outputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getEjectionThreshold",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
         "name": "_index",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "name": "getEntryQueueAt",
     "outputs": [
       {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getAttesterView",
+    "inputs": [
+      {
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct AttesterView",
         "components": [
           {
-            "internalType": "address",
-            "name": "attester",
-            "type": "address"
+            "name": "status",
+            "type": "uint8",
+            "internalType": "enum Status"
           },
           {
-            "internalType": "address",
-            "name": "withdrawer",
-            "type": "address"
+            "name": "effectiveBalance",
+            "type": "uint256",
+            "internalType": "uint256"
           },
           {
+            "name": "exit",
+            "type": "tuple",
+            "internalType": "struct Exit",
             "components": [
               {
-                "internalType": "uint256",
-                "name": "x",
-                "type": "uint256"
+                "name": "withdrawalId",
+                "type": "uint256",
+                "internalType": "uint256"
               },
               {
-                "internalType": "uint256",
-                "name": "y",
-                "type": "uint256"
+                "name": "amount",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "exitableAt",
+                "type": "uint256",
+                "internalType": "Timestamp"
+              },
+              {
+                "name": "recipientOrWithdrawer",
+                "type": "address",
+                "internalType": "address"
+              },
+              {
+                "name": "isRecipient",
+                "type": "bool",
+                "internalType": "bool"
+              },
+              {
+                "name": "exists",
+                "type": "bool",
+                "internalType": "bool"
               }
-            ],
-            "internalType": "struct G1Point",
-            "name": "publicKeyInG1",
-            "type": "tuple"
+            ]
           },
           {
+            "name": "config",
+            "type": "tuple",
+            "internalType": "struct AttesterConfig",
             "components": [
               {
-                "internalType": "uint256",
-                "name": "x0",
-                "type": "uint256"
+                "name": "publicKey",
+                "type": "tuple",
+                "internalType": "struct G1Point",
+                "components": [
+                  {
+                    "name": "x",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "y",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  }
+                ]
               },
               {
-                "internalType": "uint256",
-                "name": "x1",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "y0",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "y1",
-                "type": "uint256"
+                "name": "withdrawer",
+                "type": "address",
+                "internalType": "address"
               }
-            ],
-            "internalType": "struct G2Point",
-            "name": "publicKeyInG2",
-            "type": "tuple"
-          },
-          {
-            "components": [
-              {
-                "internalType": "uint256",
-                "name": "x",
-                "type": "uint256"
-              },
-              {
-                "internalType": "uint256",
-                "name": "y",
-                "type": "uint256"
-              }
-            ],
-            "internalType": "struct G1Point",
-            "name": "proofOfPossession",
-            "type": "tuple"
-          },
-          {
-            "internalType": "bool",
-            "name": "moveWithLatestRollup",
-            "type": "bool"
+            ]
           }
-        ],
-        "internalType": "struct DepositArgs",
-        "name": "",
-        "type": "tuple"
+        ]
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "getAvailableValidatorFlushes",
     "inputs": [],
-    "name": "getEntryQueueFlushSize",
     "outputs": [
       {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "getBlobCommitmentsHash",
+    "inputs": [
+      {
+        "name": "_checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getBurnAddress",
     "inputs": [],
-    "name": "getEntryQueueLength",
     "outputs": [
       {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "address",
+        "internalType": "address"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "pure"
   },
   {
+    "type": "function",
+    "name": "getCheckpoint",
     "inputs": [
       {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
+        "name": "_checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "name": "getEpochAt",
     "outputs": [
       {
-        "internalType": "Epoch",
         "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Slot",
-        "name": "_slotNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "getEpochAtSlot",
-    "outputs": [
-      {
-        "internalType": "Epoch",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Epoch",
-        "name": "_epoch",
-        "type": "uint256"
-      }
-    ],
-    "name": "getEpochCommittee",
-    "outputs": [
-      {
-        "internalType": "address[]",
-        "name": "",
-        "type": "address[]"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Epoch",
-        "name": "_epoch",
-        "type": "uint256"
-      }
-    ],
-    "name": "getEpochCommitteeCommitment",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getEpochDuration",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_blockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "getEpochForBlock",
-    "outputs": [
-      {
-        "internalType": "Epoch",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_start",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_end",
-        "type": "uint256"
-      },
-      {
+        "type": "tuple",
+        "internalType": "struct CheckpointLog",
         "components": [
           {
-            "internalType": "bytes32",
-            "name": "previousArchive",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "endArchive",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "address",
-            "name": "proverId",
-            "type": "address"
-          }
-        ],
-        "internalType": "struct PublicInputArgs",
-        "name": "_args",
-        "type": "tuple"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "_fees",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "bytes",
-        "name": "_blobPublicInputs",
-        "type": "bytes"
-      }
-    ],
-    "name": "getEpochProofPublicInputs",
-    "outputs": [
-      {
-        "internalType": "bytes32[]",
-        "name": "",
-        "type": "bytes32[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      }
-    ],
-    "name": "getExit",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "withdrawalId",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "amount",
-            "type": "uint256"
-          },
-          {
-            "internalType": "Timestamp",
-            "name": "exitableAt",
-            "type": "uint256"
-          },
-          {
-            "internalType": "address",
-            "name": "recipientOrWithdrawer",
-            "type": "address"
-          },
-          {
-            "internalType": "bool",
-            "name": "isRecipient",
-            "type": "bool"
-          },
-          {
-            "internalType": "bool",
-            "name": "exists",
-            "type": "bool"
-          }
-        ],
-        "internalType": "struct Exit",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getExitDelay",
-    "outputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getFeeAsset",
-    "outputs": [
-      {
-        "internalType": "contract IERC20",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getFeeAssetPerEth",
-    "outputs": [
-      {
-        "internalType": "FeeAssetPerEthE9",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getFeeAssetPortal",
-    "outputs": [
-      {
-        "internalType": "contract IFeeJuicePortal",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_blockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "getFeeHeader",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "excessMana",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "manaUsed",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "feeAssetPriceNumerator",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "congestionCost",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "proverCost",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct FeeHeader",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getGSE",
-    "outputs": [
-      {
-        "internalType": "contract GSE",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getGenesisTime",
-    "outputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_prover",
-        "type": "address"
-      },
-      {
-        "internalType": "Epoch",
-        "name": "_epoch",
-        "type": "uint256"
-      }
-    ],
-    "name": "getHasClaimed",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Epoch",
-        "name": "_epoch",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_length",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_prover",
-        "type": "address"
-      }
-    ],
-    "name": "getHasSubmitted",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getInbox",
-    "outputs": [
-      {
-        "internalType": "contract IInbox",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getIsBootstrapped",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_timestamp",
-        "type": "uint256"
-      }
-    ],
-    "name": "getL1FeesAt",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "baseFee",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "blobFee",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct L1FeeData",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getLagInEpochs",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getLocalEjectionThreshold",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_timestamp",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "_inFeeAsset",
-        "type": "bool"
-      }
-    ],
-    "name": "getManaBaseFeeAt",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_timestamp",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "_inFeeAsset",
-        "type": "bool"
-      }
-    ],
-    "name": "getManaBaseFeeComponentsAt",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "congestionCost",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "congestionMultiplier",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "sequencerCost",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "proverCost",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct ManaBaseFeeComponents",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getManaLimit",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getManaTarget",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getNextFlushableEpoch",
-    "outputs": [
-      {
-        "internalType": "Epoch",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getOutbox",
-    "outputs": [
-      {
-        "internalType": "contract IOutbox",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getPendingBlockNumber",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getProofSubmissionEpochs",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
-      }
-    ],
-    "name": "getProposerAt",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getProvenBlockNumber",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getProvingCostPerManaInEth",
-    "outputs": [
-      {
-        "internalType": "EthValue",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getProvingCostPerManaInFeeAsset",
-    "outputs": [
-      {
-        "internalType": "FeeAssetValue",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getRewardConfig",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "contract IRewardDistributor",
-            "name": "rewardDistributor",
-            "type": "address"
-          },
-          {
-            "internalType": "Bps",
-            "name": "sequencerBps",
-            "type": "uint32"
-          },
-          {
-            "internalType": "contract IBoosterCore",
-            "name": "booster",
-            "type": "address"
-          },
-          {
-            "internalType": "uint96",
-            "name": "blockReward",
-            "type": "uint96"
-          }
-        ],
-        "internalType": "struct RewardConfig",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getRewardDistributor",
-    "outputs": [
-      {
-        "internalType": "contract IRewardDistributor",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
-      }
-    ],
-    "name": "getSampleSeedAt",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
-      }
-    ],
-    "name": "getSamplingSizeAt",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_sequencer",
-        "type": "address"
-      }
-    ],
-    "name": "getSequencerRewards",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_prover",
-        "type": "address"
-      }
-    ],
-    "name": "getSharesFor",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getSlasher",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "_ts",
-        "type": "uint256"
-      }
-    ],
-    "name": "getSlotAt",
-    "outputs": [
-      {
-        "internalType": "Slot",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getSlotDuration",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Epoch",
-        "name": "_epoch",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_prover",
-        "type": "address"
-      }
-    ],
-    "name": "getSpecificProverRewardsForEpoch",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getStakingAsset",
-    "outputs": [
-      {
-        "internalType": "contract IERC20",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      }
-    ],
-    "name": "getStatus",
-    "outputs": [
-      {
-        "internalType": "enum Status",
-        "name": "",
-        "type": "uint8"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getTargetCommitteeSize",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "Slot",
-        "name": "_slotNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "getTimestampForSlot",
-    "outputs": [
-      {
-        "internalType": "Timestamp",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getTips",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "pendingBlockNumber",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "provenBlockNumber",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct ChainTips",
-        "name": "",
-        "type": "tuple"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getVersion",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_recipient",
-        "type": "address"
-      }
-    ],
-    "name": "initiateWithdraw",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_blockNumber",
-        "type": "uint256"
-      },
-      {
-        "components": [
-          {
-            "internalType": "bytes",
-            "name": "signatureIndices",
-            "type": "bytes"
-          },
-          {
-            "internalType": "bytes",
-            "name": "signaturesOrAddresses",
-            "type": "bytes"
-          }
-        ],
-        "internalType": "struct CommitteeAttestations",
-        "name": "_attestations",
-        "type": "tuple"
-      },
-      {
-        "internalType": "address[]",
-        "name": "_committee",
-        "type": "address[]"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_invalidIndex",
-        "type": "uint256"
-      }
-    ],
-    "name": "invalidateBadAttestation",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_blockNumber",
-        "type": "uint256"
-      },
-      {
-        "components": [
-          {
-            "internalType": "bytes",
-            "name": "signatureIndices",
-            "type": "bytes"
-          },
-          {
-            "internalType": "bytes",
-            "name": "signaturesOrAddresses",
-            "type": "bytes"
-          }
-        ],
-        "internalType": "struct CommitteeAttestations",
-        "name": "_attestations",
-        "type": "tuple"
-      },
-      {
-        "internalType": "address[]",
-        "name": "_committee",
-        "type": "address[]"
-      }
-    ],
-    "name": "invalidateInsufficientAttestations",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "isRewardsClaimable",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "owner",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "bytes32",
             "name": "archive",
-            "type": "bytes32"
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "components": [
-              {
-                "components": [
-                  {
-                    "internalType": "bytes32",
-                    "name": "root",
-                    "type": "bytes32"
-                  },
-                  {
-                    "internalType": "uint32",
-                    "name": "nextAvailableLeafIndex",
-                    "type": "uint32"
-                  }
-                ],
-                "internalType": "struct AppendOnlyTreeSnapshot",
-                "name": "l1ToL2MessageTree",
-                "type": "tuple"
-              },
-              {
-                "components": [
-                  {
-                    "components": [
-                      {
-                        "internalType": "bytes32",
-                        "name": "root",
-                        "type": "bytes32"
-                      },
-                      {
-                        "internalType": "uint32",
-                        "name": "nextAvailableLeafIndex",
-                        "type": "uint32"
-                      }
-                    ],
-                    "internalType": "struct AppendOnlyTreeSnapshot",
-                    "name": "noteHashTree",
-                    "type": "tuple"
-                  },
-                  {
-                    "components": [
-                      {
-                        "internalType": "bytes32",
-                        "name": "root",
-                        "type": "bytes32"
-                      },
-                      {
-                        "internalType": "uint32",
-                        "name": "nextAvailableLeafIndex",
-                        "type": "uint32"
-                      }
-                    ],
-                    "internalType": "struct AppendOnlyTreeSnapshot",
-                    "name": "nullifierTree",
-                    "type": "tuple"
-                  },
-                  {
-                    "components": [
-                      {
-                        "internalType": "bytes32",
-                        "name": "root",
-                        "type": "bytes32"
-                      },
-                      {
-                        "internalType": "uint32",
-                        "name": "nextAvailableLeafIndex",
-                        "type": "uint32"
-                      }
-                    ],
-                    "internalType": "struct AppendOnlyTreeSnapshot",
-                    "name": "publicDataTree",
-                    "type": "tuple"
-                  }
-                ],
-                "internalType": "struct PartialStateReference",
-                "name": "partialStateReference",
-                "type": "tuple"
-              }
-            ],
-            "internalType": "struct StateReference",
-            "name": "stateReference",
-            "type": "tuple"
+            "name": "headerHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "components": [
-              {
-                "internalType": "int256",
-                "name": "feeAssetPriceModifier",
-                "type": "int256"
-              }
-            ],
-            "internalType": "struct OracleInput",
-            "name": "oracleInput",
-            "type": "tuple"
+            "name": "blobCommitmentsHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "components": [
-              {
-                "internalType": "bytes32",
-                "name": "lastArchiveRoot",
-                "type": "bytes32"
-              },
-              {
-                "components": [
-                  {
-                    "internalType": "bytes32",
-                    "name": "blobsHash",
-                    "type": "bytes32"
-                  },
-                  {
-                    "internalType": "bytes32",
-                    "name": "inHash",
-                    "type": "bytes32"
-                  },
-                  {
-                    "internalType": "bytes32",
-                    "name": "outHash",
-                    "type": "bytes32"
-                  }
-                ],
-                "internalType": "struct ContentCommitment",
-                "name": "contentCommitment",
-                "type": "tuple"
-              },
-              {
-                "internalType": "Slot",
-                "name": "slotNumber",
-                "type": "uint256"
-              },
-              {
-                "internalType": "Timestamp",
-                "name": "timestamp",
-                "type": "uint256"
-              },
-              {
-                "internalType": "address",
-                "name": "coinbase",
-                "type": "address"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "feeRecipient",
-                "type": "bytes32"
-              },
-              {
-                "components": [
-                  {
-                    "internalType": "uint128",
-                    "name": "feePerDaGas",
-                    "type": "uint128"
-                  },
-                  {
-                    "internalType": "uint128",
-                    "name": "feePerL2Gas",
-                    "type": "uint128"
-                  }
-                ],
-                "internalType": "struct GasFees",
-                "name": "gasFees",
-                "type": "tuple"
-              },
-              {
-                "internalType": "uint256",
-                "name": "totalManaUsed",
-                "type": "uint256"
-              }
-            ],
-            "internalType": "struct ProposedHeader",
-            "name": "header",
-            "type": "tuple"
-          }
-        ],
-        "internalType": "struct ProposeArgs",
-        "name": "_args",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "bytes",
-            "name": "signatureIndices",
-            "type": "bytes"
+            "name": "outHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "internalType": "bytes",
-            "name": "signaturesOrAddresses",
-            "type": "bytes"
-          }
-        ],
-        "internalType": "struct CommitteeAttestations",
-        "name": "_attestations",
-        "type": "tuple"
-      },
-      {
-        "internalType": "address[]",
-        "name": "_signers",
-        "type": "address[]"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint8",
-            "name": "v",
-            "type": "uint8"
+            "name": "attestationsHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "internalType": "bytes32",
-            "name": "r",
-            "type": "bytes32"
+            "name": "payloadDigest",
+            "type": "bytes32",
+            "internalType": "bytes32"
           },
           {
-            "internalType": "bytes32",
-            "name": "s",
-            "type": "bytes32"
-          }
-        ],
-        "internalType": "struct Signature",
-        "name": "_attestationsAndSignersSignature",
-        "type": "tuple"
-      },
-      {
-        "internalType": "bytes",
-        "name": "_blobInput",
-        "type": "bytes"
-      }
-    ],
-    "name": "propose",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "prune",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "renounceOwnership",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_localEjectionThreshold",
-        "type": "uint256"
-      }
-    ],
-    "name": "setLocalEjectionThreshold",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "EthValue",
-        "name": "_provingCostPerMana",
-        "type": "uint256"
-      }
-    ],
-    "name": "setProvingCostPerMana",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "contract IRewardDistributor",
-            "name": "rewardDistributor",
-            "type": "address"
-          },
-          {
-            "internalType": "Bps",
-            "name": "sequencerBps",
-            "type": "uint32"
-          },
-          {
-            "internalType": "contract IBoosterCore",
-            "name": "booster",
-            "type": "address"
-          },
-          {
-            "internalType": "uint96",
-            "name": "blockReward",
-            "type": "uint96"
-          }
-        ],
-        "internalType": "struct RewardConfig",
-        "name": "_config",
-        "type": "tuple"
-      }
-    ],
-    "name": "setRewardConfig",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bool",
-        "name": "_isRewardsClaimable",
-        "type": "bool"
-      }
-    ],
-    "name": "setRewardsClaimable",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_slasher",
-        "type": "address"
-      }
-    ],
-    "name": "setSlasher",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "setupEpoch",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_attester",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_amount",
-        "type": "uint256"
-      }
-    ],
-    "name": "slash",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_myHeaderBlockNumber",
-        "type": "uint256"
-      }
-    ],
-    "name": "status",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "provenBlockNumber",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "provenArchive",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "uint256",
-        "name": "pendingBlockNumber",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "pendingArchive",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "archiveOfMyBlock",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "Epoch",
-        "name": "provenEpochNumber",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "start",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "end",
-            "type": "uint256"
-          },
-          {
-            "components": [
-              {
-                "internalType": "bytes32",
-                "name": "previousArchive",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "endArchive",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "address",
-                "name": "proverId",
-                "type": "address"
-              }
-            ],
-            "internalType": "struct PublicInputArgs",
-            "name": "args",
-            "type": "tuple"
-          },
-          {
-            "internalType": "bytes32[]",
-            "name": "fees",
-            "type": "bytes32[]"
-          },
-          {
-            "components": [
-              {
-                "internalType": "bytes",
-                "name": "signatureIndices",
-                "type": "bytes"
-              },
-              {
-                "internalType": "bytes",
-                "name": "signaturesOrAddresses",
-                "type": "bytes"
-              }
-            ],
-            "internalType": "struct CommitteeAttestations",
-            "name": "attestations",
-            "type": "tuple"
-          },
-          {
-            "internalType": "bytes",
-            "name": "blobInputs",
-            "type": "bytes"
-          },
-          {
-            "internalType": "bytes",
-            "name": "proof",
-            "type": "bytes"
-          }
-        ],
-        "internalType": "struct SubmitEpochRootProofArgs",
-        "name": "_args",
-        "type": "tuple"
-      }
-    ],
-    "name": "submitEpochRootProof",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "newOwner",
-        "type": "address"
-      }
-    ],
-    "name": "transferOwnership",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "updateL1GasFeeOracle",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_manaTarget",
-        "type": "uint256"
-      }
-    ],
-    "name": "updateManaTarget",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "bootstrapValidatorSetSize",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "bootstrapFlushSize",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "normalFlushSizeMin",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "normalFlushSizeQuotient",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "maxQueueFlushSize",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct StakingQueueConfig",
-        "name": "_config",
-        "type": "tuple"
-      }
-    ],
-    "name": "updateStakingQueueConfig",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes",
-        "name": "_blobsInput",
-        "type": "bytes"
-      }
-    ],
-    "name": "validateBlobs",
-    "outputs": [
-      {
-        "internalType": "bytes32[]",
-        "name": "",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes[]",
-        "name": "",
-        "type": "bytes[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "components": [
-          {
-            "internalType": "bytes32",
-            "name": "lastArchiveRoot",
-            "type": "bytes32"
-          },
-          {
-            "components": [
-              {
-                "internalType": "bytes32",
-                "name": "blobsHash",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "inHash",
-                "type": "bytes32"
-              },
-              {
-                "internalType": "bytes32",
-                "name": "outHash",
-                "type": "bytes32"
-              }
-            ],
-            "internalType": "struct ContentCommitment",
-            "name": "contentCommitment",
-            "type": "tuple"
-          },
-          {
-            "internalType": "Slot",
             "name": "slotNumber",
-            "type": "uint256"
+            "type": "uint256",
+            "internalType": "Slot"
           },
           {
-            "internalType": "Timestamp",
-            "name": "timestamp",
-            "type": "uint256"
-          },
-          {
-            "internalType": "address",
-            "name": "coinbase",
-            "type": "address"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "feeRecipient",
-            "type": "bytes32"
-          },
-          {
+            "name": "feeHeader",
+            "type": "tuple",
+            "internalType": "struct FeeHeader",
             "components": [
               {
-                "internalType": "uint128",
-                "name": "feePerDaGas",
-                "type": "uint128"
+                "name": "excessMana",
+                "type": "uint256",
+                "internalType": "uint256"
               },
               {
-                "internalType": "uint128",
-                "name": "feePerL2Gas",
-                "type": "uint128"
+                "name": "manaUsed",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "ethPerFeeAsset",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "congestionCost",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "proverCost",
+                "type": "uint256",
+                "internalType": "uint256"
               }
-            ],
-            "internalType": "struct GasFees",
-            "name": "gasFees",
-            "type": "tuple"
-          },
-          {
-            "internalType": "uint256",
-            "name": "totalManaUsed",
-            "type": "uint256"
+            ]
           }
-        ],
-        "internalType": "struct ProposedHeader",
-        "name": "_header",
-        "type": "tuple"
-      },
-      {
-        "components": [
-          {
-            "internalType": "bytes",
-            "name": "signatureIndices",
-            "type": "bytes"
-          },
-          {
-            "internalType": "bytes",
-            "name": "signaturesOrAddresses",
-            "type": "bytes"
-          }
-        ],
-        "internalType": "struct CommitteeAttestations",
-        "name": "_attestations",
-        "type": "tuple"
-      },
-      {
-        "internalType": "address[]",
-        "name": "_signers",
-        "type": "address[]"
-      },
-      {
-        "components": [
-          {
-            "internalType": "uint8",
-            "name": "v",
-            "type": "uint8"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "r",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "s",
-            "type": "bytes32"
-          }
-        ],
-        "internalType": "struct Signature",
-        "name": "_attestationsAndSignersSignature",
-        "type": "tuple"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_digest",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_blobsHash",
-        "type": "bytes32"
-      },
-      {
-        "components": [
-          {
-            "internalType": "bool",
-            "name": "ignoreDA",
-            "type": "bool"
-          }
-        ],
-        "internalType": "struct BlockHeaderValidationFlags",
-        "name": "_flags",
-        "type": "tuple"
+        ]
       }
     ],
-    "name": "validateHeaderWithAttestations",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
+    "type": "function",
+    "name": "getCheckpointReward",
+    "inputs": [],
+    "outputs": [
       {
-        "internalType": "uint256",
-        "name": "_proposalId",
-        "type": "uint256"
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "name": "vote",
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCollectiveProverRewardsForEpoch",
+    "inputs": [
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCommitteeAt",
+    "inputs": [
+      {
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getCommitteeCommitmentAt",
+    "inputs": [
+      {
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getConfig",
+    "inputs": [
+      {
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct AttesterConfig",
+        "components": [
+          {
+            "name": "publicKey",
+            "type": "tuple",
+            "internalType": "struct G1Point",
+            "components": [
+              {
+                "name": "x",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "y",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          {
+            "name": "withdrawer",
+            "type": "address",
+            "internalType": "address"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentBlobCommitmentsHash",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentEpoch",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentEpochCommittee",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentProposer",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentSampleSeed",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getCurrentSlot",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Slot"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEarliestRewardsClaimableTimestamp",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEjectionThreshold",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEntryQueueAt",
+    "inputs": [
+      {
+        "name": "_index",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct DepositArgs",
+        "components": [
+          {
+            "name": "attester",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "withdrawer",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "publicKeyInG1",
+            "type": "tuple",
+            "internalType": "struct G1Point",
+            "components": [
+              {
+                "name": "x",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "y",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          {
+            "name": "publicKeyInG2",
+            "type": "tuple",
+            "internalType": "struct G2Point",
+            "components": [
+              {
+                "name": "x0",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "x1",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "y0",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "y1",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          {
+            "name": "proofOfPossession",
+            "type": "tuple",
+            "internalType": "struct G1Point",
+            "components": [
+              {
+                "name": "x",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "y",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          {
+            "name": "moveWithLatestRollup",
+            "type": "bool",
+            "internalType": "bool"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEntryQueueFlushSize",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEntryQueueLength",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEpochAt",
+    "inputs": [
+      {
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEpochAtSlot",
+    "inputs": [
+      {
+        "name": "_slotNumber",
+        "type": "uint256",
+        "internalType": "Slot"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEpochCommittee",
+    "inputs": [
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getEpochCommitteeCommitment",
+    "inputs": [
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getEpochDuration",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEpochForCheckpoint",
+    "inputs": [
+      {
+        "name": "_checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEpochProofPublicInputs",
+    "inputs": [
+      {
+        "name": "_start",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_end",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_args",
+        "type": "tuple",
+        "internalType": "struct PublicInputArgs",
+        "components": [
+          {
+            "name": "previousArchive",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "endArchive",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "outHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "proverId",
+            "type": "address",
+            "internalType": "address"
+          }
+        ]
+      },
+      {
+        "name": "_fees",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "_blobPublicInputs",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEscapeHatch",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IEscapeHatch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEscapeHatchForEpoch",
+    "inputs": [
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IEscapeHatch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getEthPerFeeAsset",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "EthPerFeeAssetE12"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getExit",
+    "inputs": [
+      {
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct Exit",
+        "components": [
+          {
+            "name": "withdrawalId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "amount",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "exitableAt",
+            "type": "uint256",
+            "internalType": "Timestamp"
+          },
+          {
+            "name": "recipientOrWithdrawer",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "isRecipient",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "exists",
+            "type": "bool",
+            "internalType": "bool"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getExitDelay",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getFeeAsset",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IERC20"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getFeeAssetPortal",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IFeeJuicePortal"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getFeeHeader",
+    "inputs": [
+      {
+        "name": "_checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct FeeHeader",
+        "components": [
+          {
+            "name": "excessMana",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "manaUsed",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "ethPerFeeAsset",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "congestionCost",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "proverCost",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getGSE",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract GSE"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getGenesisTime",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getHasClaimed",
+    "inputs": [
+      {
+        "name": "_prover",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getHasSubmitted",
+    "inputs": [
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      },
+      {
+        "name": "_length",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_prover",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getInbox",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IInbox"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getIsBootstrapped",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getL1FeesAt",
+    "inputs": [
+      {
+        "name": "_timestamp",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct L1FeeData",
+        "components": [
+          {
+            "name": "baseFee",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "blobFee",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getLagInEpochsForRandao",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getLagInEpochsForValidatorSet",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getLocalEjectionThreshold",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getManaLimit",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getManaMinFeeAt",
+    "inputs": [
+      {
+        "name": "_timestamp",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      },
+      {
+        "name": "_inFeeAsset",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getManaMinFeeComponentsAt",
+    "inputs": [
+      {
+        "name": "_timestamp",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      },
+      {
+        "name": "_inFeeAsset",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct ManaMinFeeComponents",
+        "components": [
+          {
+            "name": "congestionCost",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "congestionMultiplier",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "sequencerCost",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "proverCost",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getManaTarget",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getNextFlushableEpoch",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getOutbox",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IOutbox"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getPendingCheckpointNumber",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getProofSubmissionEpochs",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getProposerAt",
+    "inputs": [
+      {
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getProvenCheckpointNumber",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getProvingCostPerManaInEth",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "EthValue"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getProvingCostPerManaInFeeAsset",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "FeeAssetValue"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRewardConfig",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct RewardConfig",
+        "components": [
+          {
+            "name": "rewardDistributor",
+            "type": "address",
+            "internalType": "contract IRewardDistributor"
+          },
+          {
+            "name": "sequencerBps",
+            "type": "uint32",
+            "internalType": "Bps"
+          },
+          {
+            "name": "booster",
+            "type": "address",
+            "internalType": "contract IBoosterCore"
+          },
+          {
+            "name": "checkpointReward",
+            "type": "uint96",
+            "internalType": "uint96"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRewardDistributor",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IRewardDistributor"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSampleSeedAt",
+    "inputs": [
+      {
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSamplingSizeAt",
+    "inputs": [
+      {
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSequencerRewards",
+    "inputs": [
+      {
+        "name": "_sequencer",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSharesFor",
+    "inputs": [
+      {
+        "name": "_prover",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSlasher",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSlotAt",
+    "inputs": [
+      {
+        "name": "_ts",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Slot"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSlotDuration",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getSpecificProverRewardsForEpoch",
+    "inputs": [
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      },
+      {
+        "name": "_prover",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getStakingAsset",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "contract IERC20"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getStatus",
+    "inputs": [
+      {
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "enum Status"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getTargetCommitteeSize",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getTimestampForEpoch",
+    "inputs": [
+      {
+        "name": "_epoch",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getTimestampForSlot",
+    "inputs": [
+      {
+        "name": "_slotNumber",
+        "type": "uint256",
+        "internalType": "Slot"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "Timestamp"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getTips",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct ChainTips",
+        "components": [
+          {
+            "name": "pending",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "proven",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getVersion",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "initiateWithdraw",
+    "inputs": [
+      {
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_recipient",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "invalidateBadAttestation",
+    "inputs": [
+      {
+        "name": "_checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_attestations",
+        "type": "tuple",
+        "internalType": "struct CommitteeAttestations",
+        "components": [
+          {
+            "name": "signatureIndices",
+            "type": "bytes",
+            "internalType": "bytes"
+          },
+          {
+            "name": "signaturesOrAddresses",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
+        ]
+      },
+      {
+        "name": "_committee",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "_invalidIndex",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "invalidateInsufficientAttestations",
+    "inputs": [
+      {
+        "name": "_checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "_attestations",
+        "type": "tuple",
+        "internalType": "struct CommitteeAttestations",
+        "components": [
+          {
+            "name": "signatureIndices",
+            "type": "bytes",
+            "internalType": "bytes"
+          },
+          {
+            "name": "signaturesOrAddresses",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
+        ]
+      },
+      {
+        "name": "_committee",
+        "type": "address[]",
+        "internalType": "address[]"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "isRewardsClaimable",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "owner",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "propose",
+    "inputs": [
+      {
+        "name": "_args",
+        "type": "tuple",
+        "internalType": "struct ProposeArgs",
+        "components": [
+          {
+            "name": "archive",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "oracleInput",
+            "type": "tuple",
+            "internalType": "struct OracleInput",
+            "components": [
+              {
+                "name": "feeAssetPriceModifier",
+                "type": "int256",
+                "internalType": "int256"
+              }
+            ]
+          },
+          {
+            "name": "header",
+            "type": "tuple",
+            "internalType": "struct ProposedHeader",
+            "components": [
+              {
+                "name": "lastArchiveRoot",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "blockHeadersHash",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "blobsHash",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "inHash",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "outHash",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "slotNumber",
+                "type": "uint256",
+                "internalType": "Slot"
+              },
+              {
+                "name": "timestamp",
+                "type": "uint256",
+                "internalType": "Timestamp"
+              },
+              {
+                "name": "coinbase",
+                "type": "address",
+                "internalType": "address"
+              },
+              {
+                "name": "feeRecipient",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "gasFees",
+                "type": "tuple",
+                "internalType": "struct GasFees",
+                "components": [
+                  {
+                    "name": "feePerDaGas",
+                    "type": "uint128",
+                    "internalType": "uint128"
+                  },
+                  {
+                    "name": "feePerL2Gas",
+                    "type": "uint128",
+                    "internalType": "uint128"
+                  }
+                ]
+              },
+              {
+                "name": "totalManaUsed",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "_attestations",
+        "type": "tuple",
+        "internalType": "struct CommitteeAttestations",
+        "components": [
+          {
+            "name": "signatureIndices",
+            "type": "bytes",
+            "internalType": "bytes"
+          },
+          {
+            "name": "signaturesOrAddresses",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
+        ]
+      },
+      {
+        "name": "_signers",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "_attestationsAndSignersSignature",
+        "type": "tuple",
+        "internalType": "struct Signature",
+        "components": [
+          {
+            "name": "v",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "r",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "s",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          }
+        ]
+      },
+      {
+        "name": "_blobInput",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "prune",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "renounceOwnership",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setLocalEjectionThreshold",
+    "inputs": [
+      {
+        "name": "_localEjectionThreshold",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setProvingCostPerMana",
+    "inputs": [
+      {
+        "name": "_provingCostPerMana",
+        "type": "uint256",
+        "internalType": "EthValue"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setRewardConfig",
+    "inputs": [
+      {
+        "name": "_config",
+        "type": "tuple",
+        "internalType": "struct RewardConfig",
+        "components": [
+          {
+            "name": "rewardDistributor",
+            "type": "address",
+            "internalType": "contract IRewardDistributor"
+          },
+          {
+            "name": "sequencerBps",
+            "type": "uint32",
+            "internalType": "Bps"
+          },
+          {
+            "name": "booster",
+            "type": "address",
+            "internalType": "contract IBoosterCore"
+          },
+          {
+            "name": "checkpointReward",
+            "type": "uint96",
+            "internalType": "uint96"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setRewardsClaimable",
+    "inputs": [
+      {
+        "name": "_isRewardsClaimable",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setSlasher",
+    "inputs": [
+      {
+        "name": "_slasher",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setupEpoch",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "slash",
+    "inputs": [
+      {
+        "name": "_attester",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "_amount",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool",
+        "internalType": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "status",
+    "inputs": [
+      {
+        "name": "_myHeaderCheckpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "provenCheckpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "provenArchive",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "pendingCheckpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "pendingArchive",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "archiveOfMyCheckpoint",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "provenEpochNumber",
+        "type": "uint256",
+        "internalType": "Epoch"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "submitEpochRootProof",
+    "inputs": [
+      {
+        "name": "_args",
+        "type": "tuple",
+        "internalType": "struct SubmitEpochRootProofArgs",
+        "components": [
+          {
+            "name": "start",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "end",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "args",
+            "type": "tuple",
+            "internalType": "struct PublicInputArgs",
+            "components": [
+              {
+                "name": "previousArchive",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "endArchive",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "outHash",
+                "type": "bytes32",
+                "internalType": "bytes32"
+              },
+              {
+                "name": "proverId",
+                "type": "address",
+                "internalType": "address"
+              }
+            ]
+          },
+          {
+            "name": "fees",
+            "type": "bytes32[]",
+            "internalType": "bytes32[]"
+          },
+          {
+            "name": "attestations",
+            "type": "tuple",
+            "internalType": "struct CommitteeAttestations",
+            "components": [
+              {
+                "name": "signatureIndices",
+                "type": "bytes",
+                "internalType": "bytes"
+              },
+              {
+                "name": "signaturesOrAddresses",
+                "type": "bytes",
+                "internalType": "bytes"
+              }
+            ]
+          },
+          {
+            "name": "blobInputs",
+            "type": "bytes",
+            "internalType": "bytes"
+          },
+          {
+            "name": "proof",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updateEscapeHatch",
+    "inputs": [
+      {
+        "name": "_escapeHatch",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updateL1GasFeeOracle",
+    "inputs": [],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updateManaTarget",
+    "inputs": [
+      {
+        "name": "_manaTarget",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "updateStakingQueueConfig",
+    "inputs": [
+      {
+        "name": "_config",
+        "type": "tuple",
+        "internalType": "struct StakingQueueConfig",
+        "components": [
+          {
+            "name": "bootstrapValidatorSetSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "bootstrapFlushSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "normalFlushSizeMin",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "normalFlushSizeQuotient",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "maxQueueFlushSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "validateBlobs",
+    "inputs": [
+      {
+        "name": "_blobsInput",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "",
+        "type": "bytes[]",
+        "internalType": "bytes[]"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "validateHeaderWithAttestations",
+    "inputs": [
+      {
+        "name": "_header",
+        "type": "tuple",
+        "internalType": "struct ProposedHeader",
+        "components": [
+          {
+            "name": "lastArchiveRoot",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "blockHeadersHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "blobsHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "inHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "outHash",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "slotNumber",
+            "type": "uint256",
+            "internalType": "Slot"
+          },
+          {
+            "name": "timestamp",
+            "type": "uint256",
+            "internalType": "Timestamp"
+          },
+          {
+            "name": "coinbase",
+            "type": "address",
+            "internalType": "address"
+          },
+          {
+            "name": "feeRecipient",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "gasFees",
+            "type": "tuple",
+            "internalType": "struct GasFees",
+            "components": [
+              {
+                "name": "feePerDaGas",
+                "type": "uint128",
+                "internalType": "uint128"
+              },
+              {
+                "name": "feePerL2Gas",
+                "type": "uint128",
+                "internalType": "uint128"
+              }
+            ]
+          },
+          {
+            "name": "totalManaUsed",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "_attestations",
+        "type": "tuple",
+        "internalType": "struct CommitteeAttestations",
+        "components": [
+          {
+            "name": "signatureIndices",
+            "type": "bytes",
+            "internalType": "bytes"
+          },
+          {
+            "name": "signaturesOrAddresses",
+            "type": "bytes",
+            "internalType": "bytes"
+          }
+        ]
+      },
+      {
+        "name": "_signers",
+        "type": "address[]",
+        "internalType": "address[]"
+      },
+      {
+        "name": "_attestationsAndSignersSignature",
+        "type": "tuple",
+        "internalType": "struct Signature",
+        "components": [
+          {
+            "name": "v",
+            "type": "uint8",
+            "internalType": "uint8"
+          },
+          {
+            "name": "r",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          },
+          {
+            "name": "s",
+            "type": "bytes32",
+            "internalType": "bytes32"
+          }
+        ]
+      },
+      {
+        "name": "_digest",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "_blobsHash",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      },
+      {
+        "name": "_flags",
+        "type": "tuple",
+        "internalType": "struct CheckpointHeaderValidationFlags",
+        "components": [
+          {
+            "name": "ignoreDA",
+            "type": "bool",
+            "internalType": "bool"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "vote",
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "CheckpointInvalidated",
+    "inputs": [
+      {
+        "name": "checkpointNumber",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "CheckpointProposed",
+    "inputs": [
+      {
+        "name": "checkpointNumber",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "archive",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "versionedBlobHashes",
+        "type": "bytes32[]",
+        "indexed": false,
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "payloadDigest",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "attestationsHash",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Deposit",
+    "inputs": [
+      {
+        "name": "attester",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "withdrawer",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "publicKeyInG1",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct G1Point",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "publicKeyInG2",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct G2Point",
+        "components": [
+          {
+            "name": "x0",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "x1",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y0",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y1",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "proofOfPossession",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct G1Point",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "EIP712DomainChanged",
+    "inputs": [],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "EscapeHatchUpdated",
+    "inputs": [
+      {
+        "name": "escapeHatch",
+        "type": "address",
+        "indexed": false,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "FailedDeposit",
+    "inputs": [
+      {
+        "name": "attester",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "withdrawer",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "publicKeyInG1",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct G1Point",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "publicKeyInG2",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct G2Point",
+        "components": [
+          {
+            "name": "x0",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "x1",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y0",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y1",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      },
+      {
+        "name": "proofOfPossession",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct G1Point",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "L2ProofVerified",
+    "inputs": [
+      {
+        "name": "checkpointNumber",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "proverId",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "LocalEjectionThresholdUpdated",
+    "inputs": [
+      {
+        "name": "oldLocalEjectionThreshold",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      },
+      {
+        "name": "newLocalEjectionThreshold",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ManaTargetUpdated",
+    "inputs": [
+      {
+        "name": "manaTarget",
+        "type": "uint256",
+        "indexed": true,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "OwnershipTransferred",
+    "inputs": [
+      {
+        "name": "previousOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newOwner",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "PrunedPending",
+    "inputs": [
+      {
+        "name": "provenCheckpointNumber",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      },
+      {
+        "name": "pendingCheckpointNumber",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RewardConfigUpdated",
+    "inputs": [
+      {
+        "name": "rewardConfig",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct RewardConfig",
+        "components": [
+          {
+            "name": "rewardDistributor",
+            "type": "address",
+            "internalType": "contract IRewardDistributor"
+          },
+          {
+            "name": "sequencerBps",
+            "type": "uint32",
+            "internalType": "Bps"
+          },
+          {
+            "name": "booster",
+            "type": "address",
+            "internalType": "contract IBoosterCore"
+          },
+          {
+            "name": "checkpointReward",
+            "type": "uint96",
+            "internalType": "uint96"
+          }
+        ]
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "RewardsClaimableUpdated",
+    "inputs": [
+      {
+        "name": "isRewardsClaimable",
+        "type": "bool",
+        "indexed": false,
+        "internalType": "bool"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Slashed",
+    "inputs": [
+      {
+        "name": "attester",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "SlasherUpdated",
+    "inputs": [
+      {
+        "name": "oldSlasher",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "newSlasher",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "StakingQueueConfigUpdated",
+    "inputs": [
+      {
+        "name": "config",
+        "type": "tuple",
+        "indexed": false,
+        "internalType": "struct StakingQueueConfig",
+        "components": [
+          {
+            "name": "bootstrapValidatorSetSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "bootstrapFlushSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "normalFlushSizeMin",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "normalFlushSizeQuotient",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "maxQueueFlushSize",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "ValidatorQueued",
+    "inputs": [
+      {
+        "name": "attester",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "withdrawer",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "WithdrawFinalized",
+    "inputs": [
+      {
+        "name": "attester",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "recipient",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "WithdrawInitiated",
+    "inputs": [
+      {
+        "name": "attester",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "recipient",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "amount",
+        "type": "uint256",
+        "indexed": false,
+        "internalType": "uint256"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "error",
+    "name": "FeeLib__InvalidInitialEthPerFeeAsset",
+    "inputs": [
+      {
+        "name": "provided",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "minimum",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "maximum",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "FeeLib__InvalidManaLimit",
+    "inputs": [
+      {
+        "name": "maximum",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "provided",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "InvalidShortString",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "OwnableInvalidOwner",
+    "inputs": [
+      {
+        "name": "owner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "OwnableUnauthorizedAccount",
+    "inputs": [
+      {
+        "name": "account",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "Rollup__InvalidManaTarget",
+    "inputs": [
+      {
+        "name": "minimum",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "provided",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "Rollup__UnavailableTempCheckpointLog",
+    "inputs": [
+      {
+        "name": "checkpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "pendingCheckpointNumber",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "upperLimit",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "SafeCastOverflowedUintDowncast",
+    "inputs": [
+      {
+        "name": "bits",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "value",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "Staking__InvalidNormalFlushSizeQuotient",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "Staking__InvalidStakingQueueConfig",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "StringTooLong",
+    "inputs": [
+      {
+        "name": "str",
+        "type": "string",
+        "internalType": "string"
+      }
+    ]
   }
 ]

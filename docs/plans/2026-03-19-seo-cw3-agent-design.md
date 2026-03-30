@@ -8,7 +8,7 @@ Create `seo-cw3.md` agent prompt for Citizen Web3 content agent — separate fro
 
 1. **Separate container** — `agent-content-cw3` with own runner label `content-cw3`, own env vars (Twitter/Telegram/Discord keys for @citizen_web3). No shared state with seo-vi container.
 
-2. **RAG access** — via `/api/rag/search` endpoint with token auth. Agent calls `node agents-tools/search-rag.js` to search 190+ podcast transcripts and CW3 docs semantically.
+2. **RAG access** — via `/api/rag/search` endpoint with token auth. Agent calls `node agents-tools/search-rag.js` to search 190+ podcast transcripts and CW3 docs semantically. If `agents-infrastructure` runs as a separate docker-compose project from `validatorinfo`, point `CW3_RAG_API_URL` to `http://host.docker.internal:3000` instead of `http://frontend:3000`, because the `frontend` DNS alias only exists inside the `validatorinfo` docker network.
 
 3. **Data sources** — ValidatorInfo DB (SQL via Prisma) + RAG knowledge base + CW3 docs (server/data/cw3-docs/*) + WebSearch
 

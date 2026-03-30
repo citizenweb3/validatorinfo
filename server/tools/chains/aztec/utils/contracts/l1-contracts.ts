@@ -17,12 +17,12 @@ export const aztecTestnet = {
 
 export const aztecMainnet = {
   registryAddress: '0x35b22e09ee0390539439e24f06da43d83f90e298',
-  rollupAddress: '0x603bb2c05d474794ea97805e8de69bccfb3bca12',
-  inboxAddress: '0x15c718c05b8c0dbec4d648b6711d6ce8793969ee',
-  outboxAddress: '0xf006c41097861afeb18b05e586b921c081411ee9',
+  rollupAddress: '0xae2001f7e21d5ecabf6234e9fdd1e76f50f74962',
+  inboxAddress: '0x8dbf0b6ed495baab6062f5d5365af3c1b2ed4578',
+  outboxAddress: '0xc9698b7adef9ee63f3bf5cff38086e4e836579f0',
   feeJuiceAddress: '0xa27ec0006e59f245217ff08cd52a7e8b169e62d2',
   stakingAssetAddress: '0xa27ec0006e59f245217ff08cd52a7e8b169e62d2',
-  feeJuicePortalAddress: '0xe05dc9d5969272831757181fff1532b066254bf1',
+  feeJuicePortalAddress: '0x2891f8b941067f8b5a3f34545a30cf71e3e23617',
   coinIssuerAddress: '0x02fadf157d551aa6d761b2a2237d03af68e41ca6',
   rewardDistributorAddress: '0x3d6a1b00c830c5f278fc5dfb3f6ff0b74db6dfe0',
   governanceProposerAddress: '0x06ef1dcf87e419c48b94a331b252819fadbd63ef',

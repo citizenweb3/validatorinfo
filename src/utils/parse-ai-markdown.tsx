@@ -15,10 +15,14 @@ const extractPath = (href: string): string => {
 const isInternalPath = (pathname: string): boolean =>
   pathname === '/' || INTERNAL_PREFIXES.some((prefix) => pathname.startsWith(prefix));
 
+const SITE_HOSTNAMES = ['validatorinfo.com', 'www.validatorinfo.com', 'dev.validatorinfo.com', 'localhost'];
+
 const getInternalPath = (href: string): string | null => {
   if (href.startsWith('/')) return isInternalPath(href) ? href : null;
   try {
     const url = new URL(href);
+    const hostname = url.hostname.replace(/^www\./, '');
+    if (!SITE_HOSTNAMES.some((h) => hostname === h)) return null;
     const path = url.pathname + url.search + url.hash;
     return isInternalPath(url.pathname) ? path : null;
   } catch {

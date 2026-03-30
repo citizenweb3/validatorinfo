@@ -51,15 +51,21 @@
     "Lucky!?": "Sortudo!?",
     "Co-Create & Support": "Co-Criar & Apoiar",
     "CoCreate": {
-      "tagline": "<github>Código aberto. Sem anúncios. Respeito à privacidade. Auto-hospedado!</github>",
-      "mission": "Estamos fazendo isso de forma independente — e vai continuar assim. O Explorer que a Web3 merece!",
-      "description": "Somos um <validator>validador auto-hospedado, bare-metal</validator>, focado em redes de privacidade e construindo para a descentralização. Construímos <infrastructure>infraestrutura única, capaz de operar fora da rede</infrastructure> para redes e ferramentas que oferecem monitoramento preciso e direto de dados on-chain.",
+      "tagline": "<github>Código aberto. Sem anúncios. Respeito à privacidade. Auto-hospedado!</github>. Estamos fazendo isso de forma independente — e vai continuar assim. O Explorer que a Web3 merece!",
+      "description": "Operamos <validator>validadores auto-hospedados, bare-metal</validator>, focados em redes de privacidade e construindo para a descentralização. Construímos <infrastructure>infraestrutura única, capaz de operar fora da rede</infrastructure> para redes e ferramentas que oferecem monitoramento preciso e direto de dados on-chain. Construímos ferramentas poderosas de bem público e trabalhamos na integração de agentes de IA autônomos.",
       "lookingFor": "Estamos procurando:",
       "partners": "Parceiros apaixonados",
       "interns": "Estagiários/contribuidores entusiasmados",
       "delegators": "Delegadores que praticam a descentralização",
       "telegram": "DM no Telegram: <tgLink>@citizenweb3</tgLink>",
-      "support": "Este projeto é financiado através dos nossos nós. Apoie o projeto agora, através de <stakingLink>staking connosco!</stakingLink>"
+      "supportIntro": "Não temos investidores ou VCs. Por favor, apoie-nos agora:",
+      "stakeWithUs": "<link>Faça staking conosco!</link>",
+      "ghSponsorship": "<link>Patrocínio no GitHub</link>",
+      "btcDonations": "Doações BTC",
+      "btcAddress": "bc1q6exvqpjevkgctq8dqquygdl9yuuecfxy7k99ws",
+      "ethDonations": "Doações ETH",
+      "ethAddress": "0x92aC157Fa112f716C9368548441116DC64a170F5",
+      "xmrDonations": "Doações XMR"
     },
     "search": {
       "Validators": "Validadores",
@@ -971,6 +977,8 @@
     "websocket nodes": "Nós WebSocket",
     "indexer nodes": "Nós Indexadores",
     "lcd nodes": "Nós LCD",
+    "masp indexer nodes": "Nós de Indexador MASP",
+    "interface nodes": "Nós de Interface de Staking",
     "relayer nodes": "Nos de retransmissão",
     "archive nodes": "Nós de Arquivo",
     "others nodes": "Outros Nós",
@@ -1555,7 +1563,16 @@
     "Search validator": "Buscar validador",
     "APR comparison": "Comparação de APR",
     "Node count": "Contagem de nós",
+    "Most private validators": "Validadores mais privados",
+    "Explain off-grid staking": "Explicar staking off-grid",
+    "Help set up hardware": "Ajudar a configurar hardware",
+    "Best bare-metal validators": "Melhores validadores bare-metal",
+    "Compare ecosystems": "Comparar ecossistemas",
+    "Decentralization leaders": "Líderes em descentralização",
+    "Validator infrastructure": "Infraestrutura de validadores",
+    "Staking security tips": "Dicas de segurança para staking",
     "AI not configured": "Assistente AI não está disponível no momento",
-    "Request timed out": "Tempo limite excedido. Por favor, tente novamente."
+    "Request timed out": "Tempo limite excedido. Por favor, tente novamente.",
+    "New chat": "Novo chat"
   }
 }

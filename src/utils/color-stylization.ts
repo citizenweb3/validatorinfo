@@ -8,11 +8,11 @@ const yellowTextLayout: string = '#E5C46B';
 const delegation = (selfDelegation: number | null) => {
   if (selfDelegation !== null) {
     if (Number(selfDelegation) < 1000) {
-      return greenTextLayout;
+      return redTextLayout;
     } else if (Number(selfDelegation) < 2000 && Number(selfDelegation) >= 1000) {
       return yellowTextLayout;
     } else {
-      return redTextLayout;
+      return greenTextLayout;
     }
   }
 
@@ -22,7 +22,7 @@ const uptime = (uptime: number | null) => {
   if (uptime != null) {
     if (uptime <= 50) {
       return redTextLayout;
-    } else if (uptime >= 80 && uptime <= 80) {
+    } else if (uptime > 50 && uptime < 80) {
       return yellowTextLayout;
     } else {
       return greenTextLayout;
