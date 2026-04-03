@@ -90,10 +90,14 @@ const CoCreateButton = () => {
               })}
             </ListItem>
             <ListItem>
-              {t('CoCreate.btcDonations')} ({t('CoCreate.btcAddress')})
+              {t.rich('CoCreate.btcDonations', {
+                link: (chunks) => <TextLink href="https://mempool.space/address/bc1q6exvqpjevkgctq8dqquygdl9yuuecfxy7k99ws" content={chunks} target="_blank" />,
+              })}
             </ListItem>
             <ListItem>
-              {t('CoCreate.ethDonations')} ({t('CoCreate.ethAddress')})
+              {t.rich('CoCreate.ethDonations', {
+                link: (chunks) => <TextLink href="https://etherscan.io/address/0x92aC157Fa112f716C9368548441116DC64a170F5" content={chunks} target="_blank" />,
+              })}
             </ListItem>
             <ListItem>{t('CoCreate.xmrDonations')}</ListItem>
           </ul>

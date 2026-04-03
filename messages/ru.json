@@ -61,10 +61,8 @@
       "supportIntro": "У нас нет инвесторов или венчурных фондов. Пожалуйста, поддержите нас сейчас:",
       "stakeWithUs": "<link>Застейкайте нам!</link>",
       "ghSponsorship": "<link>Спонсорство на GitHub</link>",
-      "btcDonations": "Донаты BTC",
-      "btcAddress": "bc1q6exvqpjevkgctq8dqquygdl9yuuecfxy7k99ws",
-      "ethDonations": "Донаты ETH",
-      "ethAddress": "0x92aC157Fa112f716C9368548441116DC64a170F5",
+      "btcDonations": "<link>Донаты BTC</link>",
+      "ethDonations": "<link>Донаты ETH</link>",
       "xmrDonations": "Донаты XMR"
     },
     "search": {

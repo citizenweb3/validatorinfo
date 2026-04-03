@@ -61,10 +61,8 @@
       "supportIntro": "Não temos investidores ou VCs. Por favor, apoie-nos agora:",
       "stakeWithUs": "<link>Faça staking conosco!</link>",
       "ghSponsorship": "<link>Patrocínio no GitHub</link>",
-      "btcDonations": "Doações BTC",
-      "btcAddress": "bc1q6exvqpjevkgctq8dqquygdl9yuuecfxy7k99ws",
-      "ethDonations": "Doações ETH",
-      "ethAddress": "0x92aC157Fa112f716C9368548441116DC64a170F5",
+      "btcDonations": "<link>Doações BTC</link>",
+      "ethDonations": "<link>Doações ETH</link>",
       "xmrDonations": "Doações XMR"
     },
     "search": {
