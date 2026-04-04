@@ -1,0 +1,370 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cheqd
+
+Episode name:
+Digital Identity, The Soul and Keys with Ankur Banerjee 
+
+anna 
+Hey, it's Citizen Cosmos. We're Serge and Anna and we discover Cosmos by chatting with awesome people from various teams within the Cosmos ecosystem and the community. Join us if you're curious how dreams and ambitions become code
+
+Citizen Web3 
+good space time to you all. Welcome to a new episode of Citizen Cosmos. We have today with us Ankur Banerjee, the CTO and co-founder of Checked. And Ankur, welcome to the show.
+
+ankur_banerjee
+Serge, Anna, nice to be on the podcast. I'm very excited to tell you everything about Checked. And I'm sure we'll discover a lot and what we're doing in the Cosmos ecosystem today.
+
+Citizen Web3 
+For sure, because you guys kind of like appeared, I don't really want to say out of the blue, but it kind of was like, Hey, look at us. We're here. we try to get involved quite deeply within the ecosystem and not just with communities and podcasts to also validate and do other things. And, we haven't heard about you. So if you may, in your own words, tell us all about what you guys do, what's your mission and anything else you want to add.
+
+ankur_banerjee 
+Sounds perfect. It does feel like we appeared out of nowhere because Checked as a company, we started around March 2021 and we've had a very rapid pace of product shipping since then. So we'll come to that in a second. But if I needed to summarize it, what we are trying to do at Checked is we are trying to make digital identity cheaper, faster, more secure online. And that comes in many different ways.
+
+So there's a concept in the space of digital identity that has been going around the blockchain world called self-sovereign identity, which you might have heard of or by its other term called SSI. And the reason why Checked exists is me and my co-founder Fraser Edwards, we've worked in this space for about five years at this point on other self-sovereign identity projects for governments, for large enterprises.
+
+The one big problem that remains in every single one of these different implementations across the world is how on earth do you monetize this? And that's a major problem that has stopped so many different decentralized ID or blockchain ID or self-servant ID, whatever you want to call it, projects from going live. And so at Check, what we're trying to do is we're trying to A, bring this into the Cosmos ecosystem and building on the Cosmos ecosystem.
+
+But fundamentally, what we're trying to solve is how can we become a neutral network or neutral infrastructure provider that can be used by any digital identity vendor, any SSI vendor, any large enterprise around the world that wants to figure out if any data that they come across is trusted and authentic or not, as well as being able to pay each other for that authentic and trusted data. lots of stuff to dive into there, but
+
+As I said, we got started in March 2021. We had our private beta testnet by July, and we had our public beta testnet by August, and we are hoping to release our main net by October 2021.
+
+Citizen Web3
+Nice. That sounds like you guys did a lot of work in a very short period of time. But if you don't mind, I would like to dive a little bit deeper. let's break it down. maybe go a few steps backwards. You mentioned digital identity and SSI. And before we're going to dive into that, maybe let's start with the very basics. What is a digital identity in your own terms?
+
+And when you say digital identity, what is the difference with the real world identity? Let's, start with very basics here.
+
+ankur_banerjee
+Digital identity, the easiest way that I explain that is if you think about your real world identity, you can think of documents that exist. You can think of birth certificates, you can think of driving licenses, passports, which are high standard, high security documents that are issued by governments. But it also relates to other things. If you think about the...
+
+Facebook profile that you might have, Twitter profile that you might have, you may have a Starbucks card, or you might have a different ID that you log on to your favorite e-commerce website. All of these different pieces of information are something that relates to you as an individual and therefore forms part of your identity. It's just that some of them tend to be checked to a higher degree by trustworthy organizations.
+
+And some of them are whatever you say online. Like, you know, I can sign up a Twitter account calling myself Donald Trump, and that's completely OK. Like, that's the online persona that I'm going for when I do that. then, move on to, like, how this translates into what is the idea behind self-suffering identity. Imagine that you had a driver's license, and a driver's license is a document that is issued by a government.
+
+It's probably in a plastic format. You hold it in your hand. And you can show it. You can carry it around. You can show it to anyone who asks for your driver's license. Now, sometimes you do this to prove that you're allowed to drive. Say, if you get pulled over by a policeman or if you go to rent a car, then you use your driver's license.
+
+But you also use your driver's license when, you go to buy alcohol, or you go out to a nightclub, or you're trying to open up a bank account. And they say, proof to me, what is your identity? Proof to me, what's your name? What address do you live in? What's your date of birth? And so on. So the idea behind Digital ID is, imagine you had your driver's license, which is a physical document. What if you could have a secure and digital copy of that that you hold in your own hands?
+
+ankur_banerjee 
+say in your browser or on your phone or in any other sort of like, you know, storage or backup device that you have, and it's completely in your control, you're able to show it to anyone. And that is what we call self-sovereign digital ID. Because unlike say something like a Facebook account, you control and you have full control on like whom you show this identity to and which parts of the identity you want to reveal to.
+
+Citizen Web3
+So could I try and summarize the SSIs basically the gateway to my digital data?
+
+ankur_banerjee 
+Pretty much. And more interestingly, the digital identity doesn't just apply to people. It applies to companies because companies have a registration. have certain aspects or certifications that they might have. It applies to objects because objects have an identity or certain characteristics that you can capture. Virtual objects also have this. So if you think of the space of NFTs,
+
+ankur_banerjee
+NFTs have certain attributes and characteristics that make them unique. So that also comes under the category of digital identity. So when we actually start teasing into it, it's quite broad. The simplest example is you have a physical driver's license. Wouldn't it be amazing to have a digital copy of it that you can show to others? But when you start expanding that, it applies to companies, objects, things, virtual objects, anything that you can think of.
+
+Citizen Web3 
+The reason I'm kind of like trying to dig at this is I'm going to try and go like around because I really want to hear like an expert's opinion like yourself here on this matter. So a lot of what people when they talk about digital identity, especially in Web 3, I don't know if you ever heard the comparison between a digital print and your soul. So, you know, people use the internet for 20 or so years. They live so many.
+
+of their digital print online that well, that kind of becomes really a persona by itself already if we take all that information, if we go, know, like the Cambridge Analytica kind of stuff and all that. So, and a lot of like the people who like make this comparison, they say that the only real thing we need in order to, have a kind of like a publicly verified digital identity is just a public and a private key, which I can prove by a signature. So what I'm trying to understand here,
+
+what are the advantages of having this self-several identity rather than just signing every time with my private key and a signature some kind of message to prove that I am me.
+
+ankur_banerjee 
+you're right. I think the way that this started off is by saying you could have a public-private key pair and you sign everything or you have something like the Ethereum naming system and it says this is a friendly name towards your wallet address and so on. Fundamentally, the problem with that approach, or rather, it's an extension that self-sovereign identity achieves, is when you present some information to someone,
+
+How do they understand what the different fields mean? And so to explain that a bit more, this is a industry-wide standard that has been worked on by more than 100 companies and nonprofit groups called the World Wide Web Consortium. And so one of the standards they've created as part of this is called the decentralized identifier standard, which is very similar to what you described. Like it's a way of
+
+specifying a public-private key pair that belongs to an organization or to an individual, and how do you store that? But the second piece of this is called verifiable credentials. And verifiable credentials, the idea there is when you present digital information to someone, they need to be able to understand what the different fields mean. So to give an example of this, to go back to my analogy of a driver's license.
+
+Let's take a UK driver's license. The fields in it are quite fixed. So you know that field number one means last name, field number two means first name, field number three is date of birth, and so on. So when you go present it to somebody else, or even if you go across to a different country and you show that card, they know, OK, so the first part means this, the second part means this, third part means this, and so on. So if you were just signing some information with the public-private key pair,
+
+How do you solve the challenge of like when they receive it? Can they understand what those different fields mean? And that's one of the things that is being tackled by this self-serving ID standard called verifiable credentials And to take a very real example of like, know where this is actually being used right now Take for instance COVID vaccination Results or COVID test results when you travel between different countries. So I recently went from the UK
+
+ankur_banerjee
+to Europe and I had to prove the fact that I was vaccinated in the UK. So I had additional credential, but when I presented the additional credential to the applications that were being used to read it on the EU border or even just to go to a cafe in Paris, the software on the other side needs to be able to understand what you're presenting to it. So it's an evolution of saying, you can just sign it with a public-private key pair because at the end of the day, you need to understand what's within it.
+
+The second piece is, if you have a public-private key pair that you have published online somewhere, that might result in a scenario where you are leaking whom you're interacting with if it is also being recorded at the same place. So as an example, if you have a public-private key pair that you've named with the Ethereum naming system, and then you make a transfer of some information or some token or some...
+
+assets to somebody else, that is now tied and that is now accessible. It's transparent to anyone to follow up. What that means is you might not want whom you're interacting with to be available and be accessible to the general public. So often when we exchange information, we want to keep the fact whom are we exchanging information with and what kind of information we're exchanging also quite private.
+
+There are aspects of that which are solved by the self-serving ID standards.
+
+Citizen Web3 
+This is interesting debate in my opinion, because I cannot help being devil's advocate here again. Is there a place though for standards in a decentralized identity world or should each decentralized identity should decide for itself because it's a decentralized world? What are the standards it wants to work with or what is the information it wants to share?
+
+Citizen Web3 
+I mean, this is kind of like a very vague question. understand where you're coming from. understand exactly what you're trying to say, but I'm just quite curious because in the past, mean, if we look over the past, let's say 10 years or so in blockchain space of what has been done, especially over the last five years in the identity realm, you're right. There hasn't really been many successful projects, but there has been quite several who have tried different approaches.
+
+Citizen Web3 
+we have like Civic or Orbit or Idena for example, yourselves guys and so on and so forth. And each one of them has a very, very, very different approach to solve the solution of the digital identity and how to approach it. So the question is, when you...
+
+Started to create your own model of this I presume it has its own economic model, which I would love to hear about as well Did you guys base it on any of the existing models already in blockchain? Or did you look up to any of those projects or is it completely something different new and? I've heard of before
+
+ankur_banerjee 
+To answer that question, maybe should I explain how decentralized identifiers and the verifiable credentials actually work? That actually might help answer part of that. So the decentralized ID is an interesting and complex topic, because what you fundamentally don't want to do is you don't want to be writing personally identifiable information on a ledger. And the scope of how this is interpreted is quite interesting, because
+
+Citizen Web3
+Sure, of course,
+
+ankur_banerjee 
+A lot of the projects that you just described right now, often what they try to do is they try to either write the information itself or a hash of the information on a ledger. The problem with that particular approach is at the end of the day, if you want to go remove that information, you cannot. And therefore, according to a lot of the privacy regulations around the world, even a hash of a particular personally identifiable information.
+
+counts as personally identifiable information because it still really correlates one-to-one with you, including a public key. So a public key might not have your name on it, but it's still something that is unique to you as an individual, and therefore GDPR applies. So what happens in the decentralized identifier space is we are not creating necessarily a new standard. The standards themselves are technical standards, and there are about 100 plus decentralized identifier
+
+methods as they're called around the world. So we are doing it in compliance with those specifications. And how it works is with the decentralized identifier standard, it is meant to be a way in which organizations that issue or verify information typically can publish their public-private key pair and API endpoints to the services that they want.
+
+And the reason why decentralized identifiers, which is the bit that you store on a ledger on a blockchain, is typically meant to be for organizations is because organizational data does not come under the scope of GDPR. Now what happens with the next phase, which is how do you then issue credentials off the back of it, is the credentials themselves are off ledger. They are not recorded on a blockchain. They don't have any aspects of them written to a blockchain.
+
+but they're signed with the public private key pair or the identifiers that are stored on a DID as they're called or the decentralized identifier of a particular trusted organization. And what this achieves is the actual information doesn't have to be stored on a blockchain. It can be transmitted peer to peer between two parties that want to exchange that information while ensuring that the
+
+ankur_banerjee 
+that the recipient of that information can easily look up, hey, who issued this information and who signed it in the first place. What's quite unique about the decentralized identifier standard is it doesn't mention that you have to store it on a blockchain. So for instance, when I mentioned there's 100 plus standards for DID methods, one of them is called DID GitHub and the other one is called DID Web, which basically means
+
+You store the public private key pair or the DID on a website or on a GitHub account. The problem with that approach is if that website goes down or if the hosting provider says we are going to delete your website or if GitHub says you violate our terms and conditions, then they can go remove that. So the element of trust that a blockchain is adding is it's adding a high amount of resiliency. So you don't rely on a single provider.
+
+And you're also adding in a high amount of tamper-proofing, which is a random person cannot go and overwrite that information unless you own the public-private key pair. The challenge that I've seen with a lot of the blockchain or ID projects, and in fact, this is one of the reasons why we are making certain sort of technical and ideological choices, is many of the projects that have come so far
+
+because in most other blockchain use cases you try and write every single information onto the ledger, they try and write the information onto a ledger. And that is one of the things you're not supposed to do in the identity use case because it's a privacy leak. It does not comply with privacy regulations around the world. And fundamentally, therefore, is incompatible with some of the technical and legal standards around this that are happening around the world. So...
+
+what are we doing different is we are following the technical specifications. And that's the bit which is common with the rest of the industry. It's meant to be an interoperable standard. But what we are doing that is quite unique is we are building in the mechanisms to charge for these digital credentials that are off-ledger using an on-ledger mechanism.
+
+Citizen Web3 
+So this DID, is a day started in the form of a contract or a token or what is it?
+
+ankur_banerjee 
+These DIDs are essentially stored as states on a ledger. So in most DID methods, what happens is you store it in the same way that it might have a wallet address or an account address on the ledger.
+
+Citizen Web3 
+Can you give an example to a use case, simple, of where you guys come in and with a potential imaginary customer?
+
+ankur_banerjee 
+So I'll take a real example of like one of our partners and investors called Evernim who are currently building the IATA travel pass program. So IATA is the International Air Transport Association. It's the global industry body for every single airline around the world. And the problem that they were trying to solve with COVID, the pandemic that happened last year is how can people easily carry across and prove their COVID test results and COVID vaccinations?
+
+Number one, you don't want to create a global database of everyone's single health records. That's a terrible idea. And secondly, you don't want to integrate with 192 different countries, different health record systems. So how can we go about solving this problem? And so what we try to do, for example, with self-sovereign ID is to say, hey, people right now are having to prove this using just
+
+PDFs or printed letters that they're carrying around, which can easily be faked, which can easily be lost, which are not very secure and reliable as a mechanism of exchange. And so what a lot of the countries around the world have started looking at this, so the European Union is doing this, some of the other nation states like the UK is looking into this as well, is to say,
+
+When you get a COVID test or a COVID vaccination done, you have a decentralized identifier or a DID of the countries, either the health system or the hospital or the test lab that issued your result. They have a DID or an identifier or a public-private key pair for themselves on a blockchain. They issue you, the person who's the traveler, the test results into a wallet.
+
+that you can keep the records in and that says this is a digitally signed and tamper-proof copy of your vaccination or your test results. So when you fly to a different country and you go across and you have to prove to them that I have this test result, it's digitally readable, you can understand what is contained in the records and you also prove that it's not been tampered and the way they check that is they check the signature at the bottom of this digital credential.
+
+ankur_banerjee
+and they can look it up on a blockchain. And because it's on a blockchain, it's easily accessible. It doesn't rely on a single person's uptime or a single person's censorship of whether this record is still available or not. But that's a fantastic example of a real life use case which is happening right now. And while they are currently not using Checked, partner, Evernim, has just gone live with Emirates Airlines.
+
+And Emirates Airlines is using this on every single flight that is taking off and landing in six different continents. And it's very powerful because what you've just done is you've made data that can be trusted and it is portable across different contexts and different countries.
+
+Citizen Web3 
+First of all, thank you for the really thoughtful explanation that makes a lot more sense, but let's dig in a little bit more. So, the thing is here, and what a lot of the privacy advocates and a lot of web builders that we speak to personally and
+
+just generally like around the industry, a lot of them are afraid is that a lot of the time what some projects might do is basically just transfer data back to, encrypted kind of transfer it and then still work with web two and still basically create even expand that bureaucratic loop even more in some cases.
+
+Citizen Web3 
+like you said yourself, you gave a very good example of how it can be used, but I was going to say the first thing was not to start a pandemic, but let's say it's in place already, right? And whatever, the bats are flying out of Wuhan or whatever, the reality is there. But the question is again,
+
+ankur_banerjee 
+haha
+
+Citizen Web3 
+Do we really need more than just a simple signature to prove? If, if let's say that I would personally agree with the COVID test results. I mean, let's ignore for a second, everything that surrounds the story with, it good thing? Is it a bad thing? Let's just assume that we need to do a COVID test in order to travel. And that's the, that's our given, a.
+
+Citizen Web3 
+Whatever. So, I'll explain from a different point of view. In my opinion, email is one of the most outdated technologies. It's absolutely useless. It's hopeless. It's crap. It's bullshit. There is like nothing that can be used for those still 99 % 0.99 % of web two companies. They're using email in order to create an unnecessary database.
+
+Citizen Web3 
+just creating holes. So again, I'm being devil's advocate here. So my worry is, or not my worry, or rather my question is by creating, this, those standards in the decentralized world, are we just not kind of like pushing the web two bureaucratic loop together to web three or really the reason why I was saying, well, all we need is just a private and a public key and that's it.
+
+somebody might want like a big airline company, other data. The question is, do they really need the data? Well, no, they fucking don't. like, does anybody really need my email in order for me to log into GitHub? Not really. Does anybody need my date of birth in order for me to get a driving license? No, not really. I mean, they might need to know what year I was born in, but they don't need my date of birth so the question is here.
+
+Whether this complicates it more or whether the opposite what you guys are doing is actually, trying to standardize, like you said, a very big piece of a puzzle and saying, okay, we do need that. The reason we do need is, is ABCD or did you see what I'm trying to get at? 
+
+ankur_banerjee 
+Yeah, And I'm very glad you brought that point up, actually, because you're absolutely right. The traditional way that you prove stuff right now goes towards maximizing and capturing everything. So for instance, there are times when I've been gone traveling in Asia, and the first thing you do at check-in is give me your passport, I'll keep a photocopy. You've just literally given somebody the entire stuff they need to go steal your identity,
+
+So one of the other things that exists in the SSI standards is the ability to redact and only selectively disclose information. So the way that these technical standards are built is you allow for selective disclosure. So for instance, like the example that you gave, when you go into buy alcohol, all they need to know is that you're above the age of 18, and that has been vouched for by a trusted authority.
+
+Citizen Web3 
+It's also a good question. Do they know to need the time all over 18 or is this another unnecessary, piece of like, but let's stick with it. Let's stick with the story. I like it.
+
+ankur_banerjee 
+you can be a maximalist libertarian on what data is not required or not. But I'll come to the DeFi examples in a second. to give a very real example of this, for instance, my girlfriend does not update her address on her driver's license because
+
+ankur_banerjee
+She's worried that if she goes to a nightclub to prove her age is above 18, you've just given a random bouncer the address that you live at. So the way that in which we currently prove trust in a lot of these different contexts is broken because you often have to reveal way too much information than you need to. And so one of the big parts of
+
+while the decentralized ID movement has been working on is how can you do selective disclosure and how can you reduce the amount of information that you need to reveal to someone. Now, the reality is that even when you look at a lot of the laws around the real world, say you need to go open up a bank account, say you need to open a centralized exchange account, say you need to open up an account on Coinbase, often what you have to go through is something called the KYC process, the Know Your Customer.
+
+process. which is, know, the insane part of this is like in the process of setting up a company, I've had to take a selfie, a picture of my passport and provide God knows how many PDFs to so many to eight or 10 different times, just within navigating the crypto and the DeFi system. Now, one challenge on that could be, hey, actually, we don't need all of that. And that's a bit more of a political point on
+
+What should be the regulations within the crypto industry of how identity is verified? But to flip that around to within the decentralized space itself, can we go beyond just the public-private key pair? So for instance, when we got some investment into a company, it was done through as a USDC transfer. Now, the reality is because that's a public-private key pair, you're sending to a particular account address. But when we are transferring large amounts,
+
+How do you know that the person on the other side is the real person that you are transferring to? How do you know that it's not a scammer? So often what we needed to do is we needed to get on a Zoom call, show my face, screen share, and show I had control of a wallet. And we see this so many different times, especially when they're doing high value crypto transfers. You do a test transfer, and then somebody checks it's OK. And then you send a screenshot back, or you get on a Zoom call. So what are you doing is you're
+
+ankur_banerjee 
+you're proving the act of like, yes, it's actually me on the other side and I still control this.
+
+Citizen Web3 
+But in theory, you could have just signed the message and that's it.
+
+ankur_banerjee
+You would not do that if he was sending 200k, right? You wouldn't send 200k across and be like, well, that's gone now and I know it's actually definitely going to anchor,
+
+Citizen Web3 
+Why not? Why not? Why not?
+
+Citizen Web3 
+What do I do? I need to know though. It's going to you. Do I need to know that it's going to anchor or do I just need to know that it's going to the address of your company? If you can guys sign the message we use in the private key, send it to me saying this is us. Again this is like a really philosophical debate, 
+
+ankur_banerjee 
+Yeah, absolutely.
+
+So what you're describing actually, and this is often what gets confused when people say digital identity because it means many things. What you're describing is called authentication, which is what is it that I can do given this public-private key pair and is it signed by the right type? But being signed by the right public-private key pair doesn't necessarily mean it belongs to that specific person. To give a good example of this.
+
+My phone is currently locked with Face ID or Touch ID or you may use similar. And that is also effectively a public-private key pair. But a lot of people register like their spouses or their children on their phone with, say, Touch ID. So when a phone is unlocked and a public-private key pair is provided to a crypto app, that doesn't necessarily mean it's you specifically, the actual legal owner or the person who has control of it.
+
+that is actually using it. So that is authentication. And it's quite an important one that you brought up. If you sign something with a public-private key pair, the way that you deal with it in high-value context is sometimes you have multi-signatures. And you say, actually, let's not just rely on one signature. Let's do two, three, four, five, six. The other thing, and this is the bit that we focus on, and this is the bit that
+
+self-sovereign identity often focuses on is who am I? Not the bit like, you what am I allowed to do? the first part, which is who am I? What are my identity attributes? And what does that allow me to do? And that's quite a powerful one where I think DeFi can come disrupt the world because I mean, fundamentally, if you think about it, like the reason why there's so much, you know, financial inclusion that doesn't happen around the world is because you are relying on a system where
+
+ankur_banerjee 
+People don't have paper documents. People don't have government issued documents to do various number of different things. And the act of checking those documents often in the Web 2.0 world or even the on-ramp onto the Web 3.0 worlds costs a lot of money to do. So, we can ignore it or we can actually face the fact that, like, you know, there's a part of, like, know, verification of who am I and what are the different attributes that matters.
+
+Now, specifically in that context where you said, well, that's just the address that somebody gave and it was signed by the company, it did matter because what they were doing is they were making an investment. And so they expect something in return. So if you hadn't really checked that it was going to the right entity, you've just invested in the wrong company.
+
+Citizen Web3 
+I'm still unsure why wouldn't signature prove to the people that was their entity. But thank you for that explanation. I think it's a very good example of looking at those two different points of view. Where on one point of view, have like the, what you're saying with the standardization. And trying to actually make some sense of all the big...
+
+pieces of data and saying, okay, guys, let's do it. Let's let's not just encrypt it, hash it, piece of data, but let's like you say, create an SSI with the IDs and with an whole economy system behind it. And I guess the other side, we have like the cypherpunk side, which say, well, all these people who, like you mentioned with the documents.
+
+They only need those documents because the system is fucked up and in unnecessary way. anyways, this is a good interest in the debate And it's great that you guys are really trying to do something in order to make some order in it. But let's maybe talk a little bit about your role and you're the CTO and the co-founder and what's your.
+
+Citizen Web3 
+role as the CTO in the project and how do you see your personal role? Like what's your goal, your personal goal as a CTO?
+
+ankur_banerjee 
+My personal goal as CTO is, think at the end of the day, I almost call them religious debates or zealot debates. And we literally just have one, by the way. That happens within the blockchain space. I think fundamentally what I'm quite interested in is what is the impact that the technology is having? Huge amounts of the what
+
+happens in the decentralized ID world so far, by the way, has not even touched crypto or happened in the crypto space. Like most of it was done on a project called Hyperledger Indie, which is by far the biggest standard right now on which decentralized ID is handled right now. So.
+
+What I am quite interested in is not just looking at a technical debate or which platform is better, why should we use Checktober, like the other ones, but what we want to enable is there's 100 different technical standards. That's fine. And that's actually really good. The same way that there are 100 different email clients. Perfect. Email is interoperable. Anybody can go create a standard. That's OK. What we want to differentiate ourselves on
+
+is when you have these digital credentials, how does the individual that holds that information, how do they get compensated for the access that they're giving to other people? How do the trusted organizations that issue these credentials get compensated for the fact that they've just given an individual an identity? And what I mean by that and why, personally, this really matters to me is
+
+I think we can fundamentally change and disrupt the cost of proving who am I in the digital world. And if we can fundamentally disrupt the cost of proving who am I, whether that is as an individual or a company, I think that massively expands a lot of different access to DeFi products. makes NFTs more accessible. It makes...
+
+ankur_banerjee
+Dex is more accessible. makes DAOs a lot easier to sort of like control in the real world or in the Web 2.0 world as well. It gives a much more private, more secure and more in control of the individual way of sharing information. And if you can get to that, like, you know, that's fantastic. And ultimately the reason why we...
+
+are doing a lot of these stuff around how we want to govern our network as well is we don't think a single company should control such critical infrastructure on the web of how information is exchanged, unlike the web 2.0 world. that's what really gets me out of bed. It's the fact that can we make the act of proving trust in an authentic data?
+
+a lot more cheaper, a lot more accessible, a lot more secure, a lot more private, as well as ensuring that at the end of the day, it's something that's quite democratic and owned by the people.
+
+Citizen Web3 
+Can you remember at which point of your life or career you decided that authenticating data is really important to you? Was it some kind of an event that led to it or some kind of good event, bad event, or maybe it wasn't an event at all?
+
+ankur_banerjee 
+My personal way I got into this is I got into one of the first sort of like SSI projects, which was about offering identity to refugees. And this was as a follow up to the Syrian refugee crisis. One of the first times that refugees were quite geographically mobile and they were moving across quite a lot of like different European countries. And if you move countries, you probably have to sign up with 25 different government agencies.
+
+Now that's a perfect example where you can go off like, we really need to sign up with 25 different agencies and is this required or not? But at the end of the day, they have to, To get access to benefits, to get access to support. And what none of the governments wanted to do at that time is to create one giant database that holds the information of every single refugee. That was seen as a privacy risk.
+
+that nobody really wanted to do. And especially given the history in Europe with World War II of like, you know, how databases of populations got used. So one of the first projects that I worked on was how could we have a digital ID that could be backed up, is completely in control of the individual or the refugees that they can securely and privately share without necessarily having to, try and sign up every single time from scratch.
+
+and especially in a context where they might not be able to easily phone home and say, hey, can I get a copy of my birth certificate? that was the first sort of like entry into looking at like, wow, OK, this could actually be transformative in how information gets handled. And what I've done since then is I've increasingly gotten involved in other projects like this, where access to authentic information can genuinely change lives. And yeah, it's been a topic of interest ever since.
+
+Citizen Web3
+It sounds like it's a mixture of like world problems and like a personal take, which is really good, I guess, where founders are motivated by something personal rather than, trying to chase only the technology or only like, some kind of value. 
+
+anna 
+Could you imagine that you do something else now? And if you can imagine that what it would be, not having this particular project on being involved into like keeping personal data, what kind of project it could be?
+
+ankur_banerjee 
+do you want like just like a personal goal or personal hobby instead of like a technical thing or what do you mean?
+
+anna 
+Yeah, sure, sure. You know, for me, what you do in your project, you put the part of your own personality into the project. And every single project is actually about founders. And then after the next generation, the project in our...
+
+decentralized world become more and more decentralized and start to meet the interests and the personality of the community. Yeah, it's a process of involving the people who have the same vibe. So in order to understand what kind of vibe you have, I wanted to ask you who you are.
+
+anna 
+apart from being a person who are interested into the good understanding of what happened with your personal data, what else you inspired by, what can you do rather than that particular project in your life.
+
+ankur_banerjee 
+What sort of inspires me is the fact that I grew up living across a lot of different countries when I was growing up. I grew up living across Southeast Asia, India, Thailand, Singapore, a couple of other places as well. And a lot of my immediate family, as well as others, often work in diplomatic or government or civil services. For instance, looking into
+
+being the first people responding to a natural disaster or working for the electoral commission or working for the railway systems. so I've actually like, had first hand experience looking at like, what not just access, not just decentralized idea of blockchain, but just access to technology. And by technology, just I mean, like a hand pump that supplies water is technology as far as I'm concerned. 
+
+just even access to like, you know, the internet, how and how that has changed, you know, things in the sort of like, in the past 30 years that I've been alive. So that's what motivates me. I think like, if I wasn't doing decentralized idea or blockchain, I would still be probably be working on something that was around impact and accessibility to for people who have less.
+
+And I know I'm probably sounding a bit like you know blockchain can solve all of the world's problems Founders that we have seen so many of in the you know, pass sort of like I say 10 years But I wouldn't necessarily just be focused on you know doing it with blockchain the other sort of like you thing that really sort of like interest me is Teaching and mentoring people like it's something that I genuinely enjoy So, you know, I love going to hackathons. I love like,
+
+ankur_banerjee 
+looking at new people who are getting into, say, the tech industry or other industries, and looking at how can I best support their careers, how can I best support them learning new skills. So that gets me really excited as well. And I'd say as a team, a lot of us within the team connected across very, very similar mission and values on why are we here.
+
+Yes, we are here to make a successful project. Yes, we want it to be commercially sustainable. But at the end of the day, we want to make sort of like do really impactful stuff as well.
+
+Citizen Web3 
+Do you think that the impact you guys are bringing will affect just Cosmos or the whole industry or what are you aiming at?
+
+ankur_banerjee 
+I think it's beyond Cosmos as well because Cosmos so far hasn't really had a decentralized ID standard or a lot of projects on decentralized ID. And I would say the same thing applies for a lot of different other blockchain frameworks as well. And the reality is most of the work that has happened in this space so far has been in Hyperledger Indie. So in a way almost we are working towards winning over people.
+
+who use different platforms and standards. And in every single conversation that I've had so far, when I've gone around explaining like, you why we didn't build on Hyperledger-ind, we started building on Cosmos, even though mine and Fraser's personal experience has been in the past building on other platforms like Hyperledger-ind. When we explain like, you hey, this is why we're doing it, it's public permission-less, it's a lot more scalable than what you've been used to in the past, there's a lot more like, wider.
+
+ecosystem of developers and software support and things like exchanges, wallets. When we go explain all of that, it's like, yeah, no, we absolutely get it. So fundamentally, I think the impact of what we are trying to do goes far beyond A, just in terms of the blockchain and the tech industry. I think it goes beyond the Cosmos ecosystem. But secondly,
+
+This is one of the few use cases where most of the information is not on a chain, like 99 % of the action is happening off chain. And because 99 % of the action is happening off chain, it is by definition not just impacting the Cosmos ecosystem. It is a question of, what does this fundamentally get used to prove in either the real world or in the digital world in many different contexts?
+
+anna 
+as I understand you feel like you feel better when you help people than you do something for others and it's like a general line that with you during all what you're doing actually. Am I correct?
+
+ankur_banerjee 
+I would completely agree with that. think any sort of technology that is being built always should look at what is the impact on the user. I got into technology in a really good way. I really didn't even want to get into software engineering. My parents wanted me to be an artist, and I decided to rebel against that. And that's I chose computer science. I thought that would be the thing that would piss them off the most.
+
+ankur_banerjee 
+probably the opposite of what I guess a lot of Asian people go through. But because I come from, I guess a background like, you where I studied art for many years, studied economics, communications. I really enjoy looking at the intersection of like technology and a lot of other things. And part of that is why build technology for the sake of it when,
+
+you're not really looking at what sort of real-world impact this has on people. What I'd love to have is people use this tech that we are building without even having to learn what is blockchain, without even having to learn what is SSI. SSI itself is a very complicated term. You wouldn't chat about that at a pub with your mates. The same way I do chat about that. We do.
+
+Citizen Web3 
+We do too, we do too, we do too, it's okay.
+
+ankur_banerjee 
+But you know what I mean. Something truly becomes wide ranging and adopted when you don't have to really explain it. It just works. Yeah.
+
+ankur_banerjee 
+I do chat about SSI or blockchain, or a lot of tech stuff around the pub with my mates. But technology like really becomes adopted when nobody talks about it. that is the point you've really made it like nobody is talking about it at this point. That's when it's become
+
+really, really fundamentally adopted and made in.
+
+Citizen Web3
+I think that's a very good kind of summary point of regardless of the views of whatever it is you do, if your technology that you're creating is coming from the perspective of bringing good and is the market is adopting it, I guess then, well, you're doing something good for the market, right? 
+
+Citizen Web3
+I guess somehow that hour really flew by, which means we had a good, how you said, religious debate. Before we let you go though, I would love to ask our traditional question, this could be anything that springs to your mind. Doesn't matter if the answer is going to be a book or something to do or a podcast or a GitHub page or whatever.
+
+could you share some of the resources that motivate you in your daily life like day to day? Maybe it's a book. Like I said, maybe it's a game. Maybe it's, I don't know, walking around the forest, whatever. Whatever it is you think you would like to share with everyone.
+
+ankur_banerjee
+Sure. The thing that really motivates me and I think has defined the way a lot of people see me is this book called The Hitchhiker's Guide to the Galaxy, if you've heard of it. And I, in fact, even have this tattooed. I have 42 tattooed on my arm. And I think a lot of references that end up happening around me do somehow go back to Hitchhiker's Guide to the Galaxy. So, if you haven't heard of it go on Google or search engine of your choice, I'm duck duck go, why not? And search for like the answer to life, the universe and everything. And you will get a very confusing answer. And then maybe just go read the book. What's fascinating about it is like the alter Douglas Adams, he deliberately made it a different story in every medium that it is in.
+
+Citizen Web3 
+Ha
+
+ankur_banerjee 
+And so I've seen the TV show, the play, the radio show, the books, the movie, like there's a text-based adventure game that you can also go find and like it's a different story in all of them. So it's quite exciting. I'd say definitely go do that. But if you want to learn something about SSI, there's a book called, literally called, Self-Sovereign ID. You can go look it up. It's by Alex Prukshat and Drummond Reed. Drummond Reed is sort of like...
+
+One of the early pioneers of self-serving ID, also an advisor to our company, has been working with us. And so if you want to find out more about that, you can also find that out.
+
+Citizen Web3 
+Thank you. We will definitely include the link to the book and the link to Hitchhiker's Guide to the Galaxy. On that note, so long and thanks for all the fish, for the people who understood that you've definitely watched or read it. If you haven't, do that. It's a great, great guide to the Hitchhiker's Guide to the Galaxy. That's what it's called. That's what it's about. Ankur, it's been a huge pleasure talking to you. It's been a huge pleasure hearing.
+
+I'm hoping we will hear more about you guys in the ecosystem now that you guys came out of the shadow. Thanks very much for joining us today.
+
+ankur_banerjee 
+Ha ha ha.
+
+ankur_banerjee 
+Thanks for this mostly harmless chat.
+
+Citizen Web3 
+We try to be harmless, but we need to get the answers. Thanks everybody for joining in.
+
+ankur_banerjee 
+Alright, thanks guys, thanks Anna.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

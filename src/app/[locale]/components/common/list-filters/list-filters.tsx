@@ -57,6 +57,8 @@ export const checkHasActiveFilters = (searchParams: ReturnType<typeof useSearchP
   params.delete('sortBy');
   params.delete('order');
   params.delete('mode');
+  params.delete('view');
+  params.delete('show');
 
   const ppValue = params.get('pp');
   if (ppValue === '25' || ppValue === null) {

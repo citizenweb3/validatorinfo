@@ -1,0 +1,429 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/althea
+
+Episode name:
+Internet quality, mesh networks and the radio with Deborah Simpier
+
+Anna: 
+Hey, it's Citizen Cosmos. We're serge and Anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community. Join us if you're curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+Yeah, hey everyone, it's Citizen Cosmos, yet another episode of our great podcast. And today we have Deborah Simpier with us. She's the co-founder and the CEO of Althea, she'll I pronounce it correctly, sorry, which is basically a mesh network and decentralized networking solution built with the help of Cosmos SDK. And I'm hoping she's gonna correct me because I've probably said everything wrong. So, hey Deborah. 
+
+Deborah Simpier: 
+Hey, thanks so much for having me. 
+
+Citizen Web3: 
+Did I get it all wrong? 
+
+Deborah Simpier: 
+Well, it's always a lot of nuances, especially when we're talking about internet infrastructure. So, happy to kind of deep dive into a little bit more about what Althea is about and how we interface with Cosmos. 
+
+Citizen Web3: 
+Sure. So, maybe you could start with just elaborating what's it all about, the way you feel like about it and the way how it's all interconnected, just as you said. 
+
+Deborah Simpier: 
+Yeah. So, Althea was born out of the need to basically fix the situation with the internet right now. Right We have an internet that is siloed and sold in these sort of contracts, right you know instead of treating bandwidth as a commodity as it should be. Right So, what happens is when you sell like a subscription to access the internet, Right you are the carriers incentive is to give you the basically the worst possible service they can, as long as they can still retain your connection. And in many cases, in fact, it's highly monopolized in the US. I think it's something like 60% of the US is only has two choices to connect to the internet. 
+
+So, it's extremely monopolized. And in fact, what that leads to is what we see right now actually only 40% of the US does not access the internet at broadband speeds. So, there's some real serious issues to the way that the internet is displayed currently or sold currently. The other sort of issue that actually that sort of led meets to working on this on Althea and actually anything to do with the internet is that it actually holds our core freedoms, right? 
+
+The freedom to associate with who we want to, the freedom of information, all of these kind of core freedoms come down to, especially in the future of the internet. So, I worked on kind of protecting those freedoms from a legislative perspective for a very long time. Regulatory was very active in that neutrality legislation and from the kind of FCC perspective and realized at some point, actually, I remember a very poignant moment when I realized that this was not going to work. 
+
+But we were, I was sitting in a working group in my senator's office and we were talking about that neutrality and it was, this was like, you know, circa 2008 when it was really like a big forefront issue. And I said, okay, well, here's what the opposition is doing, right? They have a very, they have a threefold plan. 
+
+They're going to attack this from a legislative perspective and also from the judicial branch. And then I said, well, what are we going to do? And let's get our plan together. And I said, oh, no, no, we're going to react. 
+
+We're going to see what they do and then maybe we'll do something to react to it. And then at that moment, I knew that this was not a real, in fact, fight and not some way that we can protect what is so essential to us. But I believe that real choices and real democracy comes from actually holding physical ownership of the product. So when we actually really decentralize the physical infrastructures when we can hold those core freedoms. So zooming out a bit, Althea addresses that by instead of one ISP owning all of the physical infrastructure, all the towers, all the fiber, all the cables that it allows people to set up host antennas, host infrastructure, get compensated automatically for that and then set up the infrastructure, the internet and the decentralized way. 
+
+So that's kind of our core pay for forward innovation, right? So point antennas at each other, cable connections, set up a network, and then each person gets compensated for upstream provider. This also for the bandwidth that they're receiving or that they're sending. And the other sort of function of that too is that you can see where it creates a bandwidth marketplace, right? So other ISPs can easily, and other entities that have the access bandwidth capacity can easily participate in this marketplace and sell their access bandwidth. The other kind of core innovation that we do is a price aware routing protocol, which is really exciting because now that you have this sort of bandwidth marketplace, we wanted to give the user's choice about what upstream connection they could have, right? So when you think about bandwidth as a commodity, it's like going to the store and buying, you know, your bananas, you should be able to choose what kind of bananas you want, right? You don't have to buy a banana subscription. So on the Althea dashboard, there is a cider bar on one side, it's cost, and the other side, it's quality. 
+
+And so then on the second by second, you can choose which you would like your router to prioritize for you. And if there's time, I have a little story about how that actually works in the real world, which is pretty cool. 
+
+Citizen Web3: 
+Wait, wait, wait, wait, wait, I have some questions to them. Wait, wait, wait, I don't want to move on. She said so many things. I want to like, there's so many questions to ask there. 
+
+So before Anna is probably going to ask the difficult questions, I'm going to be the silly question guy today. So the first thing that for anybody who is listening to us, and you know, I mean mesh network, the words themselves, have been sort of a buzzword, right? And they've been a buzzword for a while now, to be honest, not like even the past year or two, I would say, well, especially in certain circles where people, like you said, they care about their values about freedoms and so on and so forth. Mesh network is mesh networking is a little bit of a buzzword. 
+
+Now that you say all that, I mean, wouldn't it just be easier to like narrow it down that a mesh network is a digital communication tool where you're in charge of who you communicate with and who can communicate with you? Is that not like the easy way to say it? Is that incorrect? 
+
+Deborah Simpier: 
+There's a couple of different nuances to that, I think. Essentially, it's also infrastructure like aqueducts, right? You know, I mean, we can't decide how we water to route through the city. We have to be respectful of sort of cooperative nature of that infrastructure. So, or if we were building roads or if we, you know, we're building sewer systems or any kind of, you know, basically, you know, like a municipal utility, we have to be cognizant of the fact that it is, yes, our own choice and a decentralized infrastructure, but there is a cooperative nature to it. And one of the kind of interesting things that we do with our technology is we decouple that kind of customer service and the coordination piece and the management of the network that really speaks to that cooperative element of that. And those folks get like a set monthly fee as well. This sort of compensates that coordinated coordination effort we call those folks network operators. 
+
+And most often, they're a business entity of some sort, either like a legal cooperative, nonprofit or small business or LLC in the U.S. I think it's important to acknowledge that piece of it as well. And that is also to how people are used to perceiving and interacting in the UX of the ISP or of the Internet is through an entity. So I think it's important to acknowledge that if we would like to get adoption or really change how the Internet is in from a global perspective, that is a key function of it. 
+
+Citizen Web3:
+Yeah, that make sense, I guess. 
+
+Anna: 
+Yeah, I just want to understand a little bit more about how the system works, because I think it's for that of us who are not so familiar about how it works, could you highlight a little bit what you communicate in technical field with Internet providers and how all the system works? 
+
+Deborah Simpier: 
+So if I'm understanding correctly, you're asking maybe more of a business case, is that right? Kind of the zoomed out business part of it? 
+
+Anna: 
+I think more about technical part. Just let imagine that I want to use the technology and I want to understand what is the differences between using that you're going to give me and their traditional Internet provider. 
+
+Deborah Simpier: 
+Yeah, that's a great question. So I think in order to understand that, I'd like to zoom out a little bit into how the Internet actually is connected right now. So the Internet, we can think of as a series of tubes. 
+
+That's an analogy that's used quite a bit. So your last mile ISP right now will buy a vertical asset like a tower and they'll get a fiber connection to the rest of the Internet. And then actually all the interconnections come back to what they call an I-X, which is kind of your main hub of the Internet. 
+
+So in that way, we're similar. We do connect into these series of tubes at the I-X, at the Internet exchange, and then bring a fiber line to what we call a gateway into that local community. And that can be an urban area, a city, or a rural community. There has to be some interconnection to the rest of the Internet at large. Right And then in that case, that bandwidth is sold wholesale. 
+
+Like you would buy a pallet of bananas or something, you get banned with wholesale and then you resell it. Now normally your ISP is going to sell a subscription and they're going to oversell that subscription. So you're going to call up in the US Comcast in Canada, maybe you'd call it Bell. And they would sell you this bandwidth, the same bandwidth you would share with maybe 10, 20, 100 other families or households. So the way that we differ is that instead of getting one large tower and then owning all of the infrastructure, we would bring in that fiber to the community and then partner with a business. For example, many times it's like a gas station or we partner with a farm who has a tall grain silo and they get compensated for hosting those antennas on the private property. What's kind of cool and instead of being limited by whatever that high tower grain silo can see, we can hop to the neighbor's house who can then hop to their houses and another house down the way. 
+
+And this sort of agile dynamic configuration allows us to build more affordably and faster than other legacy models. For example, we have one connection here that goes from the heart of town where fiber and bandwidth is cheap down to a valley to a farm there, up to the top of the hill to household up there, then back down over the top of the trees to a house by the river, a little marina by the river. And then from that marina over to another five or six houses down kind of another valley area. And that little valley area over there was previously inaccessible. 
+
+It was a round of ravine, like I said, up around a hill and there was no economic way to reach those people unless we were able to sort of leverage the combined private property infrastructure that way. So that's what's really exciting about it. You have this really almost dynamic kind of agile configuration, failover as well. 
+
+Citizen Web3: 
+But you would describe in this outed like my way back home when I'm drunk usually. That's pretty much it. Let's keep with that because that's really great. And our idea when we spoke to was to sort of get a lot of information about mesh for people who really confused. So I'm going to ask some silly questions in your mind and I can understand that. So but I want to get to the bottom of it. So especially for everyone who's listening to this or will listen to this, the obvious question that springs up from what you said is who's is the internet or that bandwidth to begin with? Like where is it like, do you know what I'm saying? 
+
+Right? So you're saying basically, so there's the ISPs who provide like as bandwidth, okay, we all understand the problem. And then there is like all the mesh networks they also provide it. Okay, I am more of a part of it and I can like own it, resell it, whatever. 
+
+But can somebody stop me from getting that bandwidth in the first place? Like where is it coming from originally? Like is it just out of thin air? I can't like figure out the question, but I'm trying to like, I'm sure you understand what I'm saying. Or you don't. 
+
+Deborah Simpier: 
+Yeah, exactly. So essentially, you can think of it like water in a pipe. Bandwidth is like the PSI, right? It's like, you might say you have a capacity. So obviously, you have so much pressure or something, water pressure, right? Then you can go to so many houses, right? So that's why you have bandwidth capacities. Maybe you get a gigabit per second or 10 gigabits or whatever. The way the internet is set up currently is you have these submarine cables going to internet exchanges. And then from internet exchanges, you have to get it to that capacity to the local community. So actually, the majority of last mile ISPs lease that space, that wholesale space or that wholesale capacity from a larger provider. And then once you actually have enough fiber capacity yourself from these like kind of middle mile carriers, you even get into this really exciting thing where you can do peering and there's peering agreements and there's some larger things that happen with the kind of backbones of the internet. But the last mile network, there isn't really anyone that can like legally cut you off. Obviously, there's always physical things that can happen to cables. They can be cut. Radios can be interfered with. 
+
+But as far as like, you know, legal types of interference, yeah, no, then once the network has that wholesale capacity, they legally can, you know, resell it within the community itself and then it can be distributed around as they see fit. Does that make sense? 
+
+Citizen Web3: 
+Yeah, yeah, of course, of course. That's my next perfect sense to me. I want to like to get it as clear as possible for everybody who listens to this because I think it's great material really, because a lot of people get confused about mesh networks. So the next question, which is obvious to me at least, is what about the hardware and the software? 
+
+I mean, is it open source? Because obviously, we're using antennas, we're using devices, we're using some devices that may be manufactured by third party or maybe some of them manufactured by yourself. I don't know. So what, where does this open source hardware software come in the picture? 
+
+Deborah Simpier: 
+Yeah, that's a really great question. And I think it's kind of also core to how we look at our business and our product too, because we use commodity based hardware. So one of our kind of key decisions was instead of making our own hardware, we utilize and reflash routers. And then we're radio or technology agnostic for distributing the signal. So we have a variety of routers that we support. 
+
+You can actually go to althea.net forward slash firmware and see a variety of routers that you can buy on Amazon that you can set up with Althea firmware. We support x86 based desktops and servers. So somebody can reflash their Dell OptiPlex and that makes a really powerful machine to kind of be like a gateway node. And then you can connect Althea networks with coaxial cables or ethernet or bridged radios. You can use multi gigabit per second C-cluz or you can use Cambium or ubiquities, which are cheaper and just bridge them together. 
+
+Yeah, this allows us to be flexible and why we've been so successful in both the places like, you know, Africa require a very inexpensive hardware to, you know, urban areas like Tacoma Washington, where we're pushing, you know, to 300 megabits per second to the home. 
+
+Citizen Web3: 
+This is great, but I'm gonna try to be Dell's advocate here. I don't know if you ever heard about this. I'm afraid I'm gonna get the story wrong, but I'm gonna try and go ahead with it. This is the story about Linux. And I think it was either the 60s or the 70s, that the two guys who, when they got the prize, the bid on the computer conference, I can't remember, right? And when they got it, right, the main guy, I'm talking about like Unix here, obviously not Linux, sorry, that was a mistake. 
+
+When he got on the stage, he said, okay, so there's one thing I want to tell you, we left the back door to every single computer. So we know everything that's going on. And everybody was like, no, wait a minute, we know we've seen the, it's open source software. 
+
+So we know exactly like what's inside. He said, yeah, but you don't know what I compiled it with. And I left the back door in the compiler. And then they said, well, wait a minute, but we did check the compiler, right? And it was okay. And then he said, yeah, but you don't know what I compiled the compiler with. And obviously, nobody until now actually knows if he was joking or not. 
+
+Like, it's, I'm not even sure if he's still alive, I hope is. The question is, when it's somebody else's like a third party hardware, there might be somebody who's snooping on me, right? When I'm using it, let's say I'm using a router, and I'm flushed it and everything is fine, but they might have left some kind of, obviously like a ridiculous thing, what I'm saying right now. But for the privacy orientated people, for those who are obsessed, you know, with, I will have like 100 locks around my door and nobody will go inside. That's the kind of thing I'm trying to get it. 
+
+Isn't it better to end of the day, let like do it open source completely, whether to use like a third party where there might be some company who might be living like back doors to snoop on you or whatever, or to do whatever nasty things malicious things they decide to do. 
+
+Deborah Simpier: 
+Yeah. And that's kind of a big question, right? So you have all the things that the debate that's right now very hot with Huawei and what they've done with their radios and some questions around that. I think that our focus is on a practical working software that changes the ownership model of the infrastructure. You know, our core software is open source. It's, you know, available on the Github. That's the pay for forward and the price aware. 
+
+So you can take a look at that. We use open work based routers. That's also, I believe, mostly open source. And then we use WireGuard for the encryption. So we do, of course, attempt to be as transparent as possible, but there's a lot of moving pieces. So ultimately, though, privacy is about control, right? And I think that starts with ownership. Our core focus is on proving that and, of course, supporting the work of other people in security. 
+
+Citizen Web3: 
+Yeah, sorry for that. It's just like, again, being devil's advocate here, but you know, it's just the kind of thing that people do always ask. And sometimes you don't know what to say to them. So it's good that you can explain all this and to, I can later use that information and tell them who it is. 
+
+Deborah Simpier: 
+Well, it's about risk mitigation, right? I mean, we're all, we all take risks every day using our phones, going to certain websites, you know, yeah, exactly. So I think that, you know, kind of the core of it is, you know, you have to focus the practical application of living life, interconnecting with other people that also use unsecure software. For example, we, we decided to advertise on Facebook. 
+
+That's actually a really great way to interact with rural people. However, you know, obviously Facebook has a lot of privacy problems. So I do think we do make those choices every day. And we've tried to make those conscious choices with our software as well. And again, I think the core thing is if we can bring the ownership back and the control back to the people to really, you know, hold that kind of hard locked democracy of the, of holding the infrastructure, the internet, then I think the other things then fall into place. 
+
+Citizen Web3: 
+I totally agree. I mean, I'd be honest with you in our project, one of our, like, which is super open source, right? We're so hardcore that we didn't notice until one point that we're using ledger and ledger is not open source. So it's those things that you have to decide and I totally understand. What about the scaling debate? There's obviously the scaling debate. And the scaling debate has been sort of, it's been since the whole idea, like of the internet, I think exists. And especially with niche metrics, some people say it won't work, won't scale. I've tried using it. 
+
+It's not going on. It's not not for normal people. It's two obviously different things, one for that it's not for the average user and another it's not going to scale. So what would you return to that? What would you say to that? 
+
+Deborah Simpier: 
+I think that's kind of interesting. And I think it also goes to really, it really speaks to the fact that mesh network is actually, or the term mesh is actually a really ambiguous word. And so when, when some people say mesh, they mean something different than what we say, so mesh in the really kind of denotation of the word is a topology that is interconnected and that you have something like a distance vector routing protocol that selects routes automatically and has built in, you know, automatic failover essentially. But for a long time, mesh meant like smaller community networks that were not as organized. 
+
+So we had had folks that were, were setting up small community networks, which are really admirable and amazing, but it didn't have the resonance with maybe the average consumer to scale or grow. There's nothing in the actual topology of the routing protocol or within the network constraints that will keep us from scaling. And in fact, it is, you know, similar to how any other ISP would scale. And I think we're actually able to do it better because of the way that we make things easier for smaller ISPs, actually, there's some really kind of interesting business dynamics to that. But I think one of the things that we've tried to do is realize that many of the network enthusiasts that started these mesh networks that maybe didn't scale as well. We come in with the tools of the marketing, the CRM, the organization, the things that they sort of platform that's needed to integrate with end users and be successful. So I think that kind of speaks to actually the more it's more of a social issue than it is a technical issue. 
+
+Anna: 
+Yeah. And let's speak a little bit about social issue and your personal story. Do you have engineering background or how your big story with all that difficult things in my mind about modern network started? 
+
+Deborah Simpier: 
+Yeah, I don't have formal training, but I have radio in my blood, like three generations back. My great uncle Fabian, very involved in the very initial parts of radio. My father was electronics repair and ham radio operator. 
+
+From the very early days, he did radio in Puerto Rico for the Navy. And so I grew up very integrated with radios and antennas and different types of frequencies. And I've definitely been resonating on that wave, like my brother, actually my big brother is in 911 radio communications. And so for me, it came natural to really see what we could do to broaden the envelope with wireless communications. And I had started experimenting with different types of mesh networks 10, 15 years ago. And then I also have a small business background, managed services and computer repair shop for 15 years and had other small businesses before that. So there was a just kind of a natural integration between the kind of activists and enthusiasts, radio enthusiasts and the practical application of small business. 
+
+Citizen Web3: 
+It says on the Althea's website in the bio that you were the first user as well, right, before you became the CEO. So how did that work out? How did you become the CEO? And what does it bring for you? I mean, that's crazy, right? 
+
+Deborah Simpier: 
+It's a really great story. So I had started this incentivize messnet.com and was working on kind of the physical hardware part of it. That's, you know, I'm really the kind of boots on the ground radio person and was experimenting with how we could incentivize users to host the infrastructure, the network itself. And then had come across Johan Trumbuck's work and Justin Kilpatrick. So we had initially started talking and I came on board to do the pilot and then started working together more closely. 
+
+And then eventually, I am now here as the CEO. But yeah, it's a great team. Johan has done some incredible work with smart contracts with Ontherium and really has a great understanding of blockchain design. And Justin worked at Red Hat. And honestly, Justin is much of our core software and he's amazing. I always feel so honored to work with both Justin and Johan. 
+
+Citizen Web3: 
+Has a lot changed for you since you became the CEO in terms of how you perceive all of the technology or as it became more difficult or easier to use it or to understand it. 
+
+Deborah Simpier: 
+I think that I have, especially during this last year, really pivoted my focus to system design. So one of the things I had originally thought about when I was thinking about this project is that you could sort of build it, that you could build the software and people would take it they would you know and I kind of don't like unsolicited advice. Right so
+
+I really had struggled with telling people how to do things. Right so We had originally thought, okay, we'll just have this beautiful software, people can take any use it as they need in the community. Now, I'm realizing that what is actually needed is really streamlined, easy to use systems. We've really been really focused on funnels and systems and approaches that make it very easy to use. 
+
+Citizen Web3: 
+So would you say that your current work is more of a product work? Or, I mean, technically, I don't know what a CEO of a mesh network does. So its 
+
+Anna: 
+I can say maybe project design. 
+
+Deborah Simpier: 
+We see ourselves as a platform, the new platform for the internet, the Microsoft, the iOS. It's the designing of a global platform system. So if you think about it in that scale, I think that's what's really fascinating about it. And it really is interesting to understand the way that users interact with the internet. 
+
+Because one of the big surprising things too is that you can really make this great ISP and deliver it to someone's door. But people don't interact with the router. They actually interact with your device, your laptop, your TV, and your phone. And so some of the exciting work that I'm really excited we're doing right now is actually managing the radios, your radios on your router to your device. 
+
+And giving people more choices there about how they want to prioritize their usage, you know making sure that they're getting that full 100 megs to the TV, all of these different kinds of things. So that's been really fascinating as well and something I'm really excited about. 
+
+Citizen Web3: 
+We can both really relate to that because we travel a lot. Our lifestyle is kind of like a traveling lifestyle. So it's not about going on holidays, but that's the way we live. And obviously we carry with us like a suitcase of like routers, of devices, of this device, that device, that router, third router. And a lot of the times you ask yourself, so how do I get the best local speed or whatever, not the speed to the actual provider, but the connection between exactly what you're talking about. A lot of people don't think about it. This is where you lose a lot of your network. Is that correct or? 
+
+Deborah Simpier: 
+Yeah, absolutely. One of the kind of fascinating examples was as we had a subscriber who was getting three megabits per second to their TV, but we were measuring it at like something like 70 or 80 megabits per second to the home. And I went there and they had their router behind this, you know, curio cabinet with their, they had their little spoons like on display there. And their router was behind the curio cabinet, right? Along with their previous century link router too. So it almost makes me think part of the reason why we are not accessing the internet at broadband speeds is in fact that that experience in the home itself. I mean, how many routers are behind spoon curio cabinets? 
+
+Anna: 
+Yeah. And your typical users, who they are? 
+
+Deborah Simpier: 
+Well, they're people that live in places. I mean, it really is everyone. I mean, we have a lot of rural people. We have urban folks. A lot of our subscribers are senior citizens or families. It's really is just everyone. 
+
+A lot of families we've hooked up have not had internet previous or haven't had internet for a long time. And that also is some interesting UX. So really just the full demographic of folks and which just makes it really fun. And it makes us really focus on UX. 
+
+Citizen Web3: 
+Yeah. So a product designer, I think there would be a good description here. Back to users or carrying on with the users rather. How do people, especially outside the US get involved with Althea? Because obviously I need to get the equipment in some countries, especially countries which are, I don't like the term, third world countries, but let's use it because it's like understood stigma by everybody. Like especially, you know what? Let's mention countries like Russia, for example, or Belarus, right? And where you see all this trouble right now. 
+
+And actually part of our dev team, for example, from Belarus. And we had now all the things and something like what you do would have been like a huge life saver for people there, right? Because in literally, I'm not exaggerating when I'm saying life saver because literally you have stories which are, you know, on the negative side and obviously have stories on the positive side as well. But so how do people get involved with it when they're outside the US? What can they do? 
+
+Deborah Simpier: 
+I don't think we have anyone that has reached out to us from Eastern Europe. But I think that that like a point in example of why there is such urgency for us to work on this now, because it's much easier or maybe not even quite, you know, achievable once the siloing is already been placed, once the borders are already, you know, closed from the Internet. So it's very important that we build these decentralized systems now as we start to see that the Internet become more and more closed off and siloed and segmented. So typically, if someone is interested in starting a net and out the network in their country, we work out with the first kind of community as a coordinator for that country. 
+
+For example, we have Yakuubu and Orakam, who are our Nigerian coordinators. They hold the ISP license in partnership with Althea, which oftentimes just even getting the ISP licenses a little bit of a burden for folks. And it's also expensive. So we'll work together with a main coordinator within the country who then can help kind of franchise or have affiliate networks in the localities. That person can also help with the training. We're actually working right now on an Althea certified installer program so that that piece of the system is streamlined and easy and it's plug and play. And then we work on the supply line issues, which actually post COVID have just been even more challenging than they were before. 
+
+Again, we try to support as much hardware as possible and really work with the community members to figure out what's going to work in their area. Oh, we've got a new network we're launching in East Watini, speaking of cool places. 
+
+Citizen Web3: 
+Oh, whereabouts? I didn't hear the name of the place. 
+
+Deborah Simpier: 
+It's East Watini. It's a country formally known as Swaziland. 
+
+Citizen Web3: 
+Wow, that's awesome. 
+
+Deborah Simpier: 
+Excited about that one. And again, these are mostly just folks will find us looking for a solution to their internet problems and then we'll work with them to figure out how to get it connected. 
+
+Citizen Web3: 
+Let's stick to the blockchain kind of thing. There aren't many projects that do similar things to what you do, but definitely, well, because I'm kind of interested in those things, but I definitely know at least two, at least one. I remember the name. I think it's called Helium. 
+
+HNT is the ticker. I think they are. And they're doing something a bit similar to what you do. So would you say that currently the market from, I mean, you did mention business side of the story and the business dynamics. Would you say that market is becoming more competitive or is it still kind of free to go and enter the market and conquer the world, conquer users, whatever? 
+
+Deborah Simpier: 
+Yeah, Helium has some really interesting work. We don't really can see them actually as a competitor necessarily. They're very focused on IOT and they took the sort of proprietary hardware route as well. 
+
+So a little bit different use case. You know, we're excited to see their expansion and their work. So I think that we see ourselves actually more competition with other sort of management platforms and marketing platforms for existing ISPs. So things like UNMS, Ubiquiti makes a management platform. There are other like billing and management platform solutions. Sonar, Power Code, that's kind of thing, are probably more in the niche of the work that we're doing. The sort of interconnection and the pay for forward, I think is pretty novel. The kind of system build for that. The model of paying like a farmer to host their hardware is actually pretty common. Within the smaller ISP world, right? This is the, hey, can I use your grain silo? I'll give you free internet and it's usually a handshake deal. But I think we're pretty novel in the fact that we incentivize people in a kind of permissionless way. 
+
+Citizen Web3: 
+Talking about the incentives, I did read your right paper. But for those who didn't, what is in two words? Could you summarize the economical model behind? And here maybe you can make the connection to Cosmos as well, because obviously then we're speaking about the nodes, the proof of stake and blah, blah, blah, blah. Oh, you don't have to, obviously, you could separate it. in my head
+
+Deborah Simpier: 
+No, I was trying to think about two words. I think it's really tough to do it in two words. Yeah, so it would be difficult to draw the analogy, I think, in a way that maybe that would be clear, but essentially you have your router in your home and it automatically remits small credits, you know, 12 cent increments of this point at textile. Some point, it'll be the Cosmos system. So you automatically get your credits for people using your downstream connection. 
+
+As your neighbors use the connection and they use gigabytes, if you are forwarding traffic to them, of course, in the secure encrypted way, then you get automatically compensated for that. One thing that resonates with a lot of users is the solar analogy. A lot of companies will give you credit for producing energy into the grid. 
+
+But I think what's really exciting about what we do is it is this sort of permission is peer to peer way. So there's no 1099s or legal documentation that has to happen there. For example, someone was explaining to me that they had done the solar program, got solar credits, had to be 1099s and then really 40 per cent of their earnings from that went to back to taxes and so. 
+
+Citizen Web3: 
+Yeah, that is a big problem with obviously pretty much everything where you have a middle man in the middle right and it's great that you guys solve in this. But what about the Cosmos part and the proof of stake part? How does that come into the picture and the governance and all of that? 
+
+Deborah Simpier: 
+The main thing that Cosmos gives us is this really amazing way for us to build a practical sovereign chain that allows this work to take place. We've had a lot of problems working on Ethereum. Obviously, the gas prices are a better thing. 
+
+Citizen Web3: 
+You're looking for the right word. I know you're not going to find it. So just say gas prices. We get it. 
+
+Deborah Simpier: 
+Yeah, Keep thinking about that meme, that the gas prices are too high. That guy that's yeah. Yeah, exactly. So I think that just lies in the difference between Cosmos and a lot of the other layer ones. It's the incentives. I really love how Cosmos is really being worked on right now by a variety of teams that are coordinating who have practical reasons to use Cosmos as a layer one solution, as opposed to other blockchains that maybe are interested in mining incentives or the core incentives. 
+
+You have a developer group that really wants to make a just works platform, rigorously engineered, and then of course interoperability because we feel like that's core to creating an efficient marketplace. 
+
+Citizen Web3: 
+Talking about how Cosmos has been built, I can't not talk about Peggy because that's really exciting. And we actually had ChainSafe about Aragon that was about a few months ago on. And they told us more or less the technical side of how the bridge is going to work. And before I ask you that, OK, first of all, what is Peggy and how is it going to benefit the average Cosmos user? That's the first question that I have, and then I'll ask you the difficult stuff. 
+
+Deborah Simpier: 
+Yeah, I mean, Peggy is essentially a bridge between Ethereum and Cosmos. So it allows you to use the dye for Cosmos. And that's essentially what we want to be able to do with it, is to bridge a stable coin over to our Cosmos chain. Basically, also, I was going to say, there's a lot of liquidity on Ethereum, and that's also what's exciting as well. So, you know, we need to have, I assume, many other projects who need to be able to onboard users using debit cards. Ethereum is easier to get, right? 
+
+So we have this kind of liquidity problem. So it's very easy to onboard a variety of different platforms with Ethereum. Right now we're using wire pay. 
+
+We've looked at a few other different solutions. It's an integrated API debit card on the router dashboard itself, and then a little bridge to our Cosmos chain using Peggy. So that's primarily what Peggy is, is a bridge. It's a bridge. 
+
+Citizen Web3: 
+So you probably have so many questions about it, that it's a bridge, guys, just get over it. It's a bridge that is dying to, it's bridging it. That's it. No, it's a good way of putting it, sorry. But I agree. 
+
+I mean, the simpler you say it, the better it's understood. But I will still ask, because I mean, I read a great post, and I think it was from your team about complexity and decentralization when it comes to bridges, especially. I'm sure it was a post by somebody from your team. If it's not, sorry. 
+
+It was a great post. Just to say it. So there are at least chains of a bridge. There's Peggy. There's one more bridge. 
+
+I can't remember the name, that is being built by someone to Ethereum as well, to Cosmos. What is the difference between all those bridges in layman's terms in the most simplest way you could put it? 
+
+Deborah Simpier: 
+I would probably get into fur to the documentation from, I mean, our CTO Justin has done some amazing work on this, but I am not familiar with the other kinds of bridges well enough to speak on the discrete differences to that. I know that they won't work for our particular application. 
+
+So I would assume that that would that's probably also the issue for other folks as well, who would want to access the liquidity and defy also of Ethereum. But again, I unfortunately going to have to refrain from that. 
+
+Citizen Web3: 
+No, it's okay. It's okay. No, no, that makes sense. I mean, purpose is the main thing, right? Your purpose specific, whatever that is. 
+
+Deborah Simpier:
+Yep. 
+
+Citizen Web3: 
+But do you have any other like site projects like Peggy that you do for Cosmos? Or for anyone else, if it's not a secret? 
+
+Deborah Simpier: 
+I think that as we zoom out, we will be integrating, of course, a hardware wallet in our routers. So perhaps something a little bit easier. One of the things that we did with Ethereum is an Xdai, is we made it really simple to use Xdai wallet, using like unique emoji identifiers, and it's really great. And it's simplicity and we already have basically a hardware wallet built into the routers itself. So that's kind of another core thing that we'll do, because we'll also have to have some of our community members will have our Althea token built on Cosmos that we'll need to delegate. So we'll really be looking at how the UX and the UI is, and be integrating that into our routers, which I think will be something that other folks might want to, might do some information or some useful tooling from. 
+
+Citizen Web3: 
+You did say Xdai, right? 
+
+Deborah Simpier: 
+Yeah, that's what we're currently using right now. 
+
+Citizen Web3: 
+It's quite a small world, because it's done by one of my good friends, Igor. So, yeah, the power of authority. 
+
+Deborah Simpier: 
+Yeah, it works for now for sure. Yeah, and we haven't had any major problems with it. so
+
+Citizen Web3: 
+Okay, I don't know this guy. I've never heard of him. In case I'm in the breaks. Do you also been, you personally, I mean, been named as recently one of the members of the technical advisory board for the ICF, is it correct?
+
+Deborah Simpier:  
+Yes, I'm quite honored to be a part of the Cosmos system in that way. And again, as I had iterated before, I think what's really amazing about Cosmos right now is that it's governed by collaboration of folks that are interested in practically using the technology. You know Also, really some great folks, you know, Zaki and Billy and really good team members part of Cosmos in the chain right now. 
+
+Anna: 
+As I understand, you recently received a grant. Is that correct? 
+
+Deborah Simpier: 
+Yeah, so we did receive a grant slash investment from the Interchain Foundation for our work on Peggy and also in support of our, of the overall FIA project. Interchain was one of our initial investors. And they continue to support us in the follow on round. 
+
+Anna: 
+Quite cool. And what kind of economy is basically behind your project? What is your, what is the point that you feel okay, get our goal in the long term period? 
+
+Citizen Web3: 
+What's your monetization basically like in the project itself? 
+
+Deborah Simpier: 
+Our value capture is primarily within the LFIA blockchain once it is built on Cosmos and the transaction fees of the money moving around there. So we are built on the success of our networks. If we have networks that are grow and sustainable, then there will be lots of money moving around the network. And then that's where we capture the value. We do also have a supportive business for supporting those networks, right? So supply chain, some diverse revenue streams with our network operator tools and some of the other kind of tooling and support that we do for network operators on the ground also sort of adds diversity to our revenue. 
+
+Citizen Web3: 
+That makes sense. I mean, quite straightforward. If there is anything else that you would like to add that we didn't really ask you about Alfie or about anything else at all? 
+
+Deborah Simpier: 
+I could tell my press where a routing story it has about goat farms in it. 
+
+Citizen Web3: 
+You have to tell it. We're waiting for it. 
+
+Deborah Simpier: 
+Right, okay. I really like this story because it's a really amazing example of the kinds of choices that I don't even think we fully appreciated that we could have and that have been taken away from us by treating bandwidth as a subscription model, right? So when we treat bandwidth as a commodity and we have a choice about the upstream provider on a second by second basis, we can choose how much we want to pay and how fast the connection is. So for example, we have someone in our network who has a goat herd, right? So he has a herd of goats and then he works full-time during the day. And so he has cameras monitoring his does as they go into the kidding season. 
+
+That's where they have their babies. And so he goes to work, turns the his internet connection to the lower cost on the slider bar there. And so he's still receiving that video feed, but he's not paying as much for that connection because he doesn't need the lower latency for that. And then he comes home at night ready to play some games and watch a movie and interact with the internet. Just turns that slider bar up to a higher quality connection and then instantaneously is enjoying the internet at the higher speed and lower latency that he would need for his entertainment. And so I think that's really pretty neat to be able to say, hey, look, you know, we don't have to be siloed into a monthly subscription. In fact, we can have choice on speed and quality and cost. 
+
+Citizen Web3: 
+Is that a real story, by the way, or is that user story? 
+
+Deborah Simpier: 
+No, that's a real story. Yeah, exactly. This is happening right now. Every day. Yep
+
+Citizen Web3: 
+That is really great. He said like a small bar or what is like a product that you have to just swipe and then you get a better connection or a worse connection. Is that all it is? 
+
+Deborah Simpier: 
+That's all it is. So you get on your computer, you type in althearouter.net. It brings you up to your dashboard where you can see all of your billing, how much you paid last month, how much you're paying now, how much you're making from your neighbors, right? This person actually also makes, he's a relay, so he makes money as well. So you can see that all on his dashboard. And then he goes to advanced and right there, there's a slider bar and he just slides that over based on what he's looking for that moment. And then instantaneously, it switches over. 
+
+Citizen Web3: 
+Trying to imagine how it could look in the future, some kind of a mobile app where you just kind of like up and down or whatever. 
+
+Deborah Simpier: 
+Yeah, Exactly, exactly. That's where we're going for it too. Yep. Yeah. And you can see it. 
+
+Anna: 
+Yeah, it's quite cool. 
+
+Deborah Simpier: 
+It's very cool. Yeah. And then as more ISPs interconnect to the network or let's say we have a new university with extra bandwidth, right, you can see this really creates this amazing interoperable bandwidth marketplace. And then people are no longer siloed behind connections and monopolies. 
+
+Citizen Web3: 
+I think one of the main points as well, which I think that has to be made here, is that kind of connection gives people a lot more, well, at least the way I see it. 
+
+First of all, it gives you more privacy because I'd rather trust my neighbor providing me the internet, the bandwidth than some ISP that I don't know what he's doing with that bandwidth. Right. And that's kind of like, oh, but it springs to my mind. First of all, and more security really that comes with it. 
+
+Deborah Simpier: 
+I think the reality is that ISPs monetize our data collection. So I think it's, again, it's kind of that risk mitigation. Right. So yeah, you have where you have an encrypted connection and you know that kind of neighborhood community network or you have a known quantity that is actively gathering your data. There was one conference I went to where CenturyLink was keynoting and they were describing as a sales point. They were saying CenturyLink is amazing. 
+
+You should install a CenturyLink connection into a managed building or into a resort because we've actually had studies that have shown that by capturing user data and we can shape people's experience, for example, something like Disney or Las Vegas Resort, if people are on their Wi-Fi, they can shape their behavior to spend more money or go to certain restaurants, that kind of thing. I think it's very chilling to understand that ISPs are monetizing not only the bandwidth, but also your data and shaping your experiences in the way that they are actively doing this is pretty chilling. 
+
+Citizen Web3: 
+It's pretty scary when you get into all of that. And I mean, there's a lot to talk here and to discuss here, I think. Talking about the event, have you ever heard of the Chaos Communication Congress in Germany? 
+
+Deborah Simpier: 
+That I'm not familiar with. 
+
+Citizen Web3: 
+You guys should check it out. It's basically an event that's done by the same guy who is doing DEF CON. It's the biggest hacker congress in the world. It attracts about, well, DEF CON is actually bigger, but it's more about the way people say it when they put it. They say it's more about the business right side of the things, whether CCC in Germany, which is happening once every year, it's like a mixture of DEF CON and Comic Con. Have you ever heard of Comic Con? 
+
+Deborah Simpier: 
+Yes. 
+
+Citizen Web3: 
+It's like an obscure event with people with switches, radios, self-made radios, loads of different electronics. 
+
+Deborah Simpier: 
+It sounds like my jam. 
+
+Citizen Web3:
+It's crazy. You guys will, you would love it. You would love it, 
+
+Deborah Simpier: 
+definitely. sounds like my people. 
+
+Citizen Web3: 
+It was great We went there last year. This year it's not on because of obvious reasons, but it's been on for 37 years or something like that. And it's a great place to, 
+
+Deborah Simpier: 
+Wow
+
+Citizen Web3:
+I think, to guys. Before we kins of ask you the regular question that we ask everybody, which is a bit boring, but we still ask everybody, what's your favorite frequency? You've been talking about radio waves so much that I can't help not ask that right now. I'm joking. I'm joking. That was a bad joke. You've been talking about radio waves so much. 
+
+Deborah Simpier: 
+I was going to say, I can talk about it more. 
+
+Citizen Web3: 
+So the usual question that we ask everybody to wrap things up is, are there any blockchain projects that you currently excited about outside of the Cosmos ecosystem? Because obviously we're kind of related to that. 
+
+Deborah Simpier: 
+I think that what Akash is doing with a decentralized cloud is interesting. I think IPFS is interesting for their decentralized storage. Yeah. So I think some of these projects that are working on decentralizing the Internet from a variety of different angles are really fascinating. There's a lot of work getting done. Yeah. So there's a lot of really great teams out there. 
+
+Citizen Web3: 
+Thanks really for sharing the light on a lot of the information I think about, the basic information, especially about mesh networks that I think is missing out for people to get a better understanding of. Like you said, there's a bridge between what I could ask you about Peggy and essentially the way you explain it kind of makes sense. Okay, guys. It's all very simple things. There is no need to over complicate it. So thanks a lot for that. 
+
+Deborah Simpier: 
+Yeah. I appreciate the questions too. I think that the mesh has become very ambiguous and I think that there's a need for a little more clarity about what we mean when we say that. 
+
+Citizen Web3: 
+Thanks for coming on. And we'll be definitely keeping an eye on what you guys do and hopefully we can have another conversation in the future. So thanks for joining us. 
+
+Deborah Simpier: 
+Great. Thank you very much for having me. 
+
+Citizen Web3: 
+Thanks everybody. 
+
+Anna:
+Thank you. 
+
+Citizen Web3: 
+Bye-bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

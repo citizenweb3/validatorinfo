@@ -3,7 +3,7 @@ import { Abi } from 'viem';
 import logger from '@/logger';
 import {
   AztecChainName,
-  contracts,
+  getContracts,
   getL1,
   governanceAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
@@ -28,7 +28,8 @@ export const getTotalVotingPower = async (chainName: AztecChainName): Promise<bi
       return null;
     }
 
-    const contractAddress = contracts[chainName].governanceAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.governanceAddress;
     const abi = governanceAbis[chainName] as Abi;
 
     logInfo(`${chainName}: Fetching total voting power from ${contractAddress}`);
@@ -71,7 +72,8 @@ export const getUserVotingPower = async (
       return null;
     }
 
-    const contractAddress = contracts[chainName].governanceAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.governanceAddress;
     const abi = governanceAbis[chainName] as Abi;
 
     logInfo(`${chainName}: Fetching voting power for ${userAddress}`);
@@ -115,7 +117,8 @@ export const getHistoricalPower = async (
       return null;
     }
 
-    const contractAddress = contracts[chainName].governanceAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.governanceAddress;
     const abi = governanceAbis[chainName] as Abi;
 
     logInfo(`${chainName}: Fetching historical power for ${userAddress} at ${timestamp}`);
@@ -158,7 +161,8 @@ export const getTotalHistoricalPower = async (
       return null;
     }
 
-    const contractAddress = contracts[chainName].governanceAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.governanceAddress;
     const abi = governanceAbis[chainName] as Abi;
 
     logInfo(`${chainName}: Fetching total historical power at ${timestamp}`);

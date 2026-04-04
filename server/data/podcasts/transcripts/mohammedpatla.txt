@@ -1,0 +1,383 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/mohammedpatla
+
+Episode name:
+Government, Learning from Failures and Emerging Tech with Mohammed Patla
+
+Citizen Web3
+Hi everybody. Welcome to a new episode of the Citizen WebThree podcast today. have Mohammed from... And I fucked it up. I'm sorry Mohammed. Let me say it again. Sorry. I'm sorry my friend. It was the Secure Secrets that got it out of my mind. I was going to say Secret Network and I was like, no, it's not Secret Network. I'm sorry. Hi everybody. Welcome to a new episode of the Citizen WebThree podcast today. I have Mohammed from Secure Secrets with me. Mohammed, hi. Welcome to the show, man.
+
+Mohammed Patla 
+Hey, nice to be here. It's all my pleasure to really be on the Citizen Reptile Contest. So I'm excited as well and happy to talk today.
+
+Citizen Web3
+Nice man. So let me do the traditional thing before I'm going to bombard you with questions. Can I please ask you for the listeners and for myself to introduce yourself? Tell us everything you want us to know about you. What do you do? How did you get into Web3? Maybe what you're working on right now.
+
+Mohammed Patla 
+Yeah, no, I think of Web3 has I think been a journey, especially since the space is pretty new. So I myself really got introduced to the space in 2017, more so on the trading investment side, just like everybody else. And eventually, because I have a tech background myself, I was like more interested towards
+
+what the technology under the hood does. It was not just about the money at that point. And once I got started getting involved, I saw how distributed technologies work, how there's lack in some areas even in the Web3 space. I think I was more attuned to different problems and effects in the space. And I think around 2018, 2019, I really focused a lot more on privacy in the Web3 space.
+
+And I think that was my foothold into, know, hey, I want to like build something, do something in this space. And I stumbled into Enigma at that point, now known as Secret Network. So I've really got my grassroots roots really into project development, you know, and different types of support in the Web3 space, really, called it infrastructure, web, or even like, you know,
+
+development related, also like, know, in some aspect to Secret Network. And I think that's where my journey began as a user slash as a entrepreneur. So I think I started to really focus a lot more into like, you know, how do I build privacy toolings? How do I bring privacy focused projects on there?
+
+And around 2019, I have bootstrapped Secure Secrets, which is our validator infrastructure, first on Secret Network. So we were first home on Secret Network, and then we expanded to other Cosmos networks as well. We support about 10 networks as of now, and we're looking to grow, but we do it more strategically because post Secure Secrets, really, I think one of the things I did was meet Carter.
+
+Mohammed Patla 
+onboarded him, we kind of like partnered on making sure Secure Secrets was a success. But then we also had another idea and we were like, we don't just want to provide infrastructure in Web3 and we want to do more than that. we we bootstrap Shade Protocol at that point, which is one of the first privacy preserving DEXs in the cosmos. Based on Secret Network, we have our own first privacy preserving stablecoin, SIRC, based on a basket of global currencies, which is like a
+
+More of a flat coin design than a stable coin design you could say so it's all you know Inflation resistance. So yeah, so we build that out it's been live since like the last two years at this point and We focus more both infrastructure Is tuned to word-shaped protocol. So like we focus to make sure that We support infrastructure and the privacy space is when possible how possible or partners
+
+that want to work with privacy in aspect in the future or towards some level in capacity with us to provide users that type of service. So we are advocates of privacy, believer privacy, and myself. And so yeah, that gives you hopefully a bit of a journey of myself in the Web3 space, myself, how I got in. But after that, before we have like a
+
+Tech background myself, worked in IoT AI before I got into Web3. I think I've been in the tech space for close to five years, six years. And even before, I really got into Web3, but more so from university, school, programs, all of that stuff.
+
+Yeah, it's been a fun journey in tech, especially Web3 being small and the whole global tech industry itself.
+
+Citizen Web3 
+There's one thing I love about crypto entrepreneurs. I'm myself a crypto entrepreneur. And I think I can say that we have a short introduction of ourselves prepared already. When I have guests who are not from the crypto world, they really get lost when I ask that question. They're like, me, me, what do I do? I don't know. And then they go and then you have the crypto guys. They're like, I know what I'm doing. I love it, man. We have been told by this industry to be quick and efficient.
+
+Mohammed Patla 
+Yep.
+
+Citizen Web3 
+Man, I so just for the listeners guys, whoever's listening, you know, if you want to check out a first small one second of advertising, there is an episode with Carter go go on our podcast, type in search. There is also an episode with Tor a one of the files on the secret network from about four years ago. So if you want to get more context on this guys, what Muhammad is talking about the networks, please go check them out. Sorry, Muhammad back to you. Man.
+
+Privacy is something that, you know, to me personally, and it's a big, big, thing for me. I'm very, I consider myself to be privacy obsessed, even though I host a podcast, but still I am. And, you know, I'm curious why to you personally privacy is important. Why did you focus on privacy? you mentioned, I mentioned IOT.
+
+Not that they contradictory, but still, why did you select privacy as your focus, if I understood you correctly?
+
+Mohammed Patla 
+Yeah, so I think one of the things in the internet era is really where we kind of go in and we lose data on a daily basis. We don't realize this. We've seen a lot of cases, big cases with Facebook, Meta, all of these where they're talking about data being lost and used for their benefit. And any institution is going to do that with your data.
+
+It's like, you know, the data world we live in kind of thing, right? So in such a big world, it's kind of hard to like, you know, lose focus on like the individuality of a person because like you kind of like give away some of your data for the benefits you're going to get basically. It's a tradable world. It's like you're giving a data for a service tool, something or the other out there. But like that shouldn't always be the case. And that's where I kind of come in. It's like, you know,
+
+It's not like we want to share our bank account details with anybody. It's not like we want to share our address with just everybody in the world and announce it and put it in our public space. Hey, this is the exact location I live in just for anyone to ever look at. Some people don't care about it as much. Other people care about it in different ways. So it's like a personal thing as well. I think it depends on what people think privacy is entitled to.
+
+Some people is just your address. Some people it's your bank account. To other people, it may be something as simple as your personal history, your dating profile, your orientation, who knows, right? And that's where I think that there are things people do consider that they wanna share with some people, but not with others. And I think that's very important human thing.
+
+that in the digital world kind of gets lost. And we've seen it happen with big cases, but how do we bring it to new and emerging technologies? And Web3 is an emerging technology. see the future of that. I see it being in our day-to-day lives without even some people knowing under the hood they're using Web3 or blockchain technology as a whole. so privacy being built into the fundamental layer is very important so that we give people the choice that, hey, you
+
+Mohammed Patla 
+can share some data and leave some out if you don't feel safe about it, if you don't want to share about it, or if you don't want to just personally not showcase that data, especially in a Web 3 world where distributed data is crazy. It's like we're sharing all of our data to different people, unknown people. You don't know how they're going to use it, how they would want to use it, or what they would do with it. So I think that's where I'd
+
+I think personally, I want to build technologies where in the future, the future generation can use it in a safe and equitable manner, in my opinion.
+
+Citizen Web3
+Do you think that one of the, well, I everybody, I guess a lot of people would agree that education, a lack of it is an issue in privacy. But do you think that particularly if we were to look at some of the issues with privacy and how they arise and how they became today, there is one interesting opinion that I heard from one of my guests and it was about semantics and
+
+He pointed out that today for almost everybody, financial privacy or somebody looking outside your window, what you're doing in your bedroom is also about privacy. And it's a problem. I really kind of agree with that opinion. And I wonder what you think. Do you think that we should try to strive towards not introduce, but strive towards introducing and helping people educate?
+
+or not educate, maybe that's a bit of a loud word, but to share this knowledge that privacy can be different and different types of privacy require different working with it, if so to speak.
+
+Mohammed Patla 
+Yeah, Nick, I think there is a valid point there. I think even in terms of education, in terms of the realm of possibility, yes, there is definitely that education for privacy, for privacy out there that users should be focused towards. Really, when you think about the education context, think about it this way, right? Like when we learn and train kids or the younger generation, it's really
+
+being a human, how do you interact with people? You should be careful of like, we train kids to be like, hey, don't talk to strangers, don't share with them things. There's a reason for that. And that's education, technically speaking, right? You're teaching your kids to do something. But now we have this digital world and realm where anyone and anyone can access it. We call it the internet and Web3 is part of that, right? And so we kind of be like, okay.
+
+We don't want to like just give our kids full access to that. There is problems there as well. There's bad actors in there as well. And we know firsthand, you know, so there's that level that, you know, we need to educate people. Hey, this is things you should be doing. This is things you shouldn't be doing because there is like, you know, problems and there's, is going to be repercussions from like, you know, things you would access or do, you know,
+
+on the internet or Rev3 in this case, which is what we're talking about, like, know, internet as a whole. And I think, you know, that education of that matter is important. Like, you know, that, you know, the older generation who understand this technology would come in and be like, Hey guys, you know, look at this. This is the option you have. You either go to the site that's going to give you, give up all of your data. You go to this other side and you know, protects some of your data.
+
+So you you get trustworthy in this aspect and how do you figure out the difference between those two is critical. But like, no one's gonna know that out of the box, you know, even as adults, you had to go and learn the difference between those two and you know, to get there. And this is just a simple example I'm trying to showcase, but like, you know, there is some level of education, learning you have to do to distinguish between the good and the bad things, right? So I think that.
+
+Mohammed Patla 
+that education is gonna be there and it matters for privacy as well, where it's gonna be an effective thing where you have to learn to understand those things. yeah, like one step at a time, we need to have the toolings available and the options available first, and then slowly showcase that there is an alternative option where you're not sacrificing anything, you're not changing anything, you the exact same thing you would want from the other parties, but like with data privacy.
+
+Citizen Web3 
+I as a validator and not only a validator, but I've been in this industry as long as you and it's not the point of, I've also been here long enough. It's more of a point of I've also seen a lot of privacy related for the last like 10 years. I don't know what the right word is. Let's say atrocities. Maybe it's a bit of a loud word, but I'm going to call it like that again because it's important to me.
+
+And what I noticed is that it seems people are scared, It seems that people are scared. like, bullets get shut down. You have people going to court. I mean, you know, talking about many, many, many different cases. And I had guests cancel because they were afraid to talk about their cases. Like to the extent of, I mean, how are you not afraid, for example? Are you not afraid on working in a
+
+related to a privacy project, especially like, don't know where you're located, my friend, know, it's everywhere today, you know, it's a bit scary. So what do you think about that?
+
+Mohammed Patla
+Yeah, so I think one thing people kind of associate is like, when it comes to privacy is like people always think people have something to hide and that's why they need privacy. And then, know, there is a problem and then it's like, you know, there is something, something nefarious that's going on, basically. That's what it comes down to really, because the people really want privacy on scale sometimes are also, you know,
+
+drug cartels and money launderers and all of these people who want to like, know, do theft behind the scenes. And, you know, that's where I think a problem comes around to be where, you know, the governments and regularity bodies don't like it, right? Don't like it because like there is no way for them to get past some certain barriers or they have to do extra work to get past those barriers to really crack down on those bad actors in the system. And
+
+think that's where the biggest problem comes and fear comes from people is that, know, when they associate with those type of people out there, you know, and then, you know, it's a problem as a whole in the privacy space. think so. Anyone who's building technology is not just in Web3 face these problems. Reason I am not like afraid to talk about it is simple. Like, you know, I think I and Carter both have been public about the technology we're building.
+
+We don't need to hide behind the scenes to build privacy technology. We should be as open and transparent in terms of what we are building and how we are building it. The showcase to users is that there is this option available and you can use it. And we are open to work with regularity bodies and different types of good actors in the system to make sure that the system isn't used by nefarious people as well.
+
+at the same time. And if they are, how do we may stop them from doing so? So I am not an advocate of like, you know, using privacy technology for bad things. It's really so that the regular user has this option that, know, hey, I don't want to be sharing all of my data just because I want to use the service. I want to have the choice to share some of this data or to whom I deem fit this data. And that's where, you know, I try to draw the line is that
+
+Mohammed Patla
+That's what's more important to build towards rather than the fact that we should have the all-encompassing privacy for everyone, everything, that's not going to fit. It's really more for use case, a tune it to use cases. And as for shade protocol, the really comes from, it's like, in finance, we need that level of privacy and how do we build that and around that? And that's what we built over the last two, two and a half years.
+
+So yeah, to your question really, I'm not afraid to talk about it, but I would be lying if I said that there is no, I'm not afraid that there could be some recuperations out there from good actors and in my opinion, but like, how do I work with them is also another problem that we need to figure out in this space.
+
+Citizen Web3 
+one, maybe not last, but one short question before we move at least to a different topic.
+
+In your opinion, should it be private government and public citizens or private citizens and a public government?
+
+Mohammed Patla 
+I think that's a very good question and a deep question in my opinion. But I lean towards it being more of private citizens and public government because I think that gives you a far more level of
+
+sophistication of what a government is. It's just the people at the end of the day. It's just a united front of people, right? So yes, that is the way I lean towards. I do understand that all of the government can never be fully transparent. It's not possible for national interests or whatever you would call it, really. And that's okay as long as there's a public body that is left to be accountable to the people. And I think that's where democracy comes from.
+
+Citizen Web3
+I would go even more extreme than you. I'm just curious about you, but I would definitely agree with you. I would say that the government shouldn't exist, but it's a different story. how do you... This is stupid question for a crypto podcast, but how do you identify now in terms of what you do? Because you have a rich background. You're a DevOps, you're a founder, you're a validator.
+
+Mohammed Patla 
+You
+
+Citizen Web3 
+What's what's how do you see yourself? What do you look at when you when you look at this? What's your goal, your personal goal of Mohammed? Is it more to focus on the validator and grow? Is it more to develop privacy technology from what I'm hearing now? Is it is it to go and innovate more like I think you understood sorry.
+
+Mohammed Patla 
+Yeah, no, definitely. There's so many options out there, right? And I have focuses in different mixed spaces, but technology-wise, I really love DevOps, and that's where validator infrastructure come in, and that's where my love for dev roles really goes for. But in terms of product development and whatever products I want to ship to people and users,
+
+That's where a shade protocol is a passion comes around. And so it's a very mixed thing, but like what I usually do and I think Carter as well, one of my partners, he knows this is that, know, focused a lot on the infrastructure side of for shade protocol. So, you know, anything that's related to like, you know, making sure the uptime is set up, you know, proper infrastructure to access it because we do access web three technologies, right? Like web apps, D apps always access web three technologies.
+
+I manage the on rails there or the rails to on chain. And so I focus a lot of my dev time in those areas and expertise where I really like to do so. That being said, I've worked a bunch on the back end developments. I've looked a lot of experience there because this combined well with DevOps really. So technology wise, my focus would be definitely
+
+engineering and scale for Web3 infrastructure related. How do I integrate on Rails? How do I onboard apps and users to the infrastructure really? So that's where my focus would be as a techie, you could say. And then, you know, I think from a project perspective, I really like to like, you know, take it back as a founder, as a co-founder, you know, it's more so how do I get users to use any of our technologies, be it like...
+
+Web3 as a whole, I have friends who don't use Web3 and I'm like, how do I get them onboarded? How do I get my parents onboarded? Those are always the concerns and infrastructure, sure, but that's not gonna cut it to get them onboarded. They're just gonna be, that's like a job you get to do and whatever. But how do I get them interested in technologies on a fundamental level? And that means that there's a lot of layers attached to it. Infrastructure is probably one of the lower layers.
+
+Mohammed Patla
+And maybe that's my interest, but like that's not the goal that drives us, right? The goal that drives us is to bring these users that I care about on technologies that I think are valuable to them. And that's where I think my goal and objective sits. And I want people to be privacy preserving, bringing on-chain financial security, bringing on-chain, hopefully, governance in the future. I'm not talking about like on-chain governance as
+
+Cosmos governance, I'm talking about on-chain governments as in how do you go and freaking work for a government on-chain? That'd be pretty cool. So those are things that really drive me in a passionate way to really bring the build this technologies for end users. And I think that's, it's always going to be my top one goal. And to do that, to achieve that, what do I need to do? And that may be infrastructure, DevOps, back end development, or be front end development. I'll do any of that if I can get these technologies out there.
+
+Citizen Web3 
+I must say as someone who thinks of themselves, I'm talking about myself here, as a person who onboarded some people, where I'm located at currently, I have a big group of friends. And I must say you're doing a very difficult job because I have friends who are not from the Web3 world. And of course, they are curious. Of course, they see what I do. They see that I always talk about it.
+
+I give up at the point of where people don't even want to look for a job online. They find it too difficult. I say to them, I have some people who I try to help and we start from just working online, just doing something online, not necessarily. I don't know how it is in your case. That's, the question. How's your case of this has been because onboarding People to Web3, because in my case, it seems that people don't want to. They refuse to take responsibility of their actions.
+
+And I'm really sorry if any of my friends is listening to it right now, but I mean what I'm saying. So hi. But people refuse responsibility, they refuse the smallest actions. So let alone talk about making a job out of that, going into DeFi, going into privacy, and so on. What's your experience with it?
+
+Mohammed Patla 
+Yeah, no, it's challenging to undertake it for sure. like, I've had friends who know about crypto and they invest in crypto, but they go through centralized exchanges or something like this. Like, I don't know custody stuff, you know, you know, custody as a whole is a problem on chain, honestly, and blockchain is like, really, do we, you know, want to have a wallet on a hot wallet or even a ledger in this capacity where you have like the seed stored somewhere? It's like a complicated process.
+
+And it's like a user onboarding thing, which itself I feel is like not fun for new users. That's a responsibility. like, if I go to the bank, least I don't have to take that responsibility at all. Like the bank takes responsibility. If the bank does something wrong, I can go and sue them for it. Right? So there is this undertaking that the government is actually your backing. It's like, OK, I can do, I can trust everybody here. But like,
+
+the fundamental thing, truth about Web3 is we don't want to trust anyone. We want to build a trustless system. So I feel that this layer of onboarding, this last leg of users is going to be close to impossible, I feel. It's like they understand the technology. It doesn't mean they want to use it. So how do we make them use it? It's really like, don't get them to use it directly. It's really through territory means, my opinion, that's going to really get onboard them.
+
+their banks or their toolings or the centralized exchanges under the hood use web3 and that's what's going to happen and that's where I think institutionalization of crypto is really happening you know we talk a lot about institutionalization of the world right now in terms of you know crypto adoption so I think that's what's happening under the hood it'll take time until all the institutions really the good institutions really well those technologies are for users but like
+
+I think the last leg of users don't really, they need to understand the technology, but they don't really need to access the technology, be there available to them through their regular best accessible tools. So that's my opinion of the last section of onboarding. People don't care about, there's a lot more to life than just Web3. sometimes I forget that myself because I'm in this space, but there's a lot more life and people have priorities. maybe...
+
+Mohammed Patla 
+Web3 is not the top-most priority. It's a technology to them, right? Like, it's okay, it's cool, fun, all of that, maybe investment paradigm, all of that stuff. But, you know, not really a means of life to them. And I can live with that, you know? I just need to make sure that you're still using it under the hood. That's all I care about. As long as your banking system, as long as your systems are under hood, you're like, okay, you have Web3, you're good. You're fine, you're sorry.
+
+Citizen Web3 
+Wait, there is another life apart from Web3? Shit, Wait, damn it. That's what people meant. I'm joking, course. But no, but it's true. But I agree with every word you say. I don't think that the last... mean, let's be honest. How many people today know how to use the CLI or bash or whatever, or how to open... I mean, let's go easier. How many people today know that you can look at the page source code by clicking the right button?
+
+But people know how to use the internet, but I don't know how to use that. And they don't want to, and I don't think they need to. So I kind of agree with you there. But I know, by the way, like you say, you build different tools. And sorry, I'm going to scrub that last question, and I will come back to that. But I want to ask one thing in particularly. As a founder, or as a validator, or as doesn't matter,
+
+You know, as you, what has been until today, apart from onboarding people, of course, the biggest challenge in terms of, you you had quite a journey. mean, you said 2017. we're talking, you know, seven going eight years now close to and yeah, mean, onboarding is one of them. But can you talk a little bit about more the challenges that you faced in that time?
+
+Mohammed Patla 
+Yeah, so there's a, I think a lot of challenges across the way, both personal and professional opinion. Like I'll focus a lot more on the professional ones, I think so, because that gives more context about like, you know, what as a technology as like undertaking as a company as a founder have affected. So
+
+I while I while I was in Web3, you know, I've actually done another startup as well before and it was more so, you know, in the, you know, marketplace space. So I really like, you know, bringing P2P marketplace to like, you know, barbers and, you know, hairdressers. And that was our our initial startup idea, which I did with a friend back in back in 2018 almost. And I was like, you know,
+
+It was short and it was something I took a lot of learning from to really apply in my Web3 space. So a few things you can figure out, like user onboarding is top one. So we faced that in Web3. It's definitely there. And those are problems that are going to exist probably lifelong for any founder that wants to build a product out there. But outside of that, there's a lot of other challenges that people think that...
+
+may work or may not work, but there's financials you have to think about as well. We talk about Web3 and we talk about like token creation and all of this stuff, but like, know, money doesn't come out of thin air. We need to figure out, you know, a way to make it sustainable. you know, sustainable means people are working on projects, using those projects, you know, and there's revenue generated when people do that. And that's what matters. like, know, financials are important.
+
+I think that's one of the stumbling blocks that any entrepreneur has to face. yes, your project is good, product is good. I face that multiple times. It's like, how do we sell this product to users? So that's one of the aspects and challenges I think is important when you're doing this journey. It doesn't have to be in Web3, honestly. It has been any space as an entrepreneur that matters.
+
+Mohammed Patla 
+Another challenge I think is team building. think that's like something I feel that is important. think every entrepreneur slash, you know, team or founders, co-founder, it doesn't matter who it is, but like, I need to have a team to really build towards a vision, towards a product. I will be super, I'm pretty happy because like, I think our team is like being super productive in terms of building to a shared protocol. know, we've been grinding day after day.
+
+I mean in the bear market, it's been brutal, know, all the pay cuts and all of the salary gone, bonuses, none of that, all of that. It's grinding towards a goal and objective. And I think I'm very, very honored to be working with the team I have, honestly. you know, those are things that matter. So team building is very important because the group of people you work with towards a shared goal is important. As an entrepreneur, your objective shouldn't be onboarding the best talent, although that would be the most...
+
+most best thing to do but like it's also the people who stick with you during the downturns because like everything goes up and down in the markets right and there's nothing we can do about it and so that does it that's one of the other stumbling blocks in my opinion team building is important and if you have a good team then you have like a very good like you know army to march towards basically and this is i think the two biggest stumbling blocks in our opinion in terms of
+
+building towards in any form. And I those are challenges accompanying those as well, right? Like, you you can be building towards, you know, multiple, multiple objective and goals. And that becomes like kind of like cloudy. And you know, it's really about finding the focus, finding the vision. I think Carter's not here. He's very much about like,
+
+It's not about the time you spend, it's about how much focus you dedicate towards a project, a thing, or idea, or whatever it is. And I think that's something I resonate now with them really much. It's like, because we focus on something, we get there. And I think those are a few things that we have learned over time. And I think these are some of the challenges faced, not all of them. There's definitely more and know.
+
+Mohammed Patla
+If you list down and look at, look, at least I look back on my journey. So you're like, you know, there are, have been successful, you know, ideas and projects and there'll be failures as well. And your failures are important to learn from, right? You take back the learnings and you apply them again. I think that's very important as well. So those are things that I tell everybody, like, you know, all new entrepreneurs as a whole, how do you, right? Do these challenges.
+
+It's important and you can apply it in the Web3 space as well. I don't think the Web3 space like kind of like leaves it. You need to figure out all of these problems there as well. yeah, like hopefully that answers your questions about some of the challenges there.
+
+Citizen Web3 
+Of course. It reminds me what you said about focus, about Einstein a little bit. I think it was him or his house worker who was famously looking after him, cooking him food and not looking after him as in he was bad. he said that I'm not really that smart. I'm just very focused. And his housemaid, used to say that he would
+
+forget to eat, forget to wash for days. And he would sit in and solve. And it was the focus that he was just like, you know, I need to solve this. need to get there. And it goes along. But I want to actually ask you about the revenue because you mentioned, no, I have to say it's not a big topic for the podcast. It's not. But it is an interesting topic because, know, I think
+
+for somebody who has been like yourself through more than one bear market in terms of crypto, in terms of Web3 at least, you understand developers need to eat and not just developers. The projects need to eat. There is an opinion because we mentioned adoption and we mentioned that it's going to be the last set of users. I'm going to try and put it all together now. So there is an opinion that
+
+The next cycle, the next bear cycle, which will start in however long it will start, let's say a couple of years, one year, it doesn't matter, will be a very lengthy, big bear cycle. It will not be a four-year cycle. It will be an adoption cycle. People say that during adoption, prices cannot go up. It doesn't make sense. If things get unadopted, things need to be more adopted by other people. So if something is growing out of the blue, nobody can afford it.
+
+I know it's not a question once again, and I'm sorry for that, but I'm curious what you think about it. curious, do you think, I mean, what you said about, you know, the last wave of users not really caring about what they're using and, you know, talking about revenue and talking about all of those things. Do you think that that's possible? That crypto will soon reach its pricing peaks and then adoption will follow. And that will be a big bear market in terms of pricing, but not in terms of technology. Like it was for the internet, for example.
+
+Mohammed Patla
+Yeah, that's a challenging question. think no one can predict the future. We talk about the bull and bear markets of the last four cycles, but in my opinion, if you really look at it, crypto as a whole, the last first three cycles are just like baby cycles. We're talking about a billion dollars and maybe one buyer out there could buy that out. There are multi-billionaires out there right now. They could buy that whole cycle out and it wouldn't matter really.
+
+The first two cycles, I feel people always look back and like, the bear bull cycle works. honestly, in some aspect, I I've believed it at this point. It's like, yeah, they do work because there's some resonance with it, right? And I think that resonance fills the market as well. It's like, this is a bull market. know, prices are going to go up. If it's a bear market, the prices are going to go down. And so that mentality is driving the market itself.
+
+And then, know, if the mentality said that, you know, the next bear or bull cycle is going to be super long bear, then a bull like kind of thing, it's going to be that way because the market already decided that's what it's going to be like. there isn't much really we can do about it. You know, I also think about there's a lot of macro economic factors. You know, the world isn't as stable as it looks like there are problems there. And there is like, you know,
+
+things that will affect and maybe those are problems that would come into market volatility and that matters. I wouldn't predict like there'd be long bear market or if there's, if you're in a bull market, honestly, I still doubt myself sometimes like the prices are going up and all of that is fun. But like when we compare it to the last bull cycle, people were truly excited about getting into projects.
+
+That's what I saw. Maybe we're not there yet. Maybe there's a bullseye that's still the beginning. I don't know. So there's like, you know, this, you know, differences, maybe it's differences of different cycles, all of that stuff added up, or maybe I'm just looking too much into it, right? Like it's like, are we, you know, building towards sustainability? Yes, that is important.
+
+Mohammed Patla 
+I think so like you anything and then I think revenue comes right into that So I think even if there is a long-term bear market there is products that can come out that are sustainable It's really about driving that initial adoption and you know growing if you really think about the internet cycle as well It's not like when the internet cycle was in the low key. There wasn't any projects or Toolings coming out sure. They were smaller. Maybe not as aware as like by the public user, but like You know those those companies have been running for a while
+
+before they got their boom cycle. How are they running? There was revenue generation, clearly. There was someone paying them for their services. And that's what matters, right? Like I think crypto is, I believe already is going through that phase with their, you it's not really just now, you know, who's token just launched and is making the billion dollars. It's really about the projects that are like going to build towards sustainability and can survive multiple cycles, you know.
+
+In all transparency, Shade Protocol has suffered a lot as well. We've learned our lessons and these are a few of the takings we have. It's like, yes, revenue generation is important, sustainability is important, and we need to figure out a pathway. It doesn't matter which bear cycle comes next. We need to be ready for it. Our users is what really matters to us.
+
+Citizen Web3 
+I think it's a very important point what you said there for any founder to understand that not for your own sake. It doesn't matter if you are the only investor and you have $10 million to feed the project for the next 10 years. It's your responsibility, I believe, for who you're building it. Unless you're building it for yourself and it's really you're the one user then do whatever the hell you want, guess. if you have at least...
+
+that one to users who are not your friends and not your family, I assume that it should be your responsibility to think about how to sustain, whether it's producing revenue for that last person, but at least it has to be sustainable. definitely can't more than agree with it because I've seen so many cases in crypto over the last 10, 12 years where projects that are one day feeling like they are on top of the mountain, on top of the hill.
+
+just roll down and yeah, it happens. happens in data. mean, Terra, right? I mean, here's one example, right? Or FTX, you know, or many other. Of course, those are bad examples, but yeah. Men, I want to ask you actually something about your past experience. The quick question, because it's an example actually of what we're talking about. Now, I don't know. I today the internet, know, where we are like, we talk about privacy, but the internet is a very...
+
+informative things. It's very easy to find information online about a person. It mentions that you worked for Iris Network. Is that correct? So I think that's actually one example of project. And once again, we spoke with Iris Network. They were one of the first guests on the show, man. It was almost five years ago. And it was an interesting project that was quite promising. The founder of the project, I remember her being
+
+Having a such effect on me. She was a remarkable lady, you know, is a remarkable lady I hope you know and nothing is wrong with her I guess but what happened to the project? I mean, it's not like I'm asking you but do you think it's revenue related? Do you think it's all involved there?
+
+Mohammed Patla
+Yeah, so you're probably confusing the Iris network with the Web3 one. So this is not a Web3 Iris network I work for. So yeah, no, don't worry. These names are the same things, but they are more into AI. And I worked there more like an intern at that point in time, so when I was there. They're still around, actually. I know the founder, but they're Canadian based. So there you are more local. I don't think they have worked with some US.
+
+Citizen Web3 
+Uhhhh... Okay, I'm sorry man. I'm sorry.
+
+Mohammed Patla 
+government grants and stuff. anyways, I think the IRS network you're talking about, I know of them actually, because I know I was excited about what they were building. believe they were like the, from my understanding when the Cosmos uptick happened in 2021, at that point, they were known as the Chinese Cosmos Hub for whatever reason. Red.
+
+Citizen Web3 
+Yes, yes, correct, correct.
+
+Mohammed Patla 
+And I don't know if it was between the crypto crackdown in China or whatnot, but like, I think it slowly died down. There was actually an exciting project that I was interested in myself called Uptake. don't know if they're still around, but yeah, so they were initially based on Iris Network. I think they migrated to their network or whatnot. But yeah, they were the only ones that were really supporting.
+
+Citizen Web3
+Mm-hmm.
+
+Citizen Web3 
+Yes, yes, yes, they are. We are a validator there.
+
+Citizen Web3 
+time.
+
+Mohammed Patla 
+Iris network as far as I understand. then, yeah, it kind of just died down. Like I feel like, see, this is the problem, right? Like in Cosmos, we get all the sovereignty we need, but that means also the responsibility of the individual team to build their own sustainability, to build their own ideas to, you know, users, onboard their own users. Like, know, Terra did a very good job, or I guess a bad job in managing it, but like at least in growing it, they did a very good job.
+
+And we see that it's possible to do so. I there's new projects that are doing that well, maybe Celestia, Nomada, or any of the other upcoming networks, But every project has its own sole responsibility. That's one of the reasons I think. I remember at Shade Protocol, we always thought about launching our own chain. But it's not really just about launching a sovereign chain. It's about like, you know,
+
+Do we need to maintain it? Do we need that? Is the amount of users sustaining that? I understand why a Uniswap wants to go to their own layer two, which makes sense. They have a certain amount of users that use it and Ethereum doesn't sustain that. And then they go into layer two, makes sense. But do we need that for every chain in the cosmos? Yeah, that's a good question. think.
+
+I think the partial security set thing that came into Scosmos is really helpful because now new projects don't have to worry about some of the, do I need to like launch a new token? You don't, you just launch a project first, make it sustainable. And then if you see demand and reason to do a token launch, do a token launch. If you don't need to, you don't need to. You're to get around it. Like there's many other alternatives or you can do like, you know, a small allocation and just make it like so that security is just.
+
+sustained by like, you the hub as much as you want and just build on neutron, you know, like you don't need to do anything else. So there's like so many other alternatives now than there were like in 2021. I think that was one of the reasons people took up the challenge. Hey, let's do this. Let's do that. And then many projects died out. It's not just Iris. I believe there is like a lot of other projects that have died down. know on secret network that has been the case. you know, people raised so much money and then, know,
+
+Mohammed Patla 
+It's like after building the products, are no users there. And we never thought about those problems. I know Shade Protocol faced a bunch of those issues as well. And we're lucky to come out of it on the other side at this point. those were things that everybody thought, it's going to be fun. And money is always to keep flowing in from VCs and all that stuff. But that doesn't last long, right? And I think we've all learned a lesson.
+
+Citizen Web3 
+Absolutely. I think the problem is at least for me. I don't know about you, but personally, unfortunately, sometimes learning less than once doesn't help. Sometimes I feel like I'm stumbling on the same problem 10 times until I understand what to do. And even then, sometimes I don't. But I have actually one last question for you before we're to jump into the blitz about your validator.
+
+I can carry on this topic easy, but I'm not going to forgive myself if I don't ask at least something about your validator. I'm sorry, but I will. So the question, I have kind of quite a lot, but the question that I will ask is about AWS and self-hosting, because you mentioned privacy and we spoke a lot about that. And it's not that it's about privacy, but it's kind of like there is some logic in my question, again, at least in my head.
+
+So it's mentioned on your LinkedIn profile, that in one project you worked and you managed to maximize the efficiency by using AWS. Now, what's your opinion considering with everything we mentioned today on the podcast about privacy, about revenues as well on the other hand, and what's your take on validators and mining pools? Should they...
+
+Should they self-host? Should we? I mean, there is a trend, right? Somewhat there is a trend, but that's a lie. There is somewhat of a trend in some protocols right now, you know, to talk about that at least. What do you think? What do you think? That's how it's going to end.
+
+Mohammed Patla 
+Yeah, that's a good question. Coming from DevOps, you know, loving the cloud is what we do as part of the job. you know, I think that's a fundamental question of like, you know, what's really long term, you know,
+
+sustainable, feel like that's what comes out. I'm talking about not sustainable in terms of infrastructure, right? Like AWS is great. I love it in many aspects. And, you know, here it in some aspects, you know, like it's just the way it is. Like, you know, when you talk about infrastructure to host new servers, AWS, can just go spin up a Terraform script and like,
+
+launch in like two seconds if I really want AWS provision everything for me, deploy everything for me, deploy from my code base if I want. And there's automation that is crazy and that's sometimes useful for uptime. And that's one of the reasons I use it. think maintaining is far more easier. But then there is the other end of it where you have your own hardware, which I deal with as well. You physically go and deploy it in call location, maintain the cloud.
+
+all of that building pieces, right? Like it's basically AWS is providing a service for that. And, you know, it takes a whole job to do the second part as well. You know, it's like there's multiple jobs that AWS is basically doing for you. you know, and the cost of it is basically obviously the dollar cost. And then there is the cost of like trust as well you have to give to them. So yeah, like, you know,
+
+I think that it's more of a mixed use case. I think it's use case to use case. I still don't run validated services on AWS. I don't think that will happen unless there is a reason for it. Like the reasons I can think of is, you know, there's a server that I need that's not available anywhere else unless I buy it out, right? And I can't afford to buy that server because that's like new gen hardware that costs like $50,000, $60,000 to like...
+
+Mohammed Patla
+where I can just go and rent it for like a thousand bucks at AWS, right? Like, so, you know, those are, those are really buildable things that come into effect and you know, you can't help it, but like, I think, I personally think that everybody should from value to services. And I think I've heard this a lot. I've spoken to Figment, I've spoken to a few of the validators. They all cycle between like bare metals and like, you know,
+
+cloud services. Cloud services more for your internal infrastructure, know, website hosting, that's fine. But like, know, valid infrastructure should still live a bit on your, you know, dedicated server. But again, this might be a mix, right? It's really a use case to use case, like I mentioned. So yeah, like, you know, your question is valid. And you know, there's like lot of like, up there demand on like, you know, you know, people say that if AWS goes down, Solana goes down kind of thing, right? Like in
+
+It's kind of crazy to think about it that way, but like it's as possible and but like AWS also has a lot of Lot of like threshold things they have in place that doesn't have make them happen They have like internet cables running from cities to cities on their own. They're a provision by them, right? Yeah as an individual I'll never really get that level of like, you know Infrastructure in place. I don't have that much money to put or time to put to do that. So
+
+there's some lot of trust that will come into place and that's where you trust AWS or provide any of the provider basically, right? So I think in minimal amounts it's all right, but like you need to decide what's like critical and non-critical really and decide on that basis.
+
+Citizen Web3 
+I must say that self-hosting, especially if you have values like privacy values or Web3 values, is very expensive. It's very difficult and very, very expensive. I think just to comment on your words a little bit, like you talk about bare metal and cloud, I can tell you after interviewing validators for five years and being a validator for longer than five years, actually,
+
+I can tell you that maybe the thing is a lot of validators refer to bare metal as two servers they own and it's not exactly like that. Like self-hosting out of my experience, maybe 2%. Maybe 2%. Maybe, maybe, maybe, maybe. And it's, yeah, yeah, yeah.
+
+Mohammed Patla
+It's pretty expensive to self-host. It's not easy. Like you need to do so much stuff to self-host. Like I only have one server and it's not even in a call location yet. Like I'm so getting it set up, but like one physical server, you need to do all the infrastructure to make sure it's remotely hostable. And then you get an internet provider with a call location, which is not.
+
+Citizen Web3
+Yes. Yes.
+
+Citizen Web3 
+Yes.
+
+Mohammed Patla 
+It's not under your control any anyways, unless you go and buy an ISP out and buy a co-location server to Salesforce. It's not impossible, practically possible to do so. So yes, the bare metal, I agree. Like some people terminology is different there, but yeah, it's not that we own all of the servers. It's not possible to do that unless we have a lot of money to throw around. And even if I did have that much money to throw around, was it sustainable? Like, why would it throw all that money at like bare metal servers when I can cycle them out?
+
+Citizen Web3 
+Yes.
+
+Mohammed Patla
+You know, because this is a lifeline, know, everything has a lifeline in technology, you know, even physical service die out after a certain amount of time, be it like five years, 10 years maximum. They're going to go out, you know, because they get obsolete and you know, there's a price to that. you know, some people can maintain that as a service because they provide it as a service as a service to other people. So that's why, you know, you know, anyway, I get, I get you what you get, where you're coming from, why validators would be doing that or confusing.
+
+the whole so it's interesting though for sure.
+
+Citizen Web3
+It's a huge topic that I love to discuss this topic. yeah, let me jump into a blitz to take us out to finish the conversation. This is going to be three quick questions not related to crypto. They're a bit strange. I always warn guests about it. So here we go. So first one, give me either a movie or a book or a music that has positive influence on Muhammad throughout his life.
+
+At least couple of last years doesn't have to be the whole of your life, of course, can be something that you like now. Movie book song or one.
+
+Mohammed Patla 
+Ow.
+
+Mohammed Patla
+Yeah, I think I am more interested in the sci-fi space and fantasy realms. So I think a lot more into Star Trek, a lot into Witcher. Those are things that... Yeah. Yeah, so definitely those are the realms. I think that's been something that has been carried since childhood as well.
+
+Citizen Web3
+I'm a Star Wars t-shirt brother so all good you know.
+
+Mohammed Patla 
+It really, the dreaming part, right? That's pretty exciting. And it's like what the future could look like. And I think those are, those are the things I take inspiration from for sure.
+
+Citizen Web3 
+can relate a lot. Okay, second one, give me one motivational thing that you can of course share with the public that keeps Muhammad, you know, waking up every day, you know, getting out of bed, focusing on privacy, know, carrying on building, you know, thinking about sustainability, something motivational for you subjectively that helps you to do and keep on going every day.
+
+Mohammed Patla 
+Yeah, I think in the more recent years, it's mostly been how do I get users into using blockchain technology? And that's what has been keeping me up at night. Privacy being one of it, sure, but how do I get this technology at the hands of every user in the world? And we're coming to it, we're not there yet, but building towards the hustle over the last, like...
+
+Probably good four years at this point in time since I've been building so Yeah, that's definitely top one thing in recent trends That keeps you up at night
+
+Citizen Web3
+Nice, nice, nice. Last one, the weirdest one, I always say that. So dead or alive, real or imaginary, doesn't matter if it's a character from a book or a character from a movie or a developer or a colleague or family member. Now, I don't believe in gurus and I think gurus is a very strange thing, but a personage
+
+that when you feel down in your life or you're stuck, let's say, you think of them and it kind of helps you to progress in the place that you stuck. Again, it could be a real character, could be somebody you know personally, it could be the other developer that you look up to. But again, not necessarily looking up to that person. It's just somebody who helps you to get through hard times in life, whether they're real or in your head.
+
+Mohammed Patla 
+Yeah, I think to me, really my backstop is family, right? Like always has been. At first my parents and now my wife more so. But yeah, like whenever things stop going north, start going south, there's always something you can fall back to. I think it gives me, gives that soul relief you talk about or feel about. That's what...
+
+I think my family is to me. You know, like I can do all the crazy things and the betterment for world or whatever, you know, ideas I have, I want to do and work on. You know, some of them are failures, some of them are successes and it's going to be in the future as well, right? There's never a fool-proof thing, but I always have them to fall back to. So that's the one thing I think to me that matters.
+
+Yeah, it's not really a person or anything like that, but more so just the family that I have, the backing that I have. That's very important to me. How does this mean?
+
+Citizen Web3 
+Thanks for that honest answer. Mohamed, I want to finish. I want to thank you for your time. want to thank you for all your answers. Please don't hang up by the way just yet. This is going to be just a goodbye for the listeners. For the listeners out there, thank you. Thank you for listening and see you guys next week. Thanks, Mohamed.
+
+Mohammed Patla 
+Thanks.
+
+Citizen Web3 
+Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

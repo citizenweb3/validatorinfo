@@ -2,7 +2,7 @@ import { decodeEventLog, getAddress, parseAbiItem } from 'viem';
 
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
-import { contracts, getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { getContracts, getL1 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getChainParams } from '@/server/tools/chains/params';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
 
@@ -42,7 +42,8 @@ const updateAztecCoinbaseAddress = async () => {
         loggerName: `${chainName}-coinbase-update`,
       });
 
-      const contractAddress = contracts[chainName].stakingRegistryAddress;
+      const l1Contracts = await getContracts(chainName);
+      const contractAddress = l1Contracts.stakingRegistryAddress;
 
       const eventsToUpdate = await eventsClient.aztecStakedEvent.findMany({
         where: {

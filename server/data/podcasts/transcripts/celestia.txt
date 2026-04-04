@@ -1,0 +1,492 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/celestia
+
+Episode name:
+Mathematics, Rollups and Adoption with Ismail Khoffi 
+
+Citizen Web3 
+Ismail, welcome to the show, the CTO and founder of Celestia.
+
+ismail 
+Thank you very much. a pleasure to be here.
+
+Citizen Web3 
+You're a busy man. It's hard to catch sometimes, but it's good. But this is the first question, like carrying on with our conversation. know, I mean, when you look at your profiles or history or whatever these days online gives out early information. see UK, Switzerland, Germany. Now you're talking about Tunisia. And can you, do you want to share a little bit why all this like crazy story?
+
+ismail 
+Ha ha
+
+ismail 
+Sure. Where should I start? Okay. Yeah. So, yeah, I grew up in Germany, as I said before, in Cologne. And I don't know. So I've been attracted to technology and specifically coding or computers since very early days, like when I was like, I don't know, four or five even.
+
+Citizen Web3 
+Anywhere you want.
+
+ismail 
+and back then, my family couldn't afford a computer. So I was always like, until, until I hit puberty, I was like trying to convince my mother that it is a worthwhile investment and, but it didn't work. We just didn't have the money. So in the end, I, I started programming, at school, essentially there was like a informatic, I gave it was like a school, like, like a club for geeks.
+
+And there I could use the computer and learn programming there. then a little bit later, not much later, a friend of mine gave me his old computer. I gathered pieces together and had my first machine assembled at home and installed Linux on it. yeah. So how did I end up on all these places? I studied in Bonn, mathematics, not far from Cologne.
+
+Like I didn't go that far first. And also computer science, but I decided during my studies that mathematics is more interesting or more beautiful, more appealing at least. like the algorithmic part or at least the programming part, I thought, okay, I will learn this anyways more. Like I already was familiar. Like I coded a lot when I was then.
+
+in this Informatik AG and then at home as well when I had my first computer I learned Perl was the first programming language actually I coded a lot in. so yeah, I decided to do like the Finnish mathematics and graduate there. But I also worked as a software engineer. Do like half of my studies essentially to finance my living.
+
+Citizen Web3 
+Wow.
+
+ismail 
+I, right after my, like after I finished and graduated, I continued a little bit on the job that I did during my studies, which was, I think today would say like a full stack engineer for enterprise software. Like the backend was Java, the front end JavaScript, HTML. So, and then I decided, okay, this is not as, like full time, it's not as interesting as it is when it's just like a side thing.
+
+So I decided that I want to apply what I learned during my studies more. And I started at Fraunhofer Institute. They're mostly known for inventing MP3, but I didn't work on any encoding stuff back then, but I worked in the Department of, basically, mathematical optimization. So the hope was that I can apply. I did a specialization in that field, like linear programming and all this.
+
+So my hope was that I will work more on the algorithmic side. But in the end, I ended up, again, doing basically web development. And I just exchanged Java and a large team that was familiar with web development with C++ and a team that never did any web application before. So yeah. And then to be honest, I got really bored.
+
+ismail 
+and started learning Rust a little bit on the side. because of C++, I didn't like the language much, to be honest. And I read about Mozilla doing this language. It was even before Rust 1.0. so I just started looking around and I like, this is like how C++ should be. And yeah, and then I started reading a lot of papers.
+
+mostly about distributed systems, privacy, cryptography. I think a lot of that was also fueled by a lot of... I mean, there was Vicky Leaks back then and the Snowden Leaks. And all this made me more more curious about technology for privacy.
+
+and to empower people essentially or to empower communities. yeah, and that's because I was bored and I was reading all these papers on my spare time. I started Googling for jobs essentially. I found a job description that was a perfect match for what I wanted to do. And it was in Switzerland. That was the first step, I guess, you asked. So in Switzerland,
+
+ismail 
+At EPFL, there was this professor or still is Brian Ford. He just like arrived there from Yale and was building a group like a little department. And it was called DADIS, Distributed and Decentralized Systems. And yeah, this job description was just like exactly what I wanted. And I applied. It took a while that they came back to me and I had to...
+
+I had to solve a coding challenge that by itself was really interesting. So I was like, my god, I really want this job. And yeah.
+
+Citizen Web3 
+As long as you didn't have to do any web development, you are happy. Sorry.
+
+ismail 
+Exactly. Finally. Yeah, even worse than web development was Excel exports and imports. That was something I had to do a lot because in the enterprise world, everyone, they don't care if you have a database and you can extract data from the database on a nice web UI. They want Excel sheets and they want PowerPoint presentations with like little diagrams and stuff. And I coded so many of these. That was more annoying than...
+
+than just proper web development. Anyways, going back. So yeah, I got the job finally there and I moved to Switzerland. It was very different. I was never bored again since then, I'd say. It was very different because I learned so much in that year. So almost everything was new to me.
+
+ismail 
+reading papers on the side and only looking at what is interesting to you is very different from, let's actually create a prototype and do some research and publish a paper about a new idea ourselves, right? So I found myself doing a lot of programming, but at the same time, collaborating with researchers, writing a little bit, like co-authoring papers a little bit.
+
+Yeah, and I think that was the first touching point with crypto, with cryptocurrencies as well. back then at EPFL, the first work we did was about, yeah, essentially, very simply said, a signature scheme, a multi-signature scheme, so to say, like collective signatures.
+
+Citizen Web3 
+That's not sad, that's actually quite like the essence, right? Of the middle. 
+
+ismail 
+Yeah, that was really cool. No, no, I didn't say it's sad. that was the first touching point. But very quickly, we pivoted into, how can we use this to scale Bitcoin? So I found myself in a lab where we essentially tried to scale Bitcoin. And that was very, very interesting. And I'm very thankful for the time because I learned so much in this short period. I only stayed there for, I think, a year or one and a half years.
+
+Citizen Web3 
+What year was that? 
+
+ismail 
+I think I left Fraunhofer end of 2015 and started there 
+
+Citizen Web3
+So wait, so from Switzerland, how did you end up in Tendermint essentially? Because obviously you were in Tendermint before Celestia.
+
+ismail 
+Yeah. So, okay. I think back then, let me think, how do we end up in Tenement? I think I heard about Tenement essentially the first time when I was at DPFL and someone tweeted, I think Bucky, probably Bucky tweeted about it and saw that. And I looked at their repositories and there was like one repository called MerkleEyes. I think it still exists. It's like archived.
+
+And in there, was what today is called IEVL. And in there, there was a poem about merkalizing data. And it was really cool. I really liked it. It was like a little poem. It's like poem MD. I think it still exists somewhere in the IEVL repository or something. I looked at this and I was like, my god, these guys sound like they don't take themselves too seriously and like fun.
+
+Citizen Web3
+Wow.
+
+ismail 
+But I didn't look too deeply into it. So I understood like it's something like a BFT consensus. I didn't understand where it fits in the larger scheme of things. I just liked that they published everything on GitHub. Everything they did already back then was on GitHub. And even at that time, think Zaki and Toni from Occlusion as well.
+
+also did like work on Tendermint and in the KSM and KMS and stuff like this. They showed up in a mailing list at EPFL. Like they were in the mailing list and Tony was actively participating and I think Zaki as well. So that was the first touching points with Tendermint. And then, so after the time at EPFL, I briefly started a PhD in Bonn and Usable Security and Privacy. And then I did an internship at Google.
+
+which was related to certificate transparency, which is basically like a Merkle tree. And I worked particularly on a project that is called Key Transparency, which wanted to make key lookups for internet encryption more secure and easier and more convenient for users. So was very appealing and very aligned with what I wanted to work on. And it's...
+
+funnily, it's more or less like a blockchain in the sense that the keys are stored in a key value store, so to say. And this key value store is a sparse Merkle tree. And the sparse Merkle tree roots get written into the certificate transparency logs. So it wasn't really a chain, but it was like a Merkle tree and a Merkle tree. yeah, so I worked on this. And after this internship, basically decided to quit my PhD because I saw like
+
+it's much more fun to work on an actual product. And I met Zaki again while I was in London and doing that internship at Google. I met Zaki again. We met for, I don't know, somewhere in the center, drank some beer and he's already hinting at joining Tenderment. And yeah, it's like some other project. I forgot the name, but he had like some IoT related project, I think that he needed to finish. IoT Alliance, I think it was called.
+
+ismail 
+And he needed to finish that and then he wanted to join Tendermint and he was already active there. he like, I was very amazed by Zaki because he was, as I said, he like a year before that or something, he's already been active in like in a mailing list at EPFL with like very academic, but like related to crypto, not like not only cryptography, but also like cryptocurrencies very much.
+
+A year later I meet him and he's like, okay, brings back Tenderment on the table and said like, okay, we might be looking for people. yeah, and I think, yeah, it also was him after he joined Tenement himself or during the process, essentially, he already reached out and said like, you should consider joining us. Yeah. And then, and then I started a job in the meantime.
+
+at something called Digital Catapult in London, which is a government run or like half government run, something like Fraunhofer again, but it was more about connecting enterprises, small like startups, enterprises and academia. And yeah, again, I was bored there. then, yeah, and then Zach, he reached out to me and he convinced me very quickly. I had a call with Bucky.
+
+Citizen Web3 
+to join Tendermint.
+
+ismail
+Exactly. Yeah, I had a call with Bucky. I think Bucky interviewed me and that was so interesting and I really loved the energy 
+
+Citizen Web3 
+have a question here. What was the most like question that you remember from the interview? The one that still stands out in your mind that he asked you?
+
+ismail 
+He asked me what a sparse mercury is.
+
+Citizen Web3 
+What did you answer? What did you answer?
+
+ismail 
+I told him, it's like it's like it's like a mercury where everything is like, it's a perfect tree in the sense that like, how do you say, it's like, it has the full height and it's always the same size, but there are placeholders for, for the, empty leaves essentially, and placeholders for paths that are only about empty leaves. And then he said like, yeah, we use IVL for storing state and
+
+Do you think we should switch to a sparse mercury? And I was like, I don't know. But from what I've seen at Google, it seems like a good idea. And it's also very simple, Like the IVL tree that I didn't know back then. I read a paper with a very similar mercury construction, but I didn't know about the IVL tree that was specifically used in the Cosmos SDK.
+
+So I couldn't really answer that question back then. But now I can't say yes, should do it. And this is funny because Mustafa, my co-founder, wrote a sparse Merkle Tree implementation in Golang. And that's going to end up in the Cosmos SDK. So it's not only yes, but I joined a project where my co-founder wrote a library that will end up in the Cosmos SDK, like finally. 
+
+Citizen Web3 
+We say in Russian that you have to wait for good things for three years to come. there we go, let's start to bring this story together a little bit. So this is the story. But I'm going to jump a little bit ahead and then jump to Celestia, if you don't mind. So first things, though, before we jump to Celestia.
+
+ismail 
+It just took a few years.
+
+ismail 
+Yeah, it's roughly, it's roughly correct.
+
+
+Citizen Web3
+I looked at your Zotero, I think I'm pronouncing it correctly with all the papers, your account and you know, yes, I found it. I found it. But the question, but I went on there, I went on there. I didn't make order for you, but I looked and it's like Tor and you know, data science, AI, algorithms. What's your field of research right now? Obviously you love research and obviously
+
+ismail 
+I'm not maintaining this anymore. Yeah, I used to read a lot of papers. I don't have the time anymore.
+
+ismail 
+Mm.
+
+Citizen Web3 
+is something that you already mentioned a couple of times while we had the conversation. What's your field of research? I'm not talking about Celestia. I'm talking about something that interests you personally, that you're deeply interested in it and you spend time reading about it.
+
+ismail 
+So I think I'm not drawn to pure research anymore. So I studied mathematics, right? It's very theoretic. And also the math that was the most attracting to me was the one that wasn't really applied in the beginning. But I think these days I'm much more interested in research that I feel has the potential to change how I'd say humans interact.
+
+and change how society functions. I'm not saying there's like good or bad, it's just very, I'm very drawn to that kind of research. That's why I guess I ended up in this field and work. mean, I, to be honest, like I rarely have the time to read even related papers, like even very, very Celestia specific related papers, I have to actively take the time.
+
+ismail 
+to read those papers. And I'm not doing like any active research myself these times anymore at all. Which is a bit... Not right now. In general, yes, but not right now. Now my focus like I really want Celestia to launch and there's a lot of...
+
+Citizen Web3 
+Would you like to?
+
+ismail 
+Very applied research that after we launch is still very relevant and also on the way there. But yeah, my focus is purely getting the implementation out of the door and getting the chain to launch. I think, eventually I hope to go back a little bit more on the research side as well.
+
+Citizen Web3
+I'm really looking forward. mean, I've been following Mustafa and yourself from my personal accounts for a while. I've been reading some things and there's been an article. There's one article which really impressed me. That was a few months ago. I'm not saying that the others don't, but there was one article that you guys wrote and I don't remember if it was you or Mustafa or you together or anybody else about the lay...
+
+ismail 
+Was it about clusters?
+
+Citizen Web3 
+both clusters, layers, about Trollabs and Ether. And it's very rare to see that people, I don't mean to like say something bad, but it's rare to see that kind of vision of understanding and to explain to others, to be able to explain to others how you guys see that. And I really like that. I was sending this article to a lot of my friends saying, guys, look at the way these guys done their explanation. It's really, really good. So well done on that, guys.
+
+ismail
+Thank you. Thank you. I think it was mostly Mustafa though. Yeah, yeah. The past, no worries, no worries. As I said, like my focus is somewhere else. But yeah, there were like several posts. I think one about the long-term vision of like a multi-chain world, which the clusters blog post, very very good post. Then yeah, and then like recently there was a post that was...
+
+Citizen Web3 
+Yeah? Sorry, sorry, sorry.
+
+Citizen Web3 
+Beautiful post.
+
+ismail 
+mostly written by John and Aditi, I'd say, about the quantum gravity bridge and celestial and how Ethereum roll-ups could benefit from Celestia. Yeah, think this is also important because we are often only purely perceived as a Cosmos project. While that's true, right? Like we are a Cosmos project and we are proud of that. And like the vision is very aligned, like the original Cosmos vision that Jay also had.
+
+is very aligned with how we see the multi-chain world shaping and application-specific chains. And all this is 100%. We are a Cosmos project. But I'd say the Celestia vision is much larger. It is not tied to Cosmos-only projects. And that's why it's cool that we
+
+ismail 
+that we published this post because that's an idea that's also John and Mustafa have been talking about, I think before we started the company even, like we've been chatting with each other and John started like a protobuf library in Solidity and like had this idea of like what today is called Celestiums. And I think it's very important to like communicate it in a friendly way or like in a digestible way such that
+
+it attracts also people from the Ethereum ecosystem. I think I just wanted to emphasize that while we are a Cosmos project, we are not only a Cosmos project and we are tapping in many ecosystems already.
+
+Citizen Web3 
+I connect a lot with it and there's been a lot of guests on the show who like they say citizen cosmos you're not like a cosmos maxi no guys I'm not a cosmos maxi I think I'm a blockchain I'm a decentralization maxi to be known in a blockchain maximalist so it's all about like all these things eventually working together and yes I do love the vision of cosmos but I'm gonna put you on the spot wait I'm sorry for that I apologize for that straight away but you did say one sentence which  I want to ask you about you said
+
+Citizen Web3
+the original vision of Cosmos from J. You did say something like that. for you, what is the difference between the implementation of Cosmos now and the original vision that J, you think that J had?
+
+ismail 
+I think there isn't much of a difference, to be honest. The existing implementation of IBC, mean, IBC is a bit different. But there are details that do not matter too much. And I think the ecosystem that we're seeing being shaped is basically the white paper that Jay and others wrote, I don't know, very early on, I think 2016, Even 15? Yeah. Yeah, yeah.
+
+Citizen Web3
+Yeah. Even more, even earlier I think. It was crazy. It was crazy. It was something like that.
+
+ismail 
+I think, yeah, as I said, like, I think IBC was different and the role of the Cosmos Hub was, I think, slightly different. But the key components and the way that, like, there are many chains and they interact with each other through this protocol called IBC. yeah, mean, Tendermint is what it... Okay, there's also different, like, there's also some changes in, like, the core consensus algorithm since that time. I think there was, like, a bug. I don't remember what it was, but like...
+
+It's only details that are different, but like the vision is exactly the same. It's been put into practice. This is also mind blowing to me. It's really cool to see like, okay, here's the idea and it's a very practical idea and it's been put into practice like one to one. 
+
+Citizen Web3 
+It's very simple, isn't it? I in terms of looking at TCP IP, right, and all that, mean, there it is. It's just like, you don't need to invent the wheel again, right? You just need to implement it in a slightly better manner. Well, again, this is from an outsider perspective. I would assume that your perspective is more detailed. I would love to hear it, of course.
+
+ismail 
+Yeah, I mean, it's comparable to TCP IP in the sense that it connects machines, which here machines are like chains, But between having the idea of connecting these chains in some way or the other and actually putting together a specification and an implementation for that,
+
+ismail 
+is words. there's this, it's like an idea is one thing and executing on that is completely different. And I'm very happy that like Chris Gohs back then took over the the IBC project and wrote like most of the specification almost on his own. And that informed the implementation. Because I think like without that we wouldn't be there. Like there was a first specification by Ethan Frey back then.
+
+ismail 
+much earlier in the first implementation by him and Jay, think, also very early on, like in 2017 or something. like, IBC as we have it implemented today is very much, I'd say, thanks to Christopher Goh's.
+
+Citizen Web3 
+I do want to talk more rollup, shardings, execution layers. before I jump into that, because otherwise the people who told me to ask you some questions are going to hate me. And I know you've been asked this thousands of times, but let's go easy. Let's go easy. I'm going to go on the Celestia website, and I'm going to take the first phrase out of the Celestia website. And I'm going to ask you to explain this to me like,
+
+Citizen Web3 
+I've never heard the word blockchain before. it says here, Celestia is the first module consensus and data network to power scalable secure WebTree applications. Now let's assume that none of us here understands what a word of that means apart from maybe WebTree and applications. Let's assume that we do know what applications and Web3 means and what scalability means. What on like L5 Celestia, like really, really L5 because I've been talking to a lot of people.
+
+
+Citizen Web3
+And I think you need a lot of there was, know what? I'm going to I'm going to do another tiny, tiny, tiny, like intro to the question. I had Connie Darion is a really cool guy. had really fun conversation. And, know, like he said to me one sentence, which made me really think he said, you know, the people who listen to citizen cosmos are not people who just came to the blockchain because they probably heard about Bitcoin and Ethereum and Cosmos. So like eventually. But with Celestia, this is like a project that is already, you know, like
+
+Citizen Web3 
+You need to know blockchain, there's a lot of things to get to it. But for the people who know less, let's try and ELI5 a little bit, if you can, of course, if you want to.
+
+ismail 
+Okay, try. So you said, just to get this straight, you said, I can assume you understand Web3 and scalability and like decentralized applications, right? Okay. So I think that the thing that needs the most explanation is Celestia is the first modular blockchain network, right? What does this modular thing mean?
+
+ismail
+currently, if you want to deploy decentralized applications, like Web3 application or whatever, the only choices you have is either you deploy your own validator set or this probably already not Eli fiving, right? So either, let's say, either you deploy, you create your own chain with your own network.
+
+Citizen Web3 
+Hahaha!
+
+ismail 
+Or you use an existing general purpose smart contract platform like Ethereum. And one has the benefit, like you have complete sovereignty, but it's very expensive, especially for smaller projects, to set up a proof of stake network. On Ethereum, on the other hand, or on a general purpose smart contract platform, you're competing with all the other
+
+programs or applications that are running on that platform. So gas costs will eventually go up, right? And in Ethereum, that's already the case. So speaking about scalability, I think, like I'm 100 % convinced that Celestia hits the sweet spot between these two worlds, between launching your own consensus network and deploying a smart contract. And it gives you basically the best of both worlds because you have
+
+a lot of sovereignty, like lot of freedom, scalability, and at the same time, you have like a shared layer of security as if you would deploy it on an existing smart contract platform.
+
+Citizen Web3 
+Let's get a little bit more into detail now and assume would execution layers be the next stage to talk about or are we going to talk rollups or are we like where what would be how.
+
+ismail 
+rollups for me is just a different word for one particular way to do an execution layer. Yeah, we can go from there. So, okay. So how does Celeste achieve that you can deploy your application in a way that is very scalable and gives you a lot of freedom? It does so by being the first module of blockchain essentially by
+
+Citizen Web3 
+Ha
+
+Citizen Web3 
+hahahaha
+
+ismail 
+decoupling, it decouples. So what does every chain, every monolithic current chain do? Every chain has several tasks and they do all of them. And so let's say, and roll ups and execution layers and all that, this is more modular in the sense that it takes apart these tasks and puts them into specific layers of specific blockchains themselves, right? Like specific layers.
+
+which themselves are decentralized applications, so to say. And because of this specialization, because of this like putting this apart, you can be very specialized on the different layers and you can achieve because of this focus and because of the specialization, you can achieve much more, much better optimizations for these tasks. And this is what like, this is what the modular
+
+Blockchain means basically taking apart these high level concepts of like consensus, data availability and execution. so what is an execution layer? Essentially a blockchain in general does like take transactions and also executes these transactions. Like the transaction could be like an intention to do something or like in, in, be a transfer, right? Like a, like a bank transfer or something.
+
+And you submit the transaction and some full nodes on the network, have to execute these transactions. actually, they use the L, like increase and decrease the account balances or any arbitrary state transitions that are necessary for your particular use case. Payments is just one use case. There could be different NFTs or whatever.
+
+There's more and more applications that completely not only payments. So yeah, this is like every, yeah, sorry.
+
+Citizen Web3 
+If we were like go from a different side now and we can I think it's obviously doesn't matter if you understand architecture or not. It's quite obvious from your answer that architecture is more efficient. So developers can launch their applications, you know, to work better, faster, more efficient, whatever, cheaper. So.
+
+Citizen Web3
+The question is, let's go to the business side. If I'm an end user, and of course, the obvious answer is, well, you would want to use a better application than a worse application. But if I don't know that this application is better than the one running on Ethereum and the one running anywhere else, why would an end user of a DeFi application or a storage application or anything else go to an application that's running on top of Celestia in the future and not on any other? How would he know that it's more efficient and better?
+
+ismail 
+In the very end, it will trickle down to the fees you pay, right? So currently, if you on Ethereum, if you, I don't know, trade NFTs or whatever, like DeFi, anything is very expensive. I mean, of course, like even in Ethereum, there's like efforts to have like these rollups on top. it's similar in the sense that like all the big projects are pivoting more and more into this like modular stack.
+
+ismail 
+that I think Mustafa wrote about it in 2019, the first time. But all these projects are pivoting more and more into this direction. But even there, if the base layer isn't specialized, I don't assume. It's just the fact that, for instance, transferring your assets from Ethereum to the roll-up is still very expensive.
+
+ismail 
+And in the end, think what users will do and in the encrypto, feel like users, developers, and the whole thing is like more a funny mix. Like it's a community of users that are like, there are different players, right? Like there's developers, the end users and everything. I feel like what we will see in the future. And I think Zachy mentioned that also in one of his talks, what we would see in the future is that whole communities.
+
+like whole communities that like deployed for instance now on Ethereum or like on one chain, they will move wherever it's cheaper and the whole community will move together, to say. And the end users, the only thing they will notice is like, it's cheaper.
+
+Citizen Web3 
+I want to agree with you, like what you say, just like to give a point to make your point stronger. think, all of us, especially if you encrypt for a long time, you end up having a lot of shit tokens, good tokens in your portfolio. And most of these tokens now have a use case. So like the point is you have a lot of blockchains these days. And every time, when I go through my things, when I need to sort things out,
+
+Citizen Web3 
+Every day and like yesterday or the day before yesterday was another example, I realized more and more how more comfortable it is to use an architecture stack like Osmosis, for example, in comparison to something like, I don't know, anything like, I don't want to name like projects that are right now. I'm going to be good. I'm going to stay good.
+
+ismail 
+all the DeFi projects on Ethereum. No, Osmosis is next level in so many ways.
+
+Citizen Web3
+So maybe it's not just cheapness, know, maybe I'm hoping that maybe like the competition on the free market will push people to see that, hey, guys, this is more not maybe the cost is maybe somewhere average and maybe not right now, of course, but in the future. if I can, if I can save time, which is more important than money and press the buttons here, like in two minutes and over there, takes me the application 20 minutes to do things. Then of course I will do that here.
+
+ismail 
+Yeah, I mean, it's time, but also think also cosplay a role. If you get immediately confirmation of a transfer happened or something, it will feel more natural. But independent of that, would also say people would be willing to wait a bit if it's like 100 times cheaper, for instance. I have no doubt about that.
+
+Citizen Web3 
+Of course, of course.
+
+ismail 
+Yeah, especially if it's like a DeFi thing, people will look at costs, not only people, machines, bots, arbitrage bots, and like all these things will compete.
+
+Citizen Web3 
+I'm really looking forward to all that. I'm looking at the more bots, the more competition. I'm waiting for that for all this. When smart contracts, first of all, start to finally decide where to put the fee and not the person behind the smart contract, that's when we're going to get to the interesting things. That's when it's going to get much more exciting and they're all going to compete. I'm not sure. This is actually another question, I think, that I just thought about it. Is Celestia, by the way, Celestia or Celestia? Celestia, thank you.
+
+ismail 
+Hahaha
+
+Citizen Web3 
+Thank you. Is Celestia essentially meant for developers, for humans or for programs? Like the main, let's say, execution layer. For today, today, today, today, today. Wait, wait for it, wait for it.
+
+ismail 
+I mean, developers are humans, right? And they deploy programs. I mean, Celestia as like the core chain itself targets developers. It's more, it's not an end user application. It's more like infrastructure that developers can use to deploy an application to end users will find like.
+
+There is a story of end users in there, but Celestia is the base layer that different application developers will use, and the end user is just consuming whatever the developers will deploy.
+
+Citizen Web3 
+It's good. This is this is what we've been heading to like for for so many years, right? And finally if we get there, that's kind of means we reached Some goal essentially, which is a beautiful thing. I'm gonna take it slightly It's like try to take it slightly differently because the thing is you had already like several interviews where you go into detail explain what Celeste is and My goal is try to understand why you guys want
+
+Citizen Web3 
+Created it and this is like my next question. For example, I've noticed on your Twitter like if you go scroll down a lot of things about adoption about green technology about things that are obviously important seem at least important to you and we spoke about war at the beginning We support about fixing we spoke about fixing things in the beginning So the question is apart from making applications more efficient and cheaper What is the goal?
+
+ismail 
+Haha
+
+Citizen Web3
+of you guys creating this thing. What suddenly you woke up and said, I want cheaper applications. I don't believe that, right?
+
+ismail 
+No, so I've been attracted to this whole idea of not a blockchain itself, but the idea of having a way for people to trade and interact and collaborate and coordinate essentially on a global scale with very little trust assumptions. It's just very appealing to me.
+
+I'm just convinced that something like this is actually necessary almost for us humans on a global scale. I think this is like, as I said, think it's almost necessary and I'm very convinced that it is a very powerful technology. But the thing was that I was always very skeptical.
+
+ismail 
+because I didn't know how to actually scale chains. Like sharding sounded like an idea, but like it also sounded insanely complex. And a lot of things I've heard sounded like, okay, yeah, that might work to some extent, but it's also too slow or not fully scalable. yeah, when Mustafa asked me like, hey, you wanna...
+
+want to be co-founder essentially and like showed sent me like this lazy ledger paper back then was called lazy ledger right I read it and I was like my god this is the first time I read an idea that's like simple enough that it actually should work 
+
+ismail 
+I think I'm generally interested in the, or I'm generally attracted by the intellectual challenges that like all this, this whole ecosystem brings. But I feel that having, as I said, like having a way for groups of people to coordinate will be or is already some kind of game changer.
+
+And that's what's very attractive to me as well. That's why I wanted to work in the space in general. But I always miss this last piece, like, okay, how do you actually scale? Scale in the sense that you have global scale in terms of applications that interact with each other, but in a decentralized way. yeah, Celeste, as I said, is the first convincing
+
+architecture. it's insanely simple compared to every other scalability approach I've seen.
+
+Citizen Web3 
+What kind of applications do you personally expect to appear first on Celestia?
+
+ismail 
+That's a very good question. I almost feel that any blockchain ecosystem, any new or any old, almost already has all the same applications. We spoke about Osmosis. It took a while for Cosmos, but then there was DeFi.
+
+Citizen Web3 
+amen.
+
+ismail 
+I think we will see definitely that all the existing almost like infrastructure will also exist on Celestia like DeFi, games. think I'm pretty sure games and then gaming in general will be like a major use case for chains in general. And it's yet to be seen what's the best platform for like the gaming industry. So I can assume that some
+
+Some big players there would prefer to run their own proof of stake network. And some others would prefer to launch on Celestia because it's the sweet spot between launching your own chain and deploying on a smart contract platform. So yeah, think all the existing, as I said, use cases and infrastructure that already exists on Ethereum, for instance, will exist on Celestia.
+
+And beyond that, there will be a lot more applications coming in the future. And I think a lot will be games and virtual worlds, like metaverse, whatever. It's not very appealing to me, but I'm 100 % sure that it's just a perfect mix. It's a no-brainer to see these worlds going hand in hand.
+
+Citizen Web3 
+What's the next step in the evolution of architecture after Celestia? Where are we heading?
+
+ismail
+Oh that's a very good one. I mean, we haven't even finished Celestia, right? So I think this modular paradigm that we're leading, I think that there will be more more specialization, like microservices almost, focus on specific tasks or specific concepts, essentially.
+
+Citizen Web3 
+Do you think we will see those microservices also become distributed? More and more more and more each service becomes like, imagine a chain that does a specific service and that the chain goes into execution layers that does a specific service and so on and so forth.
+
+ismail 
+I could totally imagine that, yeah. 
+
+Citizen Web3 
+I always said, though, with the way blockchain develops, it's really interesting to see how I'm curious at which point our brain as a human being will stop understanding those layers.
+
+ismail 
+Yeah, so far, actually, so far the chains itself, like theoretically are very simple, right? Like it's a very simple concept. Yeah, what will make our brains, like the limits to our brains is more that if there's like a globally spanning network and there's like happening things in parallel and there's like a lot of like non-determinism and chaos, I think that's where our ability to understand
+
+will be limited. I think the systems, I mean, look at the internet, the systems that are good and efficient and good for like work well for humanity are not that crazily complex. I mean, they are complex, insanely complex in like the details, but the high level concept is always relatively simple.
+
+Citizen Web3 
+I think though, like we as a society, as we go further and further, we keep on like complicating things, maybe not because we want them to be more complicated, but because of what you said, we were trying to fix things and trying to, like, mean, blockchain is technically just a continuation of the internet, right? A better version, the next like level. I mean, that's crazy. Of course.
+
+ismail 
+It's different. I wouldn't say it's better. But it's better for people that want choices. It's better because you have more freedom. You can opt into ecosystems, which with the current internet, with Facebook and the internet as it is, it doesn't put the choices of users first.
+
+Citizen Web3 
+I would even put it, you can opt out. That's a very important thing. Man, before we start to slowly like wrap it up, well, I want to on one, a couple of more things about like you and Celestia. What do you guys currently are like is the biggest focus on in development and when and
+
+ismail 
+Exactly. You can also opt out. You can go to another chain. You can join another ecosystem.
+
+Citizen Web3 
+Then I'm going to ask you a couple of questions that I have from the audience. But what is your currently in Celestia, the biggest, biggest focused one? What are you all like really working on right now?
+
+ismail 
+So we're working on a bunch of things in parallel, but the main focus is to get the next testnet out of the door. So we have launched in November what we call DevNet. It's a very ad hoc, spun up. We all met in Berlin. We spun up a small testnet. Only the core team essentially ran nodes. Then we opened it up, and now we have over 100 validators.
+
+A lot of like thousands, it's insane. Like it's completely insane to me. Like this, this network has like 2000 inactive validators because like, yeah. And the next iteration essentially is, a continuation of this network, but it fixes a bunch of bugs. It's more stable. Like there's this concept called data availability sampling. And
+
+Citizen Web3 
+Wow.
+
+ismail 
+The code for that lives in the repository called Celestia node. And there, there's a lot of bug fixes and stability fixes. So that will be one part. And I hope that we'll find the time to refine the APIs and have a little bit of documentation. So in the next test net, the developers that are still brave and are not scared by things that will break and stuff, they will.
+
+join the test net and also try to deploy the first applications. So that's the main focus. Basically a better version of the DevNet that's already targeting developers instead of like, we have a proof of stake network. You can do data availability sampling. That's cool. No chain has done that before, but it's only like, what you want is you want people to be able to use your chain. You want people experimenting with it during test net. So.
+
+that hopefully will happen during testnet. And as part of that effort, there's also something called Celestiums that will, is essentially for Ethereum rollups, a way to securely make sure that the data is available for these rollups. For ZK rollups, optimistic rollups, it doesn't really matter.
+
+So it's an alternative to what current rollups do. They have like these like validiums, which are just a centralized data provider essentially, or they have a data availability committee, which is like a closed committee that ensures the data is available. And if you use Celestia, you have like a permissionless proof of stake network that ensures that the data is available. Yeah.
+
+Citizen Web3 
+I like saying multisig of respected people.
+
+ismail 
+Exactly. Yeah. So yeah, that's one focus. I hope, I mean, these things are like, don't want to promise anything. These things are always like not easy. But the hope is that for the next test net, can also, or maybe not there, but the latest in the incentivized test net is the plan that we can also deploy.
+
+the smart contract that is necessary for the data availability at the stations on like an Ethereum test net, right? Like one of the test nets. And then people can also start to look into Celestiums and yeah, and another project that is also developed in parallel is something very similar, but instead of using Ethereum as a settlement layer, which currently rollups do.
+
+it uses a roll-up on top of Celestia again. This is currently called Sevmos, because we use the code of the Evmos team and making it a roll-up essentially. So that's another option. developers, we're mostly targeting EVM Solidity developers, right? So they will have the choice to either deploy in Ethereum as a roll-up.
+
+or like deployed on the Ethereum rollup or deploy directly on a Celestia native rollup that settles on a Celestia rollup. So it's like more layers as I said, there's more specializations already happening hopefully during our testnet.
+
+Citizen Web3 
+One question for the validators out there for myself included is the next DevNet, is it gonna be whitelisted or open to anyone?
+
+ismail 
+So the next testnet, that's a good question. The next testnet, I think you should probably, if you want to know more, should probably talk to our business development team. my understanding is we will have a bunch of validators in the Genesis file, but then it's open. We won't fill all the 100 slots, and then it's just open. There will be a faucet. And yeah.
+
+ismail 
+I think everyone can participate in. And the incentivized test net will be different because it's incentivized maybe. That's also a lot of non-technical work that needs to be done because I'm actually not sure if you do need to do KYC before the incentivized test net or after or only for the winners. don't know. But for the incentivized test net, there will be a process upfront for sure.
+
+Citizen Web3 
+So three questions, very quick. Two of them are from the audience, one from myself. So the first one from the audience, I have to ask this. When are you planning to release a token? It was there, it was there, it was there.
+
+ismail 
+Yeah.
+
+ismail 
+Yeah, I know. It's always the first question, to be honest. So I can't really speak to that. The thing that I can say is that we're planning to launch right after the incentivized testnet. the testnet and the incentivized testnet are planned. So the incentivized testnet is planned in the second half of this year.
+
+Citizen Web3 
+Hahaha
+
+ismail 
+maybe late, later half this year, like third quarter or something. And at the end of this year or early next year, we will launch, right? And then there will be a token. So yeah.
+
+Citizen Web3 
+Second question, prepare for this one, this is a good one. What is the wingspan of a coconut laden swallow? This was a question for you.
+
+ismail 
+I saw that on Twitter. I saw that on Twitter. didn't know the word. I didn't know the bird. I looked it up. I don't know. I have to pass. I'd say something like it looked like on the photos. It looked very large. I'd say like 40 centimeters. I don't know. Just guessing here.
+
+Citizen Web3 
+Ha ha! Dammit! Dammit!
+
+Citizen Web3
+Well, it's well and a question for myself personally, this is a traditional question I try to ask everyone because it is the show is about you and we want to understand the person behind the project. What motivates Ismail in daily life to keep on building whatever it is in this case, it's Celeste, Celestia. But whether it was Google UK or anything else, you know, what keeps you motivated all the time every day?
+
+ismail 
+What keeps me motivated in Celestia is mostly the people. The team is amazing. From the co-founders to every single colleague, it's extremely motivating to me. All brilliant people. then it's not only the people that I work with directly in the company, but also all these partners and collaborations that we're doing with people from Informo. We had calls with people from Osmosis.
+
+This is, I love it. It's like the people that it's everyone is so unique and they have everyone is brilliant that we work with. That's really, really something that motivates me every day.
+
+Citizen Web3
+That's an awesome answer to be honest. love that. Ismail, thank you. Thank you so much for the explanations. And I know I've been bugging you in some places, but I hope it wasn't too much. man, looking so much forward to the next Testnet, guys. And looking forward to see how all those crazy layers will evolve. And yeah, thank you.
+
+ismail 
+Not at all. was a pleasure.
+
+ismail 
+Thank you too. Thank you very much. It was a pleasure.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

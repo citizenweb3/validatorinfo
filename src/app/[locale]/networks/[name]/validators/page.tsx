@@ -58,6 +58,7 @@ const NetworkValidatorsPage: NextPageWithLocale<PageProps> = async (
       <SubDescription text={t('description', { networkName: chain?.prettyName })} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <NetworkValidators
         chainId={chain?.id ?? null}
+        chainName={name}
         page={'NetworkValidatorsPage'}
         nodeStatus={nodeStatus}
         perPage={perPage}

@@ -3,7 +3,7 @@ import { Abi } from 'viem';
 import logger from '@/logger';
 import {
   AztecChainName,
-  contracts,
+  getContracts,
   getL1,
   governanceAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
@@ -42,7 +42,8 @@ export const getUserBallot = async (
       return null;
     }
 
-    const contractAddress = contracts[chainName].governanceAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.governanceAddress;
     const abi = governanceAbis[chainName] as Abi;
 
     logInfo(`${chainName}: Fetching ballot for proposal ${proposalId} user ${userAddress}`);

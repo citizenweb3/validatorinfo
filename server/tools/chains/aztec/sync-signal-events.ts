@@ -3,7 +3,7 @@ import { Abi, getAddress } from 'viem';
 import { eventsClient } from '@/db';
 import logger from '@/logger';
 import {
-  contracts,
+  getContracts,
   deploymentBlocks,
   governanceProposerAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
@@ -26,7 +26,8 @@ export const syncSignalEvents = async (
   const failedRanges: Array<{ start: string; end: string }> = [];
 
   try {
-    const contractAddress = contracts[chainName].governanceProposerAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.governanceProposerAddress;
     const abi = governanceProposerAbis[chainName] as Abi;
     const deploymentBlock = BigInt(deploymentBlocks[chainName]);
     const chunkSize = getChunkSizeForRpcUrls(l1RpcUrls);

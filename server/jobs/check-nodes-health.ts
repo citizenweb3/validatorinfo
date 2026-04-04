@@ -1,3 +1,5 @@
+import net from 'net';
+
 import db from '@/db';
 import logger from '@/logger';
 
@@ -146,6 +148,129 @@ async function checkGenericHealth(url: string): Promise<HealthCheckResult> {
   }
 }
 
+async function checkGrpcHealth(url: string): Promise<HealthCheckResult> {
+  const startTime = Date.now();
+
+  return new Promise((resolve) => {
+    try {
+      let host = url.replace(/^https?:\/\//, '').replace(/^grpc:\/\//, '');
+      let port = 9090;
+
+      const portMatch = host.match(/:(\d+)$/);
+      if (portMatch) {
+        port = parseInt(portMatch[1], 10);
+        host = host.replace(/:\d+$/, '');
+      }
+
+      host = host.replace(/\/.*$/, '');
+
+      const socket = new net.Socket();
+      const timeout = 5000;
+
+      socket.setTimeout(timeout);
+
+      socket.on('connect', () => {
+        const responseTime = Date.now() - startTime;
+        socket.destroy();
+        resolve({ success: true, responseTime });
+      });
+
+      socket.on('timeout', () => {
+        socket.destroy();
+        resolve({ success: false, responseTime: null, error: 'Connection timeout' });
+      });
+
+      socket.on('error', (err: Error) => {
+        socket.destroy();
+        resolve({ success: false, responseTime: null, error: err.message || 'Connection failed' });
+      });
+
+      socket.connect(port, host);
+    } catch (error: any) {
+      resolve({ success: false, responseTime: null, error: error.message || 'Unknown error' });
+    }
+  });
+}
+
+async function checkWsHealth(url: string): Promise<HealthCheckResult> {
+  const startTime = Date.now();
+
+  return new Promise((resolve) => {
+    try {
+      let wsUrl = url;
+      if (wsUrl.startsWith('http://')) {
+        wsUrl = wsUrl.replace('http://', 'ws://');
+      } else if (wsUrl.startsWith('https://')) {
+        wsUrl = wsUrl.replace('https://', 'wss://');
+      } else if (!wsUrl.startsWith('ws://') && !wsUrl.startsWith('wss://')) {
+        wsUrl = `wss://${wsUrl}`;
+      }
+
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+      const httpUrl = wsUrl.replace('wss://', 'https://').replace('ws://', 'http://');
+
+      fetch(httpUrl, {
+        headers: {
+          'Upgrade': 'websocket',
+          'Connection': 'Upgrade',
+          'Sec-WebSocket-Key': Buffer.from(Math.random().toString()).toString('base64'),
+          'Sec-WebSocket-Version': '13',
+        },
+        signal: controller.signal,
+      })
+        .then((response) => {
+          clearTimeout(timeoutId);
+          const responseTime = Date.now() - startTime;
+
+          if (response.status === 101) {
+            resolve({ success: true, responseTime });
+          } else {
+            resolve({ success: false, responseTime: null, error: `HTTP ${response.status}` });
+          }
+        })
+        .catch((error: any) => {
+          clearTimeout(timeoutId);
+          const responseTime = Date.now() - startTime;
+
+          if (error.code === 'ERR_INVALID_PROTOCOL') {
+            return resolve({ success: true, responseTime });
+          }
+
+          resolve({ success: false, responseTime: null, error: error.message || 'WebSocket connection failed' });
+        });
+    } catch (error: any) {
+      resolve({ success: false, responseTime: null, error: error.message || 'Unknown error' });
+    }
+  });
+}
+
+async function checkNamadaIndexerHealth(url: string, healthPath: string = '/api/v1/chain/parameters'): Promise<HealthCheckResult> {
+  const startTime = Date.now();
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 5000);
+
+  try {
+    const endpoint = `${url}${healthPath}`;
+    const response = await fetch(endpoint, {
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
+    const responseTime = Date.now() - startTime;
+
+    if (response.ok) {
+      return { success: true, responseTime };
+    }
+
+    return { success: false, responseTime: null, error: `HTTP ${response.status}` };
+  } catch (error: any) {
+    clearTimeout(timeoutId);
+    return { success: false, responseTime: null, error: error.message || 'Unknown error' };
+  }
+}
+
 interface NodeHealthUpdate {
   nodeId: number;
   status: string;
@@ -169,11 +294,6 @@ async function checkNodeHealth(
 
   logInfo(`Checking ${chainName}/${type}: ${normalizedUrl}`);
 
-  if (type === 'ws' || type === 'grpc') {
-    logError(`Skipping ${type} node (not suitable for HTTP health checks)`);
-    return null;
-  }
-
   switch (type) {
     case 'rpc':
       result = await checkRpcHealth(normalizedUrl);
@@ -182,7 +302,21 @@ async function checkNodeHealth(
     case 'lcd':
       result = await checkRestHealth(normalizedUrl);
       break;
+    case 'grpc':
+      result = await checkGrpcHealth(normalizedUrl);
+      break;
+    case 'ws':
+      result = await checkWsHealth(normalizedUrl);
+      break;
+    case 'masp-indexer':
+      result = await checkNamadaIndexerHealth(normalizedUrl, '/health');
+      break;
     case 'indexer':
+      result = chainName === 'namada'
+        ? await checkNamadaIndexerHealth(normalizedUrl)
+        : await checkGenericHealth(normalizedUrl);
+      break;
+    case 'interface':
     case 'entry':
     case 'exit':
     default:
@@ -261,11 +395,6 @@ async function checkNodesHealth(): Promise<void> {
     for (const node of chainNodes) {
       if (!node.url) {
         logError(`Skipping node ${node.id} - no URL`);
-        skippedCount++;
-        continue;
-      }
-
-      if (node.type === 'ws' || node.type === 'grpc') {
         skippedCount++;
         continue;
       }

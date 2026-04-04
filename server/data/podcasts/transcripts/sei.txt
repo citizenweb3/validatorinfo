@@ -1,0 +1,338 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/sei
+
+Episode name:
+Adoption, Airdrops and Decentralization with Dan Edlebeck
+
+Citizen Web3: 
+Good space time, y'all. In this episode of the Citizen Cosmos podcast, I speak with Dan Edelbeck from Say Network. We discuss deficit situation and challenges, centralized exchanges, trends in decentralization and onboarding people, interaction of ecosystems with each other in the future, bandwidth on order books, censorship and air drops. 
+
+Dan Edlebeck: 
+We need to think out of our own kind of bubble and think about the nearly eight billion people on the planet. The current system as it's set up with private key management, with onboarding into crypto, is still not good enough to be able to get billions of people using crypto. 
+
+Citizen Web3: 
+I'm not going to like brag on about knowing the future, but I think I was not the only one and there's been hundreds of people and all of us knew that right, that the central exchanges are not reliable. 
+
+Dan Edlebeck: 
+We are building a blockchain for deep liquidity and better trading experiences on chain and we're doing it with fast execution and being able to match the user experience that you get on centralized exchanges. 
+
+Citizen Web3: 
+I have seen many, many users that have been using crypto for a while finding it a bit difficult to go back to the banking system and to understand that they need to call somebody, you know, in order to sometimes to put a transaction through. 
+
+Citizen Web3: 
+Before we rock it off into our next episode, here are some news from the sponsor of this episode the Cyber Congress Dow. The foundation has started the delegations policy for validators on the Bostrom blockchain and the Space Pussy Network was launched with 96% of its supply to be dropped to various Cosmos ecosystem chains. 
+
+Citizen Web3: 
+Hi everybody, welcome to a new episode of the Citizen Cosmos podcast and today I have one of my favorite guests. I'm not going to be shy to admit that. Dan, hi man, welcome to the show again and again and again and again and again. How are you?
+
+Dan Edlebeck: 
+Thanks a lot Serge. Great man, good to be on Citizen Cosmos. Just like I've seen Rage Against the Machine three times, this is my third time on the podcast. 
+
+Citizen Web3: 
+Yeah, for everybody who doesn't understand what's going on, just before the recording, well Rage Against the Machine, my favorite bands, I have the two to prove it and it turns out Dan here has been going to Rage Against the Machine concerts one after another while I've just been dreaming about it. So, hey, hey, Dan, since we last had you on the show, there has been a lot of changes in your professional life and I guess in your personal life as well as far as I know anyways. Do you want to introduce yourself once again and tell us what you were busy with these days, what has been the changes to your story so far over the past half a year or so since we last had you on maybe a bit more already. So, all yours, Dan. 
+
+Dan Edlebeck: 
+Awesome, appreciate it Serge. Yeah, it's been over a year since I think we were on and a lot has changed both personally and professionally. One thing has not changed, I'm a cosmonaut. 
+
+I really strongly believe in our vision of what we're building with the Internet of Blockchains and the architecture and the strength of IBC I think has only been proven and more resilient especially with a lot of bridges that have proven to be less reliable or centralized and IBC has been the best bridge out there. I'm still working in the Cosmos space so big changes in my life on the professional level. I'm helping to lead SEI. 
+
+SEI is the Layer 1 Blockchain optimized for trading and decentralized exchanges really helping to power DeFi and take it into the next generation for strong founders and then the personal level. I'm in Puerto Rico and you can see some of the stuff in the background we're getting ready for a baby having to become a father in January. So Lots of new developments on the personal and professional front but one thing is the same, I love being at Citizen Cosmos so I'm happy to be here sir. 
+
+Citizen Web3: 
+Yeah man, I mean it's a shame the baby stuff has taken all the space up but I'm sure there is still some left. I'm joking, I'm joking. It's really cool and congratulations of course because that is amazing news and you cosmonaut bringing into the world. Actually, funny story as we are on the subject just this morning my developer texted me he was asking for a contact from somebody in Cosmos to talk about Cosmoswasm, basic stuff and I was saying okay I'll do it today and then he was saying oh I was just telling my son he's like six or seven because his son was like oh what are you doing and he was like oh I'm just getting like from Serge contact from a guy from Cosmos to talk from something about him. He's like a guy from Cosmos, wow can you ask him back? Ask him all this stuff, he's from Cosmos you know. And yeah so babies are a blessing. 
+
+Dan Edlebeck:
+He's from the future bro. 
+
+Citizen Web3: 
+Yeah man. 
+
+Dan Edlebeck: 
+Well, the FVS confirmed that we're seeing UFOs everywhere so. 
+
+Citizen Web3: 
+Man, I mean you're in Puerto Rico not in the States so you know I mean now you have no UFOs anymore, no Area 52 or 51 or 57 anymore. 
+
+Dan Edlebeck: 
+Well, we're not very far from the Bermuda Triangle, in fact just down three miles down the road in Old San Juan we're at the edge of it. 
+
+Citizen Web3: 
+Right, right, so by the way there is something I found out so where I'm based in Madeira, I didn't know. I thought that from here if I put a straight line to the West I will get to the America but actually it's Bermuda that is actually a direct straight line from me so if I look out the window directly I can just see you. Just see you. Man, last we spoke which was apparently over a year ago, man time flies, you were busy with building decentralized VPN solutions and well you know what I'm going to call it a bit differently. Decentralized resilient solutions to help us to get online in a safer way and browse content in a safer way and a more private way I guess one of the most important things and DeFi is if not more but definitely not less of an important subject in my opinion so let's talk a little bit about DeFi. How in your opinion the current situation on the market of course we had just the FTX thing just recently and before that and you know this was after we spoke the whole Luna thing and now there is Blockfolio and whatnot. What's your opinion first of all on all decentralized exchanges that's going on bro? 
+
+Dan Edlebeck: 
+Yeah I mean and you also didn't mention Thoreau's capital so the industry has been through a lot right 2022 has been an incredibly rough year and I think we probably spoke towards the end of 2021 I'd have to double check but that sounds about right and really since the beginning of this year I've been focused on DeFi helping to lead and build out say and DeFi has come a long way but still has a long way to go. I remember back in the day surge when people were playing on Ethereum in like 2017 there was like Ether Delta and it was like the only decentralized exchange and it was weird as hell and it had the ugliest interface and it was slow and your orders wouldn't go through and it had an order book on it and yeah it was crazy. 
+
+Citizen Web3: 
+Well you could trade all the shit tokens on there that were never real sorry to interrupt you man but it just he brought so many memories I was like wow Ether Delta sorry go on man. 
+
+Dan Edlebeck: 
+No 100% right but that's also what you're talking about surge is a huge benefit and a huge power that DeFi brings you're talking about permissionlessness anyone could list tokens with the smart contract and have them be tradable on Ether Delta so that was an incredible innovation but DeFi absolutely sucked back then and then we got IDEX and we got a few other decentralized exchanges but they didn't gain much traction and over time more and more came out and really kind of we saw DeFi started to take off right in 2020 with DeFi summer and that's when Uniswap started to take off and people started to embrace DeFi and being able to kind of trade their own assets within their own custody and that's where the automated market maker the AMM model took off but DeFi still has a very long way to go and that's why we're building say we can get into more of that in a little bit but the original question said surge was around FTX right and relying on centralized companies and this isn't the first time we've seen this we've seen Cripsy we've seen Cryptopia we've seen Quadriga these centralized exchanges we're relying on one or very few actors with all of our trust to be able to maintain and custody our funds and act ethically and the ethos of what we're building in DeFi is don't trust Verify and to be able to have open and transparent systems so it's really messed up what Sam did and the negative impacts it's going to have on our industry in the immediate term and the mid and long term but in a way it's going to have a positive impact in the long run because it's going to force our hand to embracing DeFi because there's couldn't have been a bigger actor that did more harm to the space in one shot than Sam did. 
+
+Citizen Web3: 
+Let me put my favorite mask on this time I'm going to be Devil's advocate for the whole industry not just to you and for myself included actually you mentioned likes of Cryptopia, Cripsy and there has been many many more along the line I mean Maungok starting with Maungok many many many years ago if we know all that and when you all that and you know I'm not going to like brag on about like knowing the future but I think I was not the only one and there's been hundreds of people and all of us knew that right that the central exchanges are not reliable sooner or later they're going to drop the market it's just a matter of waiting why do we keep on going back to centralized exchanges well maybe not all of us and I don't want to speak for everybody of course but most users by the looks of it keep on going back to those exchanges knowing the dangers knowing about not your keys not your coins and I mean this is just like a memo ready by now not even in the crypto world even outside of it and what's the reason what's drawing people back 
+
+Dan Edlebeck: 
+well there's two main reasons they both have to do with functionality but one has to do with user experience and one has to do with performance so it's a very clear reason search the main reason that we're building say is because the current layer one blockchains the current like a monolithic or app specific chains or l2s and rollups blockchain offerings for infrastructure today do not serve to build a really strong exchange exchanges have unique needs they need really low latency they need high throughput and they need to be able to have the optimizations for a decentralized exchange and a general purpose l1 blockchain doesn't meet that and that's why we haven't seen defy take off in a real way because what we need is to be able to do things like you're talking about surge and defy in on chain but make the same performance and execution as you get an essentialized exchange and um dy dx has been a pretty good perpetualist protocol and has taken off as far as kind of the biggest defy on purpose protocol to date but even dy dx doesn't have the performance that you would need and it has centralized concerns around its operations and that's why they're actually decided to move and build their own l1 on the cosmos tech stack with their v4 of their product but the main reason that dexes haven't taken off and for specific types of advanced trading like perpetual trading or options or futures markets things of that nature is because the performance on chain doesn't allow for the same type of user experience as you get on a centralized exchange and that's exactly what the founders j and jeff of say we're looking to build was a purpose protocol on chain and they realized that everywhere they looked didn't provide the right infrastructure to actually build that product and so then they kind of thought from first principles what is the biggest need and where can we provide the biggest opportunity and that was building a layer one blockchain specifically for trading and dexes and then that's the first part right performance and then the other part is user experience and i would say that many users aren't looking for super high performance or doing advanced trading or futures trading maybe they just want to do basic spot trading and a lot of people that are entering the market come in through a centralized exchange and they might be novices to crypto and they're getting their their feet wet because oftentimes centralized exchanges or centralized mediaries are the ones that are the fiat antramps and they provide a really seamless user experience and i also think that that's something that we can change and defi is making it a lot easier to get hands on to custody your own assets and then be able to trade it's not that hard to trade on osmosis right and to get your funds into cosmos station or kepler wallet but that's not that hard for us you and i search because we've been doing this for years and it's like the back of our hand but for someone that's completely new to the industry we still need to make better education and make the user experience even more seamless so i think those are the two reasons that centralized exchanges still have such a large market share and so much activity but we've seen that that market share continues to shrink as we get better infrastructure and we provide better user experiences for noobs and ogs alike 
+
+Citizen Web3: 
+you know what done i totally hear you and i totally concur with everything you say though still when you say that one thought keeps on going in the back of my head and before we get a little bit more into decentralized order books one thing i have to still ask you which you kind of already been talking about that but it's still there basically what you're saying what i'm hearing at least right is that users are ready to give up their security because they don't want responsibility but isn't that the whole point of decentralization right you need the responsibility and if we are ready to take on more responsibility as users as human beings because we're not talking just exchanges we're talking dowels governance political things and so on and so forth then we can get rid of third parties but by the looks of it what the market keeps on telling us time after time starting with mount gox and finishing with ftx is that users not ready though don't want that responsibility they would rather like you say have good ui easy on hand mobile phone application or whatever and if they have that they don't care about the security of their own funds that's what i'm hearing and that's to me a bit saddening because we are all here to do one thing together to get rid of those third parties right and to say hey fuck you guys let's build defy let's build decentralized finance right 
+
+Dan Edlebeck: 
+yeah actually i would argue against that surge i think trading volume on decentralized exchanges has only continued to increase over the past several years so the trend is going towards us relying less and less on centralized exchanges and more and more on self-custody understanding how to control your own keys and being able to participate in defi so i think the trend is definitely a one direction trend but to your point centralized exchanges still maintain the majority of the trading volume and are still the biggest in market share but i would say that we're trending in the right direction and when you say we and you say that we should take custody of our own funds and we should learn how to manage our own keys that's an unrealistic expectation for everyone to do it with the user experience that we have today yourself and myself that grew up with the internet and are much more entrepreneurial and are looking for technological solutions this is something that's far more native to us we need to think out of our own kind of bubble and think about the nearly eight billion people on the planet the current system as it's set up with private key management with onboarding into crypto is still not good enough to be able to get billions of people using crypto so either we decide to stay kind of our own little independent bubble and not make for a better user experience and say that if you can't figure it out like tough luck or the industry evolves and provides solutions for people that make sense while they can still participate in defi custody of their own assets but we improve the user experience for doing so i don't think there's a real middle ground there
+
+Citizen Web3: 
+I totally agree i'm just gonna leave like one thought here that i would like to share that and i could give two examples and i think i'm gonna give both of them one of them is from a song a punk song and it's about weapons and about tanks and one of the lines from that song goes something like if you translate it to english something like there is no place for tanks in the museums as for toys because then kids would not know of their existence and i think it's a very good point to what you say you say like in one sense oh i think if we were told those things earlier on and i think this is of course an educational problem and okay here we come to the whole education issue right of the industry and how we communicate with the outside world as the industry you're right of course this is very biased what i'm saying but as somebody who has been using it for so many years i'd be honest with you i find it much more difficult to find the simple banking application than osmosis and i'm absolutely serious like no joking around i think that the banking up on my phone which is actually a european bank you know i don't think it's private information here but there we go is a lot worse in terms of ui and a lot more complex because i need two permissions i need some signatures some second factor that uses sms and it's like wow it's a whole pain in the ass much easier to use a ledger or a kepler of course this is biased and i totally agree with you i think that's the exception for me 
+
+Dan Edlebeck: 
+i think that's the exception Serge
+
+Citizen Web3: 
+damn damn
+
+Dan Edlebeck: 
+i think that's the exception i think you can measure it in the amount of clicks i think that the amount of clicks and the understanding that like your assets that are on osmosis then when you draw them you would draw them to another chain and using a hardware wallet this is something that you've been doing for years man this isn't that something you should expect someone that you meet on the street to be able to do and so if either we don't evolve and try to create better user experiences and we don't try to create better infrastructure for defi to thrive and we will continue to kind of stay a niche bubble or we provide solutions that are better user experiences and a good analogy too is and i really like that quote about tanks either being toys or in museums that we need to embrace them in the web to analog no one keeps very very few people and it's a very kind of specific group of people that do this keep all of their assets in their own custody in their house specifically like in cash or gold or something stashed away in their own physical possession that's not how we operate and there's a huge security liability in doing that there's someone that could come with a wrench so that's a huge transition to custodying your own assets when it comes to crypto so we need to think about how self custody works how we can better improve multi-signature usage of our own funds and we need to get better solutions for that if we're going to usher in the next billion people into crypto 
+
+Citizen Web3: 
+totally i mean i agree with it i do still think that when you once a person and i have seen this many times i don't think it's that biased to be honest i have seen many many users that have been using crypto for a while finding it a bit difficult to go back to the banking system and to understand that they need to call somebody you know in order to sometimes to put a transaction through but regardless of all that done in your opinion let's move to the next step like you say we need to improve the industry i totally agree what is the solutions that you think are applicable here and what does say as a blockchain offer in terms of those solutions to users in order to onboard more people to defy if you could talk about that please i would be very grateful 
+
+Dan Edlebeck: 
+awesome no you're a hundred percent right sir so i first off would say that we're kind of building on the shoulders of giants i think that ethereum has been a very net positive for the entire crypto ecosystem and has kind of showed us what the potential are for smart contracts and things like uniswap gaining significant traction and actually having greater trading volume than coinbase for a while shows that people are willing to embrace defi and then layer two solutions like arbitrum and optimism and eventually zk rollups are also very positive in helping ethereum to scale but i think we're also very much cosmonauts and we believe that instead of relying on one blockchain that is going to be the centralized hub and can get congested when there's a lot of activity on the chain or you're losing security when you roll up to a second layer chain you can have independent blockchains and they can all function and they can scale horizontally as every blockchain can be continually spun up and i think the cosmos vision and the the thesis is starting to get borne out and getting a lot of traction now i think when people think of like greater crypto ecosystems and the thriving ones people think of ethereum people think of the cosmos on the internet of blockchains and people maybe think of a couple others maybe avalanche or selana and some of these but cosmos has really solidified itself as i think the right infrastructure for kind of where the industry is moving and where say where we find ourselves is actually kind of in the middle ground between a general purpose monolithic layer one like a selana or a aptos or a ethereum and application specific blockchain like osmosis or dydx we find ourselves in the middle which we consider ourselves a sector specific blockchain so we're not a just a application specific blockchain for one application we're a general purpose we're an l1 blockchain that is not general purpose for all use cases but it's optimized for trading and decentralized finance and so why is that because i mentioned earlier surge building a decentralized exchange now on the current blockchain rails limits the performance and functionality of that application and we need to change that if we're going to actually bring people off of centralized exchanges especially for advanced orders so at say we're building a blockchain that is optimized for low latency and fast finality of funds and has optimizations at the chain level for decentralized finance so we can get into the specifics of those things but what we're doing is building the infrastructure for defi to go from people using amm's in a basic swap on uniswap to seeing something actually compete with like binance or with wells fargo or big trading applications that we use in our lives today and being able to bring that all on chain 
+
+Citizen Web3: 
+you mentioned binance there and i think over the course of the last week and well this has been recorded for everybody who is listening just after the ftx crash because of course until this will come out the editing will take a couple of weeks but obviously right now the whole binance success you know the binance throne the binance not thrown but the right word is the the place in the hierarchy has gone up because you know they're deemed to be more secure what's the worst success story why are they so successful why is everybody always mentioning binance comparing themselves to binance whether you're the central is not everybody's talking about binance what is the big deal with them in your opinion 
+
+Dan Edlebeck: 
+well i think that this is nothing new right binance has been an industry leader and giant in crypto really since the exchange took off in late 2017 and i think that they've done a lot of things right i think uh cz has worked to be a good leader and he's been very vocal in our industry he's an og in the industry i think getting into bitcoin and trading it in 2013 and built his career through the industry but binance is the best infrastructure to date to be able to trade advanced order types like perpetuals or to have futures and it's has the best user experience as far as front end like you mentioned earlier surge like a mobile application these things are so crucial if we're trying to bring on many users then we need to adapt and find out how they like to interact and what are the types of applications they're going to use and mobile has been the biggest push in growth of our industry over the past several years and binance has embraced that very effectively and binance has built up a lot of funds for a treasury for security and being able to backstop any uh you know losses or things they experience on their exchange so they position themselves well but what we just talked about at the beginning of this conversation don't trust verify and don't rely on one centralized company don't rely on one centralized player we shouldn't be relying on cz and we shouldn't be giving all of our trust to binance the reason i'm comparing any decentralized exchange to binance is because binance provides the best user experience and provides the best performance on an exchange And so if we're going to get, whether it's advanced traders or normies to use DeFi instead of Binance, we need to be able to match the performance and the user experience that Binance has kind of set the bar really high as an industry standard. 
+
+Citizen Web3: 
+And on that note, you have mentioned that, say, is optimized for that. And you mentioned an infrastructure. Can you talk a little bit more, maybe, more specific on what is that optimization? Is that like actually about the infrastructure? Is that what it's about? Is that why, in your opinion, SEI could have that advantage as a decentralized exchange, as a DeFi protocol? 
+
+Dan Edlebeck: 
+Yeah, so to my knowledge, the fastest blockchain on the planet to finality. Right now, in our test net, we are seeing around 600 millisecond blocks. And in a DevNet, we've seen blocks as low as 300 milliseconds. And so SEI is a layer one blockchain built with the Cosmos SDK and Tenor Mac consensus. But we've highly customized Tenor Mac consensus to optimize for trading applications. So we've worked on minimizing block times by having optimistic block processing. 
+
+So validators can process blocks in shorter time. We've worked with Zaki from Inclusion and Somalia. We've worked with Marco from the ICF. 
+
+And we've worked with Jake Gadokan from Notional and a lot of other kind of key players in the industry and giving us feedback as we customize the chain to optimize for the trading. So we've minimized blocks to a 600 millisecond block. And at that, you're able to have performance very similar to centralized exchanges. And funds are settled in one block. 
+
+So funds are settled to finality in 600 milliseconds. And then we've also implemented things that optimize for exchanges. So we have an order matching engine built into the chain. So any exchange that builds on top of SEI can leverage that. And there's an order book module, a centralized limit order book module built into the chain so that any exchange that wants to leverage that order book can also leverage that on their application. So we're building the blockchain specifically for trading and DeFi. And that's where I think that we've seen a lot of traction coming to SEI. 
+
+Citizen Web3: 
+One topic that I would love to touch on, at least briefly, talking if we decentralized exchange engine is of course, MAV or minor extracted value. And first question, can you elify for everybody what on earth is minor extracted value? Because I think a lot of people hear it, but what is it? 
+
+Dan Edlebeck: 
+Yeah, MEV, minor extractable value or maximum extractable value. Essentially, one issue with trading on chain is that everything is transparent. You can see people making orders on chain. And there are validators that will work to see the orders that are happening per block and try to time or place orders based on the orders that are coming in that they're going to validate in that block to be able to front run potentially the trade and put their bid before the other bid that comes in and then as the other bid comes in, then put a sell after that and extract value by front running or sandwich attacking these orders. This has been a big issue across all of DeFi, became a big issue with Ethereum, but any decentralized exchange that any decentralized trading environment on any blockchain is going to face these issues. And that's something that we're very cognizant of at SEI. 
+
+And we actually have the opinion that not all MEV, not all minor extractable value or maximum extractable value is net negative, but there are types of MEV that are harmful and take value away from users and especially sandwich attacks or front running, those are net negative. And so we have built in a module called frequent batch auctioning. And so how this works, Serge, is we've actually in the blockchain, we've customized the consensus of the chain so that let's just say Serge, you're trading on an exchange built on SEI and it's leveraging frequent batch auctioning and you want to buy Adam at $15 and you have a limit order to buy Adam at $15 and I want to buy Adam at $14. And within that 600 millisecond block, it has to happen in a very short amount of time, the price of Adam trades both of those numbers. Well, you will be able to get your Adam $15 and I'll be able to get my Adam at $14 because we both put limit orders up for the price that we were going to buy it at. But the persons that were selling the Adam, if they were the ones taking our orders, so we put the limit orders, so we were the makers and then the takers would actually get all of the same price. So they would actually get the order filled at $14.50 and you'll never have that much volatility in a 600 millisecond block. But it's a great example of how we've minimized maximum extractable value, MEV, by building a frequent batch auctioning into the chain so that anyone that's providing limit orders are still able to get filled at the prices that they requested. But the takers that are on the other side of the trade are getting filled at an average price per block. 
+
+Citizen Web3: 
+I see. And I was actually going to say that that was my second question to you, whether you think that MEV is a bad thing. I mean, it's kind of an opportunity that the DeFi market has created. 
+
+I guess it's a bit hard to say it's a bad thing because just some actors can use it in a malicious way. But there is an example of how you guys are actually turning that around. And as far as I know, there is a lot of exchanges of solutions, sorry, not exchanges, but of course, most of the solutions are on the exchanges that are playing around with that to turn around that opportunity. It was like with flash loans, right? I mean, flash loans were like an opportunity and some people used it to do bad things and some people didn't use it to do bad things. 
+
+So it was like a matter of, I guess, what we're all there for. 
+
+Dan Edlebeck:
+I'd like to touch on that real quick. 
+
+Citizen Web3:
+Please, please, please do. This was what I was wanting to talk about.
+
+Dan Edlebeck:  
+Awesome So I don't know, Serge, if you know about Skip, skip.money. 
+
+Citizen Web3:
+No, please tell me. 
+
+Dan Edlebeck:  
+They're a really impressive team. So they're building a lot of solutions for DeFi across Cosmos and they're building their own Cosmos App Chain specifically to do flash loans and improve MEV. And so we partnered with them and a few people on their team, Barry and Magmar are just really, really smart guys. And I think that they recently also closed the funding round, but we partnered with them to implement Skip on, say, and for different protocols or exchanges that want to build on, say, get leverage Skip for MEV. And we can customize, they're providing lots of different MEV minimization or execution tools to provide better user experience and better price execution for all traders on exchanges. So I just want to give them a shout. We partnered with them at SAE and they're providing some of the best kind of solutions to MEV right now. Really, really smart guys. 
+
+Citizen Web3: 
+Nice. Well, definitely maybe look the guys up and try to get them on to talk to them about those things in depth. 
+
+Dan Edlebeck:  
+Yeah, I recommend that. 
+
+Citizen Web3: 
+Thank you. Thank you, Dan. Like, the more or less the question was on that note on that level, well, in the direction, I guess, what do you think in general about all the opportunities or all the situations that DeFi creates like MEV, like flash loans and other things, because a lot of people are very quick to deem them as evil, a lot of people and a lot of not just outside of the industry, there's a lot of people within the industry, actually. And I think people like some are a good example where they were like, Oh, no, this is really bad. 
+
+This is why we need central as exchanges, because there we can solve those things and those things don't happen. The question is this, do you think that all those things are really bad? Or are they just like opportunities on the market that some people take advantage of, I guess? 
+
+Dan Edlebeck: 
+The answer is it depends, right? Yeah, I think that if there's a CEO of a large centralized exchange, and that person is beating their chest saying that DeFi is all bad, and that's the reason that they should all be trading on their exchange. Well, I think we should question that person and their intentions and why they have that message. But DeFi provides a lot of unique opportunities, but doing everything on chain also has its inherent challenges, right, Serge? So there's solutions to these challenges. These are not insurmountable, but front running someone's trade, in my opinion, is net negative. It ends up hurting the end user and giving his worst price execution while someone is extracting value out of a protocol. That's not a good thing. Or creating an exploit and taking advantage of a DeFi protocol. 
+
+That's not a good thing. And there's ethical ways to find errors in protocols and trying to write them. And then there's unethical ways of doing it. So there is net negative things that can happen, but maximum extractable value or minor extractable value, depending on how you look define it. MEV is a complicated subject that has net positives and net negatives, depending on how it's executed. 
+
+Citizen Web3: 
+I guess it's one of them, like, endless questions. And I'm apologizing for, but I'm not apologizing, but I'm going to be politically incorrect here. It's like running with, if you don't have a leg, but then you become a runner and you put a metal leg in a robotic leg, is that fair or is that unfair? Because you kind of become quicker than the person with legs. And, you know, it's kind of the same thing. We're seeing like, oh, there is an opportunity to do something that other users don't see, but I can see that opportunity and I will go and do it. 
+
+But of course, I agree with you. If I'm a CEO of a centralized exchange, then is it very fair that I'm using that opportunities and hiding it from everybody else? I guess one thing is when everybody sees the opportunities and then I'm the first one to take that opportunity on. But another thing is where nobody sees those opportunities and then I'm still exercising my power to use those opportunities. 
+
+I understand where you're coming from, definitely. Dan, one thing you mentioned is middle ground between Ethereum and Cosmos. And of course, we at Citizen Cosmos have long been fans of not just Cosmos, but then we've been talking about it. We've been for over a year, for much longer, have been saying that we will interview guests from Ethereum and we have episodes recorded with Gitcoin, with a lot more other projects like Darkfy and so on and so forth. But that middle ground in the last few months has seemed to become very popular, especially with Bankless recording and then Unchained. And do you think that middle ground Ethereum Cosmos is the way that in your opinion, the blockchain scene is going to develop? Like we're going to have finally, are we going to see different ecosystems talk to each other? And are we finally going to see not just talk to each other over a bridge because that's been happening for more than a year, more than two actually. But I mean, communities really working together and really putting beneath their access of war and saying, my blockchain is bigger than yours. And hey, let's work together and build something together. Do you think that's finally going to happen? Are we going to see that in the near future? 
+
+Dan Edlebeck: 
+When you say these ecosystems kind of merge or come together, I guess it depends on what you mean by that, right? I think that there's kind of this whole narrative, right? Like after Ethereum came that there are all these like competitive layer ones and they define themselves as like Ethereum killers. And initially that was like Neo, which was Ant shares, the Chinese Ethereum. And obviously that didn't take off and there was ontology. They kind of position themselves as a direct competitor to take away market share from Ethereum. 
+
+I don't think Cosmos has ever really positioned itself as that. It's a different approach to smart contracts where layer ones can seamlessly interoperate and communicate, but are all independent blockchains versus having kind of one monolithic chain that everything settles to and the different applications built on top. But I do think that to your point, Serge, the visions are getting a lot more aligned. And that's why Sonny and Zaki are speaking on Bankless and talking to the guys that are kind of like big Ethereum homers because the visions are starting to come together, right? Whereas Cosmos is thinking about unite like a universe of independent blockchains that all interoperate and kind of like an internet or the Cosmos. And then Ethereum is thinking about one secure chain that everything settles to, but then you're having layer two rollups that optimize more for scalability and throughput. The ideas of the blockchain, Charlema and kind of how to come to the unique solutions of them are starting to converge. Whereas how funds are settled and what is the like ultimate like data availability and settlement layer have kind of different perspectives. 
+
+The idea of how it's all executed is starting to coalesce. So I think that we'll see Ethereum continue to thrive in that ecosystem. I think the Cosmos internet or blockchains ecosystem will continue to thrive. And we do have like you said, bridges and ways that the two kind of ecosystems can communicate right now. But we'll see if something like Ethereum was able to natively implement like IBC. I think that's where like the opportunity gets even way larger. 
+
+Citizen Web3: 
+Yeah, it'll be crazy. I mean, I've seen some teams in Polkadot working on native IBC and there's some progress in there as well. And I think I've seen it on somewhere else, but definitely in Polkadot. And definitely there was another mention of that. 
+
+Dan Edlebeck: 
+Yeah, and NIR is implementing IBC. 
+
+Citizen Web3: 
+NEAR, definitely NEAR. 
+
+Dan Edlebeck: 
+Okay, access their own blockchain, OKB that's implementing IBC. And there's several teams like several ecosystems that are looking to implement IBC. And I think that over time, IBC is going to become a really important development standard for interoperability. 
+
+Citizen Web3: 
+It's amazing. It's amazing, you know, feeling that we were there knowing that we are all here right now. Yeah, it was NEAR. I was thinking NIR and Polkadot are the ones I was thinking of. 
+
+And of course, NEAR, by the way, has been talking about implementing it completely on a protocol level as far as I understand, right? But I might be getting something wrong here. Please do not take my word on that. Dan, what about and my usual suspects of things of as in feel free to answer or not. But that's what I usually say. 
+
+What are your thoughts still on decentralized VPN solutions? And I am not going to be putting you down on the spot. And again, I can understand totally if you refuse to answer or you cannot answer for some reason. I mean, considering a lot of our listeners are in the Cosmos ecosystem, and Sentinel has been a big project for a long time, and a lot of us have been around it, would love to hear if you are able to give your personal opinion on DVPN as a solution in general, and on on Sentinel is and what's going on with them, because not much has been heard over the past year or so really from the project. And I would love to hear more, to be honest. 
+
+Dan Edlebeck: 
+I'm still very passionate about privacy solutions. And I really think that we need to have self sovereignty online and everything I've talked about in your past podcasts still are completely true for me. And I think that the architecture of having individual residential nodes offer their bandwidth and be able to receive income for doing so while hosting their note on the blockchain is a really great design. 
+
+And I think that it's a great use case for blockchain, very bullish on on that architecture and that development. And I always will be and Sentinel as a project myself and our whole team at Exidio decided to leave working on Sentinel at the beginning of this year. And I also publicly shared that with the Sentinel community. 
+
+And things did not work out with the Sentinel Foundation. And if they weren't going to support kind of the development and continued work, then we decided that we want we are very talented. And we have a lot of energy and enthusiasm. We want to continue to drive the crypto industry forward. So we want to put our time and energy in places where we're going to be able to make a big impact. 
+
+So we decided to go in our independent directions. And if you don't know Peter, that was the CEO at Exidio. He's leading operations as a COO at Archway, which is another important project in the Cosmos ecosystem. And several of the teammates at Exidio are not working at SA. And so we've all kind of continued to develop our individual paths and are continuing to build out in the cosmos and and you know, realize the cosmos vision. So we decided to bring our talents to places where we can make the biggest impact. 
+
+Citizen Web3: 
+And what about the centralized order books for bandwidth? Are we going to see that, you know, big specific blockchains just for putting bids on different bandwidth from different nodes connected to the blockchain? Are we going to see that one day? 
+
+Dan Edlebeck: 
+Well, I mean, that is the design for Sentinel right now, right? Like all the different nodes are offering their note at different prices. 
+
+Citizen Web3: 
+Yes, yes. 
+
+Dan Edlebeck: 
+If you're going to offer bandwidth at a price and you want to have a really high price, you might get more or less users depending on the price that you set. So yeah, it is kind of already a marketplace for bandwidth. 
+
+Citizen Web3: 
+I was just thinking to be honest, like a lot of the times we work on different projects, but at the end of the day, you're kind of trying to solve the same things, just trying to make things more resilient, right? 
+
+When it comes to blockchain, DeFi and a lot of those solutions in their goals are very similar, right? Just to take out the middleman, make it more resilient, try to take out the surface as much as possible surface attacks. 
+
+Dan Edlebeck: 
+And self sovereignty. 
+
+Citizen Web3: 
+Yes, self sovereignty. There is censorship and self sovereignty, of course, to talk about those things, the more the better. I mean, of course, the less censorship, the better. Not the more censorship, the better. 
+
+Dan Edlebeck: 
+We'll keep erasing as the system. 
+
+Citizen Web3: 
+Erase against the machine. Damn right. 
+
+Dan Edlebeck: 
+Yes sir
+
+Citizen Web3: 
+Damn right. Damn right. 
+
+Dan, going back though to say one more thing I did want to ask you about is the name. And of course, there is the very the Facebook thing, right? And there is say they are not the same. 
+
+Dan Edlebeck: 
+So when you say the Facebook thing, you're talking about the block chains that have been built of some of the developers coming from Facebook. And those two block chains are building on the move language. And those are Aptos and Sui. 
+
+So Aptos and then Sui's Sui. Right. Okay. And say is SEI. 
+
+So similar spellings, but we came up with say before Sui had gained any traction or before it was established. And when I say we, I mean, Coney Daddy. Coney Daddy was the initial guy that came up with the idea of say as we were exploring lots of different ideas and getting kind of creative input. So yeah, he's the man. And I think he's going to start getting a lot more active here in crypto in a while. I know he's taken kind of a personal break and he got married and had some big personal development. So a lot of happiness for him. But yeah, so say is actually the name, and you can Google it, of one of the fastest whales in the ocean. 
+
+It's a deep sea whale. And so that really aligns with kind of what we're building at say, we are building a blockchain for deep liquidity and better trading experiences on chain. And we're doing it with fast execution and being able to match the user experience that you get on centralized exchanges. So it's really about speed of execution and quality of execution with like deep liquidity and being able to trade with size. 
+
+Citizen Web3: 
+I didn't know about the whale thing considering a few of my friends are oceanologists and I live on the ocean. And next to me, there is like some whale routes. I think I should be ashamed of myself and 
+
+Dan Edlebeck: 
+get up on your whale education, sir. 
+
+Citizen Web3: 
+I know, man. If any of my friends are listening to this, I'm really, really sorry. 
+
+I will brush up on my whales about Connie Daddy. It's ironic because we recorded the episode with him. I think it was literally days before he was getting married. 
+
+Dan Edlebeck: 
+Nice
+
+Citizen Web3: 
+And then he disappeared and I was like, damn, what did I do? Where is the man? Where is the man? When is he coming back today? Do you know something and tell us when he's coming back? Do you have a date for us? 
+
+Dan Edlebeck: 
+No, I can get away from crypto too long. 
+
+Citizen Web3: 
+I love that answer. I love that answer. 
+
+Dan Edlebeck: 
+The cosmos always brings you back. 
+
+Citizen Web3: 
+Well, Connie Daddy, if you can hear us, we'll all miss you. 
+
+We'll all need you out here in Cosmos, you know, so come back to us. Dan, going back to Sey though and to decentralized exchanges and is talking about like app specific blockchains. Well, you mentioned sector specific, but this is kind of like, I guess to resume what we spoke about, the whole vision of app specific blockchains. In your opinion, how deep can that go? And what I mean by that is we have like, say, which is an order book basically, can that go deeper in terms of levels? Are we going to see a blockchain not for order book, but I don't know, only for buy beads. 
+
+Now I know it's crazy, but can that go even further than the rabbit hole? Or is that like the app specific we're talking about is what you guys are doing? Well, sector specific. 
+
+Dan Edlebeck: 
+Yeah, so I wouldn't even say that it's being too prescriptive by saying that say is an order book chain. We built an order book module into the blockchain, but this is a blockchain. It's a layer one blockchain optimized for trading. So there will be automated market makers on se, there will be hybrid AMMs and order book exchanges. 
+
+There will be perps, there will be futures, there will be lending. We're building on a complete DeFi ecosystem. And actually there've been 90 teams that have committed to building and launching their protocols on se. 
+
+And that goes across the gamut of different types of protocols. On DeFi. And these are teams coming from Solana. These are teams coming from near. 
+
+These are teams coming from Polkadot teams coming from Terra that we're building in Terra teams that are native Cosmos teams that are coming up and launching new products teams that have already deployed on other Cosmos chains and are going to deploy their protocol on se. So we're looking to build a robust DeFi ecosystem so that you can think of it more like the DeFi ecosystem that's on Ethereum, but with better speed and better execution and better optimizations for these applications. And then to your point, Serge, if se is more kind of like a general purpose or monolithic layer one compared to a very specific app chain, it's more in the middle and occupies more of the composability that you get from a layer one and the ecosystem built on top of it, then there are opportunities for layer 1.5. So these are more specific optimizations that can be made for applications. So you could have a layer 1.5 for predictions markets. 
+
+And actually that was just announced in their building on se, which is called cargo. And so if you want to build a very specific product like a predictions market, but you are very specific about football within Portugal and you want to make a predictions market on the Portuguese football league and only you have that kind of context and you're really interested in that like subgenre and you have like, it's almost like a subreddit, right? Like you have that unique community and you want to build a predictions market for that. You could build that and layer that build it on top of cargo, which is a layer 1.5 for predictions markets. So cargo doesn't pretend to be an expert on all the different gamut of different types of predictions markets across anything in the world. 
+
+It could be politics, it could be your own neighborhood, it could be sports, it could be trends in the healthcare industry. The applications are too far and wide and they're not experts in all those. They're building a infrastructure module, a layer 1.5 to be able to build predictions markets on top of it. So to your point, yeah, I do think that there will be more specific kind of middleware layers for direct use cases. 
+
+Citizen Web3: 
+Definitely, definitely. I think if we look at the IT industry, we can see that that's computing. I mean, that's how it develops. So it becomes completely modular and it is still becoming more modular as we progress. One last question and then like a blitz and a promise, I'm going to let you go a promise. When airdrop, sir? 
+
+Dan Edlebeck: 
+There will be an airdrop for the state of blockchain. There's several ways that you can get say tokens. One is if you're staking Adam, one is if you're staking the Solana token, one is if you're a part of Terra and holding Terra before the collapse, right after the collapse. So there have been several announcements that have come out on airdrops. But then another way that you can start earning say tokens is by participating in our testnet. So we have the Saynami testnet, which is an incentivized testnet. We've actually committed to the Say foundation is committed 1% of the total supply of say tokens for participants that are continuing to stress test the network and get involved and build the network. 
+
+And there's been over 70,000 unique wallets that have joined the Say, the Saynami testnet and partake in missions and help to stress test the chain and get involved in using protocols that have launched on the Say blockchain that are going to be going live on our mainnet. And then you can also get involved by being a part of the growing ambassador community. Shout out to everyone that's participating in Atlantis. So it's a, everyone is trying to get to the mecca that is Atlantis and we're all growing and kind of evolving in this DeFi ecosystem. And this is an international growth program where people that want to kind of level up and get experiences in Web3 and kind of grow their career in the crypto space can take on more responsibility, get recognition from the team, even get shout outs and retweets from same main account and kind of build up their skill set and continue to get promoted through the program to the point where they actually get full-time jobs in Web3. And there's jobs within the Say ecosystem and there's jobs across. 
+
+We're seeing kind of a very flourishing DeFi ecosystem and it's a lot of it's happening in Say and I'm excited about that. We have over 100,000 active members in our Discord. I think there's over 70,000 now following on Twitter and Atlantis is growing. There's over a thousand people that are participating in Atlantis and want to continue to grow in Web3. So there's lots of ways to get involved and ways to earn Say tokens. You have questions hit me up, but I'm pretty stoked about what we're building and the community I think is seeing a lot of the traction starting to come together. 
+
+Citizen Web3: 
+Definitely guys, if you're listening out to this, reach out and check out those opportunities for sure. There will be links throughout the episode and where we will promote it so you can contact Dan if you have questions. I guess not maybe not Dan, but if you have reached Dan, then cool and Dan is reachable. I do know that. He's a real human being and definitely the community channels as well. Dan Since we've done the Blitz with you several times already and of course things change, but I have asked you those questions before already, but I will ask you one thing out of those three questions because I've asked you two of them before, so I'm not going to ask you them again, but it will be like this one I didn't ask you. 
+
+Is there any one person out there in your opinion doesn't have to be from crypto necessarily that you would recommend for everybody to follow in order to succeed in doing what they're doing, whether it's self-realization, whether it's building some product or whether it's anything else, somebody that could be inspiring in your opinion and help anyone to achieve doesn't matter what it is. 
+
+Dan Edlebeck: 
+Oh wow, it's a really good question. That's a deep one. I think that if you're looking for spiritual development, there's a lot of really good people that are kind of like pushing that forward. I think Tara Brock is someone that I really love. She's a spiritual leader and a meditator and has a very positive message, so I highly recommend looking her up and we should put some of her website and information in the show notes. And then in the crypto ecosystem, I know he's running a fund, but I think that he has very wise takes and it is kind of a leader that'd be Ari David Paul and he leads Block Tower, but I think that as a fund manager and as kind of just a broader perspective in the crypto space, he takes a very mature stance and is definitely someone that's very wise for his age. And then I think Vitalik is a great steward of our industry and if you're not following Vitalik and reading his blogs, that's something you definitely should be doing as you're growing in crypto. 
+
+Citizen Web3: 
+I think those are very, very good advices. Actually, we will definitely check the Block Tower guy because I haven't heard of him. Dan, thank you very, very, very much once again. I have to say it. Let's do it again. 
+
+Dan Edlebeck: 
+I love it, man. This is great. Serge, props on all the growing of Citizen Cosmos. We're going to continue to grow. The Cosmos continue to grow and you better be at Cosmoverse next time. I'm not going on if you don't commit to going on Cosmoverse. I'm putting the show. 
+
+Citizen Web3: 
+I promise. I promise. I promise. 
+
+Dan Edlebeck: 
+All right. We'll see you there again. 
+
+Citizen Web3: 
+Thanks, guys. Thanks, everybody. Join next time. 
+
+Dan Edlebeck: 
+Cheers. 
+
+Outro:
+This content was created by the Citizen Cosmos Validator. If you enjoyed it, please support us by delegating to Citizen Cosmos and help us to create more educational content. 

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <>
       <div className="my-4 flex items-center -space-x-2 md:border-t border-primary pt-4 ml-4 md:ml-0">
-        <Link href="https://www.citizenweb3.com/about" className={size} target="_blank">
+        <Link href="https://citizenweb3.com/#about" className={size} target="_blank">
           <div className={`${size} bg-cw3 bg-contain bg-no-repeat hover:bg-cw3_h`} />
         </Link>
         <Link href="https://github.com/citizenweb3/validatorinfo" className={size} target="_blank">

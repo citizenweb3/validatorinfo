@@ -3,7 +3,7 @@ import { Abi } from 'viem';
 import logger from '@/logger';
 import {
   AztecChainName,
-  contracts,
+  getContracts,
   stakingRegistryAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { readContractWithFailover } from '@/server/utils/viem-client-with-failover';
@@ -25,7 +25,8 @@ export const getProviders = async (
     return new Map();
   }
 
-  const contractAddress = contracts[chainName].stakingRegistryAddress;
+  const l1Contracts = await getContracts(chainName);
+  const contractAddress = l1Contracts.stakingRegistryAddress;
   const abi = stakingRegistryAbis[chainName] as Abi;
 
   try {

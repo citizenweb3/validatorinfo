@@ -1,0 +1,648 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/notional
+
+Episode name:
+The Great Chinese Firewall, Sand and Governance with Jacob Gadikian
+
+Citizen Web3 
+Guys, welcome to another episode of the Citizen Cosmos podcast we have today. I want to read this out. I want to read it. I prepared this. I prepared this and I'm going to read it out. Wait, Jacob, the founder of Notional, a disciplined software development kitty validator. There we go. I was thinking about that name. Jacob, man, hi. I'm sorry to not give you a word, man. Hi and welcome.
+
+jacob_gadikian 
+Hey! , good to be here. Yeah, so Notional was a Uniswap airdrop and a computer that's sitting right over there and we're 20 people now. It's pretty incredible actually. 20, yeah. Yeah. You wanna hear how that kind of took off? All right, all right, all right.
+
+Citizen Web3 
+20! Woah!
+
+What?
+
+Citizen Web3 
+Yes, of course, of course, I love to I love to well guys guys guys just before we start off just before I want to say I want to say I did say to Jacob just before I hit the record button and I'm gonna say it like here I'll be honest I have not prepared shit zero questions for Jacob because I think Jacob is an amazing guy who the conversation is going to be free flow with completely So this is why the conversation the beginning might seem a little bit lost. It's not we are on track and Jacob
+
+jacob_gadikian 
+Yeah, all right. Yeah, no worries,
+
+Citizen Web3
+Please carry on with the introduction. I'm sorry to interrupt you. want everybody to know what it's like over there behind the background. yeah, all yours.
+
+jacob_gadikian
+okay. So, basically in February of 2021, several things happened. one, I left tendermint and well, I actually gradually left tournament until about June, left tendermint. I began to research DEXs, for.
+
+a very, very real world, physical commodities training product. And, since that's don't play, I'm to go into detail on that. Actually. It's something I I'm still consulting on. initially I'd looked at applying, the tools and techniques in the gravity decks. somebody along the way said, Jacob, you really need to talk to Sonny. He's like,
+
+He's building something. and he had invited me to a conference in 2019. but my son had just been born, wasn't able to attend. that was like really the last time I'd spoken to him except for once at Tendermint. And, so I sent him a Twitter DM. Hey, everybody's telling me that, that you're building something, you know, and it's Dex.
+
+And need to talk to you. He's like, you do need to talk to me. So he and I had about an hour and a half long call where he introduced Osmosis to me. And honestly, my comprehension was very low. I never got into Ethereum DeFi. Except of course enough to deploy something very amateurish onto Ethereum, which was enough to like,
+
+get me a very significant uni swap airdrop. okay. So fast forward a little bit. I had spoken to Sonny and then one day I saw that, that Osmosis was about to launch. I thought, well, you know, what is like try to validate this thing. So I threw in a Genesis transaction. our, our uptime was initially terrible.
+
+jacob_gadikian 
+I was validating from like my family's old apartment and we were getting like 80 % uptime initially. I created like just some new documentation around seeds and peers and worked on our network a bit. I got that up and made it very stable. That was actually when I first.
+
+built an open MPTCP router and linked that up to like another ISP in Vietnam. okay, like things were good. After that, I explored relaying. actually, I mean, I have it here, so I might as well show you. yeah. So this computer, was notional. This guy here.
+
+Citizen Web3
+Yay!
+
+jacob_gadikian 
+And, if, right. know if you used IBC in the summer of 21, there is a somewhere between 50 and 80 % chance that your IBC packets went through this machine. The, the original setup was, I got to be honest, was really dangerous. what.
+
+Citizen Web3
+Yeah, yeah boy
+
+Citizen Web3 
+Yay.
+
+jacob_gadikian
+what I was doing, so I had my osmosis validator and we started to get requests like, hey, can you back us up on relaying? So I did, right? So it was like myself and Mircha from Informal, Cephalopod, doing the majority of...
+
+Citizen Web3
+Yeah, yeah,
+
+jacob_gadikian
+the relaying that summer. this is actually, look, this got me down, I suppose it's now a, it's a 14 month long rabbit hole in Cosmos performance. So this computer has a ridiculously fast hard drive. It's a Intel P5800X and it didn't used to have that.
+
+That is, that's installed in a different computer now. Anyhow, this thing had a RAID in it, a RAID of NVMe disks. What I quickly learned from just sort of observing, the RAID actually slowed things down. It was an XFS RAID. And because of the stripe size on it, like the...
+
+Chain would keep trying to write all these small files smaller than, than, 32 kilobytes, but the Stripe size of the raid was 32 kilobytes. Point being, at some point I noticed that our validator. Okay. Cause I was relaying against our validator node. You should not do this. If you want to learn how to relay, please do not follow these directions. It was not safe. I was a noob.
+
+And.
+
+I had the relay running. had three or four validators on that computer. What I noticed was that when IBC packets would build up, the validators would miss blocks. And, I mean, I was relaying a fairly significant portion of the whole IBC networks packets. I was also trying to figure out why our packets.
+
+jacob_gadikian 
+would come in faster than cephalopods packets. They were trying to figure that out too. Also that was not consistent. But there was just this tendency. Turns out that Cosmos chains would just chew up disk usage. And it's only in the past month that
+
+We kind of put this issue to bed. There's still a lot more performance things to fix in Cosmos, but at least on the database layer, myself, three notional team members, and Marco and Bez from IG, we refactored heavily the database that the Cosmos SDK uses, tore almost everything out.
+
+It's 75 % lighter and introduced a new database called PebbleDB. Now, along the way, sometime around, I think September of 21, I stopped doing things dangerously and began to formalize operations. So I separated validation and relaying. Validation was...
+
+Strictly on site, relaying was strictly at Hetzner. And I think this is about the time that we really began to grow. In May of 21, I met King. He's an amazing individual, very young. King is 20 or 21 years old. And he built Moschel's engineering team.
+
+our core engineering team, like buddies of kinds, generally Hanoi university of science and technology students. and so, okay. They began to help with the process of, of formalizing our operations and like making things safer. But to do that, we had to write code. it.
+
+jacob_gadikian
+changed from infrastructure operations to
+
+Like
+
+jacob_gadikian
+Okay. At some point, right? The infra ops, they weren't enough. We could get the fastest disk in the world, literally, right? And not get much of a speed boost from it. But we knew that we were really dependent on speed, particularly for relaying. And then on faster chains, like currently we have, for example, right? Say is really, really fast. And
+
+Because that thing is so fast, there's an additional operational burden there. At most is fairly similar. It's just a very, very fast blockchain. And we began to specialize in that. And then along the way, from about January of 2020,
+
+I had been working on Juneau and, Pong, so Pong former CEO of Tendermint, amazing human. forget exactly the context, but I think it was long lines of like, Hey, Jacob, there's this chain. They're going to build it with Starport. And, we want to know if it can be the first to launch on the Starport network. that part.
+
+didn't really play out, but what I would do for eight, 12, 10 months, 10 months maybe, is I'd go between Juno and the Starport template. And I'd update the template for Starport every time that I saw that Juno had sort of fallen behind the latest versions of the Cosmos core libraries. So by fall of 21,
+
+we were doing more and more with osmosis. We were collaborating with a number of teams. Although I'm going to give credit where credit is due, even though this is as controversial as hell. Like we never really got paid by Tara, but a lot of the database stuff that we worked on, definitely came from a long string of interactions that actually included Doe Quan. Cause, well.
+
+jacob_gadikian
+one day, I don't know if you know this tweet, but, we had just launched Chihuahua chain. I was working on the database yet again. I was also drinking and I thought it would be a good idea, to, record a video, barking like a Chihuahua about the speed of the chain. And, I did, I shared it. Yeah. was good. I'm glad you liked it.
+
+Citizen Web3
+It was good. It was good. But by the way, by the way, Jacob, Jacob, just to point out, literally, well, I mean, you could say it in a way and nobody got paid by Doc one. I think kind of everybody got minused by Doc one. Like it's even if you got paid by Doc one, you still probably like got
+
+jacob_gadikian 
+yeah, that's a very good point.
+
+Citizen Web3 
+put it back anyway so yes for sure a lot
+
+jacob_gadikian 
+yeah, yeah, yeah. There was a certain recycling effect, wasn't there? I'm very lucky. well you lost. Okay. So like, we were not directly exposed, luckily. like, but of course the indirect exposure was, was still horrific. I mean, a lot of cosmos went down by 80 or 90%. and I mean, during that week, I was actually watching the chain.
+
+Citizen Web3 
+A lot. A lot.
+
+Citizen Web3 
+Yeah.
+
+jacob_gadikian
+I still suspect that chain was attacked at the same time that like the chain's economy was attacked. Really weird things happened across their validator set. you know, across the whole thing, right? So, yeah. Please, please.
+
+Citizen Web3 
+I have a question for you here because we actually, we did speak with Mercia actually and with Pong as well and we have like, with Pong spoke a while ago when he just became the CEO of Tendermint. Of course now he's not anymore. And with Mercia, we actually spoke a little bit after he started to take over the Cephalopod administrative parts as well, which he obviously hates because he's like, damn it, I just want to code, know, I just want to write.
+
+jacob_gadikian 
+Yeah, yeah, yeah.
+
+Citizen Web3
+Things I don't want to be doing all that, you know, but he's a great individual as well. I love talking to him. It's interesting that now I have like also your side of the things to add to see because he was very shy about all those things. So he didn't like say that he was involved in all of those things as well. He was much more. No, no, no, not at all. Not at all.
+
+jacob_gadikian
+He, he shouldn't be shy about that.
+
+jacob_gadikian
+He is so, look, I'll take a second here to just sort of praise Mercha, Sepulopod and what Informal did for IBC in the beginning. IBC is a very, it's huge and complex and probably needs to be right. It, it starts the key like base level of IBC is.
+
+two Tendermint chains exchanging light plants. After that, the protocol pretty much mirrors TCPIP. I mean, not exactly, but it's very, very close. And that's a good analogy for anybody who's technical looking into it, but no, Merchant was like the original Osmosis, IBC operator. And I think we started like a month after Genesis.
+
+But no, Merchant handled, it was vast. And at the time, it was really only Hermes that worked well. Since then, Strange Love has done a very deep refactor on the Go Relayer. Go Relayer version 2.0 is, it's very reliable.
+
+very performant. It really works well.
+
+jacob_gadikian 
+and, in the summer of 21 though was really, it was really just Hermes and, a lot of things broke. fact, things broke constantly. you would see channels get backed up. Nobody knew why. Well, we all had guesses. Everybody had guesses. I had guesses. Mercha had guesses. Dave had guesses.
+
+Sonny had gases, you know, but, but what we did not have, no one, mean, every, everybody at no, no, everybody at times. so I think the thing that I was right about, was like the influence of, of hardware. I think the thing that Mercha was right about, is that like,
+
+Citizen Web3 
+Who was right?
+
+Citizen Web3 
+Awww.
+
+Mm-hmm.
+
+jacob_gadikian 
+The software, in particular the Node software was a performance bottleneck for IBC.
+
+And as for Dave and Sonny, well, probably, you know, they, put a lot of work toward making sure that there was a multi-relayer configuration. that like, that it was, you know, wasn't only, cause there was Whitval in there as well. And they were working with the go relayer. One of the things that we figured out, or, or like added evidence to, was that there were situations where.
+
+Hermes would work really well in situations where the go-reel air would work really well. Actually, interestingly, you know, you asked who was right. Well, I don't think that,
+
+jacob_gadikian 
+And I don't think that like, we know to this day, what caused some of those issues. Cause what happened was we decoupled IBC from the SDK and version 43. Version 43 was pulled back and then 44 was released. Osmosis ran 44 for a bit.
+
+I helped to upgrade osmosis to 45 and I think that's when IBCD2 was released. So like what I mean is that, you know, in original osmosis, which is sort of what kicked off like the big explosion in IBC, there were many issues that I believe are probably still more or less undiagnosed. We had a bunch of guesses. I'm sure that those guesses fed into
+
+like both the IBC spec and then the IBC code. And now I would say that the big deal presently is we're integrating Cosmosm and IBC to a much greater degree. So that like, if a chain is a computer and another chain is a computer,
+
+just using a metaphor, right? And then you have applications on each computer. Those are contracts. Those contracts can talk to each other. And that's the stage where we are now. And then, okay, how did we get to 20 people? Maybe just circling all the way back to the original question. Well, along the way, our focus shifted. Initially we were...
+
+you know, mainly an operator. We learned how to relayers and run them really well. We also helped teach people how to run relayers.
+
+jacob_gadikian 
+We then began to write code and that led to a number of different engineering contracts throughout the ecosystem. like, you know, presently we support Osmosis, Juno, Pylons, Craft Economy. And we're kind of like pushing out SDK 46.
+
+across the ecosystem and working on performance. So that's how we ended up at 20 people and we will likely move to a new office this or next month. yeah, that's that piece of the story.
+
+Citizen Web3 
+And there is one thing here I would like to ask you about. gonna, it's not gonna be, I like saying devil's advocate, but this is not gonna be devil's advocate. This is me going to be like, because you spoke about focus. And I would love to not to talk about the drama, because that's really not fucking interesting. But I would love to talk about what makes you tick and what makes you motivated to.
+
+jacob_gadikian 
+Mm-hmm.
+
+jacob_gadikian
+Yeah.
+
+jacob_gadikian 
+Mm-hmm.
+
+Citizen Web3 
+mention the things I'm going to mention in a second. I'm being very, very, very dramatical here, know, we need a drum roll. So I'm joking, there's no drama here. So I'm very curious because you're one of those people who let me, you seem very genuine, you seem what you do is what you get. And I'm not talking about the conversation that we have with you now.
+
+jacob_gadikian
+Mm-hmm.
+
+Citizen Web3 
+I mean, by the way, to the listeners, we just realized the first time we interacted was almost 10 years ago, 80 years ago in blockchain, right? 2014. This is crazy. But we can talk about it in a second. But I want to say this. I think anybody who lives in the Cosmos ecosystem can see that there is this guy's Notional, there is this guy's Jacob, who is very concerned about, genuinely concerned about the governance, about how things get done, about why somebody treats somebody unfairly.
+
+jacob_gadikian 
+Yeah, yeah, true.
+
+Citizen Web3 
+and you go there and you really like, you know how to say you really want to get to the point and you don't just like create drama, you really try and justify that there is an opinion that is being treated unfairly and you're trying to show the other point of view and that is great. My question is here, like what makes you tick in this, like what makes you move forward? Because you spoke about all the, and I know this is your love of course, all the hardware.
+
+Although like this is your your heart, I understand that. But but then there is another part of you and I would love to see what what's important for you as Jacob what motivates you in governance in those like interference in trying to make things how to say fair for everybody. Like why what is the what is the push forward here?
+
+jacob_gadikian 
+you know, quite frankly, just some of the things that I've seen around Cosmos Hub development.
+
+jacob_gadikian
+Well, they're not really up to the osmosis standard. But, you know, maybe forget that comparison. I'd hate for anybody to think I'm just like baselessly shilling osmosis. Of course I am shilling osmosis, but not baselessly. I'm also shilling the hub though, okay? Because the hub, the hub's where we kicked off Cosmos. And many people probably don't know this, but I was a validator.
+
+early testnet, Gaia 5001. And, you know, I just, noticed that the hub had a much more politicized environment and that, you know, okay, let's talk delegations real quick. And, you know, it seems like this is actually getting taken care of. was, there was a validator doing some really nasty things to Gaia. ICF, quite grateful. You know, they nuked that validator. Well, they didn't nuked the validator.
+
+with through their delegation, which is the appropriate thing to do. So like I noticed that the delegations were really, really off and that builders were not being supported like the way that they were on osmosis. And furthermore, you know, if we go to something that I've spoken about many times on Twitter, there's this one.
+
+random string, no name, no contact, 20 % commission, no governance participation, frequent downtime, basically everything bad about a validator. But, you know, still had a very significant ICF delegation and, you know, I questioned that. And unfortunately, along the way of questioning that, you know, that seems to have harmed relationships and I hope that that can be mended.
+
+jacob_gadikian 
+I'm going to defend myself and saying that, no, look, those things need to be taken care of. And they were not addressed in a serious manner when I first approached them. And yes, I first approached them in a very limited semi-private context. And I was told literally to let the professionals handle it. They didn't. And so...
+
+Citizen Web3 
+I love that sentence. Let the professionals handle it. I'm sorry. I just it's just one of my favorite sentences in the world. You you step aside, son. Let the professionals handle it. The US is stepping in. I'm joking. Sorry, gone.
+
+jacob_gadikian 
+Yeah.
+
+jacob_gadikian 
+Yeah. Well, yeah, you know, that's, that's, that's more or less how I thought about it. And,
+
+jacob_gadikian 
+I also think that in a healthier environment, things like that would not hurt relationships. Things like that would, you know, people would be happy that you brought them up. Pull requests on the hub. They were not even getting looked at. But I found and eventually resolved, but only through, you know, working with the code reviewers who, you know, one of them.
+
+Excuse me of code of conduct violations for tweeting too much during proposal 69. I don't want to name names and I'm not interested in further damaging relationships. I'm interested in building relationships where like we can say, no, really there was a pretty serious problem with the hub CI where it would always pass.
+
+Like, okay, I really want to give credit where it's due. like Cosmos SDK team, Cosmos IBC team really did an incredible job around helping me get code in that touched on basically like the usability of SDK 46 because Notial invested tremendous amount of energy, money, time.
+
+in building out chains honesty k forty six and like one of the you know byproducts of that so we've put up the only on sdk forty six steps pylons and that'll soon be going to test it to me not stream allows records to be accepted we've been building craft economy on sdk forty six since all last year
+
+And.
+
+jacob_gadikian
+You know, more recently there was some highly inaccurate information spread about governance.
+
+I want to have fact-driven conversations about all this stuff. I feel that, you know, in meat space, politics have been taken over. And I'm not like, I'm not trying to hurt anyone's feelings. If I have, I'm sorry. I genuinely care about, you know, the Cosmos Hub.
+
+Cosmos overall. And I do think that because I raised these issues, Notional has been treated wrong and at scale. That is very disappointing. And I mean, we rewrote TMDB, like rewrote it. There has been
+
+No recognition of that. We have created tooling to automatically find, I think they're called, unclosed iterators in chains, which turned out to be a relatively common issue that was affecting database performance all across Cosmos. at the end of the day, if we're going to...
+
+cast aside one, I'd actually appreciate being told that directly. And like, we will just go and work on osmosis in June. It, in my opinion, just just has been like a misuse of our time. And I do not feel that it is disrespectful to point out that,
+
+jacob_gadikian 
+For example, during all the debates around Cosmosm, no, really, when you enable Cosmosm on a chain, you double it system resource consumption. This is just, that's just how it is.
+
+And there's not, you know, just, we're being very frank that that's that. And so our initial vote, by the way, like we freaking love Cosmos at Notional, know, big contributors to Juno.
+
+And it's, shouldn't say that like, I was in terms of features and functions against Cosmos on the hub. My views don't match Jay's views there. and one of the things that was repeatedly, you know, tossed out during that debate was that I was some kind of a proxy for him. He's the guy who taught me all of this. well, not all of it actually. Okay.
+
+succession of teachers and really that that's how you learn in cosmos is a very non-formal mentorship. so like, you know, it was Jay, it was Alessio, it was other members of the Tendermint team, including Dennis, you know, head of Starport. it was Jack. Jack taught me, but Jack noticed I was.
+
+jacob_gadikian 
+doing a lot of IBC traffic. Okay. He called me one day pretty much out of the blue. Like, listen, like you're doing this. I don't think you know how it works. Now like, well, I know how the relaying works. He's like, okay, but do know how IBC works? Like, no, no, not really. And he spent just about two weeks making sure I knew how IBC worked.
+
+jacob_gadikian
+Obviously, that's a really big deal. I mean, he invested a lot of time in that. And after that, was Dave from Osmosis when I, D-E-V, Dave, the large dragon, you know, when I began to work on the chain, you know, he spent tons of time making sure that I knew what the hell was going on or to the hood because I came in fairly green.
+
+I'm a former history teacher, bitcoin miner, I've learned a lot of technical stuff.
+
+Citizen Web3 
+This is interesting. I want to know your story, man. I think everybody wants to know your story because we spoke, I know I'm putting you a little bit off the track kind of thing, but this is, think, going to be pretty cool. I would love to hear how you began loving hardware, where the love was born. And again, I mentioned already to everybody and we spoke about it for a second that
+
+Citizen Web3 
+Well, I interacted with you the first time in Beecher's eight years ago when you told me your nickname on Beecher's. was like, what? Really? know. I I'm sure I'm, I don't know if the forum is still online. I don't know. But even if it's not, I am 100 % sure that if I go deep enough on the time web machine, we will, I will find interactions, mine and your Nick on the forum. Like I know that because I remember talking with you many times.
+
+Citizen Web3 
+You were like explaining some things to me when I just found the pictures. also remember that. So what is the story, man? Like, what is the like, how did you like start from where it starts?
+
+jacob_gadikian 
+Okay. Well, I mean, it's a little bit long, but I'll go right into it. I was teaching history in China. So this like private high school program where the students would eventually go to school in the United States. And it was really, really cool. got to actually do the curriculum design. but during that time, Xi Jinping became president of China and
+
+Like stuff changed quite a bit actually. I don't know a lot about Chinese politics, like, okay, two really notable things changed.
+
+the, the tenor changed a lot. And like, if you work in a school in China, you have contact with the government, like by necessity. and this school was considered to be like a pilot program. and there were, I don't know, like, you know, just mixed opinions, right? And, so that was one.
+
+And then two, screw the opinions, right? Like also the curriculum teaching style were affected and a politics course became mandatory. And actually from my perspective, I really wanted to learn about all that stuff. Let's say I'm not a, that's not my point of view, right?
+
+Chinese government point of view, but frankly, I found it very interesting. Cause one thing that did happen in China that is real, right? Is like really, really rapid human advancement at scale. That's notable and probably shouldn't be ignored. Anytime like you're looking at what China is today. I mean, you should be thinking about the mega cities.
+
+jacob_gadikian 
+you should be thinking about the advancement in human development. You should probably also be thinking about the double-edged sword, and I'm just about to actually get to that point. So, I mean, like the really negative part about this for me is that for a time, I kinda got like separated from my family by the Great Firewall. This is probably how you and I met online, by the way. So,
+
+It's also how I started to use Bitcoin.
+
+China made the Great Firewall far more strict. about my interest in hardware and electronics, I've been doing that like all my life basically. So in China, I was actually like testing and collecting all kinds of like weird and interesting Chinese electronics, because it's all made there. So you can get some really neat stuff there. And I met
+
+Along the way, CEOs of several companies based in Shenzhen, whose products I like. Two that are notable.
+
+Citizen Web3 
+So you in Shenzhen, right? You said.
+
+jacob_gadikian
+I was actually in the summer of Shanghai. Yeah, yeah, yep. And I did move to Shenzhen though. like, all right, middle of my first year teaching, that's when Xi Jinping took power. Like I said, a lot of things changed and I was, you know, for a brief time.
+
+Citizen Web3 
+Samuelson has a lot more in the middle. huh. Okay.
+
+jacob_gadikian 
+not really able to easily contact my family. There were ways to do it, of course. It wasn't like I was just completely cut off or anything. That did not happen. But it became to be difficult and certainly like we couldn't have a call like this one and we're kind of upsetting, right? I learned to build VPNs because the commercial ones like not real relapses.
+
+I wasn't really concerned with privacy either. that was sort of like a math, right? More about connectivity. like if I want to call my mom, sure. I don't want anybody monitoring that. Right. But the bigger thing is can I call my mom? You know what I mean? so,
+
+This is what led me into Bitcoin. Somehow I found out about MadeSafe. I participated in the ICO. You know, right? And then somehow, I don't remember like the exact links and connections, right? But like that led into BitShares. You may know Fuzzy. Yeah. Hell yeah. So I met Fuzzy.
+
+Citizen Web3 
+Of course, of course I know fuzzy. Of course I know fuzzy.
+
+jacob_gadikian 
+I came on a fuzzy show. think by this time we're now in like 2013 or 2014 or even like.
+
+Citizen Web3 
+I've been on Fuzzy's show as well. They're right. They're right. They're right.
+
+jacob_gadikian 
+yeah. I wonder if we talked there. Everybody. Yup. so like I was on there with, with fuzzy, with Dan pretty frequently, in.
+
+When I moved, so end of my second year teaching, I had invested in Bitcoin, really like rolled around in all the shit coins, right? Like I'm just rolling in the shit coins like, yeah, shit coins, Covered in shit, everything else. And really like I lost a great deal of that shit coin money, of course, because that's how shit coins go.
+
+Citizen Web3 
+It's I'm just I just have to say Jacob. I have to say when you say that rolling the shit coins I'm one of those people who doesn't get the like, my god. I'm like, yeah I remember that feeling. I love it Sorry gone. Sorry gone. Gone
+
+jacob_gadikian 
+Yeah, yeah, yeah, yeah, exactly. Is it? no, because I'm right. Dude, I'm right with you with that. Like, I know exactly what you mean. Yep. so, yeah, I mean, was rolling around on the shit coins. Things went pretty well, at first. And, I started to quit teaching. I moved out of Shenzhen and,
+
+had this like giant pile of weird computer parts, no plan. And I was like, I want to make open source hardware because these wallets, these private keys, if the hardware that we run the wallets on isn't open, well, we can't audit the hardware, meaning the keys are always in some way vulnerable.
+
+And there, I got about a six month like crash course in really like why hardware isn't open source or more accurately, why open source software or hardware is crazy hard. What you have are like, if you look at the ARM CPU market, people license the ARM design.
+
+Those drivers are proprietary. Intel is relatively similar. They protect things at different levels in the stack. Intel's drivers are all open, but Intel's PCB reference designs are all closed. And then certainly the semiconductor material in both cases is closed.
+
+That all of that failed and enter weird politics stuff again. My visa ran out during the umbrella revolution. So I went from Shenzhen to Hong Kong. I'm down there for a week or two. You could taste the pepper spray in the air, just about everywhere.
+
+jacob_gadikian 
+And it looked like it was going to turn violent. In many ways it did turn violent, of course. But more violent, like what I mean is I felt that it could easily get more violent than, you know, it already was. I'll throw out a couple of notable facts from that time.
+
+Let's forget the fact that police were just like straight up like, I have a tank of pepper spray, fuck you. And just like going at it, right? And I don't know.
+
+Citizen Web3 
+I know this one, I know this one. So no, no, not the Chinese one, but I know the feeling very well in other countries. So yeah.
+
+jacob_gadikian 
+gotcha. Yeah. and they were, you know, they were, were quite doing that. Additionally, there were like these counter protesters, assume, toadies, stooges, et cetera, right? Like they were doing things like, you know, juggling knives and menacing waves on street corners and stuff. Very visible and very like, you know, clear intimidation.
+
+jacob_gadikian 
+Trying to remember some of the other, I don't know if you saw photos from that time, but I was on some of those overpasses. I wanted to see it. I didn't really want to engage in it, but I wanted to know. Eventually I realized, wait, this isn't going to stop. The government offices are closed. I can't renew my Chinese visa right now. Actually, if I had stayed another week, I probably could have, but I...
+
+Like did research at a coworking space that I was working out of, and eventually decided, okay, like this is not going to work. Cause I was just there to renew my visa. was going to be a very straightforward thing. No. and I flew down to Saigon, where actually, failed again. It was similar. Like I was working on hardware.
+
+And I met a fellow, Hibak No, who actually like still working with in some capacities currently like working on routers and things. he's like, come up to Hanoi. Like, yeah, like, yeah, I think we got something for you here. Like just do it. Right. Like, okay. I actually ended up in Hanoi for, I don't know, two and a half years.
+
+back then, and that's how I ended up coming here again. This time I got stuck here for COVID and then like in the middle part, right? At one point I visited Cambodia for, get ready, the Steemit Southeast Asia meetup.
+
+Citizen Web3 
+Fantastic. I was in the Lisbon on the second one. It's years ago. I was there, Yeah, I was was top writer on Steemit for three months when Steemit first came out. I was one of the top writers for three months. Yeah. For a long, long time. Each one of my posts used to get like a way over a thousand bucks back at the time. It was crazy.
+
+jacob_gadikian
+Yeah. Really? Okay.
+
+jacob_gadikian 
+And then so you changed your work maybe I did And and like basically I was making more on steam it then Then I was doing consulting in Hanoi. I moved to Cambodia
+
+Citizen Web3 
+What was unique? Well, one second, Jacob, unique name, which one?
+
+jacob_gadikian
+For that, I've been UDAT.
+
+Citizen Web3 
+it's the same one that you used on pitchers. Right. Man, of course. Man, are you serious? Of course we spoke with you on Steam it as well. Wait a second. But I never met you in any. No, no, no. You were not in Lisbon, right? During the steam at the steam fest. Right. No.
+
+jacob_gadikian 
+Yep. Yeah. Yeah.
+
+jacob_gadikian 
+Yeah, no, I wasn't in Lisbon. And this was just a small meetup that another Steemit user made. But like me and my colleagues were writing on Steemit and like making great money with it and decided to go to Cambodia and I ended up. You check my Steemit posts, you'll find that like, I felt that there were some bugs in Steemit and...
+
+jacob_gadikian
+Maybe still, what it turned out to be, I'll be really specific. know, Steemit uses on the JavaScript side, this thing, secp256k1. The implementation, I sort of changed my view. I thought it was insecure. It's non-canonical, probably not insecure. So like there's a way that you're supposed to use that library. Steemit doesn't use it in that way.
+
+And they're very, you know, prescriptive about how to use that library.
+
+jacob_gadikian 
+that's how I found Jake, Jake one. I was researching proof of stake consensus mechanisms so that I could try to make like a replacement for Steemit and it was called Dawn. And like to be real, so like I was having mental health trouble, but I didn't know it. That's the scariest thing about going crazy guys. You will not know it if you're.
+
+really going off the deep end. I was, but I didn't know it. Probably I had undiagnosed bipolar for 15 years. so long story short, like all this culminates in that crazy thing with me stealing a giant truck full of sand and Penelping. I was delusional. like, I don't, you know, I don't
+
+precisely know how or why. I know that I felt that I needed to like steal transportation and then drive that transportation to China. These were like my overriding priorities in life, know, greater than food, greater than anything, right? And I attempted to do that for about a week. I was eventually successful. And that's probably not a very good thing.
+
+you know, nearly drove into a parade, but luckily I had no murderous intent. And, know, like, so I stopped the truck, right? It's like, Jesus Christ, there's a parade, my God!
+
+jacob_gadikian
+So then I got my ass kicked by a giant mob of people, went to jail. One of the most interesting and heartwarming parts of this story. Cambodian law is such that the truck driver would have been the one, sorry, the truck's owner. And I guess that they were different people. I'm still looking for the truck's owner, by the way. I owe the truck's owner so much. Apparently, the truck's owner
+
+came to see me in jail. He took one look at my crazy ass. No, no, this guy's messed up, just like, done. And within a day, the US embassy had come and picked me up and guy's like, I just need to state very clearly, like I love bunkers as hell. So they took me to a psychiatric hospital. There,
+
+They tried everything, but except for actually what helped me. So to this day, I religiously take lithium, but like there, they put me on every downer type of drug that you can imagine. It didn't work. I was still quite bonkers, but they got me onto an airplane. Okay. After about two weeks and
+
+so I flew from, from paying, to Buffalo, actually with a doctor who was like just feeding me pills the entire time. and so he got me to Buffalo from the Buffalo airport and went to the Buffalo psychiatric center. And I just, I, as this is worth telling because like I was genuinely helped by this stuff. I wouldn't be here today if it, if.
+
+things hadn't gone in this way. So I get to the Buffalo Psychiatric Center, yeah? Alright.
+
+Citizen Web3
+I can relate.
+
+I can relate very much to the story. The first time I was diagnosed with bipolar was 18 years ago. when I was just about 18, I got diagnosed. So 17, 18, I got diagnosed with bipolar. You know what? I think I've seen it throughout my upbringing, adolescence, and not on me, but on other people.
+
+Citizen Web3
+I think I decided when I was like 18 that it is going to be my prerogative and my battle and like I refused to take pills that I was prescribed all the like downers and all the all that shit and I was like I'm not taking the shit I'm sorry guys and I never did I never did and I think that that's what kind of helped to to keep it
+
+Citizen Web3 
+But again, with bipolar, it's a very loud sentence to say because you have obviously very different levels of bipolar disorder and the way it develops from the first to the fourth stage, of course. But I think it's important to understand that I'm going to cut out the other for a second because I want to channel you kind of thing because I want to try and connect the dots.
+
+jacob_gadikian
+Yeah... Yeah.
+
+jacob_gadikian 
+Mm-hmm.
+
+Citizen Web3 
+And I'm going to make assumptions and I'm, apologize for that in the beginning because they're going to be private personal assumptions in, because my, I'm trying to, what I'm trying to understand is I'm trying to connect here, everything, your history teaching, the Chinese, like government changes, the love for the hardware and what I see and hear, like, feel free to, to, to correct me if I'm wrong. What I see is, is somebody who w like my question before about, why
+
+jacob_gadikian 
+It's okay. Yeah, yeah. It doesn't matter.
+
+jacob_gadikian 
+Mm-hmm.
+
+jacob_gadikian
+Mm-hmm.
+
+Citizen Web3
+in the cosmos, why is it important for you that bottle? Now I can hear it. And what I'm hearing is, is that, okay, there has been misjudgments, which you saw with the Chinese government, right, and fairness of how they started to treat the inability to contact your family. And that kind of to me calls as a, okay, if the governance goes wrong, if nobody says anything in the right time and doesn't try to like, to
+
+to do something that's what's gonna happen and that's what I'm kind of I don't know if I'm wrong here. I don't know but
+
+jacob_gadikian 
+Well, yeah, okay, I should expand on that. So I was an Iraq war protester. It was the dumbest, most futile thing I've ever done. Actually, technically speaking, that's the first time I was arrested, but they didn't book it. I was in Chicago and I was literally put in plastic handcuffs and taken to the other side of the city and dumped out.
+
+jacob_gadikian 
+It was pointless. What I mean is what I was doing at the time, right? Like carrying around a sign and talking about, you know, no war or whatever. It was pointless because there's a giant apparatus of lies backing up that conflict. so I am, I'm really sensitive to governance issues and also to like
+
+the accuracy of information that affects governance. And maybe just to give you like another dot to connect, right? So going back to like the whole mental health situation, I mean, I actually made a miraculously and in my mind, statistically unlikely recovery. Most of the people that I met in the mental hospital, I don't think that they recovered.
+
+and they, you know, did the same things, got the same treatment, but did not recover, but I did. now I had a lot of help from my family. but like, here's the deal. Okay. Where the hell lithium does in the brain of Jacob. Okay.
+
+I began to take it in summer of 2017 and by fall of 2017, I was figuring out, okay, how do you raise venture capital when you just stole a giant truck full of sand? We were successful. Drone Energy raised a million dollars from, you know, all kinds of investors. And I believe has actually raised another round now.
+
+jacob_gadikian 
+spoken with them in the past couple of months, I don't know exactly, but the business worked. like, you know, that's actually, that's very difficult. That's one of the reasons though, why I'm so comfortable speaking really openly about that experience, because for very good reasons, investors will look into your background. They will ask you questions about it.
+
+That's not wrong. they're, know, it's substantial sums of money. they want to know that you're not going to, I don't know, invest in sand trucks instead of Bitcoin mines or something. I get that. So I learned to just like tell the facts on that. Okay. So like, here's what happened. Here's what I did about it. Here's what I'm doing about it today to ensure that like,
+
+I can function, do this well, build these Bitcoin mines. Bitcoin mining is maybe less about the actual mining of the coins and more about sourcing of energy and making... It's a very, very relationships-based business. You're seeking capital to purchase equipment and you are sourcing energy contracts.
+
+the business, the tech side. Now that was my side of the house, but you couldn't even do the tech side unless you the other stuff. So I ended up doing a lot of that point being though, that like, I just learned to be, you know, very direct about things, even if they're uncomfortable, right? and it's, it's, it's, it's not, especially the first.
+
+75 times because guys, you know when you raise venture capital You don't talk to one investor, you don't do this once You do that many times and find the ones that you click with right? So yeah, the first 75 times were hard But after that no, not really, you know, it's just another piece
+
+jacob_gadikian 
+And so, you know, there's, there's a piece of my history that I just have to be incredibly fact driven about. Otherwise, why would anybody trust me? frankly, you know, they, know, if I were to try to hide that, shouldn't trust me.
+
+Citizen Web3 
+I actually, like now that you say that a thought comes to the mind, I think it's a very, in a way, what you're saying, being direct about things and being direct from the perspective, I want people to trust me and to be able to trust what others say. It here is now to me as a very thing that comes from something like battling.
+
+bipolar and succeeding because to me, those swings that uncontrollable are something I want to control. I don't trust those swings. I want to trust. And that's why I would rather be direct and say, hey, guys, this is what I am. This is my minuses. This is my pluses. But I want you to do the same. And if you don't do the same, I'm not going to trust you because how do I know you're not bipolar? If I know that I am
+
+jacob_gadikian
+Yeah
+
+Citizen Web3 
+And I can go crazy. Maybe you can go crazy as well. So I'd rather you tell me straight what I should be prepared for and what I shouldn't be prepared for. that way, that's what this is what I'm thinking of straight away, because this is how I kind of been living my life for many, many, many, many years now, like over 20 years, with adult interactions with the world. And it calls back straight away what you say, like the things that how I see.
+
+the world, I interact with the planet kind of thing with others. And I understand it very well, very well.
+
+jacob_gadikian
+Yeah, that's interesting that we both share that. It's, I don't know, like, I, you know, I failed over and over until I had to take lithium, which, I mean, do I still experience bipolar symptoms? Yeah, probably. Sleep is very hard. Sleep, like, is really, really hard. And I'm sure you know that, like, you know, they tell you,
+
+Citizen Web3 
+Eugh.
+
+Citizen Web3 
+Yeah.
+
+Citizen Web3 
+Yeah.
+
+jacob_gadikian 
+sleep. what I do about this, like, don't have the world's most regular or normal sleep schedule, but I sleep every day. I, and I, I wouldn't need to, and I'm not sure that most people can relate to that, but like, you know, I could just keep going, but, they said it's dangerous. So I don't, right.
+
+Citizen Web3 
+I know what you mean it was the first time I slept in 3 days from last night to today it was the first time in three days I managed to get some sleep that's why I look like this today that's why I look like this today and because I'm like my head is like this and I'm like fuck at least I managed to get some sleep though
+
+jacob_gadikian 
+Gotcha. Yeah. I mean, you get that going feeling.
+
+jacob_gadikian 
+Yeah, yeah. No, no, no, it's essential to sort of look after the whole sleep thing. You know, my wife checks in on it and that's really important too. She's actually, I gotta give her a lot of credit for like my being alive. She sort of just like chased me around Cambodia for about six months. Getting me out of all kinds of messed up, crazy, ridiculous shit.
+
+Citizen Web3 
+and
+
+jacob_gadikian 
+And she's best, I love her. in fact, just with an experience like that, right? It's like I kind of got back up on my feet in the States and started to make plans to marry her. Cause I'm like, well, probably alive cause of you. good, And yeah, yeah, married, one kid.
+
+Citizen Web3 
+Are you married now or are you married now with her?
+
+jacob_gadikian 
+and, we're gonna, we're, we'll probably, so we're in one neighborhood here in Hanoi now, probably move out to another place, trying to have another kid. you know, that's great. Like, I'm glad I found somebody who did like, I mean, look, she saw the absolute worst in me. So, you know, and stuck right with it.
+
+And I mean like, so to answer your question though, just basically, yeah, I've seen what opacity can bring. I've seen that since I was young. Like I was, I think 18 when I was at that Iraq war protest. It left a big impression on me.
+
+Citizen Web3 
+funny. You're gonna I'm sorry, you're gonna laugh but the first protest I'm sorry, I went to it was 2003 I believe I was in high school. It was my last year of high school, year 11 and we skipped school to go protest against the war in Iraq and block the streets of Newcastle. This was in England. Yeah, I know that's why I'm saying this is very ironic. The irony the irony is huge. The irony is huge, man. Very huge. It's like the world is a small place, man. Very small.
+
+jacob_gadikian 
+There you go. No, no, that's the right thing to do though.
+
+jacob_gadikian
+It is just, war is, war is the biggest, misallocation of resources possible. and, so, you know, it just about being rigorously fact driven and, then, you know, in the blockchain space, I can only talk about this issue because it's, it's, solved. Okay. Billy Rennecamp and I like went over it.
+
+Citizen Web3
+Thanks.
+
+jacob_gadikian
+quite a bit and, know, got it nailed down, but like, there were not one, but several things in the cosmos hub CI that like, we're not firing. this was also true of the cosmos SDK. it, it had a number of CI jobs that hadn't fired, in years. When I say fired, right. These were like programs to check the code. one of them.
+
+is called a linter, but there were a couple of others as well. The result was that like, no matter what you did, various things that were supposed to check and test the code, you know, they, would always tell you everything's all good. We fixed the SDK first and then moved on to Gaia. And luckily like, okay, all of that is it's done.
+
+And like, I don't want to be a pariah because I was very insistent that the delegations were screwed up. The delegations were screwed up. I don't want to be a pariah because, well, no, it really, it took being insistent about the delegations. Let's get anything done about it. And they were harming governance. When you, it affected quorum.
+
+quite a bit because of the lack of governance participation among, recipients of ICF delegations. and like, I'm not hating on the people. I have hated on the people. This is after I got hated on, I think quite a bit. and I, I don't want to play this and, and like, if I found it,
+
+jacob_gadikian 
+Well, I can't leave it to the professionals. I must be the professional. Because it, you know, wasn't being addressed. So I do hope that, you know, people watch this video and that they understand that like, no, hey, Bucky, you know, I was really pissed off at you. gave you like double middle fingers on a YouTube video or something. One, I'm sorry about that. And two,
+
+as an ecosystem, we need to focus on the code. need to focus on transparency and like, I don't know. I'll plead like, please let's,
+
+jacob_gadikian 
+We should not be image conscious to like, or, or, you know, Hey, Bucky and the numerous people in the, you know, Twitter DM group that I, I, I ran called, make good things better or originally called ICF wars guys, you ignored it. And that's, you know, why it needed to go public. you want.
+
+to criticize me for not having private conversations, but those existed. And in my opinion, this is, this is, this is,
+
+That's not good. And there were issues in the code and I did report them and they weren't addressed for months. Now these were not like live or die security issues. These were not security issues that like could arbitrarily create atoms and send them out to an exchange or something. Nothing like that.
+
+Okay. And suppose if there were, I probably still couldn't talk about it, you know, but these were process issues. They were real. the Cosmos hub has no policy on exchanges. And I also need to tell you, like a lot of people have asked me not to speak about this stuff. most recently, Jack Samplin, he was quite upset.
+
+because I kept bringing it up. Jack, I'm not trying to throw you under the bus here, but, this stuff is real and it matters. And I was asked for an interview. I'm not going to turn down, the response. I'm trying to be very, very measured here.
+
+jacob_gadikian
+As I've said numerous times, I have deep respect for all the engineers in Cosmos and all the people who spent years working on it. And I want to see things work well. People did have advanced access to the new ICF delegation policy and those people were validators.
+
+we shouldn't claim otherwise. It cheapens us.
+
+I don't care, by the way, like the exact people they should be asking is validators. So that part does not matter. It's the denialism. like, I don't know. If you really want everybody to have access to it at the same time, put it in. Get please.
+
+And finally, what I was going to say, if these things were not occurring, then it would not be possible or necessary for me to speak on them. Now I'd like to get back to regular schedule content because a of people, a lot of people have asked me not to speak about this stuff. And.
+
+I'm trying to balance my respect of that with
+
+jacob_gadikian 
+what I've experienced. And I appreciate the question, man.
+
+Citizen Web3 
+I think that it's important that, how to say, unbiased, in a way, opinions, not opinion, because I don't think there can be one unbiased opinion, right? That they heard and then everybody can understand, okay, that is the picture and my subjective opinion on this, because now I have all the sides of the medal, can be this or that or that.
+
+Regardless of that, like I want to I know we haven't opened up a lot of things and there's a lot of things we haven't spoken about. At least I would love to ask you. But but I want to I want to resume this one and I want to lack. don't know if you would like that because I would like to carry on this conversation on a on a second like the episode, but.
+
+jacob_gadikian 
+I know that'd be super. That'd be super. And here's what I want to say about the controversial stuff. I want to beg everybody's pardon.
+
+This is simply what I've experienced. I also want to thank Marco B, the IBC Go team and Bez for their constant support in the implementation of Cosmos SDK 46. I want to thank Billy Renikamp for, you know, like basically I said to him one day and I'm like, look, we just need to get this taken care of.
+
+We need to drop everything else. Okay. I don't care. Like, okay. Whatever. But like, this needs to take priority. And he worked with me on it. And it was really good. I'm thinking for that. you know, if and look with it, lucky you worked on this stuff for years, man. It's not like I have no appreciation of that. So please understand that. you know,
+
+that fish. He's the person who told me, you know, leave it to the professionals. Look, you've also worked on this for years and I don't have no appreciation of your work. just, felt that this stuff needed to be addressed. I'm really glad that it's being addressed. Like it's very clear to me, that it is being addressed. So it's my hope that, you know, we can put these things aside.
+
+It's my hope that you'll actually bother to hear this piece of the video. It's my hope that everybody will understand I'm not saying ICF is evil or useless to informal is evil or useless and merely saying like I want to have better quality conversations and If you don't respond to the private conversations
+
+jacob_gadikian 
+And it is a pressing issue. I'll continue to raise it. If people spread nonfactual governance information in public, like, yeah, I'll address it in public because they don't want the HUB's governance making consequential decisions based on inaccurate information. For example, in proposal 69, the claim that Cosmwasm caused a trivial increase in resource consumption. It's very large.
+
+Like that's okay. But we were saying it's trivial when it's very large. That's not okay. In fact, if we were saying that it was very large, I may well have voted yes. My views on this, even though, unfortunately, I've continually been cast as a proxy of Jay Kwan. Not, I my own thoughts.
+
+Like my views on this are very different from yours. I see cosmolism as a really important piece of the cosmos ecosystem. then because I was being cast as a proxy when I eventually voted veto because of the know with veto text, which included the exit verbiage. I had to explain that. And I did at great length on the forum. you know, with that, I really, I have no interest in like.
+
+kicking a beehive or something. I actually, want to say thanks though for asking me about this so directly because hopefully we can put some of these things to bed.
+
+Citizen Web3 
+So I think so. think it's for me, for me, the question wasn't about, know, like to bring it up or to bring up for me, the question was to see like the motivation kind of thing. And yes, yes, yes. This is my my personal kind of goal when we set out with this what to bring non opinion, non non black box opinions from I'm talking about myself here about information, not just the
+
+jacob_gadikian
+I don't what the driver is.
+
+Citizen Web3 
+current affairs, on general, for example, lot of validators that have, you know, make I'm not talking about notional currently because well, you don't make millions of dollars, unfortunately, but there was a lot of validators that who during the bull market did make a lot of fucking money. And I think it's important for people to understand that, you know, if like, let's say if I mean, we know about, well, Steve Jobs, unfortunately, is passed away.
+
+jacob_gadikian 
+Yeah!
+
+Citizen Web3 
+But we know about his life and we know about his motivation, about why he created. Of course, there is something behind the background, but with the big validators, I think it's important for people to understand that they're not building nuclear bombs in the money they earn inside of their houses. And I want to know what motivates them, what drives these people. So when we look at Web3, we have a clearer, a more visible future. And on that note, I'm going to...
+
+I'm gonna do like a resume question for this episode. Yeah, to you a resume, a small resume question, because I think it's important. But what what does motivate you to get what what not motivate, but what keeps you going? What keeps you like wanting to get off bed? Because with everything that you mentioned over the past hour and a half or so, I think it's obvious that it's not easy for anyone with
+
+Citizen Web3 
+struggle, internal struggle like you spoke about, like I said that I know very well what you're talking about to do this every day. And I want to understand what keeps on like, you know, you get up every day and you say, you know, I'm still gonna do this. I'm still gonna build, build, build and build for the future.
+
+jacob_gadikian
+So, well, I guess it kind of goes back to the Iraq war protests. like I, I really do think that governments worldwide are fairly fundamentally flawed and that transparency would solve a lot. also, even though I recently, you know, voted for,
+
+5 % minimum commission on the hub. I'm actually a very, very big supporter of markets. One thing that I've found really frustrating throughout a career as an entrepreneur is incorporation and capital formation processes. And actually, I think that ICOs are right. Look, there were a lot of really, really shit ICOs, but guess what?
+
+jacob_gadikian 
+Like most startups are also really, really shit. most startups fail completely and most startups lose 100 % of invested capital. Like that, that's actually kind of the norm. It's only an issue, like a moral issue, right? When there isn't, a genuine effort given. and in that case, yeah, that that's like fraud or a scam. and.
+
+Chains they're not companies
+
+Citizen Web3
+their countries of course of
+
+jacob_gadikian
+yeah, bingo. Well, so like dig, dig is, that's, that's kind of what we're chasing there. Dig is, well, that's a project really based upon, like if you read the readme file, it's like, we're going to get physical plots of land. You're to divvy them up on chain. We're going to sell those physical plots of land.
+
+And like, we're going to excel because of transparency. That project suffered tremendously because of the conflict in Ukraine, actually. We definitely over-invested in that market, but there is a very specific reason. And probably if I was faced with the same set of decisions again, I'd probably make the same decisions.
+
+because they had the legal structures that they had put in place just before the war, before martial law was put into place, actually made the dig project 100 % legal. like we would have been able to do everything, the whole nine yards without question. And by the way, if anybody watching is interested in like the network state concept or,
+
+You know, just sort of the vibes around dig. We are looking for a place on planet earth where this works. probably shouldn't be Ukraine. They have a war going on and they put martial law into place. Unfortunately, when they put martial law into place, the regulations on cryptocurrency went out the window. so at present,
+
+What we've done is we've upgraded dig SDK 46. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

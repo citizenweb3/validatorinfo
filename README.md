@@ -1,4 +1,6 @@
 # [Validator Info](https://validatorinfo.com/)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-red)](https://github.com/sponsors/citizenweb3)
+
 > Web3 Blockchain Explorer. Validator, Mining Pool, Token and Network Real-time Metrics 
 
 > Interactive Onchain Dashboard

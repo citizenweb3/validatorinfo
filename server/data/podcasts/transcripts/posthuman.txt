@@ -1,0 +1,496 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/posthuman
+
+Episode name:
+Druid Gatherings and Decentralized Things with Vladimir Understanding and Valentin Medniy
+
+Citizen Web3 : 
+Good space time everyone and welcome to a new episode of the Citizen Web Three podcast, a source for educational insights into the Web Tree universe and your connection hub to the people that turn code and dreams into decentralized applications and reality. 
+
+Today we are joined by Vlad and Valentin from the post-human validated team. We talk about trustless systems, decentralized things, conspiracy theories and consensus struggles. We discuss the powers of the digital realm, druid gatherings, reputation and community development. Finally, we dive into governance, distributed egos, the myths around in Web Three and education. If you enjoy the Citizen Web Three podcast please share this episode to your favorite social platform and help us spread Web Three values into the universe. 
+
+Vlad: 
+I'm a slave of the machine and I understand that I need to decentralize myself. When you know something amazing you start to have a feeling that you want to share it. 
+
+Vlad: 
+Yes this is the kind of eventalism. 
+
+Vlad: 
+Sometimes we need to explain something for the kids but society not made of the kids. This participation in the building of the new decentralized connections Web Three, it's the only one positive possibility to change this world and make this world better place. In the structures that are trustless I don't spend my energy to trust the system. I don't need to trust the blockchain, it works without my trust. 
+
+Citizen Web3 : 
+Hi everybody, welcome to a new episode of the Citizen's Odyssey stream and I have with me today the post-human validator Vlad and Valentin. Guys, what's up? 
+
+Vlad: 
+Yes, hello, hello, Sergey, hello Citizen Cosmos. We were waiting for this meet for a so long time and now we are here. It's so great and amazing to participate. I think in the oldest podcast in the cosmos. Yes, if I see Citizen Cosmos, I think it's the first or not the first podcast about but I think one of the oldest. Yeah, maybe Interchain FM all second. 
+
+Citizen Web3 : 
+I think Interchain FM was before. We were a second but we were the first ecosystem podcast and Interchain FM was the first Cosmos Hub podcast. We were the second that launched and we were definitely... 
+
+Valentin: 
+Today we are tenth with validators. 
+
+Citizen Web3 : 
+you are you are we are we are so So let me a little bit... This is not my interview, this is your interview. But let's go for it. I like it. So we have three formats. We have the podcast format which is strictly audio and it's strictly podcast. This is not the strictly audio format. Then we have two more formats. One is the one we're doing with you now. This is the validator in project exploration thing which is with the video and we are live on YouTube but I don't think we have... We are not big on YouTube so we mostly use the recording to promote but it is live right now and the new format that we launched which we only had one episode from was the Interchain Debates nights of the IBC table and the first one was with Jack Zampolin and Jacob and Sam Hart and Sasha about Atom 2.0. So we have three formats. 
+
+This is the second format that we've launched essentially. So yeah. But guys let's stop interviewing me. Wait, wait, wait, wait, wait. 
+
+Damn it, damn it, damn it. Guys, let me do a small intro for you and then I will let you introduce yourselves but I want to introduce you because like... Well first of all I've been talking to Valentin for a while and with Vlad we are friends for many years and it's not the first time I have friends on but this one is an exciting one for me. Vlad I met when he was doing illustrations at Cyber House in Minsk and this was in 2016. 
+
+Vlad: 
+No, I think it was in 2018 but I think we even met before in 2017 in Moscow. I think it was... 
+
+Citizen Web3 :
+Yes I think it was 2017 but regardless, regardless, right guys? Since then, like we since doing illustrations at at at Cyber Place, I've seen Vlad go through hundreds of changes and he always had these ideas of distributed things, decentralized things and you know, I've heard him talk about distributed validators, well having the ideas of a distributed validator years ago before this was a thing and I've seen you guys develop communities, I've seen you guys develop loads and loads and loads and loads and loads and loads and loads and loads and loads and loads and loads of things. 
+
+So my first question is this, how did you get from Cyber House illustrations to this? How was the journey? Where did Valentin come in? 
+
+Wait, wait, wait, wait, it's only part of the process. Valentin became a huge part of that and I know it already now so please, can you tell me not just about your journey but if you can include or maybe Valentin if you can add and talk about how was the journey? Tell us all about it please. 
+
+Vlad: 
+So I think I need to start because in one moment it will be crosses with the Valentin and Valentin also will tell his way to our cross of our ways and really glad that the blockchain connecting people and that our ways crosses in this digital and not only digital reality. So since 2019 I started to validate test net of the cyber and also because of you Sergei I met with the Cosmos Cosmos station team and I started to help to the Cosmos station team as the community advocate and just explained to the people how to use Cosmos station wallet app, how to vote for proposals and my first guide how to vote for proposals in Cosmos using Cosmos station wallet app was on the example of the proposal in Cosmos about cyber to give 10,000 atoms to the cyber. 
+
+Vlad: 
+It wasn't passed but it was the example was on this proposal so it was long time ago 
+
+Vlad: 
+and since that moment the Cosmos station wallet app helped me to understand Cosmos ecosystem very good because when users asked me how to use this function what to do this why my transaction is failed and so on and so on I need to understand the network very good so more Cosmos station wallet app was adding new networks more networks I need to research I start to research one network another more more more and in one moment I understand that this is the best and the most interesting ecosystem among all blockchains much more interesting than Ethereum ecosystem even if Ethereum ecosystem was bigger but it wasn't so based on community it wasn't so based on enthusiasm and even if Ethereum have a nice level of decentralization a lot of projects on Ethereum have such nice level of decentralization so Cosmos ecosystem was really like a fresh wind and solve so many problems and the idea is amazing so I start to help to more and more projects and in one moment I start to understand think okay we need to represent this to other people when you know something amazing you start to have a feeling that you want 
+
+Vlad: 
+to share it yes this is the kind of evangelism friends did you read that book they write don't kill don't steal don't lie amazing all of you need to know this if everybody will do like this it will be like the heaven on the earth 
+
+Vlad: 
+so I start to be evangelist of the Cosmos ecosystem and I understand all projects in Cosmos ecosystem friends not competitors so and this vision and understanding helped me to be a good networker between the projects and I met more and more people who are also enthusiasts and who are also interested in the development so most of them was the validators and I start to make the validator show and invite different validators on the different levels so one person big command of people and ask them what is validation for you why you validate this project not another project how it's and also Citizen Cosmos was on the one of this the validator show about Cosmos network and we collect the 8% of voting power of Cosmos hub so this is what like the big voting power and we were speaking together and in the one moment I understand okay validation is very interesting this is the highest level of the contribution to the network if you want to contribute to the network you can tell about this network but also you can provide the security and the specific of the Cosmos networks that there are active set of the validator it's not endless so it means inside of this active set validators need to do something to be an active set it's not like in other networks so validators need to be a contributors to validate means to participate and this amazing idea and force me to run more validators in the different networks and because of the connections and helping to the people it was easier for me because people already know knew me because I help them in the community I tell how to use this and after I tell offerings I run my validator and people tell okay nice I will delegate to you because I know who you are and it as it was several two years ago kind of this it was not so big concurrence and it was a lot of free spaces in the active set so it wasn't really hard now it little bit harder to be in active set and some networks you need to have a delegation around like half a million 
+
+Vlad: 
+to be in active set let's the Cosmos hub for example 
+
+Citizen Web3 : 
+before I move on to you Valentin I just want to add to something to connect to something that Vova was saying if I can say Vova of course
+
+Vlad: 
+yeah yeah yeah 
+
+Citizen Web3 : 
+Vlad thank you I think you were mentioning you know about telling everybody what you want to tell and I think it's like being in love when you're really in love you want to tell the whole world that you're in love and you know and so but before we get more to discuss this Valentin do you want to introduce yourself I did mute you because you have a little bit of echo let's try again do you want to introduce yourself and tell how you got to work with Vova and how you connected 
+
+Valentin: 
+sure again thanks for having me today me and Vladimir are we proud to be here my story is a bit shorter because I've tried to find a solution how to receive some money in the Cosmos ecosystem or not in the Cosmos ecosystem but in crypto in general and I found the Vladimir's contact a bit around about one year ago and asked him for some things which I can do for the Cosmos ecosystem or for some other things and he proposed me to translate some things and I started to translate some documentation some things and found that the Cosmos ecosystem is very interesting thing that I want to know more I want to know better about the Cosmos ecosystem and I had the chance to be one of the moderators of one Cosmos ecosystem community then the Twitter and it was so interesting to do something new in such fresh such interesting space and now I'm here 
+
+Citizen Web3 : 
+nice nice I love it but Vova is definitely what in Portuguese because in Portugal now they have a word like in Russian personage you know he is a persona there is there is so much of him tell me more about how how how you like how you connected with Vova because it's not easy let's be honest Vova is a friend of mine and I can say that he's a very extravagant person he has a lot of ideas and he implements those ideas
+
+Valentin: 
+it was too hard to connect with Vova because I firstly I reached him and he answered that okay I will give you some tasks to do and so on and he he lost and then then I I thought that he is maybe maybe he don't need it in my skills or something like that but a bit later I reached him another time and he responded that yeah we could do something and we started to do something today you told about the Russian personages we brought some sport epaulets we we did together on your show
+
+Vlad: 
+uh Sergiy your microphone is turned off 
+
+Citizen Web3 : 
+it's funny because I was saying to you your microphone is turned off so that's what I was actually saying to you can you can you repeat again what you were saying about the emblems I heard Valentin but can you repeat your your things please ah you are showing the emblem
+
+Vlad: 
+emblem yeah yeah yeah yeah 
+
+Citizen Web3 : 
+we we all got lost we all got lost okay but hey by the way the echo is gone now so it seems that we don't need to mute ourselves too much but there is sometimes so so in case just just let's watch it but anyways so guys so but I still want to understand one thing and um because this is like the format of this episode or of or the format of this format is to explore the validator, not just in terms of what they do or but also why do they do it and and you you already mentioned Vlad Vova, Vova Vlad, sorry I always say Vova but then I look at your name and it says Vlad Vlad 
+
+Vlad: 
+Vlad Vlad Vlad Vlad 
+
+Citizen Web3 :
+but anyways you mentioned already like you know 
+
+Citizen Web3 : 
+seeing the community involved but how did that interact with you why did you decide to become a validator not not necessarily in the cosmos ecosystem why do you think it's important to participate being a validator on blockchain what is the idea for you 
+
+Vlad: 
+my story is really interesting and sometimes it looks like a Netflix serials so before their validation and big part of my life near half of my life after I became a student and kind of when I was 17 years old I was thinking okay we need to change this world something broken in this world ecological crisis the uh economical decentralized economics centralization of the power war and so on and so on and I start to try to change this world as all 
+
+Vlad: 
+people who is 17 18 years 
+
+Vlad: 
+old so I joined human rights movement ecological movement social movement for social rights antifascists and so on and so on animal rights also I'm vegan so big part of my life I was participating in the small communities where we meet by in the circles big by the rice hands we and we was trying to reach the consensus so the first book of the consensus that we was translated from Spanish or Italian to Russian it's uh exist book how to reach the consensus by the Peter Gilderloss and and it was before the blockchain and we was dreaming about the coming to the consensus when the humans will reach the consensus and we will stop and we will create kind of the more interesting more horizontal um society so uh by this way when I met with the blockchain I see that I saw that the consensus already implemented in the blockchain we already have decentralized horizontal structure and we don't really need to try to create it in the uh material circle so it means if you have the meat of the 30 people in the material world you need facilitator mother a tar person who will write the line who will tell rise the hand and so on and so on so to build the real horizontal connection in the material world it's hard okay for the 30 people it's okay for 300 people it's impossible and in the digital world we can make a meet of the community with 5000 people 10 000 people and it will be horizontal and um digital um give to us the best tools to change the material world so uh if I will try to change material world by the material methods it's very hard it means I can make for example I don't know manifestation 100 people will spend two hours with the flags and slogans and it will be like a two 200 uh human hours and who will see this material manifestation 100 1000 people more in the same time two or three persons can make a video that will get million views and they will spend on it not 200 human hours but 800 human hours and more people will see it more people will understand it and it will change the material world so to change the material world through the digital much more easy and much more faster if we want to create new model of the society with the new economical model new social model new governance model we don't need to make these experiments at first in the material world and we know how most of these experiments in the material world finished very bad even for those who was 
+
+Vlad: 
+the main ideologist of these experiments 
+
+Vlad: 
+yeah we know these uh dark ages of industrial centralized totalitarism with the Stalinism fascism and we can see it even now when the centralized small groups create the wars and kill the people in the interest of the small groups like for what we need such cruel experiments in the material world when we can create the model in the digital world and this is our metaverse and we can make an experiments with different social models you want that totalitar hierarchy let's look how it works in the digital world you want that a planning economics or you want a free market or you want a mixed model or you want economics of sharing or economics of gift let's make these experiments in the digital society in the digital world we will look how it works and if it works good in the digital world we can implement it to material world and nobody will die if we will if we will sorry friends very cool me if we will do it directly in the material world we can get such results that's a lot of people will say oh my god what we are created so uh for me this participation in the building of the new decentralized connections web three it's at the only one uh positive possibility to change this world and make this world better place for the many people and i see how our uh all we do in the digital world have a good answer good results in the material world in changing of material world and even and when it's so connected i start to understand the material is real as the digital is real just digital and material it's different sides of our reality but digital the same real as material and this change my mind 
+
+Citizen Web3 : 
+man i love i love this i think for everybody who who who is um listening to to our podcast and watching streams with you can definitely understand right now why we are friends but it reminded me when your phone will call and sorry i just remember the story when i was about 16 i think or 17 i was in this druid gathering uh with druids yes real druids and um uh some of them were wearing self-made um you know armors and and full closing from like you know medieval times and i remember at the last day of the gathering one of the guys who was one of the main like the most extravagant guy with all the armor and the druid things and everything and this is the last day you know everybody's taking camp off and then this is a picture of him with a mobile phone and you know his old nokias back then and shouting about insurance no i don't want the insurance and i just remember when vova was you know talking about all this and then suddenly you call me back again later you know it was a good good good good good good combination but before we before we get into that because i took some notes when you were talking but i want to ask also valentine the same question what is it for you that is connected to to to the blockchain 
+
+Valentin: 
+uh right now i deep involved in helping people to understand what they could do with the blockchain how they can swap their tokens how they can enable risk take or something like this and when i uh tried to uh help people with these things i also learned uh about it by myself and now i'm uh on the my maybe on the step forward and we have we have some learning initiatives like validator school ambassador school and so on and i'm also a mentor in these things and why i'm here because i like to um help people who really want to do something reach their targets because um when i uh when i had some troubles some things uh bladimir for example he helped me with it he brought me to this cosmos ecosystem and he showed me how i can um how i can be here and what i can do here then i found some things that i like more i uh became more focused on this and um right now i i'm trying uh trying a lot to um educate to teach people uh which are really needed in it and help to connect people with each other for example uh you want to have someone from the cosmos ecosystem here on your podcast we have lots of connections uh with Vladimir with others from post human team and we can uh connect you we can connect others who really want to do something that's very that's very interesting and i guess we do lots of uh lots of stuff for the whole cosmos ecosystem when we connecting people and creating uh stuff for them 
+
+Citizen Web3 : 
+it's it's it's um an interesting thing i um uh when we started with citizen cosmos for a long time it took me a while and it still is um what what do you do what do you do what does what does it you do you're a validator what you hold infrastructure no we're not exactly that we're an ecosystem developer we develop ecosystems and then people ask but what is an ecosystem developer it's like a city manager you have a city and you have managers and those managers manage the city if i go to right now to new york and i say hey new york if you give me one million dollar i can get you well maybe new york is not interested in my skills but maybe you know new new york new york number two that is on bali for example a new city and we want and i can tell them if you give me a million dollar i can attract new partnerships new businesses to to build your city new people new citizens to your city and this is exactly what you guys are doing i think you're developing the ecosystem in general helping it to grow whether it's users whether it's businesses whether it's builders whether it's investors whether it's projects whether it's anything 
+
+Vlad: 
+yes yeah this is kind of the decentralized management so uh before in the previous industrial paradigm everything is centralized it was impossible to be a part of the some uh management of the city of infrastructure or something like this because it was the some kind of manipulation of small groups and those people who already get the uh this social place don't want to give this social place to somebody else and the decentralization it's a big opportunity for the everybody every person who wants to uh change something every person who wants to bring some contributions can do this and this is what really helps for the many people to be involved in the governance and this is one of the main idea that goes with all humanity through the whole evolution if we will look at the first we had the very centralized form of govern and governance kind of autoretorism the most powerful person who can beat all others will be the main after we see that exist some for example king and small sub kings after people tell maybe monarchy not the best let's make let's decentralize the governance let's governance will be among 300 people 500 people let's make the some federation or kind of this and we see how it goes in the way of the decentralization of the social power when more and more people can be involved in the process uh that's uh interesting for them and uh when my life depends on this it means when i live in the uh centralized state uh i don't choose the laws i don't choose i'm not in the consensus with the laws of the most of the countries and nobody asked me do you want to live by this laws or not and nobody give me a possibility even to change it and they tell oh if you don't know the laws it's not our 
+
+Vlad: 
+problem uh go to the prison or kind of this so and the most terrible that to understand the laws you need to go to the institute of the laws and five years spent to 
+
+Vlad: 
+be informed about laws by which you need to live and as my opinion laws must be so simple that even six years old kid can understand all the laws of the society and the always looking for the new forms of the consensus and as the result we try to make such consensus that will be very clear for everybody for the most of the people okay sometimes we need to explain something for the kids but society not made of the kids okay we need to get the responsibility when the like kids grow up we need to tell okay don't throw the uh toys to another kids it's not like okay here you can play but here is the kitchen don't destroy the dishes kind of this but most of the people are not kids and most of the people don't really know the laws uh and don't know and uh so now in the blockchain we can change this and this is something amazing so we already pass through this step i think when we understand that economics will be decentralized and we understand that we easily can create different economical decentralized models different tokenomics many tokens for everything or one token for everything or something the next step of this how we will govern it how we will decentralize the governance and even Vitalik buterian speak about it about the decentralized society but i think that Ethereum is too slow compared to the cosmos because cosmos has this specific of the uh uh what because the DAO is already implemented in every network every cosmos network it's a DAO we already have in the code possibility to create the proposals and vote for the proposals so and because of it there are a lot of people who have this inner wish to make the new governance models participate in it and we do a lot of mistakes and our models now not the perfect but they are much more better than any other models that exist even if we as the researchers and i have even research about the problem social problems of proof of stake networks all proof of stake networks on example of the cosmos so and even if i see the problems i can tell that even with these problems we are better than any other governance system in this world and what we will create in the near future it will be much more perfect and this process goes really fast not like in the industrial world or pre-industrial world when the people have the monarchies this revolution dictatorships and other threats we do it in the years like one year two year new model two years more new governance model and nobody died 
+
+Citizen Web3 : 
+Valentin do you want to add anything to Vova 
+
+Valentin: 
+if we still on validation part why we are here as validators and what we can do please what we can do 
+
+Citizen Web3 : 
+Please
+
+Valentin: 
+here here in the blockchain space we could be anyone that we can imagine for example if you want to be a video editor you could be video editor if you want to be some funds manager you could be the fund manager and you don't need uh someone's permission to do this and this is also very interesting thing and also one of the interesting thing why we are here i guess because it's really um this system is really um is really work on the reputation on your reputation if your reputation is good people will hear you people will try to uh work with you and so on and so on if you lost your reputation it couldn't be returned back and this is also a very interesting point in in the blockchain space 
+
+Citizen Web3 : 
+for sure and i think talking about laws you know uh vova mentioned the laws and the books and i've always been since i was i think since i was pretty much like age of reason i'm gonna use george carlin's words here um i think the only law that that made sense for me we can start just with one don't do on to other people what you will not do to yourself and it's enough this is all we need for the whole universe but i want to ask you guys a different question this was just something to comment to do it there um this is the philosophical part of of of post human is is is uh interaction is interchain really interoperability communication education exploration i love that what is currently because i mean Valentin already mentioned school of validators uh translations uh obviously staking Vlad you mentioned uh obviously uh i know you guys are involved in utron can can can you talk a little bit flat about or Valentin whoever wants about what projects you guys currently have all of them 
+
+Valentin: 
+can i start can 
+
+Vlad: 
+i start yeah okay let's Valentin we'll start yeah after i finish and my finish will be bigger than start 
+
+Valentin: 
+Ha ha ha but we don't compete here ha ha um we have a lot lots of initiatives first we are validating 27 plus networks it's about 30 uh cosmos sdk based and non-cosmos sdk based like solano villas and so on um instead of this we have some uh educational initiatives like validator school uh where we study validators how to validate how to connect with the chains how to speak with them how to contribute to the chains uh we have ambassador school as part of our distributed validator symptoms we synchronized with some validators not organized because organized things is that when somebody organized them but we are synchronized by themselves nobody organized us and we here we have a few validators it's about 20 i guess and we all involved in um validator school uh most of most of us and um next thing is the ambassador school we are teaching ambassadors how to contribute for the for the new projects not only just create some memes and dump tokens but how to launch for example discord or something like this how to moderate it how to moderate telegram and so on and so on but um in in my part i uh study people how to uh work with figma tool to create some infographics how to not how to um copy paste something how to understand how it's created with uh each part of these infographics so lots of our time we spend right now on uh decentralized uh governance of our own validator right right now at this moment also we uh right now involved in uh neutrons this net organization um and uh also it's it's really hard you you should understand it and all validators who are validating lots of chains should understand that uh can can versate with all of these chains it's too hard and if it's more than 10 or 20 uh it's really hard to you can say only one word to each other and the day is gone that's that's that's it um vadimir you can add about all of this stuff 
+
+Vlad: 
+yeah so um um as the beginning there when uh i started the post human validator i was alone up to 13 chains and uh when i had 13 chains i understand okay just all my day it's i sit wake up i sit in front of the computer i sit kind of 36 hours after i go to sleep i sleep kind of 12 hours wake up sit and because it's endless updates updates voting voting and you just can spend all the day by the making voting and inform the community how you vote and i understand it's okay like i'm a slave of the machine and uh i understand that i need to decentralize myself and i start to decentralize myself and start to invite people who was with whom i was doing something uh to help me and to share the income from the validator so 
+
+Valentin: 
+now we are seven 
+
+Vlad: 
+now we are seven people yeah already and the amount of the networks uh more than 30 more than two times bigger so uh and after it when i start to do this in one moment um we always have a good connections with other validators and two of them it's a web three forever and cyber g and we uh friends digital friends with them signs the uh cyber test net we met there and we still friends and we was the three co-founders of gvs the centralized validator symptoms and uh it was an idea that uh when the validators competed inside of the network it's not all always good because uh network need cooperation not the competition validators don't need to fight for the delegators and spend their time to take delegators from they need to provide the security help to each other to make this network mostly and involve more people not to fight for the delegators and this idea uh comes that uh uh validators need to be distributed decentralize it and speak with somehow how we can do that validators stop to fight for the delegators and so on and so on and next step uh uh next vision it's we need to transfer web all web two to web three all web pages all services in web two that's announced centralize it must be decentralized by the our ideal vision how we can transfer millions of the web pages and services from web two to web three cosmos sdk give to us perfect transfer make a blockchain who will validate okay we don't have really enough validators because we have the validators that's a very high level and for a long time like a p2p validator steak fish plasma station they validate size the validation exists like a little bit more than three years they are already too big and they are they already take the uh part of the market or something like this if we can speak yeah and uh new validators they uh don't have such big experience they need to take this experience from some somebody and for me it was very helpful that i was helping to the cosmos station uh team to be a community advocate and it helps me to understand validation better and also i was speaking with other validators so in the one moment i understand what through which way i was passed to became a validator and other people who became a validator like cyber j and web three forever they also give this feedback and we create this educational model to make from the person validator in the short time kind of and it was the target for us like one month with half one month and person and we start to work this with this model and now we already produce more than near 100 validators in a lot of cosmos chains you can find the validators that finished the validator school and we update the model and now and now people come learn the humanitarian part what is about contributions what's project needs how to contribute how to speak with other validators why you don't need to compete it but need to cooperate and help to each other the technical part about cyber security where to choose the server and so on and so on and after practical part we launch together testnet sending genesis transactions sending empty transactions go to jail go to jail all other networks do this and we do it with our students as the result we produce the digital army for the decentralization we are the decentralized forces of consensus we come to bring your consensus we will even if you think that we are enemy we will try to do everything to be a friend with you so and these two ideas one of the moving web three two web two two web three and another that the validators need to be friends and somehow stop to compete it and start to cooperate come to the next idea that the decentralized networks need to be validated by decentralized validators because even if now we have a decentralized network that's a trustless because a lot of computers all over the world support this what if the one validator participate in many interactions and i see it by the post human validator i understand we provide i b c relires for june osmosis t grade and in some networks we are the only one validator who provide i b c relires it means if our validator fell down the channel will fall down and we are paying for the all transactions like a t grade for example and i understand okay and we have so many of these relires okay if the validator is small and don't provide such infrastructure for the many chains but we provide what if we will die accidentally by in the flight from the one place to another place because like accident or something happens i don't know new form of Covid decentralization don't need to stop blocks must go on if even if we will die said but true so i start to try to decentralize myself by the sending ledger to my brother like and i say brother if something happens with me you have this ledger with the 
+
+Vlad: 
+mnemonic call to these people give to them this ledger everything will work yeah i 
+
+Vlad: 
+send it to the another developer of core team so we understand okay now we are by the group so okay we have the ledgers or something with the private keys very nice but what's next and we come to this idea of the decentralized validator because who is most interested in the validator the delegators and the networks so if the delegators are interested in the validators that validator not shut down and so on and users they need to have possibility somehow to govern it and what is to govern validator it's have possibility to change the name change the commission change the some parameters like now one person or small group can change all information about validator even shut down it so let's delegators will have such possibility and we start to implement this decentralized governance and we create decentralized autonomous synchronization yeah not organization because we are seeing it's organization created in the process of synchronizing not in the process of organizing and so and we start to distribute voting power about our validators through the talk token pmmn and this phmn token it's a governance token of the validator voting power but also in inside of it we have kind of capitalization and the value it's going directly from the income of the post human validator so post human have the income from many many different networks we collect part of this income converted for now into june nd from other side of pool, Junna always add more and more because we take PHMN and put it back. 
+
+As a result, we have the model of constantly growing in the price token until we artificially, especially add the value to the PHMN because it's a trustless price. It's not trustless, now it depends on me and on the ledger. But very soon smart contracts will do it and we will run the blockchain for the post-human validator. And other validators will validate blockchain of post-human. Post-human will not validate post-human blockchain. And those validator who will govern our post-human blockchain also will have part of the power so they also will be interested in the post-human validator. Because for them will be or delegate to me or delegate to post-human. 
+
+For me it's not reason because post-human is also me. So it means that we stop to be enemies. We don't fight and I can easily tell delegate to any of the validators. We not compete anymore for the delegators. Because all validators are good. Delegate to all others. We are like love the neighbor, love like yourself. Distributed ego. 
+
+Vlad: 
+We distribute our ego because interest of others became my interest. 
+
+Vlad: 
+So and we try to decentralize the validator and make them an example for the others. Because we think that in the future only decentralized validators will have success. Why? If I am a delegator I have choice to delegate to the not my validator. To the validator of my friends, to the validator of good people, to the validator of people with big authority or something like this. Or delegate to my validator. When I delegate to others validator I just get the reward. When I delegate to my validator I get the reward, the same reward. 
+
+Vlad: 
+But also part of the profit of the income of this validator. And also governance power. 
+
+Vlad: 
+And also I can board and also I can distribute the budget and also I can be a part of something bigger than me. From the side of the networks, if they will invite validators, who they will invite? The validator who can shut down node by the own wish or by the accident. Or the validator who can shut down machine by the proposed governance proposal among the huge community of the delegators. And this huge amount of delegators that validate, govern the validator, it's a sub-governance of the network. It means when I invite decentralized validator to validate my network, I invite sub-governance. 
+
+I invite people who are already involved in the governance process. It means they will participate in the governance process in the my network. So I think that it's adjusted like a next step, it's a fractal decentralized networks that's validated by decentralized validators. Next step of course is based on the moving of all infrastructure on the decentralized storages. Because for now our services, most of the nodes, not on the decentralized storages, but on the decentralized storages. 
+
+And this is the problem. And when we finish this step, I don't know, I think it will be like the very, like this is the, for now, this is the Nias protopia. To decentralize the governance of the validator and after to move all infrastructure and they go together. 
+
+Because to easily create decentralized governance, we need to have a decentralized infrastructure that all payment can go through the proposals by the wish of the governance, through the smart contracts, not by the human wish. 
+
+Citizen Web3 : 
+I have a few Devils Advocate questions. I like Devils Advocate questions. But before I want to do, want to make a comment, by the way, two comments actually. One of you mentioned the big name validators and they validate since the beginning three years. I would argue with that. I would say that things like Steem and Golos, which existed five and a half years ago, was already a D-POS. Yeah, the D-POS was broken, but already, we're already there. 
+
+But this is just like a little bit of a show off. But Devils Advocate thing, you mentioned the distributed validator. And you mentioned that the validator can do a vote via governance on shutting down the validator. 
+
+And of course, as a network, I would be interested in a validator who cannot shut down in with one person, but who can be shut down by a governance. And now the Devils Advocate question, what about the urgent security upgrade? 
+
+Vlad: 
+So, and this is the question of the, how we see it now. We see it with the multi-six and with their committees. So it's kind of the sub-sub-dauer. So, for example, with their community, we can say, we can create the one key that will be private key. And from this private key, create several small private keys. And even more, we can create this private key. 
+
+That's why nobody will know this original. So nobody will control this many small private keys. And we already can do it. And also, we validate, for example, SSV network that's based on this, like, exist operator keys. And from operator keys, you create many validator keys and you run a lot of validators. And if one validator goes shut down, other validators still works. So, by this way, we can create from the one operator keys a lot of validator keys. 
+
+And we can create the multi-six by this validator. And we can give this, and we can tell, this is the crew of the developers who are answering for the updates. For example, these five developers answering for the update of the Cosmos hub and these five developers answering for the updating of Node of the Juno. 
+
+They have this multi-sig, these developers have this multi-sig. And after these proposals, we can create new numbers. If the community stops to work to the crew of the developers, we can buy the community and we can say create new validator keys from the unknown operator keys and give them to the new group of the developers. So, for now, we see it like this and for this, we want to run our blockchain. 
+
+Valentin: 
+Vladimir, you should add some things about also this thing that we're doing all things step by step. Now we have these problems, then we will distribute more our voting power with tools which we will found in the process of decentralization. 
+
+Vlad: 
+Yeah, yeah, so many questions we solved by the way. So, we have this vision, we know how it must be. And by the way, we give the part of the power more and more power. So, sometimes I already heard some critics and they tell, oh, they decentralized the voting power, but post-human team have kind of 30% of voting power. This is the not pure decentralization. Friends, all other validators have 100% of voting power. And most of them even don't start to decentralize it. 
+
+Vlad: 
+So, even if post-human team have a kind of 30% of voting power, it's much more or less than all others. 
+
+Vlad: 
+So, we're going by this, it's like with the kid. Yeah, because we understand if we will give the voting power directly for the many unknown people, it can finish bad. So, we are looking for the people who are interested in the decentralized governance, who are involved, who are long term thinkers and who will not sell everything or I get something, let's sell it. Yeah, and we involved other validators. For example, no jumper, it's a crew of the validators joined the decentralized governance. 
+
+Godhunter, validator also, you can see this person in the cyber active set and so on and so on. Post-capitalist, validator joined us and more and more and more and more and more. 
+
+Valentin: 
+Vladimir, we should suggest to citizen-cosmos part of our voting power. 
+
+Vlad: 
+Yes, we invite citizen-cosmos to be a part of the governance of the post-human validator because we trust you and we understand that your proposals and your voting proposals will be based not on the short term economy or how our coin grew up in two times, sell everything. 
+
+Your decisions will be based on the long term vision of the building of the web3. So we invite you and we're ready to give you some voting power even if it have a value. 
+
+Valentin: 
+Vladimir, today I heard one story. One day, not so long time ago, we asked one guy to be with us in DVS. He was accepted by our governance in DVS and today I had a conversation with him. He told that I asked, do you have some funds? Maybe someone gives you money on the weekly, on monthly basis and so on. 
+
+Do you have salary? He asked that he heard from Vladimir on some web stream that he can distribute governance and he just responded to Vladimir and he gave him 10 PHP, man. And that was his salary. But he delegated it in our dust. 
+
+Citizen Web3 : 
+So he was paid. But man, of course, this is something we would be very much highly interested in and thank you for inviting us. Of course Let's discuss this and we would definitely love to participate. 
+
+And of course, we are not someone who would be interested too. Because things what you're talking about is of course have been, I think, on people who have been working web3 for a long, long time. And I think it was actually with you, with CyberG for sure. CyberG was there. I think it was when Evmus was launching. 
+
+It was over a year ago, but like one of the very first test nets. And I think I even created a Telegram group cooperation, Validate, or Evmus. And it was, I think, CyberG. And it was, we were trying to do, we didn't really work out that way, but we did try to do some things that I remember. So of course, of course, it is something that I think all validators should be doing essentially is technically trying to exchange power with one another. And understanding that the more they cooperate, the bigger things they can create. The more they benefited the end by themselves, of course. 
+
+Vlad: 
+And So before, when we have a proof of work, it was the big discussion like why we need huge decentralization and so many nodes. Because they reasonably tell if a little nodes, if a little miners, they can come to some conspiracy, meet with each other, and take back the chain and change the blockchain. 
+
+So we need a lot of miners and they will never reach the conspiracy. Ha ha ha And nobody can change nothing. When we come to the post, and we already have the discord group, where is we have the most of the validators, and we try to come to the consensus, we can't reach it even if we are 30 or 50 people. So we can't come to the one decision even by the one proposal. 
+
+Vlad: 
+So it can be proposal, half of the validators don't vote, part yes, part no, part no is Vieta. How these people will come to conspiracy to cheat with the blockchain, even if they 50. 
+
+Vlad: 
+The problem is that we can't get the consensus and to reach the consensus is very hard. It's very easy to get the consensus on the technical level between the machines. Consensus between the machines, easy. Consensus between the humans, really hard. So, and that's why we need to cooperate to try to find the consensus. Because the network where the validators, not only in the machine consensus, but also in the human consensus, will develop very fast and we can take new updates very fast and so on and so on. So now we try to find these different ways and a lot of these moments based on the trust, even if it's a trustless system. 
+
+And I came to the one interesting idea or vision. So in the system that's based on the trust, like a state fiat money, where I need trust to the system, I spend all my energy for trusting to the system, not for the humans. And because of it in the centralized systems that need my trust, the trust between the participants, very low level. In the centralized structure, people don't trust each other. 
+
+They fight with each other. And in the structures that are trustless, I don't spend my energy to trust to the system. I don't need to trust to the blockchain. It works even without my trust. So this trust energy I can spend on the participants. And in trustless systems, we have higher level of the trust between the participants. 
+
+Vlad: 
+And this is how I see by myself now. And I see that the people in the digital trustless systems trust to each other much more than in the material world. 
+
+Valentin: 
+Guys,
+
+Citizen Web3 :  
+you're Valentin, Go on, please.
+
+Valentin: 
+I just wanted to add some things, what we do.
+
+Citizen Web3 : 
+please. 
+
+Valentin:
+Um Instead of all things that we've said earlier, we also work on our YouTube channel. We also work on our speeches on some different conferences. For example, I've participated in one of Moscow conferences. Vladimir participated in Paris conferences. On the 3rd of November, he will be in Lisbon and so on and so on. We spread it. 
+
+Citizen Web3 : 
+Wait, wait, wait, wait, wait. You're going to be in Lisbon on the 3rd of November, Vladimir? And you don't tell me about it? 
+
+Vlad: 
+Yes, yes, yes. I will be in Lisbon. 
+
+Citizen Web3 : 
+Because because because what I'm about to buy a ticket today for the next day. 
+
+Vlad: 
+Go to Lisbon. 
+
+Vlad: 
+It will be nice to see you on the Staking Solid. 
+
+Citizen Web3 : 
+But that's what I'm saying. You're buying a ticket for when I'm not gonna... So you should tell me those things. Let's talk about this later. ok Sorry, Valentin. 
+
+Valentin: 
+You bought your tickets but you did it without the respect. 
+
+Citizen Web3 : 
+I did it exactly, exactly. No respect for the tickets. You see the three lines Valentin has over there. He knows what he's talking about. 
+
+Valentin: 
+Then we had lots of things with product management. Also, Vladimir hadn't told about it. But he also and me, but not so much as Vladimir, he is working on a game. Then we are working on Sputnik Network where people can send something, some tips in Twitter or Telegram and so on. but
+
+And we support it without any funds from the site. Also, one thing I want to add that when you're a validator, you should be like a multi-tool. To clarify, you should be a good product manager. You should be a video editor. You should be a blogger. You should be a technical specialist. You should be... And so on and so on. 
+
+Vlad: 
+That's why we have seven people in our core team and try to decentralize the governance that more people do more. 
+
+Valentin: 
+Yeah and We are also spending a lot of our free time to create some products, not for only us, but for people. For example, somebody has good technical skills or humanitarian skills or something like that. and We, as first-comers in the Cosmos ecosystem and also in the crypto space, we know how to apply their skills in this field. and um For example, we had lots of ideas for different validators, for different projects. how to For example, Vladimir yesterday, he had a conversation about some economics changes for a shift chain. 
+
+For example, also we had some things... I had an idea for cyber, for example. One of the use cases, people asking what is cyber? This is so user-unfriendly and how to work with it. But it could be used as insider's information social network, for example. You If you want to post something in Twitter, you can post some files or videos or texts and so on. 
+
+Text you, you could, sure. But for example, you is a good technical specialist. You could get some interesting data from the blockchain and you could post it on cyber's Twitter. And People could also follow you and it might be another use case for cyber, for example. We had lots of ideas for people and we could share it for free, absolutely. We are doing it every day. We are spending time on it. It is very interesting. It is like the game. You are improving your own skills. You are cooperating with some other players. It is very nice. It is very interesting. 
+
+Vlad: 
+And a
+
+Citizen Web3 : 
+I can Go on. 
+
+Vlad: 
+One also part that we change not only... I was speaking about the changing of the material world, not only about the digital world. I will I want to share the screen because I think it is much better to see one time. This is the place that exists because of the post-human validator. We rent the place in the Nigerian city of Abuja. We make the repair it and put the tables and chairs. Everything that people need. We buy Raspberry Pi. It is a computer on the Linux with the books in the keyboard. We put these computers by the screens directly in Nigeria. 
+
+It is a used screen. We provide free space with internet and computers for the people. And People come and you can watch the feedback. People come there to become developers, front-end designers. Even if they play games, it has already changed the reality. In Nigeria, people need to work hard for 8 hours per day for the $100. 
+
+People with machine guns kill each other because of the diamonds. And here is People can come and get the free access to the internet and computers. They became a developer, a designer and on the freelance, they earn $1,500 or $2,000 per month. What it means People around them stop to work hard labor. 
+
+Their mothers stop to work, fathers and brothers. Only because one person began to make designs or make the code of front-end or back-end. This is our first space that has been working for one year. And I really I really We opened the second place in Nigeria in the city of Jaws. Nigeria is now at the high level of the interest in the crypto. 
+
+The countries from the industrial sector are still in the industrial paradigm. We also helped the Shiri Lanka. We tried to create such spaces where people can self-educate themselves. because To become a developer, to become a web-3 developer. 
+
+Valentin: 
+They are more motivated. 
+
+Vlad: 
+All you need is to have access to the internet and the computer. In most of the industrial countries, people just don't have it. They don't have a computer and they don't have free access to the internet. We started to give them this access. As a result, we got people who changed their own lives, changed their lives around them and joined the web-3. 
+
+They started to develop on the web-3. On different levels, I'm not sure that all of them will be high level mathematicians with the back-end. But they will become good front-end developers. Or write smart contracts on the solidity or sign of this. 
+
+This is what they already do. This is the part of our post-human-validator charity. So When we start to get the income, we understand that we need to change not only digital world, but also change the material world. 
+
+That's how we combine this digital and material. If you are interested in developing third-world countries, how do we call them? Feel free to learn more about Sputnik Foundation. We even have official registration in Nigeria and Sri Lanka. 
+
+Citizen Web3 : 
+It's interesting that you guys mentioned the same things we do here with Citizen Cosmos. The only difference is that we are working a bit closer to us. We are working with Madeira in places. We teach here locally about alternatives of making money and the myths and realities of blockchains. 
+
+We participate in an art project here. We donate the money in crypto on purpose. They can use it to develop their own things. It's interesting that more and more validators are finally doing this. you know
+
+We are seeing more and more projects doing this. It's amazing. I want to ask you guys one thing. We went through a few blocks. Your story, why you are here, what now. You already answered what's next, which was the next question. Maybe I will focus on two of the things that you said you didn't talk too much about. 
+
+That will be our last block. You mentioned cyber. You mentioned cyber. You mentioned a game. We are developing a game on cyber. We are close in the next months to make a first local build. 
+
+Valentin: 
+That's very great news. 
+
+Citizen Web3 : 
+The idea is for use cases to make our ideas. I was very high to be honest one day. I'm not ashamed you know I realized that how can you, cyber is too difficult to understand. What is the obvious thing to use it is gaming. and
+
+Valentin: 
+Very interesting thing is that cyber has more literally have more really more games that already implemented than other blockchains. People don't know that it has 8 days amboni period. ha ha for example hm hm
+
+Citizen Web3 : 
+Yeah, yeah You're right. no no I'm just agreeing with you completely. It's exactly like that. This is another reason why it developed on top of Bostrom and not other blockchains. Because it has the whole technological stuff there. 
+
+There is no documentation which is a big suffer. ok You suffer a bit here, you suffer a bit there, you win a Dn there. Enough about me. 
+
+Back to you guys. I had 4 blocks which was your story. Why, what now, what's next? You kind of answered but you mentioned 2 things. I want to ask you a little bit more about them. First of all 
+
+You mentioned the game and you mentioned Sputnik. I don't know if I'm correct to say that they sound like big projects. They sound like big plans. 
+
+Both of them. Maybe you can extend on the game and Sputnik. People know what you guys are from big things planning in the nearest future. For people who want to join post-human validator or just delegate normally to post-human validator. Or become part of the distributed validator. 
+
+Vlad: 
+Yeah and In this case, it's also better to share. I want to share the screen. Because it will be much more easy to understand. So, the Sputnik, it starts like the project. If web2 don't go to web3, maybe you can kill... 
+
+Valentin: 
+You are... 
+
+Vlad: 
+Yeah. If web2 don't go to web3, web3 will come to web2. And we start to provide the easy solution, easy tool for the Telegram and Twitter user to send the tips. And now all users of Telegram and Twitter can send tips to each other with the more than 20 coins. Atom, Juno, Osmo and so on and so on. And we add new and new tokens. 
+
+Just in one comment. But after we understand that we want to make this solution, decentralize it and make the blockchain for this. And this is the scheme of what comes to our minds. So, it will be the blockchain that we can divide on the four different parts. One part is the economical part. And this is the delegators, users who are interested in the economical parts. Like the liquidity pool, DeFI and so on and so on. They are economical people and they are not really interested in the governance. 
+
+And we can see it by the other networks. So, most rich validators even don't participate in the governance. Because they come to APIR, not to the governance. So, another part of the blockchain, it's a social part. It's a governance. 
+
+How we distribute the community pool and how developers get funds to develop the network. And for the economical people, we'll be economical token that gives you all economical utility and pay for their fees and get the rewards, but not participate in the governance. And for the social part, we'll be electron, like Elect, Electron. And economical part, it's a token Neutron because economics must be neutral. So, it's Neutron. 
+
+Social part, it's Electron, so it's Elect. And this token gives you possibility to vote for the community pool paintings and to govern the network, but don't give you any APIR. This is not economical token. And also one part is a technical part and about validators and they have a token Proton Protection. They protect the network. 
+
+And Neutron, Proton and Electron, it's atom made of protons, neutrons and electrons. So, the validators will validate the network, but they will get rewards, not from the delegators, but from the validator pool. So, validators will stop to compete for the delegators because rewards will go at first to the validator pool. And after the validator will share the validators pool. So, all validators will tell, not delegate to me, me, me, they will tell, delegate to us. 
+
+We will share it. So, validators will more concentrated on the security, cybersecurity and the technical parts and less on the spending time to attract new delegators. And even if they will spend time to attract delegators, they will attract delegators to all the network, not to themselves. And also it will be the cultural part with the game. And it will be with Photon, because the symbol of Photon is a gamma. That's very same with two-word game. 
+
+And all atoms can produce photons. And in this scheme, we made the game that called Metarchy. You know, Monarchy, Anarchy, Metarchy. 
+
+Yes, like the Metapower. And this game will totally drive by the community. It will be a turn-based strategy with the microeconomics, with prediction of the action of other opponents, like in the poker. And is with betting on the results of the events, like the stone, skisser paper. If I will give you stone and you put skissards, you lose. But two stones, it's a draw. So I can put the bet that I will win or I will lose. 
+
+And I will, for example, try to lose, because I put bet on the lose. And it of course will be with NFTs and so on. It's with robots, politicians, artists. 
+
+It's about near future where all bad things do robots. They produce all goods, electricity and so on. And humans still are involved in the producing of the meta resources, like wisdom, like power, like art. And we already have big team of the developers and designers. This is the first announcement of this game. 
+
+I think we will make a big official announcement very soon. But in this game, we will have new interesting model, like why this token will have value. Because we will make the kind of championships of this game. And people will make these championships. And on the championships, we usually see the sponsors. And who is the sponsor in the real world? When you come, for example, to the football match, you see the advertisement of the Google or Samsung or the beer. Did you choose the advertisement on the championship? 
+
+No. Now in the centralized world, nobody chose the advertisement. Nobody voted who will be a sponsor. 
+
+We think that we need to change it. And our gamers who will participate in the championships will vote for the sponsors. And sponsors will bring their value to the photon token. So if sponsors want to make an advertisement on the championship, they buy tokens for their own tokens. 
+
+For example, it can be cosmos. They can come and say, we want that all players see the cosmos advertisement or Juno advertisement or something like this. And they give their tokens. And as a result, gamers fight against each other for their tokens. And when they win the photon token, they can exchange it on the tokens of the sponsors. Or they can keep it for themselves and elect with these photons for the next sponsors on the next championships. And this will be a triangle of love when the sponsors always get the best attention because people were voting for them. And they know we were chosen by the people to give our advertisement. Gamers will see the advertisement that they chose and they play for the tokens that have a value in the tokens of the sponsors. And game happens and everybody is happy. 
+
+Totally win-win. And this is the first time when the gamers will drive not only the game, but all advertisements and they will choose. And this is the part of this putnik network, the blockchain. And we also think that post-human validator also will be based on this blockchain to solve this part of the decentralized governance questions. For example, automatization of getting off all income and sending it to the liquidity pool with PHMN and so on. Because now I do it manually. 
+
+I want to liberate myself and it will be more trustless system. So PHMN will be more value and more interesting for the other people. So this is our main deal that we are our main target. So this is the first time when the game will be played. And this is the first time when the game will be played. And this is the first time when the game will be played. And this is the first time when the game will be played. And this is the first time when the game will be played. 
+
+And this is the first time when the game will be played. And this NFTs they can trade with each other and it will be not the last game. It's the first game and after we will open two portals to the two other games and you can transfer the NFTs from one game to another. So in one game this NFT it's like can give you plus five to the strange. And in another game it can give you plus 10 to the charisma or something like this. 
+
+And it will be the one game it will be into your that's kind of stone, skis or paper and the poker. Another game will be kind of the metaverse dark metaverse with crypto gopniks where you play like a Sims but you play with the gopniks. You have gopnik you can send him to the job he will return back with the payment or you can send him to fight with other gopniks. And he will return his mobile phone and you have a liquidity pool to send 
+
+Vlas: 
+the mobile phone to the money or something that your 
+
+Vlad: 
+gopniks happy you need to buy to them. Beer sends them to the bar if you give money to the gopnik and send him to the bar he can return with the drunk girl and 
+
+Vlad: 
+produce your new gopniks and so on. 
+
+Vlad: 
+So it will be and it will be fighting sluggish. 
+
+Valentin: 
+And not support crime we are support digital forms of the state. 
+
+Vlad: 
+Don't make crimes in the real world do crimes if you want to be a bad character do crimes and fighting in the digital world. And another will be like a card war game as usually we play one person against one person. I have a lot of cards my opponent have a lot of cards magic the gathering or her stone very famous. But exist understanding of war game where a lot of players against a lot of players. So we will make card war game where 50 people play cards against 50 people. But every person just put one card and after update every turn this card make his character more stronger and they are all combined to each other. So for example on the example of any other game swordman where your archer mage and every person tell I will heal with my mage the very or but other your opponents can don't attack your very or so you just spend the time for nothing because nobody hit the very or and you don't need to heal the very or and so on. 
+
+So many people will fight against each other with the big army of the cards and the algorithms on the blockchain smart contracts will solve it very fast. But for this you need to have a good cooperation between the clan players. You need to speak about tactics before because you don't have a lot of time to speak in the process of the game every turn will go very short like these people make actions turn to this people make actions turn. Who killed who not killed and it will a lot of about cooperation between people and how they can cooperate before the battle together to get the results. 
+
+Citizen Web3 : 
+Valentine do you want to add anything else about the game. 
+
+Valentin: 
+Yeah I even me didn't hear nothing about this game. ha ha
+
+Citizen Web3 : 
+Ta da
+
+Valentin: 
+Yeah I was surprised. It's so nice. 
+
+Vlad: 
+Because I don't want to disturb Valentin from his deal so we have the like group of the designers who work with designs group of developers who work with code and the Valentin very involved in the evangelism and he moderates the communities. 
+
+Valentin: I'm managing Vladimir's time. 
+
+Vlad: 
+Yes he's my he he managed in my time much more better than me. So sometimes I so happy that the Valentin tell you remember that you 
+
+Vlad: 
+have this meeting this time I say oh thank you very much you are better managers and me. 
+
+Vlad: 
+So and I don't want to disturb Valentin from all he do already and I really glad that Valentin helped me to decentralize me. Because we need to the other way we will be like a look or shenco when the person afraid to decentralize his responsibility. He became a dictator and everything goes out of control. One person can't control everything. 
+
+We are not the gods. We need to understand that it's time to decentralize yourself to decentralize your responsibility to give to more to other people help to other people to be more responsible. Some people are afraid but from the other side we need to understand that I can't give my responsibility to the person who is unresponsible. So I will be very glad if I responsible for my kid and I know I will give it to my father my father grew up me so he will be responsible for my kid. But I can't give my kid to unknown person. What will be this my kid. So when I show that other people have the high level of responsibility and I can share my responsibilities with them and decentralize it. 
+
+I always do it. Decentralize yourself and start decentralization from your own ego from your own responsibilities and you will get much more success if you will centralize it on yourself. If you centralize everything on yourself in one moment you will be or die from there is this responsibilities or you will be like a Lukashenko. Nobody will love you. 
+
+Citizen Web3 : 
+I think that the example with Lukashenko is the best but apart from that guys I think well whoever is going to watch this video. I would definitely advise to I think this is the first time I'm going to say that by the way in exploring validators. Usually we spoke actually more let's go further. I think like Citizen Cosmos together with podcast episodes and exploring validators series. We have about 20 or so episodes with various validators and that's steak fish it's you know staking and P2P and many many many many many others maybe more than 20 I think. But I've never recommended to delegate to anybody else but Citizen Cosmos online and I would say guys if you're watching this video. This is ideas that I think in my opinion are important people that talk about you know trying to do something to benefit ourselves whether you know something that will this is exactly I think what we were talking about do. Don't do to other people what you do want to do to yourself and in this case it's the other way around do to others what you want to do to you so and I think that's what the guys are doing and. Guys thank you very very very very very much for your time considering 30 networks that you run I can imagine how. 
+
+How that can be crazy I know that we run less a lot less we are so soon going to try and run more but yeah. Guys thank you very much for joining. 
+
+Vlad: 
+Thank you Sergei I want to tell delegate to Citizen Cosmos because Citizen Cosmos for a long long time bring so many value and this value is priceless because we even can't understand now how it's important and how which is the big value to speak with each other to share your visions to share your ideas. And if you didn't see previous episodes of Citizen Cosmos watch it you will find so many insights so many inspirations the people who run the million and billion projects in the. This dreams tell the brilliant ideas and this is you will never heard it in any institute you will never heard it in any university this is the how our new decentralized self education works watch Citizen Cosmos this is the brilliant podcast. 
+
+Citizen Web3 : 
+Yeah Valentin you want to 
+
+Valentin: 
+yeah which we all should agree that all guys who are validating chains are crazy. And we could yeah we could we could find some different models of behavior on these podcasts on different podcasts we are talking not only how to buy and how to sell. And more about people how to how to be yourself how to find your idea how to find your inner powers for something maybe you will watch this episode and you will try to learn something new and it would be very nice. 
+
+Citizen Web3 : 
+Guys thank you again don't hang up but thank you again just to say goodbye to you separately guys everybody else thank you very much for watching bye bye bye bye. 
+
+Outro:
+This content was created by the Citizen Web 3 validator you may support our work by delegating to any of our nodes. 

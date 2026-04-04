@@ -1,0 +1,381 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/nodigy
+
+Episode name:
+Monetization Strategies, CBDC and Personal Values with Dmitry Laier
+
+Citizen Web3: 
+Good space time everyone and welcome to a new episode of the Citizen Web Three podcast. A source for educational insights into the Web Tree universe and your connection hub to the people that turn code and dreams into decentralized applications and reality. 
+
+Today we are joined by Dmitry from Notage Validator. We discuss crypto marriages, entry barriers to business, scuba diving and community building. We talk about no deployment, motivation to join Web Tree and values. Finally, we dive into monetization strategies, CBDCs, server architecture and conserving resources. If you enjoy the Citizen Web Tree podcast, please share this episode to your favorite social platform and help us spread Web Tree values into the universe. 
+
+Dmitry: 
+I talk with my wife because she is also a crypto addicted person. 
+
+Citizen Web3: 
+The whole idea is to create a trustless system and to teach people responsibility, you know. 
+
+Dmitry: 
+If they plan to run CBDC, they need to create pools of liquidity, right? If they will create pools of liquidity, somebody can attack these pools. For example, other countries. We give you money, you give some time and promote our project. This is the best way for us at the moment. 
+
+Citizen Web3: 
+Hi everybody, welcome to a new episode of the Citizen Web Three podcast for everybody who doesn't know this is already the third take of it, but it's still good. We're going to win. Today I have with me Dmitry from Notagee Project. Dmitry, hi again. Welcome to the show, man. How are you? 
+
+Dmitry: 
+Hi, Sergio. I think today is something wrong with the weather because all the time our connection is cut by somebody. 
+
+Citizen Web3: 
+We can do it. We can do it. I can see that it's now uploaded, man. Now, the first two times we've been making all those jokes with the Mucuboa and everything else and Mucuboa. Well, we happen to have a similar geographical connection, but Dmitry, not about me, about you. Please tell me all about yourself, about what you do right now, what is Notagee maybe, and maybe the story that you started to tell before. I would love to hear it, please. Okay. 
+
+Dmitry: 
+First of all, I'm an IT guy in IT from 1995. I was a software developer, then lead, then CTO, then CPO, then start mixing different roles of C-level. In the end, at the moment, I'm co-founder of Notagee. My role is CTO, CPO, CEO, Chief Operational Officer. We started realizing this project. It's like a quick note about me. 
+
+Citizen Web3: 
+What is How did you get into WebThree, Dmitry? You said IT, but where did blockchain ruin your life? 
+
+Dmitry: 
+Yeah, okay. First touch was maybe in 2016, when we started our Diving Center in Portugal, in Lagos. And I tried to buy some Bitcoins. I know a little bit what is it in that time, and just bought for speculation. It was a good investment after one year. And after that was a long period without any activities with blockchain, WebThree, and all this type. And in the previous bull run, I started researching all the information about the possibility of investment, how it works, deep dive into the technology, and get some money from this, and also lost some money. Because I don't know some specific things of blockchain worlds, like market makers, manipulators, etc. But I get a lot of experience and decided to start own projects. Because one of the main pain points was the difficulty of note installation. 
+
+Because in the previous bull market, if you are not an owner, you can get some airdrops, a lot of interesting rewards from incentivized. It's like a life-changing amount. And I started thinking about it. In the end, we decided to create Nodigy. 
+
+Our project that allowed to automate deployment, monitoring, can support for secure note management, automatically install your notes without any technical knowledge, just use some magic buttons, and get all rewards that nodes provide to the blockchain world. 
+
+Citizen Web3: 
+Now, usually with some guests, I get a little bit deeper into this, and I will with you. Because I have to say, I'm always curious, what motivates the person. For example, you said, OK, so you were doing IT, you had the conditions around you, and your life kind of were building up, and then suddenly there was an opportunity with the investment, speculation, etc. 
+
+But internally, was there anything at all that drew you to Web3, or it was purely speculation at the time? But then to start a project, it takes a lot of courage, right? It takes a lot of internal, I don't know, especially when you don't have knowledge of the field and with blockchain. 
+
+It's so new that it's impossible to have, especially in 2016. So I'm curious, what was the motivation for you? Was it to solve a problem on the market, the pain, or was it anything else? 
+
+Dmitry: 
+My advantage and disadvantage at the same time is that we wish to help people solve some problems. I can tell you one story about diving, a little bit from the side. When I just started diving, it was an advanced scuba diving course of Pedi, and we go to Egypt. We start diving, and the group usually has five divers plus instructors. 
+
+And what happened under the water? I started losing air very quickly, and nobody wants to dive with me. After a couple of dives, instructors start talking with me, why are you losing the air? 
+
+What's happening? And I say that I'm trying to manage and help all divers under the water. I start trying to control these divers, don't go down, don't go close to the corals, don't swim your fins. Because you can touch some other divers, he can lose his mask, etc. And the instructors say to me, Dmitry, just forget about any problem, and when you go dive, all problems are on the shore, and you are alone under the water. Do you understand? 
+
+I say, okay. And I used a 15-liter tank, but a normal divers used 12 liters. And this 15 liters was not enough for me. And after this conversation, we go under the water, and I start breathing slowly. 
+
+I forget about any problem. And all group used all air, and I have half tank of the air. And my instructor showed me under the water. 
+
+Now you can go with this group, and I swim more than one hour under the water, and when I climb on the boat, he said, so that was your problem. You're trying to help somebody all the time. In crypto is the same. Sometimes I'm trying to help people solve problems with the nodes, with technical understanding how it works. 
+
+Because here is a lot of scammers, a lot of different scammers, that can be involved in all this business process. And I start helping to the people. I create my channel. I start writing some small boards, like arbitrage boards. Start learning solidity, how to write smart contracts. Start researching how all these scams work, like honeypot, etc. But for me personally, I would like to get some money also. 
+
+Help is help, but don't forget about you, as my instructor. That's why I started thinking where is the biggest possibility for life changing money. And it was incentivized program and node ownership. But to install nodes, here is some problems. For example, you should have a CIS administrator or DevOps administrator skills. And also you should deep dive dive deeper to the blockchain specific techniques that should be used during node installation. Also you should all the time monitoring Discord or Telegram channels to update software, etc. I talk with my wife, because she is also crypto addicted person. 
+
+And have front-end development background. And we decided that this is interesting project. And I talk with my partner, explain all idea. And he say, okay, let's try. And it was the start point for the Nodigy. 
+
+Citizen Web3: 
+Now, sorry, now this story I like. That was the full story. The first one was this is why I always come back to this question. Because I know that there is a fuller story to that. Now let me ask you a question though. 
+
+This is a question I've asked during two years ago. I was covering, well, I was doing like some stories in Lisbon Blockchain Week. And it was a series of short interviews with the same question to a lot of people. And those people were founders, all of them. 
+
+Some validators, some bigger projects. But the question was the same. And I'm going to ask you that because of what you said. You just told me that your original, do you think, I'm going to get straight to the question. Do you think that what you do today still solves those issues that you originally started with the idea to solve for other people in Web3? Does it work basically? For you, inside, do you feel it? 
+
+Dmitry: 
+It's just interesting question because again, I should explain some story. 
+
+Citizen Web3: 
+Please
+
+Dmitry: 
+Yeah, because first idea was install the nodes, get some place in mainnet or in testnet, get incentivized tokens and sell it on the market. But here we should see how projects and investors, how to say, develop their strategy to realize the tokens. In previous bull market, they distribute tokens by IDO, ICO, etc. 
+
+Investors receive their tokens and sell it after some manipulation by the market. And same with the nodes. But after involving of SEC to the all blockchain projects, strategies start changing. So first idea was make auto-organization of node, installation node process, get the tokens and sell it on the market. But now it's not working because investment companies, blockchain projects, changed strategy of token distribution. They start doing it via the nodes. But they start making very high amount of tokens that required for the nodes. For example, for Aptus, you need to have I don't remember about 1 million and something of Aptus. 
+
+Price of Aptus now is about $9. So, 9 million you should have to create the nodes. This barrier is low for regular customers, consumers, jump to the node business. 
+
+So now we need to validate which blockchains allow to install nodes with small amounts of tokens. And also about one year ago, Ledger, this hardware wallet, announced the news that they will share your private key with the third parties. But Ledger was like a standard defect of storing your assets. And also we start thinking, what should we do if Ledger will not work and other hardware wallet will not work. So only one possibility to save your tokens is on your node because you own your private key. You see the phrase, if a Ledger like Node-DG or P2P or somebody else will go down, you just easily go to the block explorer, run some smart contracts with some parameters and you will get back your tokens. 
+
+No risky. And But when we start researching the blockchains, technically some projects generating keys during the node installation process and they know your private key. And we start to understand that not all blockchains can be automated, trustfully. And we start thinking, who is our partner, really our partner and who is not. Yeah, something like that. And I forget your first question. I start to explain. 
+
+Citizen Web3: 
+No worries. I'm here to, that's my goal. My job is here to help. The question was whether you think, I mean we went a little bit off it, but it is also an interesting topic that I want to discuss with you about the setups. But the question was whether or not you still think inside of you that what you set out to do, the goal of Node-DG, the original goal of helping people in Web3 is still working today with what you are doing today with Nodigy. Did it work? Do you think you helped people and still helping people with their nodes? That was the question. 
+
+Dmitry: 
+I'm sure that we do right thing, but I'm not sure how to correctly monetize the story. First of all, 
+
+Citizen Web3: 
+That's a different question
+
+Dmitry: 
+Yeah yeah yeah we should create a good product first 
+
+Citizen Web3: 
+Of course
+
+Dmitry: 
+and then start thinking about monetization. 
+
+Citizen Web3: 
+Let me let me let me Usually I don't do this. I don't cut out, but this is so dear to my heart that I want to share with you because it's important. Now, Citizen Web3 is four years old and an and and we're still thinking of perfect solutions sometimes to monetize. So it's not only you. That's what I'm trying to say. It's all good. What is your monetization strategy now? 
+
+Dmitry: 
+Business model is quite simple. It's a fee-for-service based model. 
+
+Citizen Web3: 
+Validator. And You started to talk about Validator security and about running your keys now. It's a very big topic. Do you currently use any for your setups any key management structure devices like Ubiquz or DKMS or Horcrux? Are you currently implementing any of those or is it something that you've been looking into? What's your opinion generally on those things? 
+
+Dmitry: 
+Yeah, Ubiquz is a good solution, but is this question about my personal assets or about Nodigy?  
+
+Citizen Web3: 
+I'm sorry, I didn't ask the question correctly specifically. For the nodes you are running yourself as a Validator, as Nodigy, do you use any key management structure or any key management like Horcrux or anything like that? 
+
+Dmitry: 
+We have Ubiquz. We're restoring our keys and that's it. We have limited numbers of people who have access what we do what we do and also we're using Ledger. 
+
+Citizen Web3: 
+Okay, okay. It's an important question because lately there has been a lot of like, you know, we ourselves as a Validator, we have double signed before and for us it was a very big incident of course and you know, we were looking at how to solve it and that was one of the solutions we found is to use a split key management structure. In general, again, another question about you though, about your Validator. 
+
+Dmitry: 
+Here's one moment. The biggest risk is to sign some contract than lose your seed for us or private key because usually we are storing it offline outside of the Internet, etc. But if you will sign some scammy contract, it will drain your tokens. It's more dangerous because Ledger will not protect you from this type of contract. If you want, you will sign, that's it. 
+
+Citizen Web3: 
+Yeah. What What's about your Validators that you're running again for Nodigy? I'm curious about what's your opinion about Cloud and Bare Metal, you know, it's a very big topic these days in the Validator world. Cloud servers or privately owned Bare Metal servers. What's your opinion and what do you guys do? 
+
+Dmitry: 
+I prefer Clouds because it's easy to migrate, easy to create backups, easy to restore Bare Metal. Yeah, it's quite safety, but if something will be broken, your lifetime will go down and it's quite difficult to manage. Yeah, I'm not a fan of Bare Metal servers. Also, we are using different hosting providers. Maybe in future we will use distributed hosting providers, but at the moment on the market we have only startup projects and we'll see we'll see. 
+
+Citizen Web3: 
+Tell me about how do you guys select chains, how does Nodigy select chains and how do you decide which blockchains you can validate and which ones you cannot validate? 
+
+Dmitry:  , we are validating funds. What is the investment amount to the project? Who is the investor? What is the economics? How do they plan to distribute tokens? Will they have some incentivized program for validators or maybe another one development incentivized where we can also participate? After we're looking for how many validators they plan to attract, do we have a chance to jump to the board? And after we start participating participating in test nets and after if we're successful we will go on my net. yeah
+
+Citizen Web3: 
+How is today for people who are not familiar with what you do, how is Nodigy different today? Because the service you guys offer is a little bit different as far as I understand right. 
+
+Dmitry: 
+Yeah for sure
+
+Citizen Web3: 
+How does it look for the normal person? They come and How is Nodigy different from I don't know P2P or Everstake or anybody else out there on the market? 
+
+Dmitry: 
+I made that experiment. I just sent some requests to all Nodigy, Everstake and P2P org and asked about my personal Ethereum node. I have some tokens I would like to install. After a couple of days they started answering me. So please send us a little bit more information about you, blah blah blah, how many tokens you have. 
+
+Then start writing. We will allocate some special manager for you. He will talk and explain what should you do. And after you will transfer your tokens and we will install Node blah blah blah. So this is a very very long procedure. And I was not so satisfised but I was happy because our project do absolutely different ha ha we're trying to automate all this process and install node couple of minutes some times it takes hours yeah and this is mane advantage of Nodigy
+
+Citizen Web3: 
+How does it look? Talk me through it. Talk with me through it. How does it look? So I come here, I am, my name is Bob. I come to Nodigy. What happens? 
+
+Dmitry: 
+Okay, you just need to authorize on our platform, nodigin.com, do it right now. So then you need to top up your balance by USDT, choose your blockchain that you like, press install, pay some fees for node installation for the server. It depends from performance of the server. 
+
+After node will be installed, it usually takes five minutes, two minutes, it depends from the server. And you start delegating tokens to your node. Different blockchains have different path for what should you do. Sometimes they take separate wallet or yeah, it's like an algorithm that you should follow to start your node. We have this instruction, we public this articles on medium, also we do we do integrate this articles to our wizard when you're going by step by step. And for example on step number five, you should transfer tokens from your wallet to address of your node, something like that. Yeah, and after this delegation, your node start working, you can check it in some block explorer, that's it. Nobody will talk with you, but you can talk with us, you can write and we will answer for sure. 
+
+Citizen Web3: 
+And but who will have access to those servers? 
+
+Dmitry: 
+We have access to the server, but we don't have access to your wallet because it's your private key and we can do anything. For example, if somebody will hack our server, what he can do, he can stop the server. 
+
+But he can't take your private key because you sign it, transaction and yeah, what he can do, he can withdraw these tokens to your address, that's it. So here is minimum risk. 
+
+Citizen Web3: 
+Reputational damage I guess would be the biggest one because he can double sign. 
+
+Dmitry: 
+Yeah, yeah, yeah, yeah, yeah, yeah, yeah, but 
+
+Citizen Web3:
+he can double sign for you if he wants to, right if I guess? 
+
+Dmitry: 
+No, he can double sign because you have private key and only you can sign. If you for example 
+
+Citizen Web3: 
+No, I mean double sign, the validator can double sign, the private key of the validator is still in the config file, it's not the private key of your account, it's the private key of the validator, two different things, right? 
+
+Dmitry: 
+Yeah, you can make a copy. For example, yeah, in Ethereum, in Ethereum, you can create a copy of node and you can be... ...punished.
+
+Citizen Web3:  
+We are talking just Ethereum stakeing right now, right? Sorry, Dmitry, is it solo Ethereum or are we talking about all of the other blockchains too? 
+
+Dmitry: 
+No, no, no, I'm talking about all different types of blockchains because we already tried, I don't know, maybe 15 different blockchains. 
+
+Citizen Web3: 
+And how does the setup, I'm curious, like for example, what kind of setup does in terms of architecture and node structure, does the person get, can they choose? Like can they say, I want a validator, I want two sentry nodes or whatever, I want Horcrux to be involved or no, it's going to be a validator node, on it there's going to be tokens and they basically validate it, right? So it's the simple setup, right? 
+
+Dmitry:
+Yep. 
+
+Citizen Web3: 
+Okay, okay. And out of curiosity?
+
+Dmitry: The problem is that because on the market, a lot of investors with the money, but they doesn't have technical skills and for example, if they would like to hire some DevOps, they should understand which type of DevOps, which skills should have this person also, he should trust this person because he will delegate big amount of money, for example. And it's quite difficult. 
+
+Our company established in Portugal, we have few radical address, you can go to the court and write, okay, this guy is still my money. We are not anonymous team, yeah. 
+
+Citizen Web3: 
+Let me ask you a question, but it's going to be a devil, it's going to be a very difficult, 
+
+Dmitry:
+ok
+
+Citizen Web3: 
+it's an easy question, but it's going to be very difficult in terms of philosophy. Now, I told you at the beginning, I like to be devil's advocate and I ask difficult questions and I'm very thankful for the guests to answer them. 
+
+I'm going to ask you a very difficult question too. So don't you think that the service you offer is actually complete paradox for Web 3 because your base isn't the whole, and again, I'm being devil's advocate here, I have my own opinion on this, but I want to know your opinion. As far as I understand, as far as blockchain is unconcerned, the whole idea is to create a trustless system and to teach people responsibility, you know, there is responsibility for keeping your keys, there is responsibility for doing this. When we offer such a service, isn't that taken away from learning that about responsibility, what's your opinion on this? 
+
+Dmitry: 
+Here we're dividing story to the two parts. First part, this is technical maintenance of the servers, it's our part. Responsibility of signing any transactions and saving your private keys and this for us, it's yours, nothing changed. Maybe in some projects, in test nets, we will have access to your private key, but on main net, we will never run nodes that will allow to us read private key because we don't need this type of responsibility. 
+
+Citizen Web3:
+The private key of the account, right? Not the valid key. 
+
+Dmitry: 
+Yeah, yeah We don't want to know your private key or sit for us. 
+
+Citizen Web3: 
+And I'm curious, your own validators, you're running by yourself back to Nodigy now for a little bit. Now Today, all validators, they this is basically one of the reasons, I mean, our show is about four years old and we used to talk to not as much validators as we do today. Today, we talk pretty much to just validators and there is a reason for that. the reason for that The tools we're building are also for validators and are about validators. But the reason for that is in my private opinion, personal opinion, validators have become probably the most influential entity in blockchain today. 
+
+Since 2017, roughly, every project has got validators in it and a lot of the validators I talked to, they say, hey, we do this or we do this. So, for example, Nodigy offers a service where a white label service, so to speak, where a person can come and start their own node automatically, more or less, right? They have some pluses, some minuses. What other types of similar things if anything does Nodigy do today? Or this is your main product and you only build in that product? This is basically the question. Are there any other products that Nodigina offers? 
+
+Dmitry:
+No, just today we discussed the possibility to partnership with the government of one country. We'll see what will happen. And also, all countries think about CBDC. For CBDCs, they will need nodes. It's a good possibility for projects like Nodigy or different validators. 
+
+Citizen Web3: 
+You're not scared to work together with entities that might then decide to take something that you own away from you? 
+
+Dmitry: 
+No, because we provide only technical expertise. We don't touch your money. Ha ha
+
+Citizen Web3: 
+No, I wasn't talking about demo. I was talking about the government. I was not talking about people. That's what usually happens. Governments sometimes get involved in the business and then they take half of it away because they decide that it's time. You're not scared of that? 
+
+Dmitry:
+For me No, no. Here are big, big, big questions and problems that I don't know how government will solve. If they plan to run CBDC, they need to create pools of liquidity, right? 
+
+Dmitry: 
+If they will create pools of liquidity, somebody can attack these pools. For example, other countries. And how they will protect against these attacks? I don't know. But they're trying to run CBDC? Okay, let's try. We know many stories about how stablecoins can go under the 1-1. 
+
+Citizen Web3: 
+What's your opinion in general about CBDCs? Do you think it's a good thing? Do you think it's a bad thing? A positive and negative thing for crypto space for people in general? 
+
+Dmitry: 
+I think we're already there because we are paying by cards, but it will just move from web 2 to web 3 until we're decentralized. 
+
+Citizen Web3: 
+You think it will be decentralized? I'm curious how you see it. 
+
+Dmitry: 
+No, no. They will own nodes. They will control.
+
+Citizen Web3: 
+For example, For example, For example China has declared a very interesting thing about CBDCs. They said that they are probably going to be the first big boy's country to implement CBDC. And One of the ideas they're proposing is that, for example, if anybody who has the salary, if you have left in your bank account and the other demands more than they think you should have, it will just take it away and it will burn. Because you don't need it. If you're not putting the money into the economy according to the Chinese government, that means you don't need the money. So that's one scary thing of CBDCs in my opinion. I'm curious, what's yours? 
+
+Dmitry: 
+Yeah, be sure. All the time on the account of each people will be right amount that government would like to see. But, for example, in Tron blockchain you will have another one amount or somebody else that governments can't see. 
+
+That's it. And you can convert it on your way. I think more and more your shops, your markets will be present on the market where you can pay by USDT or different stablecoins, not government CBDC. Token? Yeah, they will accept it for sure. 
+
+Citizen Web3: 
+What's your take today for me personally? Even though Citizen Web 3 and Citizen Cosmos, which prevailed Citizen Web 3, was born out of community management in a lot. For me, community management has been, I would say, the most difficult thing for the project or one of the most difficult things. What do you do personally and Nodigy in order to build a community around your project? What is your life hacks for anybody out there listening to this and thinking, I want to learn how to do it, to build a community? 
+
+Dmitry: 
+So, this is a question about go-to-market strategy, right? Yeah, we tried many different ways how to attract classic marketing, advertisement, different conferences, but what is working is motivation by the money. You do something, we're paying by leaderboard, most of the time, active users, some rewards. It works a lot, it's fair. Yeah, we're changing, we give you money, you give some time and promote our project. This is the best way for us. 
+
+Citizen Web3: 
+I'm going to make a joke, I'm going to make a joke, but I agree with you actually, but we like to, when Web 3 started to be bigger back in 2017, me and my friends started to call cashback bribery. People got very upset and I was like, why are you getting upset? It's the same thing. I don't think it's wrong, I don't think it's wrong and a lot of people don't think it's wrong, but some people like to say, oh, this is cashback, this is not bribery. I'll never put it to people, you bribe. It works, you give in order to get. I totally understand what you mean because in my opinion, I I we are now developing an ambassador program actually and we are trying to also base the ambassador program based on cashback that we can pay. 
+
+Dmitry: 
+You just share part of your revenue with your loyal users. yes
+
+Citizen Web3: 
+Absolutely, Absolutely, Absolutely, I agree. There's a lot of difficult things, I guess, that people talk about, but I I I personally think and I'm glad to hear that more people don't disagree with it. 
+
+Dmitry: 
+Yeah First of all, we need to rise our trust score to the blockchain community because we are zero, we are nobody and we should start growing our trust score. After that, maybe classic marketing instruments will work, but in the beginning, no. 
+
+Citizen Web3: 
+I understand. It takes a long time sometimes and I think maybe that's a good thing, I guess, to understand who is loyal to you and to grow with these people together. I know that at the beginning, you said that you don't have perfectly, you have to go at one point, you have another place to be. So I'm going to move to the blitz because it sounds quick, but it's not. It takes usually a while. So that's why it's five questions. Feel free to ask them, to answer them, sorry, in not necessarily short way, but actually to talk about the details. So that's why I'm already starting from the beginning. 
+
+Dmitry: 
+I like Bruce Willis and Five Element. It's okay. 
+
+Citizen Web3: 
+Yes, It's more like that. It's more like that. I remember, well, Supergreen. Let's make it Supergreen. Tell me who you won a book or a movie that has in the past five years had an impression on Dmitry. I told you it's not easy. This is just the first question. 
+
+Dmitry: 
+Expanse 
+
+Citizen Web3: 
+Why? 
+
+Dmitry: 
+Because it's our closest future that we can't bring. If we will stop fighting and start researching the space, this is our future and we should be ready for this. I like I like dreaming. 
+
+Citizen Web3: 
+I like it a lot. I like it too. Tell me one technological field, for example, machine learning or blockchain or something else, apart from blockchain that interests Dmitry? 
+
+Dmitry: 
+I just tried IML. We did the project with machine vision to recognize prices on the shelves, but it was just a job. It's not interesting. I just did my personal small project. I changed the voice of the singer. You know the group Kino and Viktor Tsoy? I used this voice of Viktor and implemented the song Vojny Sveta. It was nice. 
+
+Citizen Web3: 
+I I It reminds me for some reason. If anybody is listening, you can see all the links of everything that Dmitry has mentioned, including Viktor Tsoy and Kino. For any listeners who are not coming from that background, there is a Metallica cover that was done of a. Just type in Metallica, Kino, and you will hear an interesting one of the most famous songs that they did. Not the best cover in the world, but it's cool. mm
+
+Dmitry: 
+Because you know, I miss about these old singers and I would like to see their voice, maybe new songs. That's why I started doing it.
+
+Citizen Web3: 
+I understand I understand totally. It gives you that feeling that it's still there. It's an interesting thing. Dmitry, what about give me one blockchain project or maybe a couple that you're curious in technologically? 
+
+Dmitry: 
+I'm interested in Aptus. They just hide in the bushes, but I'm waiting for some explosion from this project. 
+
+Citizen Web3: 
+Give me a bit more... What is it about Aptus that attracts you? What what's Give me a bit more meat here. 
+
+Dmitry: 
+The main point now on the battlefields of blockchains is the transaction per second. Because MasterCardt and Visa start feeling that somebody is very close and can catch this business. I think Aptus is very close to this. Many projects have high TPS, but also here should be smart contracts that can be run without external involvement. For example, it will starts by himself every period that you will program for the smart contracts. I'm waiting for some excites from Aptus. 
+
+Citizen Web3: 
+Ok cool cool no no no it's good I like it I like it it's just I'm curious what draws people to what they say. So I always try to get a bit more information. last two
+
+Dmitry: 
+I have a couple questions about Layer 2. The biggest problem is that all the money that is invested in Layer 2 is distributed between all these Layer 2 projects. Each blockchain has a small TVL inside. This is a big problem of Layer 2 and Ethereum. They try to make an abstraction of the accounts, but I don't know how it will affect the distribution of all this money between Layer 2. 
+
+This biggest problem is not only Layer 2, but also about another one project. I don't know. They should create some solutions that will aggregate all the money that circulating inside all the blockchains. because easy For hackers, it's easy to attack each pool and each blockchain. This money, for example, that blockchain runs some in-device program. All users immediately run to the blockchain and transfer all money there. Then here is the device finishes and all the money starts to migrate to another blockchain. It's like a lemmings all the time migrating to the blockchains and the same money. yeah
+
+Citizen Web3: 
+Yeah, Layer 2 is definitely something that has a big difference between the way they implement it. In a lot of in a lot of meaningful and interesting ways, I always advise people to watch the development of IT in the 80s and 90s. And
+
+Basically, what's happening in a blockchain is very much repeating exactly the same thing. But I have two more questions for you, Dmitry. Before we go to the finish, I have two more questions for you. One still, where there are only three. One you see, I told you it's not a blitz. One led to a whole L2 conversation. So First one, give me one motivational thing that keeps Dmitry out of bed and building Nodigy. What is one motivational thing that keeps you doing what you do and helping people and so on and so forth? 
+
+Dmitry: 
+If my wife will wake up me and say, our clients will lose the money because we are hacked, I will wake up immediately for sure. And start trying to realize some problems.
+
+Citizen Web3: 
+I like it. I like it. Give me one person or personage. It could be real, it could be from a cartoon, it could be from a movie. It could be somebody you know that motivates you and inspires you in life. Not a guru, but has a good motivation on you. 
+
+Dmitry: 
+Easy, easy, easy. William Wallace. 
+
+Citizen Web3: 
+William Wallace? Why William Wallace? That's an original answer. 
+
+Dmitry: 
+Because he is brave. Because he is brave. 
+
+Citizen Web3: 
+I love it. I love it. Dmitri, I want to thank you very much for joining. I remember you said that you had to go strictly on a specific hour because you have something to do. I want to thank you very much for joining. Sorry for the beginning with all the technical glitches, but we did it. 
+
+Dmitry: 
+Yeah, thank you Sergio. It was very, very interesting. 
+
+Citizen Web3: 
+Please don't hang up just yet. We're just going to say bye to everybody and then back to you. Thank you everybody else for joining and listening to us. 
+
+Dmitry: 
+Ciao. 
+
+Citizen Web3: 
+Bye bye. Ciao.
+
+This content was created by the CitizenWeb3 Validator. You may support our work by delegating to any of our nodes. 

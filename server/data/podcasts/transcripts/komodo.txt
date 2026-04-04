@@ -1,0 +1,472 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/komodo
+
+Episode name:
+Web3, Technical Singularity and Privacy with Kadan
+
+Citizen Web3
+Hi everybody. Welcome to a new episode of the Citizen Cosmos podcast. I have Kadan with me today. I apologize for mispronouncing the name already, the toy went wrong. Hopefully we can fix it slowly. Kadan is the city of Komodo platform, which is a surprise, I guess, for a lot of our listeners, but we will untangle all those surprises as we talk to Kadan. Kadan, man, welcome to the show. Hi.
+
+kadan__ca333__stadelmann 
+Hey, Sarah Che. Hello. Thanks for having me.
+
+Citizen Web3 
+Tell me a little bit about yourself, introduce yourself, who you are, what you do, and also just for myself, but for the listeners, of course, as well. And tell me or us rather, how, how was it that I have a guest from Komodo platform on?
+
+kadan__ca333__stadelmann 
+Sure, sure, absolutely. So as you said, yeah, my name is Kadhan Stadelman. I'm a CTO at Komodo platform and Atomic Dex. So I head up like the tech departments at these projects. My background's pretty much like cybersecurity, IT, cyber technologies. So I've worked like in the government sector for quite some years in the DevOps and SecOps sector, right? So I've been like working on intrusion detection system.
+
+various means of implementing countermeasures against hackers, attacks, et cetera. So coming with the cybersecurity background, et cetera, I've started engaging with the crypto community, more specifically with Bitcoin and Bitcoin Talk, or back in 2013, 2014, where I then basically shifted straight into the open source world. I've always been an advocate of open source technologies, et cetera.
+
+And yeah, within like Komodo and Atomic Dex, I kind of like have the opportunity to, you know, kind of work on technologies and work with people that kind of share this vision, this ideology, right? In terms of like, you know, liberalism, freedom, et cetera. The key focus that Komodo has in Komodo here is, know, more like an open source blockchain technology provider. That's like basically how we describe the Komodo.
+
+vision, the Komodo ethos and Komodo, you can look at it like more like an umbrella, more like the open source soul of the tech, you know, feel the tech layer. Atomic Dex is basically a good reflection of our key focus and that's like blockchain interoperability. So we've like ever since been working on technologies that interconnect different blockchain protocols and different like chains.
+
+And just for one quick reference in 2013, 14, we've done the first fully automated cross-chain atomic swap. We've protocoled this on Bitcoin talk and for example, the Binance Academy, so very well-known, well-used knowledge center basically for blockchain education is stating this, basically our reference as an important milestone in the atomic swap.
+
+kadan__ca333__stadelmann 
+right? Like history and atomic swap technology itself, right? And yeah, that's me. That's Komodo. That's atomic dex. And I'll add a bit more also like regarding the atomic dex and specifically, right? Why Cosmos, right? How did I land like in this podcast, right? Like, so if you've asked this question, let me just trade touch base on this if you don't have any question for now. So you have more, right? So good. So with the atomic dex, we've
+
+started really like exploring the blockchain protocols like from a second and third generation perspective, right? So we know all this like Bitcoin based blockchains and protocols, right? Litecoin, Doge, et cetera, et cetera. There's thousands literally of Bitcoin and basically this UTXO chain model based blockchains. With Cosmos and what we as a team, as a project, right, did like a lot is that it aligns and matches 100 % the Komodo vision.
+
+of a multi chain ecosystem. It's not going to be like one chain or two chains. No, it's going to be many chains. And what's more important about these many chains is they got to be interconnected. They got to have ways of intercommunication, of cross protocol or across chain operations, and events. And focusing on this vision was always the Komodo vision since we launched in 2015, 2016. We've been talking about this vision and we've seen like
+
+Cosmos implemented, right? Make it reality. And what we figured is Cosmos has done it like in a great way. And we have a really a flourishing ecosystem. It's growing, right? The growth is like immense with the Cosmos ecosystem. But again, it's kind of a unichain model. It's again, IBC chains. It's just the inner internal Cosmos ecosystem. What we thought really is needed and it's something that I've really faced as a problem. I tried to convert BTC into Atom.
+
+native at home, native BTC didn't work. I would have had to go to centralized exchanges and, kind of go through this KYC, AML, et cetera, blah, blah. It's just a hustle. I just wanted to take a couple of BTC, transform them into straight into at home. And that's where we said, okay, you know what? We're going to like reprioritize. mean, we had the Cosmos integration on our roadmap anyway, but we said, we're going to like reprioritize this and we did it. We've basically implemented full IBC compatibility and bridge now the Cosmos ecosystem.
+
+kadan__ca333__stadelmann
+to Litecoin, to Bitcoin, to Ethereum, to Binance matching and all these other blockchain protocols. So we're kind of global bridging that.
+
+Citizen Web3 
+That is fantastic. Fantastic to hear those things, of course. just to before we get into more of like the background questions and everything, just while we're still on the subject, you said so Komodo is already IBC compatible, compatible, compatible, compatible already or not yet. Or it's in the milestone.
+
+kadan__ca333__stadelmann
+It is, it is, it is. It's fully compatible. Yeah, we've been at the Cosmoverse event just a couple of weeks ago.
+
+Citizen Web3
+wow, I didn't know that. Yes, yes, unfortunately, unfortunately I did see your panel. I didn't unfortunately manage to listen to it yet. I have seen some recaps. Unfortunately, I wasn't in Cosmoverse and I'm still rewatching some of the panels with a lot. I know it's been already two weeks, but it's like a huge amount of content, especially with Defcon and that and like...
+
+I'm trying very, very, very, very hard to watch all of the panels together. And definitely yours was, it's, it's, it's too much in terms of the amount. It's not too much in terms of intake. I love intake in there. yeah. Yes, definitely. Definitely. But, let's talk about those things for sure again, but you mentioned so many things like my brain in the questions went like in all several directions. I'm going to try and bring them back together.
+
+kadan__ca333__stadelmann 
+It's too much.
+
+kadan__ca333__stadelmann 
+amount. No, it's quality. Yeah, it's quality.
+
+Citizen Web3
+So, first of all, you said the reason Cosmos was because the vision was aligned. And I like that already because, well, we talk a lot to our guests about not just the projects that they do, but the vision that they have behind those projects. And, also if I think anybody Googles you up, thanks God to Google. I'm joking, not thanks God to Google, but, but if anybody does Google you up, there is a lot of things you can find.
+
+that are to talk about privacy, about OPSEC and I do have a lot of those questions prepared for you as well. But still, let's try to, I guess I'm going to try to first ask you a little bit more about DEXs. And it's true, you mentioned that Komodo was, you said some like old school names, Litecoin, Doge. And I remember that. I remember Komodo in 2014, if I'm not mistaken, the first
+
+ever ideas coming up. Do you want to talk a little bit about the history and how it changed since the vision that you guys had in 1415 and up to today? What was the journey like? What was the progression like? Let's talk about that a little bit.
+
+kadan__ca333__stadelmann 
+Sure, sure. So I think I feel kind of privileged because I had like, you know, like the opportunity, you know, to work with, you know, a few people that are a like highly technical and B, kind of, they were all like sharing, right? This fundamental desire of like pushing liberty and freedom to the next level. Right. So
+
+We were all already like, you know, like parents who were already like, had like our little families and we were all kind of like working in like, you know, either governmental sector or like deep financial industry. Right. so I guess you get to see and understand like certain things that make you start question like certain things. Right. So with crypto back then with Bitcoin.
+
+the initial vision, Satoshi Nakamoto, et cetera. When we all were still like, you know, native and, know, believing in the good and, you know, the hope, et cetera, we kind of got the feeling, okay, like, this is it really, like with Bitcoin, with crypto in general, we all get like this instinct or feeling sense that this got the power to not just like change the financial system and like, you know, change like the monetary basis.
+
+But in fact, it had the power and that we all felt this really like 10 years ago. This has the power to really revolutionize society as such. The socio economic model that's based on the monetary system could be completely like this rock that's changed revolutionized literally a big like society revolution. That's like what we were looking at in terms of what would you expect like from crypto from right? Where do these like early?
+
+kind of ideological pillars come from. It's from back then, right? And today, I mean, I have to say, speaking from my personal perspective, right? I'm not speaking in the name of Komodo or my team is like that. If I look at this like today, I kind of like still leave, okay, it's a great enhancement crypto and all of this, right? No question. It's added like a permissionless stack on top of finance. People in Africa, in Latin America.
+
+kadan__ca333__stadelmann 
+People that don't even have an idea, right? They don't even have these like cards. They don't have birth certificates. They can't even do a KYC. I mean, they could like fetch our apps and fetch this stack and they become bank. They have access to the financial world, right? So that's great, right? No question. So I'm not questioning that, but what I say is like, I kind of got to feel, okay, we once again have 90 % of everything owned by 1 % of every.
+
+So this is like where crypto went kinda to, Like, so, right in these terms, when you asked me where did things move over the years, et cetera, and I have like to really honestly admit, right, I think, I really think it's the same shit again, just like digital. That's like what the banks, institutions, et cetera, did, right? They undermined like this tech sector with money. We all bubble and talk about, right, crypto, freedom, liberty, blah, blah.
+
+But foremost, the first thing that we face every day is like, what we're doing, we're pegging fiat to crypto, right? So what we actually do is like, we're turning crypto into fiat. We're pushing it into like the mainstream financial model, right? But to touch base again on that question that you had, right? That regarding like a bit more on the technological field. I think our ideology remains the same. Vision remains the same, right? We want to connect these technologies, interconnect them, inter-bridge them.
+
+But then it's not just about the tech. One additional big factor for us is like, we learned that by kind of interconnecting the protocols and the blockchains, you really interconnect the communities. At some point, that person will reach out to a person there in these communities. There's trades taking place between them. So by means of technological bridging, we're kind of bridging social layers. And that's some highly, highly essential item. Everyone seems to forget today, right? Again, I'm...
+
+I'm probably like one of the worst enemies of like metaverse the way it's planned to be set up, right? Because I feel a lot of things gonna get lost. Obviously it's gonna bring enhancements and, you know, really like push many things and boost it. But we never should forget about the negative aspects.
+
+Citizen Web3 
+You're touching on some very, how to say, close to the heart point. So let's talk about that. mean, this is actually one of the biggest topics, think, topics, subjects of our podcast is what is really the role of blockchain in society. And not the biggest, of course, but it is a topic that I discuss with a lot of my guests. And sometimes these conversations go very, very philosophical, not necessarily
+
+purely technological. Let's talk about that. And I did actually when I was trying to research a little bit about you, did find a lot of that was your topic. I found several posts written by you in different times where you talk about the role of blockchain, the role of Web2 and Web3 and the interaction rather of Web2 and Web3 and
+
+all the minus sides and the plus sides. And it's interesting that you mentioned, I think, bridging communities, because it has been numerous times where I've tried to express the opinion and what we're trying to do, for example, at Citizen Cosmos, because we are not actually cosmos-based. We are not actually just considering cosmos. We are concentrating on decentralization. And to me, all those bridges between
+
+blockchains, regardless of whether they are as cool as IBC or not as cool as some multisig, they're to have flaws because if they don't bridge the communities, the layer zero that's underneath all that technology, we're going to have a huge gap. And I love that you're saying that. I mean, and here would be the question, I guess, what do you think is the role of blockchain in society? I'm going to make it a very bold question.
+
+I know you can take it many ways, feel free.
+
+Citizen Web3
+It's a hard one, it's a hard one.
+
+kadan__ca333__stadelmann 
+yes, that's a hard one, but I believe it's role right or its roles right for society are Probably covering like multiple aspects of our everyday life, right? So I look at it at last just a pure technological factor as you've just like, you know heard as I've just like outlined, right?
+
+So one thing I think it's in what I'm seeing in blockchain, what I see is happening here. Well, like, you know, from a, from, from a society perspective is one again, like the, this one bird, one term, and it's like opportunity, right? Like for, many humans again, like they telling me, man, this is just fantastic. It's crazy. It's something, you know, you could have never imagined, you know, like 10 years or five years ago, right? Like they, mean, people again, make a living out of it, right? People don't leave a room essentially.
+
+And, you know, I mean, you could do this also, you know, like as a low level software developer or as a very specific expert, you could probably make a living out of something from a room. But with blockchain, it really is the case that this now applies to anyone, like anyone in the world, regardless of right, like sex, age, gender, geolocation, ethnicity, or, know, ideological beliefs. It doesn't matter who or what you are. You can access it. So.
+
+I guess blockchain's main role in society for me now speaking from my perspective is pushing equality. think liberty, right, is one thing I focus a lot, right, when it comes to philosophical aspects of, know, Gdansk experiments, et cetera. And there I think that blockchain really kind of, blockchain gives us equality. If we look at it, if we remove the fiat thing, if we remove crypto exchanges and this market that got...
+
+created around like crypto. you really just look at crypto, Bitcoin is a Bitcoin, right? Like no matter how many euros or dollars or whatever it is, right? And if we look at it there, then I think like we're really equal. And at some point we all had like the equal chances, equal parts. As of today, again, it's changed. What I'm saying now, it's more like a philosophical thing. If you look at it like, know, purely, you know, like technical, obviously no one can access mining anymore. I mean, that's dumb, right? Like that's something that's not paying off anymore.
+
+kadan__ca333__stadelmann 
+And so certain things still a bit like harder, a bit trickier. And if you have money, well, you're a bit more equal than the others. That's like one thing we have to keep in mind always that this is something that's corrupting it. And hopefully blockchain can change that a bit.
+
+Citizen Web3
+It's a really touchy subject personally, and I would love to talk more about it if you don't mind. Do you think, in your opinion, because I'm going to be honest and straight. I don't think that Bitcoin has managed to solve the problem it originally set out to do. It didn't spread the wealth among people like you said yourself.
+
+Citizen Web3
+It just became the same shit, but under a different sauce, under a digital sauce now. I mean, so how do we proceed? How do we fix that? How do we, in your opinion? I mean, you said remove all that service market that was created around it. Is there anything else in your opinion that can be done today already in order to make it more equal? Maybe Bitcoin has failed as an experiment. Because in my opinion, I'd be honest with you, and I know people are going to probably hate me for this.
+
+Citizen Web3
+But I think it kind of has. think crypto as an experiment is just starting out. Blockchain is an experiment or, you know, blockchain take crypto, whatever. But Bitcoin, well, it didn't do what it was meant to do. It's like you said yourself, centralize mining, you know, and put everybody together. So what do you think we can do to improve that?
+
+kadan__ca333__stadelmann 
+That's a very good question, right? mean, even looking at Bitcoin, it even enhanced the financial eliteraten. I'm speaking about banks, central banks, financial institutions. It's easier for them to move big sums faster than ever before, right? To do this even in a way. I had an interesting conversation with someone. This is a small...
+
+Citizen Web3
+Yes. Yes.
+
+kadan__ca333__stadelmann
+off topic, a very small one, but it really relates to this one. think you're going to like it. I mean, a year two ago, there was this time, you know, where crypto was being pushed hard again, et cetera. And there were like discussions, right around like various, you know, like circles and I mean, various parliaments, various commissions start to basically engage with this topic, right? Start to work on legal frameworks, et cetera. And there was this question, okay.
+
+If governments and if financial institutions wouldn't have wanted Bitcoin to succeed or to survive, they would have easily had the power to just make it illegal at the worst, know, easiest path, turn it illegal. No one's going to keep using it like that. That's it. Right. They didn't. Surprisingly, they didn't. So there's the Gidonkin experiment, right? This is like a question, an old rhetorical question. It's just like something to
+
+keep us questioning things. That's the main thing I always like, you know, commit this message is question everything, literally. Okay. So what if Satoshi Nakamoto is actually like a collaboration of leading international banks, right? Financial institutions, et cetera. And I mean, it's no secret that trust in the financial system is lost, totally lost completely. It's gone, right? Like, because the anti-mathematics is based on trust.
+
+So what if like, you know, these big institutions, et cetera, did already work on the next generation of money off the financial world, right? You could collaborate easily on this launch it under an anonymous, like, you know, pseudonymous alias. And then with this, you know, narrative of like freedom, free money, like redistribute wealth.
+
+You actually get the smartest hackers and software engineers, mathematicians, physicians, et cetera, to work on one of the trickiest and most complex technologies for free, right? On top of this, you kind of get the trust of the entire, you know, like crypto punk, you know, communities and you kind of just take it over in the end. Let them do their thing. Let them build it up in the end.
+
+kadan__ca333__stadelmann
+What are we going to do as a financial system is like, we're like going to invest a bit into the marketing, the PR stuff, the agenda. We're just going to adopt it legally by governments, parliaments, right? And then we're going to like implement it. So a lot of people say a lot of like leading analysts and a lot of like leaders, right? Leading figures in the financial world. They always state and say Bitcoin is like the new gold, right? Why not? I guess like during the gold rush 150 years ago or whenever that was, I mean,
+
+People were like mining, know, like, you know, going to the, you know, like the tunnels come back with the gold. They could use the gold nuggets. They were paying their beer and like the tools with gold nuggets. This is happening with Bitcoin right now. At some point, central banks might introduce a digital currency and back it with Bitcoin, right? And that's like where we kind of like start to kind of understand like the potential, not just like Bitcoin. This could be like any protocol, right? I'm talking about this. We're just an example, but the potential, but then also the danger.
+
+like of this, of this technology, right? So.
+
+Citizen Web3
+It's a great thing that you mentioned it because I mean, even with gold, is the amount of stories where newspapers back in the day were used to in flame, sorry, over show the value and expand. Yeah, the pump, pump. Yeah, pump and up. Yeah. And there was loads and loads of stories where in San Francisco area or in this America's areas where it would be used.
+
+kadan__ca333__stadelmann 
+the pump literally what we call pump and dump they did it
+
+Citizen Web3
+to like you say to pump and dump literally and that's not the only case I yes I was exactly I was just going to bring that up yes yes yes it's crazy and well let's hope that then if it is I mean that story of course is is that the thing has been going on that narrative since I think 2011 12th I remember for sure and I wouldn't be surprised if it is like that
+
+kadan__ca333__stadelmann 
+The tulip hype. Yeah, So many, so many stories.
+
+kadan__ca333__stadelmann
+Yeah.
+
+Citizen Web3 
+I think the only thing that kind of saves my hope here is that, because it is open source end of the day and we can verify that at least, then we can have alternatives to that. know, like, yeah, okay. Sorry, but, no, please, please go on. Yeah. Yeah.
+
+kadan__ca333__stadelmann 
+You asked, sorry to interrupt you, but you asked what can we do? You said like what can we do as kind of like the wrap up question was like, what can we do? If we again look at all the different blockchain protocols, projects, et cetera, we're not interconnected. We're not communicating with each other. We are not using the power of the network, right? We aren't. Aren't, aren't. Such a little like insect is using the power of the network. We as humans,
+
+Citizen Web3 
+Mm-hmm.
+
+kadan__ca333__stadelmann
+We've tremendously failed with this one. With a blockchain ecosystem, it's even worse. We have multiple projects working on the same stuff, same ideas, same goal. There's no exchange of knowledge. So we're doing in blockchain what other governments are already doing. You have probably universities in China or in Africa who are researching stuff that's already figured and sorted in the US, but knowledge is not exchanged. There's no interconnection. So why are we not connecting, right? We need to connect to each other.
+
+We need to start to kind of like work with each other to, you know, kind of push things to the next level. We don't even have a real standardization, you know, like a project or organization within the blockchain sphere. So everyone makes interfaces just how they think is the best way. Dex's are different. This is different. There is no unified model. We are not efficient, like, right? We all together as a sum, as a totality of the crypto industry.
+
+I think that's again like it's an issue. That's a problem because it's kind of preventing and blocking like crypto really from reaching the next level, you know, like where we kind of hopefully get closer to real equality, real liberty. But for now, it's 90 % above the money. It's about dollars at the end of the day. That's what matters to most of them. That's all we need to stop. That's what we can do.
+
+Citizen Web3 
+I I thought I I totally agree. totally agree. I think that it's interesting as you speak, I'm writing like notes down like to ask you and I realized that, okay, well, if I start asking you all that will be here, not until tomorrow, but until next week, but I'm going to try and pick at those things. then you mentioned well, first of all, I mean, I mean, what you're talking about is Metcalfe's law, right? It's just a simple thing that, you know, the power of the network and stop in the maximalism. then, you know, I mean, it's always
+
+kadan__ca333__stadelmann
+You
+
+kadan__ca333__stadelmann
+Absolutely.
+
+Citizen Web3
+We've seen Bankless, one of the most popular podcasts now in this space, always asks, what is the stupidest thing crypto people do? Maximalism. I mean, how can you work against each other when you have a common enemy out there, which you gathered here to do something about, regardless of whether this is an experiment of the Fed? You are here at your own will and you're choosing to do that. Why are you working against yourself? Absolutely agree. It's crazy. And another thing you mentioned was pegging to fiat.
+
+kadan__ca333__stadelmann
+very well said yes
+
+Citizen Web3 
+Why on earth are we pegging? mean, why are we doing that? Like, I mean, you want to create a stable coin, create a stable coin. You don't need to peg it to fear. Jesus, there's been so many experiments already in crypto. it really blows my mind when you say that like people still, every time I see that, you know, people get in such a hype, yeah, we're going to have more USDC. we're going to have more USDT. we're going to have more, I don't know. It's like...
+
+Okay, guys. then you wonder why we're not progressing. know, by the way, in, Komodo, do you guys, because I remember specifically that, that a while ago, and this is years ago, Komodo was referred at one point as a privacy platform. I have checked since then. And I think that you guys have removed, tried to remove that, think from yourself.
+
+And you have removed some parts of the code as well, if I'm not mistaken. Can you talk a little bit about that and what is Komodo doing in that direction and how you guys approaching the privacy aspect in general?
+
+kadan__ca333__stadelmann 
+Absolutely. Yes. Yes.
+
+So with Komodo, that was like around two years ago, two, three years ago, we started being approached by various centralized platforms, centralized exchanges, speaking about like a few, like three or four top 10 exchanges, right? Where Komodo is listed and traded. And they've said that it was the problem then, but that over the coming months, the legal...
+
+like landscape is changing and it will be like very tricky for them like to keep the coin listed etc which would have hurt that like Komodo investors the Komodo community you know people in the community so what we did like we had actually a poll we talked to the community and we figured what can we do right like to to to fix this because we were like you know full privacy I mean it's very very important we believe it's like a fundamental right of like
+
+humans, right, to have this right of ultimate privacy. And there should be no excuse to, to kind of, you know, like bypass this, that, that right for privacy, right. And we said the only way to do it is literally like disable the privacy features within like the Komodo blockchain protocol and kind of have a spin off out of Komodo. And that was pirate. R.
+
+So there's a coin, there's a token called Pirate, quite popular, it's been featured by Dollar Vigilance podcast and it's been great. In Anarkapool, it's been featured there and so it's kind of like a real anarcho privacy project on its own, has an own huge team, US, Latin America, Southeast Asia, Europe, international.
+
+kadan__ca333__stadelmann 
+That's what basically happened is that Pirate kind of like took this over and they are now happy, right? They have a foundation that protects them and they operate out of countries where it's no problem for them to do this. We as Komodo as the project, had a, we couldn't really do this. So we were all doxxed, right? All deaths. So I mean, you just a couple of weeks ago here in Amsterdam, like one of the deaths from like the torpedo project got arrested and we just don't want like, you know, to put our teammates into danger.
+
+to put them on risk, right? We believe like, you know, their safety, right? Like their health, that's a higher priority for us than to push, you know, like certain ideological agendas within the code. And I think we've solved it well by kind of standing up to our ideology. And we're an official partner and supporter of the Pirate and our project. But we had to kind of like do this. So yeah, to wrap it up, a legal reason
+
+finally, like eventually, legal reason, forced us to do this.
+
+Citizen Web3 
+I have, I do remember now that you talk about R and I'm from, I've met with Dola Vigilante back in 2017 in Lisbon in Steam Fest. We, and I remember it was a big thing for me because I used to listen to Anarcho Polka, right? I think it's called for a few years before this. And I was like, wow, you know, and then I met him there and we had a funny, it was a funny story, but I don't think it's appropriate for now, but one day I will tell it for sure.
+
+kadan__ca333__stadelmann 
+Nice.
+
+kadan__ca333__stadelmann 
+Nice.
+
+Citizen Web3 
+But talking about privacy while we're on the subject of that, you mentioned OPSEC as well. what do you think of, I mean, privacy is closely tied to security. I know there's two separate things and I'm actually a big advocate of trying to separate privacy and security for people who use the internet. But while we're on the...
+
+kadan__ca333__stadelmann 
+Absolutely.
+
+Citizen Web3 
+topic, I would love to talk a little bit about what are your thoughts about what is called Web3 today and the technology that is used underneath that. Do you think that it's okay what we're doing by carrying on using DNS, by carrying on using, you know, calling Web3 what is obviously not Web3 sometimes? What are your thoughts on that?
+
+kadan__ca333__stadelmann 
+So first of all, think again, once again, it's just a big hype marketing PR, know, it's doing the game again. Technically, if you look at things, if we look at the key infrastructure of internet, I mean, this is so heavily outdated. I think it's not even capable of running a real web three environment, right? That's like my, my opinion on this, right? mean, there's certain upgrades happening, you know, on a global level, but yet again, then the next big, big, big.
+
+item and factor that everyone seems to forget about is like no matter how decentralized the piece of software is and no matter how decentralized or how peer to peer such a DeFi protocol is. At the end of the day, it runs on heavily centralized infrastructure controlled and regulated by ISPs that are under, you know, governmental regulatory, et cetera, et cetera. So
+
+Once again, it's a lot of like just sugarcoating, right? We talk about peer to peer and decentralization and things like that. But yet again, it's just a handful of organizations and institutions really controlling everything. And if it's hard on hard, I mean, on DNS level, so basically on the domain level thing, it's companies, right? They can just like press a button and it's gone. It's vanished. It's goodbye, right? Like, so...
+
+once again, think web three is not there. It's happening obviously. And we're, we're getting there. We're like, kind of, I think we're building kind of the vision of it. We're kind of building the idea. What we're doing now is kind of like everyone is building kind of on a huge proof of concept, but this is like light years away from where we need it to be. Right. I think this is going to run on actually on a new type of internet tech really needs an upgrade. Right. I mean,
+
+We don't know like, you know, on a military level where technology is already. I mean, for Bitcoin, let's take that as an example. We're still using coding standards, data types, technical architecture from 20, 30 years ago. I mean, come on, this stuff is dead. At some point, we got to think and talk like, hey, do we maybe need new data types that match and fit like the blockchain technology? We might even need a new computer architecture as such, right?
+
+kadan__ca333__stadelmann 
+not like the 32, 64-bit architecture we're we might need something new for Web 3, for real Web 3, for a real metaverse. I don't think what we have now is gonna work with that.
+
+Citizen Web3
+Have you heard of the term software 2.0 by Andrej Karpaty is the XAI director Tesla?
+
+kadan__ca333__stadelmann 
+No, no, to be honest, not yet. Okay.
+
+Citizen Web3 
+Check this out, we will definitely include the link as well to this episode and I suggest everybody to really check out of... He's an amazing guy, he developed all the... I mean, he's now quit Tesla, if I'm not mistaken. He still works, I think, in the ecosystem, but I think he moved on to something else, but he developed all of those systems for Tesla.
+
+And he's a great speaker. He's a great, great scientist. And he was speaking about a term, is called software 2.0, trying to point out that the software we're using is a outdated for, the tasks that we need. and, I mean, you mentioned technology there and centralization of all the services.
+
+kadan__ca333__stadelmann
+Nice.
+
+kadan__ca333__stadelmann
+Yeah.
+
+Citizen Web3 
+I mean, and for sure you mentioned like the internet and brings straight away uprun it to memory. You know, I mean, the uprun was invented many years before we started to use what we call the internet today. In fact, 30 years in difference, right? And like, where is real military technology today? I mean, I love that. And even going into being honest and even going like, you know, again, cards on a table kind of thing and going into, into proof of stake and, and, and being a validator, we are validator as well.
+
+kadan__ca333__stadelmann 
+Exactly.
+
+Citizen Web3
+And yeah, well, Hetzner and AWS, know, the two biggest elephants in the room that they just shut down tomorrow. But this is actually my next question or my next kind of point to you. We as a validator, for example, we are slowly, slowly striving to kind of shift the focus from cloud.
+
+to computing in house, I'm gonna call it like that. And I've spoken recently to one validator, Broin Bro, and they were mentioning how it's their big focus now to actually not just shift the servers, but to make sure that they have some source of electricity, some source of energy, which they can not necessarily depend on. But then we have the internet and that kind of...
+
+kadan__ca333__stadelmann 
+that you feel.
+
+Citizen Web3 
+checkmates, everybody, the online, I mean, mean, status. what do you, is Komodo in any way? I mean, put it this way. I'm gonna ask from a different direction. I'm gonna ask from a different direction. Does Komodo plan to launch its own chain, a Cosmos chain, or is it just going to be IBC connected? Let's start from far away.
+
+kadan__ca333__stadelmann
+Sure sure.
+
+kadan__ca333__stadelmann 
+Great question. So what we figured is we will definitely launch an IBC chain. So we will definitely like have a native layer within like the IBC. And we're gonna basically use that, right? Like for the cross protocol operations with all the other chains so that all IBC users go to the, you know, Komodo like, you know, IBC layer.
+
+And from there you get interconnected, you know, to any other like blockchain protocol or, know, like token that you want to interact with. So to answer the question, yes, there will be a Komodo IBC chain.
+
+Citizen Web3 
+I'm gonna try, this is first of all great news on its own separately. I'm gonna have to ask when airdrop in a second, but because otherwise, you know, I cannot not ask that. But I'm gonna try to connect to the previous point I was trying to make. Of course, interchain security is not around the corner, but it's kind of around the corner. But still, I would like to know if you are guys planning your own chain, are you?
+
+kadan__ca333__stadelmann 
+Sure.
+
+Citizen Web3 
+thinking about the whole thing of what we're just speaking about, about that validators, you know, having most of their infrastructure in cloud centralized cloud services. And do you, do you think yourself, I mean, you seem to be so profound with all those like freedom and liberty ideas, which is a great thing to see, to be honest.
+
+Do you think that you guys are going to plan to somehow incentivize maybe people who will try to prove that their infrastructure isn't based in centralized cloud services, or are you going to try to, are you going to like try to for now say, okay, guys, you have to deal with it yourselves and whatever happens, whatever happens. Like that's the connection of the questions kind of sorry if I made it a bit too vague.
+
+kadan__ca333__stadelmann 
+Yeah, I mean, you know, it's a great question to be honest with you. We do run a key portion of our infrastructure in the cloud to, to, to really be honest and we're aware, right? Like of the situation and we were very tech aware, right? But yeah, to be honest, like from one, it's like the DevOps comfort, right? The flexibility that you get like with the cloud, you know, environments, you're also like, kinda like, you know, like
+
+Well secured right from a pure security standpoint, cloud environments offer like a tremendous, I mean, they do this 24 seven, right? Experts like they do nothing else, right? We have a small DevOps team and they should have enough work just by, you know, managing the cloud infrastructure as such. looking at that is I really believe running your own infrastructure is a great thing if you're able to do it well.
+
+because it can quickly end up in overkill, right? You have this unstable internet connection, et cetera, et cetera, and you're done. Your node becomes offline or others, they are having, you know, disruption or maybe, you know, like kind of delays are like too high, like you don't know, right? Like, so there's so many factors to take into account. And I think nowadays the big problem here is maybe that cloud infrastructure just works better. It's just...
+
+cheaper and it works better. And for how many years did AWS actually make a loss on AWS? I've read something a couple of years ago, just to get the client base to get everyone to use it, right? They've been selling it cheaper, like less than it costs them and reinvesting crazily. And, but yeah, to, to, kind of get like this, this, this chain of kind of questions that you had around this, that to sum it up, I mean, as a validator, I definitely would want to run my own server, but I would
+
+put it into a DC so I knew it has a great internet connection so I would look for some good collocated data center. Other services, probably less critical stuff, I'll definitely like probably do it like in a cloud environment and something that I run at home is something where you know there's literally like zero trust. Something that's like so critical, so sensitive where I say okay, where I would want like to run it at home.
+
+Citizen Web3 
+It's amazing that you also mentioned that you said kind of the sentence there, whatever is in a DC works better data center. And of course it does. But it's funny that there's, I think it was several years ago, two or three years ago when I was speaking to a buddy of mine, a friend of mine, well, more or less a friend.
+
+I don't remember whether he was actually talking out of experience or whether he was just proposing that theoretically, but he was saying that if you take, you know, the data center and the same infrastructure in a data center and outside of it, the one, the internet connection that in a data center that the ISP provides there is different. And it's crazy how like, but why, why do you like guys...
+
+You know, it's obvious that that something is fishy out there and, but yeah, but coming back to two questions that I wanted to ask. Well, first of all, if you are guys, mean, let's look from a different perspective, sorry. The chain that you said that you guys might be planning or planning to launch, is that more or less like a further away plan or is that something already being discussed?
+
+kadan__ca333__stadelmann 
+Yeah, absolutely.
+
+kadan__ca333__stadelmann
+That's something that's already been discussed internally. We're actually like setting up like the tokenomics model for it as we speak. So you can like expect like, you know, drop to like, that's going to be early coming year, early coming year, but we'll do like,
+
+Citizen Web3 
+When drop.
+
+Citizen Web3 
+Wow, it was a joke question, I love that there is an answer. Sorry to interrupt you.
+
+kadan__ca333__stadelmann 
+No, no, but that's serious. that's gonna happen like early mid coming year. We'll have a really good great long enough announcement so people won't like miss it. We'll make sure it's all like a drop calendars.
+
+and we'll let you know explicitly.
+
+Citizen Web3
+Nice, nice, nice, nice, nice, nice, nice. Now it was of course a kind of like a vague question, but it's nice. And then, then again, to, kind of carry on the topic that we are discussing already about decentralization in your opinion, when decentralization, or is that even a thing? You know what? I'm going to, course, like broaden the question. What do you think decentralization is? Is that a spectrum? Are we going to live in a world where
+
+Everything has to be decentralized or is through decentralization is to say well It's about the choice of the people who want to choose whether they want decentralization or centralization Where is that spectrum for you and for Komodo maybe as well? Where is that spectrum? Existing where does it stop?
+
+kadan__ca333__stadelmann
+Yeah.
+
+kadan__ca333__stadelmann 
+Of course, of course, absolutely. So one factor I look at when it comes to this like centralization, decentralization topic is about like the efficiency factor and then like the technology stack factor. So right now, if we look even at our like centralized, you know, environments, and we've just like discussed it, right, like heavily outdated old, but then also extremely inefficient, right? Like, so you have probably immense amounts of
+
+computational resources available that are not being used at all. But they're like part of this internet of this network. They're here, right? So this really gets me again back to this perspective that the internet is outdated, technology is outdated. We need something new, something where we are in fact interconnected, new internet connections, right? Like interconnected with satellites. I mean, we're getting there. Starlink is getting there.
+
+It's happening kind of, and I got from a feeling that it's happening, Like newer generation devices, right? From a mobile perspective, they're very capable, right? Like of computational resources, memory, cloud interconnection. Many of them have already like native cloud attachment, right? Like, so to me, when decentralization kind of like leads me to many sub questions. And one of them is like, know, when will devices and
+
+the internet is such be capable of real decentralization. I feel a lot of like bigger players, Google cloud, know, Amazon web services, et cetera. They already have kind of like a see my decentralization, right? I mean, what, what's the definition? We'll probably start at the definition of real decentralization, right? It's not just having a couple of computers in the network interconnected because it could be just run by the same person.
+
+But we call it decentralized from an architecture, from a vision, from an idea. But technically, I think there's very little decentralized like, you know, environments. Probably in the military area, you have a lot of you know, decentralized technologies and systems in aviation and, you know, like, like in space, you know, travel, et cetera, you have a lot of like, real decentralized distributed systems. And I think we're getting there. I think it's coming there, but we will have.
+
+kadan__ca333__stadelmann
+a major paradigm shift and a major technological revolution. Who knows with Neuralink, maybe our brains will be the next future computer. Because I believe our brain is a great quantum computer and having a digital interface might actually provide this basis, this foundation, you know, tech to create a real decentralized, you know, like maybe even like a collective mind. Who knows, right? We don't know what's coming, but
+
+Citizen Web3 
+I always like saying that I'm not religious at all and I apologize if I offend anyone in advance. But if we do look in most holy books or scripts, it does mention that God created human in his own vision, just like we created computers in our own vision. I think that the difference between computers and the brain is minimal and it works exactly in the same way.
+
+similarities are astonishing. So I absolutely agree with what you say there. Yes, one technical singularity. Damn. It's it's it's it's fine that that I don't want to talk about specific projects, but we do like a lot in one. Anyways, I don't want to like advertise projects. Let's put it this way. But there are there are cool projects out there, in my opinion, that are dealing at least
+
+kadan__ca333__stadelmann
+Very well said. So the question should be when technical singularity?
+
+Citizen Web3 
+trying to touch on those subjects and it's great to hear that you're out there thinking about it as well. By the way, one thing I didn't ask you, which I'm going to try now to get us down back to earth, which by the way, straight away to say, I love seeing that, but how did it come that you, the CTO,
+
+kadan__ca333__stadelmann
+Sure.
+
+Citizen Web3 
+became the face of the platform and not, it's rare, it's rare to see that the CTO goes out there and does everything for everybody, which is cool in my opinion. But I'm just curious at how, how did it happen?
+
+kadan__ca333__stadelmann 
+Great. So might be good like to add that I'm a more like a co-role of like CEO, CDO, very typical for IT startups, as you know. So I've basically co-founder and been like one of the tech minds behind the project. So that's how I ended up like, you know, doing also a lot of like, you representational work for the full project.
+
+Citizen Web3 
+Okay, okay, okay, okay.
+
+Citizen Web3 
+it's really cool it was just i was just wondering how because i didn't know this part i didn't know that you see i do remember Komodo very well at the beginning but I'd be honest i i think in 2014 Komodo didn't for some reason resonance with me as much as some of the other projects did so as much as i was into that and around that i i wasn't aware of like all the small bits in history
+
+kadan__ca333__stadelmann
+Yeah, in 2016, when I mean, in 13, 14, we've done like a lot of work. started like kind of laying out like the ethos ideology. So that's probably like what you remember. And in 2015, I think we announced like the real like chain launch. And I mean, then afterwards it was like two, three years really like, like very busy. We were focusing a lot like on the Komodo core privacy aspect, et cetera.
+
+I mean, CMC 2018, 19, Komodo was a top 20 project, right? Like it's like pushing hard on that angle, you know, but we kind of went back, got back like to the roots and say, look, we got to like, work out atomic decks, this DeFi stack, the interoperability layer, this thing. And that's been like key focus now seven years, six years, and basically third iteration, right? I mean, now it's web compatible, mobile desktop, literally like for all.
+
+99 % of all like coin market capitalistic coins and tokens are interconnected through like Komodo's tax, right? And my personal goal is getting to 100 % everything even the chains and tokens that don't have a you know, kind of like standard interfaces, but yeah
+
+Citizen Web3 
+Fantastic. I love that. And by the way, there's one thing I didn't ask you, which was I meant to ask in the beginning, but better late than never. How did you get into blockchain? By the way, I didn't, I mean, you said, I know you worked for the government, you mentioned that. And of course, again, thanks God to the internet. There's a lot of information you can find in the person, but how did you, how did you get peeled and how did you get inside of all that topic?
+
+kadan__ca333__stadelmann
+Okay, that's a very good question. So we have some coin collectors in the family. And it was quite early, was two years ago? Physical? Nice, nice, nice, nice. Good. And then, like, 2010, I was always cyber freak and known in the family as a hacker and white hat hacker, etc., obviously.
+
+Citizen Web3
+the
+
+Citizen Web3 
+I'm too. Me too, by the way. I'm a numismat as well. So yes. Yes.
+
+kadan__ca333__stadelmann 
+And my uncle told me, look, there's like a digital coin now, like, right? So, cause we were like coin collectors in the family and said like, there was like a digit, like a digital coin. And that's how I basically had the first look on it, but that made me like more curious. And that's how I started engaging on Bitcoin talk. That was my main, that's really how I got into it. Like how I got like, you know, like crypto pill basically orange field. It's, like.
+
+Bitcoin talk community, a few of these people's philosophical views on society got me. Some of the, you know, like early supporters. mean, obviously Satoshi's paper itself and his inputs kind of came like from this. kind of had the feeling, okay, this is like, you know, know, CryptoPunk, someone like from this kind of like, you know, like a community, someone who's like, kind of like a digital...
+
+Che Guevara, right? Like the cyber Che Guevara. These are a lot of people like associated with him. That's that's how he got me really like it's been that was really like for Everyone else that I know like who's co-founded this project came like from a similar reason because back then I mean you knew there is no money like you could never make anything out of this, right? So it's it was a nice surprise to have that like years later But it wasn't the core motivation a common to was really the people
+
+And that gets me again, like to the community aspect, why I believe it's the most important thing is the community.
+
+Citizen Web3 
+What was the first shit coin you bought? remember? nice, nice.
+
+kadan__ca333__stadelmann 
+Well, I didn't buy it. I Insta-mind it or Ninja-mind it over the night. was like, that was like, you know, infinity and then first like real like real shit coin. The problem is here. Like I'd have to call some coins to shit coin that might some people like, you know, like
+
+Citizen Web3
+Let's call them alternative coins. What was the first alternative coin that you purchased? Acquired. Feather coin. Wow, I remember that. They were like top. They were really top like top three, top four on coin market. Top five. Yeah, for sure. I remember that. Wow.
+
+kadan__ca333__stadelmann 
+Feather coin? Did you buy it feather coin? Feather coin. Feather coin was the first one.
+
+Top 5. Yeah, yeah, yeah, yeah. Exactly. On BTC minus E.com. The troll box, I loved it there.
+
+Citizen Web3 
+That is, that is, that is, I'm, I'm, I'm gonna, I'm gonna keep quiet from now on because that is just too many memories now. kind of quick, quick bleeds to, to wrap it all up. so three questions, give me three projects. let's try to keep it out of the top 20 that you're really interested in following the progress of.
+
+kadan__ca333__stadelmann 
+I'm, I'm steadily following like pirate. mean, it's a top couple hundred projects, but it's a bit of conflict of interest because like involved there. I'm closely following like Tezos. A lot of people like forgot about that project, right? Like from a technological aspect, I liked it a lot. Academic quality, right? Like in code contributors. So
+
+kadan__ca333__stadelmann
+Technological very interesting to me and and here I also want to add no financial advice. I distinguish between market and tech So this is really just like technology. I mean obviously number one like project outside of Atomic Dex and Komodo is cosmos really my personal like number that I'm like looking at like, you know a lot and you know daily really literally right like I'm following, know contributions the commits and just like everything's that's no it's just cosmos. Honestly, I'm not gonna lie on that
+
+And another one might be...
+
+DigiByte, I mean, we're friends with them like ever since four years. I've been following the project ever since. There's a few real OGs, BTC OGs. They are super active in the DigiByte community. They're there like for, 10 years, literally. I know people there, they've been around like nine years ago, I've seen them around. So, I mean, obviously it's just generic like UTIC, so Bitcoin based coin. It's not that exciting, you know, from a pure technological perspective, but.
+
+What's purely technologically exciting around Dogecoin or Litecoin? You know what I mean? It's the same thing, right? It's just a different currency in a different world, in a different country. That's how I try to look at it. And I like it. I like the community a lot. So these are like the three I'm really about. Cosmos, number one.
+
+Citizen Web3 
+Second question, two things that motivate you to building, to motivate you carry on building what you do, carry on believing that decentralization will come one day. Daily things could be books, be yoga, whatever meditation, two things that is something that you do that keep you motivated.
+
+kadan__ca333__stadelmann 
+It's my family. It's my family and the imagination that one day my grandchildren will come visit me. Like that's the main thing, right? Like I think once you've done the thing, your money, et cetera, and you get kids, you realize, at least to me, I'm speaking for myself, it's the sense of life. That's really what I like saw in my kids, right? In my mini-me's. And what I'm doing today, it's really because I, if I go, you know, I want this all to outlive me. I want them to find a better way, world than I found when I came, right? Like, and.
+
+I hope that I'll manage to enhance it just even a tiny little bit and make it a little bit better. Even if it's just for them, that's my main motivation, my main source of inspiration to be honest with you.
+
+Citizen Web3
+Fantastic answer. then the third last question. One person could be anyone could be GitHub could be Twitter that you would suggest everybody to follow that you find very interesting. Doesn't have to be a crypto person, by the way, but somebody you would say, guys, big suggestion, follow this person or read his book or follow his GitHub Twitter account, whatever. If you have one, of course, you don't have to have one.
+
+kadan__ca333__stadelmann 
+I think from really like from terms of like inspiration or motivation, sometimes I wake up in the morning and I go like through his like Twitter channel and sometimes there's really posts, there's quotes from others, there's inspiration source. It's Naval on Twitter. I mean, he's got a big follower base. I think he has, he can give you like, you know, know, philosophical value on a daily basis by investing one, two minutes, just reading it, it will give you power.
+
+So I recommend that it's non-technical. It's nothing about money, but it's good. It will enrich your life.
+
+Citizen Web3 
+Nice, nice. Of course we will have all the links and not just the things you mentioned, but of course the Komodo as well, all linked up so everybody can look it up and follow that of course. Karan, thank you very, very, very, very much for finding the time. I hope that as you guys go deeper into the Cosmos Sea, we will get to talk again for sure. I'm sure about it. Thank you very much for finding the time to join me.
+
+kadan__ca333__stadelmann
+I thank you. It was a pleasure and I hope to be back soon again. Thank you.
+
+Citizen Web3 
+Thanks, bye everyone.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

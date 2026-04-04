@@ -40,14 +40,8 @@ const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
     logInfo(`Processing ${nodes.length} validators`);
 
     const slashingInfos: SlashingSigningInfos[] = [];
-    let skippedCount = 0;
 
     for (const node of nodes) {
-      if (node.totalSlots === 0) {
-        skippedCount++;
-        continue;
-      }
-
       const missedProposals = node.missedProposals.count ?? 0;
       const missedAttestations = node.missedAttestations.count ?? 0;
 
@@ -57,12 +51,14 @@ const getMissedBlocks: GetMissedBlocks = async (chain, dbChain) => {
         address: getAddress(node.address),
         missed_blocks_counter: String(totalMissed),
         total_slots: String(node.totalSlots),
+        missed_slots_proposals: String(missedProposals),
+        missed_slots_attestations: String(missedAttestations),
+        total_slots_proposals: String(node.missedProposals.total ?? 0),
+        total_slots_attestations: String(node.missedAttestations.total ?? 0),
       });
     }
 
-    logInfo(
-      `Successfully processed ${slashingInfos.length} validators with duties, skipped ${skippedCount} inactive validators`,
-    );
+    logInfo(`Successfully processed ${slashingInfos.length} validators (including inactive)`);
 
     return slashingInfos;
   } catch (e) {

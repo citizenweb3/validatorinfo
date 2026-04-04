@@ -12,10 +12,11 @@ concurrency:
 
 jobs:
   auto-fix:
-    # Trigger on: (1) changes_requested review, or (2) /fix comment on a PR from repo members
+    # Trigger on: (1) changes_requested review, or (2) /fix comment on a PR from repo members.
+    # Keep the member guard only on /fix comments: review-triggered auto-fix must not be skipped
+    # before the runner starts when the review comes from the dedicated review account.
     if: >-
-      (github.event_name == 'pull_request_review' && github.event.review.state == 'changes_requested' &&
-       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.review.author_association)) ||
+      (github.event_name == 'pull_request_review' && github.event.review.state == 'changes_requested') ||
       (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '/fix') &&
        contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
     runs-on: [self-hosted, builder]
@@ -95,9 +96,9 @@ jobs:
           fi
           echo "count=$COUNT" >> $GITHUB_OUTPUT
 
-          if [ "$IS_HUMAN" = "false" ] && [ "$COUNT" -ge "2" ]; then
+          if [ "$IS_HUMAN" = "false" ] && [ "$COUNT" -ge "3" ]; then
             gh pr comment "$PR_NUMBER" \
-              --body "Auto-fix limit (2) reached for automated reviews. Manual fix required."
+              --body "Auto-fix limit (3) reached for automated reviews. Agent provided explanations for unresolved issues above."
             echo "blocked=true" >> $GITHUB_OUTPUT
           else
             echo "blocked=false" >> $GITHUB_OUTPUT
@@ -132,6 +133,14 @@ jobs:
             (run_id, agent, role, trigger, issue_number, started_at)
             VALUES ('$RUN_ID', 'pr-fixer', 'builder', 'review', $PR_NUMBER, datetime('now'))" 2>/dev/null || true
 
+          # Collect PR history for context
+          FIX_COMMITS=$(git log --oneline --grep="auto-fix iteration" \
+            origin/dev..HEAD 2>/dev/null || echo "No previous fix commits")
+
+          PR_COMMENTS=$(gh pr view "$PR_NUMBER" \
+            --json comments \
+            -q '[.comments[]] | map(.body) | join("\n---\n")')
+
           # Separate human and bot reviews by content marker (no hardcoded usernames)
           HUMAN_COMMENTS=$(gh pr view "$PR_NUMBER" \
             --json reviews \
@@ -144,13 +153,15 @@ jobs:
           # Build prompt file (avoids shell injection from review text containing quotes)
           PROMPT_FILE="/tmp/fix-prompt-${ITERATION}.txt"
           cat > "$PROMPT_FILE" <<FIXPROMPTEOF
-          You are fixing review feedback on a PR in this repository.
+          ## TASK: Fix review feedback on PR #${PR_NUMBER}
 
-          IMPORTANT: You have full access to the repository filesystem.
-          1. Read CLAUDE.md for project conventions and path aliases
-          2. Read tsconfig.json to verify path aliases before changing imports
-          3. Read the FULL files you need to modify to understand context
-          4. Verify your changes against existing codebase patterns
+          ITERATION: ${ITERATION} of 3
+
+          ## PR FIX HISTORY (your previous attempts):
+          ${FIX_COMMITS}
+
+          ## PR COMMENTS (conversation history):
+          ${PR_COMMENTS}
           FIXPROMPTEOF
 
           if [ "${{ github.event_name }}" = "issue_comment" ]; then
@@ -162,19 +173,41 @@ jobs:
 
           cat >> "$PROMPT_FILE" <<FIXRULESEOF
 
+          BEFORE fixing anything:
+          1. Read the PR FIX HISTORY above. These are your previous fix commits.
+          2. Read ALL review comments (human + bot), not just the latest.
+          3. Identify which review comments are NEW (first time) vs REPEATED
+             (appeared in a previous review iteration).
+          4. For REPEATED comments: your previous approach did not work.
+             Analyze WHY by reading your fix commit and the repeated comment.
+             Try a DIFFERENT approach this time.
+          5. For NEW comments: fix normally.
+
           CONFLICT RULE: If human and automated reviews contradict each other,
           ALWAYS follow the human review. Human is the final authority.
 
-          Before fixing any reported issue, verify it is actually a real problem by reading the relevant files.
-          If a review comment is wrong (e.g. claims an import path is invalid but tsconfig.json confirms it exists),
+          Before fixing any reported issue, verify it is actually a real problem
+          by reading the relevant files. If a review comment is wrong
+          (e.g. claims an import path is invalid but tsconfig.json confirms it exists),
           do NOT make that change — skip it.
+
+          If this is iteration 3 (final) and you cannot resolve a comment:
+          - Write a PR comment for EACH unresolved issue:
+            "Could not fix: [issue summary]
+             Reason: [why your attempts failed]
+             Alternative: [proposed different approach]"
+          - Do NOT force a fix you are not confident about.
 
           Rules: only fix what was requested and verified as real. Follow CLAUDE.md.
           Commit message: fix: address review feedback (auto-fix iteration ${ITERATION})
           Do NOT add any Co-Authored-By trailer to commit messages.
           FIXRULESEOF
 
+          # Load fullstack.md as agent persona (provides Skills, Teams, GitNexus workflow)
+          AGENT_PERSONA=$(cat .claude/agents/fullstack.md 2>/dev/null || echo "")
+
           claude -p "$(cat "$PROMPT_FILE")" --model claude-opus-4-6 \
+            --append-system-prompt "$AGENT_PERSONA" \
             --dangerously-skip-permissions \
             --output-format text
           EXIT_CODE=$?

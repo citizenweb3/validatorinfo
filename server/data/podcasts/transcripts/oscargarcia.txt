@@ -1,0 +1,370 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/oscargarcia
+
+Episode name:
+Evolution, Validator Setups and Value with Oscar Garcia
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. I have with me Oscar today from the Stark Validator. Oscar, hi, how are you?
+
+Oscar GF
+Very good, happy to be here.
+
+Citizen Web3 
+I am glad to have you on before we kick off and before I start asking you all types of questions about your validator and Web3. Please feel free to introduce yourself in a way that you want me and the listeners to know about you. Tell us how you got to Web3 and maybe whatever it is you do apart from what I didn't mention already in Web3. Feel free to expand.
+
+Oscar GF 
+But let me start a little bit from the beginning, right? So, I'm from Galicia, a small region in the north-west of Spain. So, this is a very good region where there is very good food and not so good weather and not so good career opportunities. So, basically, I moved earlier in my life in the 20-something to Madrid. So, basically, professionally, I grew up there. My career was around network engineering. So, basically, it was...
+
+this is I was actually doing. Then I was working for a big farm industry, it's still network engineering, but big farm industry. Later on, in 2022, I moved to the US, specifically in the Bay Area, in San Francisco Bay Area, which is where I'm basically based on.
+
+Now is where it's actually happened this around Web3 Malay. So this started quite recently. I heard about people that basically started several years back. In my case, I started around 2022, 2023. Basically there was an onboarding program from the Sovana Foundation in terms of basically being a validator. So I learned about it.
+
+It was as well an IT layer that I'm comfortable with, that is basically the infrastructure layer. So it was a little bit, okay, I know a little bit about what is this about. I got it well, right? And well, I joined it about the opportunity, right? And basically now I'm running a minor validator, right? That was only tested and now, well, here I am.
+
+Citizen Web3 
+So I have a lot of questions. So one question I want to ask you straight away. You said you started in 2022 roughly in Web3. This is an interesting point because not many people start in the bear market. Usually, projects start during the bull market usually. And 2022 is already the finish. The bull market was already done. some people were feeling sad and upset.
+
+It's a normal thing in crypto cycles not to work during the bear market. No, no, of course, I'm joking. Everybody works. like any serious, how did it feel when you came into the market? Was it feeling depressed? you like was was all the vibe kind of like, I don't know. Did you get that vibe that it was a bear market or for you? didn't matter. You were focused on your things and that's it.
+
+Oscar GF 
+Yeah, I I tend to not be very emotional about the things that you believe, right? So basically I was trying to see the capabilities about crypto and the things that actually that I was, I mean, the value that it brings, right? So I would say that the market itself is something like collateral, right? But they was actually reading a lot about everything that was involved in the validator itself and Solana ecosystem, multi-chains, all the chains, right?
+
+I felt very impressed about I really didn't care much about the VR market. But it's true that the mood in that moment was a little bit pessimistic. It was around the FTX crash, was a specific moment. It was not a very good moment for Solana either. So yeah, I can't understand the question.
+
+Citizen Web3 
+I guess, I don't know about yourself, but when I kind of like do something, I think a lot of the influences like the surroundings, and sometimes when everybody's like, nothing is going to happen, crypto is going to die, I can imagine that for somebody new coming in, it definitely doesn't help. tell me one thing, you didn't mention what attracted you to Web3. How did you make the switch? When did it happen?
+
+Oscar GF 
+Yeah, I'm being honest, probably before the validation part, there was one specific project that basically paid my attention. But it was basically a gaming project, right? It was a specific app that is called Starladdlas. And I was basically browsing through the internet, looking at ways to, I would say, spare some free time and enjoy, right?
+
+I also like a little bit Star Citizen. I don't know if you heard about that game and so on. But I read about this project, right? And yeah, I would say I joined the Discord. I started to learn about that. And then I realized that it was Solana-based project, right? So basically they were using Solana as a standard layer for the transactions. So full Web3 project. And probably Solana was the...
+
+step after, right? So basically the one that actually tracked my first detection was this specific game, right? But yeah, here I am again in the infrastructure layer.
+
+Citizen Web3 
+It's interesting. You mentioned games, you know, and a lot of there is there is not a lot, you know, maybe a lot is an over exaggeration, but it's definitely an opinion that one of the largest issues in Web3 is usually UX UI. And that's what's stopping at least it's an opinion. I'm not saying that that's an indefinite opinion, but definitely exists. A lot of people, especially that come from gaming. And this is a question to you.
+
+Say that know gaming have it solved a long time ago you weeks and UI and if we just apply the mechanics to applying games to the web 3 world. can get the mass adoption now what's your opinion on that do you think that that's correct or do you have a different opinion or maybe any thoughts at all.
+
+Oscar GF
+Yeah, I would say that you are right. Again, this is an opinion like you said. Probably it's even only about gaming. But I usually see crypto as our industry as well, and probably because of my background. But somehow an IT stack layer, where basically crypto is a little bit closer to the infrastructure layer.
+
+jumping a little bit more into middle middleware layer, right? So basically there is a front end layer that It is not there or it is being built right? So I see more as a back-end product in general for even for the financial do self for everything right and what I believe is that There will be some point in the future that Mainstream will be using crypto even they don't know it. But I'm I think that's probably the
+
+target, right? And probably the current evolution about all of this, right? So my opinion there is that now the projects are still struggling a little bit about how to link this back end technology with the front end, right? And how to hide some kind of this complexity. But there is an evolution ready, right? And you see latest projects about that. Some of this complexity is already hidden and I think this will be a journey.
+
+And there will be a moment that someone will actually play or do whatever they need to do without even realizing that they are actually creating a transaction in the backend. So yeah, this is what I think is going to happen.
+
+Citizen Web3 
+It's an I'm going to I'm going to go into that little bit like at least one more question here if you don't mind. Do you think that complexity should always be hidden? is that like this is this is a kind of like a two way stick, right? Like sometimes we say, OK, let's hide all the complexities on the front end of whatever it is we're doing. And the user has like, you know, this experience where they don't know what they're using. On the other hand, like there is another I think club in this.
+
+Club of opinions, right? That we're metaphorically speaking about that if you don't teach users responsibility, for example, going back to your own and your own keys and stuff like that, then they will never care about it. They will never be bothered about it. So a question here, do you think when we are trying, like in Web3 at least, right? At least in Web3, not necessarily general in UX development, shall we?
+
+hide as much complexity as possible from the end user? Or is there need to leave some things for the user to go through their journey and learn responsibility that Web3 brings with it?
+
+Oscar GF 
+Yeah, that's an interesting dilemma, right? I fully agree. But in my opinion, it's that not all the products fit for all the personas, right? So I feel that there will be profiles in terms of the products. And for some people, they don't care about that. And for some others, they definitely do care about this transparency, right?
+
+What may happen is that probably this complexity is hidden in first instance, but available at some point, right? So basically you can actually find even, I don't know, the open source smart contact if you actually want or the transactions flow for different assets, right? But in terms of from then, maybe this is something that you are not going to see in the first, I would say view, right? Probably you want to...
+
+hide it a little bit, but if you actually want to dig for it, it's pretty available. So I think that in terms of product design, and this is actually real world, when you actually create a product, you need to actually define the target person. And the target person involves a different set of capabilities in the persona part that is actually, how techie is this person? How familiar is this with an IT system? How
+
+familiarized with everything, right? And basically you need to build these products for these specific profiles, right? And if we want to reach mainstream, we need to target different profiles there, right? So basically not all the products are going to reach all the personas, basically.
+
+Citizen Web3
+I totally agree with that. One thing I noticed over the years in crypto and also developing products, I also developed some products in crypto and I noticed one, and again, I'm sorry, I'm always trying to form an opinion and then I'm going to try to make it into a question. Continue on what you said, of course, about target groups. I don't know about you, but I've noticed over the years in crypto for sure that
+
+Citizen Web3 
+And the target groups in crypto feel a little bit like mixed up. mean, maybe, of course, of course, this is a professional bias. Of course, there's no doubt about that. And I understand that, what I see is definitely not what other people see, because I've been here like, I don't know, some so many years. But like, sometimes, you know, like, you go for a product, for example, and you're creating a game or whatever, or something else, and you know, your target audience, you know, your target groups in crypto.
+
+Sometimes when you try to make like, let's say the passport, you know, in quotations here of a particular target group, you get suddenly such a mix, you you get like developers who are interested in memes, who are at the same time, you know, you know what I mean? And like, and like you start like to try and form a profile of a user, but you end up with something like a mix. I don't know, have you noticed something like that? Or do you think it's more of a professional bias and
+
+We can still in crypto have individual groups with individual targeting or they're all mixed.
+
+Oscar GF
+Yeah, I think that in general, and that's a very good one, But I think in general, this is part of the ecosystem, right? somehow and sometimes crypto is sold as a product per se, right? But depends as well how you are actually look at it, right? So I, for example, see crypto as in terms of the potential, it's in terms of the capabilities that it brings.
+
+So basically there are capabilities that this actually brings into the real world that is just amazing in the way that you can actually transport value from A to B about whatever you actually want, right? Very cheap, very scalable, and very transparent, right? So I think that one of the issues that may have, I mean, I'm saying issues, right? But one of the, I will say,
+
+drop backs in terms of adoption is to think that that's an actual product. And probably that's an actual product for something else that is going to become a product. But I think that the technology itself is an enabler for something to build on top of something great, but to take advantage of these capabilities. And I see the products in the same way. So when you build a product, I think that you actually need to be
+
+clear about what piece you target public. I know that there are many philosophical things involved in terms of doing what you say in terms of, OK, we want to be focused on the decentralization and bring transparency to the user. But I still think that many users, don't care. They just want to play a game. And I think that we need to build products.
+
+to target these kind of people, right? Not to actually sell the backend technology. It's like, I mean, a parallelist would be, for example, for cloud, right? The cloud has revolutionized a lot. I would say the infrastructure layer for a huge number of companies, but cloud is only sold for the companies that are actually using it, right? The actual people that is using cloud backend, they don't care if it's cloud or not, right? So I see a little bit in the same way.
+
+Citizen Web3 
+So, I guess the question I'm gonna ask here like to finish off this topic is because you know, you're talking about different groups, but
+
+Citizen Web3 
+there are wallets and explorers, for example, which in themselves combine different groups, developers, users, NFT, minters, whatever. So do you think that the adoption problem in this case is just because, I don't know, let's say a wallet comes out, let's say a group of developers come out and they say, let's make the best wallet for Web3 developers, or let's make the best wallet for, I don't know, NFT minters. And then at the end, usually what happens
+
+is that it seems that there is not enough target groups in that group. So, you know, because there is no wallet for every single target group, right? So I don't know. I don't know if it makes sense what I'm trying to say. I guess what I'm trying to ask here is that do you think that at the end, the problem with adoption is that we just need more users? Or do you think that the problem with adoption today is that we don't have the right products for the right type of groups developed? I guess that's the question.
+
+Oscar GF 
+Yeah, I probably see the wallet like another component in the middle, which is at the end how you are linking the user to the actual Web3, right? But there might be different interfaces in terms of that. Maybe there, I don't know, at some point there will be some kind of embedded wallet. And this is actually happening already, right? There are embedded wallets, for example, in games, right? So they are playing the role of a wallet because it's actually generating a path key in the background.
+
+and this is actually behaving like a wallet, right? So I think that the wallet itself is a software that you can actually interact, right? But there are different ways to actually removing this friction, right? I mean, I even remember some games, in fact, I played one quite recently. I don't know if you played, I don't know if we can say even name of games, but maybe we can, right? But there is one called Off The Grid, right? So basically this game that is...
+
+I know recently developed it, you can actually transfer assets in terms of skins and so on. And you see actually how this is transferred and this is actually creating a wallet in the background. But from the user's perspective, you are only playing the game, right? So it's a little bit like how I see it, right? It's how to hide a little bit this mechanic and only enjoy the value that it brings, right?
+
+Citizen Web3
+I I mean, let's see. mean, it'll be interesting to see where all this goes and develops. I think, you know, it's nice to, I think one of the issues in my opinion, in crypto products development is people being stuck. know, like people coming 10 years ago or 15 years ago. And the moment where they come in, the technological scene of Web3 or crypto, the availability, it was that. the belief was whatever it was.
+
+And I know this from personal issues, know, where, you know, I would like to think that I'm not like that, but I'm a human. And of course I am like that. But, you know, I've seen this many times where people and myself included, we go into like a certain thing, we see whatever it is. And then after the some couple of years when the, the technology evolves, people are like, but I'm still stuck in that place, you know, and I think
+
+With crypto, it's a bit like that. A lot of people are afraid to move, to develop. But yeah, I think that it's good that we have more and more new people coming in. Please, please, please.
+
+Oscar GF 
+Yeah, I mean new players are coming in as well and probably this is good, right? And different perspectives are already, I would say, the crypto space. And that's part of the game, I would say. Every tech ecosystem involves that, involves evolution. Probably we believe some things and then you realize that the actual market evolves into a different way.
+
+But yeah, I guess that we will see, right?
+
+Citizen Web3
+Let's talk a little bit about your validator venture. The first question that I'm going to ask is probably a bit strange actually, but I'm going to ask it. You said you are originally from Galicia and both Portugal and Spain are, again, I'm more of an old anarchist, but for the sake of the conversation, and I do understand those things.
+
+Oscar GF
+Mm-hmm.
+
+Citizen Web3 
+like Portugal and Spain in terms of the law and terms of the crypto law a lot more loyal towards crypto at least at least so it seems to the outsider and I might not be an expert on it for sure. Now in the States at least definitely Solana had issues before they were at one point where you know like the US people couldn't at least officially use Solana and you know there has been many many many many issues especially around privacy of course and
+
+Anyways, long story short, the question to you, why move the business from more or less a little bit of a crypto friendly country to US, which is like, yeah, maybe I'm wrong. Please correct me if I'm wrong. So please, please go, go, go, go. Please comment me on this topic. Tell me where I'm wrong and tell me if I'm not wrong, why.
+
+Oscar GF 
+No, probably, I mean, the reason of the move was totally different, right? So the reason of the move was my actual background and parallel work, right? Which is basically being a night team infrastructure manager at this point, right? And basically, now I'm developing this role as well into the US, right? So basically, I'm actually working in parallel of my crypto life, right? So this started as a hobby and now it's becoming like I'm taking more more time, right?
+
+But I will say that the reason of the movie was totally different. It was not related to crypto at all. But I agree with you. In terms of the loss, I think that the loss are known as well to be not specifically fast and adaptive to new technologies and so on. And this is one example more. But I think that the loss at some point, they also try to embrace
+
+mean, embrace even common sense, right? Even the loss, right? Something that is so strict and so on. There will be a moment that there is no other way that just adapt to it and build a framework for a technology, which is not more than that, right? So it's just very weird to just for be the technology for so much time, right? So there will be a moment that basically there will be a framework where US, Europe or whoever will need to...
+
+Actually adapt took right so that's that's my belief right and we will see in the next years But yeah, I think that is progress right not as fast as we would like but laws are known as well to be to be slow right but but yeah
+
+Citizen Web3 
+Does it, again, I know it's a weird question and you said, you already said this was not the reason, but still, kind of like being a bit of, let's philosophize, theorize a little bit. serious question though, as a validator, are you not scared where tomorrow or in a month or in a year, it might go wrong, mightily.
+
+I mean, right now, we're in November after the election already. This is for the listeners when this episode comes out. And crypto started going up and Gary Gensler has been fired and everyone is super happy. It's normal. But we all know that it's not like, you know, it's not a yellow brick road. You know, it's not the road to Oz, right? Like something you might wake up tomorrow and something like that's the question to you. Are you not scared of that? Because we have seen
+
+big problems, especially in the core systems in the US regarding crypto. What do you feel about that? Do you even think about that?
+
+Oscar GF 
+Yeah, I I definitely did think about that. In fact, mean, from the actual technology perspective, you can do actually what we want, right? For example, the validator itself is not in the US, so the servers are spread in different locations. But as legal entity, it is, as you say, right? So basically, it's an entity in the US. But I would like to think that we have the flexibility to actually move in case something happens, right? So...
+
+And that's also a nice part of, I would say, this technology, right? So you are not really attached to a specific region, country, or whatever. You can actually have the flexibility to move it around. Maybe it's actually where you are going to fiscalize it and so on, right? The taxes and so on. But that's paperwork, right? That's something that you can actually move as well. Probably not as fast as moving a server from one place to another, but you can actually do it, right?
+
+There might be issues there at some point, but to be honest, I'm optimistic, right? I think that in terms of uncertainty and these kind of things, it's something that is probably a bit like based on faces, right? In my opinion, I think that the worst things in terms of uncertainty, in terms of loss are gone. That's my view, right? So I think that this should be able to improve. But yeah, the risk is always there, right?
+
+But I'm not really scared, I was saying, if there is really a restriction, we can actually move it around,
+
+Citizen Web3 
+I think, I don't know about you, but I definitely believe that, you know, at one point, a lot of people in crypto, not a lot of people, but crypto itself has lost its balls in a little bit, know, like they're missing some kahunas. And it's nice to see people in crypto that founders, especially of projects and people who have projects, the service projects, say that they're not scared because I think it's important.
+
+Oscar GF
+Thanks
+
+Citizen Web3 
+Why Solana by the way, man? Why Solana and why only Solana? What was the reason for that?
+
+Oscar GF 
+Yeah, so I read, will say, as I was saying, the entry point, was a Solana project, right? So there was some kind of, I would say, a winning boring for Solana in that moment. But after reading about it in terms of scalability, speed and so on, and in that specific moment, because I think at this point, there are other changes that are very progressing a lot. mean, they're progressing a lot in terms of this kind of
+
+throughput and so on. But in that specific moment when I started Solana it was extremely powerful compared with the competition, right? And thinking how I usually think, right, that this is some kind of vision of the future and so on, I was actually foreseeing and envisioning that this can actually become some kind of underlay for very huge use cases, right?
+
+So I was seeing that, okay, this can actually scale for a real use case that is actually pushing thousands of transactions and so on, right? So this encouraged me to actually learn about it. And yeah, so far I'm pretty happy about that step. I think that they are doing a great job, ANSA and Solana Foundation and so on. And the roadmap is impressive, right? So they are very focused on still improving.
+
+speed, as well as the decentralization and other factors.
+
+Citizen Web3
+Do you think you're going to add more networks to your venture?
+
+Oscar GF 
+Actually, I'm working on a project related to the validator as an evolution of the validator, but it's a little bit more closer to the application layer, right? So basically, we are actually working on asset management platform that basically we hired a few people already, and they are actually developing a platform on top of Solana. I'm linking this to your question because we are starting with Solana.
+
+but we are actually aiming to become a multi-chain, at least in that layer, right? Not from the validator perspective. From the validator perspective, we are going to keep, I would say, Solana so far. But from this platform perspective, multi-chain will be, I would say, a second step. First, it's going to be Solana. And later on, we would like to include as well real-world assets, right? So basically, doesn't matter the nature of the assets, but...
+
+actually trade with them, right? So that will be the target goal for this specific project.
+
+Citizen Web3
+I've noticed from many angles now and from many people that they're tools similar to... Well, it doesn't matter what tool they develop, it includes something like a portfolio tracker. correct me if I'm wrong, but from what you explained, this is kind of like in the same direction. Why is it like everybody I talk to, everywhere I speak to, it seems that that is the most needed tool today because literally everyone I speak to is developing a portfolio tracker.
+
+Like seriously, man, it's crazy. You're not going to believe how many people are doing it. Why? Why? Why is it so important in your opinion?
+
+Oscar GF 
+In my case, I linked it to what I was saying at the beginning, right? That it was a little bit removing friction in terms of user, right? And why is that? Because for example, the typical person that is today actually using Solana, they are, I would say, more techie in general. They are more adverse in terms of risk. So they don't care about risk. They are just putting...
+
+I would say a lot of money and trading with that. And basically they are dedicating a lot of time to specific assets. So basically the specific portfolios that someone has is a little bit trading a lot with specific assets. The intention for this kind of platform, which at the end is a little bit, if you link it to real world, like a typical asset management traffic platform where you are actually aggregating different backend assets, is that you have actually someone
+
+to take care of this middle layer in terms of what assets to actually participate based on a specific risk profile, volatility, and so on. So basically some kind of middle layer. But the intention there is that someone that is actually depositing money there, they don't need to actually be so, I would say, up to the specific asset evolution, right? So basically you are delegating a little bit this into someone, right?
+
+And that's the intention here is to build some kind of middle layer with basically this platform that will help in order to, I would say, reduce, I would say, complexity and trading knowledge as well for newcomers.
+
+Citizen Web3 
+I've seen several tools in several ecosystems similar to what you described. For example, one was, well, was, it is, and it kind of was because, basically, it's a very complex analytical explorer that is concentrating a lot on on-chain analytics metrics for validators. And basically, what they do is then they have a DeFi app.
+
+which automatically helps you to select the sort of, let's say you have, I don't know, 100 ETH or 10 ETH or one Ethereum, doesn't matter, Solana or Atom, it doesn't matter. And basically, would put it in, you would give some permissions, of course, to the wallets. But basically, will select, instead of you selecting the validator, it will select, let's say, five or 10 validators, which are at the moment are top performers.
+
+And then that kind of like, but I know that it didn't like catch up that much. And I'm curious, do you think that portfolio trackers will gain more attention because there is a lot of them, In sort of, even on CoinGecko, CoinMarketCap, you see those portfolio trackers. They're very simple. But do you think there will be more demand for them? It will grow because of the multichain?
+
+Oscar GF 
+I think there is potential to actually do that. But it's important as well, related to the words that we were saying before, I think that it's important, but probably not specific for the current people that are actually using the chain, right? So basically, I feel that the current traders that are actually using the chain, probably they are not going to be super-benefited by that, because they are actually
+
+trading with their own portfolio building and they feel comfortable with that. But for a new potential persona that might join, which is basically, I know people that they want to deposit money and forget a little bit expecting to grow, but without actually putting in risks, I would say that money into a single asset. So that is where I see more potential, right? And if I see and project this into real world, you see
+
+that as well into real world, right? So you see that many people is actually, I don't know, buying shares about, I don't know, Apple, right? And others are just, okay, I don't want to put in Apple, I want to put in NASDAQ, right? Or a standard force. So it's a little bit that idea, right? Why should I risk all my money to a single bet, right? Or minimize it a little bit, but expect some return on behalf, right? But depends a lot of the persona, right? I think that the persona here is key, right?
+
+I agree and probably this is one of the reasons that the system persona is actually mostly using crypto space. It's not like the super nice product for them, but we will see for the people that is going to embrace crypto, even they don't know it, it's a good product for them.
+
+Citizen Web3 
+That's actually a very interesting point. Those things are not for today's users, they're for tomorrow's users. That's something I didn't think I processed enough in my head. Interesting. I want to ask you actually a little bit, again, if you don't mind, this is a of a private topic, but talking about the setup of the validator, again, whatever you don't mind to talk about, feel free. If it's something too private, feel free to stop.
+
+Oscar GF 
+Go for it.
+
+Citizen Web3 
+The question is simple. I'm curious as to are you currently, I mean, again, with Solana where the needs for the computation are crazy. I'm assuming that we're talking cloud. Yeah, just to talk about your setup, whatever you can talk about, is it cloud? Is it your own metal? And anything you want to mention in that direction, of course, that is not too much privacy sensitive.
+
+Oscar GF 
+Yeah, no problem at all. The current setup that we have is a double instance. basically, we have a hot swap, I would say, instance, so basically two bare metal servers. One is located in London, right? That's the main location. And the secondary is located in Madrid, right? So basically, both are alive, but you actually switch which one you want to keep active.
+
+mostly to perform seamless upgrades and maintainances and these kind of things. But what we are actually doing is a bare metal, right? In Solana, the cloud, even there are cloud providers actually doing that. It's not generally recommended, right? It's better to have your own bare metal for yourself, but in third party facilities. So basically someone is actually the one providing this, right? But yeah, this is how our current mining is set up. Then I have another server as well for Testnet.
+
+But that's some kind of pre-stage in terms of Solana, right? In terms of helping them to bring stability first and then try out in Minet. But yeah, that's what we have.
+
+Citizen Web3
+When you say bare metal, because bare metal can refer to two things here. I can go right now on AWS, Hetzner, go to the bare metal section. Well, it's Hetzner, it will be called robot section or whatever. And I will be able to rent a bare metal server. Or there is also like, I guess, a secondary type of bare metal where I go to a data center. I actually physically either bring or rent a rock or a server or a swan server space.
+
+and nobody else has access apart from me to that server, but it's still hosted in a data center. Which one are we referring to here?
+
+Oscar GF 
+Here we are referring to one that is providing you, I would say, the physical server, but the backend is not virtualized. So the critical point here is that the backend is not virtualized, meaning that you have a VMware or a Nutanix or whatever. You need an actual physical server for you. Doesn't matter if you are the owner or is someone reselling it, but this is physical device.
+
+Citizen Web3 
+Have you ever heard of, I I asked a few Solana validators there and so far the answer has been no, but I'm going to keep on trying. I'm not going to give up. Have you ever heard in Solana of self-hosted bare metal validator, a validator that doesn't go in a data center, that self-hosts their servers, own them and runs them?
+
+Oscar GF
+Yeah, I knew about some. I knew about some that they are actually doing that. It's not common because I would say that there are limitations that you may have, right? You need to have a very nice setup. Am I not saying only about compute? I'm saying even the connectivity lines, right? So when you have a data center, this is, I will say my background, right?
+
+Citizen Web3 
+Mmm.
+
+Oscar GF 
+I work in IT infrastructure layers, so mostly in data centers. You have a lot of things like even the power is random, right? So you don't share the same power lines for your data center. Even the connectivity lines that are coming in from the outside, they are not crossing through the same location. They have a total full path diversity, right? So this is what a data center actually offers you, right? It really offers you a...
+
+are really resilient, I would say, layer in terms of capabilities. And it is hard to actually find this in a house, right? So you can actually try it, right? So I'm not saying that this is not reliable at all, but you need to be very careful about the power lines, that they are redundant. You need to be careful about the connectivity lines and other things that you need to really pay attention, right? But yeah.
+
+you can actually do that, right? And probably you can have a main instance in-house and then a backend instance in another place. So there are options, right, to play with that.
+
+Citizen Web3 
+I noticed on your website, you have lot of links to performance, to analytical tools of how your validator performed. And that's actually quite cool. But you have like six or seven, I think. I didn't see that it's a thing for all Solana validators. So I guess it's something that you are focused on a lot. And I looked at your Grafana board, for example. It's like super neat and super accurate. So I guess it's something that you are...
+
+very big on on performance metrics or what was the reason for that?
+
+Oscar GF 
+Yeah, that's the reason. Probably my background again, right? So at the end, I come from that layer in terms of infrastructure, and it was not enough to just power on the validator and start creating blocks, right? So I wanted to really pay attention about what's the role of the validator, try to reduce, I will say, delay and so on. And we are pretty cool positioned in that sense. So I'm very happy about that progress, right?
+
+Citizen Web3 
+Yes.
+
+Oscar GF 
+In terms of performance, are regularly between the first 200, right? And we are actually 1,500, I would say, validators. Well, are the activities around that. And we are very well positioned in that aspect, right? So pretty happy about that. And yeah, you're right. I'm quite obsessed about the performance.
+
+Citizen Web3 
+What's your advice here to people who are listening to this and want to start a validator? Maybe not necessarily Solana validator, but any validator in terms of performance, what to watch out for, what's the thing you suggest?
+
+Oscar GF
+I would suggest, I mean, I think that in general, many people think as validator as a commodity layer, meaning that, it's something that you're plugging and it's fine, right? But when you're actually digging a little bit in terms of detail, you realize that this way more advanced than that, right? There are tweaks that you can actually do to increase the performance. There are tweaks in terms of the Linux to actually do that.
+
+There are ways to actually isolate Linux that one specific core is actually dedicating one specific progress or Solana to actually increase the performance. There are many ways to actually improve the performance, right? And what I will suggest is that when you are actually creating and deploying a validator, keep evolving, right? Because it's not just one action, it's an evolution.
+
+And you really see that the actual code of Solana and any other chain is evolving, right? And you need to evolve with that, right? I don't know, for example, now Solana, we are going to have as well five answer, right? Which is another client that is going to increase heavily, I would say the performance. So we need to pay attention to that. How can I totally bring this performance into the network, right? How to keep the decentralization as well, right? For example, we have these two nodes in different two countries, right?
+
+So how to actually keep improving all the layers because it's just not a power on and forget about it. Right. And I know that many people is actually doing that, yeah, that will be my recommendation to actually keep researching, keep digging and keep improving until, well, until no, mean, not until anything, right. It's keep improving at every moment. Right.
+
+Citizen Web3 
+Keep improvement until the node crashes. No, I'm joking. But I totally agree. It's like, man, I think it's the worst thing. As also a validator, I think it's one of the worst things that I've done to myself is running validators and then thinking, okay, well, I understand and forgetting for two years and coming back. The industry has changed and you are still in that mode of I know everything. No, you don't because the industry has changed and if you don't follow it up and if you don't follow the latest security practice,
+
+Citizen Web3
+You're just going to and I totally agree. It's a great advice. Oscar, I'm going to jump with you. Well, actually, no, let me ask you actually one last question before we jump into the bleeds. The question is quite easy, guess, because but it's interesting because we don't get many validators on the show who work only with one specific project. There is a few, but there isn't that many. So and the question I want
+
+Oscar GF 
+100%.
+
+Citizen Web3 
+to ask is about community because you are kind of focused on one single community. Was it like it's two or three questions together, but it's all about the community. So I guess the first part of it is how easy or hard it is for you because usually for validators, it's very difficult to develop a community. And since again, you're focused on one blockchain, is it easier? Does it make it easier or is it still as hard? That's the first part. And second part,
+
+In general, like what are your again advice thing something to do or maybe not to do as a validator in order to attract a community to your validator?
+
+Oscar GF
+Yeah, I think in fact the community topic is quite hard, I would say. So it's very hard. Mostly when you don't have... When you're an independent validator, Basically validator is your main, I would say, product. It's quite hard to actually sell the differential factor, right? So what you are providing that someone else is not providing, right? And you realize actually...
+
+that someone, I will say that is actually building a product on top, it's easy for them to actually attract a stake because the branding of the product is actually, I will say, printing this branding as well in the validator, right? So I will say that in general, it's quite hard to attract a stake and that's why it's very, very important for us, the independent validators, to be...
+
+involved with the stake pools, right? So basically they are the ones that actually have a big pool of stake and you try to stay up to fulfill the bare marks, right? And try to get that stake. But in terms of community, to actually bring, I will say that is very hard, right? And that's one of the reasons as well that we wanted to improve, right? So it's basically, okay, we have this super validator that is nice. Okay, but what else, right?
+
+That's as well why we are evolving, right? We want to do something else, bring value as well in terms of a new product. But yeah, don't forget that we are a validator and that validator is going to be there in order to keep, we say, creating blocks, right?
+
+Citizen Web3
+Make sense. I'm gonna ask you now three questions. They're gonna be like to take us out of the conversation to lower us back down on earth. guess they're gonna be a bit weird. But there we go. So first one, Oscar, give me or one movie or one book or one song that has a positive influence on you throughout your life.
+
+Oscar GF 
+positive influence. I was going to say Matrix. I don't know, but this was the first one that I remember also because, I mean, I don't know, Matrix is amazing. No one can tell me that it is not, right? But yeah, why not, right? So in terms of how, I mean, in terms of the influence, I'm going to say, because it's some kind of parallel wall in terms of Matrix, right?
+
+Citizen Web3 
+Woo!
+
+Citizen Web3
+No.
+
+Oscar GF 
+And this is the world that I'm actually living a little bit, right? So I'm going to try to be Neo here, right? If you guys are not, right? But yeah.
+
+Citizen Web3 
+Nice. Nice.
+
+I always joke that when people talk about reality and parallels, I always ask them if they've seen a documentary from the end of the 90s called The Matrix. And people go, really? There was a documentary? And I say, yeah, it came out in 1999. And I go, really? I didn't see it. I say, you sure? It's not a documentary. It goes for a few hours from the Wasowski Brothers. And they go, there was a movie. I say, no, no, there was a documentary. You just didn't get it. yeah. Second question.
+
+Give me something motivational that helps Oscar keep on working in not just in Web3, but also in IT in parallel. I do keep running a validator and trying to build products and yeah, something that keeps you something motivational that keeps you out of bed every day.
+
+Oscar GF
+That's a good one. Well, in my case, I'm trying to do sport quite frequently in order to, I would say, disconnect a little bit. I have to say that I'm a super fan of Real Madrid, right? So at the end, I'm a Spaniard and we love soccer and football, So that's one of the things, right? And of course, family, right? Of course, my wife and so on is something that...
+
+Citizen Web3 
+Nice.
+
+Oscar GF
+I mean she pushed me every day in order to keep going and fulfill my dreams. So yeah, those two are the ones that I'm going to stay here.
+
+Citizen Web3
+Nice. Okay, last one. I promise this is a bit of a weird one. So dead or alive, a real character or a real sorry, made up character or a real persona doesn't matter. It could be a developer, a writer, a cartoon character, a comics character, a person you know, not a guru, but somebody who when you feel stuck in your life, you kind of
+
+Like thinking about this person helps you to move on, helps you to make the next step, you know, and kind of like be positive.
+
+Oscar GF
+Interesting one. So I'm going to say here, I'm probably something, I mean, someone that it helped me a little bit to envision this kind of topic that I was saying at the beginning in terms of persona, how to build a product and so on. I want to say here Steve Jobs, because how he thought about that and
+
+Citizen Web3 
+haha
+
+Citizen Web3
+Okay.
+
+Oscar GF
+I mean, he really understood what a product is. And I usually wonder what Steve will actually do in some of my actual, I would say, visions, right? So now we will see if that's actually accurate or not. But yeah, I think that's a really interesting, I would say, point of reference.
+
+Citizen Web3 
+I definitely agree with you. Oscar, I want to thank you very much for taking the time to answer the questions. This is just a goodbye for the listeners. Please don't hang up. But for everybody else who tuned in and listened to us, I will see you or hear you whatever's the right word here next week. And thank you very much. And Oscar, thank you too.
+
+Oscar GF 
+Thanks and thanks everyone.
+
+Citizen Web3 
+Bye bye.
+
+Oscar GF 
+Bye bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

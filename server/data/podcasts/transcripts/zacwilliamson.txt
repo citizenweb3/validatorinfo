@@ -1,0 +1,559 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/zacwilliamson
+
+Episode name:
+A Fairer World, Trust and Breakthrough Technology with Zac Williamson
+
+Citizen Web3
+Hi everybody. Welcome to a new episode of the Citizen Web3 Podcast. And I'm glad to have Zach from Aztec with me today. Zach, hi, welcome to the show,
+
+Zac 
+Hey hey Serge, thanks for having me on. It's a pleasure.
+
+Citizen Web3 
+Yes, glad man. I'm going to strike dive into, you know, the first kind of a little bit boring, but it must ask thing. I'm going to ask you for me, for the listeners to introduce yourself, even for those who know you for myself and the others probably as well. Still, please introduce yourself, including your intro, maybe your Web3 background. And what are you working on right now?
+
+Zac 
+Sure thing. Yeah, who the hell am I? So I am Zach. I am the CEO of Aztec Labs. We are a a layer two, a privacy first layer two for Ethereum. My web three background is, it goes back eight years, which I think in this industry makes me a bit of a dinosaur. But yeah, you know, I came in with a startup called Creditment, trying to do TradFi on chain, syndicated loans, mid market debt, boring stuff.
+
+but important, impactful, but ended up basically becoming a cryptographer pivoting into privacy technology and yeah, doing what I'm doing today.
+
+Citizen Web3 
+That was quick, for you considering your history. but let's dig into it. Let's dig into it a little bit. I like people who are modest. Thank you, Zach, for that, by the way. So Zach has actually done a lot more, guys. And we're going to mention. I I I did. I grew up in the UK, man. So so this is where it's coming from oh man. Zach, I know you also come from a physics background, right? Tell me, how does.
+
+Zac
+You should come to London, you should live in Britain.
+
+Zac 
+I see, I see, I see. Yeah.
+
+Zac 
+I do, yeah.
+
+Citizen Web3
+How does it work for you diving into something at first, I guess, when you're studying physics? It's a proper study, let's say, right? Proper subject, let's call it like that. Down to earth study. And then you kind of you know shift to Web3. And I mean, I can see the logic. But how was it for you? How was the progress for you from going one thing to another? And yeah.
+
+Zac 
+Yeah, it was very arbitrary. There are a lot of physics refugees in Web3, let's say, because I think there's many people who started out like me. I wanted to be an academic. I wanted to be a scientist, you know, unpicking the secrets of reality, understanding how the universe works and all its mysteries. It's very compelling and alluring. And so I set about that path. I got a PhD in experimental particle physics, neutrino physics. But
+
+I wasn't really cut out for academic life, looking back. I didn't have the mind for it. I didn't I couldn't really navigate the political situation. You know it was The reality of academia it was very different to my naive dreams of it. So basically, I I left academia and was effectively searching, I guess you could say, searching for something more interesting to do.
+
+So I kind of fell into Web3, you know. After after my PhD, I got a regular programming job in London and was kind of just wondering what to do next with my life when my brother, who is an opera singer, not a tech person, was like, yo, Zach, I've got a, like, my best friend, Tom, he wants to do a blockchain startup, but he needs a technical co-founder. Do you want to meet him?
+
+and that's how that all started. So it was very arbitrary really.
+
+Citizen Web3 
+You mentioned physics refugees and I'm going to concur to that because I think over the past like six years or whatever I've been doing the podcast particularly and been in this industry for a lot longer like yourself, but I've noticed that maybe five to 10 % of my guests have either studied physics or something related to scientific.
+
+based subjects. so yeah, definitely. you use, I mean, a lot of people see, guess, and this is going to be the question, a lot of people, guess, see resemblance between, you know, blockchain decentralized organism and a real life nature resembling like forests or, or mycelium or whatever. Do you think that that's, that's, that's maybe what attracts people who studied physics, biology and other scientific subjects to here? The resemblance.
+
+Zac 
+Possibly. I mean, yeah, I guess you could see it that way. I've never really I've never really considered that resemblance. I guess all communication networks, information networks, look a bit like living organisms. But for me, it was a bit more...
+
+I think the way I would put it is I feel like people who are attracted into the hard sciences, they're attracted to complexity and they're attracted to novelty. there's a lot of that in spades in blockchain. you know Take my experience where you know to do what ASIC does today, we've had to do original research, publish academic papers and then turn those into software, then turn that software to products. That pipeline is not very...
+
+It's rare, you know, it's rare. and
+
+But I think there's something a bit more general with physics, which is that if you do a physics degree, you're effectively a jack of all trades, but a master of none. as in, you can do software engineering, but nowhere near as well as somebody who studied computer science. You can do a little bit of civil engineering, mechanical engineering, but again, nowhere near as well as somebody who's done an engineering degree. You understand mathematics, but nowhere near as well as someone who's done a mathematics degree. Basically, can do, there's lots of roles you can fill, but you can't really fill them as well as somebody who's like, dedicatedly studied for that role.
+
+And so I think I think that kind of leads to a little bit of an entrepreneurial tint bent to physics grads because you kind of have to be to find your niche. Because if you try to go down a structured path, then you'll be outcompeted by people who've actually done the degree for the structured path.
+
+Citizen Web3 
+It's an interesting point. would never thought that business is what combines physics and decentralized objects. That is something that I didn't cross. I have another question for you because you mentioned your brother is an opera singer. So I was going to leave this question for a little bit later. But since you said that, I didn't know your brother was an opera singer. That's quite awesome. How do you Let's say your brother decides to, you know I mean, let's say you guys don't speak that
+
+Zac
+Yes.
+
+Zac 
+Thanks.
+
+Citizen Web3
+Let's pretend for a second. Let's not take your brother, maybe some other family member. And at a family dinner, you find out that your brother is buying Trump coin. So how do you explain to him the values of Web3 without... Let me phrase the question properly without the joke. How do you explain to somebody who is dear to you, to Zach, a family member, the values of Web3 considering what you did in Web3?
+
+and disregard the hype that is around Web3 today. today Maybe less, but let's say like, I don't know, 2021 or whatever, something like that.
+
+Zac
+Yeah, to rephrase your question a little bit, are you getting at the fact that a lot of the Web3 vibes that outsiders see are very trashy and low status, low quality, and people think that Web3 is a joke. you know It's just a casino, it's just people shilling mean coins. And so when you tell people you work with Web3, they're like, how can you do that? What do I say to them? So yeah, it's a good question. The way I put it is that...
+
+Blockchain decentralization, it's one of these breakthrough technologies that enables new applications, new software, new design space. I think it's a fundamentally new form of communication technology that humanity has unlocked in that we can now create stores of value digital currencies that we can transmit and trade with one another without relying on middlemen. This is this is  actually new throughout the whole world.
+
+where if you go back into the past, if you have assets, then unless you're literally storing those assets yourself, they're custodied by somebody else, and you have to rely on them to tell you what they are. Bitcoin was a fundamental new technology which allowed people to acquire consensus on what people learned without the middleman.
+
+And with any breakthrough technology, it becomes a gold rush. And with any gold rush, you get scammers. And these people suck all the oxygen and attention out of the room, because that's what people focus on, because they're entertaining, they're engaging. People like SPF, following his story, it's compelling. Following the story of people working on real technologies, well...
+
+They're working. They're no shilling They're not a crazy life in polycules and committing fraud and getting arrested. It's much more boring. And so I focus on two threads. One is A, what people see from the surface isn't all there is to it. There is a hardcore community of dedicated builders, creators, developers, users that really care about decentralization, care about using this technology as a force for good.
+
+Zac 
+And then I also focus on explaining why this technology is a force for good. Why? Because it's quite challenging on the surface because we're used to modes of transaction in our life which rely on intermediaries. And so trying to imagine a world without that, albeit that need is lessened, can be challenging. And so I focus a lot on the financial system, the financial sector, where
+
+You you put your you put your money in a bank accounts and that little sliver of equity is leveraged 10x by the bank, you know, creating lots of obligations, responsibilities that create systematic risk that you pay the price of. As in, if the bank is under, you're left holding the bag and assuming everything works out and the bank doesn't go under, well, you have all of these traders, all of these middlemen effectively leveraging your assets for profit and you get absolute scraps off the table.
+
+from that. And I think it's very predatory. I focus on how people outside of the developed world don't have access to high quality financial systems, where it's hard to save money, for example, things we take for granted. Or I focus on people living in, say, Argentina or other developing countries with manipulated currencies where your wealth just gets inflated away by money printers.
+
+And I try to articulate how blockchain can create alternative solutions for this. the fact that we're not seeing them today is because the technology is immature, it needs more time. And it's not because the technology is a dead end.
+
+Citizen Web3 
+I would even add to the bank thing that if you read the fine script, then you realize that any money put in any bank account doesn't matter in which country, does not belong to you completely. Another is the bank account. In fact, you are renting a space which you have to pay fees to the bank for. But just to argue with you, just to have, just not to agree, but to create the conversation here, isn't blockchain a man in the middle though? A decentralized man in the middle.
+
+Zac
+Certainly.
+
+Zac 
+Yes and no. In that, it's...
+
+Zac
+It depends on the blockchain, but I would argue the good ones, they have these properties of credible neutrality and censorship resistance. The idea is that a blockchain network does not have an opinion on who you are or what you're doing. And if it's designed correctly, it cannot censor you. you know At the application level, maybe, depending on what you're doing, you're trying to do something regulated, that can be important. But the network itself, your transaction looks like any other transaction. and 
+
+because it's
+
+Well, it's because of the immutable software, but then you've got to explain to somebody outside the space what immutable means. But basically, because of the focus of cryptography, you know what's happening is that everybody's collectively running an algorithm. And as long as the algorithm doesn't change, then you have 70 about what's going to happen on chain. And the algorithm can only change through consensus through a majority of people.
+
+deciding to switch. And even then, you have this property in Web3 where you can effectively rage quite. If everybody else moves to a fork of Ethereum, you can still stick using Ethereum if you want. And so that incredible optionality is something which is very rare in the world.
+
+Citizen Web3
+Do you think that, that ever humanity can get to a point where we don't need a blockchain to verify trust or not to verify trust or to create a trustless ecosystem, right? Where two people meet, they think of something between themselves and they are on a level where
+
+neither trustless or a trusted system is required for them to verify whatever is they want to agree on. Let's say, I don't know, I want you to build something for me and you know you need to carry out those works or I don't know, you know whatever. Any contract today requires us either to put it on paper or to put it on a blockchain or anything else. Yeah.
+
+Zac 
+No, I don't see that world, to be honest. I think that it's always going to be essential for effectively to strangers to be able to gain trust in one another. That's the thing about blockchains. I don't really see them as trustless technology. I see them as trust infrastructure technology. It allows people to rapidly gain confidence and trust in one another. So you know you can either get that trust through an institution, as you said, through some legal contracts. so you know, your counterparty doesn't behave, you get to sue them.
+
+them honest, or you can do it through a blockchain in theory. I do see a world where the blockchain infrastructure becomes completely invisible in the same way that IPv6 is invisible to us. We don't excitedly talk about the HTTPS protocol in our lives. But the way I see it is, the way I hope things develop longer term is that blockchains become, particularly ones like the one we're building with Aztec, become a source of credentials.
+
+And I mean credentials in a very general purpose way. mean, basically proving what you've done in the world and what you're about. So that, say in this example, if I'm contracted with somebody to build a house, I can know very quickly that they are qualified to build that house, they're competent, they have a lot of good reviews, that these reviews are organic and they're not manipulated by bots. And that maybe they have certain certifications that are required from wherever I live.
+
+and that I can acquire this information without relying on some third party to collect that information for me. That is the goal, in my opinion.
+
+Citizen Web3 
+What is the goal of Zack, not Aztec, but Zack? mean, privacy is kind of an obvious answer, but I'm talking like Web3. I'm going to focus on Web3. I mean, you chose privacy and cryptography not for no reason, right? There was some values that were driving you there, and you kind of to talk about them. You mentioned a few of them, but what would be for you? I'm going to rephrase that question. What would be for you, for Zack, a complete failure in five years from today? And Aztec aside,
+
+Zac 
+Thank
+
+Zac 
+Yes.
+
+Citizen Web3
+I'm talking like crypto blockchain, the space in general, like, you you wake up in five years, you look at it and you go, my god, that didn't happen, you know, and like that's it. That's a failure.
+
+Zac
+I think in five years, if there's not significant amount of real world assets being transmitted on blockchains through privacy technologies, then I think that is a failure. think that if five years might be too soon, but I think if we don't have very efficient payment channels, stablecoin payment channels on a blockchain that are private, that can rival the throughput and costs of the Visa and Mastercard network.
+
+then we are a failure. Maybe put that in 10 years time. Yeah. And so what are my values? I guess-
+
+Citizen Web3 
+Maybe 15.
+
+Zac 
+I think...
+
+Zac 
+I've always just, this is going to be quite vague, but I've always been motivated by a sense of fairness, I think, or at least I want things to be more fair. I'll start at the beginning of that, because when I came into Web3, my motivations were not remotely altruistic to be straight up. I was a software engineer in a windowless basement company in London, and what I wanted was agency over my own life, and I wanted the ability to make a bit of money. and
+
+So, but I wanted to do it in a way which like added legitimate value. And the reason why I was really attracted to Tom's idea, he was my co-founder at the time of Crediment, this traditional finance idea, was because it was real. you know, 2017 is when we started, and this was the peak of the ICO boom, when people were basically putting bullshit on chain to not sugarcoat things. know, they're talking about these stupid ideas that they'll never be able to execute on, and they're raising money before they've even begun to build a product. And most of them didn't work out.
+
+obvious reasons. know, there was a launching a bunch of shit coins or, you know, people going like, I'm gonna like add drop pet food into the Sahara Desert on his subscription model on the blockchain, or we're gonna, you know, put Long Island iced tea on the blockchain. And it's all nonsense. And it was all garbage. And they were raising so much money. And I didn't like that. With Tom's idea, like he was he worked in the city of London, he worked in this kind of this mid market debt system where he understood that basically,
+
+there was a big problem where lots of actors that hated each other and would stab each other in the back needed to coordinate and that they were paying middlemen a large amount of money to basically act as that trusted coordinator and that could be replaced by a blockchain. And so I thought, wow, this is real. You could use, this is an actual value proposition which like needs blockchain. So I loved that. And so I thought, yes, okay, so I can, I'll I'll time my bandwagon to time it. Like we'll do, we'll.
+
+team up because it was, you know, novel technology, exciting ability to have more control of my own life, maybe make a bit of money. it was, and so that's how I got started. Things changed after about a year and a half because we've, we discovered that privacy was an existential problem for the success of our startup. Back then we were quite naive about blockchain. You know, I thought, privacy, that's really important. Surely somebody's
+
+Zac 
+figured that out by now. You kind of need that for so much. And then I realized with Doining Horror that not really. I mean, you have Zcash, you are incredible pioneers, you have Monero, but these networks didn't enable programmable privacy where you could customize application logic and maintain private information. And so that led me down the rabbit hole of discovering zero-knowledge proof, zero-knowledge cryptography, and then becoming a zero-knowledge cryptographer. And that process...
+
+really flicked a switch in me because it made me realize that there was so much about the world that I took for granted that didn't have to be, that could change. As in particularly the internet and the broken models on the internet where, you know, I was an early adopter of the internet, you know, I've had it since I was seven years old, and I'm 37. So, you know, I was around for Web 1.0 in this this halcyonic era where
+
+you know, internet was a much worse experience, but it was also much more authentic experience where you have these small communities and networks focused around forums, web rings, you like, I remember back in the day, you know, you'd always on an internet forum, if there was a debate, you'd always have a couple of crazy people come in going, you know, you're all bots, you know, this is all a sign up from from the CIA. And you'll laugh at them going, don't be stupid, like
+
+Nobody here is a bot. Nobody cares about us. We are a bunch of reject nerds that are being forgotten by the world. no one would bother to manipulate what's going on in this space. And nowadays, that's not true at all. and so anyway, basically, they're broken advertising models. I mean, they're broken for humans. They're not broken for the companies that run them, where we're not.
+
+custom with a product. What do companies really want? They want our attention so that they can harvest our information. It's very perversely misaligned with what humans actually need and value. And why does this exist? Well, there's no real viable monetization models on the internet outside of advertising. you know Subscriptions for some services, but not really, even though it's stuck through an advert. I think blockchain can offer alternatives, even though it's as simple as micro payments. Like go online.
+
+Zac 
+If you want to read a newspaper, you just click a button, you pay 10 cents through your web wallets and voila. That doesn't exist today because the existing transaction networks, MasterCard, the fees are too high. You could solve that with a blockchain. And I realized that this data harvesting model could be broken, there could be alternatives through zero-node cryptography. The idea that you could keep your data,
+
+with you, client-side, and only share proofs about your information with the services you're using was revolutionary to me. In many ways, it possibly radicalized me and it realized that the world that we live in doesn't have to be the world that our descendants will live in. and you know I managed to with a lot of help, a lot of help, I cracked the privacy problem, but with that technology we decided to pivot the company into privacy infrastructure, partly because...
+
+We felt this is so much more important than just one application on the blockchain. This needs to be distributed to everybody.
+
+Citizen Web3 
+There's a lot of ways to pivot the questions here and I keep on jotting notes when we speak and I'm trying to which way to take it. I guess one of the first things, you know you mentioned several times scalability. You didn't say the word scalability, but you mentioned Visa, MasterCard and the amount of transactions. And when we talk about privacy, everybody knows that you need more computation. Well, at least so are we thought for today, right? I don't know what's going to happen in a year or two years time, but today we...
+
+under the impression that the average user or the average developer is that if you need privacy, you need computation. So you're a physicist, right? I mean, you want a physicist to understand that any system can be broken under load, right? Under pressure. It seems that, you know, the more we talk about privacy, the more we dive into it, it seems that we're talking about more and more more more more computation, more scalability. Aren't we gonna, it's a stupid question.
+
+But I think it's worth asking somebody who's been working on it for a while and is a physicist. Aren't we just going to, at the end, come to the point where we're going to break the system because we're going to put too much load on it?
+
+Zac 
+Yes and no. So if the system doesn't change, then yes, but the system does change. The way I think about it is through complexity, as in what you're talking about is basically increasing complexity, privacy adds complexity. And the question with any product is like, with any process, there's an inherent amount of complexity to it. And the question is who pays for that complexity? And I've set out to answer that question in a very specific way. I think that there are two real kinds of people that should pay that complexity.
+
+One, cryptographers and theoreticians, as in you can pay for that complexity by developing more advanced cryptographic protocols that make it faster to prove things, faster to generate ZK proofs, make these proofs more comprehensive, able to prove more statements. you know And that's kind of where I used to make my bread and butter, where I co-researched the plonk ZK snark in the world's first
+
+Universal ZK Snark and a bunch of follow-up research based around things like lookup tables, all basically with the goal of saying, okay, well, let's make these ZK prove it's more efficient so that you can do more with the same amount of computation. And then on top of that, who else pays for complexity? It's the protocol architects and the protocol engineers to develop more comprehensive blockchain systems that in blockchain networks that can handle more load.
+
+And there's lots of ways of doing this. And I think I don't see privacy as being fundamentally opposed to scaling. It makes things a little harder for sure, because there's more information in a transaction because everything's encrypted. But also in many ways it makes things simpler. Because if you have a private transaction, you're modifying encrypted information that you control. And this has some advantages because you remove
+
+for a fully private transaction, you move race conditions. Basically, you cannot have two transactions going onto the network that modify the same piece of information, which means that it's much easier to parallelize block production than a network like Ethereum. This only gets you so far because you know I said two users cannot modify the same information on chain, like that's some kind of strength. It's not really, it's a bit of a weakness because you need that for advanced applications. But...you know
+
+Zac 
+I see the complexity of the critical engineering and architecture level, like being able to increase so much that the end user experience should, in my opinion, I don't see a world where long-term blockchains are bottlenecked by throughput, particularly with the rise of application-specific roll-ups, which I think is the longer-term solution to this problem.
+
+Citizen Web3 
+I guess any developer hearing that the blockchains in the future will not have a battle neck with throughput is like, oh my God, I feel like those guys on the forum 30 years ago right now. There is no bots here. There's only bots here. Only bots here. No, I'm joking. about cryptography, I remember in 2000, I think, 18, 19, I was at a conference in Riga, a Bitcoin conference, and I was talking with Oleg Ganza and Adam Buck. And we were talking about
+
+just cryptography in general. And at one point, think, Oleg, took out like a piece of, was a journal that he took and explained to me really, really, really down to earth how is a pair of private and a public key generated. And after he finished, which took him about an hour and a half, he said, well, now you know more than 99.99 % cryptographers because cryptography is a science that nobody understands anything about. jokes aside, why is cryptography so hard to understand? Why?
+
+Why is cryptography is the remaining last frontier of it to me? So it seems of all blockchain aspects. can't it be, I don't know, more people going that way and studying cryptography? And is it just too complex? Is that what it is? mean, there are other complex subjects like quantum physics, right? And people study quantum physics, right? So why?
+
+Zac 
+There's a couple of things. I mean, cryptography is never going to be that accessible, I think, to the general public because it's hardest number theory. It's fundamentally about creating one-way functions where you can perform a computation that you cannot reverse, but you still have to encode information structure about your input data. It's very challenging. I think that certainly the
+
+of people with cryptographic domain knowledge is going to increase rapidly, is increasing rapidly, particularly from... Did you say you had that conversation in 2013?
+
+Citizen Web3 
+No, it was in 2019 2020 I think 2019 2019. Yeah
+
+Zac
+2019, yeah, still pretty long time, like relatively long time ago. What's changed, I think, is the need, as in, before blockchain, cryptography really was separate into two categories. You had, you had,
+
+real world cryptography, was relatively static and conservative. It's about symmetric encryption, digital signatures, stuff which I'm very biased. I consider that stuff pretty boring. I know a lot of people find it interesting. for me, it had this time. At one point, it was radical. In the 1990s, when people realized you could have digital signatures that revolutionized the internet, it's the reason why you can pay for things online with your credit card. And there was a big fight, see,
+
+and make that kind of tech legal. So at the time it was radical. So I don't want to like throw too much shade on it. But it became very stagnant and ossified. And then you had the academic cryptographers, which were focusing on really novel and interesting things, but their ideas were not practical to implement in software, which meant that if you were going to become a cryptographer, wasn't because you'd make a lot of money, because you wouldn't.
+
+You're in academia, are low. It's unlikely that your work would be used in the wider world very much. So you did it for the love of it, because you love the mathematics, because it interested you. And that meant that not that many people became cryptographers. And then blockchain turned up. And the ZeroCoin paper was published, and Zcash was created. And then you have the...
+
+and then you start to have this explosion of really advanced zero-knowledge proving systems being developed and deployed where you can do crazy things. And then there's this focus now on homomorphically homomorphic encryption, the holy grail of cryptography almost, and quantum secure computing and even quantum cryptography. You the idea of, you've had a one-time pad, right, where you can send an encrypted message once, but have you ever heard of a one-time computation? The idea is I can give you a piece of software and you can run it once and only once.
+
+Zac 
+It's wild, it requires quantum computers, so it's not practical, but you know, like the flood gets opened and also it became a lot more lucrative to be a cryptographer. I was very, very lucky to have Jens Groth as effectively my mentor when I was learning cryptography in 2018. He was based at UCL. He is the OG pretty much of ZK Snarks, you but you cannot get anybody who's more legit than Jens Groth. His department at UCL was basically
+
+hollowed out by the private sector because all all it here and all his colleagues they've basically given job offers where there was a few more zeros in the compensation package that they were getting in academia and well you know that's that. And certainly like that like people like me are getting into cryptography. I didn't get into cryptography because I have an academic interest in it. I got into it because it solved a problem that I had. You know I'm an engineer first and foremost.
+
+And so, yes, basically there is now an explosion of the number of people getting into and learning about cryptography because it's become very, very useful, very, quickly.
+
+Citizen Web3 
+Very, very useful, very quickly. That's a good, good, good. I mean, it became applicable. I guess that's the logical explanation, but it's a very good one. I have a private question, which I want to talk a little bit privacy while we still have like some time left, of course, in general. But before we talk about privacy, I have a private question, which I cannot help to ask because it relates a lot to me. I've been in this space for a while and I've been a founder for like five years or something, but I've worked for much longer in this space.
+
+Zac 
+Sorry.
+
+Zac 
+Totally.
+
+Citizen Web3
+You wrote a very interesting post about ADHD. And I want to ask you, how do you as a founder, because the conversation is not about me, but about, because I know how difficult it's been for me with this condition and other similar conditions, not just to try to stay focused or not to burn out or to keep on just getting out of bed every day sometimes and trying to, know, yeah, sometimes the opposite.
+
+And sometimes it's exactly that. not about me, about you. How do you navigate considering your role that is growing today and Aztec's role that is growing today with this, with ADHD and how do you make it work for you?
+
+Zac
+Well, I think that's a very old post, isn't it? It's been a while since I've talked about it. Yeah, it's very challenging. No, I'm happy to, happy to. It's very challenging. When it comes to entrepreneurship, issues very much both the strength and the curse. I think in many walks of life, it is just straight up a curse, but there's a lot of benefits to having it in the world of entrepreneurship. I guess the general...
+
+Citizen Web3 
+You don't have to if you don't want to.
+
+Zac 
+like condensed summary of it is play to your strengths, ruthlessly play to your strengths. If someone has ADHD, particularly if they're late diagnosed, then they're likely going to have a lot of image issues and self-confidence issues around executive function, around things like organization, coordination, communication, like not getting distracted, keeping focused. And...
+
+there's an intrinsic desire to basically focus time on improving these aspects of who you are, being a better operator, for example. And whilst that's important to some extent, if you spend a lot of your time focusing on the things that you're bad at, you're not spending any time focusing on things you're good at. And you know the end result is you'll be less bad at things that you're naturally bad at.
+
+which is not a great place to be in a very competitive industry. So I've been very fortunate in my experience with Aztec, which is basically finding a really good support network and finding really good people who can fill in for your weaknesses. I am the CEO, yes, but a lot of the actual responsibility of the CEO are handled by my co-founder Joe or our CEO Lisa. And I'm very upfront about that and I'm very...
+
+publicly happy to share that. And that gives me time to focus on some of my core strengths. Like I still do a little bit of cryptography now and then. I do a lot of protocol architecture, software architecture. and you know, just little things like, you know, we needed a really advanced cryptography library in Noir. And I'm like, well, fuck it, I'll do it because I'm like, I know how to do this to the standards that require. And then, and so,
+
+Yeah, play to your strengths. Find people to cover for your weaknesses and be very open about it so that they know what it's like going in. But yeah, it is always a little challenging. The motivational framework for some of the lady HD, it's about interest, creativity, novelty, urgency. Whether something's important or not doesn't really register that much.
+
+Zac 
+unfortunately. And so try to make sure you're doing things that either interest you, are creative, are novel or are urgent. And luckily, as a CEO, as an entrepreneur, as a founder, urgent is always present. that's never, I've never found that to be too much of a challenge. So I know I've given a long answer, but one other thing about it is, in terms of the strengths of ADHD, when I became a cryptographer,
+
+The ability to heighten focus was extremely valuable. when one has ADHD, right, like it's a deficiency in neurotransmitters in one's brain. Things like dopamine serotonin. So your brain is always basically searching for stimulation to increase the amount of these neurotransmitters, which is why people with ADHD get so addicted to things. get to substances, they get addicted to people, can, or in my case,
+
+Back in the day, addicted to video games. I became addicted to cryptography because I found it so novel and so interesting. You know I would go for days where I would get up in the morning and I would literally just immediately start doing research in bed. And then four hours later, I'd realize I haven't drunk anything and I need to get a glass of water. Or I'd be working in the office till three in the morning, like trying to understand weird niche things about Ezekiel protocol. And at the time, that's what was needed because...
+
+At the time, learning material for cryptography was really not there. As in, do I become a cryptographer? I did it the hard way. I read cryptographic papers and I tried to extract a teeny bit of information from them. I treated them as like a treasure hunt where if I didn't understand a paper, I would try to, like, if the paper created a statement, set a statement that I'm like, well, why is that true? I would look at the, there would come out a reference. And so I look at the reference. And if I couldn't understand the reference, I do the same process. And I look at the statement and I go back to the reference and basically back to the roots until I can.
+
+extract some information and this took, this is a challenging way of learning cryptography. I wouldn't do it today because there's much better ways, but back then, not really. Particularly ZKSnarks. And I needed to be able to hyper-focus to do that. I needed that insane, intense, outrageous level of focus and attention to be able to pull that off. So I don't think I would be where I am today without ADHD.
+
+Citizen Web3 
+First of all, thank you for answering in an extensive, for answering and secondly, in such an extensive way, I want to add to what you said, because you said a very useful, understandable, clear thing, surround yourself by people who fulfill your weaknesses. I want to add to whoever is listening, don't do the other way around. If you're a founder with ADHD,
+
+and you get addicted to people. Don't surround yourself by people for ADHD because I've done this before. And instead of looking for people who can fulfill my weaknesses like what you say, Zac, I think I've already several times experienced being addicted to people and it's cool to have people like yourself around you, but when everybody's a little bit different, sometimes things don't happen. So I definitely want to support what you say there. And yeah, absolutely.
+
+Um, uh, Bill, want to talk a little bit about privacy in the little time that we have left and, know, um, there is a lot to be said about it. One, uh, what comes to mind is, uh, for me, at least personally subjectively, one of the most interesting conversations. mean, we are kind of focused on privacy as a project and as a podcast, uh, as a validator, we, we, we, but one of the most interesting conversations I think I had about privacy was with, um, Chris from Nomada.
+
+Chris goes and you know what one of the most interesting points he pointed out to me, which was a revelation in a way, which I want to ask you about was semantics. And he made a really interesting point that privacy, one of the biggest reasons we have such a big deal with privacy is semantics. You know, we don't differentiate today between privacy, somebody peeking through my window and me having, I don't know, sex with my spouse or
+
+Financial privacy, for example, for us, it's just privacy, right? I want to ask you, how do you, Zach, Aztec, how do you guys look at privacy and semantics? Is it important, as Chris says, or is there any other really important values to privacy that could shake it as much as semantics can?
+
+Zac 
+Yeah, I do agree with him completely. Semantics is extremely important. And I feel like it's almost like the English language is somewhat deficient here in its vocabulary because there's a lack of differentiation between those types of privacy. Am I a baddie who wants to hide my actions from people I'm trying to manipulate or cheat? Or do I just want the world to not know about things like how much money I have and what I'm spending my money on?
+
+And so a bit of a tangent, but yeah, I feel like we're missing some actual words here. Can I give an example? Sorry, a bit of a tangent, but you know the word beautiful? A lot of languages don't really have a word which maps one-on-one with beautiful. And it's an invented word from the 1400s, because when a man called William Tyndale was trying to translate the Bible into English, he found that there were some Hebrew words he couldn't really map. So he took the French bow, which is good-looking, he said, full of
+
+full of bow, bowty full. Anyway, so yes, semantics are important. And for example, with Aztecs, one of the key things that we want to control our network is that we want users to be able to have comfort and confidence that they are not, through participating in our network, they're not assisting bad actors. For example, by adding to anonymity sets. Privacy pools does a good job of this, for example.
+
+With Aztec, we want to take it a lot further because we have programmable privacy, which means as an application developer, you can program in any compliance checks that you need to satisfy that need from your users. And I do think it's a need, to be honest. For most people, at least. One example is ZK Passport, where you can use digital passport features to prove your citizenship. So you can prove you're not on a sanctions list, for example. Or...
+
+the coin or being able to trust like prove in CK, you know, the coin, Coinbase ID protocol, for example, that they've just announced. And so, yeah, for me, for me, privacy is it's, it's a, it's a lot of things. But the main ones that I think are really important in a blockchain context are credentials and assets, basically being able to hire like to hide who you are on chain, but selectively disclose it to smart contracts and other
+
+Zac
+other people if you want to. And also being able to create programmable assets that touch the real world and talk to real world identities. and in a way that you can put all that information on chain and you can can mediate these assets and trust this permission of systems, but still be able to program at a level of compliance.
+
+Citizen Web3 
+Talking about words. think Shakespeare is famously introduced into English quite a lot of fucking words just because things didn't rhyme with each other. yeah, like bubble, bubble, right? mean, the word like as in bubble, the water bubble, right? Hubble. But anyways, yeah, sorry about to go off as well. But you know, privacy, I've had recently on a couple of more, well, recently in the past half a year, a couple of more...
+
+Zac 
+Yep.
+
+Yeah,
+
+Citizen Web3
+guests that we went deep into privacy from Monero, from Dune Analytics. the more, how to say the person that I talk to, the more my guest is into privacy in Web3, the more their belief is, even if they are working on the good side in quotations, when I say good side, mean on people who like yourself, who try to solve privacy.
+
+The more they tend to agree that we live in a time in terms of blockchain and surveillance machine time. Like where Bitcoin is a big surveillance machine and the guy from June Analytics, know, that was talking to, Boxer, was like, dude, for me, two, three clicks and I know anything about a person. Like literally, okay, over exaggeration, deleted, you know, but still, you know, then we have this narrative that in 2027 in Europe, they will outbound all private transactions and all private crypto.
+
+Um, yeah, a lot of things, a lot of bullshit may be there, but you know, between the lines, there is still a lot of fear and yeah. How do you deal with that fear? Yeah How, why are you not afraid to, to, to build a privacy project? And what do you think will happen? Well, not fuck what will happen. Why are you not afraid?
+
+Zac 
+Why am I not afraid. guess it's a lot of it is simple bloody mindedness. I'm not doing anything bad. I have my own moral framework, which I think is very good, and I want to increase people's autonomy and agency. I want to make them less reliant on third parties. That's not a bad thing. you know I feel like even though today things are going in a
+
+strange direction. I feel like the arc of history always tends towards justice in the long term, although there are a of casualties along the way. And I feel like
+
+Zac 
+Once people see the real value that this technology can provide, opinions will start to change. Right now it's very easy to make privacy tech seem like some bad thing because the use cases are pretty underdeveloped. I believe that's when in the Alexa Pursuit trial, the judge claimed that there was no viable use for blockchain privacy other than for criminals, which is absolute bullshit. Just talk to Vitalik, know, and like...
+
+every time he does a transaction, there's like a thousand people who are following it and there's big clacks and alerts going on. Or talk to the the the Azure CEO who got kidnapped and mutilated by his kidnappers. Yeah, there's no need for blockchain privacy, absolute bullshit. also, know, we are, you know, we're doing things by the book. So I don't I don't feel any particular need to be afraid.
+
+I might feel a little differently if I was a US citizen in the Biden administration, feel differently. Or if I was an EU citizen, to be honest, I'd feel a little bit worried. But I'm not. I'm British. And for now at least, that's not a bad place to be when it comes to blockchain privacy. But also, I just think it's fundamentally necessary. You were right when you were saying that we're creating surveillance machines. We're creating...
+
+Citizen Web3 
+Yeah
+
+Zac 
+the most perfect financial surveillance for Serbia that one could have dreamed of. All of the insane totalitarian dictators over the years would have killed for a technology like blockchain, where they can force all their citizens to transact on this ledger, where they can see everything. Because money is autonomy, it's agency. You can affect the world in ways you want it to be affected by, by spending money. You can get people to do things you want to do.
+
+that they don't want to do by giving them money. And making your financial information and data public is, a very chilling effect on what people will spend their money on and what they will do. You know, I might not want people to know that I'm like, like some of my particular like nerdy hobbies, you know, and certainly there's plenty of people in the world where, you know, they do things that are considered like social taboos, but are completely fine and harmless.
+
+that they don't want to share in the world. I don't want people to know what my mortgage payments are. I don't want people to, like, people don't want, if you used an ATM and that ATM screamed out your bank balance to everyone on the street, would you use it or would you find another ATM? So, okay, here's a prediction I have. One I hope will not come to pass, but if we cannot, and by we I mean the Web3, cannot crack the privacy problem and blockchains remain transparent and they,
+
+gain mainstream adoption, we are going to create a surveillance dystopia and people in that in that timeline will look back at us today and they'll look back at all of the speeches and presentations and talks on YouTube given by crypto founders talking about this utopian world they're trying to build and they will think that they are all the most like they think that we are a bunch of self-centered, greedy, amoral, lying, cheating bastards like the biggest pack of thieves and liars forever have existed because we would have created a world which is completely opposite to the rhetoric.
+
+Yeah, I mean, I just don't see that being enough.
+
+Citizen Web3 
+pretty sure that you're, I would even say you're underestimating of what they would think of us and how that world would look in terms of this topic, if it is gonna be like that. I think the only reason I see myself, sorry to interrupt, on, on, go on, please, please, go on,
+
+Zac
+I'm just going to say that I just see it as non-negotiable that blockchains need privacy. We just have to make it happen and it's hard. But you know if it was a fundamental impossibility for blockchains to have privacy in them, I would walk away. I'd find something else to do because there's no good that can come of it, in my opinion, long term, without privacy.
+
+Citizen Web3 
+Absolutely. think that the only reason why I think a lot of at least in my circle of communication, I'm not talking about in work, I'm talking about my closer circle of communication, of friends of people who are into crypto for a long time, and I'm talking about more than eight, 10 years. Most of them are here exactly to disprove what you say, not to let that happen because they understand
+
+Like myself like you that hey, I've been a part of this for over fucking 10 years if I let that happen What the hell are people like what what what's what's history gonna put down that as you know, like so yeah, absolutely And Zac, let me quickly I have a million other questions. But yeah, sorry. Let me quick exactly Jumbly, yeah quickly jump into the blitz
+
+Zac 
+way. Yeah, I didn't know how long you have, but I'm happy to run over a little bit if that would be useful.
+
+Citizen Web3 
+yes, yes, yes, if you can, if you can. have a few more questions and then fuck the blitz. I have a few couple of more questions and then I'll do that. okay, then, you know, what is then in your opinion, because I had another big question about privacy, at least, well, not one, have many, but what's missing then? What is the gap that AdStack, for example, cannot fulfill? Let's say AdStack introduces the software layer, right? So here comes the software layer. What would be the remaining gap?
+
+for privacy that would still need to be completed for us to say, we're done.
+
+Zac 
+Hmm.
+
+Zac 
+Yeah, there's a couple of things. mean, once Aztec goes live, that's only part of the solution. You know Aztec is always going to be improving over time. We're going to need a lot more throughput than we'll have at mainnet. We'll want to make our provers faster. We'll want to make it easier to develop. all of that. But then in terms of fundamentals, we need network-level privacy as well. Because yes, Aztec can enable fully enter and encrypted blockchain transactions, but getting that information to the blockchain is still...
+
+leaks like a sieve at the moment. and yeah, so that's going to be, that's a problem. Like we know very how to solve it, as in we the community, but with things like mixedness, it's executing on that is challenging. And you know until now, there's really been no point because who cares about network privacy if you don't have privacy on chain. So it's going to become very important very, very quickly.
+
+one last thing. Sorry. This one is a bit not technical. It's not even very cyberpunk at all. But I think that one of the fundamental things that we're going to need is in multiple first world countries that are respected, we're going to need legal precedents that establish that you can, that like digital ownership, ownership of a digital asset on chain can.
+
+Citizen Web3 
+I've seen already... Please, please, please do, please do, please do, Zach. No, no, no, please do.
+
+Zac (54:48.866)
+confer ownership rights to physical property in the real world. Right now that's not, I mean, it's not like, the president's not been said, you there's plenty of things with DocuSign and other web two technologies, which mean that, yes, this will happen eventually, but right now it's not really being fully fully tested. Like to give an example, if you want to do under-collateralized lending on chain backed by real world assets, you know, well, then you're gonna need to reclaim those assets if you get liquidated, how is that gonna happen? Well,
+
+you need to use a traditional legal system which needs to respect what happens on chain. That's a very tricky problem to solve.
+
+Citizen Web3 
+That is a super tricky problem. That's not a very tricky problem. I would say that's the trickiest problem in my opinion, at least. I don't know what you think about. I don't even know where we were to begin to solve this because today, let alone the legal system, right? I know I'm going to like pivot what you said a little bit, but to me, the logic is there. And I'm sorry that it's a of broken logic, but you know, you're talking about the difficulty of the legal system, the trickster of the legal system.
+
+To me, before looking at that, I would like to understand how do we make people in this industry who are already here, who are already working on it, accept that values, because you were talking about alternatives many times about those things are important, that there is no need for, you know, to try and put your pinnacolada on the blockchain or whatever it is you're trying to do. And there is, you know a need to sort of not to be using, because the moment
+
+Cause what I'm afraid of is the moment that privacy, I'm not afraid of that. Actually, I'm not afraid of it. I'm going to delete that sentence. But what I think might happen is when privacy, you know, full on things like aztec will start to work and more and more and more, we will see those guys with the pinnacoladas and with Long Island icetees are back. We will see more of them. We will see, we will just, you know, so, so how do we as an industry kind of help to educate not just ourselves, but I guess the next generation.
+
+that comes to use not just Web 3, but Web 2 and will have to, like you say, you know not to do a very cypherpunk thing, but work on the legal system. So how do we raise that next generation you know to think like what we are talking about right now?
+
+Zac 
+Well, here's a challenge, isn't it? Because it's all about incentives. And I hate to be a pessimist, but I feel like if somebody's coming into this ecosystem who is you know just wants to make a quick buck, they don't care about like hurting people on the way or dumping on retail, they just want to shill and get out. I don't think you're ever going to educate them.
+
+to care about things like privacy technology and to build meaningful applications because that's not why they're here. And the downside of a permissionless system is well, they're going to be there, you can't kick them out. In my opinion, the challenge is to increase the value proposition of blockchain. And I think that privacy does that in a compelling way so that there's a lot more viable applications and products and services that can be built, which basically means you have a lot more people coming in to do interesting things.
+
+and that the more kind of scammy side of blockchain just becomes a much smaller fraction of the whole, in the same way that there's lots of scammy stuff on the internet. But we wouldn't say, let's delete the internet. you know It's full of scammers. It's like, yeah, it's full of scammers, but it's also essential for human existence at this point. And I see blockchain going the same way.
+
+Citizen Web3 
+OK, one kind of question that is still a little bit about privacy, but I wanted to ask that. It's more about Aztec, I guess, than privacy. Because privacy doesn't equal decentralization. And a lot of people, for some reason, they put it together. But it's got nothing to do with one. In fact, you have to sacrifice one to have another. How will Aztec try to solve that? Because you guys are going to have to build
+
+Zac 
+Mm-hmm.
+
+Citizen Web3 
+I'll have a, sorry, you guys are gonna have to do a lot of work on building a community because tribalism is still something, you know, crazy in our space. yeah, how, how do you, how does Aztec work on this increasing decentralization and not only maybe on the protocol level, but on any possible level that we can think about.
+
+Zac 
+Yeah. Well, it's very simple for us to be honest. Whilst privacy is not the same as decentralization, they are intuitively linked because you cannot really have a fully feature-rich, programmable privacy network, in my opinion, without decentralization because you cannot have a central entity which controls all the traffic going through that network because if you do, they need to be able to see what's going on.
+
+and therefore they will be backdoors. This is just a fundamental reality of situation. And so for us, we've always seen it as important to be decentralized. We are testnet that we launched last week is decentralized. When we launched mainnet, it will be decentralized. It's partly why it's taking us so long, because it's very hard to combine these two technologies. But for us, you know it's never been negotiable.
+
+And so, yeah, I guess I see building a community as being slightly separate to this. Obviously we want a community that holds to our values. And certainly, like there's two types of community, right? There's community of developers and there's community of users. And the developer community is, we're creating, is really quite...
+
+In my opinion, I'm very biased. I think it's very impressive and very wholesome. People come to Aztec because they want to do something, they want to build an application that needs privacy. You know If you don't need privacy, really there's not much use going to Aztec because then it's just like any other blockchain but it's a little bit slower than other layer 2s. And they're building really amazing stuff. They're building things like peer-to-peer on and offboarding.
+
+where I give you fiat, you give me crypto, and it's all trustless, using things like the Open Banking API, which is a strange piece of regulation, which is actually useful for us. Then, you know, there's things like ZQ Passport, being able to prove your identity. There's people creating, you know, like, like fully on-chain security tokens. There's people doing things like, like anonymous whistleblowing on-chain.
+
+Zac 
+where you can prove you're part of an organization without leaking any other information. And So the community, it's intrinsically aligned with us because you only come here if you share our values, to be honest. And you know I think that's this, you know when it comes to our community of users, it's still very early days, we just launched a testnet, but you know we held our first town hall yesterday. It was very, it was...
+
+unusually wholesome for Web3. I think, again, people know what we're about. you know We've been around for eight years. I think you don't follow along with what Aztec's if you don't care about privacy. because you know people in the past know you might be waiting a while for Aztec.
+
+just because what we're doing is very hard. so it's, yeah, kind of the instant gratification crowd. It's not not our game.
+
+Citizen Web3
+That's true, by the way, because I personally started to follow Aztec about a year ago because I'm obsessed with privacy. You know We actually have launched as well, Validator, so we are participating in the test. Of course, we must. Like I said, we are privacy-focused, so for us, it's very important to to to be there. I have another last question for you before we definitely jump into the quiz because then I will ask you another million questions.
+
+Zac
+Nice, thank you, thank you.
+
+Citizen Web3 
+Privacy and decentralization. So one last last last question. I promise. Because we have the software layer, right? And let's say the software layer is private, right? And let's say our blockchains are, you know, I was going to try and think of a word privacy and full private.
+
+Privacy, full of privacy. That doesn't work for me. No, I cannot invent to work. But okay, full of privacy and everything is great and the transactions are shielded and everybody's happy. But everybody's hosted in Hetzner or AWS. I mean, that's still, I guess, not very private, right? Because I mean, privacy has nothing to do with this, guess, on one hand, right? On the other hand, I don't know. What do you think about the whole problem in blockchains that...
+
+currently they are centralized to several data centers because to me, that is a privacy related question. But yeah, what do you think?
+
+Zac 
+So I slightly disagree on the framing. I think it's important, but I don't think it's important for privacy sake. I think it's important for censorship resistance. So Aztec nodes, for example, they don't leak any information. If I'm sending a private transaction, the Aztec node doesn't know what I'm doing. It's fully encrypted. All you get are zero-nodes proofs. And so in theory, like where the nodes are, it doesn't matter from a privacy perspective. It matters from a censorship resistance perspective because
+
+if every node is on AWS and AWS changes policies and they're like, actually, no, we don't want like no more nodes, then well, what do you do? You're dead. And you now for that reason, I think it's very important that you shouldn't need a data center to run a node. And that's currently the case with Aztec. Well, because we're just in testnet, it just released our technology, our software is early stage. So you need a chunky amount of hardware to run it, but you don't.
+
+but you can get that hardware outside of a data center, like to run a validator. And we always we basically see ourselves very similar to the Ethereum on that, where we want people to be able to run nodes, run validators outside of data centers, and we're to make the trade-offs to make that a reality. So that will affect things like the network throughput. And the longer-term plan is to do like,
+
+really, really meaningful scaling, like thousands of GPS through application-specific robots. And make sure the L2 is always sensitive resistant.
+
+Citizen Web3 
+Thank you for that. think it's important and a lot of projects kind of delete the censorship resistance part and then they realize that, well, you know, there was a glitch in Heitzner and my network went down. What happened? okay. Jumping to the blitz, three questions not related to blockchain. They're to be fun. I promise you, you don't have to answer them in the blitzy way. I call it the blitz, but yeah. So, first one, Zac, please give me either a song or a movie or a book that positively influences your work.
+
+Zac 
+song a movie or a book that influences my work
+
+Citizen Web3
+positively.
+
+Zac
+Oh good lord There's many ways I could, just one.
+
+Okay, I'm going to, I could get the intellectual answer and give you something fancy, but I'm not. going to give you the, I'm going to give you the extremely autistic nerd geek answer, which is The Lord of the Rings. Lord of the Rings. I love that. I love that. I love that book. I love it because it's, I think only, only someone who's been through the absolute horrors of something like World War I could write a book which is so...
+
+Citizen Web3 
+Please do. Yes. Yes, I love it.
+
+Zac
+ridiculously kind of like optimistic in its understanding perspective on the human condition and the human spirit where how do I put this?
+
+know, at its core, it's a, I know talking himself hated allegory, but I can't see it as anything but like, like, heavily influenced by, I guess you could say Christian allegory, Christian allegories, that basically there's this kind of fundamental goodness in the world, and that if people do, and if good people do good things, it might cost a lot, but basically it'll always triumph over evil, you know, and it is
+
+Everything today, all on media, it's always full of very, like everything has to be gritty, it has to be realistic. I have enough of that in my day-to-day life. The lord of the rings, you you have this existential threat and this evil and a bunch of people rally together and they destroy it. And it's very, I don't know, it's very simple in terms of that, but I find it extremely wholesome and, you know, ties into the whole, you can just do things, you know. It's still possible in this day and age to affect good outcomes.
+
+I think and I'm not saying I particularly identify with any character in Lord of the Rings or anything like that because that's way too arrogant but just I don't know just that that relatively simplistic optimism just I find I find that very motivating.
+
+Citizen Web3 
+Ha
+
+Citizen Web3
+I can imagine somebody identifying themselves with Tom Bombadil. would be a bit... yeah, imagine, right? The strongest character in Middle-earth. But no, but sorry, we're gonna go all geeky here.
+
+Zac 
+Well, mean, sometimes birds do want to nest in my hair. Yeah, but if okay, feel I would. Yeah, the the if I wasn't give like a proper book, it would be the dream machine. Basically talking about the history of computing from the 19. Fair enough. All right. All right. All right.
+
+Citizen Web3 
+Man, talking was great. Talking was great. Don't do that, Zac. Don't do that. Talking was a notion answer. I'm sorry. It was a great answer. Come on. No, no, no, no, no. We're not going to cut it out, but it was a great answer. I'm sorry. Okay, second question. Please share with us something motivational that you can share that keeps Zac working eight years on privacy.
+
+Citizen Web3 
+Staying optimistic and believing in the end goal.
+
+Zac 
+Okay, I can share something. This is very personal to me.
+
+In 2002, my father passed away from burn cancer. And when I was...that's it I don't want to get into that. That was a very challenging episode of life. But basically, when he passed and I was going through some of his effects, I found the plump paper that I'd written.
+
+and I'd found like an annotated printout that he My dad was a graphic designer. not a mathematical bone in his body. Like cryptography was many, many, many levels, like way above him, but he was still like methodically going through my paper trying to understand it because he was proud of me and he cared about what I did and he wanted to understand.
+
+like what I did. I spent plenty of time talking to him about it, but he wanted to really understand to the point of going through my academic cryptographic pictures as a 70-year-old graphic designer. That thought really...
+
+Zac
+It keeps me going the fact that he cared that much.
+
+Citizen Web3 
+That's thank you for sharing that man. Thank you. That is very, very, very beautiful. I don't as somebody who doesn't have a father, especially, and never had a father figure in their life, I can totally imagine. Like I have a lot of goosebumps going on my skin now. So very beautiful answer. Thank you, OK, last one. Last one to take us out of the. Thank you. Thank you. Thank you for saying that. Last one.
+
+Citizen Web3 
+And I promise, this is going to be a bit of a weird one. So a real person, it doesn't matter if they're, or could be an imaginary personage. Could be a cartoon character, a movie character, could be a family member. It doesn't matter. Could be somebody from centuries ago. And not a guru, because I don't believe in gurus. I don't think gurus are a thing. I don't believe in idols. So not a guru, not an idol, but the personage.
+
+You kind of just talked about your father, that's a different thing, I think. But when you're stuck with work, you think about that personage and it helps you to kind of move through, help the wheels to spin again in work, of course.
+
+Zac 
+What do I, who do I think of when I'm stuck?
+
+So I really think of people, to be honest, but I think if I did, it would be, there's two, two people, if I can do that. Because I'm a physicist, you know, by background, a lot of the figures that inspired me, particularly in the past, were physicists. And so I often think of Richard Feynman. Feynman was a genius and an absolute titan of his time, but...
+
+And he made some of the most meaningful contributions to particle physics of anybody. But he's an interesting character. He's a bit of a joker. you know He likes to mess around. He's got a lot of hobbies. He doesn't fit the somewhat autistic head in the clouds archetype that most of his peers did. And he didn't have reds of his peers that high in IQ. He was a genius, but he really sharpen the IQ test.
+
+his knowledge, his wisdom, his skill, was a little bit more practically oriented. you know He was better at pattern matching than his peers, but he wasn't really very good as a mathematician, relative to his peers, way better than me, obviously. And I find that a little bit motivating. you know he was I see him as a bit of a fish out of water. you know he wasn't When it came to raw capabilities, I don't think he was particularly oppressive relative to his peers, yet he was...in
+
+terms of outcomes he was the most impressive of all and I find that inspirational. I also find in another rather silly way is it I think let me just I just want to look up the name
+
+Citizen Web3 
+check check check
+
+Zac
+Hang on a minute.
+
+Citizen Web3 
+While you're looking up, let me fill in the silence a little bit. So for everybody who is listening, show notes, guys. Check the show notes. All the people we mentioned, all the projects we mentioned, everything me and Zac mentioned is under there linked. Click it. Have a research. Have a look what we're talking about.
+
+Zac 
+Yeah, okay. I'm going to give another example of somebody who I might be throwing a little bit shade on this character. So I don't know if it's distant relatives are listening, I apologize. But there's a physicist called Louis de Broglie. Louis de Broglie, I can't pronounce his name, who made a major breakthrough in quantum mechanics in the 1920s, which is basically, he propositioned that matter can act like a wave, matter can have a wavelength. And
+
+Zac
+All he did was take... one second, one second...
+
+Citizen Web3 
+I would talk about the screen experiment with the light.
+
+Zac 
+Basically, no, he didn't do the experiment. But basically, let me just try and, yeah, so, bleh, sorry. Okay, Louis de Breguet. Why do I find him inspirational? Because he was very much a case of right person, right place, right time. I think relative, again, relative is peers. I don't think he was particularly impressive. But as a,
+
+Citizen Web3 
+Go take your time man, take a look.
+
+Zac 
+PhD students, he made one of his groundbreaking discoveries in particle physics, he took, he saw an equation, the Planck-Einstein equation that I think it was Planck that was really, well, Planck-Einstein basically equals Hv, like the energy, relating energy and momentum. People were using that to try and understand light and the properties of light. And he's like, hang on, because E equals MC squared, why didn't we just apply this equation to matter instead of light, know, and
+
+And if you do, why then matter has a wavelength and maybe we can test that like it was he didn't it didn't require any like mathematical genius or Any like incredible piercing insight it was just kind of like just so much new stuff was being discovered at the time he's like hey, what if we just smash these two equations together like maybe that means something and it did and and and and because of that he made a major discovery so that kind of motivates me and You know that even
+
+even people who are not anywhere near like their their peers can still, if you make the right connections at the right time, can still do really impressive things.
+
+Citizen Web3 
+Zach, I want to thank you on finishing on that note, by the way, because I think it's a very optimistic note compared to my little pessimistic question sometimes. So Zach, thank you very much. But to find the time to answer the questions, please don't hang up just yet. This is going to be a goodbye just for the listener, for everybody else. Thank you for tuning in. And yeah, see you next week, guys.
+
+Zac 
+Thanks for having me on. It's been a pleasure.
+
+Citizen Web3
+Bye Zac.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

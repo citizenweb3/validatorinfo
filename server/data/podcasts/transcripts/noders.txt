@@ -1,0 +1,472 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/noders
+
+Episode name:
+Curiosity, Testents Crypto Nomads and with Ioannis Noders
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen WebTree Podcast. Today I have Yanis, the founder of the Nautilus project with me. Yanis, man, hi, welcome to the show.
+
+Iannis
+Hey, hey, hey, hi. Thanks for having me.
+
+Citizen Web3 
+I'm glad, man. I'm glad to have yet another colleague validator on the show. I'm excited to ask you a lot of questions. You guys do a lot of different things, but before we jump into it, you know, the typical boring traditional question, please introduce yourself, not just Yanni's founder of Noders. Tell us to the audience everything you do in Web3. How did you get to Web3? How did your life become Web3? How did you get to this life? So yeah, tell me the story, man.
+
+Iannis 
+Okay, sure. So yeah, as you mentioned, my name is Yanis. So I'm half Greek. So I'm 41 years old. I have several degrees. I graduated from Swiss university with a kind of honors, which was kind of nice. I have like an MBA diploma, which is to be honest, quite useless thing. And basically everything that I have achieved in my life was just because I love, you know...
+
+technology, I love innovation and I actually love learning stuff. So I'm pretty much what is called a lifelong learner. So yeah, I started this album myself. I'm a really curious person. I would say that I could say that actually, pretty much every half a year, I sort of dive deep in a new profession.
+
+So my life has been quite interesting. I lived in five different countries. Currently I live in Bali since four years. Yeah, so I've done like lots of projects around different industries in different countries with different budgets ranging from zero to half a million. Quite a few of them were definitely were successful. Some were kind of total failures and so forth. So entrepreneurial.
+
+path is well, definitely tricky sometimes, but it has never been boring. All the time has been like really, really fun. So yeah, about when I came to crypto, so well, I started investing in different assets pretty much approximately well, 10 years ago, I would say, maybe even 11. So at some points I had like, you know, a portfolio, I was investing in some private companies in US, you know, like SpaceX and so on and so forth.
+
+I was also buying different shares and some equities to different companies. And at some point, friends of mine told me about Bitcoin. I bought, well, I haven't actually looked deep into it, but my friends who I really trust well, I kind of suggested like heavily. So I just bought like maybe a couple of Bitcoins in summer 2017. And in a few weeks or a month, like it made like fucking two Xs, two Xs. I was like so surprised. It definitely drew my attention. So I sat down and...
+
+Iannis 
+I started, you know, read the white paper of Bitcoin, then I moved, you know, to Ethereum, then I started actually digesting all the information I could find about crypto in general. I was so impressed with the technology and I called, you know, I came because of money, but I stayed because the technology is really kind of, it's just amazing. I really, I could understand quite fast that it really solved some fundamental problems of societies. And actually in half a year, I made a shitload of money.
+
+end of 2017 was a woof. It was quite a fun ride. Back then, obviously, I had lots of illusions that Bitcoin is going to save the world, it's going to change everything, and it's going to go to 1 million in a half a year or something. So I earned lots of money in 2017. I lost almost all of it in 2018, which was not so fun, but I learned a lot.
+
+But I already have made up my mind and I definitely wanted to do something in this space. So I was kind of making my first attempt to build something, you know, to build a community, to build some products. But obviously, you know, building something in crypto in 2018 without funding was well, quite tricky. So I kept on looking into the space, studying it and getting ready for the next bull run. I was totally sure that, you know, it would definitely come at some point. So I was kind of, you know, waiting for the right time.
+
+Time to get back to the market. And well, I entered the market again in 2020 in March when everything crashed. So I was buying Bitcoin at around like, you know, 4K and Ethereum at $100, which was like a super nice investment decision of mine. So proud of that. Well, yeah, then I was, well, I guess I tried in crypto, like, you know, we did lots of stuff.
+
+So, you know, DeFi, gaming, DAOs, NFTs, I mean, you name it, I tried it definitely. And I couldn't make up my mind, you know, what to do in crypto, because like, I mean, it's definitely one of the most rapidly changing environments. And well, I do have, you know, several degrees, but I am not a technician. So I couldn't, you know, write code and, you know, come up with a kind of genius idea with a blockchain that can process, you know, millions of billions of transactions. So I was looking at, you know, from the point of view of an entrepreneur.
+
+Iannis 
+And at some point I just found it was, I think, 2021, like in spring, I just discovered for myself staking. It's kind of your process, you kind of stake your money and you kind of, you can get some APR or APY, you know, some yield, you know, on your portfolio. I got immediately, you know, totally impressed. And I realized that this is actually the thing I wanted to do because like, you know, staking as a product, basically what it does is that...
+
+It either increases the profits and the amount of money that investors earn or it just decreases the amount of money they lose. So it's really an echo project in my mind in crypto. And obviously, validators, they really help the industry in general, which actually I wanted really to do. I wanted to promote the whole blockchain technology and make it really accessible to as many people as possible around the globe.
+
+Again, as I mentioned before, I do think I'm kind of a firm believer that blockchain can really solve problems of societies that at least before this technology has not been solved or at least has not been solved so efficiently. So, yeah, I found out about validator nodes. I also learned how this whole thing work. I found out that there are test nets, you can participate in those. You can get nice drops sometimes. But the whole idea was that I immediately realized that I want to build a staking platform.
+
+So, but because I'm not a developer, I have no idea how to run notes. So I just found a guy who could do that. I paid him to teach me. So it took me maybe a couple of months to just get around. And so I had like already 15 notes installed and it was really fun and nice, but I realized that the whole process of installing a note is not so difficult. It's quite fast for the most part, but there is lots of work that comes along with it. You have to sit in the Discord, you have to do the updates, you have to...
+
+say, bid forms, you have to contribute, you have to do lots of stuff. So I realized immediately that I do need a team, but there is no such profession as node runners. And definitely with testnets, there is an issue with the security. So if let's say you get some points, at least that's what my thoughts back then. So if you get some kind of big drops for some nodes, obviously, I mean, the guy who you could be paying some salary of a few K, like three, five, 10 K, whatever.
+
+Iannis 
+If let's say he has an access to your wallet that has hundreds of thousands or millions of dollars, well, it's kind of a bit tricky. So I realized quite fast that I do need people that I can trust. So I just called all the IT guys I knew at that point and I invited them to a school that I launched. So basically I made a course and I taught them how to run nodes and everything that comes along with that. So out of that course, I just hired the people. So I taught all of them.
+
+the best ones I just hired in my team. And so we started the journey, which has been well, quite, quite, quite, quite, quite, quite funny. It is stressful to be honest, but we managed to survive through bear markets and well, we have become like some sort of at least intermediate validator and definitely aiming to go higher, produce more value for the ecosystem, general ecosystem of blockchains and crypto space.
+
+So, yeah, then half a year ago, half a year after I launched, you know, Noders, I also realized that one of the drivers of really one of the drivers that will one of the mechanics that will drive billions of people, you know, come to crypto is gaming. And when I was a student, you know, kind of really lots of years ago, I was a professional gamer. So I was totally amazing with the play to your own mechanics. And I do believe that's.
+
+Blockchain as technology again solves like a really fundamental important problems in gaming. So after half a year after a launch and others I launched another project which is a crypto gaming guild where a small guild but Super Efficient and I think that we are one of the few guilds that managed to you know to survived and we're actually in pretty good shape But that's kind of you know, sort of a side project. So basically I would say 90 % of my attention goes, you know to validation and Yeah, so we have been Building basically pretty much with my own, you know funds. So I invested you know so far well
+
+much almost a bit less than $1 million in the project. So when we managed to survive again, the hardest times, with all the sanctions, wars, bear market, all that kind of stuff, it was a mess. It was definitely difficult times. In the beginning, the team grew really fast, 250 people. Then when the war in Ukraine and Russia happened and obviously lots of crashes in the bear and the crypto market. So we had to fire some guys. And so pretty much we've been building with just four guys for two years.
+
+Iannis 
+And well, in December last year, we just started hiring again. So we expanded the team at the moment. And well, yeah, we started basically as just testnet runners. And because I was all, well, I try all the time to teach people. And we, I would say one of the most competitive advantages that we have as a team is that we keep on learning and doing stuff. So slowly but steadily, going through really hardship, like we managed to start offering to blockchains.
+
+way more value than just running the node. And so at the moment we run 37 blockchains, we have total value stacked of approximately 100 million, we run at the moment, I think we participate in 46 testnets. We have a range of products and services that we offer to blockchains. And so we pretty much are growing into some sort of a kind of venture crypto studio where we can support blockchains. So basically by our validators,
+
+Our main mandate is only cooperate with the layer ones or layer zeros. So we develop different tech features and provide all sorts of highly reliable infrastructure. We also kind of now can provide some funding to this project and we are now expanding and started doing more kind of marketing activities. We organize different campaigns, online events, offline events, CD campaigns, like UA's and so forth.
+
+So yeah, I guess, well, does it answer your question?
+
+Citizen Web3 
+Well, it does partially. I'm still going to go and dig a little bit into it. But I have a lot of comments here that I wrote down that I'm going to ask you about. So first of all, I love the crickets on Bali. I must say that the crickets on Bali are my best friends. And I know that we spoke just before the recording that I was saying that I know you are on Bali and the Bostrom team are on Bali. And you said that you also know them, right? So it's a cool coincidence, I think, that...
+
+Iannis 
+Sure.
+
+Iannis 
+Hahaha
+
+Citizen Web3 
+It's a small world and you said it's a question not about the Bostrom team, but you mentioned Crypto Sauna. And I would love to know a little bit for myself and for the audience. How is the currently the crypto community shaping on Bali? It's a question I don't really ask often, but I think you're the right person to, I apologize if you're the wrong, but you look like the right person to ask this question. How...
+
+Iannis
+Yeah, yeah, yeah, yeah.
+
+Iannis 
+No, I'm the rightest. Yeah.
+
+Citizen Web3
+Yeah, I was right. I got it. I got it. Man, tell me a little bit because I have I have I have I've had guests from Bali before, but they were more like towards the technical side. And I would love to know a little bit about how the crypto community shaping in Bali, because there is a lot of misconceptions and there is a lot of like myths. So I would love to hear it from you, from somebody who is there and tell us about the crypto sound as well. And this is cool.
+
+Iannis 
+Look, it's actually, I think it's booming and crypto industry in general kind of, you know, is really expanding really fast and rapidly, you know, in Bali and Indonesia in general. Speaking, you know, specifically about Bali, Bali and its governments when the COVID happened. Well, basically, you know, it's fun. I will give you some kind of economic metrics. So basically Bali, so Indonesia is actually fourth population in the world. It's kind of not so big, but there are really lots of people living here.
+
+So in Bali, which is like only one island in Indonesia, constitutes approximately 15 % of gross domestic product over the whole Indonesia. But basically 80 % of Balinese economy is basically based on tourism. People come and they pay for services, tourism activities, and so forth. So when COVID happened, Balinese people found themselves in really difficult situation because immediately out of being a really one of the most popular...
+
+destinations for tourism in 2021. And before that, when COVID happened, they went almost to zero. And we saw really lots of people in different situations. And we also were organizing some help to them because locals were really struggling. So back then, the government decided that they need a second industry that they could boost in order to support the locals. And actually, the cool part for us was that they decided that this industry should be the blockchain.
+
+boxing industry. And so they kind of so one more thing I wanted to mention is that you know Bali is is an island of Indonesia and Indonesia has you know presidents but Bali itself is kind of a country inside of country it's like you know you know in Italy we have you know the Italy and we have the say it Vatican Vatican exactly yeah yeah yeah yeah modern in Poland.
+
+Citizen Web3
+like Madeira in Portugal. I was going to say like Madeira in Portugal.
+
+Iannis 
+So they have like a local king here, they have princesses and so on and so forth. So one of the prince of Bali has become the chief kind of advisor or evangelist of blockchain industry here. And so they have put lots of efforts to make Bali more attractive to digital nomads, to crypto people, and they kind of organize now lots of events. And there is kind of a nice, well, not really huge, but a quite big conference that happens every year in Bali called CoinFest. It's gonna happen again in August.
+
+And so now we do have, and the cool thing also is that the whole space is quite international. So there are lots of people from all around the globe, you name it, US, Australia, Chinese people, Europeans, CIS and so forth, who live here. And that's why the mixture of all these guys, of digital nomads and crypto enthusiasts is really booming and really expanding. Because it's really cool to live in Bali because it's sunny, it's way cheaper to live here than to live in the US or...
+
+like Europe is really peaceful, you know, culture is really nice, people are cool and so there are lots of, you know, kind of additional perks that comes along with the crypto community that's really expanding and booming here since COVID happened. So yeah, and we have, yeah.
+
+Citizen Web3
+What'd you say? No, no, go on, please, please, please, go on, sorry, sorry, sorry, sorry, sorry, I was not meant to interrupt you, sorry, please go on.
+
+Iannis 
+Yeah, and so we have different meetups and now big corporations, big projects like Polkadot, ICP, and so forth, they have already established here their representatives and they're organizing some meetups, some hackathons, some promotions, trying to boost their own projects and also to support the whole blockchain industry injecting and establishing in Indonesian land in general and Bali in specific.
+
+So yeah, and so we have different meetups and side events and conferences. And also, one of the places we have for crypto is called Crypto Sauna. So Anthros is only allowed to, well, unfortunately for the time being only male representatives. And they have to come from some sort of a decent project. So we kind of really try to whitelist only cool guys. So if kind of guys are kind of just scammers or flippers or kind of...
+
+just red pullers or whatever, we don't accept them. So, a guy, if he wants, you know, to join us, he has to go to get usually, you know, a couple of invitations. So there should be like usually two guys who kind of have guaranteed that he's a decent proper, like, you know, fundamental crypto Dagen. And then we can accept him and basically we'll go to a sauna. We have a sauna. Actually, we all relax, talk sometimes, well, actually pretty much only about crypto. And, yeah, it's a nice way, you know, to relax for us on one hand, but also, you know, to make this relaxing.
+
+time kind of efficient because sometimes, you know, partnerships can be shaped, investment can happen and so on and so forth.
+
+Citizen Web3 
+I mean, proof of cleansiness has come to mind.
+
+Iannis
+Yeah, yeah, yeah, yeah, exactly.
+
+Citizen Web3 
+I have a question for you about the community. Again, like the last question I'm going to ask. Like, for example, Madeira, where I'm residing for a while. I'm going to be honest, the crypto community here is not really one that I'm active in because, well, even though we live on a tiny island and there is about 100 -something businesses that directly accept Bitcoin, like it's a lot for a small island.
+
+The community is very much centered around ICOs. Well, not today, but you know what I mean when I say ICOs, NFTs and so on and so forth. How's the Bali community? Is it more technical? Is it like a bit of mixture of everything? Is it because you said we don't accept flippers and we need to prove that the guy comes from a decent background. So what would you say your personal feeling of the whole of the general of the communities today on Bali, the crypto community? I mean.
+
+Iannis 
+Look, I would say that it's a mixture, definitely. Obviously, Bali is a place where people can either come as a digital nomad and they can stay and live here, but we also have lots of tourists who come here for, you know, spend the winter, for example, they might come for two, three months. So we have this kind of common going people, which kind of a lot. It's definitely a mixture. You see, well, in general, the crypto space is a space where there are lots of people who just come to make fast money.
+
+don't really understand the technology. So basically I would say that 80 % of the people who are in crypto don't really understand what they're dealing with. They just care about, I know it's just hype and just making, you know, access, shitloads of money and so forth. So definitely we have these guys as well. We have, you know, flippers, we have NFT, we have like, you name it. But again, since the Bali is a pretty cool place, you know, for digital nomads, more and more team and developers are coming here.
+
+It's just the case that you don't really see these people so often outside, because for example, myself, I spent pretty much three years almost not leaving my place. I do go to crypto sauna, I do go to some conferences, but for the most part, I spend like 95 % of my time just at home, just in front of the PC, just grinding each and every day, 14 hours per day, 16 hours per day. So definitely a lot of these people, I would say, well, quite enough.
+
+But you don't see them that often outside.
+
+Citizen Web3 
+It's ironic how many, I mean, like yourself, I've been in this industry since, well, a long time. It's hard to sometimes say how long, not really a long time. And it's funny to see, ironic or funny to see that a lot of crypto communities around the world have been moving to islands, whether it's Bali, Cyprus, Madeira, some in the Canaries and so on and so forth. There is Malta as well, right?
+
+And a lot of these people are quite serious people. Some of them, it's interesting to see more and more of this build up on the islands. Maybe one day those islands will become the center of the universe. And yeah, it will be interesting to see how it will. Men, gone, gone, gone, gone, please, gone, please.
+
+Iannis 
+Yeah, I think.
+
+Iannis 
+No, I just want to mention that I think this happened for a few reasons. One is regulation. Usually this kind of small kind of islands, small maybe sometimes even maybe countries, they are way more inclined to integrate blockchain technology in this field, generally crypto people, because they understand that these people can also bring money. So usually if the guys are really kind of involved in crypto space for long term, they most likely are not really kind of, they're not poor at least. So if they come to the market, they will also bring the...
+
+money, they might buy a villa, they will use all this kind of tourist stuff etc. And also, living on an island is also kind of just beautiful. So there are lots of pros and advantages that come along with life in a nice and small place. Islands are really nice.
+
+Citizen Web3 
+You have the optimistic view. My view was also optimistic, but more like island is easier to take over. It's not you don't need so. OK, OK, let's let's let's.
+
+Iannis 
+Yeah, that's true as well. You can make an NFT out of Island and then you can sell your own pieces on this NFT, so you're gonna earn your own pieces of the Island you live in. Yeah, yeah, why not?
+
+Citizen Web3
+It's a good idea. I like that. I like that. It's a good idea. Okay, before we get too far into that conversation, let's move on to another topic. You mentioned, Brock, you mentioned that you guys have currently 100 million TVS and 37 networks and 46 testnets. What's your largest validator today in terms of revenue?
+
+Iannis 
+I think Celestia.
+
+Citizen Web3
+Celestia, okay. Okay. It's it's it's a very very interesting network. Why do you guys concentrate on Celestia? Why what's what's your reason for concentrating on Celestia? What are you trying to achieve there if anything or it's?
+
+Iannis 
+we just, well, it's just in general, like a really cool project. We realized that, you know, when we found them approximately a year ago, so we participated in their test net for I think seven or eight months or something. So it was clear to me that, you know, it's definitely going to be, you know, a pretty, pretty cool project that really brings value. It's all about value. I do love, you know, because like, well, definitely you're kind of way older crypto than me. So you're the veteran of veterans. I am kind of, you know, well,
+
+I'm relatively kind of oldish crypto dudes, well, 2017, so basically, you know, seven years in crypto. I'm really just a huge fan of like proper technologies that really solve, you know, some problems and they have kind of a value proposition. Sometimes even unique propositions, sometimes maybe not so unique, but still kind of, you know, cool projects, cool teams and so on and so forth. So today's is definitely looked to me a year ago, like, you know, super promising.
+
+and well apparently it has performed super well and so many projects are using that technology. So, nice, nice, nice.
+
+Citizen Web3 
+I'm gonna do a one, one, 30 seconds of advertisement here. So if you guys want to listen, of course, like everything me and Yanni say will be mentioned and linked to in the show notes. And if you guys are interested in Celestia, please go and check out the podcasts we have with them. I think the last, the first one was three years ago or two, two, two and a half years ago. It was still, I think, in the stage of Ledger, Ledger slash Celestia.
+
+But yeah, this is just a moment of advertisement back to you, Janis. You know, you mentioned the BTC in the beginning and I got to be honest, like I'm curious about your opinion on BTC. But before you say it, I'm going to like put the cards down. I have to say, like on on on it seems that over the four or something years on this podcast, the opinions on BTC have not been the most positive on the show. So I.
+
+Iannis 
+Hahaha
+
+Citizen Web3
+I have been I I also don't have a very even though we run a bitcoin node bare metal bitcoin node because well it is bitcoin but a light node sorry but you know we like I and I'm trying to get btc maxis on the show I'm actually talking to to one right now he's a famous guy called Vlad I hopefully I will be able to to get him on and I want to hear like a btc maxi opinion but
+
+So those are the cards to reveal the truth that, you know, yeah, I'm curious about your opinion because you said 2017, you started with BTC, you started with Ethereum, you made some good investments. What do you think about Bitcoin today? What's your opinion on Bitcoin? How do you see development? Do you see it is still being the king of crypto or whatever else you want to add to that?
+
+Iannis 
+Well, to be honest, I will also open my cards. I don't hold any BTC anymore. Well, there are two kind of points, I would say, that in terms of being an investor, well, now buying an asset that definitely has the potential to grow for sure, but this is kind of the cost of choice. So if I invest now in Bitcoin, I can expect maybe two, three, five, 10 nexus. But if I invest, let's say, in early stages to some superior technologies, which has everything in front of them,
+
+which might perform and bring 100, 1000 taxes. I mean, it's just way more return on the capital invested on one hand. Second, well, Bitcoin is the first technology. Definitely, it is for the time being the king. It has definitely shaped the industry. It's still kind of, the whole market depends on what Bitcoin does still at the moment. But I do think obviously, I think it's obvious that industry is maturing and definitely at some point other assets or...
+
+niches inside the crypto are just going to take their own path and will not be so correlated to what happens to the Bitcoin. So yeah, and obviously, I mean, since Bitcoin was kind of launched, like, I mean, incredible amount of extremely beautiful and genius technologies have been introduced. So for the time being, we have things that are kind of superior to Bitcoin technology in so many ways that is kind of...
+
+It doesn't make any sense. So Bitcoin is not so appealing to me as a technology. Obviously, it has become some sort of a religion in a way. But how long it's going to last may become something that is going to be used as a reserve currency for the whole world. Well, maybe all these kinds of possibilities are out there. It definitely might go to 10 million. Is it a possibility? Well, definitely. But again, since I run the project and since I do understand the industry, well, maybe a little bit better than...
+
+most of the users who just come in and invest their money in NFTs, tokens, Mimei coins, whatever. I just prefer really technological, superior solutions. So yeah, so I don't think it's good. Definitely people can earn some money buying Bitcoin, maybe even now. No financial advice, obviously, but I don't see any point of holding Bitcoin, buying Bitcoin or anyhow interacting.
+
+Citizen Web3 
+Do you think that selling hope is okay? Because to me, the success of Bitcoin... Because you mentioned religion and it's a very powerful word. And one of the most powerful products I know is hope. If you want a product to last for a long time, sell hope. And do you think that it's okay?
+
+sell hope as an investment opportunity? What's your opinion on that?
+
+Iannis 
+Well, all investments are just selling hope. Because if you invest in any project, especially in early stages, they all the time sell only hope. They say, hey, we're going to do that, blah, blah, blah. And there are incredible amount of questions and risks. And I think that people in general don't really view the crypto industry properly. I view it as just a space of experiments. So there is the technology of blockchain and there are incredible amount of brilliant people.
+
+Citizen Web3
+No.
+
+Iannis 
+who just try to find a proper market fit. So basically the proper ways to implement this technology in such a way that is going to be as useful as possible in solving different problems society has. Bitcoin definitely has its own kind of value proposition. But again, as I mentioned, there are hundreds, maybe thousands of projects that technologically wise are way more superior to Bitcoin. But Bitcoin was the first one and Bitcoin has built these religions. People kind of believe in these ideas and so forth. And again, the whole economy we're living in, it's all about kind of hopes.
+
+Hopes, ideas, promises, some kind of...
+
+Yeah, hope is the best word to give. So I don't think it's wrong. Everybody's doing that. So, yeah.
+
+Citizen Web3 
+Yanis I Hear your cat man. Show me the cat. I want to see the cat now now I want to see the cat man Come on, even though it's an audio podcast. Don't be sorry. Let's let's see. Let's see the cat We love cats on the show man. We love cats. We love cats. Let him in man. Come on He wants to he wants to talk with us man. He wants to be a part of the show. Let's let's make him a part of the show man Come on. you have to what a beautiful cats I'm sorry. The audience can't see this but beautiful
+
+Iannis
+yeah, I'm sorry man.
+
+Iannis 
+Yeah, I have to.
+
+Iannis 
+No, I have two cats. One... Wait a second, it's gonna be a fun one. So I have two cats. I apologize for them screaming just because, you know, running just started in Bali, so they scream sometimes. So their names is Satoshi and Tesla. So the idea behind it... The idea, idea... No, no, no, no, no. Listen, listen, listen. So basically there are three guys.
+
+Citizen Web3
+No, don't be. Don't be. All good.
+
+Citizen Web3 
+there we go. And you, you need to bring them. Man.
+
+Iannis
+in his history of humankind that I would really laugh and I would pay like pretty much any amount of money, you know, to just meet these guys and talk to them. There are three guys, Nikola Tesla, Satoshi Nakamoto, if this is a guy or group, it doesn't care, it doesn't matter. I mean, this, the producer, let's say, of, yeah. And the third one is Leonardo da Vinci. So I have the third name is still available. So I'm looking for the third sort of pets, but Tesla and Satoshi is already in place.
+
+Citizen Web3 
+I understand.
+
+Iannis
+They're super smart. You know, there's a saying, yeah, that how you call the thing, that's how it's going to kind of behave. So I call them like, super, like, you know, genius people and names. So they're like, I mean, super, super intelligent, super smart, super kind of understanding everything cats. So yeah.
+
+Citizen Web3 
+That's what they did there.
+
+Citizen Web3 
+That explains why my cat acts like a goddess. She has a name of a Scandinavian goddess. So yeah, now I understand why she's the queen of the house. I get it. I get it. Man, let's talk a little bit about your validator. I mean, I know you guys also do several things, at least when I go on your website. You have a service, I think it's called Cosmolist, right, for the RPC providers.
+
+Iannis 
+Okay, here we go. Yep.
+
+Iannis 
+Endpoints. Yeah.
+
+Citizen Web3 
+and you that sorry, endpoints, sorry, excuse me, endpoints. And also I've seen that you've been building some kind of staking platform now. So you pretty much, and you mentioned yourself at the beginning of the conversation that you kind of becoming something of a venture, like, you know, big thing, you know, so where are you going with all this? Where, what is the goal? I mean, yeah, we love technology. That's a cool thing. I, and I accept that, but.
+
+Where is the goal for you? Where is the goal for... And I mean, you mentioned also a couple of times that you came for the money, you stayed for the tech and you still believe that those things can change the world. So I think from that sentence that I believe that those things can change the world. Here's the question. Where are you going with all that and what's the goal?
+
+Iannis 
+Well, look, obviously, since I'm an entrepreneur, I want to build a cool product, cool project, cool company that's going to bring lots of value to the world in general. Well, in specific to blockchain kind of industry and well, blockchain system, we could say. Also, like earning money is definitely something we are looking for. But the idea is that I, well, I'm 41 years old and I has become pretty wealthy guy quite some time ago. So I could...
+
+afford to live what I want, do what I want, buy myself what I want. So the question of money has been close in my life, you know, quite a few years ago. So for the time being, I just enjoy doing something that is, first of all, has a huge upside. So it can become like really kind of big and important because like it's bringing a lot of value and I'm really tired and I'm really kind of, well, feeling sick of just earning money. So for me, earning the money we earn is just a plus of the world.
+
+for the work we've done. So if we're doing really something valuable for the humanity in general, then money will come. And the money is kind of the equivalent of the value that we produce. So there's a whole mentality behind this stuff and definitely want to earn money. But I mean, this is kind of just explaining the mechanics of how we view it. And that's why I have find us a project so far by myself and so forth. Yeah, so the long -term goal in general is just to promote decentralization.
+
+promote blockchain technology and everything that it brings, because definitely it solves some, as I mentioned before, fundamental problems of societies. One of the problems is trust. So blockchain has solved the problem of trust as no other technology has ever solved it. And so it's just amazing. The whole space is evolving so fast because most of the projects are open source and we can build standing on the shoulders of giants. Innovation happened so rapidly, so fast. It's just...
+
+just amazing. So the idea behind Nodris and the way we want to go is just to become like sort of important player of the markets and we want to promote, I would say, the right values because the blockchain is not only about earning money, it's not only about tokens that kind of skyrocket tomorrow, it's not about meme coins and all kind of stuff. Money is nice, meme coins is also kind of nice, but technology really solves important problems of societies and people don't realize it. That's why they're not really using it yet.
+
+Iannis 
+all this kind of, you know, define FTs, you know, kind of all the concepts that kind of have been introduced in crypto for the time being, I think that people, for the most part, the majority of people don't really understand them. That's why the kind of they say, okay, NFT died. What do you mean died? NFT, for example, is just a technology. It's again, it's just important technology. There was some kind of sort of hype, but this happens, you know, to any industry, to any technology, you know, for example, I know. Dotcom boom of late nineties, right?
+
+It happens all the time when the printing machine was introduced or when the cars happened or computers. So when new technology comes, obviously, lots of kind of not so decent people come along and they try to make money on selling some, as you said, hope, maybe like some exaggerated hope to people who are naive and don't understand what's happening. Because I remember like in 2017, there was a fun story. There was like a tea company in Australia, I think on New Zealand, which was not doing well.
+
+And because back then there was the huge hype with the blockchain and the way you could see the kind of this word blockchain, people would just be throwing money without even diving deep in this company. So it was a funny story, this is a real story. So there was a tea company which was not doing well and there was something like tea New Zealand, whatever LLC. And they just added to the name of the company blockchain. And it became like tea blockchain LLC, which had nothing to do with the blockchain technology, they were just producing tea.
+
+And they kind of share skyrocketed within just one week and made like 10X or whatever. So we know it's worth money. Just because again, people for the most part kind of try to take advantage and it's normal. I mean, it's just the way it is. So yeah, the space is amazing. People don't really understand it. And we do want to be the ones who promote the real kind of value behind the stuff. Again, as I mentioned, the validators is a business.
+
+is a totally kind of a decent business that produces lots of value for people. But, and it brings the idea of, of stakers is a long -term holders. It's people who really believe in projects that buy, you know, tokens for long -term, they buy it for at least, you know, three plus months, maybe years, they stake it because otherwise it makes no sense to stake. I mean, traders don't stake, you know, NFT takers don't stake and so on and so forth. So we want to promote these kinds of values of supporting, bringing value, you know, kind of long -term holdings.
+
+Iannis 
+understanding of the technology and source code. Make sense? Does that answer your question?
+
+Citizen Web3 
+It does, but I have, I'm gonna do some follow up questions for you here. Some of them are gonna be a little bit devil's advocate. I didn't warn you, I love to do devil's advocate questions, but I don't think so. This is actually not, no, no, I did say that, but now thinking about them, they're not really devil's advocate. So the first question is you said promoting decentralization, but you know, decentralization has such a huge fucking spectrum, like starting from, you know, well,
+
+Iannis
+Nice, nice, nice.
+
+Citizen Web3 
+centralization, finishing in decentralization, right? But really, like for everybody that word, you know, I mean, starting with such thing as privacy, security, like middle parties, web two, web three, technological, technological stocks, and so on and so forth. So for some people, decentralized technologies or decentralized world, or decentralized or decentralization in general,
+
+is only something that is on that side of the spectrum and for some not. So when you say promote decentralization, why? What is for you? What would change? What's in your opinion is going to change as soon as that decentralization that you're promoting is achieved? How is the world going to be different? At least the community where you live.
+
+Iannis 
+I would say that we could bring a bit more power back to people. It would make life a bit more democratized in a way. Well, you see, I'm Greek, so I have invented democracy. Obviously, look, the world is perfect. Well, no, no, it was actually. No, no, it was.
+
+Citizen Web3 
+And not a very good one The original version was not very good
+
+Iannis 
+No, no, no, it was perfect, but it was perfect, but it was perfect in a small cities because they were called in Greece, you know, polis. And so democracy within small communities works perfectly. As soon as you start growing it and you have like lots of levels of democracy, you have different institutions. And so then, you know, problems start to occur. So the bigger you grow, the more problems you're going to have and the less democracy you're going to have. And there's going to be, you know, more noise and more kind of, you know, problems in general. So.
+
+Citizen Web3
+course.
+
+Iannis 
+I believe that the world is actually perfect as it is. Nothing has to be changed. So as God created, like whoever created the world, it is perfect as it is. And just in this world, what happened, just some processes, process of life, some change. And the only constant thing in this world is a change. And so, okay, I say the world is perfect. And then I just, as an individual, I have my own talents and I just find ways how I can implement my talents. So I will enjoy what I'm doing and also bring...
+
+some sort of value to the people around it because I kind of interact with the people. This whole ecosystem of the universe, we're all interconnected. So I say the world is perfect, but for the time being, let's say we have these kind of difficulties in societies. And we can see this across the globe with all the wars happens and all the kind of the financial system is falling apart and we have so much tension these times. And blockchain as technology again, as industry, its very proposition is first of all to change.
+
+economic model we live in. And it's just about the time to change it because as it has come to life, it has been kind of a cool thing back then when it was invented, solving back then some other problems. But now new problems are here and the whole life is just a process of all the time of the evolution that happens all the time. So we solve the problems that come along. So we have some problems, we solve them. We then we're going to have some other problems, we're going to solve it again. And this process is not going to end ever until the end of time.
+
+So for the time being, we do have quite some issues around the globe and big blockchain technology can solve them. That's why we're doing what we're doing. Does it answer your question or should I deep dive? Because like, yeah.
+
+Citizen Web3 
+You said a very important... I will torture you a little bit more. You said a very important word there, evolution. And I think a lot of people talk about revolution rather than evolution, which in my opinion is a big mistake because nature doesn't have revolution. It only has evolution. Revolution is something we invented in our language, in our semantics. It's something that we started to use and it has a lot of meaning, revolution. But...
+
+Unfortunately, I think that what you're saying, not unfortunately, fortunately, I think that what you're saying is evolution is the way to go, not.
+
+Iannis 
+No, I think it's the same. It's the same. It's just that you have different processes. It's like, you know, if you're ill, sometimes, you know, to heal your kind of illness, you have to go through kind of a short period of time when, you know, this illness is going to extreme and you kind of you're in lots of pain and then it goes away. Sometimes you have to experience some sort of pain or surgery. And so, revolution is just the same evolution process, but just that...
+
+Some aspects that say of societies are fed up so much with a situation they have been in and They tried maybe kind of you know to persuade let's say the other parties that hey Let's maybe change this certain aspect of our social life and that's you know The other party just doesn't listen and then the revision is needed, you know to make the change but change is gonna happen anyways so for me evolution is just maybe Like evolution without revolution is a kind of maybe a smooth kind of process
+
+But just sometimes it's normal to have a revolution. It's not some bad, it's just like a small kid and his tooth are kind of in pain and just have to take him to a dentist and he will take his tooth out. It's going to be painful at the moment, but just going to be rapid and then pump, it's all good. So, yeah.
+
+Citizen Web3
+I think on the last note on the kind of Greek democracy here, I will tell you I'm more of a, you know, a deoghenist man than a Socrates man. So yeah, for me, it's more about anarchism and about, you know, unfortunately, you know, for me, the original version of the Greek democracy where democracy was passed by birthright, a proposed to be passed by birthright anyways. I don't know, like for me, and this is a question to you actually.
+
+Do you think that blockchain, you know, you mentioned that a lot of the technologies, a lot of the things that are appearing, you know, that they're becoming big every now and again, we have this huge something, you know, whether it's, I don't know, the wheel, the microchip, I don't know, whatever, right? We can talk about HTTP, right? A lot of things. And what's in your opinion, like to carry on this conversation, the next technology that blockchain will produce or can be that will create this evolution?
+
+or revolution in your opinion that we're talking about, you know?
+
+Iannis
+I think that everything is already here. It's just a matter of all the implementations of the blockchain technology that has been introduced so far, like RWA, DeFi, gaming, DAOs and so forth. They have been already shown to the world the ideas of this stuff. And now it just takes some time until this technology is going to be shaped properly. Because, I guess, since you're kind of an old in crypto, you know that, for example, bridges has been... I think that all of the bridges has been hacked at some point.
+
+So I think that for the time being, I mean, until this point, we were just building the foundation of the stuff and we're building just, you know, some educational content for people, you know, for around the globe to start understanding, you know, this technology and all this kind of, you know, fireworks with, you know, skyrocketing tokens were needed just to drive attention to the technology. Because for the most part, to be honest, the majority of people are not really willing, you know, to study stuff. They're not really willing to understand what is blockchain technology. They're not really willing, you know, to understand, okay, democracy is important, privacy is important.
+
+So you need to show them some sort of kind of rewards or earnings for them to just drive their attention to the stuff. So I do think that we have quite a few, quite lots of pretty cool value proposition from blockchain companies, projects and so forth. And just they haven't been spread yet. And I think that now, next kind of three, five years, we're going to be just again, just seeing how this concept of NFT, of DeFi, of all that I mentioned and everything that happens in the space.
+
+just going to be starting to be really used by billions of people. Because for the time being, it's me, you and just a few more guys who just will understand some kind of maybe complex strategies in DeFi or the technology validators. I'm struggling so much about sometimes explaining to people what we do. And unless the people have already staked their tokens at least once, it's quite difficult. What is staking? Why is it secure? Why not staking is just silly?
+
+And so it's false. So I think that what has been introduced is already enough. It's just a matter of implementing this in the real world. So.
+
+Citizen Web3 
+How is Norders for you? OK, and again, I'm asking here, you can choose to answer this again, like I said before we started recording, as Yanis or as the founder of Norders. You're talking about spreading, about this thing taking over, whether it's NFTs or whether it's staking or whether it's proof of stake, proof of work. It doesn't matter. Consensus, computing, we can timestamping. We can talk about a lot of the technologies that the blockchain produced.
+
+products, blockchains, technologies, whatever. How is Norders and Yannis going to contribute? You know what, let's leave Norders on the side for a second because the answer here is it comes straight away to mind by expanding the infrastructure. But how does Yannis contribute to making sure that that's spreading of what we are? Because you said, you know, not many people understand it unless they stake at least one time. So, you know, when there is such a...
+
+Again, I'm a little bit devil's advocate here, but when there is such a gray area, you know, it's like with a lot of things in the world, whether it's the atomic bomb or splitting the atom, you know, or anything else, originally the intention and the end product are very different. So how will Yanis personally make sure, at least in your own life, in your own world, that what that spreading of those things, you know, and that education,
+
+will bring good in the long term, in a general term, you know, towards communities, towards the world? Yeah, something like that. Strange question, but yeah.
+
+Iannis 
+So you asked what I will do, but I already did and I just keep on doing and will keep on doing further. So obviously I built, I founded the Nodros, so basically we're a team of contributors and we try to be as helpful as possible to the ecosystem in general. And so there are quite a few things that we're doing just for free without expecting any returns and just our conscious contribution to the general implementation of blockchain.
+
+Citizen Web3
+Perfect.
+
+Iannis 
+as technology to the societies and so on and so forth. So from tech side, we just, as I mentioned, we just keep on building, doing stuff, helping projects, develop their products and so on and so forth. And from the same marketing and promotional side, we organize different events. Sometimes I kind of organize courses, actually free courses, just to kind of increase the awareness of people, what crypto is, how to use it, how to be on the safer side, how to not get in some scams or like pools and just increasing them.
+
+Well, educational stuff. Again, as Greek, I just firmly believe that education is the key to everything, education and culture. So we try to promote the best culture, not just this cultural form, my God, give us 1 ,000 today, you're going to have 1 ,000 taxes tomorrow or whatever. But the real understanding why this technology is important, how you can actually earn money as well, but how to earn money by supporting cool projects and doing something that is really going to be valuable at the same time.
+
+So you can earn money and do something valuable. This is, I think, the best way to do things. Obviously, I mean, just being an idiot who just only builds stuff and don't earn anything is kind of an idiot. It's a bit silly. So just combine things. So again, educational is definitely where we actually have planned lots of educational campaigns just to increase awareness of how crypto works or how staking works or how...
+
+This can change societies and so on and so forth. And that's why I'm also here. I'm not expecting anything from this podcast. Maybe just spread a little bit of, well, knowledge of my opinions or my culture, my values, hoping that's, well, if they're going to be another Yannis, it's going to be cool.
+
+Citizen Web3
+Let's I think it's a perfect like place where with that to go to a short blitz, I'm going to do a blitz from three questions. They're going to be a bit strange like the rest of them are. I apologize for that. The first one is actually easy and simple, not a strange question. Janis, give me one movie or book or song that throughout your life has had a positive influence on you.
+
+Iannis 
+Poof, I've read lots of books, like thousands of books to be honest, I really loved... Poof, let me think, let me think. It's all the time, it's so... Okay, okay, okay, okay. Yeah, yeah, there are maybe tens of books that made lots of impact on me. I wouldn't say that songs or movies are doing that much, at least to my psychic, or hasn't played that much role in my life, but maybe...
+
+Citizen Web3
+Could be a song, a movie, if you want.
+
+Citizen Web3
+It doesn't have to be the favorite one, you know, just one that you like, that has a positive influence on you.
+
+Iannis 
+I don't know, Richard Bach. Richard Barght. It's kind of, you know, the Living Stone, what was the pig, a pig when I think called, named Living Stone. I'm not sure how it's called in English because I speak four languages. So I read this book, you know, in another language. I'm not sure how it's called in English. So, but it really kind of amazed me. It's again about evolution. It's that's, you know, limits. There are no limits actually. And living in a society, if you dream of something, you want to do something in your society, for example.
+
+Citizen Web3 
+Perfect. I like it.
+
+Iannis 
+doesn't kind of allow it, you know, culturally, they think it's kind of weird, stupid, silly and so forth, you still can go and do it without just looking around. If you want to do something and it's kind of not, not destroy the world, let's say, then yeah, go to go, just go and do it. And this book is about, you know, a bird that couldn't fly and was living, you know, in a society of birds that couldn't fly and they were not even thinking about, hey guys, maybe we should try something somehow, you know, to learn about flying.
+
+So he was just trying again and again and actually this is kind of a scenario of my life. I just keep on trying, you know, doing something until I just succeed. And the whole the only secret of success in my life, even though I do have some talents, blah, blah, which might be questioned or not. But what I'm really good at is just never give up. Just really kind of keep on grinding and success will come at some point.
+
+Citizen Web3 
+Wait, wait, wait, you're going into the second question. I love it. You're answering the second one. No, I'm joking. I'm joking, man. I'm joking. No, brother. I'm joking. No, no, no, no. But the second question is you kind of started to answer it. The second question is give me one share with me and the audience one motivational thing that keeps Yanis going for the last 41 years.
+
+Iannis 
+shit, sorry man. I just, I just, fuck I just, I ruined everything nice.
+
+Iannis 
+I'm just curious about things. I'm just really kind of, you know, curious to learn about something, try something, do something that, you know, kind of sometimes might not actually be economically efficient or beneficial in general. So I organized, you know, some events without earning anything. It was just for fun or just for the experience or just because I believed it's something kind of valuable to someone. So, but curiosity about life, about worlds, about everything around me.
+
+Citizen Web3
+curiosity. I like it.
+
+Citizen Web3 
+Okay, last one, I promise. This is a bit of the strangest one, but I promise it's the last question of today. Give me one person or one character, dead or alive, real or made up. It could be a cartoon character, developer, Satoshi Nakamoto, Tesla. I think I already know what you're going to say. That is not your guru, because I personally don't believe in gurus. But is a person or a character that you can look at when you're like, shit, my life is...
+
+everything is going wrong and then you look at this character and you're like fuck yeah that's a good good good example and now I feel better like something like that.
+
+Iannis 
+Well, I can't say really that I look at someone and then feel better. But I would say the person that inspires me the most is Leonardo da Vinci. Yeah, just because like, I mean, the guy was, yeah, he was just curious about the world. Yeah. And he was just starting and doing what he wanted to do. Not thinking about, okay, I'm going to fucking earn money here or something else. But he was just doing what he loved. And he was kind of, you know, experimenting a lot. And he was just, and he produced, I mean, incredible amount of brilliant...
+
+Citizen Web3
+Paris. Beautiful, beautiful. It's actually my answer too.
+
+Iannis 
+things and especially given the age he lived in, poof, he just like, no, he's just like one guy. I mean, in our world today, I think nobody can compare to him because he's just one guy that's, well, he was a true genius and he was talented in lots of, he was just talented. And then he just took his talents in different industry or sectors. Yeah. And he was good in all of them, in tech stuff, in health stuff, in like kind of...
+
+Citizen Web3 
+He was a true genius. He was a true genius for me.
+
+Citizen Web3 
+Yes, that's genius.
+
+Citizen Web3 
+I agree.
+
+Iannis
+in painting is this just kind of curiosity and love, I think for, I don't know, for life in general. And then he just studies it and creates stuff and he's so... I don't know, he's so... Well, it's hard to find the words to express it, but give me a second. Harmonious in a way.
+
+Citizen Web3
+He's a proper malaka. Proper malaka. He's a proper malaka.
+
+Iannis 
+He's a pro. my God, he's the Malakas Malaka ever. He's the Malaka for sure. He is the Malaka. He's the Malaka of all Malakas for sure. Like, I mean, no Malaka can ever compare to the guy. Maybe Socrates could talk to him, you know, just they would have fun together, but yeah.
+
+Citizen Web3 
+Okay, I think this was the most beautiful beautiful ending to the show we had for a while my love that the perfect Malaka Okay, we will definitely leave a note in the description. What does Malaka mean? It will be in the not shows for people who don't understand what it means I'm not gonna say it right now
+
+I know that I swear a lot, but it will be a little bit of a pass -hal egg. It will be in the show notes and then you guys can read what it means. Yanis, I really want to thank you for your time, for your questions. Please don't hang up just yet. This is just a goodbye for all the listeners. Yeah. Thank you, man.
+
+Iannis
+It's a pleasure.
+
+Iannis 
+Guys, thanks a lot. Can I say a few words, just like as advice? Just keep on studying. Just keep on educating yourself. Life is changing so rapidly, and especially nowadays with the blockchain technology and AI coming, poof, AI is just something, poof, it's gonna change the world so much. Both these technologies are gonna change the world, and I think the only people who are gonna be successful in the years to come are the people who can really study and learn and adopt fast.
+
+Citizen Web3 
+Please do, please do, please, please, please.
+
+Iannis 
+because innovation happened incredibly fast. And our human mind and our human psychic is going to have lots of troubles adapting to the incredibly fast innovation happened all around the globe, in all industries. So just don't stick to your master degree or whatever. Just keep on learning stuff. Be curious about life. It's going to bring you lots of value in lots of ways. Thanks for having me. It was a real pleasure. One of the best interviews I've ever given. It's so much fun.
+
+Citizen Web3 
+Absolutely, be curious, I think.
+
+Citizen Web3
+Thank you. Thank you. Please don't hang up just yet. Please still don't hang up. Thank you guys. Stay curious. Okay. Thank you. Bye everybody.
+
+Iannis 
+You're the best, man. Thanks a lot. Yeah, yeah, I want, I want, I want, I want, yeah.
+
+Iannis 
+Bye -bye.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes. 

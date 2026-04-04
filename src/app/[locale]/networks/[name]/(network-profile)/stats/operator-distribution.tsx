@@ -136,9 +136,11 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
         </div>
       </div>
       <div className="mt-10 mr-24 flex justify-end">
-        <RoundedButton contentClassName={'text-lg'}>
-          {t('distribution map')}
-        </RoundedButton>
+        <Link href={`/networks/${chain?.name}/nodes`}>
+          <RoundedButton contentClassName={'text-lg'}>
+            {t('distribution map')}
+          </RoundedButton>
+        </Link>
       </div>
       <div className="mt-16 flex">
         <PowerBarChart data={data} />

@@ -1,0 +1,575 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/josemacedo
+
+Episode name:
+Product Market Fit, Grannies and the Future of NFT's with Jose Macedo
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of Citizen Cosmos podcast. Today we have Jose Macedo with me. One of the co-founders or shall I say founder. I don't know the correct way. It's always confusing with that co-addition of Delphi Labs. Jose, hi man. How are you?
+
+Jose 
+How you doing man? Good to... thanks for the invite. Yeah, co-founder, because there was a few others involved too.
+
+Citizen Web3 
+It's hard these days, you get confused. I also call myself a co-founder because there was another person involved, but then sometimes you call a person co-founder and they get upset, man. So you never know these days. Man, first thing is first, you said just before we started the recording that you were just in Paris. I'm assuming the whole conference scene. How was it, man?
+
+Jose 
+Really? Damn, fair enough.
+
+Jose 
+Yeah, it was really good. Really energizing. Um, well, it was very draining, but also very energizing. Yeah. There's, there's, um, yeah, I'd say that, uh, in general, it seems like we have line of sight on crypto infrastructure, getting to the point where you can have really fast and cheap block space. Like in the next few years, you know, whether it's like modular with, with Celestia and the, and the kind of.
+
+Citizen Web3
+What impressed you?
+
+Jose 
+you know, sovereign rollup thesis or like Ethereum L2s themselves. Um, I think we're getting to that point where there's a line of sight on, on scalable, cheap block space. And so I'm excited to see what applications people choose to build on that. And that's probably the area that I think was lacking in Paris and in crypto generally right now is like some real applications. Um, it seems like.
+
+Almost everything people build is like an optimization or a slight improvement. It's either infrastructure, which is like badly needed. And we're arguably still in that phase where that's the main thing that that's needed or it's like small optimizations on existing applications that themselves have like questionable product market fit. So I think that's kind of like, uh, yeah, exciting to see all the infrastructure. Um, and a bit, uh, I wouldn't say disappointed, but like kind of.
+
+curious to see what people end up choosing to build on that, what applications people choose to build on that.
+
+Citizen Web3
+Nice, nice. I'm gonna ask you more questions with it. But before I go into that, just because I skipped kind of like the usual start and I'm gonna go back to that. Sorry, I know it was me, but I want to go back to this thing. So don't lose that thought if it's okay. But I'm still gonna ask you, first of all, to introduce yourself. Of course, I mean, I can do you an intro, but I would like you in your intro not to just talk about, you know, what you do for work, but mainly, not mainly, sorry, you choose anything you want to say, of course, and anything you talk about, but...
+
+Jose
+Mm-hmm.
+
+Jose
+Yep.
+
+Citizen Web3 
+what specifically you're working on right now, maybe as well as part of your work, and what excites you currently in your work, maybe as well.
+
+Jose 
+Yeah, yeah. So I'm Jose, one of the co-founders of the Delphi Labs and Delphi Ventures. So I joined crypto in 2017. Before that I was in my teens, I played like professional poker, played some of the highest stakes online. That was that was decently fun. Then I kind of stopped doing that and went to university, studied.
+
+politics, philosophy and economics, started a bunch of different businesses. Most of them failed. Some were decent and successful. One was like an e-commerce business that I exited and that ended up paying for my university life. And then another one was a martial arts academy. I got very into martial arts. I was always into like games in general, right? Like whether it was poker or martial arts or like football and stuff before. And kind of when I came across crypto in 2017, it was really like...
+
+at the intersect of all my interests. Like it was game theory and economics. It was like entrepreneurship and seeing the kind of businesses you could start on these rails. And it was also like, I had an understanding of like the payment rails just from building an e-commerce business. And like PayPal almost killed our business like three or four times, you know, in various situations of freezing our accounts and stuff. So kind of fell down the rabbit hole and then started.
+
+Yeah, at some point, like started Delphi Ventures and Delphi and Delphi is a research company. So I was writing research on a lot of different areas of the space and then did a fund where we tried to raise a fund in 2019 and no one would give us money. So us seven co-founders kind of put in a million bucks of our own money altogether. And yeah, we're now managing around 250 million across two funds, which is pretty exciting. Obviously, we got lucky and kind of...
+
+rode the wave right. And yeah, like in our second fund, it's a seven plus a bunch of employees and stuff that work at Delphi. And then there's Delphi Labs, which is the bit I'm mostly focused on, where it started off as Delphi's consulting arm. So we would work with protocols and projects in the space to help them solve problems basically. Like for Aave, we helped with their safety module design. For Synthetix, we helped with their risk asset framework.
+
+Jose 
+for Thor chain would help build their Midgard API. So ended up working with a lot of the top founders in the space. And from doing that gained a lot of kind of IP and built a really good team. And at some point we decided to build stuff and rather than just like consult. So we incubated Mars and Astroport, which were both based on Terra. Some people might know those. And obviously that initially went very well. And then went not so well, you know, as Gattuso.
+
+says, sometimes maybe good, sometimes maybe shit. That's really what it was. And so now that, but they're both relaunched, Astrophot's live on three chains, Mars is live on Osmosis and going live on Neutron very soon. So they both found their homes. And with labs, our focus is really on figuring out what the most interesting, like cutting edge of crypto applications is, and very much focused on applications rather than like infrastructure.
+
+Citizen Web3 
+Ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha ha
+
+Jose 
+and like trying to incubate teams that are looking to build there basically. So find the best entrepreneurs to tackle like the hardest problems in crypto, the hardest like application level problems in crypto.
+
+Citizen Web3 
+Man, that's a lot of things that definitely connect with me for sure. Like starting from what you started to, I'm curious about martial arts by the way. What martial arts do you do? What do you practice? I also do something every now and again.
+
+Jose
+I used to do MMA back in the day, but now I do just Brazilian Jiu-Jitsu. Uh, so yeah.
+
+Citizen Web3 
+Nice, nice, nice. I do capoeira and craft magas, so we should meet one day for... No, I'm kidding. Let's do it. Nice, nice, nice. You good? Thanks for watching.
+
+Jose 
+Oh nice.
+
+Let's do it. I've done a bit of cupware. Yeah.
+
+capoeira? Not too good. I can do some of the jenga and cartwheel around and I remember some of the stuff but yeah I'm not a great dancer I think so I kind of struggle with the rhythm of it.
+
+Citizen Web3
+Yeah.
+
+Citizen Web3
+Nice.
+
+Nice. Ha ha ha.
+
+Citizen Web3 
+But you know, this is actually a question I have, which is kind of maybe not that complicated, a simple question really. But, you know, what do you think? I mean, as somebody who you mentioned gaming and martial arts and you mentioned poker, of course. And I mean, it's kind of a known fact about poker players, you know, going into crypto as being good at mathematics and everything. I have a slightly different question on that. The same topic. Do you think that, you know, the whole thing of?
+
+fair gaming and honor from martial arts. Is that some of the values that you think we see enough in Web3 or is it something we should see more in Web3 space?
+
+Jose
+Um Good question I think amongst The people that we generally back and work with we see a lot of it I would say a lot of like deals that are that are done on trust a lot of teams They're really trying to build stuff the right way Yeah, I think we actually see like a good bit of it there is also like this is like kind of pioneer frontier tech
+
+So it attracts the worst and that's a lot of what makes the news, right? Whether it's FTX, you know, SPF, like and all the, all the madness of last year. But, I do think there's, and just generally like other stuff, people faking traction and, and doing all of this. I think in general we do see some of the, we do see a bit of that.
+
+We like the fair game approach and also to some extent cryptos about like designing games That don't require people to be fair in order for the for them to work Right where everyone can act on their own self-interest and that actually creates like a good result for everyone And I think the so like some level of exploits and stuff is like a natural is a natural Consequence of like these games trying to find product market fit right in a sense if your game gets exploited you designed a bad game
+
+Right. And I think like these systems are it's crazy. You have systems with billions of dollars in value that are completely open source that anyone can read the code and exploit at any time. And so over time these will be the most robust systems in existence. Right. Like the over time of not getting hacked these will become the most robust systems in existence. And so yeah. I think.
+
+A lot of the entrepreneurs in this space do have that ethos and are trying to do things right and I've seen a lot of examples of that, like stories that I can mention to people like doing what's right even when it's not profitable. But also I think to some extent crypto is about building perfect games that can't be exploited and so that being exploited and failing is just part of like the survival, you know, the evolutionary kind of dynamic.
+
+Citizen Web3 
+Here we go. I have a weird question for you then about exploits and WebTree because you mentioned ethos open source, you know, and this is something I can definitely connect a lot with. And I know how much of a stall it can sometimes be as well. Sometimes values and ethos can be bad for business, sometimes good, sometimes bad. But question on a slightly on the same but slightly different side. I mean, especially
+
+Talking about economical exploits, in DeFi we see a lot of them. The question is, how do you classify, I mean, would you say, for example, in a game, if a game was economically exploited, and sometimes those exploits, like, they're kind of part of the possibility of somebody who didn't see that, who designed it, and then another person came and exploited the tokenomics or the economics or whatever word you want to use.
+
+Can it really be called an exploit if they play the fair game? They just found something and saw something, a loop or anything like that, that the person who designed it didn't see, but the code was open source. Everybody could have seen it. So is it fair game or is it an exploit when somebody does that?
+
+Jose 
+I mean, it depends how you define an exploit. Normally, even the word means to make full use of and derive benefit from a resource, right? It's a software tool that takes advantage of a flaw in a system. So yeah, normally crimes in the real world, it's like there's rules.
+
+And you broke the rules, right? Like you're not supposed to kill people and you killed someone. Like it's very obvious you broke a rule. I think in these systems, it's a bit more, it's a bit more difficult because as you say, they're like open source systems, they make no guarantees of rules or legality. And so I think there's like a thin line. Yeah. I mean, I would say there's a line. I don't think it's very well defined, but I think like there's a difference between someone like phishing.
+
+like fishing your private key and like draining your wallet, which to me is like clearly a crime to like even the IV Eisenberg thing of like manipulating the price of mango and then and then exploiting mango. Like to me, that's it's much more because that's like bad. It was bad economic design that led to that exploit. Right. And obviously, like Avi could have just submitted a white hack bounty and which may be the moral thing to do. But but yeah, I think.
+
+Citizen Web3 
+course.
+
+Jose 
+Yeah, that's why I think actually like the bug bounty programs are so important. And like scaling those like almost more important than audits because they really give a path for because what you need to do is make the opportunity cost of hacking like higher, right? So like exploiting is difficult no matter what, like hacking a lot of money and getting it out of crypto is difficult. You're committing crimes, you get authorities after you, you have to figure out how to get the money out.
+
+So if you can give people an easy option where they don't have to do that and they can still submit the bug and the systems can improve, I think that's a lot better. So yeah, I think it's a thin line. I think it depends on the type of exploit and stuff. And also who's losing money, right? Like who's getting hurt? Yeah.
+
+Citizen Web3 
+In all honesty, I absolutely agree. In all honesty, I'm really surprised until today that I've only seen, I think, one example, and that was in 2017 or 18 of an Ethereum-based protocol that was offering internal audits within the community. So basically, it turned back Bounty into something that was used by the community pool. And this just makes perfect sense. But I'm surprised that until now, protocols still don't do it.
+
+Do you think there is like, what's in your opinion, the primary and the right, you know, like in brackets ways for protocols and applications, maybe even to improve security, whether it's smart contract security or, you know, tokenomic security or anything else, apart from, like you said, running a bigger bug, bug bounty programs. Is there any other things they should do or can do?
+
+Jose 
+Yeah, absolutely it's a huge I Mean, this is a huge area. It'd be like It would sort of be a podcast in itself But there's a lot of things you can do I think like obviously audits are a huge part of it But there's a lot of protocols that submit audits and then the audits come back and they're still making changes to the code after The audits came in, right?
+
+And you see this even with live protocols like people are emerging To to main and like while the protocols live and none of that gets audited So it's like just stuff like development practices and how like when you freeze code and stuff like that is super important Then there's yeah bug bounties like paying generous enough bug bounties given the TVL that's at stake Right and making it contingent on this on the severity of the bug as well. There's really good
+
+protocols for doing that now. And I think a lot of protocols are doing it. But yeah, and then there's also just like incident response. Like you should, every protocol should have a plan in case that they do get exploited, right? Like what happens? Like who is the person in charge? Who is gonna like, what are the steps that you're gonna take? You know, how do contracts get frozen? If they do get frozen, like all of that. So I think there's like, yeah.
+
+a lot you can, it's a whole subject in and of itself I think.
+
+Citizen Web3
+curious if you've seen any like considering, you know, with the labs and all the research, you must come and not just the labs, but you know, you have different branches, right of what you guys do. And you must come in an incubator as well. You must come at, you know, a lot of teams, a lot of things that you see. Have you seen anything innovative in the direction like a team that does something that was surprised you and you were like, Oh, my God, why didn't we think about that, you know?
+
+Jose 
+Mm-hmm.
+
+Citizen Web3
+or the opposite or something terrible that you were like, oh my God, what are you guys doing? You know what you would say, please don't ever repeat that in terms of security.
+
+Jose 
+Oh, things that we see in the security space? Yeah, we're always surprised by how bad... Yeah, unfortunately, on the... Yeah, unfortunately, I was... Actually, no, like, when you go to the... So, like, Gabe, our lawyer went to the White Hat Security Summit in Paris, which had, like, Sam Sison and some of the top security people in it. And that was actually surprising on the positive side, how much protocols have thought about their, like, incident response and things like that and, like...
+
+Citizen Web3 
+Yeah, yeah, yeah. Always have bad.
+
+Jose 
+The protocols that are being built to like simulate hacks and stuff. There's a lot being done, especially on Ethereum, Ethereum land, where there's kind of more at stake. Um, yeah, so there is, there are some teams that are, that are kind of going above and beyond, but in terms of like the, the base security, you know, like Unibot, it's like your, it exposes your private key in the app, right. And you have like contracts being changed.
+
+uh, for, for like protocols holding a lot of TVL with a single admin key. Um, and almost every protocol is a multi-seg of people that are just like anons online where you have no, no certainty on who they are and, and what happens if, and obviously like multi-chain, right, which had like 800 million in assets. And it turns out there was like an MPC, but all the keys were the same guy. Right. It's just like that meme of the guy with the mustache, the guy with the hat, you know, like the same guy with the, yeah. So it's like.
+
+I think there's a lot of, unfortunately, mostly surprise on the negative side.
+
+Citizen Web3
+Yeah.
+
+Citizen Web3
+It is surprising sometimes. I mean, sometimes you look at it like with multichain. Yeah, that was amazing. It was 800 million worth of money on somebody's computer. But man, let's talk a little bit about, I don't know if it's a topic that is something that is dear to you or not, but it's a topic that I guess is kind of popular to discuss in the crypto space.
+
+Jose
+Yeah.
+
+Citizen Web3 
+And VC money in distribution. And I know you guys are not a VC in the direct meaning of that word, but you're managing a quarter of a billion dollars or euros. I don't know you did mention if it was dollars or euros. I think you said dollars, I'm pretty sure. Which is a lot of money, so, sorry.
+
+Jose 
+Yeah, I've done this.
+
+Jose 
+Yeah, yeah, dollars. It's our own money. But yeah, we are a VC, I guess, in that in that sense. We just don't have external money. But yeah.
+
+Citizen Web3 
+Okay. So then, then I'm going to cut the water, you know. So what do you think about, um, you know, VCs or protocols selling a big chunk of, you know, distribution to VCs. Of course, protocols need to feed developers. They need to feed, um, the development developers. They need to feed anything to do with, you know, user acquisition, marketing, ta-da-da-da-da.
+
+Jose 
+Hehehe
+
+Citizen Web3 
+And then of course there is the other side of having a big chunk of distribution put into single hands who can of course, well, there is good actors, bad actors, neutral actors, and it's always hard to guess what is this particular VC going to do. So a lot of people are wary about those things. What would you say to that? Do you say it's something that has to happen or it's a part of the cycle? What's your reflection on this?
+
+Jose 
+Yeah, I think protocols need to fund themselves, right? Like you need a lot of the times you need to build quite a lot and that stuff isn't going to generate any value.
+
+Or like focusing on generating value is likely to make you less successful. And so you need some intermediate funding to get you to the, to the point where the thing is sustainable. Right. And so I think that'll always exist. Um, and will always be like necessary. And the question is like, who should, who should fund you? Um, I think VCs, uh, are, have, are much better than right now. The market thinks I think they're, they're like worse than maybe like
+
+two or three years ago when they were seen as, the VC stamp of approval was seen as like a panacea, but definitely better than what the market thinks now. I think VCs generally add, like if you go for the good ones, the tier one names, certainly they like add a lot of value, they know the space well, they can introduce you to people like exchanges and market makers and advise you on strategy and stuff. They've seen a lot, but they also have like,
+
+50 to 150 or 200 portfolio companies, right? And seven partners and you're one of 150. So like the time you get is gonna be limited and mainly they're providing you with capital and that's the way you should see it. I do think the SEC kind of created the VC market, right? By like making ICOs illegal. And so it kind of meant that teams had to go to go to VCs. And I do see a future where with Mika and stuff like that.
+
+We can actually reverse that a little bit and have, um, have like ICOs, uh, in a, in a legally enforceable, like in a, in a, in a compliant way, come back. Um, yeah. So I think it might change in, in future. Um, but VCs aren't that bad. Like I think VCs are generally, generally pretty good and like generally pretty diamond handed. Yeah.
+
+Citizen Web3
+I don't think this is bad.
+
+I agree with you. I don't think this is a bad, I think that a lot of the times this is something that gives you the opportunity to start the business or to feed the business in the right moment or to give you the right push. It's just a matter of more curious about your opinion. I mean, you guys also have an incubator, right? And you also incubate teams, right? Tell me about that. How does it work? How does it...
+
+Jose 
+Mm-hmm.
+
+Jose
+Yeah.
+
+Citizen Web3 
+But why did you decide to do it? You know what? Why did you decide to, first of all, why an incubator? Because it's a pain in the ass sometimes, a lot of the times, I can imagine. Why did you decide to do it?
+
+Jose 
+Yeah, it's a good question. We saw, we saw, there was something I was gonna say on VCs, but I forget what it was. It's all right.
+
+Citizen Web3
+Hehehe
+
+Citizen Web3 
+Sorry.
+
+Jose 
+Yeah, forget about the role. Yeah, I mean, I think in general, the best people to raise from are your users, like ideally, right? And that was the promise of crypto. And like, I think liquidity mining and stuff like that achieved that to an extent, but I think we're going to come up with even more aligned methods in future of how to, how to raise from your users or your future users, or at least to encourage the people who invest to become users.
+
+Citizen Web3
+About their role? About their role maybe? Or...
+
+Jose
+Like whether it's supply side or demand side. Um, and then on the incubator, really we, we came at it from a perspective of like, we like being deep in the, in the weeds, like where we, we like, um, kind of, you know, with, with venture and, and also with research, you can go pretty deep, but you then at some point you have to kind of like move on to the next thing. Right. There's a, there's like a lot of areas that you have to keep abreast on.
+
+Whereas with labs, it really gives you the ability to go really deep on a certain area that you're building in or that you're interested in. And so, and also we just, like we had worked with a lot of different crypto projects and startups and we gained a lot of knowledge and kind of thought we could put it to use and build stuff better. Like we worked with these teams and sometimes with consulting it's frustrating. People don't always implement your ideas.
+
+or that and you're like, you kind of want to get in there and just do it yourself. And I think that was the itch that we wanted to scratch with the incubator was really to be more involved in like actively building. And we thought it would also help us with venture and with research to like have that knowledge of actually intimately from the inside, how to build these projects. And it definitely has. Yeah, that's kind of why we started it.
+
+Citizen Web3 
+Would you still do it today if you knew that the other things are going to be successful? Would you still be going ahead with the incubation?
+
+Jose 
+Um...
+
+That's a tough question. I'm thinking about it, yeah. Yeah. Yeah, I mean, I've thought about it a lot actually, but like the, I think when we started the incubator, we started it for a very specific opportunity, which we were like super excited about. And now the opportunity that we're excited about is less clear and we're more in like a.
+
+Citizen Web3 
+You're thinking about it. It's good. That means there is a something to discuss. I like it.
+
+Jose 
+a research phase. I mean, first of all, we had to kind of like, complete the project that we were doing and make sure they were successful and stuff. And, and, and cause it's our name, our reputation associated to them. And we wanted to really like make sure they were successful. And now we're at a stage where it's like figuring out what to do, what we should, what we should really build next. And it isn't, there isn't this clear an opportunity at least right now for us, although there's some stuff we're really excited about, but it isn't as clear as when we started.
+
+Um, and so I don't know that I would start an incubator right now, actually. Um, I think I would maybe go out and try and, uh, like build something specific and just like invest in research until I find that thing that I'm very excited about, I think it's kind of the same with, with investing too, like most of the time. Uh, you want to like sit on the sidelines, right? And, and, and when you don't, I mean, obviously you want to have like.
+
+In general, you want to be positioned for the long term, but in terms of your trading or your opportunistic stuff, you want to sit on the sidelines until you see a really great opportunity. And I think I don't see a really great opportunity right now, a really clear one. And I'm sure they're out there. We just don't see it yet.
+
+Citizen Web3 
+It reminds me of when you discuss the most typical mistake of a professional trader on a desk. He's making trades. It's usually the most like doing trades for the sake of it. Oh, what am I going to do? I don't see any trades. Oh, let me go find some. And that's when that's where the mistakes that happen. Absolutely, man. And you know, it's something I didn't actually ask you at the beginning, which is something that every time you start to talk, I kind of think about it.
+
+Jose 
+Yeah.
+
+Jose 
+Hmm?
+
+Citizen Web3
+Because you mentioned in every one of your answers, you always go towards ethos in one way or another, which is very, very important, in my opinion. Why did you, I mean, yeah, of course, you know, finding champions, you know, making money, all good, you know, building projects, that's all great. But you didn't have that in mind, I'm sure, you know, when you decided to look at joining the Web3 space as a co-founder. I mean, what was
+
+Jose
+Mm-hmm.
+
+Citizen Web3
+What was the story? Why did you decide? I mean, I'll call it web three, you know, we call it crypto web three, whatever you want, why, and I'm not talking about the business side. I mean, what motivated you to what attracted you?
+
+Jose 
+Mm-hmm.
+
+Jose 
+Yeah, I mean, I'm just gonna, yeah. I mean, I was definitely, I was definitely interested in, in making money. Like, to be honest, like that was part of it. And I thought like I was doing businesses before and stuff and I saw a big opportunity here because I saw like.
+
+First of all, something that I was convinced was gonna be really important for humanity and for the world, for where everything was heading, everything I was reading, all the economics I was into and stuff like that. And second of all, which was something that really suited my skills and knowledge and personality. And I felt like it was really early and most people weren't getting it. Most people were kind of excited about the wrong thing. And I either thought it was a scam.
+
+Or they're just kind of like, yeah, I just thought there was a big opportunity. So that was part of it. Um, I think what keeps me around now is, yeah, because I'm not, I didn't, uh, well, I wanted to make money. I don't, I didn't have like, uh, sort of like, I didn't want to be a billionaire or anything like that. And I still don't like, I'm, I'm well above like the number that
+
+I had initially defined and I'm like very, that number didn't go up for me. And I'm like pretty happy with just having a, having a chill life and not having to worry about money too much. So that's not really the motivator anymore. Yeah. It's more so, um, I think actually like delivering on the promise of this tech. I feel like we've all made far too much money compared to like the impact that this has had so far. Um, and I think it's, and I think the impact can be.
+
+I think one day people are going to be very thankful that a bunch of DJs spent like 10 years building this. And yeah, for me that's, yeah, I mean, for me that's that you kind of see that already. It's like somewhat abstract, but you it's like, I see the world getting more and more de globalized, right? Like you had a century of the US being the world power and keeping everyone else in check as the global police force. And now you have a world where like there's
+
+Jose 
+China and Russia emerging in this like multipolar world order. Currencies are starting to be to be weaponized. You have like insane levels of debt to where it starts to be like existential to the system. If a lot of people opt out and you have all the conditions which crypto is built for in my opinion, which like self-sovereign kind of money and just self-sovereign data, right? Because money is just like a form of data.
+
+right, like a way to transfer information around. And so, yeah, I think that, and you've seen it like multiple times in history, like even this century you saw FDR ban ownership of gold, right, when that became existential to the system. You've seen, recently you saw like Kanye West get canceled last year, right? Like Kanye West got his bank accounts frozen and like he wasn't able to pay his bills for a bit because he didn't have a bank account.
+
+And like in the UK, Nigel Farage, right, a former prime minister, I believe, like he's, he got like canceled and in Canada, you had the truckers, their whole bank accounts got canceled because they protested against a government that they didn't believe in. Um, and, and like the, the States and companies have more power than, than ever, and I think with this technology, you can kind of really upend that, um, to, to a level where the individual has the power.
+
+And then the individual has the choice to delegate that power to the state or to a company for convenience, which they may want to do a lot of the time because it is convenient, right? And crypto is inconvenient. The crypto UX and memorizing your private key and stuff is inconvenient. But my general thesis is like, um, crypto hasn't been, crypto doesn't get adopted because of like a superior killer product, the way that like the internet had. It gets adopted. So it doesn't like pull people in. People get pushed in.
+
+because the current system stops serving them or becomes like coercive basically. Um, I think that's generally been the, like, that's why you have so much tether adoption in China and that's why crypto penetration is the highest in like Nigeria and Zimbabwe and Argentina, right? Where their financial systems don't work. And unfortunately, I think like every, in the current system that we're in with debt at these levels, there's really like no way to get out of this without.
+
+Jose 
+extreme inflation or extreme deflation, extreme pain and in a multipolar world order, that's going to lead to governments getting aggro. And I think crypto is like, yeah, yeah. So that was a really long answer. But yeah, I think crypto is the kind of solution to that.
+
+Citizen Web3 
+perfect. It's perfect. Perfect. The bank the banked out and unbanked the bank right not banked that bank the other way around. Let's unbank the banked.
+
+Jose 
+Yeah, exactly. Yeah, I mean, it's like giving everyone like a Swiss bank account, you know, and all the advantages that come with a Swiss bank account and like an offshore bank account, right? Because why do people put their money in Switzerland? Because they don't want anyone to be able to take it. And Switzerland before blockchains was the most credibly neutral place where like historically, no matter what state wrote to them, they never gave them your money.
+
+Right. And that's why they absorbed like all the world's financial assets and like private banking and stuff was born there. And with crypto, you have like something even more credibly neutral where you don't have to trust like the Swiss. You can actually just trust like cryptography and economic incentives and have your not just your money, but a whole financial system, a whole system of social media, whole system of identity built on these rails. Yeah.
+
+Citizen Web3 
+Oh, sorry. You know, it's, um, let's skip this topic. I like it. Um, I was asking in, um, if Lisbon last year, um, if Lisboa, sorry, um, actually quite a lot of, um, founders or co-founders, whatever, you know, um, the same kind of question. I mean, from, for example, steak fish, P2P, um,
+
+Jose 
+Mm-hmm.
+
+Citizen Web3
+Corus One, probably some of them, you know, and the question was more along the same question, was more along those lines, whether or not they think that what they originally, the reason they originally joined this space and whether they still think that the product they are building is actually affecting somebody's lives. Because, I mean, we talk about it all the time, all of us in this space, and I have been in this space.
+
+for a long time, you know, to do it myself personally and to fail at it personally, succeed, fail, everything together. But, you know, I'm curious sometimes whether my brain is so far from reality and people's problems, that my convictions and my beliefs and my, you know, values, ethos, whatever, are completely disattached. So this is the question I want to ask you, like, do you think that what you're doing today?
+
+You know, with everything we talk about, do you think that there are people out there who will or are benefiting already from that? And it's helping their lives.
+
+Jose 
+Yeah, it's a really good question. Yeah I like to think so, I hope so. I think that the first...
+
+Jose 
+Um, I think like, yeah, let me, let me, let me think about it. I think the first crypto killer app is, um,
+
+Jose 
+And yeah, it takes some time to think about it
+
+Citizen Web3 
+It's okay man, take your time. It's okay. This is, we can edit the, the borders are gonna be edited out. So don't worry.
+
+Jose 
+Mm-hmm.
+
+Mm-hmm.
+
+Jose
+Yeah, I think the way I think about it is like crypto right now is an extremely expensive database, right? And by nature of being extremely expensive, it can only serve very high value use cases, right? Which is why like NFT PFPs costing millions of dollars were the killer app, right? And, and token speculation and, and perps and stuff like that. Um,
+
+You those are like high value applications where people are willing to pay the high fees that you need to interact with the blockchain. And I think it's important to nail those use cases for there to be because like that's what then have takes us down the cost curve and funds the improvements and infrastructure and stuff like that makes it successful to everyone. And so.
+
+To me, the first like real killer app is, I've said this a lot, is something like a decentralized like FTX, right? Where you're able to speculate and store wealth and speculate on a bunch of different assets in a non-custodial way, in a very fast way that mimics a centralized exchange. And so people are able to kind of store their wealth on chain, like buy different assets on chain, including real world assets.
+
+borrow and lend, have their whole financial lives managed in like in one place kind of thing. And then obviously someone can build a payments thing on top of that and on an off ramp and things like that. And I think that app is initially most attractive to like rich people, right? And specifically like it's attractive to the crypto DJs themselves that have that understand this stuff that have made their money on this stuff. And then it's sort of like, like
+
+the you think where's the rest of the adoption going to come from? And so I think it's you have these rich crypto degens on chain that store their wealth here. They know the tech. They don't want to have to interact with the banks who ask them like 10,000 questions and blood type before they can use them and like have banks in different countries and stuff. They just want to have crypto and will interact with a bank if they need like a house or mortgage, but everything else is going to stay in crypto world. And so to some extent.
+
+Jose 
+then it's like you're going to have, uh, I think two things. You're going to have more and more people launch tokens because over the last five years, so much money has been made with tokens that for any, uh, this is like the cold hard reality is for any ambitious, smart, young technical person, they're going to heavily consider to doing something where they can launch a token or attaching a token to something that they're doing. And so that brings more and more like intellectual capital and wealth on chain in itself, like natively.
+
+And then at the same time, people that have like traditional assets, real world assets are going to see this giant market on chain of like stable coins that are literally on zero yield and are going to say, let me bring real world assets on chain. Right. Let me bring my treasuries on chain or my real estate on chain and stuff like that. Right. And that drives more and more like assets and liquidity on chain. And then I think as the infrastructure.
+
+scales and improves, then you start getting more of like the low value or relatively low value use cases like gaming which is one that we're particularly excited about because gaming is Like internet native right all the assets are digitally native So you can you can have them like run on blockchains in a very seamless way and there's a lot of different kinds of games That we're excited about I also think like NFTs will be a big thing, but not just like high value ones, but also like anything like any
+
+If you think about like most things in the world are NFTs, actually. Like there's a very small thing, like, like subset of things that are actually like fungible. Most, most everything else is NFTs. I mean, I think there's like a lot of opportunities in things like, uh, collectibles, but also like identity itself moving on chain, right? Like right now, every time I buy a flight or, uh, interact with some online service, I have to like fill in the same, like annoying.
+
+like email, phone number, all of this. And then it's also like you're logging into something again and you have to do it again and do your authenticator. And not only is it a pain in the ass, but it's also like my information sits in like thousands of databases all around the world, right? And there's like much better ways for that to work with ZK and like there's companies like Sysmo that are doing it, right, where you're, you.
+
+Jose 
+you don't have to give anyone your identity or you have to give one person or one entity your identity and then you can just produce a ZK proof of whatever attribute people wanna find out about. And then from there you start having like social, right? You have identities, you have assets, you have like the basis of social. And I think social starts with social trading because that's already an app. Like it just happens without an app on crypto Twitter, right? Like most of what people do on crypto Twitter is shill coins to each other and.
+
+and follow each other based on what they're investing in. So I think someone will nail a product for that where you can like copy trade and do like spin up funds very seamlessly and stuff. And then that starts, you start getting clout based on your like verified on-chain trading score. And then more social applications come from that, right? And then you have like identity, you have social, you have gaming, you have a financial system. And then like at some point payments will happen too, right? You have social, you have all this stuff, all the basis for it.
+
+crypto scalable, you'll have, yeah, like payments. And then I think you can start, and then I think with all this, like decentralized infrastructure will have to exist because it needs to facilitate all this stuff in an unstoppable way, right? So you'll need to have decentralized front ends and decentralized back ends and decentralized DNS and all this stuff kind of exists because it needs to support all these user applications. And yes, I think that's kind of how it like unrolls.
+
+for me in the, but yeah.
+
+Citizen Web3 
+Makes perfect sense, man. I understand where we're with the line of thought here from this point to unrolling how it helps, of course, in a lot of in a lot of ways, I guess that one of the most simple example of non third party interaction between humans is actually betting or speculation. We talk about the weather, we talk about the match, we talk about the
+
+Jose
+Yeah.
+
+Citizen Web3 
+Where is it best to live? What is it best to eat for breakfast? And we always disagree. It's always a transactional kind of, you know, situation. Oh, how was the weather? Well, I don't know. I think the weather tomorrow was going to be good. So it's already kind of like in there in between our interaction. We just don't really think about it like that. But, yeah, so I totally see your line of thought here. Actually, I want to ask you about adoption, because you talk about it and you mention it like a lot. And what in your opinion has
+
+has adoption for crypto? Has it happened already or are we still waiting for it? I'll tell you why I'm asking that because in my opinion, and this is again an opinion and a question of what you think about it, your reflection on this opinion, like I think that adoption kind of happened with NFTs, mass usage hasn't happened. Mass usage is still far away from coming. You mentioned Argentina, Nigeria, a lot of other countries that struggle with the economy.
+
+And of course the usage there is much higher, but then we have the more developed in brackets countries that have a more complicated economical regulator, a more strict economical regulator where the usage is not as high. But it seems that everybody since the whole NFT things for the last two years, it seems that everybody knows about crypto. So has adoption happened or it still hasn't?
+
+Jose
+Yeah, it depends how you define it. I think there's, like when I entered in 2017, there was, or like maybe 2017 is a bad time, but definitely in 2018, people would never think that we...
+
+we got to where we are today, I think. Like I remember people saying that you'd never have a decentralized exchange, you know, there was just ether delta, this like clunky on-chain order book, and you're never gonna have a decentralized exchange, it's impossible, you're never gonna have like a decentralized lending, you know, the only use case is BTC, all this stuff. Now you have decentralized credit protocols that out-survived all their centralized counterparts, right? Like in 2022, every single centralized custodian bank,
+
+went bust and Ave, Maker and all the others plugged along fine. Right. So like, and now you have like Uniswap, uh, some days in, in the last few years has done more volume than Coinbase, right? Like on chain exchange doing more, more volume than, than Coinbase. And you have over a hundred billion dollars of stable coins on chain. Uh, you have a bunch of people that prefer to hold stable coins than, than fiat cash, right?
+
+Um, and not just prefer it, they're willing to give up on like 5% yields to just hold it on chain, uh, which shows how much they, they value the money being on chain, right? Whether it's because it's theirs and it can't be rubbed as easily or because they can have access to more investment opportunities they're interested in, whatever it might be, there's clearly like utility there. And that is like the use case of this stuff is, is a non, um, it's like a censorship resistant database, right?
+
+So if people are choosing to put their data on the censorship resistant database, uh, there is adoption and you can see it by the fees people are willing to pay to access Ethel one and stuff like that. Um, it now I think like, obviously when you talk about like mainstream adoption or like a killer app that everyone uses, uh, that hasn't happened yet. Um, I'm not sure that will, uh, happen honestly. Like that's my.
+
+Jose
+Like I think there will be some runaway successes, especially like in the gaming space. I think there's going to be at least like one or two, um, like runaway successes that become mainstream games where people are using crypto without even knowing it. Um, but I think. Yeah, I'm not sure we will have like a killer app in the traditional sense. Uh, like the pushes mainstream adoption. I think it'll happen relatively. Um,
+
+I think it will happen in tandem with the traditional financial world disintegrating to some extent.
+
+Citizen Web3 
+Actually, the first time I think it's one of the first times I speak with the last five or six years in crypto with somebody who has the same opinion on me about adoption. I think that adoption will happen when people say, oh, when will my grandmother use crypto? My answer is when you will become the grandmother. That's when everybody will be using crypto. This is like... It is.
+
+Jose 
+Yeah, yeah, definitely this grandmother obsession is a little bit weird. Like, you know, like my grandmother doesn't use like Uber, like she hardly uses the internet, you know, like what like it's, I don't know, like grandmothers are never going to use crypto, like even our parents are probably never going to use crypto. And that's fine. Like, yeah, that's, that's totally fine. And I think this stuff will be used by the wealthy first, by people who have a need to protect their wealth. Yeah.
+
+Citizen Web3 
+Eh.
+
+No.
+
+Citizen Web3
+Absolutely.
+
+Citizen Web3
+Absolutely. Do you think that... I have too many questions for you to be honest, but you say a lot of interesting things. Let me ask you about Bitcoin before... Wow. I don't know how the time... Whenever you have an interesting conversation, the time always seems to just finish in 10 minutes instead of one hour. But let me ask you about Bitcoin. We talked about use cases in Bitcoin and block space and you are...
+
+It's not very often that the conversation starts with somebody talking about the price of block space. And I purposefully didn't go there at the beginning, but I'm curious, like, what's your opinion? What's your take? What's your personal take on Bitcoin and its current use case? It's does it still have? I mean, a lot of people, let's put it this way. I don't want to like I'm going to give you something negative, something positive. So something negative is a lot of people say that, hey, you know.
+
+Bitcoin is the only coin, but does it make sense? Because we're trying to build a decentralized world, right? So the kind of one religion thing kind of loses all objective. On the other hand, as much as somebody might hate Bitcoin, we still, when we go to the markets, we still see that crypto is still sitting on top of Bitcoin, all the liquidity, not all of it, of course, but at least 40%. So what do you think about Bitcoin and its use cases as a possible future development?
+
+Jose
+Yeah.
+
+Jose 
+I'm, yeah, I'm probably like that my peak bearishness of Bitcoin was like before originals where I like, it just seemed like Ethereum was the better Bitcoin to me in kind of every way. Right? Like, Ethereum, like, because the whole argument with Bitcoin is it's like the meme, it's, it has this like fixed monetary policy, which, which like, at that stage wasn't sustainable.
+
+And it's number one, right? But there's no like fundamental reason for that to be the case It's just like a kind of a reflexive meme, right? And to some extent you could imagine like a world in which Bitcoin becomes number two and if there surpasses it like it would quickly become number three number four number five because it's the Part of the meme is being number one right being the most recognizable the most liquid the most valuable all that kind of stuff and I really like
+
+I thought like the theorem was kind of like, especially with the merge happening, it had like the burn narrative, it had a native yield, has a bunch of applications building on top of it, some kind of fundamental drivers, it became like a better store of value. But I still like, I think that's changed, first of all, with inscriptions, which have shown how much people value Bitcoin block space, right? Like to put whatever on it, whether it's NFTs, like coins, random things, like it's clear that
+
+people really value Bitcoin block space. And I think that just shows how much like a potential alpha there would be in the Bitcoin core devs moving a bit quicker to enable applications and stuff on top of it. And so the sustainability thing for me is like less of an issue now because it feels kind of clear that if they did come into a situation where they needed to like open the flood gates, there would be a lot of demand for that block space.
+
+Yeah, I'm still much more of an ETH-ful than Bitcoin. I hold much more Ethereum than Bitcoin. But I think it's hard to argue with holding some Bitcoin and the meme value of Bitcoin as this uncorrelated asset. It's the thing that everyone's heard of. And also with this recent discussions of the Ethereum Foundation kind of changing the monetary policy because of LIDO and stuff, it sort of plays into everything. I think that'd be a huge mistake.
+
+Jose
+and it would definitely make me more bearish Ethereum and sort of plays into everything that the Bitcoin people say, right? The Bitcoin doesn't change and that's its value. Yeah, so I'm more bullish Ethereum, but I'm definitely, definitely like if my, for my normie friends, I say like buy some Bitcoin, buy some Ethereum. And then if you want to go out on the risk curve more, maybe some Solana or something.
+
+Citizen Web3 
+Nice, interesting. I gotta say, I'm not a Bitcoin fanboy. I gotta say people, I've been a long time, but this is a personal thing. It's not... I'm gonna ask you one last question before the Blitz. How and again, this is something I think that you will probably have a good take on, man. What's your opinion on...
+
+Jose
+Hmm.
+
+Citizen Web3 
+How do we cure tribalism then? I mean, how do we, I think in my opinion, one of the biggest problems I've seen in crypto space and Web3 and it's actually the complete illogical, it's the most illogical thing, tribalism, because the whole point of decentralization is to kind of, I guess, to avoid it, right? To skip that, but then, you know, we see traction, of course, the network effects we see in Ethereum, we see the network's effects on Bitcoin, but.
+
+There are some other projects like Cosmos, Solana, Nier, Polkadot that are getting certain traction. But still the tribalism keeps growing, growing. And how do we cure that, man? How do we get all the projects to get the same amount of traction? The blockchain, crypto, decentralization, to get that traction and not individual projects? Or is that something out of the fantasy?
+
+Jose 
+Yeah, I think it's gonna be tough. I think humans are naturally tribal. They get tribal about everything, right? Look how tribal people get about 11 or 22 random people kicking a ball into a net. The amount of deaths that people...
+
+have over that when they have literally no financial stake in it, just an emotional stake for something that isn't theirs either just passed on to them by their parents normally right or by their culture. So I think when you have that plus the financial incentives, you're going to have some pretty intense tribalism. I think it's really hard to avoid. I think the good thing about, I mean, and to some extent it's useful.
+
+Jose 
+good post about this, right? Like tribalism kind of protects, is what protects a community from getting corrupted somehow. They're like the high priests that try and protect the community from getting corrupted. But I think it's like, for me, it's just not my thing. And it's not the thing of anyone at Delphi really. We like, first of all, we're not zero sum about this stuff. Think a lot of them will succeed. And second of all, it's like probabilistic, right? Like we just, you just don't have enough.
+
+I don't, anyone has enough information to say with 100% certainty that this is the way things will play out. So you just have to make like a bunch of different bets in my mind.
+
+Citizen Web3 
+Breaded entertainment, I guess is the answer. It's always been about watching some guys beating the crap out of each other or kicking football or anything like that. Okay, man. So Blitz, three questions you can answer very quickly. You can answer slow up to you. They go down. The first one, easy, especially for you, should be very easy. Three projects. Doesn't have to be crypto, by the way. It can be completely outside of crypto.
+
+Jose 
+Yeah.
+
+Citizen Web3 
+that you think are technologically exciting today. Three projects, or could be three branches of technology or something like that. Could be crypto projects, anything else. Could be football teams, doesn't matter.
+
+Jose 
+Hmm. Okay. Um, I think all the perps non custodial centralized exchange type stuff in crypto is really exciting, like do IDX vertex Mars, GMX, and so all that stuff I find, I find pretty exciting. I think that's like, yeah, maybe one area, obviously AI, I find really exciting. Also, I applied to crypto I find I find really exciting.
+
+with regards to, because a lot of people have talked about distributed compute marketplaces and verification and stuff. But I think one thing that hasn't been talked about as much is just like the UX, um, sort of the chat UX for crypto. You're kind of seeing it with like Unibot that people, that's like a much simpler UX than using Metamask or anything like that. So I think the idea of being able to just talk to have a chat bot, you go like stake my eat and Lido and then like deposit on Aave, borrow some, do this, you know, is much simpler than.
+
+Because I don't think people will interact with apps in future with apps I think they'll be either through a dashboard or do something like AI So that's probably another one and then one that I've been like really excited about for years I'm gonna have it could have user of his VR The are in like AR Yeah, I'd be like VR is my main gaming platform right now like I play I play a first-person shooter in VR and it's awesome like
+
+Citizen Web3 
+Nice.
+
+Jose 
+And I think it's gonna be like an incredible medium for gamers. So like, yeah, I'm really excited about VR.
+
+Citizen Web3
+I had actually a lot of UX questions for you, but I skipped them because, like I said, I could have UX related questions. Like I had some, but I skipped them because I thought, well, next time, but it's just impossible to fit everything into one hour, man. But have you ever, by the way, about VR, have you ever tried putting a drone in the back of you and in the VR camera, what the drone sees at the back of your head, and then you can walk like a 3D shooter?
+
+Jose 
+A lot of what questions?
+
+Oh.
+
+Jose 
+Mm-hmm. Yeah, man.
+
+Jose 
+No, I've actually never tried that. That's crazy.
+
+Citizen Web3
+Try, your brain will go crazy, man. The first 30 seconds, your brain will refuse to move. You will not understand. Your like body goes, what's going on? Like, why is it doing this? And then after the 30 seconds, you kind of understand, okay, I just need to follow the, it's pretty cool. Okay, second question. Give me two motivational things that keep you going in your daily life, building, researching.
+
+Jose 
+Damn.
+
+Jose 
+That's crazy.
+
+Citizen Web3 
+incubating, investing, and so on and so forth.
+
+Jose 
+Um, okay. One of the, one is probably just like the brotherhood that I have with the other founders, like we did this stuff together. We really came from, from nothing. Like we, we had no investors. We had no like outside older people outside help. Like it was all us doing it. So we've been through a lot together and we've been, we've been through a lot of ups and downs and like, I really love them. They're like my best friends and co-founders. So that's like a really.
+
+It's really nice to be able to build something really cool with, with your friends like that. So that that's really motivating. Another motivational thing that keeps me, just, I guess the feeling that like,
+
+Jose 
+It sounds so lame, but just keep showing up, right? Like I've been through enough stuff, not just here, but in life to know that, yeah, you just kind of keep showing up. Like if bad stuff happens and you're gonna keep showing up and keep trying to fix it, like eventually you'll get to something. And I really trust myself to kind of keep showing up for stuff, sometimes to a fault, I think, but yeah. That's...
+
+Citizen Web3 
+I don't think it's lame, man. It's really cool, man. It's actually a really good answer. It's original and... and honest, I think. It's very, very honest. Okay.
+
+Jose 
+Yeah.
+
+Jose 
+Yeah, and crypto especially you need that like crypto is gonna bring you to your knees a few times over your yeah
+
+Citizen Web3 
+few times is a good count. When you get to five or six, you stop counting. So it's okay. So there's a last question of the Blitz. Give me one person, character, real imaginary writer, developer, movie maker, book author, book personage. Doesn't matter. Could be family member. One persona in life that inspires you. Not your guru, not your idol, but inspires you.
+
+Jose 
+Yeah, yeah, exactly.
+
+Jose 
+Mm-hmm. Hmm.
+
+Citizen Web3 
+or has inspired you at least.
+
+Jose 
+Mm-hmm.
+
+Jose 
+you think.
+
+Jose 
+Well, the one that comes to mind, and it's sad because he hasn't inspired me for a while, but he inspired me a lot in my younger years, was Conor McGregor, like back in the day. Yeah. Yeah, like I just, he, like, I was very, it was like, he was coming up at the same time that I was getting really into the sport. And he had like a, just a beautiful style.
+
+Citizen Web3 
+Conor McGregor. Okay, nice, MMA, okay, okay.
+
+Jose 
+And the combination of his style and the shit talking and the confidence and watching that whole thing happen. Jose Aldo, yeah, it was just an insane time in my life in an MMA and it was super inspiring. It was crazy to be able to talk that much shit to people that are trained killers and then show up on the night with everyone rooting against you and perform. He was super impressive.
+
+And like his confidence was super, super impressive. Yeah, it's, yeah.
+
+Citizen Web3
+Have you ever seen him do a mello de compas? I've seen him do it on the capoeira kick. I've seen him do it on... Nice. Yeah, he did. Nice. Nice, cool, man. Man, we could carry on for another hour, probably, for sure. I would love to. Man, thank you very much for all your answers. This has been really, really pleasurable. I don't know. I was still like... I think I went through like...
+
+Jose 
+I have, yeah, yeah. He did a bit of capoeira with Floyd as well, back in the day. Yeah, he's into his capoeira, yeah.
+
+Citizen Web3 
+15% of the questions I had prepared for you. And, uh, yeah, no, you are perfect, man. It's, it's more of a, you know, when you get carried away into the topics. And I was like, but anyways, again, thank you very much for joining. Thank you very much for coming and everybody who tuned in. Thank you very much for listening. And, um, yeah, man, see you around the space and maybe even.
+
+Citizen Web3
+with us again sometime of course if you find the time. So thank you.
+
+Jose 
+Absolutely. Thanks very much, man.
+
+Citizen Web3 
+Thanks everybody for tuning in. 
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.
+

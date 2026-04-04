@@ -3,7 +3,7 @@ import { Abi } from 'viem';
 import logger from '@/logger';
 import { GetProposalsFunction, ProposalsResult, ResultProposalItem } from '@/server/tools/chains/chain-indexer';
 import {
-  contracts,
+  getContracts,
   getL1,
   governanceAbis,
 } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
@@ -85,7 +85,8 @@ const getProposals: GetProposalsFunction = async (chain) => {
       return result;
     }
 
-    const contractAddress = contracts[chainName].governanceAddress;
+    const l1Contracts = await getContracts(chainName);
+    const contractAddress = l1Contracts.governanceAddress;
     const abi = governanceAbis[chainName] as Abi;
 
     const client = createViemClientWithFailover(l1RpcUrls, {

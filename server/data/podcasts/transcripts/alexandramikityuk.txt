@@ -1,0 +1,411 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/alexandramikityuk
+
+Episode name:
+Avoiding Burnout, Forest Bathing and Discovering values with Prof. Dr. Alexandra Mikityuk
+
+Citizen Web3 
+Hi everybody. Welcome to a new episode of the Citizen Web 3 Podcast. Today I have Alexandra from Stax with me today. Alexandra, hi, welcome to the show.
+
+Alexandra
+Hi, very happy to be here. Thank you for the invitation.
+
+Citizen Web3 
+Of course, we met together in Berlin in Berlin blockchain week and you were giving a talk which in my opinion was was very impressive. So I couldn't miss the opportunity to hear your thoughts and everything else. But before we get into it, can I please do the traditional thing ask you to introduce yourself for me, the listeners, what you do, how did you get into Web3 and anything else you want to talk about?
+
+Alexandra 
+Sure, sure. I would just start exactly or jump into where you started, I'd say, at the Berlin Blockchain Week. And I was there presenting what my company is doing. So I am one of the co -founders at Stacks, GmbH, it's a German entity. And I was presenting our work. It was a great event.
+
+and I always enjoy these blockchain events in Berlin. It's a great infrastructure and ecosystem. And so, yeah, I'm one of the founders. I'm the tech lead and the execution officer, basically doing the CEO and CTO roles at the moment. We are doing this already since 2017, so for quite some years.
+
+And as we also discussed, I'm a professor for cryptography network security at the university in Flensburg. This is a little bit further away from Berlin. So it's a couple of hours to the direction of the Danish border. That's like, you know, up in the north. And how did I get into crypto?
+
+I would describe my journey as being extremely lucky. I think there was somewhere the sentence of, I guess, 95 % of the success just being somewhere. So I truly believe it's the case. And 2012 up until 2017, I was doing my PhD in computer security here at the Technica University of Berlin. And I wasn't necessarily dealing with crypto.
+
+I was actually looking into hardware platforms and how you can store the key materials securely on a hardware platform. And in parallel, I would describe this crazy times as there was no chance that you can bypass crypto because any event you go, right? Any meetup you are, everybody was talking about this. And in the beginning, it just like, you know, this crazy conversations like, you know, there is this kind of new thing and
+
+Alexandra 
+and it will change the world. And for us, we were very young, and not only young, but also the time when you already have some capacity to do things. So I guess that that's been an amazing time. And even though I'm now doing more, or what Stacks is doing, right, focusing more on the deep in space of things, I am what not so many people actually know that I'm like.
+
+the natural product of like OG crypto world in Berlin. You know, like the other day I visited my friends at Satoshi Pay in, I think right now they have their office in Kreuzberg. And I just like, you know, I like this new trends and newcomers. However, I really enjoyed this. And I just remembered this good old days in crypto and we did have less regulation back then. And it was...
+
+It was different, right? It just was, I mean, you also know this, it was just a different vibe. And so, yeah, and I, you know, I got into this, I learned how this can change the world. And I took kind of my part out of it and my perspective, what I have really enjoyed and connected to my passion of creating the real machine economy for the future. And yeah, so in 2017, I was kind of always working also as part of my PhD with Deutsch Telekom.
+
+and they were so brave that they actually launched the first in the world back in the days, it was 2017 blockchain lab. And they were looking for a person that would jump into this and create a product and build a team. And I was like, this is a great opportunity for me, and just jumping into something completely unknown. And this is how we started the journey. And since then, lots of things happened and that's how we met in Berlin.
+
+Citizen Web3 
+It's cool story. I'm going to dig it a little bit because there is one the first thing I have is like, how do you live because you're you're a CTO, you're a CEO, you're a professor at a university, you like like, how do you breathe? How do you eat? When when does that happen?
+
+Alexandra 
+Sure.
+
+Alexandra
+I like that cool question. So I guess when I also reflect on it myself, that seems like a lot. It's, you know, and I get this question asked a lot and slowly I have just one answer. I really love what I'm doing. And I...
+
+Everybody talks about it, right? Like, you know, make your hobby to your job and you never have to work. It just like, it really works in a sense of you, you actually get re -energized through what you do. Like every great conversation, you know, we met and now me doing this podcast, I actually don't, don't see it as my, as my job, right? Because it just so, so cool, you know, talking about this technology is changing the world and it's very,
+
+It's very fulfilling in that sense. So I guess this is it. And I think that you get into very efficient modes when you, like for instance, right? What I teach at the university, it's also what I deal with every day. So I can also bring very, I would say new trends to the students and also sometimes actually, which is really interesting, some things that they ask me.
+
+bring me, you know, in my kind of work to other aspects of which, you know, the question that I would never anticipated myself. And I'm like, yeah, that's true. That's, you know, let's think about it. So I guess kind of this mixture and also what really helps me is the switch, because if you do different things, it's also very, it feels like you are resting, right? Because you just do a different sort of, of the job piece. And also,
+
+I guess, you know, my job as a CEO, fundraising, sales, partnerships, you meet a lot of people and it just, it became my life somehow, right? So even today we're going to be doing also later on some AMAs on Twitter spaces and, you know, meeting these people, they're all my friends and we discuss these topics also, like, you know, somewhere over, you know, a coffee cup or something. So it's just like, it's really cool.
+
+Citizen Web3 
+I'm totally with you on that. Yet I'm going to play a little bit devil's advocate because I tell you why. Because it's a topic that we talk about sometimes on the podcast. It's not like over the past four and a half years, I think there have been a lot of people who are like yourself, who are like heads over heels in what they do, they love what they do. I myself like that. Yet the topic I think is not touched enough. And the topic is like...
+
+Alexandra 
+Right.
+
+Alexandra 
+to this.
+
+Citizen Web3 
+Man, like even, you know, I'm going to give it from a different angle. I don't know if you remember or if you heard about this in management schools a long time ago, especially in the Eastern part of the world, what they used to do was like a trick question. And the question sounded something like this. You have two, you have a task, you're a manager, you have a task to do, and you have two workers, one which is head over heels with his work and he can barely do anything. And you have one that...
+
+doesn't really do anything, who are you going to give a task to? Of course, everybody says to the second person, the correct answer is to the first person, because he's already in it and he will do it. Now, that's all cool fun and games, but and I understand loving your work, but you know, like, why? Where is where is the goal? Where where is like, where are you heading? Where are you going to say? And it's not about so much about Alexandra, I mean, in general, right? Like
+
+Where is the point where you say, okay, it's enough of what I achieved of whatever it is I'm doing. And as a person, I'm fulfilled and I want to be in this place and not carry on bringing onto myself more and more and more. And I know it's a devil's advocate questions. I'm not saying it's not like it's a better good thing, but I'm curious if you ever thought about anything like that.
+
+Alexandra 
+Yeah.
+
+Alexandra 
+Sure.
+
+Alexandra 
+That's a very interesting question. I guess I would just say what I also learned throughout my journey, there are just different people. So some people want to kind of get into the state of, you know, settling down in a sense. And I guess for me, you know, I was just...
+
+you know, maybe my background, we are connected a lot to this, they're called futsal, that's actually the mounting people in the western part of Ukraine, right? And I was Googling, what is it actually? And I think they are nomads, in a sense. And I guess maybe this journey piece makes me happy because you always kind of, you're always not like looking for the next thing, but they also say in German,
+
+the way is your goal. So you're actually, or you know, they also say the one that loves the path will get further. So I guess I don't see this journey in a sense of there will be something final and then I can settle. It's just, I guess, the general connection to my personal goals because I also do a lot of that's again, right back to your question, a lot of meditation and self discovery. And I think this is
+
+the only way and I kind of feel people don't talk about it enough because there is a lot of information, a lot of books, a lot of, you know, what's the next thing like in crypto? It's like, I may be a little bit different from the people that are in crypto because I feel it's very driven by like, you know, what's the next, what's the fastest, what's the coolest, right? And my journey was more focused on really discovering within you the things that
+
+are your values, are your goals. And I really want to create efficient future for us from the system perspective. Like I really want this, you know, cars and charging stations do the work for us. Like I don't want to be bothered by all this, you know, thousands of applications and management because our life is really complicated already now. And I really want to make it happen. And I just know it's a long journey.
+
+Alexandra 
+from, you know, I get this question asked a lot by investors, like, you know, how is it possible to do? And I guess, you know, my strength is just like, you know, you set yourself ready for this long journey. And you just alongside this journey, enjoy this amazing things like talking now with you sharing the experience, you know, and all this thing. So I don't see this really as I will get somewhere one day.
+
+but rather enjoying and also of course, taking time for myself. I'm not working 24 seven, of course. I'm having amazing friends, just 23, exactly, exactly, exactly. And I guess, you know, also another life hack that really helped me, I read it in this book, like habits of highly efficient people or something, seven habits of highly efficient people. And there was this really cool thing with priorities and I did like,
+
+Citizen Web3 
+Just 23 hours. I'm sorry.
+
+Alexandra 
+prioritize my family and friends first. So for instance, if something happens, I don't have a job. Like I'm all yours for my friends, right? And this is also how you get rooted in the real life. You're not like completely somewhere in crypto that, you know, like you lost the connection to the real life, et cetera. And this also means a lot to me. And this is, and I actually counted as part of my job in a way, right? Because if...
+
+I can't really be mindful connected to my surroundings. I can do my job nicely. And so I guess that's kind of all together. That's the way that I found. And also in a company, you also have lots of flexibility. We have an amazing team and we actually establish rules and stacks where I can't do certain things. I can actually openly call my co -founder or...
+
+anybody who's working in the team and be very open and say, I can't get up today. Can you please do this call for me? Or can you please, you know, take over the speech there? And, you know, it works somehow. It works. Yeah.
+
+Citizen Web3 
+guess if you were to advise founders, anybody, because the podcast audience is for the last years, it has been focused on CTOs, on developers, on founders. And if you were to advise against burnout to people who are
+
+especially in crypto, what would you say to them? Don't do or do in order not to get a burnout. If you're just starting your web three journey or your dipping journey or whatever, it doesn't matter in this case.
+
+Alexandra 
+Right, very grateful for this question. I actually went through this phase myself when I was, I guess, I don't remember. I think it wasn't even called a burnout back then. I was, I think, 21, 22. And after going through this,
+
+I am actually also very mindful inside my team and I'm like maybe some of my colleagues are stressed already by me and like, Alexandra, just get away from us with your burnout. We are fine. However, I spend a lot of time thinking of how not to get into this space again because I honestly wouldn't advise it to anyone. Like getting out of this space, that's a nightmare. So please, everyone who is listening,
+
+to this right now. I will share my thoughts on it. It's really real. I wanna really make a statement here. It's not fun. It really happens. And we have to all be careful and also with our friends and people that we have in our surroundings that they really take care of this balance. So I think personally what...
+
+can lead to these things. I would say what I think currently is that the root problem is not being connected to your values. And here that's why I think it's important to understand yourself and what you are standing for. And like for instance, if you work with someone who is acting differently,
+
+Like for instance, this person likes to do a business in a way that they burn the bridges and right like there are people that may scream and like, you know, say everybody is a bad person, etc. And it doesn't work for you. And you go along this journey and you are in this energy and you are kind of in this right you doing this with them. This is what I think it's the
+
+Alexandra 
+first thing which you have to be really careful about. And I think we're all responsible and here is important to take responsibility for yourself to actually change this. Either have a conversation or transform the situation or whatever solution is there. Because this is what I felt. Like as soon as you are disconnected from your own self, from your own beliefs, it can be a city that doesn't fit you.
+
+right? Because the mentality is different. It can be a country that doesn't fit you. It can be a company that doesn't fit you. It can be a partner that you will kind of slowly disconnected over time, right? It can be friends that you don't feel any more connected. So all this thing actually put pressure on you because you like every day betray yourself. And all of this accumulates in this very unhappy in a way lifestyle. So
+
+being, you know, the answer is here, being honest with yourself and saying, okay, is it something that I'm standing for? Right? Is it something that I love doing? And so I guess this was the core that I could identify for myself. Of course, you know, you're going to hear like, you have to sleep, you have to have the balance. This is all very important. Again, meditation really helped me because, you know, you get into crypto, you go crazy because your mind is always, you know, rotating and thinking.
+
+switching off completely, right? Your phone, forest, it's called now forest bathing, right? That you go, you connect to the nature. That's, yeah. Yeah. Yeah. And just feel it like you get into the forest, you really feel that you like kind of, you know, you're coming down. So please also remember the forces of nature, like, you know, the sea, the water, the wind.
+
+Citizen Web3 
+I never heard forest bathing as a synonym. That's cool. I like it. Forest bathing. I like this. I like this.
+
+Alexandra 
+the forest, it really, the sun, everybody who spends Berlin winters, you know, can tell you about this. And this is also, we are the kids of nature. And this is always like just the amount of things it really can give you. We shouldn't forget about it. So all of it, having the right group of people that, you know, that people, you know, talk about it a lot.
+
+you have to be supported and you have to have supporters and fans that are like, my God, you know, this is so cool what you're doing. Because when you are founding crypto, you know, a lot of people can be against you. You are kind of fighting against the odds and stuff. So you really need this support. You really need to be connected to your values and you really need to be connected to the nature.
+
+Citizen Web3 
+I thank you for that answer. I really appreciate it. It's a really thought out answer because usually, when we talk about this topic with a lot of founders, we end up in one like 30 second advice, and it's good that you went and I really like it. I think I can really connect personally and this is what if I was going to, I'm not going to share from my side, it's about you of course and your opinion, but you know.
+
+betraying yourself, I think should be really a first sign for anybody that is doesn't matter what but as long as you feel betrayed, I think you should go and start relooking what it is you're doing. And I completely agree on that. It's crazy. How did you know, like, you've made a huge progression from academia to and I think I'm going to wrap up on the topic. Sorry that I'm going that way. But it's a good topic. You know, like,
+
+from academia into the not just like business world, but like crypto world, the pin world, you know, a world that it's not about that. It's about that academia has a different mindset. How was the progression from academia into Deutsche Telekom and you know, the Web3 crypto world? How did it shift work? It's interesting, I think, to understand.
+
+Alexandra
+That's really cool. That's a good question. So you're completely right. It's different worlds. Like it's really different worlds. I need to say I was extremely, again, thank you all. I was lucky because I was part of a group doing my research. In a nutshell, it's a hacker group, right? So.
+
+And there we had very hands -on pragmatic people that are breaking systems, we look into how the system is holistically set up. And this is where I actually could learn about the hacker mentality in that sense. So that's why from my perspective, the security world is a little bit different even in academia.
+
+because it's still like a little bit different mentality. And that's why I could, I guess, bridge it a little bit better. And I think because it's very, I guess, connected to the real life. Like it's very real cases of, you know, what happened, who hacked into what, you kind of do investigation or you go through this yourself by, you know, looking what, which parts of the system you can.
+
+explore and exploit in that sense. So this is what I've seen maybe in other areas, what I now kind of understand what was happening at my chair. This is a little bit different because it's very hands -on in that sense. And I guess that's why I could actually map it back and connect it. However, this is...
+
+It's a challenge, right? Bridging the world's, and I guess a lot of empathy and also self -reflection of kind of understanding. Okay, okay, like now I talk to a completely different person. Even now in crypto bridging the OGs and the newcomers. And I always say what really helped me to be respectful because everybody has their own vision, their own truth.
+
+Alexandra 
+And I think the power is not only in breaking and not having a plan how to actually build something new, but I am a true believer of learning from the past, learning from the past mistakes, and kind of also digesting these learnings. So I guess this was kind of the recipe of bridging these things and also
+
+I also think that's really good advice on this. If you want to change, you have to place yourself into this new environment. And this also helps extremely to get into this kind of, you know, like I'm on this journey right now. I'm getting into the new crypto world and everybody is younger. And like I was just sharing yesterday, you know, we talked to
+
+Web3 native investors and it's all telegram, it's all like they all have like this icons instead of the pictures. Sometimes I'm on calls, they don't put the camera on and you question yourself like is it true? What is like is it real? And then you have memes sending around. That's a new culture, right? And I guess, you know, being flexible and adapting very fast because you have to play this game, you have to
+
+You can't like, you know, say, I'm different, I'm gonna be doing it differently. And I like it, I like, you know, new things. That's why.
+
+Citizen Web3 
+I promised that it was going to be last question, but I did one more spring up while you were telling the story in the direction of the journey. Why? Like I didn't ask you, usually I ask it at the beginning, but because we went into like the more difficult stuff. I mean, why this field? Why? I mean, nobody just wakes up and says, hey, I'm going to go and hack and build, you know, something attracts you. I mean, you talk a lot about values, by the way.
+
+And I'm curious, what are the values that are driving you, that have driven you, not driving you now, but have originally driven you here to that journey?
+
+Alexandra 
+Right, I'm gonna give you a very weird answer right now. It actually came to me lately, like a couple of weeks ago that I was laughing. I started to ask people what their names mean. Some you can Google, right? That's easy. And I do this a lot. So I don't know, I started to do it lately.
+
+Citizen Web3 
+Please do.
+
+Citizen Web3 
+Okay.
+
+Alexandra 
+And it was funny because I'm like, okay, what actually does Alexandra mean? Right? And I Googled the name and it means in Greek, the protector. And then I didn't have any questions anymore. Why I do what I do?
+
+Citizen Web3 
+Okay, okay
+
+Alexandra 
+Right? So, yeah, I think, you know, when I understood how it's all built and you then also, they say it's very helpful to actually when you think something, you know, the problem is so big, you can't ignore it, they say, right, or something that really triggers you. And then like this inefficient systems and insecurity and that we actually
+
+burn so much resources with clouds and, you know, for machine economy, I think it can be done more efficiently. And then I actually went through my friends and I was asking or interviewing them, right? It's a good sign of how to understand what's your path. I was going around and I was like, is it that doesn't trigger you as much as it triggers me? And 20 people told me, I don't know what you're talking about.
+
+Like it doesn't even bother me, like even close, right? And this is how you get like to the understanding, okay, maybe it's really my unique path and maybe, and then you start feeling responsibility. You're like, you know, actually the universe brought me to Berlin. Actually, you know, like I actually went through this PGA, actually met these people, actually got into crypto. And then you get like,
+
+maybe I'm actually responsible for like, if this power is given to me, right, or this knowledge is given to me, this is what I have to do. And then the moment you realize it, you can't get out of it because you're like, okay, also, maybe you can connect, you're doing podcasts, right? Like you certainly also feel some ways of responsibility because, you know, people listening to this, they're happy when the new episode is coming out. And then it's...
+
+I don't want to say it's not you anymore, but like, you know, you just become this kind of the messenger in a way.
+
+Citizen Web3 
+It's funny that you said it because I'm going to at the same time, I'll give you I'm going to put oil in the fire for you. So, of course, names agreements on the meanings of names are very on different Internet resources. But Sergey in some at least sources has meaning of the last person on earth to believe in God. So it's very funny.
+
+about the messenger and it's true, it's true, it's true. But of course, of course, of course, I could give oil from the other side as well. I'm not going to, I'm just going to add like that, you know, but, but wait, wait, wait, wait, before we move to me, before we move to me, before we move to me though, because we're not going to move to me, I'm going to stick with you. Wait, that's, but this is the personal goal and I want to move slowly now to kind of like more the professional talk and
+
+Alexandra 
+Hahaha!
+
+Citizen Web3
+stocks, of course, and you mentioned a lot of things that I want to ask about. And during the first half an hour of our conversation, you were mostly concentrated on talking about your value, Alexandra's personal value. And usually, it's very cool, by the way, and I want to thank you for it because usually I have to dig for it. I have to really dive and really drag it out of people.
+
+Alexandra 
+I'm sorry.
+
+Citizen Web3 
+with you it was very easy you are like kind of you understand it yourself but here is i'm gonna make a shift slightly different with usually with other people it's the opposite way i have to make a shift to the personal side what about Staex itself what is the goal like you founded this project obviously you're a person with very deep values very values that not just drive you but you know you have a mission which you're driven by and it's amazing i think it's very fucking awesome to see
+
+Alexandra 
+Sure.
+
+Citizen Web3 
+What about Staex itself? What is the mission? Because it doesn't collide with you because there's obviously probably other people. And if it does doesn't correlate, how do you correlate it for yourself? Because you're so value driven. Like, how does it connect?
+
+Alexandra 
+Right, so I would probably say one sentence which my partner Paxi, she says it a lot, which I liked. I wouldn't realize it myself maybe in the beginning, as she would always say, Alexandra, Stax is you. And she would say this all the time.
+
+And when, you know, we had some conversations like some founders, maybe not in crypto, I don't know, but like, you know, in web two, it's usual to set up a company and to have an exit one day in the future. Right. This is how you kind of plan. And I also had this ideas like, you know, what's next and you know, what, what, what, what, what's next on the journey and stuff like that. And then I actually understood that a lot of, crypto platforms.
+
+which I didn't have this know. I don't know why. Maybe if I would read more, I would get there. But I just got to this lately. It's all very long term. It's not the web to game. And I know a lot of maybe crypto projects are like, maybe more focused on the short term because I just had this discussion with one of the investors yesterday.
+
+because of the tokens and incentivization and the speed of the pace, maybe there are a lot of things that are short -term because you can kind of get the token and already exit or whatever. However, I think a little bit more patience will help the whole space to be more successful because a lot of these things are...
+
+like to really integrate crypto into the real world, maybe we need another 20 years. And just like realizing this, okay, Stacks is not, it's the eighth year that I'm doing it. It's for the next 20 years. And also this connection to Stacks is you. So I actually was thinking I will have to do a lot more work on setting up
+
+Alexandra 
+the, I call it mindful organization, right? Writing down the values that I have. And what I learned on this way, the more, as you said, right, with you, it was easy because you know it. And I think I do a lot of work on this front because I also talk about it a lot in my company and people that are not connecting to this, they actually leave the company. And this is how slowly you actually get
+
+amazing colleagues around you, amazing co -founders that actually magically share your values and you attract these people and then you build this organization that is built on these values. And I think it's a normal practice to say like this is our mission, this is our vision, this is our values. And I think it really helps to
+
+to voice it and to say what you're actually standing for. For instance, what do you think would be the first value? Just random guessing in stacks.
+
+Citizen Web3 
+Hmmmm
+
+Citizen Web3 
+Okay, surprise me, surprise me because I'm thinking between between probably something like freedom of being who you are or doing what you want to something like, I don't know, something similar, something along those lines. I don't know. I'm thinking there for some reason. From what you've been talking about, I'm thinking to that direction.
+
+Alexandra 
+Yeah.
+
+Alexandra
+Okay, I like it. So yeah, I will give it a thought. I like what you just said. I'm like so not, you know, don't have integrity at all, like just changing it after the podcast. No, so the first value is actually do everything with love.
+
+Citizen Web3 
+HAHAHAHA! That's it, this could have been right at all!
+
+Alexandra 
+And I think it's so right. It's just like, and I also say to everyone, I truly believe if you love what you do, you always add something on top. You feel it. And also customers feel it and partners feel it that you add this extra layer of care in that sense. And that's why also when
+
+Citizen Web3
+I like it.
+
+Alexandra 
+somebody you know leaves our company or whatsoever happens. I'm actually happy for these people because I say I want you know you to be happy. I want you to do the job you love because if you force someone if someone does it for money or I don't say that this is not important this is extremely important the you know material component to this but first and foremost
+
+We all love what we do and this is what unites us and this is what helps us to go through tough times to bring this, you know, really crazy projects together. And, you know, I just enjoy seeing this passion in their eyes and really bringing something to this world. And I think it's a very, very, I would say, many, you know, interesting and multifaceted concept, which
+
+gives us the tool to actually force the people to connect to their values because everybody will start asking themselves, like, how can I love something? Do I actually love my job and things like this? So yeah, I guess this is on the value and stack side. And for my personal values, I really want to build efficient machine economy. I've seen how cloud services are done and how it's all replicated and broken and
+
+You know, I'm a true believer of simple, reliable systems because this is also equal security. Like you can never build a secure system if it's over engineered. And, you know, like you have 300 services and there are companies, for instance, that have architectures that the developers already even an order life and they even don't know what the services do. And it becomes so inherently complex. And I just think.
+
+the less complex the system is, like that's my basic understanding of security, right? The more control you have over it, and that's why I truly believe in four -hour cars and charging stations and drones using the crypto platforms to actually do automation through smart contracts, to actually do very cheap payments through crypto payments, right? And there is no other alternative.
+
+Alexandra 
+to actually build it efficiently and secure. And I also wanna say, now that I teach younger students, they don't wanna deal with this complexity. They just wanna have nice infrastructure, abstracted APIs. And I want to set them up for success so that they come up with something beautiful for our future lives and not like being bothered by this infrastructure that is broken. So that's kind of how I connected to me.
+
+And that's why I guess, you know, you get energized every time you build the system and see customers being happy. Like, you know, this is possible in IT. Yes, this is possible. So yeah, this is, this is how I would describe it.
+
+Citizen Web3 
+Who needs crypto when you have abstracted APIs, right? I mean, you mentioned the life cycles of systems. And I mean, there is many things that spring to mind after what you said, but I'm going to try and stick with the original plan of having a few professional questions to you because I really want to hear your opinion on them. And I'm sorry that I'm pivoting a little bit because what you are saying, in my opinion, deserves like
+
+Alexandra 
+I'm sorry.
+
+Citizen Web3 
+a lot more than just a podcast on its own, but I'm going to try and pivot a little bit. You mentioned live systems of machines as well. And one of the things, I guess, one of the, not things, but the qualities or whatever, I'm getting a bit lost here, so I'm just going to say it, of those systems, of WebTree systems is that the lifecycle is not X10 or X100, it's X1000 from the lifecycle.
+
+of a system before. And I'm going to pivot the question as well. So, and you mentioned a few times, geez, a newcomers. And it's a very touchy topic that almost nobody wants to talk about. Like because founders or, I don't know, influencers that come on a show, they're afraid, you know, whenever we start talking about it, they're like, ha ha ha, they make a joke about it. And then like, well, let's pivot from that conversation. Let's go to there. And now you mentioned it yourself several times. And I think that
+
+that life cycle of a machine kind of to me correlates because I'm going to say it. I'm going to be the one that says it and people might hate me for that, but I will try and say it and then give it to you. And like you say, your opinion on that. Let's do it without a question. So in my opinion, at least it's from what I've seen many times already is that what the market or what you call OGs, people who come to this market, maybe
+
+Alexandra 
+sure.
+
+Citizen Web3 
+I don't know, before 2016 and roughly 1716, they had a longer interest in that market. Their interest was really, okay, I'm here for the next 20 years. I am Staex, so to speak. I am the one who is trying to draw this out with my own energy and my energy is part of it. It feels to me at least, and let me be the devil's advocate here, that the players are coming to the market.
+
+let's say since 2021, are not here for a 20 year old cycle. 20 year old, of course, is just an example. It feels that their cycle is a lot shorter. So how do you, I guess the question is how do you bridge that? How do you bridge your energy and your desire to be here for the next 28, 38, 180, if you could, years probably, as opposed to some...
+
+to some players on the market whose interest is either getting benefits, direct benefits and leaving the market or anything else that can be damageable. Or should we not look at it like that? Maybe it's wrong. Maybe the opinion of trying to put them in corners in the first place, what I'm saying is wrong and I can totally understand why it could be wrong. But what's your take on that?
+
+Alexandra 
+That's very interesting. Great that you shared it. So we are as we started, right? Staying true to our beliefs. You know, when you framed it like this, thank you for the summary, because I think that was a very interesting summary. I actually, when you were talking, I've seen it in my mind in layers. I guess everyone is needed on a certain layer. So.
+
+I guess if you build something up to layer one, which is layer zero and layer one, we stack as a layer zero, I think this is what the fundamental infrastructure is. And this is where you need this longer breath of this longer cycle with your own beliefs of what is the ecosystem and...
+
+you know, how it really connects to you, et cetera. While maybe if you build some apps on top, you can have this shorter whim mentality because it's also needed in this layer because you want to have the app that now reflects the societal interest. Like for instance,
+
+You want to build the app that counts your steps or whatever, right? Like we had a lot of crypto apps or crypto kittens, right? It was right at the time when it was needed and then it was not needed anymore. So maybe like this, that it's kind of structured into layers. And I guess again, to the question of if someone can't imagine themselves doing it for longer years, they shouldn't probably build the new layer one.
+
+ecosystem or do some work around it, I would say. And maybe like this, this is kind of how you can in a way bridge it. And also for if we are investing in the space, also maybe seeing the kind of seeing it in people, like if this team is more kind of towards short term gains.
+
+Alexandra 
+they probably wouldn't be the right team to build the next big layer one solution. Maybe this is how we can kind of separate it. And I also would also want to use this opportunity and say it. I think the thing what I would like to bring into this community is being respectful and not saying, no one cares about this platform anymore because it's so 2016. Maybe to also...
+
+look into this as also the people went through experience they you know it's it's you you can learn a ton from this journey and so being respectful to you know like the ecosystem would not live without the shorter interest games the same as it wouldn't live without this longer protocols that are here to stay and there is like a ton of people actually making it work and a lot of by the way things that are not really perceived as fancy and
+
+today's crypto world, they actually went into a lot of real world use cases and they're doing real world. Like we hear less about them because it's not out there maybe, but they actually, you know, really trying to connect it to the real world.
+
+Citizen Web3 
+I know that I've kind of left until almost the end with it, which wasn't my goal here because the question I'm going to ask is very big question, but I cannot not ask you that considering your background and what you do and your experience. What the pin has been, well, the word itself is, you know, brings straight away different thoughts to the mind, depending who you ask.
+
+And by the way, I'm going to start with a slightly different point, I guess. I was in conferences in Berlin when we met for the first time in some years. I've avoided for three something years. And as normally, I guess that the people I connect to in the audience turn out to be or happen to be people who have been in crypto also for a while. And ironically, more than 90 % of those people ask me, hey, man.
+
+there's something I want to ask you. What the fuck does the pin mean? And I'm like, well, it's a funny thing that you ask, you know, so I guess I guess I'm not gonna ask you what the pin means, because it's too too too too too simple, I guess. But I want to ask you what in your opinion are the steps that projects that call themselves the pin or correlate with the pin or
+
+and on the sort of decentralized infrastructure level somewhere. What should, in your opinion, what is the advice for them to do or to build? Because you mentioned a few times, not the future economic rails, the future economic system, I think you called it. I'm sorry that it's not a quote. But you know, what can they do today? What are the people who are working there? What can, since we are kind of on the topic for the whole
+
+Alexandra 
+Hehehehehe
+
+Citizen Web3 
+episode, what can they do in order to help make, you know, the pain or the centralized infrastructure or anything on that similar level? I think I think that, you know, people stop asking you when they come to conferences, you know, even that they've been in the space five, six, seven years, you know, what does it mean, man? I don't want to ask anyone because I'm a bit shy. But how do we push it and make it a thing?
+
+Alexandra 
+Mm -hmm.
+
+Alexandra 
+That's an interesting question. Give me a couple of seconds. I need to structure it. I love it. I've been thinking about myself. I mean, I'm just like, because I guess, you know, we are doing a little bit different things at Staex because we really address the industry. So it's more like industrial taping in that sense. And this is really different from...
+
+Citizen Web3
+Take your time, take your time, take your time, take your time.
+
+Alexandra 
+I would say kind of more fancier, deep in applications that actually have been, or actually put this term out there and said, this is now the decentralized physical infrastructure. In a nutshell, you can say Bitcoin is deep in. Right? I mean, if you get more philosophical. What I've seen in this space is that there is a lot of
+
+gaming component that you, like for instance, gather certain data in a more democratized environment and everybody's iPhone and phone is used. And I was thinking a lot how successful this concept is because I don't know how you are approaching the system. I just know for myself, I use the app and then in a month there is something else.
+
+And I kind of switched to this new fancy thing because, you know, I also want to be part of the society and I also want to have this fun, cool conversation, how I use this, you know, new thing to gather this or that data. And I was just thinking maybe, I'm not sure whether it's like this for everyone. I just like kind of my personal feeling, right? So it can be extremely hard to actually build this long -term incentive.
+
+because if it's only in that sense, a token which is more materialistic, right? How you actually, you know, connected back to this longer cycle than maybe just one month of this interest. And my kind of last thinking, maybe it will change, was towards maybe not democratizing everything heavily because...
+
+I think a lot of people jump into this, let's democratize everything, right? And everybody can take part in it, et cetera. But maybe building a little bit more, I would say, not centralization, but governance into these systems in a sense of, let's maybe include corporates that are longer term incentivized. Let's maybe include, I don't know, whatever schools, universities.
+
+Alexandra
+maybe some, not just like B2C, but like giving it a little bit different component that at least you have the stakeholder that are in it for longer term, because you establish this more sustainable business models that really work for them and make sense for them. So kind of making...
+
+doing a little bit more thinking on maybe, you know, it's good for the government and the government of Germany will be buying it for the next 50 years. This is amazing. This data, right? Maybe this more societal component when you're not only saying, let's democratize and everyone can take part, but putting a little bit more thought in how this can be set up. And I would make a beautiful example of
+
+how the DNS works today, right? Because it is in a way decentralized system. However, there is a little bit of hierarchy and structure and it's still working and there are some problems with it. But I'm just saying like maybe extreme left or extreme right can be problematic. And I guess this kind of balanced way in the middle can help us to be more successful long -term, I guess.
+
+Citizen Web3 
+I totally, I cannot, I have to say that I guess I'm a bit extreme in that case, but I totally understand what you mean. And I think that balance, even in extreme things is definitely something that helps to create not order because order is I think not the goal, but helps to create flow. I think balance helps to create flow even in extreme things. And that's what helps us, I guess, find that
+
+understand those values and connect them together with just the universe and what it is. Go forest bathing, like you said, and really... But it's true, it's true, because even extreme things, I think, have to balance sooner or later. Alexandra, let me jump into a quick blitz. I'm going to ask you three questions. You don't have to answer them in a blitzy way. I call it the blitz, but it's more of a slow blitz.
+
+Alexandra
+That's true.
+
+Citizen Web3 
+Some of them you kind of answered along the way, but I'm going to highlight them. So maybe the answer will change also. So the first one is easy. Give me or one movie or one book or one song that throughout your life has had a positive influence on you.
+
+Alexandra 
+I will stick to the seven habits of highly successful people. Yes, sounds a little bit cheesy. Actually, I didn't expect a lot from the title. It changed my life completely. So this book I would.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+Why? Why change your life?
+
+Alexandra 
+I don't know this like, you know, the for instance, there was this value of approach people slow, like for especially highly efficient people that are like task, task, task, doing, doing, doing right. And this kind of you have to shift when you work with your co workers, you want to introduce some changes, you have to be extremely patient, extremely mindful, things like this, or like making your family a priority and building it into your working routine.
+
+So I think that that was very, very interesting.
+
+Citizen Web3 
+for all the listeners guys, if you want to check out the book or anything that me and Alexandra mentioned, please check out the show notes. And of course, you can find all those things linked to their two more questions, a bit stranger. One, give me share or share. Sorry, you're not give me but share with me one motivational thing that keeps getting Alexandra out of bed every day. You know, being
+
+an executive, being someone who tries to understand their own values, being somebody who's trying to be patient. So something that helps you to stay true to yourself and not betray yourself, as you mentioned.
+
+Alexandra
+Sure, I think it's like this, you know, little things that are helping on your longer journey. It's providing for the community and helping people where I can. It really helps me to stay rooted to who I am and to my friends. And, you know, always reaching out, asking, seeing, you know, how can I support you today, invite someone for a conversation, et cetera.
+
+This has been really, really helpful for me and very fulfilling.
+
+Citizen Web3 
+It's actually a very nice thing to think about. I think that it relates a lot to me. So it's something that I guess I'm thinking about a lot already that they say that and will be for the rest of the day. One last question, I promise this one is a bit stranger. Dead or alive, real or made up? It could be a book character, a developer, a family member, a movie person, it doesn't matter.
+
+Not your guru, because I personally don't believe in gurus and try to avoid them. So somebody or someone or something that, yeah, positively influences you and you kind of sometimes when you're stuck, you don't like, what would they do or whatever, but you're like, yeah, that's a good example of what maybe could have happened or they could have been a good example to me.
+
+Alexandra 
+I think my mom, it's just the life they lived and I'm sure every family has it, like all the challenges and you know, it really gives this connection to me like, my God, they made it. She's like 55 now and I am their daughter.
+
+Citizen Web3 
+Nice, nice, I like that, it's lovely, I love it.
+
+Alexandra 
+I probably have this strength too. So it's really, and also it connects you to your family, to your beloved ones. And I discovered it, of course I had like some heroes left and right, right? But I discovered it lately and I found it very eye -opening for me.
+
+Citizen Web3 
+I got a bit lost because it's very emotional, but yeah, thank you for saying that. I really appreciate it and I can totally again once again relate to that. Alexandra, on that note, this was a very emotional episode. I want to thank you a lot for your time. Please don't hang up just yet. This is a goodbye for all the listeners. So everybody who tuned in and listened to us, thank you very much. And guys, see you next time. Thanks, Alexandra.
+
+Alexandra 
+Thank you, bye bye, thank you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content. 

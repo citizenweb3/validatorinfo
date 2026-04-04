@@ -2,7 +2,7 @@ import { Abi } from 'viem';
 
 import { eventsClient } from '@/db';
 import logger from '@/logger';
-import { contracts, deploymentBlocks, rollupAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { deploymentBlocks, getRollupVersionsForRange, AztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { fetchBlockTimestamps } from '@/server/tools/chains/aztec/utils/fetch-block-timestamps';
 import { getChunkSizeForRpcUrls } from '@/server/tools/chains/aztec/utils/get-chunck-size-rpc';
 import { createViemClientWithFailover } from '@/server/utils/viem-client-with-failover';
@@ -26,8 +26,6 @@ export const syncLocalEjectionThresholdEvents = async (
   const failedRanges: Array<{ start: string; end: string }> = [];
 
   try {
-    const contractAddress = contracts[chainName].rollupAddress;
-    const abi = rollupAbis[chainName] as Abi;
     const deploymentBlock = BigInt(deploymentBlocks[chainName]);
     const chunkSize = getChunkSizeForRpcUrls(l1RpcUrls);
 
@@ -61,26 +59,32 @@ export const syncLocalEjectionThresholdEvents = async (
       `${chainName}: Syncing LocalEjectionThresholdUpdated events from block ${startBlock} to ${currentBlock} (${currentBlock - startBlock} blocks)`,
     );
 
+    const versions = getRollupVersionsForRange(chainName as AztecChainName, startBlock, currentBlock);
     const allEvents = [];
-    for (let blockStart = startBlock; blockStart < currentBlock; blockStart += BigInt(chunkSize)) {
-      const blockEnd =
-        blockStart + BigInt(chunkSize) > currentBlock ? currentBlock : blockStart + BigInt(chunkSize);
 
-      try {
-        const chunkEvents = await client.getContractEvents({
-          address: contractAddress as `0x${string}`,
-          abi: abi,
-          eventName: 'LocalEjectionThresholdUpdated',
-          fromBlock: blockStart,
-          toBlock: blockEnd,
-        });
+    for (const version of versions) {
+      logInfo(`${chainName}: Scanning LocalEjectionThresholdUpdated events from block ${version.fromBlock} to ${version.toBlock} (rollup: ${version.address.slice(0, 10)}...)`);
 
-        allEvents.push(...chunkEvents);
-      } catch (e: any) {
-        logError(
-          `${chainName}: Failed to fetch threshold events, blocks ${blockStart}-${blockEnd}: ${e.message}`,
-        );
-        failedRanges.push({ start: blockStart.toString(), end: blockEnd.toString() });
+      for (let blockStart = version.fromBlock; blockStart < version.toBlock; blockStart += BigInt(chunkSize)) {
+        const blockEnd =
+          blockStart + BigInt(chunkSize) > version.toBlock ? version.toBlock : blockStart + BigInt(chunkSize);
+
+        try {
+          const chunkEvents = await client.getContractEvents({
+            address: version.address as `0x${string}`,
+            abi: version.abi as Abi,
+            eventName: 'LocalEjectionThresholdUpdated',
+            fromBlock: blockStart,
+            toBlock: blockEnd,
+          });
+
+          allEvents.push(...chunkEvents);
+        } catch (e: any) {
+          logError(
+            `${chainName}: Failed to fetch threshold events, blocks ${blockStart}-${blockEnd}: ${e.message}`,
+          );
+          failedRanges.push({ start: blockStart.toString(), end: blockEnd.toString() });
+        }
       }
     }
 

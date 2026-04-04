@@ -111,11 +111,25 @@ const updateSlashingInfos = async (chainNames: string[]) => {
 
         if (totalSlots !== undefined && totalSlots !== null) {
           if (totalSlots > 0) {
-            // Valid slots: upsert the record
+            const updateData: Record<string, number> = { totalSlots };
+
+            if (info.total_slots_proposals !== undefined) {
+              updateData.totalSlotsProposals = parseInt(info.total_slots_proposals);
+            }
+            if (info.total_slots_attestations !== undefined) {
+              updateData.totalSlotsAttestations = parseInt(info.total_slots_attestations);
+            }
+            if (info.missed_slots_proposals !== undefined) {
+              updateData.missedSlotsProposals = parseInt(info.missed_slots_proposals);
+            }
+            if (info.missed_slots_attestations !== undefined) {
+              updateData.missedSlotsAttestations = parseInt(info.missed_slots_attestations);
+            }
+
             await db.nodesConsensusData.upsert({
               where: { nodeAddress: info.address },
-              update: { totalSlots: totalSlots },
-              create: { nodeAddress: info.address, totalSlots: totalSlots },
+              update: updateData,
+              create: { nodeAddress: info.address, ...updateData },
             });
           } else {
             await db.nodesConsensusData.deleteMany({

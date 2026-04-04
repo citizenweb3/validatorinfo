@@ -1,0 +1,566 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/evan
+
+Episode name:
+Censorship Resistance, Ethical Cocaine and DAOs with Evan Cuck
+
+Citizen Web3 
+Hello, everyone. Welcome to a new episode of the Citizen Web3 Podcast. And today I have Evan with me from Coq Validator. He's also a core dev of the Celestia. Well, everybody's probably by now heard of Celestia, right? We're not going to talk as much about Celestia. We'll definitely talk about modular blockchains today, but we're going to be talking even more about validating and about Evan. Evan, hi, welcome to the show.
+
+Evan 
+Hello, I'm super excited to be here. I've been a long time listener to the podcast. I think for ever since I started getting into Cosmos. Really.
+
+Citizen Web3 
+Yay!
+
+Citizen Web3 
+Oh man, that's music to my ears man. Like, like, like it is really, because when people say that, I'm always like, Oh, I don't know why I do that, but, but it's a stupid reaction instead of like, Hey, thank you. Oh.
+
+Citizen Web3 
+And has it taught you anything interesting?
+
+Evan 
+Yeah, I really appreciate it. Yeah, totally. There's been like a lot of really great episodes. The one that comes to the top of my head is the one with, I believe you had Ethan Buckman on. It was a long time ago. Yeah, yeah, it was a long time ago. Yeah, it was a really good episode. So I still remember that one. There's a bunch. There's just, whenever I first started getting into Cosmos, you know.
+
+Citizen Web3 
+That was the very beginning. Wow. You've been, you've been with us for a while, man.
+
+Citizen Web3 
+Thanks.
+
+Evan 
+Especially back then, there just wasn't like a lot of content. And I like to run a lot. So when I go for runs, I usually listen to podcasts and I like to, it's like one of my main mechanisms of learning about some of this stuff. So, uh, you were, you were very helpful there. So now I'm, I'm thrilled to contribute back.
+
+Citizen Web3 
+Yeah. And you already started to tell him a little bit about yourself. And I kind of been throwing some oil into the fire. This so we have Celestia court in there. We have a validator. We have run in Cosmos and blockchain. Now. OK. All that aside for a second. What's the story of Evan and blockchains Web 3 computing running? How does how does it not all aside? Sorry. How does it all come together? All those bits and puzzles about Evan. Who is Evan? What does it do?
+
+Ted, tell us all about it, man, we'd love to hear it.
+
+Evan 
+Bye.
+
+Um, let's see. Well, I actually went to school for chemistry. So I got, I got, I got my degree in chemistry. Loved it. Loved studying anything to do with science really. And then afterwards though, um, that's sort of like a degree that you kind of have to go to grad school afterwards. It's almost like a degree in philosophy or something. Oh, I didn't want to go to grad school afterwards. So I had to, I had to go, uh, get a job and I knew the first day that I, that I took that job, it was managing hazardous waste. Um.
+
+I knew the first day, I was like, there's a 0% chance that I'm doing this for the rest of my life. So I started to teach myself how to code, which was very intuitive, especially with all of my work that I did at my undergraduate with research and data processing. I started to, in early 2017, I went full-time, I think, for, I mean, I was a really bad trader, but meaning that I would have made more money if I would have just held.
+
+However, I did make enough money to stop working and quit my job. And it was a great excuse. While I didn't make as much money as I could have, I certainly learned a lot. And I hacked on Geth a lot. I spent entirely too much of my life digging through Geth's code and trying to figure out how that works. I did a lot. I got to expand on my data engineering work. And then when the time was right, I was really fortunate in that I could sort of...
+
+pick the projects that I wanted to go to. I could pick the projects that I wanted to apply to. And I remember I was listening to a podcast with John Adler and he was talking about roll-ups and sort of the different trade-off space there. And then at the end of the podcast, he mentioned, oh, and there's this thing called Lazy Ledger and he's starting it with Ismail Kofi and Mustafa Alvassam. And...
+
+Evan 
+And he had like a brief explainer about it. And I was again running and I almost stopped. I was like, oh my God, I was like, this is the way, this is how you do this. This is how you actually scale blockchains. This makes so much sense. And it was like, just like the right time, the right place. I got super lucky and I applied and they were hiring. So I got lucky and I've been working at Celestia ever since. Or I mean, now it's called Celestia, but at the time it was...
+
+The project name was called Lazy Ledger. Yeah.
+
+Citizen Web3 
+Ismail, just to say for a little bit of a, I'm going to obviously return it, but just a second of self-advertisement there, guys, as Evan mentioned, if you want to learn about Celestia. Of course, I'm going to suggest the episode I had with Ismail. It was two years ago, roughly. I really suggest check it out. We talk about quite cool things, mathematics included, not just model of blockchains, but please check it out.
+
+Evan, back to you. You were saying a few things there that definitely got me like giggling. I mean, first of all, I studied philosophy. Hi. And I was just laughing and I was like, damn, that is brilliant, man. And man, since you started chemistry, I have one question. When and when and when will we be able to synthesize cocaine without all those things, man, without all the bullshit? When is it going to happen finally?
+
+Evan 
+Hahaha
+
+Evan 
+Um, there's some really interesting work for, um, have you, um, if you, if you look at, uh, he's on some other podcasts, but I actually read his work before listening to the podcast, I think his name is Lee Cronin. He has some very interesting work. It's a fun rabbit hole. He has this thing that he's called a chem computer and it's not, it's in a very extremely early stages yet, but it's actually, um, semi related to blockchains in a way in that, um, it can produce in the end goal.
+
+is to be able to produce any molecule under a certain molecular weight, just using some basic starting products. So the idea would be that you could make any molecule you wanted. So it's related to blockchains in the sense that it has a similar anarchist bent and that it's very empowering to people. Instead of having a pharmacy or having these big corporations produce these drugs, you have one of these machines. It's like a library, right?
+
+And it produces, like, if you need a drug, you get a prescription, but instead of getting the molecules from these big companies from God knows where, you get it down the street. So it's a really cool concept. I'm sort of a huge fan of anything to do with that sort of like anarchist bent. Yeah, just anything that empowers people is a good thing.
+
+Citizen Web3 
+You know, while we're on the subject, I know maybe this was not expected, but I always say, you know, conversations on our podcast, they always go random. And while we're on the subject, I'm curious, what's your opinion then on the most serious topic, at least like for me, it's always been something that. And time after time, year after year, it gets me out a couple of times per year, antibiotics and like the whole point that if those are.
+
+pretty much one of the only ingredients, not ingredients, but compounds we know that can definitely save lives. And we're a hundred percent certain about it. And it's under so much bureaucratical laws in every single country around the world, apart from not including like a couple of still developing countries. I mean, isn't that kind of like, I don't know. It's just, it just blows my mind every time that I have to deal with it, that this thing that can save your life, you need the permission to buy it.
+
+Evan 
+Ah, I see. Yeah, I can see your frustration there. In this specific case, I think having prescriptions is good just because it's very difficult to debug complex systems and our bodies are very complex systems. So I think we tend to go with the tried and true approach of having to be extremely conservative, go to a doctor that studies from a book.
+
+Citizen Web3 
+And it's like...
+
+Evan 
+doesn't play things by ear, they're like very rigorous in how they do these things. Because if you take one wrong drug, you can have like a serious side effect for the rest of your life. And some of these antibiotics do have some of those side effects. And I think the other reason for that is like, I also am a huge fan of evolution. And evolutionary medicine is also a new fun topic that people are starting to talk about. But
+
+bacteria tend to, there's plenty of bacteria now in the world that are entirely new species, they've never existed before humans. And for example, like ones that like eat the byproduct of a jet fuel in the ocean or something, not jet fuel, diesel, something that goes into cruise ships. Those have never existed before, but they only eat this one thing. And this exists with antibiotics as well. It's like there's, you can go find these genes in bacteria
+
+essentially like hack their way past these antibiotics. And now you can find these genes in almost any bacteria strain. Whereas like in the sixties, that was not the case. So it's like the more antibiotic usage we have, the worse it is for like the public, because now we have these antibiotic strain or these antibiotic resistant bacteria that can do a hell of a lot of damage. Europe is actually really good about and really like stringent upon this where like,
+
+I've had some Europeans make fun of like Americans, because we go to the doctor and they just kind of hand out antibiotics like candy. Yeah, yeah.
+
+Citizen Web3
+I honestly think it's, you know what, I hear definitely agree with you from the point perspective of like, yeah, you know, I was reading yesterday, like last night, you know, one of those, I'm going to go to sleep early and then at 4am you're still reading how they took the, in 1538, whatever, you know, the temple of whatever in whatever country. And actually, yeah, I was reading one of those things yesterday. There was the story of this guy who was a...
+
+Evan
+I'm sorry.
+
+Citizen Web3
+starting in America football athlete like in college and he was very good and you went drinking with his friends and they made him a bed that he would eat a snail was random snail and he the snail. Any goes to coma for like 400 days and then after 80 years he dies but now the question is. Are I the thing is like there is no statistics of course there is no but I'm sure that the amount of stories of people who eat random snails or drink by jet you know whatever diesel fuel.
+
+Evan 
+Oh no.
+
+Citizen Web3 
+are a lot less than the amount of people who should have access to antibiotics, but because of bureaucracy don't have access to that. And I guess that is the point where I'm trying to come up from. But I definitely agree with what you say that it has to be in a responsible manner. The question is, you know, who decides that responsibility for us? And sometimes it's a bit of a like, I mean, I don't know. Do you see what I'm getting at? This is the boom that I have from that. But yeah.
+
+Evan 
+Ah, I see.
+
+Evan
+Mm-hmm.
+
+Evan 
+Yeah, yeah.
+
+Evan 
+Yeah, I tend to defer to... Maybe this is just because we work in blockchains too much, but like social consensus, like if you could reach some social consensus somehow on what is the standard practice instead of relying on a committee or something. I feel like that would be rather difficult to do, but maybe somehow.
+
+Citizen Web3 
+But anyways.
+
+Citizen Web3
+Absolutely.
+
+Citizen Web3 
+I mean, I know again, we're going like very philosophical, but I'm gonna like now narrow it down and get it to you, of course, and to your validator. But, you know, just like one last thought on that is that, you know, you're right. It's very difficult to get. Usually we say those things in the end. I said those things in the end, but you're right. It's very difficult to get a consensus. But the thing is that we live in the society that we live in today. And
+
+Evan 
+Hahaha
+
+Citizen Web3 
+for the past, let's say, 5,000, 10,000 years, like the modern society or consensus plays a major role, or at least so we know of it, hasn't really been working. So what I'm saying is, yeah, maybe it's going to be difficult getting consensus for things like what medication we should be taking or whatever social consensus or not taking. But if it's different from today and it's going to fix anything, then maybe we should try it. But again, this is super philosophical. And of course, we can.
+
+dedicate the whole topic to it. But I want to narrow the conversation more to you and talk a little bit about, first of all, about your validator. Come on, let's start with the naming, man. Let's start with the naming. Let's get this out of the blue. Tell me about it. Tell us about it.
+
+Evan
+Mm-hmm.
+
+Evan 
+Okay, so the name of my validator is Cuck. So you can, it's Cuck period actually. But if you, if you want to go delegate, I'm only operating on Celestia at the moment. I used to run a validator on osmosis. It was called Uncle Ed. I'd no longer run it. Someone else does. It's, it was a bad kid, the bad kid Uncle Ed. I just stopped Venus. I was, I was, I guess a little bit bored with running that validator. So
+
+Citizen Web3 
+Why?
+
+Evan
+I decided to run one on Celestia instead and handed it over to the person who was working with me on that.
+
+Citizen Web3
+In a sense though, you are actually pretty much a primary target audience, in my opinion, at least for this podcast, because you're exactly a builder who participates. So first of all, you're a core dev and two, you run a validator and you run one. And this is interesting because one of the goals when launching this podcast, it wasn't validators at the beginning. It was more like...
+
+Evan 
+Mm-hmm.
+
+Citizen Web3 
+builders and then we started to shift because well, also the focus over the past four years shifted from two validators a lot in my opinion in the blockchain world and they became very central. But I really want to dig a little bit into your head and try to understand what causes somebody who's already working inside of blockchain space. And you know, because I'm going to take another step back here. Usually, you know, people are afraid not having stability.
+
+Evan 
+Mm-hmm.
+
+Citizen Web3 
+And I'm sure that you have seen this, you know, where you talk to your friends who work nine to five jobs, come work from house, they, even though sometimes it's more money, less hours, they'll probably never do it. So the question to you is here, you're working as a developer for, for a project. I mean, maybe when you were launching your validator, you didn't know what Celestia was going to be like, you still didn't understand, let's say how big it was going to be, regardless, you having some stability and then suddenly you, like you launch in validator and it takes.
+
+regardless of whether you rely on it financially or not, it takes, it's nervous. It's a nervous thing. It can fall, you can go slashed. You have to take care of things. You have to take care of the upgrades, updates. Even if it's one validator, you still have to figure out how to put the proper architecture together, even if you know how to do it. So why? So the question is why?
+
+Evan 
+Yeah, that is true. But, um, so my, as a core dev, most of my job is debugging things like Comet. So I spend a lot of time. I'm very familiar with Comet and the application that powers, um, Celestia. So because, and I already have to pay attention to upgrades, um, because usually after we reach social consensus, I'm, I'm helping to implement some of those upgrades. So I tend to have like a lot of Celestia specific knowledge there. So the, and, and.
+
+comment specific as well. So because of that, running a validator for me is a very minor task. It's something really small. And it gives me a chance to make a meme. So the name of the validator is purposefully to be sort of funny and a bit ironic, right? It's cuck, period. But the reason for that is because one of the superpowers that Celestia gives you is the ability to verify the chain in a very cheap way.
+
+Right? This is the entire concept of modular is it's modular because you can use a light client to verify the other chains. Now I no longer have to trust this committee and you can, you can unlock a lot of superpowers there. And, um, and, and like, since a light client is doing the verification, right, it doesn't have to trust the committee. The committee can't change anything or do any bad things. So the light client is cucking the validator.
+
+That's where the name comes from. And you can expand it further. So it's not just like with Celestia, we eventually will have all of our block validity rules have some sort of proofing system. So things like Erasure encoding, or things like how the block is organized, all of that will be provable. So we have fraud proofs for these things at the moment. Potentially in the future, we could use something like validity proofs like a snark. And...
+
+And again, that's like the main reason that the driving technology behind what makes something modular is using this light client, using a trust minimized light client. And you can expand this to more and more things like MEV as well. So this actually originated, I had a quick, very short talk at the Modular Summit, where I talk about how if we make the validator set, or if we change the consensus algorithm slightly, so that it's censorship resistant per block.
+
+Evan 
+then you can unlock this powerful thing where now rollups, you can just be a based rollup, which means you don't have a sequencer set or anything. You just rely on the validator set of the L1 and you inherit all the decentralization properties and you get to capture your own MEV. And this is sort of like the key thing, the blocker in my opinion, for things like.
+
+the base rollups, which are essentially like the original vision of lazy ledger in many ways, is that they can't really capture their MEV. All the MEV is essentially captured by not even just the chain, the L1, but the proposer, the validators of the L1. So if we get a bit clever though, again, like with this whole censorship resistance scheme, we can get around that and we can make validators cocks because we don't want them to be able to capture the MEV.
+
+It's the roll-ups decision. If the roll-up wants to allow the validator to capture MEV, they can do it, but they should also have a way around it. And that's what I think we're sort of leaning towards. I've heard like a lot of support in the community for ideas around things like this. To be clear, it's not implemented yet, but this is where that name comes from. It's like this concept in Celestia of these lite clients where when you verify something,
+
+Power changes hands. Now it's in the light client's power, right? They get to choose the rules of, by upgrading their binaries since they're verifying everything, right? Trust, don't verify.
+
+Citizen Web3 
+I like the fact particularly that... Don't trust Verify, you had it right. Or even trust but Verify. You can even go show that. I love the fact though that even though you're a core developer, you were in your explanation, routing for not hard coding into rollups.
+
+Evan 
+Or don't verify trust. Wait, no, don't trust verify, yeah. I had it right.
+
+Yeah, yeah.
+
+Evan 
+Ah, I see, yes, that works as well.
+
+Citizen Web3
+the ability to live up to them what to do with the MEV. And that's in my opinion, very important. I had a guest on, his name is Derek. He's an author of Liberty Solution a few weeks ago. And we were discussing, he's into crypto, he's into blockchains, but he's an author of an anarchist. And he asked me like, why me? And I said, well, I think it's important that those values that are there.
+
+Evan 
+Mm-hmm.
+
+Citizen Web3 
+that people don't forget who build the Web3 world, that build the Web3 society, aren't forgetting those things. And I think an example of what you're saying, not having rollups, well, having them to decide for themselves, okay, we need that ability for sure. We want to capture that or we don't want to capture it, but it has to be them that decides that, okay, because they, for all they know, they can be proof of authority. They can be, I don't know, having one single node over there and that's, that's their choice. And if everybody's happy with it, then.
+
+And we should also be happy with it, you know, if at least we can verify the information, I guess, if they want to connect to the major market. Again, so many assumptions, but again, I think it's important. And what's your current, like, Evan, not Evan that is a core, okay, yeah, Evan is always going to be, or at least for now, a core for Celestia. But what's Evan's opinion on a very touchy topic?
+
+And I'm asking you because again, you have the both hats on validators and governance. Now, there is this once one part of people who say that validators shouldn't even participate in governance. Those are centralized entities. Those entities have only self-interest. They bear nothing but self-interest, which is true. And yeah, well, it should be accounts that or the other accounts. Okay, technically that's not correct.
+
+Evan 
+Mmm.
+
+Citizen Web3
+But you understand what I mean. What's your opinion on this?
+
+Evan 
+Yeah, so governance can be very useful, except for at the time we're kind of stuck with token voting, which I think is sort of fundamentally flawed. It's not a very good way of deciding things. And I mean, in my opinion, it feels a lot like what we did before Web3, like in Web2. I mean, it feels like token, like shareholders in a public company sort of voting for something. And then instead of having a board of council or something, you have a set of validators. It feels weird.
+
+It feels like we would make the same mistakes as before and it feels like we have this, we have such a, blockchains are so powerful, right, because of their ability to harness social consensus. That's the novelty here is being able to verify something which allows us to reach social consensus by changing how we verify something. It's like that's a crazy powerful property. So
+
+Personally, I'm way more interested in that, which means no governance, which means that means light clients decide how these things are. So in the future, it's entirely feasible that the banking system kind of sucks if something happens. Well, we update the apps on our phone. That's how we fix that, assuming there's a fix for something like that. But the concept is kind of crazy, right?
+
+The concept is crazy that you can have some forks like this. You can reach social consensus by simply, by people choosing for themselves. And that just seems like, why are we even messing with the rest of this stuff at the moment? It seems kind of crazy to, I kind of get it. I understand again, like it's very useful to change some things very fast without actually having to have a hard fork. But at the same time, if you can limit it, so maybe I'm just biased.
+
+Evan
+post describing some of the key properties or key things that Celestia should strive for. One of them is a minimal amount of governance. I firmly agree with that. When systems, especially a system like Celestia, I think it's very important to minimize governance. You don't want token holders to have the final say in things.
+
+the final say only comes to like lines.
+
+Citizen Web3 
+Now allow me to play a little, I actually agree with you mostly, but I'm going to play a little, devil's advocate, well not a little, but I'm going to play devil's advocate here because there is another side that wouldn't be me if I did mention that side, even though I agree with most of what you say. But, the most terrible word to start the sentence, right? But, yeah, but, no, but seriously, right? So, okay.
+
+Everything you said, let's put this on one side of the scale. Now on the other side of the scale, again, devil's advocate here, but I really want to know your opinion. We have what we see in sociological consensus historically. And that is a problem, a lack of interest from anybody to participate in any type of voting or anything because it doesn't benefit me directly. So.
+
+Why do I care who to vote for? Why do I care what school is going to be built? Why do I care where to spend the tax money? Why do I care where to do anything? Because I know it's going to be stolen. I know my opinion isn't going to count. And I know I will not be rewarded for participating. Now, blockchain ironically offers solution for almost all three of those, apart from the, you know, actually directly stealing the money by the builders or by the end. And but anyways, we can still.
+
+somehow, I mean, materially while building the school or whatever, you know, it's hard to be able to count every single bolt or whatever. But assuming that aside for a second, still blockchain does reward the user for participating in any voting system and it does actually introduce the transparency. So okay, once again, I actually agree with you and I'm actually on the side that I would be anti-governance. But yet...
+
+It seems that the reward for participation in governance offers a magical solution for what we as a society have been lacking so long. How do we play around that? If it's a thing at all, in your opinion.
+
+Evan 
+Hmm. So how do they reward people for voting?
+
+Citizen Web3 
+Participation, participation, just participation. And again, voting here is an example for participation. But let's say if I'm a member of a society, and I mean, let's say digital nation, whatever the digital nation does, whether it's an application or whether it's a data availability layer or whether it's a protocol for smart contracts or whether it's an application for flight, I don't know, whatever. It rewards me for being part of that application, which includes governance
+
+being a part of something has to make me, at least in today's semantics, I don't know what other word even I can use to avoid the word governance here. So yeah, my question is like, I'm confused because I'm kind of agreeing with you. Yeah, governance causes can be a root of many evil things. On the other side, not rewarding participation.
+
+of subjects in the life of the whatever it is, if there directly are entities that are involved, obviously leads us to today's society where people lose interest in being part of the city, the politics, the whatever. So how do we like kill both rabbits at the same time?
+
+Evan 
+Mm-hmm.
+
+Evan 
+Um, well, this might be a cop out, but I'm not sure I know the answer to that question. It's a very difficult problem. I do think that there is...
+
+Citizen Web3
+Of course, of course, it's a philosophical debate.
+
+Evan 
+some potential in with maybe it's just with light clients you can you can how you access the system itself is via light client. So to participate in a system is to use a light client. And in order to use a light client, you have to pick a version, right? So you have to pick some set of rules that means something to you. So that could just be the rules that everyone else picks.
+
+and you sort of leave this social consensus process to its own being, which is completely arbitrary. Maybe Taylor Swift goes on a commercial and tells you to use this version of the app or something like that. I'm not quite sure, but however that process does work, it could work. I think it's at least interesting. It's an interesting concept. Everything has trade-offs. There's never going to be...
+
+The answer to that problem is that there might never be an answer.
+
+Citizen Web3
+Of course, I agree. I agree. I completely agree. I'm just going to say I don't watch Super Bowl, but Taylor Swift sounds like a very fast footballer. No, I'm joking. This was a very stupid meme I saw the other day on the on the on Twitter. Men, what's your opinion in general? Well, you know, we're talking still about governance validators. I mean, what I mean, you have run a validator, like you said, on osmosis.
+
+Evan 
+Hahaha
+
+Citizen Web3
+and then you delegated it or shared it or gave it whatever to somebody else. It's not run by you anymore. And then now you're running a Validator on Celestia. Like, what has been, you know, without going into the governance, like discussion and what we just done now, what has been your experience? Would you generally say to people, hey, yeah, you should go run Validators. It will, you know, benefit you. It will not benefit you. I mean, it's easy, like you said. I don't know.
+
+What's your, would you advise it to people? Is it something you think people should do?
+
+Evan 
+For some people, definitely, yeah. Because a lot of people like to learn in a very hands-on way. And it's just easier for them to use the software itself in order to learn from it. So even if you're just running a little tiny validator on a testnet somewhere, if that's how you learn or if that's just something that you felt drawn to, then I would definitely recommend it. It's a ton of fun, especially on a testnet where things are lower stake.
+
+If that's something that you find out that you like, or that you just happen to know a lot about, then yeah, running on a real network is also fun. It feels good to contribute. And I'm at least like, Tendermen always makes the assumption that there's one third honest validators. Well, I'm a portion of that one third, that feels good.
+
+Citizen Web3 
+Yay, I understand what you mean. What about the never ending question? I mean, it's a question that is on top, but people who started, where do I get tokens? That's the first question. And again, let's play, I'm gonna listen. I want your answers here. I want to get into your head. Like, okay, where do I get tokens?
+
+Evan 
+Yeah.
+
+Well, I think you should create your own chain. Then you can make as many as you want at that point. Ah.
+
+Citizen Web3
+Okay, but I want to validate Celestia, but I want to validate Celestia. I want to validate Celestia. I don't know what I'm doing, but I've seen a video on YouTube from a cool guy. His name is Bob. And Bob told me that we all must validate Celestia. It seems that's something I can do. I have some experience. Where do I get tokens?
+
+Evan 
+Well, you have to get delegations. So in order to get delegations, you have to do some sort of, usually some sort of meme. So I don't just mean like a funny meme or something. Like the meme is an idea that's spreadable. Right, another word might be marketing, right? You have to convince people to delegate to you. And that's like a very difficult process. I don't understand, I'm not a good marketer. I sometimes, occasionally I have a funny meme about making validators cucks.
+
+Citizen Web3
+Nah, neither might.
+
+Evan 
+And that's about it. And it seems to work okay. But yeah. Oh, and you know what else happened with that validator is that I'm giving all the money away. So like 100% of the revenue at the moment, I will always give away 100% of the profits. At the moment, I'm giving 100% of the revenue to open source software and open source research for anything that cucks committees or validators.
+
+So that also helps. If you're going to lose 5%, right? That's 5% is usually the minimum for these chains, for the commission, then it might as well go towards something like a cost that you appreciate. And because I already know how to like run a validator and I work with the software every day, then it's no big deal for me. I'm running one chain. It's totally fine. I like, I'll eat that cost. It's totally worth it. Just for the meme alone, it's funny.
+
+Like, that's totally worth it.
+
+Citizen Web3 
+I like how you say you're a bad marketer and yet you have just gave people, I think, a great idea to, if they catch on to what you were saying between the lines, I think it's a very great pointer and to highlight it, find something that you want to contribute towards and make it into your marketing program. But do you think... Again, it sounds like a typical question.
+
+I think again, because you're a builder, I think it's something that's important to ask you. And like, you know, I had a lot of people come onto the show and some I'm not talking about the lately I'm talking about before like two, three years ago, especially who I would say to man, why don't you validate? Like you've been talking about so much contributing to do to do to these ecosystems. Why don't you run a validator?
+
+And they're like, oh, yeah, OK. And some of them do now. And some of them became very big validators. There are some names out there that are top proof of stake validators these days. So question to you is you say, OK, I'm doing it. I'm giving the money away to the research. But wouldn't you be able to do a lot more research if you had, like, let's say 10 validators, not on Celestia, but running across different modular blockchain, let's say Dimension, Celestia, I don't know,
+
+Citizen Web3 
+whatever, I don't know, whatever. And you know, you would gather a huge, of course, I'm, you know, I don't know, making this up. But the question is, do you want to grow that if it's working right now? Do you want to like make that whatever is working with the van validator into a system where you, I don't know, organize funds, sponsor grants, sponsor research?
+
+Evan
+Um, it's already enough work as is, so I don't think I would just my gut feeling. Um, if someone else like approached me and they, and they were, they were interested in, in sort of helping me out and I trusted them, then, then maybe. Since, since this is like sort of my reputation, I would have to make sure that, you know, everything's, everything's done very well and above board and, um, I also just feel more comfortable running only one on Celestria just because I work on that software every day.
+
+I debug it all the time. If something goes wrong, it's like I know what, I usually can figure out what's going wrong. So with other chains, I don't have that guarantee. So at that point, I'm not sure that I could contribute in the same way. So it might just not be worth it, but I am for what it's worth. I am with at least one other Celestial Validator and probably more. We're starting something called the League of Cucks.
+
+Citizen Web3
+I understand.
+
+Evan 
+So what this actually does at the moment is a bit undefined, but essentially the way to join the League of Cox is you have to give your commission over to, you have to give permission for an ICA account on Celestia to be able to withdraw your commission from your validator. So you're essentially giving up all, you're giving up your rights to the commission. And now this ICA account, which you can think of it as, right now it's just a separate tenement chain.
+
+But it essentially is a DAO and controls these funds. And we wanna do a lot of fun things besides just giving out grants. So on that chain, you can, I said I don't like governance, but at the same time it is sometimes very useful. If you're just trying to have, if you, yeah, again, it can be very useful. You can just apply to have a community spend on this new chain, right? It's just a normal Cosmos SDK chain. And...
+
+people will vote and now you can get your funds on your... So this is also just a way for me to also stop managing this as much like I wanted to centralize it a bit. I don't want it just to be me. And then another thing that we're going to do, I wrote a forum posts two weeks ago, a week ago, I'm not sure about breaking or not breaking, but defending against liquid staking monopolies.
+
+So this is another thing I tend not to like monopolies. So with this, essentially it defines adding two things. One of those things is the ability to define your own liquid staking token on all of these native chains. So including, this would include Celestia. So if this effort gets adopted, one of the things that the League of Cocks will do is they will create their own LST. And they will set the commission for that LST to 100%.
+
+So the purpose isn't so that you use this LST. The purpose is so that you fork it because this whole concept of defending against LST monopolies is having the ability to fork an LST. If you can fork it and instantly convert from one LST to the next, now you have a very powerful tool because now you're sort of limiting the amount of damage, or reducing, not limiting, reducing the amount of damage that an LST monopoly can do.
+
+Evan 
+because usually monopolies, they're fully capable, right, of extracting all of this value. And one of the things that if they tend to extract a lot of value, now you can fork them, convert to your own, capture that value for yourself. Or if they don't capture value, then that's also a win. You probably don't have as much incentive to fork them, but at least they're not capturing a lot of value, which is a win for users and light clients.
+
+Citizen Web3 
+It's actually one of... There's two big topics there. There is one topic with, of course, LSTs and LSDs, LSTs, whatever people prefer to call them. I had a big interest in... When we used to do the IBC round tables, the nights of the IBC tables, we used to have like a... And also we had actually... I don't remember... Was it somebody?
+
+No, there was one where there was somebody from Celestia, but this was a different one for the LSDs. And we had all the guys from Persistence, from Lido Finance, from... Who else was it? Stride. And then there was more. I forgot already who it was, everyone. And, you know, there was one question that I asked them, all of them, and it was about the dangers of printing, you know, inflation into inflation and about. So I totally understand.
+
+what you're talking about by saying that by forking it, you would actually be saving and be introducing, minimizing the damage that potentially this could be doing to the economics and actually taking it somewhere else and exploring new opportunities. Yeah, and the second one, the topic
+
+actually went out of my head while I was talking about that, but it was in the same subject. I want to know also your opinion about another thing which involves again, both sides of the metal. And usually we ask either validators how they select chains or I ask sometimes people who build projects, how to select validators.
+
+Now, again, having touched the side of two, it's a topic that confuses a lot of people. Sometimes people run the validator. And it's important, and I say why, because it might be very on the top, but a lot of people who go and try to become validators, they, you know, you were talking about decentralizing your validator, and that is like the next step. That is like the final frontier, so to speak. You know,
+
+Citizen Web3
+giving away the rights to withdraw commission or, I don't know, having your own DAOs around it or whatever. This was the second topic. There we go. But with that said, people don't get to that stage because they get lost. There is like a validator school, there is other schools and people go there. They try, they don't succeed. Foundations don't want to talk to them. Nobody wants to delegate to them. And they get lost. And like you said, you know, OK, go find marketing, go and find MEM. OK, cool.
+
+You know, as somebody who is a core dev and a validator, what is, at least in your personal opinion, what should a validator do apart from creating memes to be noticed by a foundation, to be noticed by core members of teams of the chain they are validating in order to attract the attention of the core team to their validator and to help them to progress.
+
+Evan 
+Yeah, that's a difficult thing. I think one good way is to find a way to contribute, however that is. Maybe it's something like what you do with your podcast and your validator. If I was delegating to a new chain and I see that your podcast is validator is somewhere on the validator side, I would delegate to that because that's a cause that I appreciate. Because you've already contributed. So that's at least what I look for when I delegate.
+
+is this person contributing in some way? And I don't want to delegate to someone, like a validator that's like a corporate validator that they spend so many different chains, they don't care, you know? Or it's difficult to make the argument that they really care when, you know, they're like on, like they have, if you go to their page, it's like this giant list of chains. It's like every chain, chains you've never heard of, you know? And so...
+
+I understand that it's a business and that's what they have to do. But if I find a validator that's very artisanal, very mission driven, very focused on something, then that at least speaks to me. But everyone's different. Some people, what was the one validator in osmosis? Was it Wasminton or something? I had no clue what this one was, but it was super high. It had tons of voting power.
+
+Citizen Web3 
+Mm-hmm.
+
+Evan 
+Yeah, so sometimes it's just like a funny meme, I guess. But maybe those things are over. Maybe now you have to do something besides have a funny meme. You have to give away your money or something. I'm not sure.
+
+Citizen Web3 
+Well, my team is going to love me for this because I usually don't do this. But since we're on the topic, guys, delegate to Citizen Web3. No, I'm joking. Say delegate to any network, to people that you think that contribute to it. And if you think Citizen Web3 is contributing to Celestia, you can go to the inactive set and delegate to us, but be aware that it's in the inactive set. By the way, this is another interesting question. We are actually building a Validator tool and we can talk about it in a different...
+
+I guess not the point of it here. But what I want to ask you is that do you think because I know that one of your the topics is censorship resistance and I know you're a very important topic for you and You know like monopolies governments. I know that I've seen some tweets from you on that and Maybe directly it doesn't seem like it but in my opinion, you know
+
+Explorers, wallets, they are the adoption tool because this is what the end user uses. This is what is going to, if anything is going to get that NFTs, whatever, explorers, wallets, again, NFTs need explorers and wallets. This is where that option will come from. Now, it seems that the goal of removing censorship, of removing things, because we still have to use those tools even though they were up to...
+
+Today, for example, you go to most of these tools and you cannot delegate to a validator outside the active set. You cannot even sometimes see the whole fact that the validators outside the active sets are called inactive is by default wrong because they're not inactive. Sometimes they are active and the validator in the active set can actually be inactive. We just don't know that because of the window that is open. Anyways, what's your opinion here as to how much damage
+
+if any explorers and wallets are causing by centralizing users to delegate to the active set. And yeah, it cannot be solved somehow at all by builders out there.
+
+Evan
+For this specific problem, I actually think that we should enable inflation to go to validators outside of the active set. So even if you're not in the active set, like if the active set is 100, then the top 150 get inflation. Because then those validators are still doing something, they're just sitting there waiting just in case they're needed, which is an incredibly valuable service. And you don't want to dissuade that at all. So that's for that specific topic.
+
+super aware of all the censorship that goes on in other systems. However, I do think moving things more and more to locally run things helps. So something like with the Uniswap API, or Osmosis has their own API that you can run locally. Things like that are really good, and I think eventually we'll push more and more in that direction, including things like
+
+Evan 
+for a lot if you use Ethereum, which is rather unfortunate. It's not that we don't like Infeara, we don't trust Infeara, I'm sure they're great people. However, it's just the fact that kind of defeats the purpose to some extent, you know? So what we're working on, at least with Celestia, the light clients are first class citizens of the network. So that means that they have access to be able to submit transactions, make queries, a very large set of things.
+
+So in theory, right, I'm just running a light client. It's verifying the chain for me. It's providing me access to that chain. And then at that point, I'm just downloading like from IPFS or something, from some signs, you know, JavaScript, something, whatever web front end that is operating for me so that I can click on things, right, and I don't have to like use a CLI to create transactions. But...
+
+Pushing that direction is certainly, I think, the correct decision and building systems that can manage that. It's not easy, but it's definitely worthwhile, in my opinion. So that's something that I think we're definitely headed in the right direction for. We're not there yet, but we'll get there.
+
+Citizen Web3 
+I love the fact that your approach is like a dev mathematical approach rather than straightaway trying to find the social approach of, okay, how do we solve this? Well, we solve this by changing, going to the chain. We solve this by going to the core of the problem. I like that. It's a lot of the...
+
+Evan 
+Yeah, yeah, we have to make it easy. If it's easy, then it's at least doable. Doesn't mean it will happen, but...
+
+Citizen Web3 
+I like it, I like it.
+
+Man, I think dividing the inflation between entities with interest in that, because today tech, most of the chains divide the inflation between two entities, sometimes between three. Sometimes you get developers that use, I mean, the gas usage in the equation, but there are way more entities that use the chain and the network and that directly make it healthier. So I definitely agree that.
+
+That is probably the core solution there. Um.
+
+I know that we kind of like, yeah, it's always like that. You run out of time when you have a good conversation. And though I want to probably, I want to kind of go to the bleeds, but I still, to be honest, like half of the questions, it's one of, I don't, it doesn't happen very often, but out of the questions I was going to ask you, I'm looking here to the right because I'm looking at the list, I didn't ask half and usually I do, I do to go to the quarter, so I'm a bit confused. It was like, carry on asking your questions.
+
+Like, okay, do I go to... Yeah, I'm sorry. It's my fault. I'm sorry, man. I'm sorry. I'm sorry.
+
+Evan 
+We got a little distracted. No, no, it's fine. It was a good conversation. Well, I have some time if you have some extra time to ask some of these questions. I'd be happy to answer.
+
+Citizen Web3 
+Well, I do definitely want to ask you about modular blockchains and about your general... I mean, again, because there's a lot of questions, I'm going to try and summarize it into kind of like a more abstract one thing. And here we go. I'm going to try. I don't know how much you follow Vitalik, but I have the assumption that you do follow Vitalik, considering the things you say.
+
+Previously talking to Mustafa to Ismail, I know that they are not narrow minded guys who are like, oh my God, I'm going to only do my thing and all the other developers are bad and I'm not going to read what they say. So again, maybe more of an abstract kind of sentence. I don't know how much listeners out there follow Vitalik and read and he writes a lot about modular blockchains. And, you know, there is a lot of people in the Cosmos ecosystem and the Ethereum ecosystem and a lot of other ecosystems to talk about the development of blockchains.
+
+And how will it develop? Whether it will go modular, whether there is other bottlenecks that have to be taking care of, whether scalability is not the only bottleneck, whether distribution is the other way. No, maybe whatever. What's your opinion from a man who's in the middle of that? Because you already mentioned some of the benefits of what modular blockchains can bring in the beginning to blockchain. But if from a perspective of maybe a self.
+
+researcher, I know you're not a researcher, but a person who has done so much work obviously has researched things and obviously does research things and you kind of made it obvious between the lines there. From that perspective, where are we and I know it's a bit of a stupid question, but like how is it going to evolve? What's the evolution process for blockchains will look like over the next? I don't know, pick your own time frame, pick your own answer. I want to hear your opinion on this.
+
+Evan 
+Yeah, so long run, I think it's almost inevitable that we will get to many, many countless cute and tiny blockchains. And all of these blockchains you can sort of prove using a snark and then you can sort of aggregate those proofs up and do whatever you see fit with those proofs. You can bridge between these cute and tiny chains. You can do whatever.
+
+That's at least my opinion. Some of the marketing around integrated blockchains or modular blockchains or whatever, they are trying to inform. They're trying to show you something that's really truly novel about these systems. But if you really just look at the fundamental thing, all of these things really are just blockchains. And while there are some tradeoffs, most of the tradeoffs tend to be quite small. And you can see things.
+
+like the most important thing is like, how do I verify these blockchains? Like how do I verify the block validity rules of these blockchains? What are their security assumptions and how much does it cost to attack? So, so like there, there is like a very wide trade-off space, but fundamentally that's what these all are. Like a roller piece is a blockchain. We gave it a fancy name, but it's just a blockchain. Like it has a funny mechanism for consensus that uses, that relies on a different chain, which is kind of cool.
+
+And right there, there's trade-offs there. So fundamentally, if anyone really is interested in these things, I highly encourage you just to go very low level and skip, skip. If some of the jargon or wording maybe bothers you and you, or you're feeling like a bit tribal on something, I really encourage you to just go like really deep into the code, figure out how these things work. And with ChatGPT, that's easier than ever.
+
+So you can actually do this and you don't have to be able to read code. You can sort of have chat GPT guide you through some of this stuff and explain some of these things. It might not always be right, but it'll get close enough. And yeah, so I think where blockchains are headed is... I mean, modular blockchains just make a lot of sense from a security point of view, right? Like relying on a validator set for all of these chains.
+
+Evan 
+is inherently, inherently not economically viable. It just isn't. And we can rehypothecate as much as we want, meaning like restake or do something, but that also has risks. Where, and like, again, like the difference between web two and web three is like what the Bitcoin people say, right? Don't trust, verify, because it has this very special property, right? That's the superpower of these light clients. So...
+
+we kind of have to ask ourselves, how do we actually want to secure the chain? How do we actually want to change the world for the better? And if we ask ourselves that, then I think it becomes clear. It's like, we have to be able to verify these things and that that's difficult. It's much easier. It's much faster just to trust the committee. But if we actually want to improve things, I think fundamentally we have to, we have to go this like slightly more difficult route of making these blockchains that are incredibly easy to verify. And.
+
+So whatever that is, I'm not sure if that's a direction at all, but just modular integrated. I don't care. I do care. You know, I, oh, I do, I do definitively agree with build whatever. I strongly like just agree with that statement because it really doesn't matter. It just matters that you're protecting your users. You're giving your light clients sovereignty over how they determine like the rules of the chain.
+
+That's the most important thing, at least to me. So anything in that direction, I'll be happy. I'm definitely going in that direction. So it kind of doesn't matter if other people don't. All the projects that I work on will.
+
+Citizen Web3 
+Can you add to this one last thing because it's important. Do things in your opinion have to be happen all of that? Does it have to happen on chain or off chain? It can happen off chain.
+
+Evan 
+In order for something to be provable, it has to be in protocol. So there's certain things that can't be in protocol. But yeah, if you want something to be verifiable, then it has to be in protocol.
+
+Citizen Web3 
+It's an important, I'm going to leave it at that. I'm going to put a full stop there because it's a crazy, heavily topic to discuss. And I know, I can see the reaction of like, it has to be on protocol. I get it, but it's interesting. It's interesting. And it's very complex when we get into that of how many aspects and pillars and God knows what else you have to like, try to keep in mind just to understand that it's just not possible today, but like, okay.
+
+Let's move to the Blitz on that pretty note. No, but things are good. Things are good. I just want to say that the things are good. And I'm glad to hear that you say now that people can go and use ChatGPT to understand because like five, six years ago, people didn't have that opportunity unless you were a developer. You had to either really go study a script or something else if you want to use a Bitcoin, for example, right, or Gore, if you want to understand.
+
+Cosmos or whatever, blah, blah. But it's becoming easier and easier for people to try and understand what actually going on without having the necessity to verify, to sorry, to trust somebody else to verify it for themselves. With that, let's get to the blitz. So five questions, very easy. Give me one song or movie or book
+
+keeps on popping up in Evan's life and having some kind of influence on Evan's life every now and again.
+
+Evan 
+Man there's a lot I Really like to listen to music. I'm trying to I'm trying to go through my phone right now. Let's see
+
+Citizen Web3 
+Pick one.
+
+Evan 
+Lately I've been trying to learn Spanish, so I've been listening to a lot of cheesy Spanish pop. So there's this really cheesy song by, well I think it's cheesy, by Julieta Venejas, I think I'm saying her name right. It's called Con Limón y Sal, so with lemon and salt. So it's a very catchy song. I don't quite understand all the words yet, but I'm learning. So that's a fun one.
+
+Citizen Web3 
+I like it. Now I'm saying it in the Portuguese way. I live in on Madeira, which is belongs to Portugal. So I'm kind of learning Portuguese over the last few years. So whenever I hear Spanish, I'm always like I used to study also Spanish and Portuguese confused the hell out of me. But now I actually understand Portuguese more and not Spanish. So when I hear I'm translating everything to the Portuguese pronunciation. What about one direction of technology? For example, I'm going to give an example machine learning.
+
+or blockchain also is modular blockchains. It's another direction of, so not a project, but a technological direction that you think is exciting.
+
+Evan 
+Um, sometimes I have a lot of FOMO for biotech. There's just so much in there. Like I said, I went to school for chemistry and biology. So it's just always near and dear to my heart. So I, sometimes you see something on Twitter and you get nerd sniped because it's just so interesting. It's entirely different types of systems, right? And there's incredibly, incredibly interesting. There's so much to do with biotech. It's kind of crazy. But if I had to pick one,
+
+We were talking about antibiotics. So a fun new, well, it's not even new, it's old, it's ancient, but it's using viruses, so macrophages to attack bacteria. And we also mentioned evolutionary medicine, which is sort of a new, new and upcoming field. And they essentially use things like viruses or antibiotics or random tools, sometimes even machine learning as well. And they sort of like, you know, like they're playing chess with a tumor or playing chess with bacteria.
+
+and a specific infection even. So it's like a very personalized healthcare. It's extremely, extremely interesting because these problems are getting that complex, right? With cancer tumors and with antibiotic resistant bacteria, it's getting to the point where you almost have to use a machine learning algorithm to pick specific drugs and antibiotics and these macrophages, and then you can corner the bacteria. There's nowhere, there's no.
+
+where for it to move in an evolutionary direction, it's sort of at a dead end. And you win at that point. Like you can completely eradicate an infection if you can have that much control over it. So that's like a really, really exciting field. We're sort of being pushed into it. So it's not exciting that we have these anti-erotic resistant bacteria. That's very scary. But the concept of being able to outsmart one.
+
+and outsmart how bacteria evolve itself. That is super interesting.
+
+Citizen Web3 
+That is a crazy interesting topic in my opinion. And I don't know if we're probably going to drop, because we usually drop the links to what the guest says, but we're going to try and find a link, like a general link to drop. So if somebody's interested, can go in and research that. Please, please, please.
+
+Evan 
+I can send you a paper. There's a really good paper of, they tried this macrophage treatment for someone who had an infection in their heart. So actually a bacterial infection in the heart that was antibiotic resistant from surgery. So they had surgery on something else. The bacteria traveled and stayed in their heart. Well, that's obviously a terrible place for an infection, but they couldn't get rid of it. So the patient unfortunately had.
+
+Citizen Web3 
+Mmm.
+
+Evan 
+had other heart problems, they had to do an open heart surgery. And as part of the treatment, um, because it's antibiotic resistant, they couldn't apply antibiotics. They applied a different antibiotic and a macrophage and, um, they actually got rid of the heart infection. It was, it was an incredibly rare case, but, um, uh, it was really cool. Yeah. And people in Eastern Europe have been doing macrophage therapy for. I don't even know how long, a very long time. Yeah. That's why I said it was, it's not even new. But.
+
+Citizen Web3 
+Wow.
+
+Citizen Web3 
+Really?
+
+Mm.
+
+Evan 
+The science behind it is really fun.
+
+Citizen Web3 
+If you can send the link to the paper, I love reading paper like that personally, and I'm sure there will be at least a couple of people that listen into this, it's like, oh, I want to read that too. We'll definitely include it. If you cannot find it on hand, we will definitely find it. Next one, give me this is this is this is a question that sometimes is very difficult to answer. But it's easy as well. A blockchain project that you think is interesting.
+
+Don't say Celestia, Cosmos, Bitcoin, Ethereum. Like you can of course if you want to, you can. But something that is like maybe in the model of, yeah. Whoa, what is that? I don't even know that man. And I just consider, how do I, how do I play? I'm curious, I never.
+
+Evan 
+Hehe
+
+Evan 
+Nuh. Oh, my favorite is penumbra.
+
+Evan 
+Penumbra?
+
+Evan 
+This is the project I think Henry de Valence started. It's a privacy decks, privacy focused decks. It's a bleeding edge, absolute bleeding edge. The things that they do are just like, the ideas are just so brilliant in how they sort of organize things, even to the extent like their code. Yeah, I'm a huge Penumbra fan boy. Love that project.
+
+Citizen Web3 
+Okay, interesting, okay.
+
+Citizen Web3 
+Nice.
+
+Citizen Web3 
+Nice, nice. Gonna definitely check it out and again, links on the episode, sorry, on the show notes, in the show notes. We are a bit into Nomada ourselves. We are participating now in the Shielded Expedition as a validator of Nomada. And Chris, in my opinion, also fascinating guy. Also big shout out and yeah, big mind. This last two questions are slightly more difficult, but still simple. So first one.
+
+Evan 
+Yeah, definitely.
+
+Citizen Web3 
+Um, what is one motivational thing that keeps Evan out of bed and interested in censorship, resistance, chemistry, modular blockchains and everything else? What is, is there anything like that?
+
+Evan 
+That's a good question, I'm not sure.
+
+Citizen Web3 
+What is the good motivational thing? I don't know. I like it.
+
+Evan 
+I think I just...
+
+Evan 
+I don't know, I think I just feel like I was very blessed to be put on this planet at all, let alone have the opportunities that I've had. So I just want to contribute back. And I think one of the highest leverage ways that I can do that now is to leverage my expertise that I've been very fortunate enough to develop.
+
+Citizen Web3 
+That's a very good answer, man. It's very honest at least as opposed to some answers that sometimes I hear. What is the, sorry, what is the last one? Give me one person or a character, it doesn't have to be a real character, it can be made up, it can be a developer, it can be somebody from your family, it can be a writer, it can be, it doesn't matter.
+
+Citizen Web3 
+I don't believe personally in gurus, so I never say guru or an idol. Somebody who has inspiration in a positive way on you throughout, not necessarily throughout the whole of your life, but sometimes it comes up again and you're like, well, yeah, I get it. That's a good thing to do. I would like to be more like that.
+
+Evan 
+Yeah, I see that a lot. Anyone who tends to go against the status quo, there's been a lot of people. You know, we all know Jay and Bucky. So Ethan Buckman specifically has influenced me a lot over just like my like, you know, diving into cosmos and you know, figuring out things. Yeah, I really look up to Ethan quite a bit.
+
+Citizen Web3 
+Nice, nice. Um, that was the last one. Evan, um, thank you. I'm sorry that we went a little bit of topic, but I think it was a very interesting conversation. It's good to not to stick to the protocol and actually hear people's opinion about why this is, this is what I want the show to be. I want people to, you know, to connect to the stories of those who made this world a possibility, a real possibilities, a possibility, sorry.
+
+So thank you very much for your time and for your answers.
+
+Citizen Web3
+Thanks. And please don't hang up just yet. This is just for all our listeners. Thank you and see you next week. Bye, people.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+
+

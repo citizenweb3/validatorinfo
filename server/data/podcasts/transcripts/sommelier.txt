@@ -1,0 +1,501 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/sommelier
+
+Episode name:
+Cypherpunks, Product Management and Jack's Dog with Jack Zampolin
+
+anna 
+Hey, it's Citizen Cosmos with Serge and Anna, and we discover Cosmos by chatting with awesome people from various teams within the Cosmos ecosystem and the community. Join us if you're curious how dreams and ambitions become code.
+
+Citizen Web3 
+Good space time to you all. And welcome to a new episode of the Citizen Cosmos podcast. are joined by Jack Zampolin today, the co-founder of Somelier Finance and Strangelove Ventures. Hey, Jack, welcome back to the show, man.
+
+jack_zampolin 
+Hey, thanks a lot for having me. You know, this is one of the first podcasts I did. And since I did your podcast, I've started my own podcast and like done the whole circuit. So thank you guys for getting me started on that. I appreciate it.
+
+Citizen Web3 
+Yeah, you ditched our sponsorship for somebody else. I'm joking,
+
+jack_zampolin 
+I needed some help getting the thing going and like you guys are super busy and like I totally get that and Cicil wanted to do it. y
+
+Citizen Web3 
+You just like use this and ditch this. No, I'm joking. I'm totally... You know, we love you more than anybody else. Everybody else, I'm sorry, but we do love Jack. So, 
+
+jack_zampolin 
+I know, it's so rough, it's so rough.
+
+anna 
+We're 100 % honest all the time.
+
+Citizen Web3 
+This is going to be fun again like the last time I can feel it already. mean, Jack, often start, by discussing the personality of the guest. But today we'd like to talk about your personal evolution. So tell us who are you these days? Are you a businessman? Are you an entrepreneur? How did you personally evolve since we last spoke to you?
+
+jack_zampolin 
+oh yeah.
+
+jack_zampolin
+Yeah, I think that's a great question. I do view myself as more of a businessman entrepreneur than I did last time, I think. You know, I think last time we chatted, I had been kind of deep in the relay or salt mines for a while. And I was like really in this software engineer head space, how can I build the best applications? I still think that way.
+
+But I think that that experience of building the relayer and doing it kind of solo has taught me, Hey, I really need more collaborators and I need some more help for these projects that I'm working on. And that's forced me to think a lot more on like how to scale myself from a, from like a labor perspective, building these things, it's an iterative process and it, takes a lot of time. You have to like be with the code and be with the problem for a long time.
+
+And to really make good software, that's the only way to do it. And I only have so much time to spend on these things and, I've got a number of projects. so like, how do I scale myself? How do I hire? How do I, raise funds and do those things? So, I think that the big change I've made last time we talked, I did still have the validator business, but, I didn't really advertise it at all. And, you know, we weren't really doing anything besides.
+
+running these validators on the networks and we didn't really talk about it. I've been working really hard to not only hire in Strange Love, but to take a lot of the stuff that I was doing kind of ad hoc as an individual, formalize it a little bit more and put it into a company. And, we're going to be maintaining the go-relayer as well as a threshold signer for Tindermint validation. you know, that's sort of the beginning of what Strange Love is going to offer back. And then also at Samoyed.
+
+jack_zampolin 
+figuring out how to sort scale Cosmos as a whole, connect it to these Ethereum chains, get this interchange vision that we have more and more adopted. So, I think as far as like how I've grown, I think I've started to try to look at myself more as a manager and try to think more about how to make more impact with these projects that I'm working with.
+
+anna
+Cool, and do you think that soft skills are starting playing more significant role in your daily activities or not?
+
+jack_zampolin 
+Yeah. I think that if you had sent that to me in text, I would have sent like Earth astronaut gun astronaut. Like soft skills always, always important. And, I think the more and more I work in this industry, the more and more important I see it as. Code is really this.
+
+these shared ideas that we have. And when we decide to adopt code or work with particular pieces of code, we do that because of the individuals and the groups that are building that code and how that makes us feel in a lot of ways and whether or not we agree with the ideas that are being pushed forward by that code. And while the building of the code is highly technical and it's important to stay within the technical realities of what's possible when you're doing that,
+
+if you are somebody who wants to get your code adopted, those soft skills are just crucial. And that's one of the reasons why when people are looking to get into this industry, looking to get into coding, I always tell them whatever skills you have prior to doing this are going to be very, very valuable. The technical skills that you add will help you utilize those soft skills you have.
+
+Citizen Web3 
+You said that you became more of a businessman and, you know, more of like taking care of this side of thing. What founders of unicorns currently inspire you?
+
+jack_zampolin 
+I have a lot of folks in this space that I really admire and I think do a great job. I can talk about Cosmos folks like Doe and some of the other folks within the Cosmos ecosystem. But I think, especially with my experience with Sommelier, I've been exposed to a lot more of the folks from outside of just Cosmos in the Ethereum ecosystem.
+
+I think that the YFI team and sort of like what Andrew Cranje and the folks there have been pushing with this sort of like test and prod mentality and this really user experience focused mentality when it comes to crypto is something that really I jive with. and just through my interactions with like the stuff that they produce online, I've started to test more in prod. one of the first like test and prod type things I did was I,
+
+deployed a version of the Gravity Dex and moved real IBC tokens over to it and performed a swap prior to that going live. And that was super fun and taught me a ton about the state of tooling. But how I've pulled that into my personal software engineering practice is right now, we're working on the relayer, and every day, like just after 10 o'clock,
+
+PST there is this huge osmosis to cosmos like explosion of relay packets so what we've started to do with the relay or is just get in there and test and prod right at 10 o'clock like I try to block off like 30 to 45 minutes and we go get as many error messages as we can out of there and get that direct user feedback of like how pissed they are that their packets are timing out and You know to try to push that so, you know, I feel like I've
+
+anna 
+Ha!
+
+jack_zampolin 
+you know, that's definitely somebody who's built a huge company and also the fact that how decentralized that is, think is really cool.
+
+anna
+Yeah, I agree with you. And maybe let's go a little bit outside of blockchain world. I know that it's tricky question, but maybe someone or some project, some founder outside of blockchain industry itself, you think is really good for the moment. Is that some?
+
+jack_zampolin 
+Yeah!
+
+jack_zampolin
+I used to spend a lot more time looking outside of the blockchain industry. And I think especially over the last six months, I've just been so deep in this thing. Trying to focus on fixing the issues that we're trying to push through. I love me some Elon.
+
+I'm to go build rockets and go to space. Like, yeah who doesn't love Elon? 
+
+anna
+okay. Yeah.
+
+jack_zampolin 
+Another thing that I would say about this comment is like, I'm more and more admire groups of people who come together to get things done and are able to like effectively coordinate over long periods of time. Because I think that that's extremely hard for every story about a solo founder out there. there's 10 stories that people aren't telling about a three to five person founding team that made something really incredible.
+
+jack_zampolin 
+And I think that a lot of, young folks out there who say, I want to be entrepreneurial. the media tells them that, they need to go out there and be a solo founder and they need to bang their head against this thing and blood, sweat and tears and the whole deal. And when in reality, if you go find people that you enjoy working with and work in small companies and working kind of an entrepreneurial way and take ownership over your work.
+
+you'll end up finding collaborators that you can start a company with. And that sort of support, both emotional support, which is a huge thing for founders, as well as actual business support. It's not just one person keeping this company going. There's a number of them. And if one of them takes a vacation or has something pop up in their life, it doesn't kill the company. I think that's something people need to hear more.
+
+Citizen Web3 
+that's a really cool answer. First of all, we must admit that we love the naming of all your projects. Somalia, Strangelove.
+
+jack_zampolin
+Okay.
+
+jack_zampolin
+Oh Yeah.
+
+Citizen Web3 
+And I remember posting some pics, I remember posting pics of bottles of wine around Christmas, New Year's time on the Somalia group. was like, get some, right? But back to the question, back to the question. I mean, you already started to mention the projects, but tell us like in the most simplest terms that you can, what are the projects that you're currently working on and what are they about?
+
+anna 
+Hahaha
+
+jack_zampolin 
+I have this personal validator business, which is a bunch of me and a close friend, Tyler Schmidt. We tried to start a Bitcoin mine back in 2014 together and ran servers out of friends houses and friends offices for a couple of years together. We invested in Bitcoin together back in 2013 and he's been on this crypto journey with me for a while. And when I started the validator, he
+
+jumped on board with me. And we've been very successful with that over the last couple of years, and that's turning into more of a business. So with that validator business, I'm trying to take the personal projects that I've been working on, stuff like the Go Relayer and Horcrux, and contribute back to the broader Cosmos open source community and continue to invest in new projects. So it's a venture fund, and that's sort of one piece of what I'm working on.
+
+The biggest piece of what I'm working on is definitely sommelier. that's a little bit more difficult of a project to describe, but...
+
+If I'm going to describe it really succinctly, I'm going to say it's the ability for a Cosmos chain to control a smart contract over on Ethereum. Yeah, that goes down easy. The rest of it goes down real hard. So, 
+
+Citizen Web3
+I like that, that was easy.
+
+jack_zampolin
+what this means is the validator set on the Cosmos chain directly corresponds to the multi-sig signers over on Ethereum. We talk a lot about sovereignty and decentralization here in Cosmos. Those are values that we're talking about these companies that we admire. These are things that I think are really important, especially when we see the challenge from the SEC and the US government.
+
+the only thing that's proven to protect folks in the U S like me is that we make open source software and anyone can get out there and run it. we've seen this again and again in the courts. So
+
+If you're deploying a multi-billion dollar DeFi project on Ethereum that has a five of eight multi-sig, for example, how is that different from a bank with an eight person board? And the real answer is it's not. It's not decentralized. It's sort of this decentralization theater. And there's a lot of folks that are, doing cartwheels to try to work around that. But with this ability to control an Ethereum smart contract with a sovereign blockchain, 
+
+that really creates a true DAO that actually has real ownership over those things. There's ways to do this in Ethereum smart contracts as well. Most things aren't set up this way for variety of reasons. So that's kind of the core of it. But what we're going to do first is manage liquidity in Uniswap v3 pools and provide product.
+
+for liquidity providers to make it much easier to provide liquidity on the highest volume markets of run Ethereum.
+
+Citizen Web3
+know you are also an advisor for Akash and for Kava. What do you do as an advisor? What's the job here?
+
+jack_zampolin 
+with Kava, I helped them find some investors back in the day. I was technical advisor. You know, whenever they had questions about the Cosmos SDK, I would answer. over the years, that's kind of evolved into helping them with upgrades. I'm less involved in Kava on the day-to-day now than I have been at any point during my time advising there. But, was much more actively involved earlier in the project.
+
+in Akash, I was the first investor there, as well as advising. And I even took about eight months and we worked for the project and helped them watch mainnet. so, I still work with a bunch of folks in the ecosystem, try to encourage adoption there and try to help push the limits of what's possible on Akash. And in fact, my Horcrux work, which is the sort of threshold signer for Tinderman Validators.
+
+jack_zampolin 
+The end target for that is envisioned to be Akash. If you're going to run a validator on some untrusted compute, you better have a way to shard that private key so that the data center operator can't trivially steal it. And Horcrux is pretty much the only thing that I think has the possibility to do that. So really looking forward to seeing that on Akash, working with a number of folks there. So...
+
+You know, in my role as an advisor, what I try to do is I try to use, all the tools that my belt to help these projects succeed. And sometimes it's my personal brand. Sometimes it's connections. Sometimes it's money. Sometimes it's technical contributions. And, you know, I try to just, there's projects that I admire that I like, and I try to help out.
+
+Citizen Web3 
+With all of those like projects, especially with Somalia, how did it all start? And if they're holding your hostage, you can just nod and we will send some help if they're like holding your hostage or anything like that.
+
+jack_zampolin 
+For sure. so how did Psalm start? Zachy and I, I don't know if I said this the last time I was on the podcast, but I had left Blocksack back in 2018 and I was looking for another project and wasn't even looking necessarily just in blockchain. I was looking at some stuff in traditional tech too. was looking at a SaaS video encoding company to go do some work for them. And I ended up,
+
+applying for a job at Cosmos and went through a couple of interviews and it wasn't until I had a 15 minute call with Zachy where he was like, yeah, it sounds like you should come work on Cosmos. And I was like, wow, that was a 15 minute call. And I feel like I just got a job. since then I've like really enjoyed working with Zachy and really admired the way he thinks. And we've had a great collaboration for a number of years. So, I got the
+
+Akash Mainnet launched and the path in front of them for Mainnet was much more about their Kubernetes integration and the product side of things that they had was much less about the blockchain and much more about the cloud compute. anyway, I stepped back from that product role I had at Akash at that point and started working closely with Zach and our other core collaborator there, Tariq on
+
+how to build a bridge between Cosmos and Ethereum and actually make that bridge be used. Because I think that we see right now there's a lot of bridges to nowhere out there in the market. There's this ghost chain that creates a bridge and they say, wow, if we build it, they're going to come. having worked in software enough, I know that this sort field of dreams approach to software development is a dry well to mix metaphors.
+
+jack_zampolin 
+so we were thinking, what could we use this bridge for that would drive actual usage? And we're sitting there looking at sort of if we rewind back to the end of 2020, we've all just experienced DeFi Summer. And we've sort of seen the rise of YFI and Uniswap. And so Zachy and Tariq and I are thinking, how do we use this?
+
+bridge technology to help manage DeFi contracts in a way that's not possible on Ethereum right now. And we had this idea to manage Uniswap v2 liquidity and give users the option to pull that liquidity if impermanent loss reaches a certain threshold. And this would allow more automated trading and management of that liquidity. So we started working with the Alfea team at that point.
+
+who was working on the Gravity Bridge and working closely with them to make sure that we had the ability to do cross-chance more contract calls and to make sure that the bridge was stable and secure. And that was kind of the genesis of what became Sommelier.
+
+Citizen Web3 
+Man, this is a lot of things for one person to handle. I'm pretty impressed. But I know you like economics. I remember we spoke about numbers last time a little bit. But I've got to ask, who is the mastermind behind Somalia's economical model? And maybe let's talk a little bit about the allocation model and the Oracle data feeds.
+
+jack_zampolin
+Zachy
+
+Citizen Web3 
+that you guys are building. Let's explain about it. That would be cool.
+
+jack_zampolin 
+Yeah.
+
+jack_zampolin
+Yeah, for sure. So as far as the economic model, sommelier is going to be a fixed supply token. And most of the allocation goes to the foundation and the community pool. And the plan is to use those for future air drops and liquidity incentives that we'll be announcing here sometime in the next few months, likely the first tranche of those. But I think that looking at DeFi Summer and looking at how these protocols have evolved and gotten users,
+
+we saw that liquidity mining as a key feature and wanted to make sure we had room in the token distribution for that. As a side note, I think that that's one of the reasons why the Gravity Dex is not seeing the type of adoption that some folks might want it to, is because there aren't really any leftover atoms just kicking around to throw at people for essentially marketing. The way that we do marketing in this space is by giving people equity. Hey, you get equity.
+
+you get equity, you get equity. And some percentage of those people are going to feel excited by the project, feel that sense of ownership and go out and evangelize as well as profit from it. And that's the proven model to sort of grow these things in one of the unique ways that we can do marketing in the space that others can. So that's sort of the sommelier token model. And Zachy is definitely the mastermind behind that. As for the...
+
+jack_zampolin 
+Oracle data and the allocation stuff. So I think that requires first a bit of a deep dive into how liquidity provisioning on Uniswap v3 works and how it's different from v2. So in v2, when you put liquidity into a pool that's used to service trades, your liquidity will be used for the full range of prices. If ETH goes to zero and USDT is like, you know, you're getting a ton of dollars or
+
+with very few dollars, very, that liquidity will just stay there and it will continue to be used to service trades. In Uniswap v3, when you provide liquidity, you have to say, I only want my liquidity to service trades between this price and this price. And you put a band, essentially. And that makes for much more capital efficient markets, but it makes the process of being a liquidity provider much harder. It essentially puts you in the business of
+
+predicting future prices, which is what a bunch of these market makers all over the world do. How do they do that? They normally do that by back testing against historical data and pulling in a bunch of market signals, making a complex model, and predicting those prices in a short future type time frame. So
+
+In sommelier, we have this concept of data providers, and those data providers provide feeds that help the validators decide where to deploy the liquidity within these Uniswap v3 pools.
+
+this is traveling from centralized backends that are querying stuff like the graph and a bunch of Ethereum full nodes, as well as price data from various APIs, packaging that up into a coherent data feed that is then consumed by validators and submitted to the Cosmos SDK blockchain as transactions. Once the validators
+
+jack_zampolin 
+essentially vote to move the liquidity because the only state we keep on the Cosmos blockchain is where the liquidity is currently deployed. So if they vote to move that, the state machine of the sommelier chain creates an Ethereum transaction that all of the validators sign over that then gets submitted to Ethereum. The gravity contract then calls the seller contract to rebalance the liquidity.
+
+An event fires that that has successfully completed. We relay that event back to the Cosmos chain where we update the weights on the sellers. And then that voting procedure kind of continues again. And in this way, we're able to incorporate real-time market data into a decentralized process that's able to actively manage a portfolio of assets.
+
+That's a mouthful right there, but that's a pretty revolutionary thing that has not really existed before and is net new in this space.
+
+Citizen Web3 
+to be honest, I understand pretty much like the model, but the question I have here is because this is real time and especially on Ethereum, we have a lot of things like with sandwiching transactions and there is a lot of automatized like quick things there. And I'm just thinking for the validators to vote on moving the liquidity for one band to another band.
+
+Citizen Web3 
+that does take some time for that voting to happen. And if you're already being sandwiched on Ethereum via that voting is happening, like this has to happen so quickly maybe I'm missing something out here, but like, I'm just trying to think time wise.
+
+jack_zampolin 
+you're right, there are latency restrictions to this platform. So how do we work around those? We set slightly wider bands, and we expect rebalances to be fairly infrequent on the order of once every day or two. And with that, then the impact of these sandwiches, and there's other sort of MEV mitigations that we can take, that we have taken with the various contracts that we have. But the time frame on this thing is not
+
+there's not a super tight liquidity band that we're rebalancing continually. Not only would that not be profitable because of Ethereum gas fees, but it's extremely hard to do operationally, getting these transactions into the Ethereum mempool predictably. So what we need to do is zoom out a little bit and think less high frequency trading and more sort of responsible management of assets.
+
+Citizen Web3 
+I like this, but let's take a zoom and let's talk a little bit about blockchain economy as a whole before we might go back to Somalia. but do you think that a lot of people, a lot of high profile economists as well and journalists mentioned that blockchain economy, especially, is a zero sum game. What would you say to that? Do you think that some projects in the blockchain industry...
+
+jack_zampolin 
+Yeah.
+
+anna
+Ha ha!
+
+Citizen Web3 
+I like that, but I want to hear your opinion. Do you think that some projects in the blockchain industry fight dirty? Do you think that there is a zero-sum game? What do you think about it? Let's talk about it.
+
+jack_zampolin 
+oh yeah!
+
+jack_zampolin 
+Yeah, I think blockchain is the best example of a positive sum game that exists in all of humanity right now. We have people from all over the world collaborating across hundreds of protocols without probably liking each other or necessarily agreeing to grow the share of this digital economy that we are all building together. So I think in that way, looked at as a totality, blockchain is
+
+anna 
+Let's talk about dirty games.
+
+jack_zampolin 
+decidedly a positive sum game and has shown huge increases in human freedom for the people who have adopted it. So with that framing, let's also talk about the fact that there are actors that treat this like a zero sum game and try to get bigger and bigger shares of the pie. I think that that's undeniable, but...
+
+I think that any system of sufficient size needs to be resilient against those types of insider threats. It needs to be resilient against those kinds of attacks because what we've seen over and over again in history is that humans will do this. They will try to monopolize a pie. And, if it's not one organization, it's going to be another one. And we see this all the time in blockchain. I think that
+
+Cardano is one example of this huge project that's like treating this like a zero sum game.
+
+anna 
+Hahaha!
+
+Citizen Web3 
+I think we should get paid from Cardano because the amount of times people mention Cardano on our podcasts, sorry to interrupt you, Jack, but this is like, know, everybody just talks about Cardano.
+
+anna 
+Yeah
+
+jack_zampolin 
+well, Cardano triggers so many blockchain people because it's so obviously vaporware and it's so obviously this leader cult that everyone looks at it. They're like, obvious thing is obvious. We're all agreed here. Because you feel crazy when that's the number three thing by market cap. that's a great example of somebody playing a zero sum game and doing a good job at it. 
+
+anna 
+haha
+
+Citizen Web3 
+religion.
+
+Citizen Web3 
+Sorry, I interrupted you there, but I think that the point was clear. let's talk about Teams because we like digging into Teams. And when we opened the sommelier finance page team, we see eight or nine founders and co-founders. Who the hell does the work? I'm joking. I'm joking. I'm joking. It does say that, but in all seriousness, you guys have like a really real...
+
+anna 
+Ha ha
+
+anna 
+Hahaha!
+
+Citizen Web3
+big large names on the team. have yourself, Zaki, Deborah, Federico, right? mean, who is the mastermind behind assembling your teams? And what is the secret ingredient to assemble strong, powerful teams that work and last for a long
+
+jack_zampolin 
+There's no silver bullets. I think it's Mark Andreessen wrote this book called The Hard Thing About Hard Things. And one of the chapters is called Lead Bullets. And basically the point of the chapter is some problems have no easy answers. And you just have to work at it over and over again. And this is the case with recruiting and hiring. There is no silver bullet. And there's definitely things that I think every company can improve on in that area.
+
+jack_zampolin 
+At the end of the day, comes down to the blocking and tackling of continuing to have conversations with these people, continuing to get out there and work on the issues that you see in hiring and development. I feel like I dodged your question. Do you mind rephrasing that again
+
+Citizen Web3 
+No, the question, no, no, you did actually, you answered it pretty well. I mean, the question started with a joke because when you go on a team page, you see that there is like eight founders and I don't know all of them, but they're all quite powerful. So the ones that I do know, they're quite big names and I'm quite curious how you guys work together I don't know if you come from one entrepreneurship culture or you don't, but how do you all manage it? Like as one.
+
+Citizen Web3
+entrepreneurship culture. Man, I'm not going to pronounce it correctly again. No way. I'm trying to.... Entrepreneurship culture. Thank you.
+
+jack_zampolin 
+Entrepreneurship?
+
+jack_zampolin 
+this goes back to my work at Strange Love where I'm backing founders and we work with folks in an advising capacity in a lot of ways. And, I think that the key thing here is like empathy. if you're working at the edge of these new fields, you have to work with people who are exceptional in some way. And that comes with a lot of downsides in a lot of cases, 
+
+I know a lot of people who've worked with me would say that I have downsides as well. I try to be upfront about those, but I think that...
+
+Establishing and building a team is all about value alignment and is all about alignment on goals. And if you can align together on goals, i.e. we ship this bridge, you can bring a team together around that goal, keep them motivated and continue to push through a lot of challenges and even misalignment between various team members as long as we can agree on the goals. And that's what I always try to do when I build teams is make sure that there's a coherent goal with a final endpoint.
+
+that we can all drive towards in some sort of coherent way. So with Sommelier, there are these various pieces of this project and different folks that are working on it have come in with goals to complete various pieces of this and kind of push various parts of it over the finish line.
+
+Citizen Web3 
+You mentioned downsides. What was the biggest fuck up that you do? Your personal biggest fuck up with Samulier?
+
+People can't see this right now, but Jacques is like really thinking. 
+
+anna 
+Ha ha
+
+Citizen Web3
+You don't have to answer.
+
+jack_zampolin 
+Fetty is now primarily working on EtherMet. He worked with us for a few months to help build the bridge. And that was a huge contribution from Fetty. He's less involved in the project now and much more involved in starting his own company, which is Tharsis. I think Fetty, love you. And not a knock on Fetty at all. One of the biggest mistakes I made was 
+
+Fetty obviously had a bunch of stuff that he wanted to work on and was obviously passionate about Ethernet and I worked really hard to try to like grab him and drag him to make the Gravity Bridge happen. that was partially like blindness on my part. I was like, Fetty's a good friend and we like all try to build this cosmos thing together. Like of course he wants to build the Gravity Bridge, but he wants to build Ethernet. And I should have just like noticed that a lot earlier. That's like one thing.
+
+But if we're talking about downsides of entrepreneurship, we talked about sort of solo entrepreneurs a little bit earlier and how hard it is to do and how one of the biggest parts of working with a team of founders is that you can provide emotional support to each other. There's a lot of entrepreneurs out there that have never gotten emotional support from fucking anyone. And I'm not talking about anyone in specific here. I'm talking very generally about all of us.
+
+anna 
+Ha ha
+
+Citizen Web3 
+Ha ha
+
+jack_zampolin
+I have a lot of folks that I talk to who like, you know, we can talk through this stuff with, and like, that's been hugely important for me as a founder and as an entrepreneur. I hope that more folks go out and get that. But one of the things that I'm trying to say here is like, what are the downsides of this? that leads to a lot of strong personalities and people who, when they get an idea in their head, they're like fucking doing it. That has huge benefits.
+
+and also comes with weaknesses.
+
+Citizen Web3
+we both mentioned obstacles, we both mentioned downsides, fuck ups. obviously you've worked right now so much on Cosmos and on Ethereum simultaneously in that sense, not on Ethereum core, I mean, but you know what I mean. And the question is, if there was a team out there who's thinking about starting a project,
+
+Citizen Web3 
+between Ethereum and Cosmos. Obviously, you have so much experience right now. What would be your advice or advice says to those teams that trying to build something between Ethereum and Cosmos? Don't do that or do that, something like that.
+
+jack_zampolin
+Yeah, I think that there's a lot of ideas that work really well as a smart contract with a simple front end. And there's a lot of businesses that can do that. So a lot of people come with ideas to me and I'm like, that's a smart contract. Go run that on Ethereum, go run that on Juno. There's a bunch of smart contracting platforms out there. And I'm happy to talk with you about how to find markets and think about competitive dynamics there. But there are also some things that are
+
+larger ideas and a little bit more robust. And for that, creating your own chain, building your own ecosystem, those are kind of the considerations that I would bring in is what are you trying to do? What's the right tool for the job? And how do you, using these existing tools out here that have been created, make your company successful and bring your idea alive?
+
+Citizen Web3
+this is where people find the most, I think, difficulties, right? Projects to build those ecosystems. And where do you dive? Where is the starting point? For you personally.
+
+jack_zampolin 
+Lead Bullets, I mean, for me personally, it's been, starting a personal brand has been huge for me. You know, I, when I started in tech, I did this developer bootcamp that really helped me a lot. And, one of the things they forced us to do is create a Twitter account. I hate social media. I don't have a Facebook account. I don't have an Instagram account. I don't have any of those other accounts and.
+
+anna 
+ha ha
+
+jack_zampolin 
+That was kind of a stretch for me. And for my first bunch of years in tech, I didn't really use my Twitter account. I didn't feel comfortable speaking publicly. A lot of people talk about sort of imposter syndrome. And if you've only been programming for a few years and you're working on highly technical topics like blockchains, consensus systems, high performance databases, identity solutions, it's hard to feel any kind of sense of authority getting out there and talking.
+
+At a certain point in my experience in Cosmos, and I don't really remember exactly what it was, I realized that in order to do my job as a product manager better, I needed to have a voice in some conversations that were happening in places like Twitter and in Telegram. And since then, I've worked really hard to sort of build a consistent voice and use that to drive forward projects that I'm working on.
+
+And that has led me to have a community of folks who like to listen to me. And that's cool. It's honestly humbling and really cool. I think that when I'm starting new projects, I look to that community of folks first to say, hey, that's a good idea, or hey, that's a bad idea for x, y, z reason. And that's, I think,
+
+Having some sort of pre-existing community that you can piggyback on when you're starting something new, I think is critical. Look at Osmosis. Osmosis is a great example of this. They forked the Cosmos Hub distribution, made it little flatter, and created this rabid community of fans out of a pre-existing community, which I think is a great way to start a new project.
+
+Citizen Web3 
+I love that answer. I all those things that you say apart from forking and starting a community, what you were talking about before, are very rewarding, especially when you do it yourself. It's like you feel that energy flowing into yourself and you're like, wow. 
+
+anna 
+And what about emotional support and rewarding experience when you do something in the community? You can feel the differences between the cosmos community and the Ethereum community. How do you feel the differences? What is the feeling that you have from Ethereum and cosmos community? 
+
+jack_zampolin
+I think Ethereum in this way is also kind of, we talked a lot about zero-sum thinking earlier. I think it's really easy for folks on Ethereum to fall into that zero-sum, one chain to rule them all. It's the Lord of the Rings reference. Like, Sauron made one ring to rule them all, a centralized piece of power. the Ethereum blockchain, I think is viewed by a lot of people as one chain to rule them all.
+
+jack_zampolin
+There will be this Ethereum token distribution and that will be the most important monetary instrument. Bitcoiners fall under this all the time.
+
+Cosmos is very explicitly not that. we didn't build a value capture chain. We built a bunch of fundamental technology to build a vision that we all believed in. That's a very different community than one that's organized around an idea of artificial scarcity. And, a lot of people say this in a way like interoperability is the thing that kind of brings us all together.
+
+And that's another way of saying what I'm saying right here. what we've built is a system for making much more positive sum games. And I think that that's the biggest difference between the Cosmos community and the Ethereum community. This is not to paint the Ethereum community with a broad brush. I think there's a lot of people on Ethereum playing positive sum games who do a great job at building core infrastructure and, 
+
+I have a great deal of respect for the Ethereum community, especially after the last year working on the technology, sort of seeing what they're working with and sort of how they've evolved it. I have a ton of respect for the people over there. I just think that, from the founding, these are two really different ideas and they started kind of at the same time, Bucky and Jay and Zachy were all early in Ethereum and were working with the core team there to sort of develop these ideas.
+
+And we ended up going in slightly different directions because the Ethereum folks ended up saying, this Ethereum thing is special. We need to protect and defend it. We need to continue to develop it. And the Cosmos people said, we're moving towards this world in which there's going to be many, many chains and we need to build for that. And those are just, you know, different founding ideologies and they come with different trade-offs. And, know, one of the trade-offs is like,
+
+jack_zampolin 
+I think Cosmos is a much nicer place than a lot of other blockchain communities.
+
+anna 
+let's talking about Cosmos community and let's move a little bit about the professional interests. I know that you have a lot of interview and you're kind of public speaker now. So do you feel like kind of journalist maybe now and do you feel that you gonna...
+
+improve and highlight something as a journalist in the industry.
+
+jack_zampolin 
+That is not a framing I have ever put on my work, honestly. I think of it as kind of transparency and teaching more than journalism. Through my tech career, I found that I learned best if I learned something, and then I go teach a few other people how to do it. It helps not only solidify the learning in me, but it helps find future collaborators as well.
+
+I have a lot of calls with a lot of different people throughout the ecosystem for all kinds of reasons. And the sort of genesis of conversations with Jack was how do I share this knowledge that I'm getting with more people and help teach more people about what's going on out there? Which is I think a form of journalism in and of itself. But yeah, I would say that that work is for to help be more transparent and help bring more people into what we're working on.
+
+at the various projects that I'm with.
+
+anna 
+What do you do to improve the way you just share this experience with others? Because obviously it's the very way by nature to share what we have, what we learn, to share our journey with others. So what do you feel, how you can do it in the very
+
+emotional based way because it's the close communication with others.
+
+jack_zampolin 
+Yeah, you know, think it takes practice. It is a practice. It's something you kind of have to get out there and do. And it's, that's a huge reason why I've tried to do one every Friday. 
+
+anna 
+You have a special friday part for that
+
+jack_zampolin 
+I do. Yeah. It's at 8 AM on Friday and I do conversations with Jack. Everyone in my family knows like, you know, it's just like, you know, it's, Cicely always talks about how his family knows that it's conversations with Jack on Friday too, which is funny to me. but. You know, it's, I think it's a practice and I think just doing it and trying to take in feedback from people after every conversations episode, I was trying to get off the call and I say, Hey, what could I have done better?
+
+anna 
+Hahaha
+
+jack_zampolin 
+And I try to listen to feedback from various other folks who watch it and try to just be a better interviewer, really. Because the purpose of that show is to get these other people who work on this stuff to talk about it. I think that one of the things about engineering that's tough is it is this very kind of isolating thing where you're working on this problem, sometimes in a whole, sometimes for a really long time. and
+
+a lot of engineers have a lot of trouble expressing that. And one of the things that I hope I can do in that interview is help them express that in a more coherent way to an audience so that they can understand it. that is also a ton of practice and the only way you can get better at it is just by doing it. 
+
+Citizen Web3
+I was actually going to say that I listen to your I don't know if you have a video thing because it's a YouTube thing because I watch it. didn't see the videos. I just listen not to not watch because I really like the way I learn personally from your interviews. I mean, it's a bit different from what we do, of course, but I do learn because and I was surprised that when you said that you started your first podcast like was pretty much with us and then you started to record because I always thought that
+
+Citizen Web3 
+You already had that experience because the way you do it for me is very inspiring. You have questions which are really down to the point and you pull out the information. So I like that. It's really good.
+
+jack_zampolin
+that's how I am as a product manager. And normally it's a little bit more pointed when you're sitting in the hot seat as opposed to a very friendly interview seat. So I'm glad you appreciate that.
+
+Citizen Web3 
+I do. anyways, I don't know if any of the previous listeners are listening to this, but they will be interested if they are. I know I am. The dog, how is she? Is she still motivating you?
+
+jack_zampolin 
+Oh she's great. oh yeah, absolutely. She's outside right now. She's really happy. when we adopted her, whoever had owned her previously had just dropped her off at a shelter. We didn't know anything about her and she came with this broken wrist. So that's really healed a whole ton. She's super happy and she's great. She's a little over two. I should throw some pictures on Twitter.
+
+jack_zampolin 
+Jeff says she's great.
+
+Citizen Web3 
+You sure she's amazing. She's very, very, very, very good looking dog. second question, which I must ask, which wasn't in the plans. You've been taking notes for half of the interview. What have you been writing down? Help me. I can't see it. my God. It's a, it's a pentagram thing for everybody who's trying to get interest. is loads of data and providers. Yes. Yes. Yes. Yeah.
+
+anna 
+ha ha
+
+anna 
+ha ha
+
+jack_zampolin
+Data providers, validators, Ethereum. I diagrammed out sommelier and then I looked at it and I was like, that looks like shit.
+
+Citizen Web3 
+I like the pentagram in the middle. Okay, so final question, which we used to have one, but in the second season we changed it completely. Is
+
+anna
+Ha ha ha ha!
+
+jack_zampolin
+thank you. I appreciate that. know, how else do you represent a validator set though?
+
+Citizen Web3 
+what are some of the resources and this could be books, podcasts, people, papers, your dog, whatever, anything that, influence and inspire you in your daily life, like day to day, something you would recommend to somebody else to do, to read, to watch, to listen to whatever, anything.
+
+jack_zampolin 
+I'm gonna give you an interesting answer to this one. One of the pieces of thing that I keep coming back to is this piece by
+
+jack_zampolin
+Eric Hughes from 1993 called A Cypher Punks Manifesto. And it sort of talks about the foundations of why we do what we do as an industry. That really speaks to me. And I think it's important when you work in crypto to understand why the founding fathers of
+
+Citizen Web3 
+Oh yeah
+
+anna 
+Okay.
+
+jack_zampolin
+essentially open source cryptography, who I feel very, very lucky to work with some of them at Agoric, know, Mark Miller and Dean and the team over there is just a bunch of wizards really, who fought the good fight for us in the nineties before anyone really cared about this. And, they had a set of ideas that sort of launched this road that we are walking now. And I think it's important to pay homage to that and to keep that in mind in our day to day work.
+
+Citizen Web3
+I really like that. This is a really, really good answer. And you can't see it, but my t-shirt says consensus forces of decentralization. And it's an eagle, so it's like a black. yeah, yeah.
+
+anna 
+Hahaha
+
+jack_zampolin 
+Fuck yeah, let's go.
+
+anna 
+I think next season should be with video podcasts.
+
+Citizen Web3 
+No, we might get that way, but that's a long time. Jack, it's always a huge, huge pleasure talking to you. This is the second time. Well, it's not the second time I speak to you, but the second time you're on the show. And man, it's fucking awesome every time.
+
+anna 
+you
+
+jack_zampolin
+Yeah. Well, I absolutely appreciate it. All these interviews I've been in, Anna, you've asked me some of the best questions I've had. And I always think back to the last time we chatted about product management. those are the best product management questions I've ever gotten. No one ever asked me about that. I really enjoyed that from last time. So thank you guys again.
+
+Citizen Web3
+Thank you everyone for tuning in. Thank you, Jack, for finding the time to find this. Bye, guys. See you next time.
+
+anna 
+And bye!
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

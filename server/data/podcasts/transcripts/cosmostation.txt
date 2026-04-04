@@ -1,0 +1,361 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cosmostation
+
+Episode name:
+Intuition, product development and success with David Park
+
+Anna: 
+Hey, it's Citizen Cosmos, a Serge and Anna we discover cosmos by chatting with awesome people from various teams within the Cosmos ecosystem and the community. Joanna asks if you are curious how dreams and ambitions become code. 
+
+David Park: 
+I've been scammed several times and just like everyone else that entered the space for the first time, I think that really helped build my intuition. 
+
+Citizen Web3: 
+By the way, just for the sake of it, I also had a roommate with it. That's 2015 roughly, it was announced by the prices, maybe like the beginning of 2016, but 2015 probably. 
+
+Anna: 
+Good old times. 
+
+Citizen Web3: 
+So if you want to get married and it's not working out, come to Citizen Cosmos, we'll record you and you'll get married as soon as. 
+
+Citizen Web3: 
+Before we rock it off into the next episode, we are glad to announce our new podcast sponsor Cyber. With the help of such technology as TenderMint, IPFS and Cosmos SDK, Cyber is building a super intelligent decentralized AI protocol with the name of helping users to gain back control over their data and over the internet by creating a transparent and user-managed base layer for the future web. 
+
+To learn more about Cyber head over to Cyber.page, test some of the cool apps it has to offer already, learn how you can help to build a new decentralized web and participate in Cyber's incentivized testnet to earn rewards. 
+
+And good space time to y'all, Cosmonauts and we have a new episode of Citizen Cosmos and today we have one of the co-founders of probably the most popular ballads in the Cosmos Sector System Cosmos station, David Park and David, hey, welcome to the show man. 
+
+David Park: 
+Hi everyone, thank you so much for having me and I'm really glad to join this podcast and share our story and my personal story as well. 
+
+Citizen Web3: 
+Glad to have you because we've been meaning to record this podcast with you for a few months now, but you're a busy man, it's hard to get you. 
+
+David Park: 
+Sorry I didn't answer you so fast, took me like two weeks. 
+
+Citizen Web3: 
+That's a good thing, that means business is doing well, right? 
+
+David Park: 
+We've had a lot of updates over the past few weeks, so I've been super busy in my head. I could have seen that email though. 
+
+Citizen Web3: 
+But before we jump to the details, shall we have a brief intro from your side, like what do you do and who you are and what else you want to say? 
+
+David Park: 
+Yeah, sure, my name is David and I'm in charge of business development and marketing at Cosmos station and to give you a brief introduction, Cosmos station is a validator, node operator, across several Cosmos SDK based networks, including Cosmos, Iris, Kava, Band Protocol, Asertic and also some networks that are outside of the Cosmos ecosystem, including Chainlink and several others. 
+
+So that is one part of our operation and the other big part of our operation is our products. So we have Cosmos station mobile wallet on iOS, Android and also Cosmos station web wallet and Mint Scan Block Explorer. And we started these products primarily as a strategy to build our brand power with Cosmos station validator and it ended up being much bigger than that. 
+
+And we ended up providing these infrastructure products for various projects and we're getting a lot of requests to integrate the product for these new networks now. That's part of the reason why we've been super busy over the past few weeks. And I'm sure all of these other projects in the Cosmos ecosystem are just as busy with IBC opening up and Stargate and everything. 
+
+Citizen Web3: 
+So there's Kepler, right? Which is another wallet on Cosmos ecosystem. And they were the first wallet to integrate IBC. What about Cosmos station? 
+
+David Park: 
+We're almost ready. We are planning on doing the first IBC integration between Cosmos and Iris because I think they just opened up a few days ago. So internally in our test servers, we've been doing some tests back and forth. We're going to try to make it seamless experience before officially releasing it. So we're just doing a lot of testing internally. 
+
+Citizen Web3: 
+You mentioned while you were doing the intro, there are a lot of projects, a lot of new projects or already existing projects in the Cosmos ecosystem. I want to integrate into Cosmos station. Could you name so or is there a secret? It's no goes on there or you don't have to, of course. 
+
+Anna: 
+But we're curious. Curious what is in your mind right now. 
+
+David Park: 
+So just about a week ago, I think we did Sentinel. They're a decentralized VPN service and we are now working with, I think I can disclose this because I think by the time the podcast is out, we're probably done integrating. 
+
+So we're working with Fetch AI, which is another Cosmos SDK based project. And I think another one would be, I'm trying to figure out which one I can say before. 
+
+Citizen Web3: 
+Let's keep it a secret. I think the fetch thing by the time this comes out, this is really cool though. I've been a long fan of fetch and for disclosure, I'm a token holder, but this is really cool, actually, because this is the first integration of a Cosmos SDK, but a little bit of outside of our small family of the Cosmos projects. If you know what I mean, why fetch? 
+
+David Park: 
+As far as I know, they migrated from an ERC based token. I think it's very interesting what they're doing. We're generally really interested in supporting projects that are coming from the Ethereum community because they're essentially a project that was built out beforehand. They're not like a new project looking for validators and just starting everything from the beginning. So they already have users. They already have a lot of social media following. They already have people that are waiting for actual products to stake their tokens and send it and everything and support their features. So we like to work with projects that migrate from Ethereum. 
+
+Anna: 
+As I can see, now Binance integrate somehow these two parts like Ethereum based token and they have a compatible solution. And we know that Binance used Tender Mint consensus. So it's kind of bring to both of the worlds like a Ethereum world and Cosmos world. I know that you actually did something related to Binance Chain. Could you just highlight what kind of things you do for Binance and how we can boost Cosmos ecosystem and how is it going now? 
+
+David Park: 
+Binance Smart Chain, Binance Chain, all that. Yeah, so I guess our relationship with Binance X specifically, their Binance Labs, Binance X, started I think about two years ago when we had a Cosmos Hackathon actually in Seoul. 
+
+And I think Sunny was there, several other Tender Mint people were there. Yeah, we had a Hackathon about a year and a half ago in Seoul and I ran into them actually because as you know Binance Chain is a DEX on Binance and it's built with the Cosmos SDK. I think a lot of people might confuse Binance Smart Chain and Binance Chain. 
+
+They're connected but they're actually separate things. Binance DEX runs on Binance Chain and Binance Smart Chain is a sort of like an Ethereum fork Binance version. So our relationship started there and we talked back and forth and they found out that we developed products like MintScan and the Mobile wallet for several Cosmos SDK based networks. Yeah, we started discussing possibilities of us supporting their chain with our products and it started with the MintScan actually. 
+
+So we built MintScan for Binance Chain about a year and a half ago and released it under the Binance X Fellowship Program. So the front end it should be open source and it's on our GitHub and not a lot of people actually use that product because they have their official Explorer but they actually wanted a variety of options for their users. So they got that from the open source front end UI that we have for Binance Chain. And the other thing that we do with Binance is DeFi Station which is a DeFi leaderboard and analytics website for Binance Smart Chain. So it's basically like DeFi pulse for a Binance Smart Chain. It lists the TVLs of different DeFi projects, their token prices, descriptions and website links and all that. And it's very surprising the rate of growth that we're seeing on DeFi Station. It's only been about five to six months and we have a lot of users and a lot of requests wanting to get listed on DeFi Station. So that kind of worked out and we're planning on developing that further as well. 
+
+Citizen Web3: 
+How do you distinguish between especially now because now it's very similar to summer 17 or something like that. But how do you distinguish in this huge mess of projects which who are the bad guys and who are the good guys who to list and who to say hey guys we're not sure if we want to list you because we don't know if you're gonna rock poll tomorrow or how do you do that. 
+
+David Park: 
+Are you asking about DeFi Station? 
+
+Citizen Web3: 
+In this case about DeFi Station yeah. 
+
+David Park: 
+There's several internal rules before we list like something as simple as do they have a GitHub website, a GitHub link or do they have an official Telegram, do they have a Discord channel, do they have official channels. So something as simple as that and another one would be are they simply a copy of an existing project that they just changed the name and the token ticker to another food. I think half of it is intuition from our team members and the other half is through just these internal checkpoints. Because a lot of these projects are anonymous, we can't 100% guarantee the safety of these projects but we try to filter it as much as we can before we listen. 
+
+Citizen Web3: 
+You mentioned the word intuition there and I like that because somebody who works with blockchains for a long time. I know that that word doesn't make a lot of sense to a lot of people but it is important and I'm interested regardless of DeFi Station, regardless of Cosmos Station even. How do you personally list somebody who's a professional for several years now in the blockchain space? How do you when you say intuition and you said it in business context, how do you develop this feeling to understand, okay this is a good project and that's a bad project and that's a good guy and that's a bad guy. I don't know, where does the intuition start? Where does it come from? 
+
+David Park: 
+Well, I'm not proud to say this but from the very beginning of time when I you know started investing in cryptocurrencies, I've been scammed several times and just like everyone else that entered the space for the first time. I think that really helped build my intuition and because I've been scammed, I know what scammers look like, you know, I know what they feel like when they approach me or when they have their website up. Aside from that, a lot of it is just through looking at a lot of projects, putting in a lot of research time and just actually digging in like a true blockchain enthusiast. 
+
+Citizen Web3: 
+What was your biggest failure? Come on, tell us. 
+
+David Park: 
+There was a time when a lot of these Chinese exchanges, there was a lot of new exchanges launching and it was back when exchange tokens were a thing. New new exchanges launching every day and then launching their tokens and then just disappearing the next day, right? So I invested in a seed round for this new exchange back in like 2017 or 18, I think and yeah, I think I saw the token get listed, I saw the exchange launching and the token price actually appreciating like 10, 20 times. But the catch was that there was a vesting period of at least three to like six months and after a month, exactly after a month, I visited the website and it says, 404 not found. The website was gone and the founder was unreachable. 
+
+Anna: 
+By the way, how many years have you been in crypto space when you started your journey? 
+
+David Park: 
+Investing wise, I think 2015, June or like July. I remember the price, I think Bitcoin was at $200 and Ethereum was at like $1, I think. So that's when I entered. 
+
+Citizen Web3: 
+That's 2015 roughly, it sounds about the prices maybe like beginning of 2016, but 15 probably. 
+
+David Park: 
+Yeah, 
+
+Anna: 
+good old times. 
+
+David Park: 
+Yeah, good old times, good old times. 
+
+Citizen Web3: 
+How did you enter? Because I think we saw that you started in the States and how did the journey began? Did you see something that somebody tell you? Did you read something? 
+
+David Park: 
+Well, my roommate was actually an avid user of Bitcoin through this website called Silk Road. And yeah, I saw him using Bitcoin to buy his things and I was like, what is that? 
+
+How are you buying things over the internet with this thing called Bitcoin? So I just started looking into it and it seemed very interesting. And I think back then one of the only sources for information was bitcointalk.org. So I really started digging in all these projects. And then the first ICO I did was Lisk. Actually, I participated in the Lisk ICO. When you participate in an ICO and it gets listed, it automatically does six time, 10 time immediately. So I sold all that and then did more ICOs, like 20, 30 more ICOs within like a couple months after that. That's how I started. 
+
+Citizen Web3: 
+By the way, just for the sake of it, I also had a roommate like that. Okay, but when did you realize that this is something you're interested in beyond just ICOs and investing? 
+
+David Park: 
+So I had another roommate and this guy quit school to focus on blockchain. And he came back to Korea and then started a company to research projects and then invest in ICOs and try to do something in the space. So he was already in Korea and I came back to Korea to start looking for a job as a fresh graduate. And he told me, why don't you just come over to our company and work with us for like three months while you job search. And then he bought me a MacBook. He lured me into working with him with a MacBook. And then somehow I ended up working here forever. 
+
+Citizen Web3: 
+Before we move to Cosmos Station though, so you move back to Seoul and there is every now and again, some kind of geographical place kind of becomes more and more popular in terms of crypto. 
+
+And currently in my intuition, Seoul is actually one of those places that become in a hub. And it started to do that in 2017. I remember that, yeah, but there was like a lot of projects that came in came out. It was hard to understand, are they gonna stay here with us for a long time or now we do see projects like yourself, like other projects that come from there and stay. So in your opinion, what is Seoul and maybe Korea, South Korea generally is right now for crypto spaces. It's something you would say to companies, hey guys, come here and start your business. So you would say too many regulations or what do you feel? 
+
+David Park: 
+It still is a small space in Korea in Seoul specifically. But at the same time, I've seen so many blockchain startups in Seoul just come up and disappear within a couple months because they would either try to do like bullshit ICO or a bullshit fundraiser and then not actually build anything and just run away. But I've seen those projects, but I've also seen a fair share of good teams that actually build things like Cosmo Station or Kepler, which is chain abscess and several node operators based in Korea. And there actually are good projects here too, good networks. 
+
+So I would say that even though this is a small space still, there's a lot of room to grow and Korea is gonna begin taxing crypto related transactions starting next year actually. So I think that's a good thing. People are expecting things to be more regulated, but at the same time more inclusive regulation wise. 
+
+Citizen Web3: 
+Do you think that's a good thing for the companies who are there? 
+
+David Park: 
+Yeah, definitely. Because for example, the revenue that we get from our validator node operation, there is no way to like actually officially reported as what it is in the current situation because there's no such thing as node operation fees to the government. They don't know what that is. So I think we're gonna start to be able to explain what the industry is to the government and actually let them accept it. 
+
+Citizen Web3: 
+I hope that it does work out for you guys because I know obviously Korea is much more advanced than Russia in terms of how the government talks to their business and how they do their business. Because in post-soviet or specifically in the Russian space back in 2016, we tried a lot to have conversations with the government, but it's bring us to anything. 
+
+But I know Korea is very different and much more advanced in terms of how they think the government and what they do. So I hope that it does work out for you guys. Cosmos station, let's talk about Cosmos station a bit more because this is definitely the most used product probably along with Minskine. And I didn't know by the way that Minskine was and developed for Cosmos. I didn't know it was developed originally for Binance, but it's really cool because well as much as I love the other products in the ecosystem, I do use Cosmos station and I do use Minskine. And I think that 90% of the people in the ecosystem use them. What is the secret? How did you guys make them so successful? 
+
+David Park: 
+First of all, Minskine was actually originally for Cosmos. 
+
+Citizen Web3:
+Oh, oh, sorry. 
+
+David Park: 
+No, it's okay. Binance saw that and then they wanted it for Binance Chain. So it's the other way around. So when we first started out, there was no mobile wallet for Cosmos. We released the mobile wallet on iOS and Android, I think prior to maintenance launch during testnet, during game of stakes actually. That definitely gave us a lot of advantage as first mover in the Cosmos SDK ecosystem. 
+
+So that gave us a good start. And of course, if we hadn't continued to upgrade the product, add more functionalities and make the UI UX easier for our users, we of course would have lost the users that we had gotten in the beginning. But we kept on adding new features like redelegation or claiming all rewards, these tiny features that feel big to the end users, things like that. And we tried to keep the app as simple as possible while still being able to provide them the widest possible functionalities. Because to the average user, Cosmos SDK functionalities may seem a little bit confusing because you're able to stake, you're able to undeligate, you're able to redelegate your stake to another validator, you're able to reinvest all those features. 
+
+And not only just Cosmos, if you take Kava network, for example, they have their CDP features, which is their collateralized dead position features, it's kind of like a lending platform. Things like that are a bit hard for users to understand and actually grasp when they access the network. So we try to make the experience as easy as possible for the user. So I think our users appreciate a lot of that, being able to access these features in a simple way, and Cosmos Station keeping up with updates. So yeah, I think that's part of the reason why the app got this many users, eventually. And same for MintScan, we keep the products updated at all times and try to communicate with our users. 
+
+Anna: 
+I'm just curious about product development part, because me personally, I'm a researcher of product management in decentralized products. So I try to understand what kind of strategy you can use. And as I see your strategy is diversify functionality as much as you can. Is that correct? 
+
+David Park: 
+Yeah, so we try to provide as much functionalities as possible if there are any custom modules in new network. Yeah. 
+
+Anna: 
+Cool. So you keep your users updated. 
+
+David Park: 
+That actually makes it a lot more difficult for us, because if we would have just supported the basic features like sending, delegating and voting, it would have been much easier for us. But we do provide these in-depth functionalities for several networks. Every time we do an update, all of those features are affected. And we get so many customer service inquires related to that I guess that is the down side of it but we're happy because we're able to provide functionalities to our users. 
+
+Citizen Web3: 
+How do you research? Do you ask? Is it a question or so? Do you predict what the users want? 
+
+David Park: 
+One of the most important parts is the number of users that are already using the network, the number of transactions happening, also whether or not they are building something that is useful for the Cosmos ecosystem in the long run, especially thinking about IBC. 
+
+Once IBC is enabled in these various chains, what types of synergies will these products produce with the networks that we're already supporting on Cosmos Station? So those are the types of questions that I ask myself. And I do the research on my end, but at the same time there are projects that reach out to us. And we're always open to discussion and do an intro call and see what synergies we can make with partners. 
+
+Citizen Web3: 
+You mentioned featuring, probably from a user perspective here, your spot on, because one of the reasons I used Cosmos Station and I still use Cosmos Station is the deviation path. Some of us use hardware wallets and the deviation path is for everybody who's listening, and it's just the hardware wallet doesn't hold one key, but a few addresses. So the deviation path is the way to change that address. 
+
+And in that feature on Cosmos Station, it still is a life saver to be honest, because this is the way you do it to go. And it's really cool to see that you guys understand those small little things. And yeah, really glad that you did it. 
+
+David Park: 
+Thank you. Thank you. We used to be a non-custodial mobile wallet and web wallet developer. So we started out as that our team. That's our specialty, the wallet part. So I think it was natural for us to dig into those specific parts and cater to that audience, decentralized audience. 
+
+Citizen Web3: 
+You mentioned a few times that you take care of the business side of things. And when we look at the Cosmos Station team, I personally only been in contact with you or Tony. But when we look at the team, I see four founders. And like a devil's advocate question, I mean, four founders, come on guys, it's like half of the team. I mean, what's going on there? 
+
+David Park: 
+So the company started out with just four people, me, my ex roommate, our investor and our current CEO. So we had four people and the current co-founders listed on the website. It just means that we're the head of each department. That's the meaning of the co-founder title there. It doesn't mean that we actually co-founded the company together. 
+
+Citizen Web3: 
+Yeah, I guess that was another question, just trying to mess around a little bit. But it's cool. But how does it work out for you guys? Four bosses in a company where there's eight people. Do you guys have arguments between or do you manage to build a hierarchy? 
+
+David Park: 
+Well, honestly, so we had a few new hires recently. We're at about 14, 15 people, but we've always been a small team and 15 people is still not a huge team. And every time we have new product integrations or any topics to discuss, we don't really have a top-down hierarchy. We sort of freely discuss everything and, of course, being a blockchain company, decision-making is a bit decentralized. So everybody has their own rules and everybody makes their own decisions within their boundaries. 
+
+Citizen Web3: 
+I'm glad you said that because I'm going to dig in here a little bit, if you don't mind. I haven't worked in for decentralized companies for five years now. Well, since 2015 or something like that, I know that one of the biggest obstacles, at least this is my personal opinion and you can correct me if I'm not going the right way here. One of the obstacles I personally have, especially I came from a big company's background, really big company, like the last company I worked for because before I moved into the decentralization world fully, was a company that has over 200,000 employees worldwide. 
+
+And on one hand, those big companies that lack any soul, but they have structure. And that structure is, you know, exactly from day one, where you get in, like what you're doing, what you're supposed to do, what you're not supposed to do, what you're supposed to wear, how you're supposed to breathe, and all this like other bullshit. So, coming to the decentralized world, now, I know that for me, one of the first things I felt was the lack of understanding my own place kind of thing, what am I supposed to do, even like at a management role. Do you feel that decentralization is solving the problem of company structure? And like you said, we lack any hierarchy. So does it help you to manage the company on a day-to-day basis? Or the opposite, does decentralization actually push back all this like management and structure and everything else? What do you feel? What do you think? 
+
+David Park: 
+I think eventually, if a company wants to grow and if a company has grown, there needs to be some sort of hierarchy in order for things to be managed properly and to prevent chaos, at least a minimum amount of structure in terms of hierarchy. Most of these blockchain teams are pretty small, I think. Most of the teams that I know, especially in Seoul, that are startups, blockchain startups, some of them are less than like five people, some of them are less than 10. And I think at that level, being decentralized isn't so bad. It actually could be better for the company because every man has to be a hero if the company is small and we are like 10 people. 
+
+So I think it's good for a size that small, but if you're getting bigger, I feel like there definitely needs to be some sort of structure hierarchy. Decentralization does help companies in a way that we can work in remote areas, but it doesn't have to be decentralized with Corona recently. But most blockchain companies do have people that work remotely, more than traditional companies. And I like that movement. 
+
+Citizen Web3: 
+You said you're 15 people, you have remote workers or they're all based in Seoul? 
+
+David Park: 
+We're all based in Seoul. We're all working out of the same office. And although I do like decentralization and although I do want to go work in Thailand, we still work out of our office. 
+
+Citizen Web3: 
+While we're on the topic of decentralization and management, you're also one of the biggest validators and not just for Cosmos Hub, for Cosmos ecosystem. What do you think about decentralization staking in terms of the top validators, especially we mentioned Binance here and you guys work closely with Binance. You know all the problems that people say, hey Binance has too much stake or Cosmos Station has too much stake or anybody else has to, well I never heard anybody say that Cosmos Station has too much stake, but you are guys a big validator and I'm curious whether you think these things should be developed the way they are developing or any other way. What's your thoughts in general about all of that? 
+
+David Park: 
+I think this was a question that came up a lot, especially at the very beginning of the Cosmos Hub launch actually, because we've seen a lot of these seed investors or I should say early round investors putting up their validator nodes and people were surprised to see some of these entities just pop out of nowhere, because there has been several entities that have been working on the testnet for a while and these big validators came out of nowhere with a huge amount of stake and they were like who are these people? One of the things that I realized is the same for the traditional businesses too, and in life too, everything runs around incentives and for example if a network wants to have great good validator nodes with good uptime and good track record of operating a validator node in different networks, these validator nodes probably have a lot of other networks in line for integration and they must have their own schedules and they must have their own priorities as much as they would want to integrate everything, run validator nodes on everything. So in order for new networks to have these validators onboarded to them, they need to provide an incentive to these validators to prioritize these tasks. So I feel like at the launch especially for bootstrapping any new network, I considered it a good strategy to make some foundation delegations to a new validator node that has a good track record in a different network and maybe gradually decreasing that delegation in order to stabilize the network. 
+
+But in the beginning, in the very beginning, I think it actually helps bootstrapped a network and boost awareness around the project and more trust around the project and it also helps teams build faster through incentives. 
+
+Citizen Web3: 
+Do you think the entity that should be delegating to those validators is the core team or now in the world where we have governance and we have governance-based chains, we have community pools, should the community as an entity sometimes come together and say hey, we have whatever, whatever, I'm not sure if it's technically even possible, but let's theoretically imagine that it is, should the community decide for themselves, okay, we like this validator from that chain come and we will delegate you 100,000 atoms for a year and then the next year we will delegate you 50,000 and so on, should the community be involved in that or should that be the core team that's taking care of those things? 
+
+David Park: 
+Well, the community could definitely be involved in that, I think there's no reason to stop that or I think it's actually a good thing. It could be both, it could be the foundation and the community but the foundation definitely has more interest in doing that themselves than the community because it is their network. At the same time, it is the community's network too. Yeah, I guess we can do both, not just the foundation but also the community getting involved in that process. 
+
+Citizen Web3: 
+I was going to catch on that phrase a little bit because you said the foundation's network and the community and I'm quite curious to go a little bit deeper into that because, well, I guess, is it the community's network? Is it the foundation's network? How do we distinguish when does it change, when does it stop being the foundation's network, in your opinion, and starts to be the community's network? At which point, when the state gradually moves towards the community or when the mainnet is released, when does it change? 
+
+David Park: 
+What I meant by the foundation's network is that it is a network that they built, that they engineered at the product all level but yeah, I see what you mean. 
+
+I think it's when middle to big individual players start coming in and start accumulating these governance tokens for these specific networks but even disregarding that, even if the small individuals start getting involved in the whole governance process and acquiring these governance tokens, I think as soon as that process begins, it starts to become the community's network so yeah, like you said, maybe as soon as Genesis begins. 
+
+Citizen Web3: 
+How do you feel about Cosmos Hub? Of course, it's been, the Genesis has been here for a few years but do you feel that Cosmos Hub has reached that level where we can say, okay, this is not a network that belongs to the AI beat, all in bits or tendermint, this is the community's network and how do you feel this Cosmos Hub progressed in that or are we still lagging behind? 
+
+David Park: 
+I think we came a very long way actually. Cosmos Hub feels especially more decentralized than other networks, at least to me. But it's all relative because you see all these entities that broke off of the original tendermint, like Cosmos team, and then they built their own entities. So the whole ecosystem is pretty decentralized if you look at these individual entities but if you think about the projects and the teams that came out of the original Cosmos team, some part might be not as decentralized. Yeah, like I wouldn't know exactly, but it looks pretty decentralized because a lot of the decision making and the development process and even the proposals that we have recently that shows that there's very great interest from third-party developers, third-party teams to bring Cosmos Hub further. 
+
+Citizen Web3: 
+Oh yeah, for sure. We see more and more community spin proposals and there's actually two now, right now, there's 42 and 44, right? And they're quite different in their essence. One is about Edherman, the other one is about Cosmos Privacy events, if I'm correct here, from ZK Validator, which is cool because I think that regardless of whether both of them take off or don't take off, it's, in my opinion, the more community spin proposals we see, the more decentralized the network is. 
+
+And this is just an opinion, of course. Where does Cosmos Station fit in all this story? Does Cosmos Station want to be the biggest decentralized wallet provider, the biggest decentralized product provider, or does it have any other plans in general for Cosmos and for Blockchain? 
+
+Anna: 
+Say, what is your ambition? 
+
+Citizen Web3: 
+Yeah, what are your ambitions? 
+
+David Park: 
+My ambitions. 
+
+Anna: 
+I love this controversial question, sorry. Let's talk about Starzware and Cosmos. 
+
+David Park: 
+Okay, so for Cosmos Station, the main part of our business is still the Validator node. The products are, of course, it's become a whole other thing for us, but the Validator side will always be a big part for us. And you mentioned that do you want to be the biggest wallet provider. That essentially isn't our end goal, because if you look at Kepler, we're actually very close with Kepler. 
+
+Our offices are actually like 10 minutes away. We talk with them pretty often and the more products there are in the ecosystem, the better. Because it actually helps users choose from different varieties and gives them more options and also helps a lot with our customer service inquiries requests, because not all of these Cosmos users are on Cosmos Station. For example, when we have a Cosmos Hub upgrade, not everybody is looking at our wallet to get updated. 
+
+They have an alternative to use Kepler when our app is down. So I think it's great that we have competition. We're not aiming to become the one product in the whole ecosystem. We would rather become the wallet that's most inclusive and provides access to users as much as we can and combine all of the features that we have and create synergies with it. 
+
+Citizen Web3: 
+What about your personal ambitions? That's still a question. Where do you see yourself in five years from now? I'm not going to ask that, but Anna mentioned this is Cosmos and stars are all around. So what is your personal ambitions for the space or for the company or in general? 
+
+David Park: 
+I guess I do have an end goal that I vision with our mobile wallet because we're a Cosmos SDK focused wallet. We're contemplating whether or not we should be adding support for other networks like Ethereum, ERC-20 tokens and Bitcoin, because there definitely is demand for that. But the UI UX we have on our wallet is specifically engineered for Cosmos and Cosmos based chains. So we're contemplating that on top of that we're thinking of ways we can provide the wallet to our users as a financial instrument. So maybe like crypto debit card integrated with the mobile wallet so that Cosmos SDK based networks, their tokens can be used on purchases with a debit card. So things like that. And we're actually right now planning a payment UI with the mobile wallet, a QR code scanning and payment on a website. So we're probably going to be releasing that pretty soon. And that's the direction that we want to go with with our mobile wallet. 
+
+Citizen Web3: 
+As a user, by the way, go for the multi-chain thing, man. Definitely you guys should do it. Bitcoin is rubbish, but you know, you should include Ethereum and all the other cool chains. 
+
+David Park: 
+I still haven't told you my personal ambition, right? 
+
+Citizen Web3:
+Oh, we thought the mobile thing. Sorry, man. Go on, no go on
+
+Anna: 
+It's the most interesting part. 
+
+David Park: 
+Yeah, that's a really hard question because I don't think I've thought about that really hard recently. I think back when I was in college, it used to be just get a lot of money and just retire in a young age. But I don't think that's a good end goal to have because once you get a lot of money, what are you going to do? Personally, for me, like I'm planning on getting married late this year or like early next year. 
+
+Citizen Web3:
+Congratulations. 
+
+David Park:
+Yeah, so a lot of my thoughts are geared towards my future marriage life right now. So maybe in five years, I have two kids and a happy life with my family. I think that's as far as I can go when I think about my future. I just want to keep working hard and help Cosmos Station and our team members grow our influence and build the ecosystem. 
+
+Citizen Web3: 
+I think it's a great ambition. Honestly, I think that's a down to earth great ambition to have a vision of something that you really want rather than a material entity. By the way, just for our listeners, this is really strange because you are the second guest in three days that is telling me he's going to be getting married soon. So I don't know if this is our podcast or so if you want to get married and it's not working out, come to Citizen Cosmos, we'll record you and you'll get married as soon as.
+
+Anna: 
+I have a question in other directions about DeFi. What do you think now about DeFi because now it's booming and what do you think about differences in Cosmos ecosystem DeFi like space and Ethereum and Binance space? because now DeFi is mostly in that go in that direction, but I'm sure that Cosmos have a huge opportunities in that field. 
+
+David Park: 
+So BSC is definitely interesting. Some people hate it. Some people really like it. I'm more on the appreciated side. My personal opinion is that BSC might be the Ethereum layer two that everybody has been waiting for. You know It doesn't have to be some fancy Ethereum layer two startup. Maybe, just maybe. We're also seeing OP coming up and all of these traditional DeFi is a weird thing to say. Traditional DeFi like SushiSwap or Uniswap starting to integrate these L2 solutions. But I feel like BSC is a very attractive playground for a lot of people and the liquidity there right now and the TBL there is massive. But at the same time, I think that that liquidity and those assets might migrate back to Ethereum once Ethereum figures out their layer two. So I feel like these people on BSC are mostly temporary fans that are taking advantage of the current attractive situation at BSC. But who knows BSC could evolve into a whole other universe with interesting projects. But for now, I think a lot of the projects launching on BSC are simply copies of projects on Ethereum. 
+
+So you would see BSC curve, BSC Uniswap, BSC Alphahomora. Everything comes from Ethereum right now. A lot of the cutting edge things. And in terms of Cosmos, there definitely is a lot of opportunities. 
+
+If you just think about the major DeFi products like Compound, Uniswap and these major curve and major projects. You can just take one of each and then bring that to Cosmos and it's going to be extremely successful if you just do one of those four. Because there isn't a lot of these projects on Cosmos yet and IBC hasn't opened up on these platforms. So yeah, I think there's a huge opportunity in Cosmos for DeFi. 
+
+Citizen Web3: 
+Thanks man. That's an interesting opinion that Binance is possible solution for layer two like that. Because I think Binance is as much as you know there is a love and hate relationship you mentioned there. I think well, it's the open market and if you play on the open market, do you play by the rules? Why not? 
+
+And they are playing by the rules. Our traditional sort of question that we like to wrap up with and it's a good point that we came here especially. What are some of the projects in the space that currently excite you? Currently make you think, oh my god, I like that project. I love what they're doing. You can't say Ethereum. 
+
+David Park: 
+Well, Divinity actually. I've been waiting on that baby for like three and a half years now. Like maybe like four years. 
+
+Citizen Web3: 
+You participated in the ICO, right? 
+
+David Park: 
+Yeah, I think it was like the online seed sale or something. They made it so hard to navigate through that. So that was like I think three and a half years ago, four years ago. Just waiting on that baby to launch. 
+
+Citizen Web3: 
+Any other projects? 
+
+David Park: 
+I'm waiting for Osmosis actually. Cosmos DeFi, Osmosis. I think it's going to be super cool. 
+
+And the Cosmos Hub DeX, Gravity DeX. 
+
+Citizen Web3: 
+Thanks, David, for joining us. 
+
+David Park: 
+Thank you so much for having me. Bye-bye. 
+
+Anna:
+Thank you. Bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

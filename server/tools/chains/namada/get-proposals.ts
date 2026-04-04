@@ -1,6 +1,7 @@
 import logger from '@/logger';
 import { GetProposalsFunction, ProposalsResult, ResultProposalItem } from '@/server/tools/chains/chain-indexer';
 import fetchChainData from '@/server/tools/get-chain-data';
+import { extractBestUrl, isValidProposalUrl } from '@/server/utils/fetch-proposal-text';
 
 import { $Enums } from '.prisma/client';
 
@@ -102,6 +103,17 @@ const getProposals: GetProposalsFunction = async (chain) => {
                 abstain_count: '0',
               };
 
+        const rawDetails = content.details || content.abstract || '';
+        const fullText = rawDetails || null;
+        const description = rawDetails || 'Unknown description';
+
+        let metadataUrl: string | null = null;
+        if (content['discussions-to'] && isValidProposalUrl(content['discussions-to'])) {
+          metadataUrl = content['discussions-to'];
+        } else {
+          metadataUrl = extractBestUrl(rawDetails);
+        }
+
         return {
           type: proposal.type || 'Unknown type',
           proposalId: String(proposal.id),
@@ -114,7 +126,9 @@ const getProposals: GetProposalsFunction = async (chain) => {
           finalTallyResult,
           content: JSON.stringify(proposal.content),
           title: content.title || 'Unknown title',
-          description: content.details || content.abstract || 'Unknown description',
+          description,
+          metadataUrl,
+          fullText,
         };
       });
 

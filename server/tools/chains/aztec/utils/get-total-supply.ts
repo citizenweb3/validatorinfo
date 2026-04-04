@@ -2,14 +2,15 @@ import { Abi } from 'viem';
 
 import db from '@/db';
 import logger from '@/logger';
-import { AztecChainName, contracts, tokenAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { AztecChainName, getContracts, tokenAbis } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { getL1RpcUrls } from '@/server/tools/chains/aztec/utils/get-l1-rpc-urls';
 import { readContractWithFailover } from '@/server/utils/viem-client-with-failover';
 
 const { logInfo, logError } = logger('get-total-supply-aztec');
 
 const fetchTotalSupplyFromL1 = async (rpcUrls: string[], chainName: AztecChainName): Promise<bigint> => {
-  const contractAddress = contracts[chainName].tokenAddress;
+  const l1Contracts = await getContracts(chainName);
+  const contractAddress = l1Contracts.stakingAssetAddress;
   const abi = tokenAbis[chainName] as Abi;
 
   return readContractWithFailover<bigint>(

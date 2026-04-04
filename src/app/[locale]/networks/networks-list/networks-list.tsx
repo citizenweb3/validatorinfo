@@ -10,21 +10,26 @@ interface OwnProps {
   currentPage?: number;
   perPage: number;
   sort: { sortBy: string; order: SortDirection };
+  showAll?: boolean;
 }
 
-const NetworksList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1 }) => {
+const NetworksList: FC<OwnProps> = async ({ sort, perPage, ecosystems, currentPage = 1, showAll }) => {
   const { chains: list, pages } = await ChainService.getAll(
     ecosystems,
     perPage * (currentPage - 1),
     perPage,
     sort.sortBy,
     sort.order,
+    showAll,
   );
+
+  const chainIds = list.map((c) => c.id);
+  const healthMap = await ChainService.getChainHealthMap(chainIds);
 
   return (
     <tbody>
       {list.map((item) => (
-        <NetworksListItem key={item.chainId} item={item} />
+        <NetworksListItem key={item.chainId} item={item} health={healthMap.get(item.id)} />
       ))}
       <tr>
         <td colSpan={6} className="pt-4">

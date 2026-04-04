@@ -1,0 +1,381 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/ixoworld
+
+Episode name:
+Internet, Predictions and Impact with IXO core team 
+
+Citizen Web3 
+Hi everyone, welcome to a new episode of Citizen Cosmos. And we have today three guests from IXO. We have Sean, Mike and Alwin. And I will let them introduce each other. Well, not each other, but introduce themselves one by one. They can actually introduce each other as well if they want. We will start with Sean, the founder of IXO. Sean, hi, welcome to the show.
+
+shaun_conway
+Thanks, Serge. It's really great being here. great fan of Citizen Cosmos. I think you guys do a great job. yeah, so it's super great to be on the show talking about Ixo, which is a project that we've been working on for many years now. My personal background is I started life as a physician. And so kind of on my way into technology and here we are. So looking forward to talking about that journey and about what Ixo is about. And I'd like to...
+
+And over to Alvain, just to say hi. Alvain is based in Cape Town. Alvain, do you want to go ahead?
+
+alwyn_van_wyk 
+Hey, Serge, great show. Love it. I've to all the episodes. Yeah, so my name's Olivier van Vake. I'm based in Cape Town, South Africa. known Sean round about 2017, led a quick stint with XO in 2018, and then haven't heard from Sean for a while, but then I've always had in the back of my mind the social impact to be done. And finally, when the opportunity came at the beginning of this year, I joined the team in March.
+
+of 2022 with the express goal of being part of the Earth program for the Interchain Foundation as Head of Developer Success. That is a little bit on pause, but now we're looking at on the dev rel side of things. My background is a lot of software development, a lot of building teams in mobile and UX UI, test automation, that sort of space. Recently, a lot of it's been in TradFire. So the most recent excursion was with
+
+company called Envel, which is a US bank, neo bank. But when the opportunity came to work with Sean and to pull the Younglings nonprofit organization with that, it was just a no brainer and so happy to be on the team.
+
+Citizen Web3
+And we have one more guest, before Mike, I'm going to let you introduce yourself. I just want to say Alwin, you have the perfect like podcast voice. have like the soft tone and I think I could listen to this for hours. I think everybody can agree. You can just like listen to that. Sorry. It's great. Mike. Hi.
+
+alwyn_van_wyk 
+Thanks for the compliment. I appreciate it.
+
+mike 
+Hey everyone, happy to be on the show. So my name is Mike. Hope I have the same quality voice as Alvain, but I'm not sure. Yeah, so I joined the EXO team two months ago on the marketing and community side. I've just finished my master's in environment and resource management last year. So I'm very passionate about the entire social impact aspect. And besides that, I've been in crypto, I've been obsessed with crypto, I can better say for...
+
+well, years as well. So really this is the perfect match for me. And I'm excited to be building with the team and growing the EXO ecosystem.
+
+Citizen Web3 
+This is great. So now we have the whole team introduce themselves, not each other. That was important. And we found out one of them has a really cool voice for podcasts. now let's, think I'm going to ask the most obvious question. What is EXO and what do you guys do? I mean, I can have an introduction, but I would rather obviously hear it from the experts. So I don't know who wants to start. Sean, probably maybe to you as to the founder, right?
+
+shaun_conway 
+Yeah, so we have a very big vision of an internet of impact. So having worked in international development and particularly in global health, I came across the problems that still are pervasive within the development sector around ensuring that capital gets to where it's needed and gets utilized in the right kind of ways to produce results.
+
+and that the data that gets generated about what is actually happening, what results are being achieved, that that data gets to where it's needed for decision making. Now, our traditional Web2 infrastructure, particularly the way that it's configured in terms of the way that data works and is completely separate from financing mechanisms, just really doesn't cut it in terms of what we need.
+
+to scale up impact at internet scale. so, EXO really leading the vision of creating this internet of impact and Cosmos is a great place to build, given that Cosmos is an internet of blockchains. And that was really the reason for starting to build on Cosmos back in late 2017 going into 2018.
+
+recognizing this vision of a world with lots of chains, sovereign networks, and different types of services that could all be utilized for this purpose. And so we've built a Cosmos Impact Hub. the full description of that is an Internet of Impact Hub, which forms the first network in this internet. And it's really exciting now to see
+
+how these networks are interconnecting. So we have a multi-chain cross-chain world that is making this much more feasible. Of course, creating just the network is not enough. There's the whole stack, there's client applications and lots of networks of people and organizations that need to be in.
+
+shaun_conway 
+brought into this in order to create the internet. It's not just a kind of base layer infrastructure. So we've been working for a number of years now on all of those aspects, the chain, the applications, the networks of people and organizations to create the marketplaces. And we'd be happy to talk more about that today.
+
+Citizen Web3 
+You, I have straight away a question. You mentioned several times the word impact hub, impact internet. Let's try to break this down. mean, it might sound obvious to somebody who is a native English speaker and I think it's makes a lot more sense, but I would love to understand what you guys put into the words impact internet or impact hub and why you call yourself an impact.
+
+shaun_conway 
+Yeah, so the definition of impact is observable change over time. And of course, they can be positive impacts and negative impacts. And it's important that we actually capture both of those. And so how we make those observations and how we put them into some kind of time-based record so that we can see what's changing.
+
+we can see how things develop the direction that's going in is really important. And so the first aspect or quality of an internet of impact is that it is stateful and holds state over time and progresses over time. And you can't do that with web two. Obviously blockchains are state machines. And so this is ideal for the internet of impact. The second part of it is programmability. know, so impact is not just about looking at
+
+what is happening, but it's also about putting our intentions out there about what we want to happen. What is the world we want to create? What is the positive impact we want to have? And what is the reduction in negative impact that we can also achieve? so programmability is really important. And this is really about creating future state outcomes or states that we want to achieve and then incentivizing collective action towards that.
+
+and that incentivization can happen through the coordination mechanisms as well as through the financing mechanisms.
+
+Citizen Web3 
+You said sorry for the like, how to say, I was gonna say lack of questions. Sorry for the, I don't know why, sorry for the bombardment of questions, but you say an interesting, cool things and I want to understand more. You said a very interesting phrase that for the world that we want to see, how do we get to decide as a society what kind of a world we want to see without
+
+and including the minority opinion or do we not include minority opinions? Because of course there are so many opinions on how this world should be. And of course being like a project that wants to make a lot of impact and being a project which is focused on the things your guys are focused on. I think that's a very like big massive questions. How do we come to an agreement? What is it we want to see in the world?
+
+shaun_conway 
+So there's two ways of approaching this. The one is the consensus that we have as society or as sort of global institutions. And that's best articulated in the sustainable development goals. So we have these global goals which were set. It's actually the largest consensus that's ever been achieved in the history of humanity is these global goals.
+
+And the period for achieving them has been from 2015 to 2030. So a 15 year period to achieve very measurable, specific targets linked to goals across the 17 Sustainable Development Goal Areas, which really cover everything from life on land, life in the water, education, health, infrastructure, meaningful work, et cetera. So UN did a
+
+a decent job of creating consensus around these global goals. And that provides us with a good solid framework that sets a future vision. In addition to those goals, we have other consensus which has supplemented the goals, know, such as the agreements that have been achieved in terms of the Paris Agreement. you know, year on year, we also see further specific commitments
+
+being made through the COP process. so all of this is about consensus, let's say at a global level. And that's one part of it. The other part of it is what do we want to achieve at a local level? And this is really important that people can have the sovereignty to decide how they want their lives to be and to have the mechanisms to be able to make the changes that they want.
+
+And so this is, think, a really growing narrative that is strengthened by Web3, both in terms of the culture of Web3 that we're seeing emerge much more as explicit narratives, know, Web3 communities talking about funding the commons, coordinating social action, implementing impact dials.
+
+shaun_conway 
+refi et cetera of these things are really coming to you that the for now and whilst the notion of local action and local self-determination you know has been built into the governance and social systems of some societies takes Switzerland for instance in a very decentralized localized decision-making in most places we haven't really had
+
+great technologies to be able to do this coordination, particularly where the coordination requires virtual and not in-person getting together in the town hall and making decisions, but actually where you're able to connect people across virtual spaces and networks to get things done. And given that the problems that we face as a world are not really
+
+isolated to local places. Really, we have got an interconnected world of problems and also a potential interconnected world of solutions. We can't do this coordination without the kind of tools that Web3 gives us.
+
+Citizen Web3 
+And thank you for that answer. And actually, that's a good answer. It leads me to a question to both of you, Alvin and Mike. I'm going to take it more a little bit down to earth. First to you, Alvin. So would you say, as you said, you're more focused on software development and on everything to do with that. So would you say that Tendermint Cosmos are the tools for the job that Sean has mentioned?
+
+alwyn_van_wyk
+My word, absolutely. Just looking at the type of projects that's moving on to Cosmos now with YD1X, it's just incredible. So I hope I got the name right there. Just looking at those, I mean, it's the perfect space for that. And that's where the name, the Impact Hub and Internet of Impact, that's where the name originates, I believe. And Sean, you correct me if I'm wrong?
+
+So from the Cosmos Hub, what is EXO? It's the Impact Hub. It's the first chain that tries to gather all the information and get that together.  further building out a stack that's called the Jambo stack. Jamstack plus blockchain plus Opera. These are very large initiatives around the Opera space specifically to make sure that we have access for multiple people around the world who use Opera. There's a large base around that to be able to show the impact that they're making on the positive impact that they're making as well as for them to load claims around that. and for investment to come into that space. So, yeah, very exciting.
+
+Citizen Web3 
+Mike, I have a slightly then controversial question to you. I'm sorry that it's going to be like that, but I started to work on blockchain a while ago and I'm seven years now and I, sorry to pull the quilt. just, it's like a buildup to the question. promise. And I started with communities and this is what you said, like what your focus on.
+
+And EXO got quite a loud statement. mean, we're talking about things which are very bloody serious, right? We're talking like mission, you know, focus. And as we all know, over the years, unfortunately in blockchain, there has been many projects that have come, went, said loud things. And, know, in the community, I think is slowly kind of like building how to say.
+
+not becoming resilient to that, but they becoming like more and more like questioning things, which is a good thing, right? I mean, science is all about asking questions. So somebody who just started right and come into a big project that has been building for years. What's your like? How do you I mean, I don't know what's your focus on how to explain to the community that your that impact hub that your that and this is like a quote from the website, a global digital immune system for our thing for earth and humanity. This is like
+
+super loud statement that is, you know, carries a lot of meaning in it, in my opinion. How do you deliver this to people and, you know, how do you even find the community? Not everybody wants to make an impact. Some people just want to make NFTs and money and I don't know. I don't know if you get the question, but that's kind of like abstract. Sorry about that.
+
+mike 
+Yeah, I think I get where you're coming from. And it's a fair question as well, because indeed it is a big statement that we're making. And it sounds very abstract as well. So I think the way best to address it is to kind of like break it down and explain what we're really doing and build on that. So what are we doing? Well, we are a web free project, which basically means we leverage blockchain technologies.
+
+mike 
+and we want to incentivize real world outcomes by doing so. And so the way that I think it's very interesting and well explained is that we're kind of building a bridge between the real world and the blockchain. And that allows us to kind of measure, quantify, and verify positive changes in the state of the earth. So if we can verify whether someone that has actually
+
+that says they have planted a tree, has actually planted a tree in a trustless, permissionless and decentralized manner, then we can leverage the Web-free, the blockchain tools to actually reward participants for doing so, because that is like one of the inherent features of blockchain is that it allows for very easy capital redistribution, incentivization and rewards.
+
+And that is really the reason why we want to create this kind of digital copy of the world on chain. It is so we can redirect financial outcomes to real world outcomes. And then from a community perspective, I think it is indeed a bit hard, as you say, to find such a community because especially in crypto, mean, let's be real, I think that most people that enter the crypto space initially enter because
+
+They want to make money. see these crazy yields. They see these crazy tokens going 10 at 100x. And they want to be a part of that, which is absolutely fair enough. And I do think you're also right that it takes some effort and some knowledge to really understand what are the characteristics of blockchain and why could this be so applicable for actual real world regenerative practices.
+
+And so we have a lot of documentation. We have a lot of medium articles trying to explain these things. But as you said, it is a challenge and it is something we try to improve on every day basically.
+
+Citizen Web3 
+As somebody who considers calls themselves like ecosystem development, I'm looking forward to seeing you guys succeed because I've been, I have to admit I've out of like impact projects. kind of been following probably originally bit more, not because they're different or anything else. It's just because I guess they're a bit more loud, but, so we see more of them and I do have questions about you and them as well. in a second, but you mentioned the word bridge, which is becoming like.
+
+a very popular word in blockchain in the past, a year or so, right? And I want to ask that I don't know who maybe shown back to you, but when I scroll through the extra documentation to the website, I see a lot of like oracles and a lot of things to do with oracles. And again, this is going to be like a bit abstract, a bit.
+
+kind of devil's advocate, but feel free to answer any way you want. Like, again, we've seen a lot of failures in the past with oracles, especially. And I'm sure we will see, I don't want to like, you know, make predictions, but I'm pretty sure that unfortunately we will see some of the big oracles sooner or later fail. It's bound to happen. It will cause probably like some big economical impacts on some blockchains. How do you guys...
+
+build that work? do we, you know, mean, such a huge thing to get information from off chain to on chain in a permissionless and verifiable manner. Do you want to expand on how you guide builds your oracles? And maybe we'll take it on from there.
+
+shaun_conway 
+Yeah, so I think firstly, I just want to clarify what we mean by oracles in the context of EXO. So there's two types of oracles. If we go back to the original oracle of Delphi, the functions of the oracle was firstly to give information as a source of truth. So you want to know a fact, go and ask the oracle and the oracle will give you some.
+
+Information about that fact and you kind of trust that it comes from a source that people generally believe is credible the other part of it, which is much less developed in the blockchain web 3 sense is prediction so actually what most people Went to the Oracle of Delphi to ask was tell me about is this next year going to bring feast or famine
+
+Should I plant my seeds? Is the weather going to be good? And so it's really about predictions. And so this is what we focus on is prediction oracles. And prediction oracles is not one global sort of all-knowing truth about this. This is about taking the data, taking the information, and performing an opinionation of whether this information
+
+Firstly, is true and positive. And secondly, what does this mean in terms of outcomes? And so this function is performed based on claims. So a core part of EXO is the EXO protocol, which we have been developing since 2015 and have built on the great work that's been done through initially the Rebooting the Web of Trusts community.
+
+and then through to the W3C, to the World Wide Web Consortium, creating new standards around how we identify and make claims about subjects in the world. And so we've built on those standards for verifiable claims and the issuance of credentials. And what that enables is for data to be collected in a verifiable, I call it high definition format.
+
+shaun_conway
+So high definition because you resolve the data around identifiers, which don't sit in some silo database, they sit on a public key infrastructure. And high fidelity because of the cryptographic way that the claims get signed and published to the chain and so on. So you've got this high definition data, which is now available for opinionation.
+
+Now that opinionation can either be done through an analog type process or through a very human process. And we have a whole industry of experts as well as mechanisms for communities to opinionate. So think about even outside of this context.
+
+the information that we interact with on a daily basis within sort of social media, for instance. Facebook likes or, or, you know, liking a, a post or a picture on Instagram helps to elevate the value of that information based on opinionation. And so the oracles in an EXO sense are services that are employed to evaluate claims.
+
+and the claims are in this verifiable claim format and it's machine readable and semantically standardized, which means that as more and more of this data becomes available, it's amenable to machine learning type of processes and prediction on that basis. So as an example of one of the projects that we're...
+
+working with to launch their marketplace on Exo is a clean cook stoves project. these are cooking devices that help families, and there's millions of families who could benefit from this, to move from cooking on open fires or using very dirty charcoal, which has a very, very high impact on the environment, impact on household health, and also
+
+shaun_conway 
+costs to the environment and to society. So to move to these clean burning cook stoves. Now the cook stoves have got an IoT device embedded in them. And so there's a constant stream of data every six minutes. Whilst the cook stove is being used, it's sending data through a cellular network. And it's saying how long the stove was used for, what the temperature was, even the fan speed, the location, et cetera. And so these streams of data
+
+can be correlated with other data points, such as the supply of fuel to the users of the stoves. And this is perfect for prediction. And so that's an example, just to make it really practical, of the types of Oracle functions that can be provided as services. Now, there's a whole bunch of questions that I know you'll want to ask around. OK, well, how do you trust the data? How do you trust the Oracle? No.
+
+Citizen Web3 
+I have a similar question, you're right, but my question was how do we rank the claims of the Oracle?
+
+shaun_conway 
+So firstly, we have all of the results of the work that the Oracle does on chain. So for every claim that is evaluated and the results of the evaluation, there is an associated identifier for the Oracle. And so when an Oracle service makes a claim to say, you know, I've done a million of these already and my record is that I've done all of these with no disputes.
+
+Firstly, you can validate the claim from the Oracle service provider that they've done a lot of this before. And you can also validate that there's not been any disputes. So on each claim, there is an ability for any of the participants, whether it's the funder or the producer of that claim, to dispute the claim evaluation and say, I don't believe that your opinionation on this is correct.
+
+And if that dispute gets upheld, then it may be a black mark against the oracle.
+
+so we also need to be realistic about like how the world actually works. So we have these ideas and I think I'm seeing a lot of much more of kind of realism within the ideologies of blockchain coming in. So.
+
+shaun_conway 
+The narrative has obviously evolved over the years and I've been kind of OG in this space. And so I think we're getting to a point where we're also realizing, you know, the usage of this tool is within the context of real world, the way things work. And so we already have trusted service providers, whether they're auditors.
+
+or their verification service providers, or increasingly sort of AI augmented services. And so there is already a whole kind of framework around, know, trusting third parties who have got reputation and possibly also whether it's reputation or financial stake. And
+
+And so really we can enhance that and we can make it more accessible. So the problem right now is that you've got these specialized service providers who are expensive in many cases and who are not very accessible to projects. If we're about kind of matching the services of an expert who knows how to test children and see what their educational level is, for instance, that's another project we have in India.
+
+That's only available to the places that are accessible and where that service provider can actually get to. Now, if we can provide tools that enable much more digital processes and scalable processes and also efficiencies around how the service provider gets paid, then we can start scaling this. so I guess just in summary, we've got existing services that we use.
+
+And it's a whole industry. There's a whole class of new services that are emerging with machine learning and AI and good data. And what we're looking to do here is build on that and expand access and scalability and reduce costs.
+
+Citizen Web3 
+sounds like the correct thing to do, efficiency, right? Alwin, do you want to add anything on that in terms of like from your side?
+
+alwyn_van_wyk 
+Yeah, just first off maybe let's not so the previous section that I spoke I just feel let's leave that one out. It wasn't that great Let me rather just talk about where we are in terms of technology and what drew what drew me from a trad fire world into This whole refi and just trying to understand where how D5 differs from refi etc and on the technology level So if we look at what cosmos and the blockchain enables
+
+is just the mechanism to make this immutable and public and to make sure that nothing gets lost and nobody can dispute anything because it's there. It's proven. Nobody changed it. And building on top of that is what I really enjoy about the internal depths that was built and that quite intimately involved with at the moment is the web application and the mobile application.
+
+on top of that the Jambo, the new Jambo stack. But I'll speak about that just now. So on the website, I mean, if you look at the power of this, it's not just the launchpad that's there, it's not just the impact hub. Every market relayer that wants to create an exchange in their space and bring a number of their local organizations who are trying to impact the world in a good way.
+
+each one of those relays can start a marketplace where whatever the projects are doing in terms of the value they're creating, that can be monetized to some extent and they can draw investment. anybody who wants to, I've been listening to the Bankless podcast recently and Mark Cuban was saying he's really bullish on refi and he mentioned one or two projects, but I mean, the moment
+
+someone like that can visualize how their investment can be easily tracked and seen over time. It can be verified. The claims are there to see and they are making an impact investment as well as having an ROI on the investment. That is just so powerful. mean, all of a sudden, and it's not just one hub that's running. This can be, we can have thousands, we can have millions.
+
+alwyn_van_wyk 
+There was a talk Sean did at the Cosmoverse in Portugal that really sort of hit the nail on the head, which was going from millions to billions to trillions. We've got to think really big. And that's what drew me to EXO is the fact that we have an opportunity with the Impact Hub to reach millions of underground projects and investors who want to invest in a well-thought-through way.
+
+Now, so on top of that, we've got the mobile app that will assist and support the laying of claims, et cetera, make things a lot simpler, which is essentially a DApp on top of the EXO blockchain. the next step is to make it really simple for anybody who wants to build a DApp to just use the JavaScript API and markdown stack, Jamstack, that Netlify has made popular.
+
+use that to work on a blockchain and using the Opera browser. So we've got a very strong relationship with the Opera team and XOLO has an actual mechanism, there's a method on the Opera that you can call to get back the wallet details for the credentials, to sign messages and to actually get the did information.
+
+digital in ID. Now these are super important and very powerful for the platforms we're trying to lay and for the way forward in terms of positive social impact.
+
+Citizen Web3 
+I wanted to ask you about, you started to mention a little bit like the aspects of, sorry, you started to mention the aspects of Excel and one of them is in terms of the economics is the alpha bonds and I wanted to ask about that, could you mention what the alpha bonds are and what do you guys use them and what do users need them for?
+
+shaun_conway
+Yeah, so I spoke a bit earlier about programmability and the ability to fund outcome states. in TradFi, there's a mechanism called impact bonds and green bonds. So debt finance, which is funded by risk investors in order to achieve some results, deliverables that then get paid for.
+
+Now those results can be paid in capital or they can be paid in the production of assets that get then distributed to the investors. And those assets could be carbon tokens, for instance, or carbon credits that can be monetized or they could be IP. So the idea is that risk investors make capital available in order to
+
+finance the production of outcomes and then receive a return. And when this is done in the context of impact, the alpha that investors want to get is both financial return as well as impact return in a measurable kind of way. So the mechanisms you have in DeFi for financing and gathering capital, generally in the context of liquidity pools,
+
+are done through automated market makers. the problem with automated market makers is that they're blind and deaf. So they're kind of blind to what other automated market makers are doing. And so traders can arbitrage between the market makers and they're deaf as to what's happening outside of the deaf or dumb, I don't know you want to put it, but they don't know what's going on in the world.
+
+And so we have to make a bunch of assumptions and there's a bunch of inefficiencies in connecting what's on chain with what's happening in the real world. So alpha bonds is a mechanism to overcome that by enabling information about what's happening in the real world to influence what's happening on chain. And that's done through an alpha signal, which is predicting the outcome
+
+shaun_conway 
+payment, the likelihood of the outcome payment being achieved. And we did extensive research and development work together with BlockScience to do all the mathematical proofs and simulations and so on. And so this is a bonding curve where the bonding curve adjusts the price according to the alpha signal. So if the outcome is less likely, it's looking less likely to make a payout.
+
+then the price will go down. If the underlying project is doing really well, the price goes up. And that has an effect of diluting the existing investors, if the project's not going well, and of attracting in new investment if there's an opportunity for performance arbitrage. And so this is a way of scaling these results based financing mechanisms. Just to say in
+
+the traditional finance sense. There's a lot of enthusiasm around results based financing. Actually, I'm going to the impact bond working group meeting in London in a couple of weeks time. And this is a group that involves all the development finance organizations from the World Bank to private impact investors to all kinds of agencies that have been working on results based financing for the past number of years.
+
+And whilst this is a great idea, there's some very big limitations to scaling. And one of them is just the cost of doing this in a traditional finance kind of way. Because you've got to have a bunch of smart people and lots of lawyers to put in place an impact bond. It's really about creating contractual agreements between the investors, the outcome payers or the buyers.
+
+and the implementers and then the verification services. And so these instruments are incredibly complicated to set up. Generally, you need to have a bunch of agreements before it even gets started. And so there's significant coordination problems that need to be overcome, as well as intermediary problems that need to be overcome. And so we've been working with a major
+
+shaun_conway 
+Swiss Financial Institution for the past just over three years now. And they implement these development impact bonds or social impact bonds. And we've been working with them to demonstrate how we can use an on-chain mechanism that reflects what's happening in the real world through this alpha. And we have a pilot running in India currently, which is for primary education.
+
+using educational technologies and collecting data about how this mechanism works.
+
+Citizen Web3 
+It's fantastic to hear that you guys are thinking of different aspects, not just like the economical aspects, the leverage aspects and so on and so forth, not just focused on one task. Considering you guys have been around for a long time, like in crypto, is like, you're like, I don't know, great, great, great fathers, right? For most projects. What has been your biggest, like, I don't know.
+
+ups and downs or not all of them, of course, but ones that you would love to mention and maybe say to whoever is out there planning a project now or starting out to do or not to do if you have anything like that.
+
+shaun_conway 
+Yeah. So, so I guess the let's talk about the ups first. Good news first. So the good news is that compared to when we started this, as you say, a number of years ago, there is now just a huge awakening around refi and around the use of web three for impact. And as a movement, it's a social movement and
+
+I'm sure it's going to become a political movement and an economic movement. So we're really seeing this major shift and it's, I guess, reflective of both changes in the context, you so people becoming aware of all of the big challenges with climate and loss of biodiversity, the experience that we all had with COVID, you know, so really understanding the fragility and the
+
+the existential crisis that humanity faces. So that's a context that has awoken people's understanding and awareness and motivation to do something about it. As well as then within Web3 itself, we've seen an evolution of understanding around what is Web3 really good for? What is this technology really about?
+
+and themes around coordination, decentralized coordination, overcoming murloc, addressing the failures of coordination and collective action, as well as sovereignty, giving people the power to make decisions about how they want to participate in the economy, in society and
+
+be free to participate on their terms based on their values, based on what they want to see happen. And so we see this in themes such as, you know, common stack, funding the commons, impact dials, you know, there's a lot of narrative within Web3 and of course, ReFi that has completely shifted the conversation and is creating a movement. And so that's on the positive side.
+
+shaun_conway 
+I would say some of the lessons just around, around like what, what's hard to achieve is, you know, firstly, if you're going to build something for the real world, you need real world applications and building real world applications, user applications, mobile applications, web applications, and so on is, is very difficult. It's, it's, it's not something that you can just spin up a DAP and, you know, if we
+
+Honestly, look at most of the applications of Web3, mostly DEXs, and they all have the same kind of interface. You can swap one token for another token. Generally, actually pretty crappy interfaces, which may be made to look a little bit more fun, osmosis with the lab and so on. But they're not really there for everyday users. And so our addressable market
+
+is not the DeFi, DGENs and crypto native community. It's people who are mobile first or in low digital literacy and low education environments in many cases. And so we need to make this usable. And so this has been a long journey. We've done huge amounts.
+
+user research, built many applications and iterations on those applications. And this takes time and it takes a lot of resources. If we think about localization, for instance, you know, how many of the web three applications are available in localized languages? You know, there's hardly anything. And so we're working with marketplace.
+
+implementers across from Hong Kong to India, Latin America, Africa. And in each of these locations, there's localizations needed and there's different use cases. And so the lesson in this is, I see a lot of great ideas, enthusiastic and motivated communities wanting to build on Web3 and to create the next impact.
+
+shaun_conway 
+platform or next impact application. And it takes time and it takes resources and it takes proper processes around gathering requirements, doing proper user research, testing in the field, et cetera. And it takes longer and it's more resource intensive than, you know, than I would hope.
+
+Citizen Web3 
+I have noticed like around crypto, which you did mention that some projects, have similar interfaces. Yeah. And most of those projects are focused on moving data A to data B from A to B. And that's pretty much it. yeah, like real world use cases do take a long time. And this is actually my, I don't know if it's a question. I have like a note written down and I'll try to make a question from it. And again,
+
+I'm, you know, I have to be devil's advocate and a lot of it is to Mike, guess a lot of it is to Sean, a lot of it is to you all, as well as to all of you. I'm going to try. So I'm kind of also involved with a lot of people who, who have, who are farmers or my friends or, and I'm personally, I love things to do with regeneration and with, you know, charities that, not focused.
+
+I'm sorry to say that, but I will say that not on humans, but rather on the earth. And in my opinion, that's not, it's more important in my opinion. Okay. I'm going to say it. So this is just an opinion, course, subjectively. But what I've noticed from those people, and especially doing workaways in Portugal, for example, and other countries years ago, is that, well, this society, this communities, these organizations are not super
+
+crypto friendly. In fact, they are not just not crypto friendly, they are very anti crypto. And in fact, when I come to like my friends, who, for example, have friends who have like seven kilometers square gardens, right, which have been building for 30 years. And when I come to them, and I started to talk about the things they kind of look at me and go, what do you want? Like, you know, what's your deal? What's your point? Like, so considering you guys are
+
+Technically targeting this is your target audience those people write those small communities around the world whether they're Africa organizations individuals How on earth are you guys gonna convince them and like I don't know. There is no question. It's just like an Observation kind of thinking you guys have a hard very hard job a very hard task a very important task, but What are you planning to do about all that about the these people are not really friendly towards web 3?
+
+shaun_conway
+Yeah, so firstly, Alvain mentioned the developer platform that we're busy creating on Jamstack with Opera. So we're calling it Jambo. And this provides for very atomic, very small applications or dApps that people can use to get things done. So this idea of understanding
+
+what a user's needs are, what is the job that I need to get done? I need to send someone some money, I need to record some information, I need to make a claim, I need to say, you know, I planted a tree or whatever and take a photograph and say, look, I planted the tree. Or, yeah, or I need to exchange one asset for another asset, or I need to receive a payment. And so each of these things is a...
+
+job to be done. And if we make it super easy, that users don't have to have complicated key management, they don't have to go and buy gas. know, so now we're on with Cosmos, fee grants, you know, we've gotten a way of basically covering the gas costs. And with the increasing sophistication of the cross chain services, whether via IBC or
+
+being able to access services directly on other chains because of the Cosmos SDK standard, we can enable people to access all kinds of blockchain services that just get the job done across a multi-chain infrastructure. And so by giving the user useful tools, that is, you know, first and foremost, what motivates people to use something is if
+
+they can do something with that tool that they can't otherwise do, or it's much cheaper and easier. So that's a big part of the focus that we have and the use cases, communities as examples, range from community time bank cooperatives in Hong Kong, where currently everything is done on paper ledgers.
+
+shaun_conway
+And there isn't interoperability between the time banks, you know, I want to purchase something in another cooperative. I have to then go and establish a separate account there and there isn't exchangeability across. And so we're working on a time bank exchange, which is essentially a DEX for community currencies in Hong Kong. And then another on the other side of the world, small scale
+
+regenerative agroforestry farmers in Brazil. we're working with Econavi and building on their platform and their network to enable farmers to access capital, getting centers for participating in sharing information, and so on. So that's one sort of big part of it. The other part of it is that there's an integration with machines. And so if we take the example of our
+
+implementation in India, the SDK actually sits, the client SDK sits in tablet devices that children are using. And I think it's pretty cool that we probably are the first project to have ever connected children to web three. And it was in India, in poor communities, where the kids have not been attending school for the past couple of years because of COVID and it's already fallen behind in education.
+
+And we were able to enable the distribution of 500 tablet devices with a learning application on there. It's an open source award winning learning application. The kids don't know that they're interfacing with web three. They're just doing the program. But the tablet device with the SDK built into it is transmitting the claims. So actually the tablet device is making the claims and that's just the first step.
+
+obviously that also involves financing. So there's an alpha bond to finance the purchase and distribution of the tablets. So there are other actors in the system. But from the end user perspective, being a child, they don't know that they're using web three. And yet they're participating in the creation of a new tokenized economy for education. And the idea is then to enable this to really scale to
+
+shaun_conway
+millions of kids using the same technology capabilities.
+
+Citizen Web3 
+That's actually pretty cool. Alwin, Mike, do you want to guys add anything to that?
+
+mike 
+Yeah, I think I can add something to that. So what I think is definitely the biggest problem in the existing impact market is that there is actually quite a lack of funding. And yeah, there is definitely a general adversarial stance against Web3 crypto and I guess this whole capitalistic mentality that comes with it.
+
+alwyn_van_wyk 
+Yeah.
+
+mike
+But on the other hand, I also feel that since last summer and especially through the rise of KlimaDao, I mean, that attracted so much capital in such a short period of time that you do not really see that there is a bit of a turning point where some of these organizations, like for instance, Extinction Rebellion is starting to use Web3 to raise funds and gather capital. And I think that, you know, these...
+
+incumbent organizations are actually starting to see the power of Web3 and if they can actually manage to get funding through it, I think they will be one of the first cohorts of real established businesses to actively start adapting and adopting it.
+
+shaun_conway
+Yeah, one of the big narratives around this is the democratization of impact investing. So if you think about like now, if you go and speak to your bank and say, okay, I want to invest in something that's going to be a tobacco company or an oil company, they may come to you with some sort of portfolio of shares that
+
+are in companies that they have for some reason kind of deemed to have been, have met the ESG or the criteria for being sustainable, sustainable capital. But it's not very accessible. You need to have a certain status in terms of your banking status and you need to have a certain amount of capital. What Web3 enables is that anybody can invest in the projects that they're passionate about.
+
+and they can get a financial return. And that's completely democratized. Now the big banks are recognizing this. They're recognizing that their future customers, youth gen Zs who are seeing the potential and are believing in crypto aren't going to open bank accounts, aren't going to invest in traditional portfolios of stocks. And so
+
+If they want to remain in the game, they need to figure out how to address this next generation market. And these are the kinds of conversations that I've been having with large financial institutions and in particular the one that we're working with in Switzerland. And so we're looking at how to make that possible, not only from a crypto operational perspective, but also in terms of
+
+regulations, compliance, so on. Because let's face it, banks have a license to operate that requires them to do things in certain ways. Part of this is also creating a bridge between fiat and crypto. And so in the India education example, we're representing fiat transfers on chain.
+
+shaun_conway
+but the bank isn't actually doing crypto transfers. So we have a banking oracle, a claim is made about a bank transfer having taken place and we can then verify that claim using banking APIs and represent the fiat transfer on chain with tokens that are used for accounting.
+
+Citizen Web3 
+Alwyn do you still want to add anything or?
+
+alwyn_van_wyk 
+Absolutely, yeah. So just to get back to your example of art, you're mostly interested in the earth and nature, and a lot of people are focused on that. But just keep in mind that that's only three or four of the SDGs that the UN has set aside. So there's still a multiple other ones like poverty, ending poverty, making sure people get fed, economic reviving. Now what I'm seeing with EXO, with the Impact Hub, is that I would be able to spin up
+
+one of those instances of their hub as a market, as an exchange in Cape Town. And I call it something completely different. I would call it the Younglings or Texit. And they will have a specific branding, specific logo. And I would bring in the local organizations to work on that. That will enable in a very localized way. And this is the conversation that Ethan Buckman is having all the time is we should have a mechanism to have local community-driven solutions to people's problems.
+
+specifically in the region, in ReFi. And that's what's enabled right here is I can spin up this platform and bring in all these organizations. You can do exactly the same where you are. It can happen in Kenya. It can happen in India, Hong Kong, everywhere. And it's all the same thing. And I have local investors. It's almost like crowdfunding, where crowdfunding for good, where we can push money into this. And I know that my investment is going for good, but it's also gaining in...
+
+it's becoming better and better. And it depends on the claims that people lay. It depends on how well people are pulling off these projects. But they are rigorously focused. There's a lot of verification that happens on them. It's just a no-brainer to me. We can literally change the world.
+
+Citizen Web3
+Guys I just realized that that somehow we spoke over an hour I don't know how that happened. That's really cool. I like when the conversations flow So I have been like one kind of a resume question, which is slightly different, but I still want to ask it And if this is to again to everybody one by one, maybe start again with Sean and again considering
+
+You've been around since 2015 building the project, not you personally. I'm sure you've been around for longer. What keeps you motivated in your daily life to get up every day and keep on building? 
+
+shaun_conway
+Yeah, so it's the realization of a vision and an understanding of the impact that it could have. So this has been a very long journey. And, and, you know, as we've spoken about earlier, with many challenges on the way, and I'm sure many more challenges to come. But the causes is certainly, it's like the only thing to be working for, you know, if you're not
+
+doing something to improve the future then and change people's lives and enable people to have greater say in what their future holds, then I don't really see a reason to get out of bed. So that, know, and the fact that we can actually do it, you know, we're increasingly seeing the power of our tools and the reality, the, you know, the vision is becoming very, very real.
+
+as we're enabling all of these marketplaces across different sectors and different geographies to build out their solutions.
+
+mike
+Yeah, so I feel that my motivation is kind of similar to that of Sean's. As I said, crypto has been a passion of me for years, and I've always loved the concept of decentralization, trustlessness, permissionlessness. And then on the other hand, I've always been super passionate about social impact and the environment. And I just feel like these characteristics of crypto
+
+actually offer us solution to the otherwise like exploitative systems that we have in place currently. And so I really think that by combining these two disciplines, really these two sectors, we can actually make the changes we so desperately need.
+
+alwyn_van_wyk 
+Yeah, that's a great question. So obviously the people in the space is incredible. There are so much intelligence and intellect running around and that just inspires me. But long story is 22 years ago, I made a commitment to my wife and my family, lifelong commitment. I made another one in 2016 to the younglings, which is also a lifelong commitment. And the most recent commitment I've made is to Sean and to his vision, because I believe in that. it's a global.
+
+It's a way for us to have global impact and to really impact people's lives with the latest technology and within a decentralized way without anybody putting those levers. And we can do it in a local community way. I love that.
+
+Citizen Web3 
+I think if you put all the answers together, it sounds like the perfect vision. But it's really cool just to hear that personally, my goals personally align, I think, with part of each three of what you said. And I love hearing those things. That means I'm not very wrong. means I'm doing something correctly. If it aligns, guess, with people. Guys, thank you so much for coming, for explaining what is EXO all about. Looking.
+
+forward to seeing how the project will develop and when it will be IBC enabled of course. So thank you. Sorry, Sean.
+
+shaun_conway
+It is IBC enabled. And yeah, yeah, we were one of the, we were one of, I think we were in the first, the first sort of 10 or 12 of IBC enabled. And, and, and, and we're now working on increasing the cross-chain interoperability and have a major upgrade to our network. That's
+
+Citizen Web3
+It is I'm so sorry. I'm I didn't know that
+
+shaun_conway 
+coming very soon currently in DevNet going into TestNet with Cosmos and a whole bunch of other capabilities, major upgrade.
+
+Citizen Web3
+Guys, we still, I think, need to do like another episode with you, another stream or something like that. We'll talk about it, of course, off air. But thank you very much for coming and thank you very much for your time, guys.
+
+alwyn_van_wyk
+Yeah, this was awesome. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+
+

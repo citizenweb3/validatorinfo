@@ -1,0 +1,274 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/stakefish-adoption
+
+Episode name: 
+Adoption, fish and staking with JK
+
+Anna
+hey it's citizen cosmos we are serge and anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community join us if you are curious how dreams and ambitions become code 
+
+Citizen Web3 
+yeah hey everyone and we have jk with us today very excited about speaking to you for one reason you are obviously the take care of strategy operations for one of the biggest validators you're probably one of the most active validators in the cosmos community i would like you to introduce yourself first how you want people to know you though i mean tell a little bit about yourself what you do for steak fish and so on and so forth 
+
+JK
+hi everyone this is jk from steakfish steakfish is the biggest validator currently on cosmos what i'd like to do is just say that like we're very much more than just a validator we consider ourselves an infrastructure provider for all blockchain projects in the blockchain ecosystem cosmos just happens to be of course one of the biggest ones obviously we were huge fans of cosmos which is why we participated in a very big way during game of stakes the first ever incentivized test net conducted on a newly launching blank shape leveraging off of that success there you know we've grown into the largest validator on cosmos which we're very grateful for so like our team has a lot of experience managing infrastructure and we're leveraging that to provide these good infrastructure layers to blockchains because at the end of the day it's the node runners that determine how well a blockchain performs and so that's sort of our core service but we realized that our role should not end there which is why on top of just providing the infrastructure we're also building out a lot of tools for example on cosmos we have a validator leaderboard that we offer on our website and on top of that we love growing communities so we do a lot of community events make a lot of memes do a lot of marketing for the cosmos ecosystem i am managing most of the business operations at our company which includes doing some of the research on the cosmos related projects that are coming up determining what sort of fees we want to charge how we approach different clients customers how to determine what sort of tools and next products that we should build out in the ecosystem 
+
+Anna
+so you are the biggest validator for the moment or what do you understand about being a validator that nobody else does what is your kind of magic 
+
+JK
+let me emphasize we fully believe in our peers the thing about validating and the industry we're in is that we cannot exist without reliable peers so we fully believe some of these stronger validators have what it takes to really run a solid validator infrastructure let me just emphasize that yeah we have full belief that other people have full-on ability to run a good validator as we do i will emphasize though where our expertise come from is that as an example our head of infrastructure has two decades of experience just managing servers and you know running infrastructure security before like coming into the blockchain field at the in the first place so we have engineers who have these sort of deep experiences and they're bringing that to running our infrastructure on uh cosmos what i'd like to point to is actually as i mentioned like we believe in our peers it's going to be very hard difficult for people to tell which validators running their infrastructure better or not what i like to point to is sort of our track record so far we have not had any slashing or any downtime prolonged downtime for our validators that's what i like to point to to show that we do have the expertise in our team and it shows on our performance 
+
+Citizen Web3 
+sounds like you guys enjoy what you do and i think this is the main part right 
+
+JK
+exactly it's exciting especially because we're seeing an ecosystem grow out of a blockchain that we're helping maintain that's what makes it so exciting 
+
+Citizen Web3 
+how did you decide to start the stake in business i mean did you just like sleep with it or something that happened 
+
+JK
+i will tell the story of our founder wong chun who is the main catalyst of creating steak fish he created f to pull before entering into the proof of stake space f2pull is one of the biggest mining pools in proof-of-work notably on bitcoin right now and um interim as well he's been around this space from 2011 he's seen proof of work and he's seen how important it is to have reliable infrastructure at the end of the day it's these infrastructure providers that are going to help maintain blockchains and you know help make sure that you're able to achieve the best scalability on a blockchain he was not certain about proof of state at first however he's spoken to vitalik over time and has spoken to a few of the casper related researchers in the ethereum ecosystem and he realized that yeah proof of stake was actually maturing in its research phase and that it's possible that their future networks will launch on proof of stake the moment he realizes was when he decided to launch stake fish and then we tried to find out what the best networks we could provide our validator services for and obviously cosmos was pretty high on our radar tendermint of course being you know the most notable other proof-of-stake research that has been done and was being used even before the cosmos hub was launched right by other blockchains and so that's why we knew that cosmos hub will definitely be an important blockchain to run our staking services on 
+
+Citizen Web3 
+you mentioned that the technologically tendermint and cosmos code ui when you guys did research what exactly was it the consensus the finality speed was it the something else the ability to create ibc in the future what exactly when you did research about tendermint and cosmos that kind of made you
+
+JK
+so our very basic approach is we believe in a multi-chain future we don't think there will be only one blockchain that will rule the entire world we don't think that's feasible and we believe there will be multiple blockchains that support either globally used or locally used currencies and host different decentralized applications in the future considering this sort of thesis that we have obviously cosmos future of trying to connect different blockchains made a lot of sense to us definitely resonated with our thesis we're not sure whether sharding might be sufficient on ethereum perhaps it will be but we're not there to we want to be able to support still different approaches and so that's why we knew once we looked at cosmos and realized what cosmos was trying to do is really let people run sovereign chains and connect all these chains to allow enable different applications that really resonated with us and we decided that yeah we really want to be key players in the cosmos ecosystem and look i we really don't know about the future but we have a strong conviction that the cosmos ecosystem will likely be one that will survive the next five to ten years 
+
+Anna
+so your aim is diversify your portfolio as much as possible 
+
+JK
+not as much as possible we are diversifying to change that we believe have a strong future at the end of the day we see ourselves as reliable and capable infrastructure providers and we don't want only a few chains to be able to leverage off of our expertise we want to be there to support as many chains that are trying to do their best to expand our ecosystem to expand the blockchain ecosystem diversification first is not what's in our minds rather it's about trying to support as many project teams that are trying to do their best to expand the blockchain ecosystem 
+
+Anna
+could you describe your working style to us in just a few words about your culture and what kind of style do you prefer 
+
+JK
+yeah a sure thing i'd say we're pretty unique honestly of the validator set because we might be one of the few very totally decentralized teams we have right now 18 people in our team but not a whole lot of people share the same time zone and this let me be up front it provides a lot of challenges of course for example if we're trying to do team meetings it's very hard to find a good hour of the day for everyone to be on a call but it has a lot of upsides i'll provide uh two first is a pretty obvious one because we have people all around the world someone is awake at least at some point in the day either to monitor our nodes or to answer any questions that our community members might have for us so that's a huge advantage but the second pretty overlooked advantage i'd say is that we have a diverse perspective we grew up from different cultural backgrounds we have different career backgrounds these all have contributed to the diverse identity that is stake fish an example of how much this has helped is when covid 19 started to hit especially when it was only hitting regions in china hardest before it was even going global of course most of our team members who are not based in china did not really feel the urgency of it but thanks to people who live in mainland china our team members they've kept warning us they've told us on and on that things are getting worse that there will be some serious consequences there's a huge risk that it might it might spread so we started then to remote work from a very early stage even here i'm based in korea and korea really didn't have any lockdowns until mid march but we started working remotely starting early february and this is really because different team members are able to bring in different perspectives depending on where they live depending on their word what they're seeing and depending on what you know how they perceived a situation 
+
+Citizen Web3 
+yeah i think i can totally relate to this because we've been working as a distributed team for many years now and um it has a lot of upsides and i think i mean we've been sort of on and off professionally working with blockchain for the past five years i think maybe maybe a little bit more and i can totally relate to everything that you say you mentioned that because you have 18 people and they're all in different time zones they can all keep track of whether the nodes are up so that brings the question are all the people on the team technical do they have technical background or no 
+
+JK
+oh no not at all but we have automated monitoring systems up that alerts us so we have some without going into too much detail we have some dedicated slack channels that will just keep pinging us if there's something weird going on that way we're able to then relay messages make sure at least one of our key engineers might awake and you know is aware of ongoing situations 
+
+Citizen Web3 
+how do you guys i mean you have pretty wide list of projects not sure if it's the biggest or one of the biggest today in terms of stake in providers how do you guys choose a project is that spontaneous decision is that an r d process is that a b testing what is the secret 
+
+JK
+we are one of the largest definitely not the largest i believe we are probably one of the uh among the top five offering the most diverse i think set of validators on different chains the entire process is not easy conducting even the due diligence is already complicated enough tracking them and then making sure that we're on top of these is a whole different set of challenges to answer your question there's only one question that really matters at the end of the day for us and all the due diligence that we do the questions we ask and the research we do eventually i've come to learn is all aimed at answering just one simple question is this blockchain contributing something significant to the ecosystem will this blockchain survive and will thrive for the next five to 10 years that is the core question that we always try to answer maybe some don't survive i don't dispute that but we believe that there's a high probability and that is why we want to make sure at the very least we are the ones enabling them to increase the probability of them survive 
+
+Anna
+let's talk a little bit about ecosystem how you can estimate the ecosystem of the project and is it good or not good and a lot of controversial question is being to arise in that field 
+
+JK
+gotcha that's a very good question there's various ways to look at it first is looking at its technical contribution of a project as an example if it's not just using the cosmos sdk and it's building out its own unique consensus or overlaying some unique modules or putting some interesting technical spin to it we ask is this contributing something interesting will this attract more developers will this attract more users to this blockchain that is one side we consider the other next is we consider then like from an application standpoint if applications were to jump on this chain will they be able to do something unique that they wouldn't be able to do on existing chains the other aspect that we look at is the user's side or the token holders side by owning this token are they achieving a different type of utility or store value or some sort of value to them that does not exist in the current ecosystem so there's various different levels of stakeholders that we take into account and see how impactful a new project will be on each of those stakeholders 
+
+Citizen Web3 
+if we like generally can understand that each project is different but let's just assume that generally we can break the general groups of stakeholders into trees so we're talking investors users and infrastructure probably right so this is like the three big groups would you agree 
+
+JK
+um infrastructure and developers i think developers are very key 
+
+Citizen Web3 
+yeah so let's say developers and infrastructure users and investors would you say that either of the group has to be first or last or would you say that the all three of them have to come in together in equal parts and pull one by bit what's the secret here the secret source to make it perfect 
+
+JK
+i would say i know the answer all right at the end of the day quite honestly it's developers i'll be very upfront it's the developers that really come first the reason is because a when we're talking about investors people who hold tokens of some of these some of these projects for their value of those tokens to go up that network needs to be constantly used expanded how do you get then more users you need more interesting applications and you need more those tokens to be used i mean what will they use it for how do you get interesting applications there you need developers developers that are going to build up interesting applications on chain without that this won't you won't have this chain events eventually the token value cannot be sustained without developers constantly building on top of a network period 
+
+Citizen Web3 
+totally i agree definitely i mean if we look at the ethereum i think etheorem here is the perfect example where we have what 200 000 developers and we see that it works before we jump onto other questions i have a question that is a little bit maybe unrelated but it's more to your structure i've looked on the internet and i've seen that you have like a few names you have bit fish steak fish cran fish i got a little bit confused what goes where 
+
+JK
+let me first talk about why fish we chose the name fish largely because fish is actually one of the longest surviving species one of our main goals is to make sure that we are survivors for the long term we will be around for as long as the bitcoin chain or you know if durian is live basically we'll be constantly here so that's one of the reasons why we're really fond of the name fish to answer your question about like all these the biggest question is like bit fish versus steak fish a bit fish was the name that we chose when we first incorporated but we found that a lot of people were just asking questions about what fish does had a lot of confusion over there was a lot of basic confusion over the name so you decided that going with steak fish you know there's no way you're confused at least if you know somewhat about blockchains you're not going to be confused if you once you hear steak that's why we've really decided to rebrand and make sure that we're known as steak fish and so when we participate in game of steaks we were participate as bit fish it's been a year now and you can see that you know you won't really see bitfish name around our marketing materials or our website anymore it's all going to be state fish
+
+Citizen Web3 
+one slightly controversial question obviously you don't have to answer you can answer in your own way 
+
+JK
+i love controversial questions please
+
+Citizen Web3 
+it's not really controversial but it's like a little bit let me give you a little bit of background here first our team generally that works on cyber right now we've been working around with blockchain for a while and we launched a few products before that and amongst them was a product which was a fork of steemit we worked a lot with the graphene database and so i'm coming to the actual question here and at first like everybody we were really excited about eos when first eos came out we were like oh my god this is gonna be like another product and it's gonna be so good and i'll be absolutely honest with you and i know that this is a public podcast and people are gonna hate me after this but let's be honest and i'm just my opinion here currently eos is an absolute shit hole sorry and this is a personal opinion so obviously nobody has to agree with it but this is how i see it personally right now anna has a really good name for it the frankenstein of blockchain 
+
+JK
+ha ha ha
+
+Citizen Web3 
+because it kind of became a little bit confused so i've seen that you guys are a block producer but i know for sure that four i've seen you guys top of the list and now i see you gradually going down what's the story with this are you guys still supporting it because you've been there since the beginning do you feel the same way that eos is going slightly off track i mean i don't want to put words in your mind what do you think in your own thoughts 
+
+JK
+we were a top vp at one point we did have substantial amount of eos holdings and we did get some good voting support which was why we made it up there but we found that it's very difficult to maintain your bp ranking unless you have a backing of multiple eos wheels the fact that i'm saying that sentence speaks to how some of the economic design on eos may not be entirely as the team intended when they wrote their white paper and when they first launched this i think that's just evidence enough about why we decided jump off running an eos vp by the way is is quite a feat the infrastructure is it requires pretty beefy server compared to any of the other chains that we're running right now so it didn't make sense as soon as we dropped out of paying range and we saw no ways of getting back to a top bp so that's why we decided to spin it down to go back to your original question is how i feel about eos where it's going next well i think one of the key problems that i constantly found while i was pretty well involved in the ecosystem there there wasn't really much feedback going in and out of the eos community there is no knowledge coming into the u.s ecosystem from other chains notably ethereum and vice versa and a multitude of reasons i won't put the blame on anything but there might be a multitude of reasons but just seeing that there was no flow of knowledge going on i think that was the biggest problem without learning what the other chains are doing like why waste good data points that exist on other chains and just don't write it off just saying oh our chain is better and then just not even look at what issues arise and what sort of products are arising on their chains i just found that to be ludicrous that's why i'm thankful grateful that at least in the cosmos ecosystem this is happening at least to some extent where there is a lot of active communication and a lot of knowledge sharing happening with other chains and other developers and that's one of the reasons why i feel much better about where the cosmos ecosystem currently stands 
+
+Citizen Web3 
+yeah i see what you're saying because i was one of those people who was into proto-shares if you know what proto-shares are which came before bit shares and angel shares and i felt since the very first day it was a very closed community even though it was a big community and it shared between itself it would never really go out and always had a thing for others but okay let's let's leave it at that i guess let's not try to pick on them too much so people don't hate me in you 
+
+JK
+not really you know trying to hate here i really do think you'll still as a fact has the most steps after it during i don't deny that like it's out there but the fact is if once you stop learning where do you go next let's face the hard cold facts here the blockchain ecosystem is very very small it's all about growing the pie right now not about trying to divide up and eat more of the pie if you keep doing that like there's we're all going to die off as an industry the way i see it is the blockchain ecosystem as a whole and not just secluded wild gardens i thought that was what we were trying to prevent in the first place but just to build that up all again does not make any sense to me 
+
+Citizen Web3 
+absolutely absolutely you said there a good sentence you gave an analogy about eating the pie and about how some projects you didn't name any projects but this is my question and you don't have to obviously name it you could just skip the question but um what is the worst example of a big project we're talking big projects that you think is doing exactly that the wrong thing eating the pie instead of trying to spread a pie obviously let's not talk about eos because i think we mentioned yourself what is in your opinion the worst example let's say top 50 projects i mean obviously you're aware of the top 50 so 
+
+JK
+well can i pick on you can pick on anyone 
+
+Citizen Web3 
+you don't have to you don't have to 
+
+JK
+i was just going to name tron really honestly
+
+Citizen Web3 
+for some reason and you did somehow i knew that but okay 
+
+JK
+there's beauty and imitation but there's the show can't go on for too long it's been a while since we've seen true innovation come out of tron or any new new unique ideas come out of tron so please prove me wrong please do prove me up you know i really want to be proven wrong so maybe it's just an open challenge out there but so far like what i see is like tron just what they're doing is just trying to replicate a lot of the applications famous applications on the other chains and just bringing it to your ecosystem just trying to then basically onboard the users of the original application that's just how i see it right now 
+
+Citizen Web3 
+it's obviously the wrong way we can see that it's not working well let's see let's i mean good luck to them anyways 
+
+JK 
+ha ha 
+
+Citizen Web3 
+to move on in one of your speeches be honest i didn't listen to the whole speech song you might have explained it so if you did i apologize ahead of the question i found a slide where you mentioned that live pier is a work token for steak fish can you expand a little because life there is a very interesting project so i'm quite interested for you to expand on that 
+
+JK
+the term work token like we're not a validator or infrastructure provider on life peer yet that might change in the future but it is definitely one of the earlier projects that have had a staking mechanism in them incorporated in order to make sure that their project is able to be run smoothly what i meant by work token was that they're not a proof-of-stake network per se they don't have what are called blocks being added onto a new blockchain that's not the premise of life here at all livepeer is a decentralized video streaming platform and what they're using is they're making sure that video encoding and video streams are being provided smoothly through incentives reviews created by a staking basically that's what i meant by work tokens and there's no exact terminology right now to i think discern proof of stake versus some of these work token based staking models but i think eventually because it's all still new we're all still scrambling to really put a terminology on this but eventually i think that's what we're just going to converge on just calling them work tokens as an example chain link the link token is basically some very similar and that being a node operator and chain link owning their chain link tokens does not mean you're there to create new blocks you're there to make sure that you incentivize with the tokens that the node operators are properly providing data feeds to the during blockchain that's what i meant and i hope that sort of clarifies what i meant 
+
+Citizen Web3 
+another strange question which um i kind of found while exploring you why soul tree i mean obviously soul tree is earth but uh i've seen a few places where you mentioned soul tree why did you decide to use soul tree 
+
+JK
+this all comes back to our decentralized nature and our founder chun really does not see nationalities he thinks that that is something of the past especially the way we're operating and so our team will get slightly triggered if someone calls steak fish a korean or chinese or a u.s based validator because that's simply not true we really see ourselves as just children of the earth basically our validator is located somewhere on earth our teammates are living on earth we'd rather not put up nationalities when we're branding ourselves and when we're talking about ourselves of course some people might feel more loyal to their nationality and will choose a validator accordingly that's perfectly fine i'm not going to judge you for that but at least know that if you're looking for a certain nationality validator we're probably not for you 
+
+Anna
+you know it's a lot of irony in this because when we prepare to the interview to our podcast we have a bunch of questions about the international nature of blockchain blockchain has no national barriers you can easily communicate with people in australia or from india or from whatever in europe so we see technology is really international thing and english is definitely the first choice language when we speaking about blockchain but we still have some national languages and we still have a lot of community and ecosystem behind the projects do you think that you have your special language community or it's only international english level how it's exist now 
+
+JK
+it's a very good question and you're getting at sort of the main problem here and that even if we say we're international at the end of the day what language do you speak in your team and it's english which then you know provides a lot of advantage to certain projects to certain nationalities while it doesn't for others so we're okay with having one at least common component for communications i think that's a problem that needs to be solved later down the road at least for now we need to communicate so we're comfortable with english but because we realize that there are so many different people that do not speak english and speak different languages if you look at our website we support a whole ton of different languages now most recently we added for example hebrew and we're going to keep adding new languages and this is because we want to make sure that anyone in the world with any nationality speak any languages are able to understand how they can stake and to visit our website i hope that sort of answers that question and uh what i'm trying to get at is well we understand that we will need to speak english as a common denominator we are trying to be as inclusive as possible by providing all sorts of different translations of our website 
+
+Anna
+you have translation only for your website or you have community chats or in other languages too 
+
+JK
+for now the translations we're doing mainly for our website for community wise we are operating an english telegram channel and we are also operating a chinese wechat group we would love to expand this quite a lot more but the reality is that will require a lot more people it's not a secret that validators are not earning bitmain level revenues at this point so 
+
+Anna
+so i'm just curious which group is bigger your wechat group or your telegram chat group for the moment 
+
+JK
+um i believe at the moment it will be our telegram group yep 
+
+Citizen Web3 
+it's interesting that you say about borderless because i can relate to that a lot and we kind of try to speak we believe in the bigger things and the greater things and if you look at our manifests i mean we talk about evolution of species and evolution of humanity and it's a good thing that i think projects and especially validators and people who do infrastructure have something greater as a reason to what they do so from what i'm hearing from you is that so it sounds like you guys have a reason to do all this not because you're earning money or because you're helping to secure technology it sounds like you guys have a bigger reason of decentralization and bringing people together am i hearing correctly or am i misinterpreting it a little bit 
+
+JK
+I'd say that and then along with just trying to be an infrastructure provider so that blockchain ecosystems are able to drive are both key missions here because i mean we're not not business savvy meaning we're not going to be constantly losing money we want to make sure we are sustainable and without sustainability we will not be able to survive but you know revenue is definitely not like the number one factor i'd say because if that was the case i don't think we'd be in operations right now 
+
+Citizen Web3 
+sure sure make sense going back to cosmos what do you think again you could answer your personal opinion you could answer opinion from the biggest validator of course it's up to you what do you think about the current governance of cosmos is it good is there room to improve 
+
+JK
+i think it's difficult to render a judgment right now or an opinion right now just because gavin has been putting in some awesome awesome work on revamping for entire government process of cosmos so before i would say there were definitely weak and broken spots we've actually voiced this during our after we concluded game of steaks actually it was right before we concluded game of stakes we've already mentioned there that just the fact that for those of you who are unaware on game of steaks steak fish was forked out on one of the game of steaks networks because we were running around 50 something percent obtained network and this was an attack we had conducted on game of stakes just to prove our competency and um 
+
+Citizen Web3 
+i remember that actually you wrote publicly about it yeah sorry if i'm not mistaken you had a lot of posts about it is that correct 
+
+JK
+yes and one of the points i pointed out there was that there was no really defined governance process and how we were forked out and i've highlighted that there specifically because i would see people complaining about how 36 hours of you know wait time was enough that some people were complaining it wasn't just the fact that there was a lot of argument around the processes itself was a huge problem i did see that that would eventually become a problem and we've seen that sometimes pan out on uh in the early days of cosmos but uh thankfully there weren't any huge problems caused by the lack of a proper governance process gavin's work gavin from figment network his work will finally make sure that you know we prevent any uh huge governance related issues at least for the foreseeable future 
+
+Citizen Web3 
+what is the other aspect like if we look at cosmos like let's break it into modules we have the governance model we have the economic model the economical model and so on and so on what is the other aspect of cosmos as a big ecosystem that you consider apart from governance to be important and what improvements do you think that part of cosmos needs 
+
+JK
+rather than improvement i just want to highlight ibc just because the entire cosmos ecosystem is depending on this a lot of the projects that have been built using the cosmos sdk relies on ibc without ibc a lot of these projects will have to build individual bridges which will not really make their project sustainable or scalable ibc is just so key here if ibc is not delivered if ibc is not what people envision it to be i think that would definitely put a huge huge pause to the cosmos ecosystems expansion 
+
+Citizen Web3 
+what is the most exciting case that you're excited to see on ibc something unusual you have something in mind like that
+
+JK
+something unusual i'm not sure about something unusual unfortunately
+
+Citizen Web3 
+okay what about something usual 
+
+JK
+one of the key projects that are just waiting in the pipeline is as an example kava right just imagine as soon as ibc is live imagine being able to move around all of your tokens on different cosmos sdk based chains to kawa to lock it up and to issue stable coins i think that is such an interesting and that is an exciting exciting defi feature i'm excited to see this is just i think level one of what we could expect as soon as ibc is live because we're able to grasp this because we've seen how defi grew out on ethereum but i'm quite sure there are much more applications that i'm i can't even imagine right now being built up as soon as ibc comes live 
+
+Citizen Web3 
+yeah totally i think it will create huge opportunities for all types of markets defi definitely is probably if not the most exciting one of the most exciting what is the one project in the blockchain space not cosmos related that currently excites you personally as somebody who's obviously been doing blockchain for a long long time 
+
+JK
+there are teams that are building up applications that have blockchains in their backbone the unique thing about these projects that i will name is that the users the mainstream users do not have to interact with the blockchain at all meaning they don't have to worry about private keys they don't have to worry about making sure their addresses are correct just the fact that they have abstracted all of these issues is really what excites me about them the projects are things like terra audius on ethereum and then d-live which was a cosmos sdk based project but is now on bittorrent and the unique thing about all these projects i mean i'm not here to say they're perfect but they're applications that they're running the users do not have to worry about losing their keys i do not have to learn any of the crypto related lingo is i think what helps them to then truly bring blockchain to mainstream i mean some might dispute that that's not the way we want to go but i do see value in their approach honestly let's dive a bit deeper like looking into terra for example the transactions they're able to they're processing on the chai their payments one of the payments application on terra they are doing a whole lot of transactions and these are real live transactions by real users who probably have never heard of blockchains who just probably wanted to get discounts or wanted to just use a convenient app to pay for any of their products interacting with real commerce real sellers of products or hospitality just the fact that terra has been able to create this ecosystem with a blockchain in the backbone it excites me beyond anything i've seen so far i'm expecting a lot more exciting things to come out of these teams because they have already been able to attract tens of thousands to hundreds of thousands of users that a lot of the blockchain application will start to become interested in what they've built out and will likely try to build out other services to these users 
+
+Citizen Web3 
+you said the key to adoption is kind of making the usability to the end uses seamless right so he doesn't feel that he has to deal with all the technical stuff he just goes in does what the application is supposed to do and he doesn't know what's in the back of the engine right is that what you see 
+
+JK
+yes i think you've summarized it very well and as an example in the space that we live in in the crypto space privacy is key right we really treasure privacy and we try to make sure that we're on top of our our privacy best practices but let's take zoom for example zoom had a whole host of privacy related issues this past month but did that stop mainstream users did that stop schools from using zoom to do their classes if you look at the numbers it really didn't mainstream users need tools and applications that are easy to use that will help provide value to their lives i do believe at least for the first step we should try to build the applications and the use cases that will gain mainstream adoption will be ones that abstract away a lot of the crypto native complicated uh issues such as you know handling of private keys 
+
+Citizen Web3 
+i agree there is some things that i think a little bit different but i understand what you're saying in terms of that sometimes it's over complicating is definitely not the best way to have mass adoption 
+
+Anna
+i think that we have to simplify if we try to attract new users we have to simplify this as much as we can because it shows the core of these projects the main advantages of using that kind of technology in your process as a validator how you try to simplify that it's for users because i know that you provide some guides i saw it on medium so how you try to simplify the process for someone who tried to stick it with you
+
+JK
+we're still pretty uh crypto native meaning that because we don't want to take custody of anyone's funds we are still pretty crypto native meaning any users that want to stake with us will need to be able to manage their own wallets but as soon as that's figured out we try to make the entire process afterwards pretty straightforward by providing as much education instructions as possible we provide not only just written instructions but we also provide video related instructions eventually we will be providing much more easier tools for people to stake that will they take a bit more time for us to get there 
+
+Citizen Web3 
+i mean i think you've been doing a great job at it as well because obviously i can go on your website you have straight away a calculator it helps you to understand how much you can stake so i think that's a very good job you guys doing in it is there any other technology apart from blockchain obviously that excites you personally 
+
+JK
+personally no really not really
+
+Citizen Web3 
+it's a blockchain world 
+
+JK
+yeah i'm being just very honest there's a reason why i'm very much in this space everything about blockchains excite me to me that's the reason why i'm here if there's any other technology that i'm excited about like i'd be dabbling in that but so far it's been really blockchain blockchain for me 
+
+Citizen Web3 
+yeah i understand exactly what you say some people when i tell them that they're like so you've been to blockchain for what eight years i was like yeah it's like oh oh my god 
+
+Anna
+yeah maybe we don't ask something that is really important and you think that you have to say something that it's really core question we don't ask 
+
+JK
+yeah i think i just like to just say i just want to stress i know i already stressed ibc but i just want to stress that again just want to hammer that constantly just because if if cosmos does not have ibc live where the ecosystem really will not be able to grow we really need ibc i know the team has been working tirelessly and i really do hope the game of zones showcases that and so we'll be participating in game of zones but i just want to make sure that we stress where our main focus on the cosmos ecosystem lies we need to see that ibc vision crystallizing we need to see that formulating we'll try our best to make that happen but we realize that it also will require everyone in the ecosystem to uh help out to make sure that ibc uh becomes what it's uh meant to be 
+
+Citizen Web3 
+that sounds like a good message to everyone to so for people can understand the value of ibc and how it's important to everybody and not to just developers or users to the whole ecosystem like you say okay
+
+JK
+ha ha ha
+
+Citizen Web3 
+cool okay jk it's been really fun talking to you uh and it's great having you on thanks for coming and thanks for sharing everything 
+
+Anna
+thank you 
+
+JK
+thank you guys uh for putting together this awesome podcast it's it was a lot of fun talking with you guys about the cosmos ecosystem and also about some controversial related topics 
+
+Anna
+ha ha ha
+
+Citizen Web3 
+ha ha ha
+
+JK
+you guys should definitely keep this up and you know i'd be happy to join again at some point in the future when we have some more interesting things to talk about 
+
+Anna
+yeah thank you definitely
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

@@ -1,0 +1,433 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/dash
+
+Episode name:
+Data Structures, Pizza and Logic with Tenderdash 
+
+Citizen Web3: 
+Good space time, y'all! Welcome to the third season of Citizen Cosmos. We kick off the season with Samuel Westrich and Ivan Shumkov from Tendercash, aka Dash Evolution. Together, we discuss traveling, cultural challenges, threshold cryptography, SDKs, miracle trees, and grandmothers. The engineers explain the connection and the differences between Dash and Cosmos, and the current options available for any Devs out there looking to brake some systems.
+
+Samuel Westrich: 
+we used to send two or three Bitcoin when we wanted to pay each other at lunch. 
+
+Ivan Shumkov: 
+So you can practically verify on the light client that the old date actually that's what exactly stored in the state. 
+
+Citizen Web3: 
+One of the magicus superpowers of the developer gets when he starts to work with Tendermint and Cosmos is Cosmos SDK. 
+
+Samuel Westrich: 
+Here's even better, you buy a sex toy for your girlfriend, right? 
+
+Citizen Web3: 
+There we go, that's my kind of story. 
+
+Samuel Westrich: 
+To have IBC, the two TenderMid and TenderDash have to understand each other. 
+
+Ivan Shumkov: 
+The whole idea of decentralization really fits to my anarchist mind. 
+
+Citizen Web3: 
+Before we rock it off, into our next episode, here are some news from our sponsor, Cyber. The Cyber Congress DAWA is working on an upgrade for the Bostrom Network to a stable version of Cosmwosm. 
+
+After the upgrade, the DAWA is planning to activate the drop and wants to give a huge shout out to all of the teradives out there looking to a new home to Biddle. 
+
+Hey, everybody, welcome to Citizen Cosmos. New episode and we have two guests today. 
+
+The city of Dash Core Group and one of the principal developers of Dash Core Group, it's Ivan and Samuel. Guys, this was a very brief intro from my side, but I will ask you to introduce yourselves. First of all, welcome to the show. This is going to be an unusual episode, I think, I hope. Yeah, how are you doing? 
+
+Samuel Westrich: 
+Hopefully, 
+
+Citizen Web3: 
+Yeah, how are you doing? 
+
+Samuel Westrich: 
+How are you doing, Ivan? 
+
+Ivan Shumkov:
+Awesome. Thanks. 
+
+Samuel Westrich: 
+So I'm Samuel Westrich. I'm the CTO at Dash Core Group. I've been involved in cryptocurrency since what, 2012? I think I made one of the first transactions in China. 
+
+It was a long, long time ago in a very different time. Bitcoin was at $2. We used to send two or three Bitcoin when we wanted to pay each other at lunch. 
+
+So one person would pay and then everybody else would send them like two, three Bitcoin. It was a different time, right? And then I got involved with Dash. At the time, it was actually called Darkcoin in 2015. I wrote the iOS wallet, then I became the head of the mobile team, and then last year I became CTO. We've been working for quite some time on Dash platform that Ivan will probably introduce a little bit later. 
+
+And inside of Dash platform, for our consensus engine, we took Tendermint, forked it, and made some modifications, proper to Dash. And this is probably what your listeners will be the most interested in. 
+
+Citizen Web3: 
+Wow, they're interested in you, first of all, guys. Come on, but yeah, that's as well. Ivan, what about you? 
+
+Ivan Shumkov: 
+Excellent. So I am about 18 years in software development. Mostly I was involved in the high load and distributed system development. Since 2018, I joined Dash and this nice guy who we're talking together today. And my task was to develop the platform and drive component of it after some time and was involved in the protocol design and architecture as well. And yeah, it was a pretty cool journey during these four years. 
+
+Citizen Web3: 
+Samuel, you said you did one of the first transactions in China. Come on, man, let's hear the story. This is like, wow, OG stories, man. Come on. 
+
+Samuel Westrich: 
+Yeah, I could do tons, actually. At the time, my boss made a local Bitcoin announcement and he was a little bit nervous. So I was the Patsy who went to actually sell the Bitcoins to people. This was a long, long, long time ago. And it wasn't that much. It was like sometimes like $50 worth. But that was like 25 Bitcoins back then. And it was very interesting. I remember some people, I don't know what happened to them, but they had thousands of Bitcoins just because they, oh, let me invest $1,000, right? 
+
+Or $2,000. It was very interesting. And there was new people. If you knew about Bitcoin, it was one out of, I don't know, 10,000 people back then knew about Bitcoin. It was very small in the development community. Only tech people really knew about it. 
+
+Maybe one or two finance people. It was a very different time. I've lived through the journey. 
+
+I would say that right now we could say that we're kind of in a bear market. And I've lived through so many. I remember the first one. 
+
+Now, this one, I always remember because the first one that I lived through, we went from like $2 to $264. And then many people don't know this. But so I'm going to tell something that back then the only exchange really was Mt. Gox. 
+
+Mt. Gox was running, I believe, on PHP, and it was extremely slow. It did not handle volume that well. And it was also very prone to DDoS attacks. 
+
+So what happened was, all of a sudden, it started crashing. But you could actually time where the bottom was based off of the lack of the amount of transactions needed to be processed. So I made a little bit of a calculation based off of lag, based off of amount of transactions, because most transactions were just market sell transactions. And it lasted about an hour, I think, to drop from $266, I think, on Mt. Gox to, I think, it was $108 or $111. And sadly, I had miscalculated and I put like a massive buy order at $207. $2 low. It doesn't matter. 
+
+It doesn't matter. And then it went from $107 to $208. And then it went from $208 down and then it stabilized and went to $50 and $100. And it was like crazy volatility. Nobody really knew what was going on. A lot of the early people who had bought it for like $1 or $2 or a few cents were selling off. And yeah, that was an interesting OG story. 
+
+Citizen Web3: 
+Man, this is before I ask Ivan how you got into crypto. I just want to say this is the difference between developers and non-developers. You see, you measured the volatility with the lag in the buy and sell orders. 
+
+I was measuring with Silk Road. That's not the story for the public. Oh, shit, we are in public, right? Oh, well, we did. I remember we were mining in 2011. We had this mining operation and it was small, but we were actually in Tel Aviv. And I remember we were selling Bitcoins for about $260 to $280. And we were really happy that somebody was buying that stuff. And we were like, oh my God, who the hell is buying that crap for $280? We can buy beers now with it, right? Look at that. Ivan, how did you get into crypto, man? 
+
+Ivan Shumkov: 
+Before 2018, I hold some assets and I didn't do any development. And I did different type of stuff. Then you have the cluster of services and you have clients and an absolutely different paradigm and model. And I hope it was like a friend of mine just say, hey, do you want to work in Dash? I say, well, sure, why not? And I had maybe like two hours interview with seven other guys. Okay, man, see you tomorrow. This is your Slack account. 
+
+Citizen Web3: 
+Sorry to interrupt you, but you're not like terrified to start working technically for one of the biggest back then and still is one of the biggest projects. I mean, somebody come up to you and says, let's work for Apple. You're like, oh, for Apple. I mean, even if I'm a good developer, I'd be like, wow, I'm scared to work for Apple. But you know what I mean? Were you not scared? 
+
+Ivan Shumkov: 
+No, no, it's all at that point in time. I was looking for something new and even in the blockchain technology was like pretty interesting for me at this point. So it was kind of much, I would say. 
+
+Samuel Westrich: 
+I'd like to add to that. One thing about Ivan is that he's a very confident person. So he just like charges ahead in new tasks. 
+
+Citizen Web3: 
+So that's a great, I think, quality to have right for a developer because usually developers, in my experience, at least they're a bit like slow to build on the uptake. 
+
+But when the artists were super concentrated and like determined to do, so I think it's rare to have those both qualities. It's really cool that you do. I do have a question for some while we're still on the chit chat part like quantum explorer. Can you tell me what I'm sorry? I don't know what this is all about, but the quantum explorer nickname, man, come on, I need to hear the story. 
+
+Samuel Westrich: 
+Yeah, it's very simple though. In the early days, we did not know if China was going to kick people out because they were in crypto. So I had to stay anonymous. So all the way up to what was it like around 2017, 2018, I was anonymous. 
+
+I made very careful, I did everything without revealing my identity. And that's why I chose a nickname. I chose quantum explorer. Why did I chose that? I'm very much into physics. So that's about it. 
+
+Citizen Web3: 
+It's a good story. 
+
+Ivan Shumkov: 
+One more OG story. 
+
+Citizen Web3: Guys, another question I've noticed like while looking at your profiles, you both like travelers a lot. And like I saw for both of you, I'm not going to say who is who, but I saw Vietnam, Israel, China, US, all those countries, Russia. I hate that word digital nomad, but is that what you would label yourself? Or is that just something that part of your lifestyle? Or how does it work? 
+
+Samuel Westrich: 
+Well, I'll start. Okay. For me, I wouldn't really label myself so much a digital nomad, more of a ex pat, just because after my, I did an internship right after university for University of Southern California in the United States. And before that, I had done my studies in France and I was looking for something new. 
+
+So that's why I moved to China. I wanted just new experiences in life. And then I stayed there for quite some time. 
+
+And after that was looking for something new. So I moved to Thailand. I do travel around a lot. I use Thailand more as a base. And then I'm, you know, moving around quite a lot. 
+
+Citizen Web3: 
+Before I moved to Ivan, though, I do want to ask a question about like, if you did mention Thailand out of curiosity, considering now like the Web3 lifestyle allows people to move more and more, how would you recommend Thailand to crypto people to go and start their lives, businesses, whatever? 
+
+Samuel Westrich: 
+Stay out. It's only for me. 
+
+Citizen Web3: 
+Beautiful. I love it.  I love it. If I'm, what about you? 
+
+Ivan Shumkov:
+Unfortunately, so many, my friends are coming to mostly Russians. 
+
+Citizen Web3: 
+Those Russians. 
+
+Ivan Shumkov:
+Yeah. So my journey began in 2015. Then I moved to work to Vietnam. I worked like 14 years, I think or something like this in St. Petersburg in the company where we found the guy. And I honestly got tired and what Sam said, like looking for something new, that's exactly the case. 
+
+And the tropical country and new culture and their interesting technology challenges. That's what I was looking for. And that's probably was the turning point. 
+
+And I so enjoyed that. So after that's how you call it like digital nomads. So I travel it like crazy, changing locations every, I don't know, like every month or two months. And I wouldn't say I'm doing the same now and just getting older and tired of this. And now it's more like, I would say just finding the more appropriate, more comfortable place at this point in time. 
+
+Citizen Web3: 
+I can totally relate guys. I totally understand what you both say. That's why I did ask because that's what I've been doing for about 20 years. So moving on though to a little bit more professional. So help me and everybody who's listening out. Dash, dash evolution, dash core, tender cash, let's make some like sense and order for myself and for people who are a little bit, do hear about you. Do know that Dash is a huge project out there, but help us out a little bit. 
+
+Samuel Westrich: 
+Sure. I'll start a little bit with the overview and then Ivan, you can go into more detail about Dash platform. Does that sound good? 
+
+Ivan Shumkov:
+Great. 
+
+Samuel Westrich: 
+Okay. So Dash has a payment chain. And this has been the main chain on mainnet. And we've been on mainnet 2014, 2015. I forget exactly the actual Genesis block when I should really should know that. 
+
+I'd say 2015. So we've had a payment chain. It's a fork of Bitcoin. 
+
+It allows for some extra features. We were 50% invulnerable based off of a technology that we call chain locks. We have instance and payments, which are also using something called instance unlocks. And these two technologies are based off our master node network, creating threshold signatures, saying that these transactions or blocks can no longer be either double signed or replaced by another block in the chain. So those technologies exist. Your viewers are probably more interested in Dash platform, which is a secondary chain that we've been developing since 2000. 
+
+Well, actually, that's a tough question for a while. But let's say that actual development most likely started in 2018 around the time that Ivan joined. Before that, there were many ideas on how we were going to build Dash evolution, but most of those have been scrapped. So Dash platform, what is it? It's a chain based off of Tendermint consensus that we've modified into Tenderdash. 
+
+What is this modification? Well, basically, Tendermint uses nodes that have different powers on the system. In Dash, all of our master nodes are collateralized with 1000 Dash. And the fact that they're all at equal power allows us to do something very cool, which is threshold cryptography. Actually, in the Tendermint white paper, some people might remember reading about SBFT, which is scalable Byzantine fault tolerance. And this uses, well, threshold cryptography, and it allows for having just one signature to prove the state, either the state or a block or anything. And this can lead to a lot of, I would say, new use cases, new abilities. 
+
+Well, you can maybe do with Tendermint, but not as efficiently. So that's kind of why we built it. Now, I want to start by saying one thing. No, Tendermint is an amazing project. And I really, really like it. And I really appreciate the hard work that developers have done in the Tendermint project. And when I talk about the cool stuff we're doing in Tender Dash, it's just a different approach. 
+
+It's not better. It's just different because we don't have the ability for nodes to have different powers. But we do have the ability to recover threshold signatures that can be very useful for some projects. So right now, also, Tender Dash has not really been released as a standalone module, just like you can use Tendermint. And later in this year, we are going to package it properly, make a website for it, probably even rename it. 
+
+We're not sure yet. And explain to people that might be interested why they would maybe want to use Tender Dash instead of Tendermint, what sometimes the benefits would be. I think that most projects out there would probably prefer using Tendermint still, like 90%. But you could see some projects out in the space that would really, based off of their use cases, probably prefer using Tender Dash. So why don't we go in very quickly, Ivan, and you can explain what Dash platform is. 
+
+Ivan Shumkov: 
+Sure. I think we need to explain first like what evolution is and how the history of these products end up. So basically, the evolution for Dash was the release epoch or era, which contains several releases and several products. And the main goal is to provide the social wallet, which even like your grandma can send you money using your name instead of cryptographic addresses. And that was the main goal why all these things started. 
+
+And guys came up with the idea that actually we don't need to do specific modifications on Chain just only for this wallet, but we could make it as a platform so anyone can build decentralized applications and store additional metadata on Chain. That's, I would say, how it began. And right now, I think the concept is still the same even during these years. So Dash platform is the decentralized stack for development of the Web3 applications. So you'll have the storage to store your information, your application state on the Chain in an efficient way and be able to verify cryptographically on the light clients efficiently using like even mobile clients. And the goal of the platform, basically the same as in Dash, is to provide the similar experience what web developers already having. So if you use Google Firebase and this like convenient and simple SDK, you can do the same as Dash platform and operate as a common database. What you've got used to MySQL or MongoDB, of course, it has some limitations and slightly different, but Idea is still the same. So you don't need to learn solidity or other smart contract languages just to store like, I don't know, the posts and comments in your application. You can just use the data contracts is the concept which differentiate the platform from other solutions what we have right now in the industry when developer just using JSON define the structure of the applications. Basically like you define the structure of database in MySQL and then can do like perform the queries using secondary indices like in normal databases, unique indices and stuff like that. And of course on top of it, they will be able to use the some additional computation on Chain like using smart contracts and how we call it data triggers when you're storing the documents using data contract, you can attach additional business logic to validate. 
+
+Yeah, it's like my son having fun, it seems. So yeah, it's not like it's kind of simple, but if you want to go deep and do complex things and complex logic, you can do it as well. And also the platform except data contract will provide other services like decentralized domain and service because DPS and identities. The goal is to provide everything what developer needs like CDN, authentication and stuff like that, tokens. 
+
+Samuel Westrich: 
+It's even targeted not only for developers in the long run, maybe developers will build on top of platform to create easy services for end users. For example, right now somebody who wants to use blockchain that maybe they just own a restaurant, but they have no idea how to do it. In Dash platform, it becomes a lot easier to let's say there's a contract you know for food delivery or this is an example that I like. And it's based off of the way Dash platform works, it makes it very, very easy for people to use. In many blockchains out there, to request data from the state, you have to use centralized services, correct? And in Dash platform, every one of our nodes responds in linear time to any request based off of, and that's actually probably our biggest technological achievement. 
+
+I probably should get into this just a little bit. Yeah, we used a something called hierarchical authenticated data structures. And this is basically Merkle trees on top of Merkle trees. And each of the Merkle trees is actually a rotating Merkle-ized AVL tree. If anybody in tech is listening and gets that, congratulations. 
+
+Citizen Web3: 
+I don't straight away. So wait, wait, wait, wait, wait, wait, wait, wait, what's rotating Merkle tree? Wait a minute. I'm good with Merkle trees. Let's get into that. Let's get in deeper. We're good. We can do that then. Come on. 
+
+Samuel Westrich: 
+Back when we were trying to figure out how we store state, we're looking at various projects. And Tendermint, I think, uses IVL. IVL trees, right? 
+
+Ivan Shumkov: 
+AVL plus, yeah. 
+
+Samuel Westrich: 
+Oh, AVL plus, yeah. They're Merkle-ized rotating trees, right? 
+
+Ivan Shumkov: 
+Yeah, yeah, yeah, yeah. Self-balancing. 
+
+Samuel Westrich: 
+Yeah, self-balancing. When I say rotating, it basically just means self-balancing. There was another project out there called Merk, which is different from the solution that Tendermint uses. I believe because nodes can also be deleted. Is that correct, Evan? 
+
+Ivan Shumkov: 
+Yeah. And also, they try to solve the IO problems with the Tendermint guys faced. Mostly, it's the ZK guys faced, yeah. 
+
+Samuel Westrich: 
+Yeah, exactly. And that's something to do with the fact that you would need to rewrite things on disk, I believe. That memory is from 2019. So I'm a little bit like there were some problems with IVL trees, and that's why we didn't use it. So we were kind of going in the direction of using Merk. But in our system, what we really cared about was secondary indexes. And none of these trees actually really supported secondary indexes. So in order to provide that feature, well, we did a lot of time for research. And after quite some time, we found this paper on a hierarchical authenticated data structures by a very smart guy. I think he currently works at Google. 
+
+Citizen Web3: 
+He must be smart. If he works at Google, he must be smart. 
+
+Samuel Westrich: 
+No, no. I really feel bad because I don't remember his name right now. 
+
+Citizen Web3: 
+But he works at Google, so that's good. 
+
+Samuel Westrich: 
+We had an exchange a while back, and I'd let him know that his ideas were great. We didn't use everything in his paper. We kind of are doing things a different way. 
+
+But still, there's a strong academic base for the reason why we're doing things in the way we're doing. It allows for much smaller proof size and a lot of other important things. So basically, what does this mean? 
+
+It means that you can prove anything in the state with a series of Merkle-ized trees, and then the state signature for the tree. So I think it's very cool. So you can ask a platform, things like in the restaurant example that I was giving earlier, you could ask things like, oh, I'm hungry for pizza. Give me pizza restaurants in Bangkok. I mean, you can query platform for that request, and it will give you back all the pizza restaurants in Bangkok. What's cool about this is it not only just gives them back to you, it proves to you that it's giving you back all the pizza restaurants in Bangkok, that it can't do any emissions. Emissions is a very big problem in UTXO-based blockchains, right? So that's kind of what we've been building. 
+
+Ivan Shumkov: 
+The most important that is support ranges. That's the most probably complex part, then you can say, give me all restaurants from Bangkok, which works since 5 to 7 p.m. for example. And you will get proof for this as well, like efficient proof. It's our actual data, but it's all the connection nodes. So you can graphically verify on the light client that the old data actually, that's what exactly stored in the state. And I think we should also mention that since we're using the threshold signatures, we're using the Long Living Masternode Quarums, it's a feature of the payment blockchain, which is used by the chain logs and instant sandwich, the sam already mentioned. So on the light client, since we already can verify the signatures made by Quorum, we don't need to download all headers, get the headers from platform chain to verify. We're just getting back data, the miracle proofs, the miracle route, and the signature of the Quorum of this miracle route. 
+
+So that's it. 
+
+Citizen Web3: 
+Which makes it much lighter as soon, right? 
+
+Ivan Shumkov: 
+And it's much efficient. So basically on the client side, we're getting the proofs and everything what you need to get this data in one request. And you don't need the additional synchronization is the chain. So that's the difference with the original Tendermint light client. 
+
+Citizen Web3: 
+I do have a bunch of questions. So there might be a little bit random because I'm trying to put them all together in the space of an hour. So sorry if they go a little bit all over, but I'll try to stick to more technical questions. So first question, which is like I said, going to be a bit silly, apologies for this in advance, in let's say the greater Cosmos ecosystem, which by the way, the podcast isn't just about that. We do talk about the interchain in general. So we go out as well. We go to Ethereum projects as well. In general, we do like to find out, of course, that you guys work with Tendermint. 
+
+Anyway, so silly question. One of the magic superpowers of the developer gets when he starts to work with Tendermint and Cosmos is Cosmos SDK, which allows all the developers to have all those modules. You can launch a chain basically with your own IMMs already, with anything basically, right? Do you have anything similar like it in Tender Dash or is there something like that that allows developers to easily, for example, there's reason I'm asking you, you'll probably know about Terra, right? 
+
+And well, hard not to know about Terra, even if you're involved in it, right? And a lot of those projects are now looking for new houses. Some are moving to the existing chains already on Cosmos, some are building their own chains, but some might be interesting after hearing this podcast, if they do, maybe go and build on top of what you guys are doing. So is there something like that for developers that allows them to quickly build blocks, modules or use Cosmos SDK in that matter? 
+
+Samuel Westrich: 
+Yeah, sure. So we have three SDKs actually available. We have one in JavaScript, we have one for iOS, and we have one for Android and Java. I guess the Android can do a little bit more. They interact both with our platform chain and with our payment chain. Now, I would say this, though, we do not currently for release have support for Smart Contracts. So what we're focused on for our release is two things. And then the release will be, I don't want to actually say it. 
+
+Citizen Web3: 
+But I'll say this. 
+
+Samuel Westrich: 
+It's going to be this year. It's going to be this year. So the SDKs basically allow you to store your data contract and allow you to register data contract, allow you to interact with the system, verify any information that you put in the system in platform. And for many projects, that's really good enough. You don't really need Smart Contracts. I would say for 80% of applications, you probably do need Smart Contracts. 
+
+But there's a lot of use cases when you just do not actually need them. Ivan, a while back, basically said like how we got in to building what we're building, right, to building platform. And it all started with a use case where we wanted to create a Venmo type experience. 
+
+I don't know if your listeners understand Venmo. Basically, we wanted a payment experience that did not rely on addresses that relied on identities, but with the caveat that when you said between identities, only you and the identity that you were sending to or the other person that you were sending to actually knew about the transaction. So that was our main use case. And we built Dash Pay, which is the first app that we're releasing with Platform. And we built Platform for Dash Pay originally. And that's why we didn't focus on Smart Contracts and instead focus on the queryability of data. So in the blockchain space, I would say many, many projects have focused on Smart Contracts. We kind of went a little bit on the other way. 
+
+Citizen Web3: 
+The Cosmos Hub doesn't have smart contracts in building to the Hub. 
+
+Samuel Westrich: 
+Yeah, yeah, yeah, yeah, yeah, yeah. You're right. I was just saying that there are many, many projects that have Smart Contracts. I don't think it's all smart for every project to all try to do the same thing, right? We need to, as larger crypto community, all focus on area of expertise and then build together and use each other's projects in open source to hopefully advance mankind as best we can. This is getting a little philosophical. 
+
+Citizen Web3: 
+Oh, good, good. I love it. I don't know if you guys ever did sort of to get in there, ever, probably not because it's a bit far from the podcast, from what you do. But a lot of it, we do talk to CEOs, CDOs mostly, and most of the conversations always go into values and a lot of those things, like how people did get into it, why they're building it. So it's great that you're going that way. I love hearing the motivation behind builders' ideas. This is not just why your project exists, but why did you do it? I mean, you woke up one day and thought, hell, I'm going to go building Venom on blockchain, right? 
+
+Doesn't happen like that, right? There's something that usually motivates, like you said, solving a solution problem, of existing problem. Sorry to cut in there, Ivan, do you want to add or sum to you want to still finish that the thought? 
+
+Samuel Westrich: 
+Well, yeah, I did want to just say, because some people might be interested in Dash Pay and what it is. I'll quickly just say what's different in Dash Pay compared to many other solutions that it seems like you can pay between people. Most of those are register and address on the chain. 
+
+Ivan Shumkov: 
+Like E and S, right? 
+
+Samuel Westrich: 
+Yeah. So when you send money into your grandmother or you send money, it's all traceable. 
+
+Citizen Web3: 
+That grandmother. Sorry. 
+
+Ivan Shumkov: 
+That's the old persona of our product. 
+
+Citizen Web3: 
+Sorry, Sam.
+
+Samuel Westrich: 
+Here's even better. You buy sex toy for your girlfriend, right? 
+
+Citizen Web3: 
+There we go. That's my kind of story. I love that. I hope my girlfriend is not listening to this podcast. I really hope she's not. Hey, let's go. 
+
+Samuel Westrich: 
+So yeah, like you don't want everybody to know that you've made that purchase, right? So yes, you can do it just with addresses like UTXO addresses. The point of Dash Pay was that there's a separation between your identity that is used to create connections between you and other identities. You create this kind of virtual tunnel that allows for payments between the two identities based off of address spaces. 
+
+Citizen Web3: 
+Just like a VPN kind of thing. 
+
+Samuel Westrich: 
+Well, no, I mean, it's more an abstract entity. Like there's not an actual live wire connection. Instead, you give them information to send payments to you and they give you information to send payments to them. And only when a payment happens, only you know that it's to you. Nobody else can know this. 
+
+And only they know that, you know, they sent you a payment. So if you were to lose your phone or anything or lose anything, everything is recoverable through the mnemonic. There's a derivation from your seed that basically can restore all the data that you've ever had with the blockchain. And it's not actually stored that much on the blockchain. It's more stored in information derived from your mnemonic. It's a very cool system. And that's what I was working on mostly before I became CTO. 
+
+Citizen Web3: 
+Is that the reason why dashes are classified sometimes as an anonymous system from what you explained or not? 
+
+Samuel Westrich: 
+No, no. So back in 2015, I talked about that we have masternodes. The first use case that we ever made for the masternodes was CoinJoin. So ability to mix your coins through the masternode network. We still have that feature. And that's why we're sometimes classified as what is it? Ananomity enhance. Yes. 
+
+Citizen Web3: 
+Guys, you can use dash to pay on Pornhub. That's the main thing I know, right? That is the main thing I know. That's it. I don't care about anything else. It works. I'm joking. Ivan, sorry, you were going to add there. 
+
+Ivan Shumkov: 
+Yeah, the great achievement of that, so just summarizing that there is no connection between the public data and your payments. That's the main goal. And Sam and Guy, you know, good job on this. I just want to add just really briefly for people who is using Cosmos SDK and be like interesting on trying TenderDash. You have the same use cases. We are not using Cosmos SDK for building the platform chain for some sales, some legacy reasons. But basically, Tendermint is a consensus library. And TenderDash, I think like 90% or more, keep the same API or even almost the external API. So I think they will be able to use Cosmos SDK with TenderDash as well. The same way. 
+
+Citizen Web3: 
+Sam is like, wait a minute, wait a minute. Guys, this is not a problem in the sound. This is the developers thinking. But we cannot see the picture. 
+
+Samuel Westrich: 
+Well, here's a thing. We're releasing this year to release our main platform chain, right? And then right after that, we're going to be focusing on the various projects that we've built to do that, including TenderDash. If you can use Cosmos SDK with TenderDash right now, I don't believe so. Mostly because there are multiple modifications and it would take not long, but it would take a few days to support them in Cosmos SDK. 
+
+Citizen Web3: 
+I just want to say, guys, if any developers are listening to this and we have like a small disagreement here, maybe somebody can prove that they have used it and then, you know, like do a PR somewhere and then we'll see a release case. 
+
+Hey, guys, one question in continuing to what Sam, what you said before, you were talking about application-specific blockchains, what we kind of in Cosmos called it that you were mentioning blockchains that have specific use cases. So I did look at your roadmap, obviously, but I'm going to ask the question. When IBC, sir? 
+
+Samuel Westrich: 
+Yeah, yeah. So to do IBC, we have to actually do something else first. So I would say the biggest, biggest change between Tendermint and TenderDash is the reason why IBC doesn't work natively. And that's because, well, one uses a threshold signature mechanism using BLS signatures and the other uses EDDSA signatures. 
+
+There are also variants that you can use. The main one is EDDSA signatures, but it's not a threshold system. Actually, I do believe that they are working on that, but it's not threshold signatures. I think it's more aggregatable signatures. 
+
+Ivan Shumkov: 
+Aggregation, yeah. 
+
+Samuel Westrich: 
+Yeah. Now, the problem really is that to have IBC, the two Tendermint and TenderDash have to understand each other. Now, TenderDash can understand Tendermint, but Tendermint can't understand TenderDash yet. So we have to basically do a pull request to Tendermint to allow for IBC for TenderDash, right? And that hasn't been done yet. And we will get around to it. 
+
+Citizen Web3: 
+I understand that the answer to the question I'm going to ask might not be technically correct as it didn't happen. Will it be like through a directory layer or will it have to be some kind of? 
+
+Samuel Westrich:
+No, no, directly. I mean, the chains will communicate just as they all IBC does, like between Tendermint. And the only difference is, well, the way signature verification happens just is not supported in Tendermint for TenderDash, right? One also negative of TenderDash that I might come clean on is that it was built. 
+
+We have deadlines. We ripped out some stuff from Tendermint and replaced it with the stuff we needed, right? If we had done things, I would say perfectly, we would not have ripped out everything we would have tried to make sure that all use cases are covered. And because we ripped out stuff, there is some need maybe to repair some of the stuff we ripped out a little bit more so we can more easily understand Tendermint. Basically, it's actually for IBC. 
+
+Citizen Web3: 
+I have another question, masternodes. And obviously, POS validators all that world and I really like that. I mean, we are a validator. We have infrastructure to write different networks. And we've seen, I think, in the last like two, three years, more and more, I like to call it ecosystem developers, you know, people who are involved in building those blockchains, not just developing, but also, which is of course important, which is the most important thing. 
+
+But we've seen more and more people join. And masternodes is still the same kind of thing. So if any validators out there who are interested in becoming a masternode or validating the network that is going to be launched, or if they already can do it in a net test net, is there anything you can say or add here, what they should go look, which documentation, what, who, why? 
+
+Samuel Westrich: 
+Sure, sure. I mean, we have many, many guides on how to become a masternode in Dash. We have right now on mainnet the payment chain, right? And platform is going to be released coupled with version 19 of our core payment chain. At that point, we're going to provide two things, an installer that will install both platform and core services on a VPS node, or you can also do it manually if you prefer. 
+
+It depends. If people want to become a masternode while waiting for platform to start, but yeah, there are many, many guides on how to do that currently. Now, if they are more interested in joining testnet, just to see how the validation works and to test out platform, to test out Tenderdash, to gather logs, just to see about, to check the efficiency of the system. Well, that's something else. And, you know, they can do that currently. We have an installer called Dashmate. And, you know, there are guides for installing testnet nodes as well. 
+
+Ivan Shumkov: 
+Regarding the nodes, I think the same covered everything. I think we just need to provide some links to the people for documentation. And they have a pretty active community on Discord. They actually have two communities, right? 
+
+The one is more like investors. And second is development community. It goes Dash and Cubator. It's another DAO based in the Dash. And they are doing a lot of work around the ecosystem of the Dash platform, helping us to test out the things. And they will be glad to help new people to join testing. And also developers, they have a pretty cool bouncy program. So, and there are many things to do. So, we also welcoming developers. We're going to try a platform and gain some money. 
+
+Citizen Web3: 
+This is really cool because there is a huge developer community around Cosmos. I believe I'm not going to quote this on me. Please don't, but I believe it is the second currently biggest to Ethereum. I'm not sure, like 100%. I'm not going to quote it, but people do say that. So, I believe that there are a lot of developers looking for new places to go. And, you know, if there is a bounty program, it does help a lot. And, of course, maybe it's not the biggest, doesn't matter what it is by size. But if there is new places to go, I think it's really cool to see more and more developers joining from different places and finally developing this Internet of Blockchain, in my opinion, rather than stand alone silas. 
+
+Samuel Westrich: 
+I would add one thing very quickly. Right now, we are going to release a version which is going to be kind of our release candidate for mainnet release. Right? At that point, we are doing like a big bounty program to try to break our system. 
+
+Citizen Web3: 
+Let's break it. 
+
+Samuel Westrich: 
+Let's break it. So, if there are any devs out there that are listening right now, I would imagine, I don't know, it's times are not so easy to figure out, right? But let's say two, three months from now, sometime around then, when this starts, I call on all of you, come and try to smash. 
+
+Citizen Web3: 
+I have a terrible joke to make, guys. If Doc Wong is listening to this, the founder of Terra, you mean you got to break it. So, he's good at breaking stuff. No, I'm sorry, Doc Wong, but... 
+
+Ivan Shumkov: 
+Seems I need to work harder now. 
+
+Samuel Westrich: 
+I think that this is a complete side clause though, but I think it was pretty obvious that algorithmic stablecoins don't work. 
+
+Citizen Web3: 
+Of course, of course. But you know how it is in crypto, right? You wake up one day and you're like, I might as well work try it out. You know, it's crypto, right? And someone is going to write down, no, guys, no, not algorithmic stablecoins. I agree with you, man. Seriously, I do understand. I understand.
+
+Samuel Westrich:  
+One regret that I have from my really early days is I read the Ethereum white paper and I said, ah, this will never work. And I'd never invested. 
+
+Ivan Shumkov: 
+I have a chance to say a word to the Cosmos developer community. It's one of the best wishes. That's why I'm so looking forward to have IBC and provide the light clients for tender dash as well for the other networks is to provide this database, data contract approach in concept to test for the people. And since IBC allow us to do some cross chain contract calls, I see the pretty interesting combination when you can use like smart contracts on one chain to do some like computation in consensus and store the state and read the state directly in the application without calling smart contract using IBC and dash platform. So I think it will be very interesting to combine the available technologies for providing better stack for developers. So that's my dream. 
+
+Citizen Web3: 
+And I think there is a lot of like, I don't know if you guys played with Cosomwasm, but there is a lot of other as well, like languages now being there's a gory Cosomwasm wasn't there is a forget the names, but there are several people who and Cosomwasm is working and then it's interesting to see all those combinations. I would really love to see that guys, I do have one like final question, which is going to be non technical. But I mean, Ivan, you said you've been developing software for about 175 years and some of you have been like, you know, an OG since the very, very beginning. So the question to both of you, and this is a kind of traditional question, what on earth keep you so motivated in your daily lives to wake up every day and to say, hell, I'm going to go build whatever it is, whether it's, you know, Tenderdash or whether it's fixed IBC, like do I PR for make IBC work or whatever it is, what keeps you in your daily life guys motivated to do your work and to keep on building Web3, I guess. 
+
+Samuel Westrich: 
+I can answer. In my life, I did have a personal event that lasted for like two years where I stopped working and I was very, very sick. And after that, you think kind of about what you bring to the world. I would say before that, all I cared about was having fun, living day to day, having a good time, you know, work was more to get money, I would say, to continue having fun. But after that, you really start to think about, OK, well, when I am gone, how did my life matter at all? And that's why I'm doing what I'm doing right now, because I think it will matter what I'm currently working on. 
+
+Citizen Web3: 
+That's an awesome answer. I mean, I think it's fantastic. This is what everybody should be saying, right? Like that you have a reason to do it. 
+
+Samuel Westrich: 
+You know, and there's doubt. I think it's healthy to have doubt. You can't always be sure that what you're working on will actually matter. But when I think about other things that I'd like to work on, well, it's this. The other stuff that I'd like to do is all not in my field. So maybe go back into school, learn biology, you know, try to cure some diseases, stuff like that. And that would take 10 years of studies. So maybe I could contribute more to society with the current knowledge that I've had been gaining for the last 20 years. 
+
+Citizen Web3: 
+Thank you for that. It's a really cool answer, man. I think that's what we all hear for now. 
+
+Samuel Westrich: 
+Yeah, Ivan. 
+
+Citizen Web3: 
+This is a build up, Ivan. You have to do good. 
+
+Ivan Shumkov: 
+Yeah, honestly, it looks like I'm more selfish. Comparing with Sam and actually that's how I'm having fun. And for me, there is no difference in like personal life or like everything is mixed. And my coworkers are my friends, we're like hanging out together and constantly meeting, causing for me, it's like meditation and the way how I come down, you know, and just reason to throw out all the foods from my head. I would say the working on the product, what I truly believe, that's the main thing. And especially if you invest so many time in this project, you really want to see it alive and that products never ends, right? 
+
+It's depressed. And right now I just thinking what I would do something else and I cannot find anything like tech wise or culture wise or even philosophy wise. I mean, because the whole idea of decentralization really fits to my anarchist mind. You know So it's just perfect match and just enjoying like every day of working. And I wouldn't say it's working. It's just every day of living. 
+
+Citizen Web3: 
+I think it's a fantastic combination that you have there, guys, like between what Sam said in between what you say in Ivan, it sounds like it's a really cool match. Like it completes each other. 
+
+Guys, it's been a huge pleasure having you on. Thank you for clarifying the differences really, because a lot of the people when they hear about like Tenderdash, they get confused and they're like, oh, what is that? But it's been around for some time now. And thank you for finally like for us to clarify in those things and to see the differences and it's great to see that it's making a lot of progress. So thank you so much for coming on, guys. 
+
+Samuel Westrich: 
+It's been pleasure. 
+
+Ivan Shumkov: 
+Yeah. Thank you. 
+
+Citizen Web3: 
+Thanks. 

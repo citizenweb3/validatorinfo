@@ -1,0 +1,565 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/stakin
+
+Episode name:
+Proof of Stake, Green Flags and Living in a Revoltion with Gisele, Edouard and Del Rey
+
+Citizen Web3
+Hi guys, welcome to a new episode of our live streams of Citizens Cosmos Odyssey. And today we have Stakin with us, one of, well, I would say like an older and a bigger validators in the Cosmos ecosystem. They validate not just the Cosmos ecosystem, in fact, they validate a lot of other chains, which I'm sure they will tell us all about today. I have with me three cool guests, which is not very often we see like a big...
+
+team but today we do. Delray, Giselle and Eduard. Guys, I'm gonna let you introduce yourselves one by one. Whoever wants to go first, please go first.
+
+Del Rey | Stakin 
+I can go first if you don't mind.
+
+edouard_lavidalle 
+Maybe go for it.
+
+Citizen Web3 
+Heheheheh, yay!
+
+Del Rey | Stakin
+Hehehe
+
+Awesome, awesome. Well, first of all, thank you for having us. I personally listen to the Citizen Cosmos Podcast for a few months already. I like your content. So thank you for having us. And well, my name is Del Rey. I've been working for Staking since January this year. I've been in the crypto space since early 2021. And what I do at Staking is mainly content for our community, try to
+
+Citizen Web3 
+Yay!
+
+Del Rey | Stakin
+in the networks that we validate and also a strength or or make a stake in presence in the networks that we are so what I do for that is content creation like I said YouTube Twitter spaces but I also contribute with my time and energy in groups inside those networks like ambassador programs for example so yeah a little of everything
+
+Citizen Web3 
+Giselle or Edward?
+
+edouard_lavidalle
+Maybe, Giselle, you wanna go next?
+
+gisele___stakin
+Yeah, sure. No worries. Uh, so my name is Giselle. I'm the head of marketing at Staking and I've been on this journey with Edward and the rest of the team since 2019, which has been a lot of fun. Um, yeah. So what do you do as a head of marketing? Well, you know, all the standard stuff, a lot of strategy, a lot of planning, but also a lot of great ideas and brainstorming with the way and everybody else, um, you know, we love sharing ideas around at Staking, so I'm very lucky to be in the team and it's been a lot of fun. So.
+
+Citizen Web3 
+Last but not least.
+
+edouard_lavidalle 
+Well, nice meeting you guys. I'm Edvard. I'm a co-founder and CEO at Staken. I got started back in December 2018 with my other co-founder. Back then, the Proof of Stake ecosystem was still very nascent, and we wanted to support existing and upcoming protocols in that ecosystem. We've now been...
+
+operating infrastructure for more than three years. We're an agnostic blockchain provider, but we do really love the Cosmos ecosystem among others. I think we operate on about 35 blockchain networks and a big chunk of these are Cosmos chains. Since early on, we've been supporting Cosmos, other Cosmos networks such as
+
+Irisnet, Regen network, Akash, Persistence, nowadays we're on Evmos, Kava, and many of the networks of the ecosystem. We have about 38,000 delegators and also most of them are from that Cosmos ecosystem. Yeah.
+
+Citizen Web3 
+That is very very impressive numbers guys, that is like first of all 2019 I guess you've been there since the very beginning, right?
+
+edouard_lavidalle
+Yeah, we took part in like early test nets of a lot of, well, Cosmos networks or other layer ones for which we operate. But yeah, we took part for example in Game of Zones, I think it was already in 2020, where we were kind of testing IBC transactions among Cosmos chains. So kind of...
+
+We're among the first ones to do some IVC transactions, and it was super fun and super exciting.
+
+Citizen Web3 
+Giselle, I have a question for you. I'm gonna like single you out since you're the only lady here, sorry. As a head of marketing for like you said, you've been with the beginning 2019 and Edward mentioned 35,000, right, delegators.
+
+gisele___stakin 
+No worries.
+
+edouard_lavidalle 
+Yeah, it's quite a community, right?
+
+gisele___stakin
+Hehehe
+
+Citizen Web3
+How do you handle that? How do you get them to delegate to you? 35,000 people, that's not easy.
+
+gisele___stakin 
+Well, I mean, we have a lot to thank to the tech guys and the team behind the scenes that just making sure that the nodes operate. We are very lucky to say we have 99% uptime, so I cannot claim all the credits myself, definitely not. But initially when we started, we really sat in on educating the ecosystem and helping out where we could. And so I think from there, we've really been able to connect with the community.
+
+and grow as a Validator, you know, onboarding new people like Robert to help us and create even more content and just be in all these conversations. I think that's super important as well.
+
+Citizen Web3
+And anybody else wants to add anything to that? Del Rey or Edward?
+
+edouard_lavidalle 
+Yeah, I think just like Giselle said, we're quite dedicated to both our institutional customers, but also the community and individual token holders and delegators in general. We try to provide the same kind of service to both smaller delegators or big delegators, no matter how much this takes.
+
+try to be helpful, to guide them, to educate them on both what is taking, how to stake, what are the risks, how to do it in a secure manner, how to manage your portfolio of stake assets and all these questions, but also like educate them on the networks themselves. What is Cosmos? What are the chains in the Cosmos ecosystem? What can you do with this blockchain versus the others? What are the dApps built on top of them?
+
+So we have a lot of content that we publish. We actually also give crypto classes. We have Andres among our team members who teaches to the next generation of crypto users what crypto is about. We have podcasts, newsletter, Twitter spaces. We organize a lot of activities around always trying to...
+
+help the community navigate, help them navigate through governance. But maybe Delray, you can say a few words on this as well, because it is definitely also Delray is our head of the Moose ecosystem and is doing an amazing job in that space.
+
+Citizen Web3 
+What do you find? I'm going to help you a little bit out Delray, if you don't mind. Like out of the things that you are mentioned, you mentioned the podcast and newsletter teaching classes, Twitter spaces out of all these instruments. What's in your opinion works much better to become one, shall we say with the community and to get them to follow staking.
+
+Del Rey | Stakin
+Well, I'm really happy you asked. What can I say? We try to be there for our delegators seeing all the possible.
+
+ways and platform. But if you ask me what I think is the most powerful, I guess it's engaging with the people in the group chats, group chats like Telegram and Discord. I'm always on top saying my DMs every day. But besides the DMs, I also engage in governance discussions, right? When it's a new proposal or when it's a new thread on Commonwealth, I try to review it, read over it together with the
+
+We come up with an opinion, right? And then we go to the discourse and the other channels just to say what we have to say. We try to represent what our delegators feel, right? But we're also open to listen to other points of view and I believe that kind of involvement has helped us in establishing maybe our presence in the networks that we are. Great question.
+
+Citizen Web3
+And I'm going to ask you another question. If you don't mind me asking this, it's going to be a little bit from your background, which I kind of stole off the website, of course. But being an ex-banker and working for the banking industry before is what it says. Right. It's a big change because in the banking industry, you don't have classes on fiat economy, they don't have podcasts, you know, in my local branch, not at least I haven't heard of them, you know.
+
+edouard_lavidalle 
+Sorry.
+
+Citizen Web3 
+Yes, so like exactly how is that like how like you went from there to that like how did it work for you?
+
+Del Rey | Stakin
+Well, I'm very happy you asked. What can I say? I work for that bank. It's one of the biggest banks in my country. It's a very global bank as well. And I was working mainly back office, right? I wasn't like directly in touch with the customers. So I was able to get like a glimpse on how the bank operated behind the scenes, right? And there are some people, something that I didn't like was that if you live in a certain area.
+
+or if you have this background or if you have traveled to x country we cannot offer you services and and and i hated that bro for me that's super exclusive so i guess finance should be for everybody uh i studied crypto looking for investment opportunities i came across bitcoin then i came across cosmos and other communities that i won't say now and
+
+I saw how the people was like empowered by this technology, how they wanted to do things themselves, how if I help people to get better deals, how if I help people to transfer money without asking your name, your race, where you come from. And that kind of liberty and empowerment really got me like hooked in what was crypto about.
+
+I immediately forget about the money and the investment opportunity and got myself submerged in the community's problem. It comes to a point that I quit my bank because I couldn't work at the bank anymore, man. So yeah, that's it. A very short story, but yeah, hope that answers your question.
+
+Citizen Web3
+It does. And I have a lot of more questions to follow, but I know because Edward said he's got to run in 15 minutes. So I know I'm going to like target him a little bit more before I target both of you guys. Like, um, I, I, I want to, I want to, I want to know like, um, you've been in the industry, like again, since 2019, you build a validator, so you kind of understood that this is going to be, um, well, you had to have a feeling, some intuition that that's what's the next big thing or, or a big thing that's going to happen and you want to be a part of it.
+
+edouard_lavidalle 
+Go for it, go for it, throw them!
+
+Citizen Web3 
+But how did you get into crypto in general? I mean, where did you, you suddenly didn't wake up and said, I wanna be a validator, you know. Ah! Ah! Ah!
+
+edouard_lavidalle 
+It's going to be the same boring story of the banker. I'm sorry, we just went through it. Yeah, no, I'm going to tell you a secret. That is not a secret, but I also used to work in traditional finance before catching the blockchain virus. And I mean, that's kind of what led me to it. You know, I was like in this boring banking office and was I think back in 2017 or so. And...
+
+I was seeing all the possibilities with Ethereum, smart contracts, DeFi was starting to emerge and I was like, oh man, I've got to build next generation of financial products. I'm not building it here. It's not happening in this framework where I'm currently working, so I kind of left traditional banking to get started and build. First it was to build financial products and like...
+
+on smart contracts and on Ethereum. And then I got passionate with like proof of stake and staking. And yeah, that's kind of what led me to staking.
+
+Citizen Web3
+I'm going to say a small, small secret. Almost nobody knows it, but about nice, nice, nice, nice, nice product placement. But about 12, 12 years ago, I also worked for four months in a bank, but it's a secret nobody knows. Now people know about it, but let's not tell anyone about it. But wait, I have one more question to follow up then to Edward, because you still have like 10 minutes or so. But.
+
+One of the main reasons we wanted to do this, let's call them profiles or like chats with the team and to see like, is not just for people to find out about you, like in general, but to me, and I guess to a lot of people in this space, blockchains can be seen as like, some people say digital nations. And then validators, they're like big businesses inside of those nations that do something.
+
+edouard_lavidalle 
+Mm-hmm.
+
+Citizen Web3 
+And now they've became very powerful. And at least me as a delegator, not as a validator, but just as a normal user, let's say, so to speak, I would love to know who I'm delegating to. Are they building an atomic bomb with the money they're earning? Are they putting it... Ah, you see, there we go. So... No atomic bombs. No, no, no, no, no. So, no, the question is like, when you started out, what was the motivation and the intention
+
+edouard_lavidalle
+Maybe. We're going to defend ourselves.
+
+Del Rey | Stakin 
+We won't say
+
+Citizen Web3
+to change finance, yeah, okay, but that's like super, super powerful words, very abstract. Is there a more specific thing that you can say, okay, this is what we are, what is taken about? This is our goal, our so to say goal in the next two or three, five years. I don't want to put words in your mouth, but go for it.
+
+edouard_lavidalle 
+I think we're about providing secure and reliable infrastructure, a bit like the others, non-custodial staking service provider in a way. But then we have our own source. We are very active with the community and education. We are active in governance. We provide custom services then for some of our institutional customers that they appreciate. We have a dashboard on a new project we just released.
+
+dashboard.staking.com that anybody can go add all their cryptos and we support like all the Cosmos networks and we're completely agnostic whether you stake with us or whether you don't stake with us you add your wallet you can track your portfolio across like all of these networks how much you're staking how much you're earning and also across non
+
+edouard_lavidalle
+We have a good track record and we keep on supporting new upcoming networks and new features of the Cosmos ecosystem planning to get involved in the next upcoming test net. We have a few networks that we're testing right now on liquid staking like Quicksilver, on trading like CEN Network. Yep.
+
+Citizen Web3 
+Giselle, did you want to add something to it? Because I saw that you did twitch a little bit. I did see something, no?
+
+edouard_lavidalle 
+Ah, ah.
+
+gisele___stakin 
+No, no, no, I just I wanted to add something about the dashboard, but then Edward mentioned it already, so it's all good. Just make sure he did the right promo, you know.
+
+Citizen Web3 
+I have a question for you. Edward did mention institutional customers and also you guys are non-custodial servers. So as a marketing specialist, how do you find those two things to work together, non-custodial and institutional? Like, how do you make it work?
+
+gisele___stakin 
+Yeah.
+
+gisele___stakin 
+Well, I guess the good hook on that side is always that, you know, you maintain control over whatever is yours, regardless of what we do. And I think that's something that's super attractive for, well, not even institutions per se, but everyone. Like, do you not want to be in control over your own funds while earning on them and while keeping your eye out on all the opportunities that are out there?
+
+So I think that's the biggest hook and for me, you know, I think that's also one of the things that made me want to work with Sting. So that helps a lot. You know, I'm not a big fan of custodials, to be honest. So I think that the non-custodial part is what makes us more trustworthy. Like we're not here to just take your stuff and run away with it. You know, like we are here to help and support and I think that's yeah.
+
+edouard_lavidalle 
+help you be in control of your own money.
+
+gisele___stakin 
+Yes.
+
+Citizen Web3 
+help you to build that atomic bomb. Now I'm joking. No, but it's, it's, it's cool. It's just like, you know, a lot of the times like, um, personally I have the bureaucracy that some of the institutionals have is like such a big aspect for them. That when they hear the words non-custodial, they're like, oh my God, these guys are like dodgy hackers from the dark net that buy, uh,
+
+gisele___stakin 
+Well, who knows, who knows, but it's not up to us, you know?
+
+Citizen Web3
+whatever they buy with their bitcoins and they probably gonna like hack our computers and you don't get that kind of silly responses. No, it's, it's gone already by 2022 or this was like a thing of the past, maybe from five years ago.
+
+edouard_lavidalle
+said it's just gone. What are your thoughts?
+
+Citizen Web3
+Okay, that's great.
+
+gisele___stakin 
+Yeah, no, I don't notice it anymore that much. I think when I started in blockchain, definitely there was more skepticism, but I think that over time, now we also have a three-year track record. We're still here. We're registered. We have all the official, how do you say, diplomas and everything that you need. So, go ahead. Sorry, Edward, do you wanna say anything?
+
+edouard_lavidalle
+No, no, I was thinking about a comment that one of our delegates sent in the chat I think was like a few days a few weeks ago Say I appreciate that you guys are all doxxed And you reveal your public identities Like I'm sticking with you because they're all doxxed
+
+Citizen Web3 
+No, it wasn't. I'm sorry if it sounded like a question about you. I didn't mean like you, but I meant like in general, the institutionals, they're like, oh my God, these guys in the blockchain space, they want to steal all our dollars. It wasn't about staking as a provider. No, no, no, no. Sorry about that.
+
+Del Rey | Stakin
+That's great.
+
+gisele___stakin 
+Hmm.
+
+edouard_lavidalle 
+It's true, but I mean, back then they were still like, they really learned a lot about like the market and the opportunities and what is blockchain and back then they were probably more like invested solely in Bitcoin for speculation reasons or because some of their investors were pushing for it and now they've all started building their own like crypto portfolio. Sometimes top 10 market cap, top 100.
+
+Some are very invested in some like ecosystems lots of hedge funds around Taking some time long-term views on some crypto assets it has really matured from an institutional point of view and Now before when they would hear staking maybe they would hear of what is this free money free yields risk free rates not possible Non-custodial. How do you do they wouldn't understand that you know that we're talking about like
+
+What's power in the consensus and that's how these blockchains are built and these are incentives for you to secure the network. And now they seem to come to an understanding and they take a look and they're like, yeah, definitely got a stake in the risk-free rate. There's obviously slashing risks, but in many cases, I'd rather stake my coin than lend them to some like counterparty that...
+
+We never know, right? Benefits and overcollaterized loan, there's probably a smart contract risk or something else. I'd rather take the staking route to generate my yield and contribute to the network, right? Get involved in governance, secure it.
+
+Citizen Web3 
+Yeah. And again, before I'm going to ask you another question, Edward, before you run off. Um, since it's been like 2019, what is it? Three, four years? Um, could you share an advice that you would say to somebody that wants to start a validator like today and, uh, say to them, I've been on this journey guys for four years, don't do that or do that, you know, something like that.
+
+edouard_lavidalle
+I would say do it, just do it. It's about decentralization, right?
+
+Citizen Web3 
+But what would you suggest specifically to avoid doing? Let's say, for example, I don't know. Uh.
+
+edouard_lavidalle
+Launching on mainnet immediately, maybe get started on testnet. There are responsibilities here at Play. There are risks, slashing risks. It's about uptime, it's about security. Probably you want to play, I'll say get started on a testnet. Maybe join an incentivized testnet. Have fun, push yourself, great opportunity to learn. It's even.
+
+Citizen Web3
+Okay.
+
+edouard_lavidalle 
+It's more unstable than mainnet, so there's lots of work to do, lots of things to test, to break and see if you like it. Because for a solo show, it's actually a lot of work, right? Especially that person is going to have so much responsibility if they're by themselves that it's going to be 24-7 work. And there are a few solo validators out there in the space.
+
+I think they're important, they contribute to decentralization, but it's a lot of pressure on themselves, right? There's less teammates to work on different components of the validator or provide redundancy or be around when the person's sleeping, this kind of stuff, because it's really 24-7.
+
+Citizen Web3
+Would you say that Kaina is the get your hands dirty? That's kind of the advice, you know.
+
+edouard_lavidalle 
+Yeah, I get turned dirty. Yeah.
+
+Citizen Web3 
+Giselle, what about you? What would be your advice? Like since again, you've also been there since the beginning, so...
+
+gisele___stakin 
+I guess, I guess it's, you know, if you're in blockchain, I think that's not just if you want to be a validator, but for any anybody, you know, you really have to love it because otherwise it's a very time consuming business to be in. And so if you're not a real big fan of blockchain itself and the technology and the people then, you know, probably choose something else because it will be too much and you don't want to dedicate that much time to it. But yeah.
+
+Citizen Web3 
+How do you guys, if you don't mind me asking, it's a bit of a private question I guess, but how do you guys build up the portfolio of the staking networks? How do you decide on which network you're going to contribute to next and become a validator of?
+
+edouard_lavidalle 
+It's a mix of both. Sometimes we have existing clients who want us to launch on a new network or an upcoming network and take a look at it. Or ourselves, we start getting interested into an upcoming network or an existing one because we think there's a great tech, there's a great team, great project that adds value to the ecosystem and to the industry.
+
+We're like, oh, we want to support this one. And we hope we'll get delegations. Sometimes we don't necessarily attract a lot of delegations at first when we launch a new protocol. But we are happy to support it and to support it with kind of a long-term view, right? That's the goal also when we support a protocol,
+
+discontinue it within a few weeks, but to kind of support it for the next few years.
+
+Citizen Web3 
+In terms of parameters, are there any particular parameters that a network has to have, like, let's say a certain market cap for you, or it has to have a certain, like, I don't know, code of conduct or whatever, or did you guys say, okay, I will not support a network that does this, or we will definitely support networks that do that?
+
+edouard_lavidalle
+We don't have an exact framework with metrics and codes. We just take a general view of the network. I think there are probably some red flags sometimes. We get a lot of inbound requests from early network or from some existing networks.
+
+Sometimes there are a few red flags and we decide not to support them, but we're quite open-minded in general.
+
+Citizen Web3
+And I don't know what you said, you have to run over in half an hour. So I don't know if you still have to run off or not, but I will just tell me, like, give me, Hey, I have to run off. Okay. You have thought, okay. Okay. Oh, we have, we have, we, I have a lot of questions. Believe me, I can ask them till tomorrow. So it's just a matter of your time guys. But the next question I did have is, I guess it's for both you and Giselle since Delray unfortunately fell off. But.
+
+edouard_lavidalle 
+Yeah, I'll go in a few minutes, but let me know if you have another question, something I can answer.
+
+Citizen Web3
+The question was about the ventures. I did see notice on the website that you guys also do investment and ventures. And I'm curious as to why you guys decided to do it as a validator. And does it, how does it work for you? What do you do? Who do you look for? Could that be anybody who listens to this video and recording, for example, who would say, Hey, I want to go to you guys and apply.
+
+edouard_lavidalle
+Yeah, we're super open to invest in opportunities. Usually we invest in networks, so not like dApps. Or we invest in network projects. Can be like chains on the cosmos, can be other type of networks. And...
+
+Yeah, likewise, there's no specific framework. We like to invest early, so more like seed stage, but in tokens only. And yeah, we invest up to, I'd say, up to $100,000 in projects. So if anybody is listening and maybe they're building something exciting in the Cosmos ecosystem, they can definitely reach out to us and, you know,
+
+We can take a look at the opportunity from an investment perspective, but maybe also we can help them navigate the cosmos or why not help them structure a testnet program for validators and all this kind of stuff.
+
+edouard_lavidalle 
+I think you're on mute.
+
+Citizen Web3 
+It was me, yeah, it was me on mute, sorry. I was saying, does Giselle want to add anything to what Edward was saying about the investments?
+
+gisele___stakin
+Um, no, no, not really. I think he said it all on that side. I mean, he knows better than me when it comes to this one. So.
+
+edouard_lavidalle 
+Yeah, we're not like a VC, it's company treasury that we invest in a few selected opportunities every year and it's decided and handled by the co-founders so far.
+
+Citizen Web3
+I think it's interesting for people who delegate to you to know that like, oh, this is where a portion of the money is going and like of that you earn and you know, that you're actually doing something good with it and letting others have the opportunities to build things. And to me, for example, as a delegator, that would be like a green flag, you know, saying, hey, those guys share their wealth and, you know, help others to build their dreams. It's like, hey, cool.
+
+You know, I kind of look at it like that. I don't know if everybody looks at it like that, of course, but that's my thinking. Delray, what's, since you validate such a huge, oh, sorry, sorry, Dard, yeah, yes. Thanks, Edouard.
+
+edouard_lavidalle
+I'll have to jump. I'll leave you here, guys. Thanks for welcoming me. And you're in great hands with the
+
+Del Rey | Stakin 
+Thank you.
+
+Citizen Web3
+Yay, thanks, Edward. Speak soon. Nice to meet you, ciao. Delray, the question was this. Since you guys validate such a huge amount of different networks, I know it's a bit of a tough question. It sounds like devil's advocate questions, which a little bit it is. What is the most difficult chain to work with in terms of?
+
+Del Rey | Stakin 
+Bye.
+
+Del Rey | Stakin 
+Bring it on, bring it on.
+
+Citizen Web3 
+governance and community where it just doesn't flow, where it's like something you have to like really, really push on.
+
+Del Rey | Stakin
+Wow, that's a great question. What can I say, man?
+
+Citizen Web3
+I said it's gonna be devil's advocate question. I didn't warn you. You don't have to answer. You can say that you don't want to answer. It's okay.
+
+Del Rey | Stakin 
+What can I say, I mean...
+
+Del Rey | Stakin 
+I'm a cosmonaut at heart, right? I love the Cosmos ecosystem, man, and what it has to offer. All the people, all the different people around it, right? And yeah, we are very big on Cosmos. We are over 20 networks in the Cosmos ecosystem, so there are many different communities, different people, different ways of thinking and doing things, right? So...
+
+One of the networks that I find the most challenging to interact with, I must say, it's got to be Terra, bro. Terra and Terra 2.0. It's because of the community itself, right? Most of the community in the custom ecosystem like to, to investigate things, to propose new things, to update the code, make it better, right? But.
+
+The guys at Luna, please forgive me for what I'm going to say. After the collapse, the guys of Luna just have been focusing on the price and doing like burning mechanism to make the price pump. And it's hard, man, because you want to contribute with educational quality articles, pieces, right? But those guys, they just don't look there.
+
+They just want the price to pump. I have a funny story on that. I remember I did this article on Terra 2.0, what's the future gonna look like or something like that. I did that in coordination with Yissel. Really cool stuff, it's on our blog. And well, I was about to give the final touches to the article and Yissel, very kind as she is always.
+
+She told me, you know what, I believe you should go ahead with this almost finished article and ask on the Tera community what they think and if they have any feedback so we can add it to the article. For me that made sense, so let me go ahead and do just that. So I went to their group and I was like, hey guys I'm doing this article on how's the Tera future gonna look like, let me know your thoughts. And the only comment I got was something like...
+
+Del Rey | Stakin 
+My dude, what you doing? Just buy Terra and win Lambo or something like that. And I was like, no, you said we can work We can work with these guys. We're happy to validate your very consistent in our in our blog in our infra, right, but personally It's been hard interacting with those guys I believe their focus right now is not in line with the focus of the Cosmos ecosystem as a whole and as a cosmonaut I'm down
+
+the latter I said, with the Cosmos ecosystem as a whole. It's true that we're many different networks, right? And we're sovereign and we work in different ways, but still, we are also working for the future, and the future of our ecosystem, and we gotta contribute together in that. So if you are too focused on the price, you cannot focus on something else, and that's my opinion, so, yeah.
+
+Citizen Web3
+I think I can relate. I think a lot of validators who have definitely in the Cosmos ecosystem especially, who have suffered from having some money or whatever funds in USD have just went on and kept on doing their things, ignoring all that and saying, oh, screw the money. We don't.
+
+Yeah, it's painful, but hey, that's life. You know, life doesn't stop. Let's keep on building. And it's great to hear that you're saying exactly the same things. I think it's really cool.
+
+Del Rey | Stakin
+Yeah, and if you let me add to that, still we validate on terror, we participate in the governance proposals, right? The terror people, the community is still very engaged in governance, right? They send us lots of emails about governance. Hey, can you vote on this proposal? Can you vote on this proposal, right? We try to drive those to our discourse and we can have a better conversation there. And we validate in the two networks, right?
+
+Citizen Web3
+Please.
+
+Del Rey | Stakin 
+There's still much love to them. We're happy to validate on Terra and the governance. But yeah, I believe the focus should change and that's all I have to say about it.
+
+Citizen Web3 
+Thanks for the honest answer. I guess that that's very important to hear things like that because that helps me at least again as somebody who's in cosmos to understand what some of the bigger validators think. Giselle, I have a question for you, which kind of continues with what I was asking Eduard. What would be... I mean, let me go from a different place. A lot of people who start validators and let's say go out from the solo already and they understand, okay, I do want to do it.
+
+I know, for example, we went through this and we're still going in a sense through what I'm going to ask you. You finish the solo kind of testing period and you're ready for the mainnet, you know that you can handle running a node. Then you understand that we can do more. Then you start to get a team and then you start to participate, do all the things that Delray said, participate in governance, participate in the community, and then you get stuck.
+
+gisele___stakin 
+I'm sorry.
+
+Citizen Web3
+Because usually with the smaller validators, unless you have cool connections to institutions or to a lot of retail or whatever, you don't know how to market yourself. You don't understand how to advertise yourself apart from within the communities, which is of course, Delray already mentioned the most important probably piece of advertising. But that aside for a second, what would you suggest as a marketer? Can I use that? Marketing specialist?
+
+gisele___stakin
+Yeah, sure.
+
+Citizen Web3
+Sorry, for people who are starting not already solo validators, but already like small companies or bigger companies to do what, where to look for customers, how to make themselves known, apart from the communities, of course.
+
+gisele___stakin
+Mm hmm. Yeah, definitely. So I think one of the main challenges that we have as validators trying to market to the retail side of blockchain is that we don't know who these people are. I mean, we have our guesses and we have our estimates and all of that stuff. But at the end of the day, blockchain is anonymous for the biggest part. And that's what makes it amazing as well.
+
+So we want to keep that respect and try not to gather too much data and stuff as well. But you know, from a marketing perspective, that does make it a little bit more tricky. So there's a couple of things that, you know, I'd recommend. First of all, definitely have a lot of patience. So.
+
+This is, I mean, I think it's something that is not just for blockchain, but in general, people think that marketing is a quick fix, but that's just not how it works. So, you know, for example, when we were building out our blogging platform, it took about six months to get from, you know, 50 people to a hundred thousand a month. So, you know, don't give up. That's.
+
+Probably one of the biggest ones. Just don't give up, keep going. Prove yourself in the sense that, you know, if you're doing a great job, if you're having the technology and you're working hard on maintaining all of that, keep telling everyone that you're doing this and don't give up, just keep pushing. At some point, someone will pick it up and you will receive that connection. Definitely it's a bit of luck in there as well, whether that will be happening, you know, like within the first couple of months or maybe a little bit later on.
+
+You know, this obviously can be tricky, but it will happen eventually, definitely. And then when it comes to marketing, the blockchain space is super, super volatile. It switches a lot. It's crazy. Is it like a crazy roller coaster ride that we're all on together? Right. So keep breathing, calm down. Everything will be fine. Think of a plan, even though it can be tricky. Think of a plan for the next like six months.
+
+gisele___stakin 
+Where do you want to go? What kind of direction you want to go in? And start working towards that. Reach out to everyone, DM them, try and call them. Don't be afraid. Try and reach out to the bigger validators like us. I mean, we're always happy to help. We're happy to have you on board, you know, in our social medias, anything like that. You know, it's not, we're a community. And I think overall, even though we are kind of competition.
+
+We're also friends and we're all here to make a living and to expand this ecosystem. So I think don't be afraid to reach out and be patient also a little bit.
+
+Citizen Web3 
+I like the patience things, definitely. That's something in blockchain is one of the most valuable probably advices, patience. Would you say something to avoid for sure? Like guys, don't do that.
+
+gisele___stakin 
+Well, I guess what they already mentioned, right? Don't go crazy on the price. It's not the most important thing. Definitely not.
+
+Del Rey | Stakin 
+Thanks for watching!
+
+Citizen Web3
+is in the phrase okay yeah I hear you Delray from sorry you're gonna add something Delray
+
+Del Rey | Stakin 
+Yeah, I just wanted to add to the last two. What to avoid, right? Be very careful. I mean, we are, like you said, we're very open to chat and connect with anybody in the ecosystem, right? But at the same time, you're going to be careful who you connect with and whose information you share, whose profile you share, right? You got to understand that there are
+
+looking up to you, right? So you're gonna make sure that the information you put out is accurate, is legit, and it's not gonna make them waste time or money. I just wanted to say that. You can go with the question now.
+
+Citizen Web3 
+No, no, no. I was looking at my notes of the questions that I wanted to ask you because sometimes I look at the right and I think, I forgot to ask this guys, I forgot to ask that. No, I was going to ask you actually about Cosmoverse because at the beginning, before we started to record for the listeners out there, you guys mentioned that you were in Columbia. And how was Cosmoverse? Do you want to share for you, I mean, for Staking specifically, what did you guys do? How was the experience, the feeling?
+
+Del Rey | Stakin 
+Yes.
+
+Citizen Web3 
+everything you want to share.
+
+Del Rey | Stakin
+I'm more than happy to talk about close friends. Hahaha!
+
+Citizen Web3 
+I can see! You look like it was Yeah! Damn, it was great!
+
+Del Rey | Stakin 
+Yes, it's...
+
+Del Rey | Stakin 
+Yeah, so about Cosmoverse, I actually have this fan that gave up on the Cosmoverse. They gave out many stickers. First of all, thank you to CryptoSeed and all the people that put that event out. They definitely hit it out of the park, man. I actually did a Reddit post saying that the Cosmoverse investment was paid off on the first day. Anything else is an extra. And people agreed a lot with that.
+
+What can I say? On the Staking side, we come up with a few dynamics. We did giveaways for our delegators. We met them, we took pictures with them. We gave them some Staking merch. We gave them t-shirts, hats, stickers. And it felt really good getting to meet the people that trust you and delegate to you, right? There were many of those at the event.
+
+which was great. On the other side, man, there were lots of people at the event, it was crazy the amount of people that was in there. For me, it was my first Crypto Conference ever. I was really excited, but also super focused at the event, wanted to get like the best out of it. And I did, man, I listened to thoughts.
+
+I did lots of connections. It was great meeting people that you see on Twitter every day, that you see on YouTube, doing spaces, whatever. You see all those people grinding, right? And then you can meet those persons. Sorry, you can meet those people in person, right? It's really powerful, man. Something I was thinking, like the last day of the event, is that interactions are gonna feel different now.
+
+because we spent three days together chatting, eating together, then having parties together, sharing ideas, making collaborations. Right. And man, I was so pumped. Wow. It felt amazing. By the end of the event, I was so emotional that I almost cried. It was amazing. I was also kind of sad that the event was also almost over. But lots of good stuff are going to come out of the Cosmoverse. That's what I can tell you.
+
+Del Rey | Stakin 
+We got lots of content in the backlog, so people can stay tuned for that. Other new connections that we wanna collaborate about. Also, older connections that we kinda remit or remit again. Yeah, I don't know. The Cosmo future looks so bright, man. The community, it's crazy. I actually uploaded a video clip about white cosmos, white cosmos, right?
+
+And the majority of the people were like, oh, it's the community, it's the people, it's the passion. And that's something you almost don't see in any other ecosystem. So I can say that I'm very lucky that I work for Staking. I'm also very lucky that I am in charge of the Cosmos ecosystem, which I'm very passionate about, right? And I'm very happy that I went to the Cosmoverse. I'm very happy that I went to the Cosmoverse.
+
+was amazing. I will be definitely going next year and if you didn't go to the previous Cosmoverse look to the stream that they recorded everything look the streams right and start making your bag so you can go to the next Cosmoverse that's all I can say
+
+Citizen Web3 
+How was the after party? I have to ask. How was the after party?
+
+Del Rey | Stakin 
+Oh man, it was wild. I mean, well, okay, okay, okay, okay. So we have three days event, right? But we had after parties all the days. So the event was early. The event started like at 8 a.m., right? So.
+
+You couldn't like have much fun on the after party, right? Because you got to work on the next day. So I got to remind myself that I was working there, right? So I didn't have like much drinking. I did have fun, speak with people, right? Dance. And yeah, I didn't drink a lot. However, however, the last day on day three, I realized...
+
+gisele___stakin
+Bum bum bum.
+
+Del Rey | Stakin 
+Yeah, yeah, here I come. I realized that, hey, this is the last day and this is the last party. Tomorrow, I don't have to do anything. So it's resting day. And that party, man, was crazy, it was wild. I still met people there. I was dancing with the people from Juno and other projects. And yeah, I mean, I danced a lot. I actually danced like I was a maniac, bro, because I feel like I deserve that party.
+
+And yeah bro, for me that one was the best one, the last one. Because I didn't have to wake up earlier the next day, right? But very cool, very cool bro.
+
+Citizen Web3 
+I love it. I love it. I don't know if you know Citizen Cosmos was the sponsor of the after party. We were the one sponsor of the after party together with Bostrom. And it was a big, big pleasure to put something together with Crypto Cito and the guys because we also were the first ever sponsor of the first Cosmoverse last year. And then we really wanted to engage in this as well. And unfortunately, we couldn't come.
+
+Del Rey | Stakin
+Awesome.
+
+Citizen Web3
+So that's why I'm asking people, how was the after party? Did you drink good for us? You know, it was, yeah, and they're like, yeah, we had a drink and I was like, okay, at least somebody was happy. So.
+
+Del Rey | Stakin 
+It was really good, but it was really good That the people that the venue was great because it was at this rooftop, right? And you can see like the whole city. It was open bar. So everybody had drinks Yeah, no complaints. I Don't know man If you went to the Cosmoverse and leave the whole experience and you have something bad to say about it I believe you have to do some internal check That event was
+
+Citizen Web3
+And
+
+Del Rey | Stakin 
+something else. And yeah, enough about cosplayers.
+
+Citizen Web3 
+Brilliant, brilliant guys. I love it. No, no, it's fantastic. I think like it is like one of the big events that that is probably the biggest event that cosmos had So I think it's great to hear what validators think about it guys, I have um one so to say, um
+
+Del Rey | Stakin 
+It was awesome.
+
+Citizen Web3
+Sorry, sorry, sorry,
+
+Del Rey | Stakin 
+No, I was trying to mute myself, that's it.
+
+Citizen Web3 
+Oh, you were just saying it was awesome. Sorry, sorry, sorry. The sound went a little bit. No need, no need for that. You're supposed to speak. Well, wait a second. No, no, I was saying no. One last one last question to resume for both of you guys. It's the kind of question that I try to ask everybody whether they're validators or projects.
+
+And in my opinion, it's very relevant to you. You guys seem super passionate about what you do. Um, you can tell, and, uh, you seem very involved in that. And the question is what motivates, uh, each one of you by whoever wants to answer first to get out of bed every day and keep on building, keep on doing, keep on achieving results, keep on.
+
+engaging with the community or going to market to new stakers or what keeps you motivated to do all that work?
+
+Del Rey | Stakin 
+Ladies first.
+
+gisele___stakin 
+Okay, okay, fair enough, fair enough. Well, I mean, when it comes to like getting out of bed, you know, now that it's getting colder here in Northern Europe, I mean, it's getting tougher, but what motivates me mostly to keep on being in this phase and keep on putting all my effort towards this, I think for me, it's mostly the promise of the underlying technology that blockchain has and also...
+
+just the team that we have been building together. It's been a crazy ride and I've had an amazing amount of opportunities here with staking and within blockchain that I don't believe I would have gotten in a more traditional ecosystem or space, however you wanna call it. So I'm very grateful for that and that definitely helps me to wanna give that opportunity to other people as well and to keep growing together.
+
+Del Rey | Stakin 
+Awesome. Oh yeah, totally. It's in line with what Giselle says. It's actually funny because... Delay? Can you hear me alright?
+
+Citizen Web3 
+Delray?
+
+Citizen Web3
+I guess we have a small sound pause
+
+Del Rey | Stakin 
+Okay, something's happening with the connection.
+
+gisele___stakin
+We can hear you.
+
+Del Rey | Stakin 
+You can hear me? Okay, I can't hear you. So maybe that's why because I see this guy laughing right but I can hear him. Okay, okay, okay. So I go again. It's in line with what Giselle says, right? It's what crypto will enable people to do. I believe we're actually living a revolution. I'm not old enough to...
+
+the internet right, how the internet came out and how we connected the world because it's globalized the information right. I didn't see that but now I can see crypto and how crypto can help us have a money in the internet, have protocols that help us contribute with each other in ways that we haven't even imagined yet. So...
+
+On top of that, you add that you can interact with many, many, many different people from around the world. Just as easy as sending a message on Discord. That motivates me, bro. I'm not the most extrovert guy that is talking around with everybody, right?
+
+But it's so easy chatting and speaking and meeting new people on the internet. That is crazy. So the majority of the people that you meet on Cosmos, and I'm talking about Cosmos because it's the one that I'm most involved with, their focus is building. We're building the future. We're building the future economies. We're building the future politics system, right? And yeah, that excites me. It excites me a lot.
+
+Citizen Web3 
+There is something that resonances a lot with me and I think that it's very cool to put those things together. You know, the success and the change in the world, putting those together, what Giselle is saying, what you're saying. And I would love to hear Eduard's answer there as well, but I'm sure that his would be combining like yours too or something along the same lines. Guys, it's been a huge, huge pleasure having you on.
+
+Hopefully we get to talk again in the future. Thanks very much for finding the time to come on and tell all about Stakin.
+
+gisele___stakin 
+Definitely. Thanks for having us. It's been a lot of fun.
+
+Del Rey | Stakin 
+Thank you for having us, man. Nice to meet you.
+
+Citizen Web3
+Thanks. Thanks guys, you too. Thank you and have a good day or a good night, depending on where you are.
+
+Del Rey | Stakin 
+Totally. Likewise.
+
+gisele___stakin
+Thank you.
+
+Citizen Web3 
+Thanks guys, thanks, ciao.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.

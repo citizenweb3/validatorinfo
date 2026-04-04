@@ -1,0 +1,653 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/bronbro
+
+Episode name:
+Validator Tools and the Importance of Anonymity with the Bros 
+
+Citizen Web3 
+Hi everyone, welcome to a new stream, Citizens Cosmos Odyssey. And this is just to remind everybody our live stream format where we speak to various projects and validators about what they currently do, what are they up to, what are their plans, what do they think of anything they wanna talk about and so on and so forth. Today...
+
+I have my bros, the bro and bro validator here with me. We have three guys here with me online. Guys, can anyone hear me? How are you?
+
+bro_n_bro_0
+Hey bro!
+
+altbro 
+Hey, hey, what's up?
+
+Citizen Web3 
+Yo, bros. So, before we start the conversation, just to like, brief 101 for everybody who is gonna tune in and listen, whether it's the recording or whether you're listening live already now. So first of all, as you can see, the guys have no avatars and we will ask them in a second why. But obviously that's because the...
+
+bro_n_bro_0 
+Hey bro. Hey bro.
+
+Citizen Web3 
+would like to keep their privacy. That's not a mistake. Second, I'm sure you guys heard of Bro and Bro. I'm going to give a small introduction for myself and then I'm going to give them the microphone and they can speak and I'll just be the pretty head in the background. So Bro and Bro are actually, well, I don't know who is and who isn't from the team and how big is the team, but I did actually work with the guys from Bro and Bro.
+
+I know them personally, we work together on Cyber or Bostrom, whoever you may know it. And then the guys from Bro Bro created a validator, which became quite popular for their dashboards and for their kind of like being hardcore and building for decentralization and not taking any shit from anyone. So I don't know how to introduce you by names or nicknames because I can see that you do Alt Bro, Bro and Bro Zero and Cyber Obi-Wan.
+
+I'm not gonna like point anyone out, but whoever wants, give us a brief introduction on what is Bro and Bro, who you are and what you guys do.
+
+bro_n_bro_0 
+All right, so I'm Alex. Doesn't matter. So yeah, you're right. Bro and Bro is a validator, Cosmos ecosystem validator, and we started our validators work probably one hour ago, one hour in three months, one year in three months, one year in three months. One hour, sure.
+
+altbro 
+On here.
+
+bro_n_bro_0 
+We have started from Osmosis and then we've joined another networks and finally, and finally we're getting Cosmos Cosmos Hub active set. So as I said before, right.
+
+dashboards, monitors. We have some kind of vision about validators rating in some networks. Yeah, and also we're developing now some cool app for customer nodes. So what is BurnBrow right now?
+
+altbro 
+And you forgot about the bots, we're trying to push them to the Discord a lot, to Telegram chats with some kind of a monitoring or statistics, whatever.
+
+Citizen Web3 
+You mentioned quite a few cool things that go... Oh, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry, sorry
+
+cyberobione 
+Yes, yes, yes. Also we are running relays. Don't forget about this. And we have a Restake enable with our validator. So you can auto-compound your daily rewards for you at zero cost. All fees are paid by us. If you want to increase your APY, don't forget to enable this feature. Thank you.
+
+Citizen Web3 
+I love your short answers, they're like down to the bro stuff, the answers all you guys give. But bro and bro zero, you mentioned like a couple of cool things when you were doing the intro. You said that you have a vision. Can you guys talk about that vision that you guys have about like, you said the different things about validating, right?
+
+bro_n_bro_0 
+with
+
+bro_n_bro_0 
+year, we are always worried about the ecosystem health and how it's decentralized because you know, the centralization is supposed to be decentralized, you know, and what I actually see every day that's it isn't. And that's why we are thinking about the role of validator. How can we, you know,
+
+provide our goals and values and how can we.
+
+bro_n_bro_0 
+trying to change the decentralized sheet what happened in the some, you know, let's say main networks in the Cosmos ecosystem. So many networks, yeah. So I believe probably one month ago we defined some parameter, it's like a network health.
+
+altbro 
+Yeah, almost the same many networks. Maybe networks.
+
+bro_n_bro_0 
+and it's about the decentralization level of the network. And you know what? Through the networks we are validating, I believe three or four networks have good health. And only, right.
+
+altbro 
+Only.
+
+Citizen Web3 
+Can you talk about which ones in your opinion have good health? What are the networks?
+
+bro_n_bro_0 
+Let me see... Boarstorm, of course. Boarstorm for sure, obviously. Not obviously Imani. It's really decentralized. Also... Okay.
+
+Citizen Web3 
+Obviously.
+
+Citizen Web3 
+And maybe you can also say how you define good health. What is the definition of good health in your opinion, guys?
+
+bro_n_bro_0 
+For now, it's a pretty simple equation. So we are just taking the amount of validators, I mean exactly amount of validators, what we need like actors, what we need to hold the network, multiplying them on amount of validators, what we need to fork the network.
+
+And I said again, validators as actors, not their state as actors. And get the square for that, if I'm not mistaken. Right?
+
+altbro
+Sorry.
+
+altbro 
+Yeah, kind of a, so just basically a simple manipulation about the amount and validators amount and a distribution in between of them.
+
+Kind of like this.
+
+Citizen Web3 
+What would be a sign of a bad network in this case? Somebody who has a lot of stake? No.
+
+bro_n_bro_0 
+someone who has not too much actors to hold the network. Let's say Creston Top. Only five actors need to stop the network. And we think this is not cool for decentralization. And this is the point for attack. And this network isn't secure.
+
+altbro 
+Yeah, so like why the hell?
+
+bro_n_bro_0
+That's why they are low network health. It's unhealth.
+
+altbro 
+and I'll see you.
+
+bro_n_bro_0 
+and health support.
+
+Citizen Web3 
+And why? Why is this important? What I'm trying to get at is like every validator I spoke to so far, be it a small validator, and by small I don't mean anything bad. I just mean small, for example, like Ceres and Cosmos ourselves. I consider us to be small. We don't validate many networks. We don't have a lot. No, no, no, but I mean I was just going to make... I mean, what I was going to say is that like whether I was speaking to...
+
+bro_n_bro_0 
+We're not so big too.
+
+Citizen Web3 
+fish, you know, like steak fish or the smaller guys, the all kind of like had a story why they decided to do that. So, I mean, I don't think you just woke up and thought, oh, let's fuck it. Let's decide what's more decentralized or less decentralized. What are you trying to?
+
+bro_n_bro_0 
+It wasn't like that, but it close to.
+
+Citizen Web3
+So what was the goal, the original idea behind creating a validator? Bro and bro why?
+
+bro_n_bro_0
+Um, who is answering? I brought, do you want to? All right.
+
+altbro 
+Well, I can tell the story. Yeah. It was a day when the small C started, like the big drop they announced. And me with Alex were chilling out with some beer and barbecue, watching the drop claiming, like watching the shit going on around the drop and like in one, like after like, I don't know, like an hour of the network start.
+
+and our like watching what is going on with it, what is going in the chess, what is going everywhere. Like we decided, hey, why don't we try to validate this stuff? And yeah, actually that was the like as simple as this. So, and the name BrownBrow was created basically the same day and yep.
+
+Citizen Web3 
+Ha ha.
+
+altbro 
+So we already have some background. We had been working with other projects as Cyber before, so we were not super newbies in what we decided to do. So it was kind of pretty organic for us to actually start this shit sometime. And yeah, it just happened. I mean, not many preparation was done originally.
+
+bro_n_bro_0 
+You have forgot some detail about drop claiming or you don't want to talk about it.
+
+altbro
+Oh, yeah, yeah, yeah. Well, I guess, yeah, I guess it's time to share this stuff. So as far as I remember, Asmosis was the one who did this big airdrop, which required to do some mission to claim, like to stake something, to add to liquidity, to swap. Yeah, so basic functionality. And one of the points at the start of the network,
+
+Citizen Web3 
+Ha ha ha ha!
+
+bro_n_bro_0
+Swap something.
+
+altbro 
+which you could not fulfill was the vote for some governance proposal. And we was actually that, that was the one of the crazy points we were sitting and watching on like who will be the first guy who create the proposal to claim the drop. And we were like we were sitting watching, sitting watching, no one did it. Like all the people in the chat keeps asking like...
+
+What if I had to leave complete the job? We did four out of five, we need a proposal. And I was like, hey, we should go and do this. Yeah, actually they have the prop number one and as far as we would like to claim the airdrop completely or something like this. Yeah, it was, it was by us.
+
+Citizen Web3 
+So it was you who started all that thing about doing a prop for claiming the drop, right? I didn't know that, actually. I didn't know that, man. And considering I speak to some of you outside of Cosmos as friends, I still didn't know that. And cool, I didn't know that. But since then, guys, let me try to go back to you as the validator. So since then, you have created, though,
+
+bro_n_bro_0 
+Yes, yes, that's where we are.
+
+altbro 
+Yeah, camera!
+
+Citizen Web3 
+Well, in my opinion, a pretty, well, not a small community, but a pretty large community. I've seen people mention you on Twitter. I've seen people mention you on Telegram. I've seen people mention you, I think, even on Reddit, I think I've seen bro and bro being mentioned and, you know, and I don't mean under your own threads. I mean, in places and giving examples like of, oh, look at the work they did. Look at the work that they're doing.
+
+And so since then, whatever you're doing is working. And you have built a community. You have built, like, now you're validating. You didn't say how many networks, but I think it's around 10, right? 11. OK, sorry. And damn, let's go up, guys. So but regardless, you've managed to build a TVL. Let's call it a TVL for a second, right? I'm talking about the amount of value
+
+altbro
+Hlaqen Hlaqen, ja
+
+bro_n_bro_0 
+12. You're silly. Yeah, sure.
+
+altbro 
+Oh, they're coming too fast.
+
+Citizen Web3 
+maybe total value stake, TVS, whatever. Did I just coin a term? Then like a huge community, you've did like some application. I know like you did a website, a really cool website. I don't know if everyone has seen it's bro and bro.io, right? Right, so whoever again is listening or regardless of what you're listening to, go on the website, check it out, check what you can do. And, you know, so what I'm trying to get at since then, even though it was created over a beer, you have built the working project
+
+bro_n_bro_0 
+Right.
+
+Citizen Web3 
+And where are you going to now? Where are you heading to? Where is Bro and Bro going to?
+
+bro_n_bro_0 
+Let me talk about that. So yeah, it was so far when we're drinking beer and starting our first Validator and a year ago it was like a game so we're just playing that and it was cool but then I think we have understood our role in
+
+ecosystem and I think we get our... All right, anyway, our purpose here. So the first and the most clear purpose is analytics and information. So what started CyberObi1?
+
+Citizen Web3 
+Purpose? Purpose?
+
+bro_n_bro_0 
+He has provided very simple and very adorable available monitors for ecosystem and this is really simple, but no one did it before. So our first purpose is that's kind of analytics and we'll improve that soon.
+
+And also we think we have to bring some kind of blockchain decentralization and transference values into the ecosystem because sometimes I think ecosystem participants
+
+bro_n_bro_0
+forgot about the real values of the blockchain and what are we exactly building. So, yeah, we're providing that values. And the last one, I think this some kind of services, what supposed to be voyagers into the Cosmos ecosystem by
+
+you know, some kind of new users, newcomers, newbies. Because I think one of the main tasks of every validator is bring new adopters to the ecosystem. So that's what we're doing right now.
+
+Citizen Web3 
+Anyone wants to add to this from the other bros? Oh yeah.
+
+altbro
+Yeah, let me add a few words. So actually, many things we did and we're providing appears from the point that we were seeing how the thing's done somewhere. Like, for example, you come into some new starter chain, I don't know, monitor or chain explorer, and you see the APR number there. And you have the node of this chain, and you have the...
+
+real like on chain numbers and you compare them and you see like, what the fuck, why the different? And like, and you see it's not correct and you would like to like bring your word like saying, hey, look, this is correct. This is not. And that's what we can extrapolate to many other things, like not just, just the small numbers, but to whole apps or whole like vision or whole positions, et cetera, et cetera.
+
+So this is the like a very simple, but I guess that's how it's happening and why, how we deciding to like to what to do and how to do this stuff.
+
+Citizen Web3 
+Cyber Obi-Wan, do you want to add anything?
+
+cyberobione 
+No, my dear friends, explain everything is correct.
+
+Citizen Web3 
+Okay, cool. I love this. I love this man. So, there's a few things that clicked my mind. So first, you did mention the purpose and the value, but I would like to know also, before I go on with questions, what is the future? Where are you going? What is like the goal right now, the target?
+
+bro_n_bro_0 
+My bros, you mean?
+
+bro_n_bro_0 
+So it means some significant goal.
+
+Citizen Web3 
+No, no, no, you said acquisition, which is my opinion is a huge significant goal, significant acquisition of users. But is there anything else apart from that? Or is that kind of your personal goal as bro and bro? You think, okay, bro and bro will, uh, via the analytics and the numbers that we can provide and make sure people know the, what the, what's, what's really going on. We can make sure that we will see new acquisition of users. Right? Is that more or less correct what I'm trying to say or not?
+
+bro_n_bro_0 
+are biacities, but there's not only one, right?
+
+altbro 
+Yeah, we can save for...
+
+Citizen Web3 
+Mm hmm. Okay.
+
+altbro 
+Yeah, for a validator, maybe, yeah, that will be the kind of a main purpose. But for a project, for braw and braw as a project, I mean, there could be some more. I'm not sure if we, we kind of are not ready to discuss that right now, probably. But there is a bit more plans for a kind of a, for braw as a project, not as only validator.
+
+Citizen Web3 
+Okay.
+
+Citizen Web3 
+I see. I see. I understand what you mean because like all the I understand what you mean. I understand what you mean because I know for sure that like as project We have so many ideas that sometimes they come they go and by the way guys again for everybody who's listening watching this The monitors we're talking about is well the dashboard Sorry is monitor.braunbraun.io which you can find and again, we will have the links to this video
+
+altbro
+So definitely would like to develop this stuff.
+
+Citizen Web3 
+but you can find all of those links on bro... You can find all of the web tool links on broandbro.io. And if you go to projects, you will see like Braw Rating, Bots Guide, Relay, and Monitor Bro and Bro. And I'm sure that everything you, the guys are planning, we will also be able to find on their website and on their Twitter. But coming back to, from what I hear, like decentralization and values for you mean a lot of things.
+
+bro_n_bro_0 
+I guess.
+
+Citizen Web3 
+And you already mentioned that, okay, there is like some networks that in our opinion have good health, some networks, bad health. What do you think, um, in general has web three came to the point where we can call ourselves decentralized or what it is we need to do as web three in order to become decentralized.
+
+bro_n_bro_0 
+So what do you need exactly? The exact date when it happens? Ha ha ha.
+
+altbro 
+Hehehehehehe
+
+Citizen Web3 
+No, do you think that web 3 today, the space is decentralized?
+
+Enough?
+
+bro_n_bro_0 
+uh for now uh definitely not definitely not we have a lot of work for to make it decentralized because uh as i said before uh there are a lot of you know dots for attacking these networks and what we uh have seen before with uh tornado cache and uh with the usd usdt and
+
+Citizen Web3 
+Definitely not. And...
+
+bro_n_bro_0 
+a lot of more secure ecosystems have a duct right now and the cosmos ecosystem is not an exclusion of that. So I think we need more decentralization just to save our movement because now it's really an unsafe situation.
+
+altbro 
+And I guess it could go a little bit deeper and like to determine what is a decentralization. Because I mean, it's some kind of a very like really general word and it could be split into like physical decentralization, protocols decentralization, like the stuff which is used to build on for decentralization, the values which people have in mind to...
+
+dealing with something. And every of these points had a weak spots now, starting like from this fucking IP protocol, which everybody rely on, starting on this cloud providers, Google, Amazon, Hetzner, OVH and then the stuff, which hold like really significant part of ecosystem and many other blockchain stuff, not only in Cosmos.
+
+and finishing with the languages we use, with the SDKs we use and stuff. So kind of a many points to improve and many points to work on.
+
+bro_n_bro_0 
+and we can't cure them all.
+
+You know, so I think we are just working on one small part of the significant task and issue, how to bring world from the Web2 to the Web3. And this small part is pretty complex, but we have a lot of more issues how to do that in future. So.
+
+I believe when we started building our values and started building, anyway, I think we motivate another validators and developers and you know,
+
+bro_n_bro_0 
+Oh, ecosystem guys, yep, dude.
+
+altbro 
+ecosystem guys.
+
+bro_n_bro_0 
+bring the values to the ecosystem and go into that.
+
+Citizen Web3 
+It's interesting that one of the things you mentioned, and I think that's one of the biggest hot topics of discussion these days after Hertzner, Hertzner's clarification of Reddit, right? That proof of stake nodes should not be used for as a blah, blah, blah, blah, blah. And of course, we know that a lot of validators use, regardless whether it's Hertzner or any other cloud providers,
+
+And like one of the big topics, I think, Albrey, you mentioned decentralization of hardware, of bare metal. And I mean, you guys validate 12 networks. In your experience, opinion, how many validators in percent of the 12 networks that you validate actually use bare metal at house and not in a cloud provider?
+
+altbro
+Well, it's kind of hard to say. Yeah, but I guess in total, if we will count all the cloud, we can call them centralized cloud providers. I guess it's a fucking big number. I guess something like about 80 plus percent. So.
+
+bro_n_bro_0 
+That's for you.
+
+Citizen Web3 
+Estimation
+
+Citizen Web3 
+So 80 plus use cloud, right?
+
+altbro 
+Yeah, yeah, I'm pretty sure. And actually, it's a good time to mention here what we didn't mention before on what are we currently doing. It's not like the super self-standing project, but we started to transition our nodes to own hardware. I'm currently having a few servers laying around on my table.
+
+lots of shit like disks, rams, power supplies, and then Sarah and Sarah, a lot of mess. And we already have a few nodes in our kind of a, we cannot say own, but it's not like super big vendor data center. It's a local data center, which is, of course, backed up with the internet and electricity and stuff.
+
+and has a good lock on the door to get in. But as far as I know, we're the only one, I mean, the only validator who uses this data center. So we can call it like a step to decentralization. Yeah, and that's what we started to, what are we doing and where are we moving in this topic?
+
+bro_n_bro_0 
+Yeah, the critical point was the statement from the Hertzinger, as you mentioned before. And of course, we thought about moving to bare metal and it was like our dream because we want to have our own data center with replication and all of that.
+
+altbro 
+recently.
+
+bro_n_bro_0 
+by our own bare metal machines. And after their statement, I mean, Harrison's statement, we are starting to do this faster, really, really fast.
+
+altbro 
+we kind of realized that, yeah, that you need to move your ass, because it's kind of like a with the world situation. You see a lot of signs of bad shit going to happen, but it's only your kind of a decision and your motivation to start preparing to those stuff, because it's kind of a... It's pretty sure that something is going to happen. I mean...
+
+in the nearest future, but if you see this right now, so why shouldn't you start preparing for that?
+
+Citizen Web3 
+Totally, totally, totally agree. But one devil's advocate question. So let's imagine that a lot of validators start to move to bare metal. And let's say validators grow, right? It's not a validator who, let's say, validates one network, but he validates like yourselves, like let's say 12 or even 15 or in the future 50. Of course, that would require small data centers.
+
+of nodes, of centuries and so on and so forth, backup nodes and whatnot. Can such a... I know this sounds like fantasy and a little bit silly, but can such a thing lead to the problem where nodes once again are stuck in all these time private data centers, but again, could that be like a point of attack if I know, okay, this data center contains...
+
+validators of 20 computers of 20 validators or whatever. Do you understand what I'm trying to get at here? Or does that like, doesn't make any sense?
+
+altbro 
+Well, if that will be in the way you said, when one data center contains computers from 20 validators, so it's not a decentralized enough data center. I mean, the perfect, for some to me, the perfect solution for this point will be that every sovereign validator will have like a sovereign room somewhere, which backed up with a...
+
+I don't know, like some solar panels, a wind generator, and a normal electricity electric supply, backed up with a few sources of internet and accessible only by him. And that what we will move to. But I mean, the transitional step is to get your ass out of the Hetzner or Amazon or whatever, when there's a thousands of validators
+
+bro_n_bro_0 
+or even some local provider array.
+
+altbro 
+Yeah. Sitting in the same data center. So it's kind of a.
+
+What did you say? It will be okay for a, for a transitional step. So like if, if everybody will switch until the end of the year from, from the current setup to what, what did you say? It will be super cool. And I guess it would not get too many times to, to switch then after this step to, to some like real distributed and own protected locations.
+
+Citizen Web3 
+Yeah.
+
+altbro 
+stuff for notes.
+
+Citizen Web3 
+When I was imagining that kind of thing, I had the crazy idea that essentially validators could not just have their main, let's say, castles, where they keep each sovereign validator with a sovereign castle, but maybe have sentry nodes spread around the world as physical servers in various maybe businesses that work with crypto or businesses that work just with crypto, for example.
+
+be like a dream, a dream kind of future, not of course, something that's going to happen tomorrow because...
+
+altbro 
+Yeah, sure. And I guess there is certain stuff happening, like the Akash network, which I hope would work in a way designed someday that you would be able to really go and rent some really random computing power somewhere. And you wouldn't even know where is it. And I guess the transition to
+
+some new connectivity protocols. Because like we can talk about the physical decentralization a lot, but until we use the same network, same internet with a IP that everybody like knows where it belongs to you and where it leads to you and who the fuck is behind this IP address. It doesn't mean very much if you have like 20 nodes sitting.
+
+in the same location with IP, which is kind of a fucked up or, I don't know, aimed by somebody or, or 10 or one. So.
+
+Citizen Web3 
+Well, I understand that I connect to that very much. But and I think that I'm not as positive as you guys. I think I don't remember where it was. I'll bro bro and bro who mentioned that if until the end of the year, I'm not as positive that if is going to happen. But coming back to like more of the reality and the reality of the networks now, I also wanted to ask you.
+
+altbro
+I don't know, I just, it was just, just, uh...
+
+Citizen Web3 
+Again, as a validator, we had to kind of fight their way through the ranks. And I have seen you go up in different networks, whether it's Evmos, Osmosis, and now recently Cosmos, you started to slowly climb your way into the working set. What do you think of some of the current sets of the validators in some of the current networks? I mean, do you see that a lot of the top validators
+
+In your opinion, do they repeat themselves? In your opinion, do centralized validators, should they exist or is that kind of like free market and everybody can play the same game? Or what do you think?
+
+altbro 
+What do you mean centralized for the data?
+
+Citizen Web3 
+Exchange validators like Binance or of course all validators are centralized, right? But I mean like in the common term of like exchange validators like We have a lot of them Binance Coinbase and so on and so forth. What do you think about that?
+
+altbro 
+Uh huh.
+
+altbro 
+Well, that's a big money and that's the guy's money. But I mean, mostly I'll say it comes to the point, does every user, which will like take the Binance, for example, does every user who keeps his funds and let's say atoms on Binance, does he realize that these atoms are like, could be used to be instaked?
+
+Citizen Web3
+Hahaha
+
+bro_n_bro_0 
+Yeah.
+
+altbro 
+on the Binance validator, or it should be like, I mean, of course, Binance saying about that somewhere on the page 25, row 68 of their, whatever user agreement, but if there will be a big banner on, I don't know, somewhere.
+
+pointing to that, it might have changed probably. But of course, as I would say, if you already somehow gain your, I don't know, million, whatever, of whatever, I mean, whoever could prevent you from creating the validator with this million and being the top. But I guess that's the point where the values come to, come in the game.
+
+and how it should be, I mean, the other, the rest of the state should be transitioned and how should it spread across the rest.
+
+bro_n_bro_0 
+Yeah, I think it's all about how that system works because centralized exchanges have tokens, a lot of them. And why don't they need to stake their tokens as a validator? I don't know. And that's okay for me. For me, it's not okay when you have some cool things like Osmosis, IBC, Exler.
+
+and you can move your tokens not between the network ecosystems, ecosystem networks, but through the ecosystems, I mean, to the Ethereum. Why do you use Binance right now? Keep your tokens from that and I think they will die as validator because they wouldn't have tokens anymore. So...
+
+altbro 
+Yeah, and probably, yeah, probably it's a matter of time.
+
+bro_n_bro_0 
+This is not a point and this is not strange. This is about how it goes.
+
+cyberobione 
+Unfortunately, I will disagree with you, Alex, because of it's an adoption. It's more user-friendly to use centralized exchange than IBC or any bridge or whatever else. It's really hard to understand for a housekeeper, let's say, in this way. It's my view.
+
+bro_n_bro_0 
+Yeah, it's really cool before your first money loss and that's it. So.
+
+Citizen Web3 
+I kind of see the difference in points and I think every point here has value. I think on one hand, I agree of course the adoption level that these companies bring in a way is not such a bad thing, but I definitely agree with the fact that, well, of course, like in a good way, the goal would be, of course, to get them off centralized exchanges and to get them to use those bridges and the end goal would be...
+
+get them to use the blockchains. I totally understand what you mean. And you'd be surprised by the way how many people that are not newbies but you know in crypto for a long time and I speak to and they're like what bridges? Well what is that? You know and it's crazy man absolutely crazy.
+
+But, uh-huh, you gonna say something? Sorry. Yeah, it is, it is, it is.
+
+altbro 
+Kind of a, kind of a, no, just a sad sigh.
+
+bro_n_bro_0 
+Yeah, but talking about bringing people to the ecosystem, we're talking about some kind of education. So why use decentralized... Why using DEXs is better than SEXs? Why we are proud of ABC, why we're proud of Bridges? And...
+
+So I think one of the purposes of the Anivallidator is some kind of education. So you must teach.
+
+Citizen Web3 
+And yeah, and actually, actually, this is interesting. I would like to point something out because at the beginning, it was actually before we started the record, the live, sorry, not the recording. I keep forgetting one is recorded, one is live. Um, you asked, what is the purpose of the, the, the, the call, the conversation and the purpose is, is really education in a way. But I don't feel like I'm in a position or like anyone that I invite is in the position to educate. I'm more feel like we're in a position to kind of share.
+
+education, not to educate. I don't know, I really have this maybe problem in my head of hearing that word, but this is a personal shit. So, you know, from the Soviet Union, you know, educate them, you know. And like, I kind of feel that the purpose of those conversations with people like yourselves who have been in this system long enough to see that there are bridges that are working to test them yourselves to be a relayer, by the way, that I don't know if you mentioned that you're a relayer.
+
+And a lot of other things is to actually share this knowledge with as many people. And each validator, like you say, each sovereign validator shares this knowledge with his own sovereign community. Let's just speak. I'm just going to carry on the analogy, of course, not like that. But I think that would be the education that we need. And I think I've seen you guys do it via your dashboards, for example. So I think there is education as well, right?
+
+bro_n_bro_0 
+Actually, I have some separate articles about how to use osmosis, how to use bridges, I believe, or IBC. So it's some kind of education, right? So not exactly education. I don't talk about when you sit behind some guy and tell them to push that button or that button. And now you can...
+
+Citizen Web3 
+Okay.
+
+Citizen Web3 
+Okay.
+
+altbro 
+Ciao.
+
+bro_n_bro_0 
+you know, transfer your tokens from the one network to another. No, it's not about that, but it was like that sometimes. Some of my personal, you know, pupils. So, and yeah, I have educated them. But if we are
+
+Providing that knowledge base, that our experience in mass, I think that's a point for any validator. Because you need your delegators, for sure. Why are we sharing existing delegators? We need to bring more.
+
+Citizen Web3
+Yeah, for sure. For sure.
+
+Citizen Web3
+Yeah, it's true. It's bringing the delegators. But it's true. I mean, even if you look at the amount of the existing, you know, atom accounts, if it's talking about atom, and the amount of still accounts that have not delegated their atom, it's astonishing. You know, there is so many more atoms to be staked and so many delegators out there and...
+
+altbro 
+more new ones here.
+
+bro_n_bro_0 
+Thank you.
+
+Citizen Web3 
+I think it's cool that competition is going to grow and grow and grow, and each validator is going to bring more and more value, I hope. And that is actually my next question to you, if we are sticking to the validator kind of topic. And this is something also I read kind of, I think, on Reddit comments or Twitter comments. I don't remember exactly where, not important. There was a discussion that somebody said that
+
+If you look at some of the validator sets at the older Cosmos networks, some of the top validators, and I don't want to say names, of course, but we're talking like top validators, they have been there just because they have been there since the beginning and they're not bringing any value, and it's only the new validators that bring value. Do you agree with such a statement, or do you have your own opinion on this?
+
+bro_n_bro_0 
+I think it's totally wrong to think that top validators didn't bring the value to the ecosystem because a lot of services and wallets and analytics and a lot of analysis, a lot of have come from the top validators and what we have right now, actually the new networks, thanks for top leaders.
+
+But you know what? Now it's really hard to get some additional delegations from the funds and wherever, because a lot of things have done and a lot of top auditors have a reputation and newcomers are obviously delegated to...
+
+them and this is really hard competition and this is very difficult to fight against them and I don't know why we're supposed to do that so because as I know in e-commerce I have a limited resources to bring a lot of value right now and right here and we need the support by delegators, by funds
+
+Why, anyway, and if some ecosystem builders wants to grow ecosystem up, I think they supposed to think about that. How to, you know, help small validators to grow.
+
+Citizen Web3 
+I was just thinking, I'll bro or anybody else. Do you want to add anything to what bro said?
+
+altbro
+Well, probably something to say. Firstly, I would not very agree with you saying, like, summarizing all the top validators to some sort of a cortal or, I mean, when we speak in general, it's all the time not correct. Because when you separate the stuff, it becomes like some things not applicable to someone, other things not applicable to others. So...
+
+There's a lot of things being pushed by top guys Alex forgot to mention the amount of bugs had been fixed the amount of code being written by the by them and actually They do really improve They do really improve the stuff At the same page there is there is still kind of a lot of Big fishes, which is who just like steak
+
+bro_n_bro_0 
+There are a lot of things for it.
+
+altbro
+the user's items as mentioned earlier, Binance and stuff, yeah. But kind of, yeah, generally it always tends to, how...
+
+how lucky probably you would be when you came to the network and came with a certain purpose or certain idea or certain.
+
+whatever, and how lucky you will be to get this idea realized and turned into life. And yeah, as Alex said, I would totally agree with him that it will be cool to develop the protocols, the, I don't know, the governmental processes like on-chain governmental processes or contracts, which will help to...
+
+Spread the stake to support the the newcomers over over the stake from From whoever owns the stake can Chains
+
+bro_n_bro_0 
+This is...
+
+Citizen Web3
+I think Cyber1 you were gonna add something.
+
+cyberobione 
+Yeah, just want to say that it's a philosophical question because top validators get more tokens, get more commission, have more resources for developing something new. So provide some tools, let's say, shilling these validators more and so on. They're all time at top, so new users will again delegate to them. And small validators, like a best example, this August and how we...
+
+came into Active Set and Cosmos Hub. When we came, it was near 40,000 of atoms to be an Active Set. Now Active Set is near 75,000. So on the latest positions, it's a war between validators. I don't think it's a good idea. But as for now, we cannot do nothing.
+
+Foundation won't delegate to possible small evaluator, but again, delegate for what? So it should be like a grants, possible short-term grants for six, I don't know, years. So like, we still need to work on decentralization. So we'll see you later.
+
+Citizen Web3 
+No.
+
+altbro 
+So I guess a lot of things could have changed here if when the user or whoever will come to Explorer and will open the validators tab. And when initially he will see the validators like organized not by the stake, but by some sort of a different order.
+
+And it is still a good question which order it should be. We have our kind of a pro rating. We tried to promote slightly on like on validators across the existing chain. It might not be this. It might be something else, but I guess not just the stake. So when this thing could change, when this thing will change, I guess we'll see the things start moving.
+
+like differently.
+
+Citizen Web3
+randomizer in the browser, right? And then, psh, now of course, of course this is fantasy, right? But you know, of course. No, but I understand guys what you're saying. And by the way, just for the record, this is not my statement. It is something, like I said, I saw somewhere online and I did want to hear your opinion as somebody who's fighting for decentralization. So I totally agree that a lot of the top validators
+
+altbro 
+Oh, maybe.
+
+bro_n_bro_0 
+Oh, I think, I think...
+
+Citizen Web3 
+In my opinion, 90%. Even decentralized exchanges, I agree here with Sybov1, they are bringing the value of simplicity in a way for adoption. So I think they all bring some value today. And it's a good thing.
+
+bro_n_bro_0 
+Let me just in addition say something. I think to conclude that the power of each network should be, I mean power about the top actors who have significant stake, it should be changeable. So for the great justice.
+
+Citizen Web3 
+Please, please.
+
+bro_n_bro_0 
+and for the healthy growth. And also, foundations are supposed to be more flexible with their grants and delegations. I think at that stage it's not so difficult. For example, Bostrom, they have a good delegation program and they re-delegate their tokens every
+
+every two weeks or every week. I don't remember. But this is more frequently than Cosmos Hub, because they are delegating their tokens for some kind of set validators for one year, and then they're undeligating their tokens. Think about that. Choose new validators and
+
+It's some kind of plan economic of USSR. I think about, I think something like that. And for me it's really wrong and I think they're supposed to be more flexible with that.
+
+Citizen Web3 
+I totally understand what you mean and I can relate a lot about, especially talking about the lower set of validators and having a war. And for a long time before the recent delegations of the foundation in the FMOS, we were like for three or four months going out, going in, going out, going in, going out. And it was so annoying until now recently, we had a delegation from the foundation, a pretty good one and a really good one. And
+
+bro_n_bro_0 
+Uh.
+
+Citizen Web3 
+We're now actually, I think, like two places from bro and bro, if I'm not mistaken, in Evmos, like 59 or 50, and you 57 or something. But I understand that... But the thing is what I was trying to get is actually not a good or a bad thing. What I was trying to say, I think, unfortunately, like there are so many opinions on what is a good delegation program or what is a bad, and it's so hard to choose the perfect one. But I totally agree with the fact that it should be more often, maybe like more live, you know, maybe not once a week, but whatever.
+
+in some kind of thing. Again, I understand the big philosophical discussion, but back down to Earth, and I think like the last question that I would like to ask you is everybody I know that knows that Cosmoverse is coming, well, if you're watching the live, if not, maybe you're already going to miss that. But this is end of the month, and we asked our last several guests.
+
+Do they have any plans for Cosmoverse and if they do what kind of plans? And same question to you guys. Do you have any plans for Cosmoverse and if yes what kind of plans?
+
+bro_n_bro_0 
+This is not a good question for the end, but all right. Unfortunately, we had plans to visit Cosmoverse as a validator, but it was more difficult than we thought about. We can't...
+
+Citizen Web3 
+I'm sorry, I'm sorry, I can get a good question, I'm gonna get a different question.
+
+altbro 
+Thank you.
+
+bro_n_bro_0 
+be there physically, but for sure we all following that and looking what happened and asking our questions to foundations, to validators. All our plans for customer assembly, correct me if I'm wrong.
+
+altbro 
+probably we would be able to teleport some stickers to spread somehow. Yeah, but...
+
+bro_n_bro_0 
+Oh, yeah.
+
+Citizen Web3 
+I guess you could just say you're working. You could just say you're working. Your plans are to work and to carry on building. So, yeah.
+
+altbro
+Yeah, working out, we're not trying to lie to ourselves. But yeah, it was, it got just to physical limitations. We were, none of us were able to go to Columbia. First of all, of course, it's like really far, being honest. But the most important part was the limitations with our kind of where we are and on which premises we stay here. And.
+
+bro_n_bro_0 
+I'm done.
+
+altbro
+treasons and visas and so on and so on. I guess you probably, you know better than us where the shit is hidden. So yeah, the next one will be there for sure, Boon.
+
+bro_n_bro_0 
+But we're really upset that we can't be there because Cosmoverse, I think that's the best event in the Cosmos ecosystem. I've been in, let's say, Cosmoverse 1 in Lisboa and I'm so excited with that. It's really cool.
+
+Citizen Web3 
+Cool man, cool. I'm just gonna say we were the first ever sponsor of Cosmoverse, Citizen Cosmos was the very very very first sponsor of... And no, my NFT was not to go to the second one. Or the first one actually, I wasn't present at either physically the first or I'm not going to be the second one unfortunately. So yeah, it was a bad question for the end, fuck it, let's finish now.
+
+bro_n_bro_0 
+Oh, lucky you wears your NFT.
+
+bro_n_bro_0
+Hahaha!
+
+bro_n_bro_0 
+Hahaha
+
+Citizen Web3 
+Guys, for everybody who is listening again, broandbro.io, check out definitely their dashboards, monitor.broandbro.io, but everything else, check on their website, connect with the guys on Twitter, follow the guys, delegate to Validators.build, and guys from Bro and Bro, thank you very much for joining and finding the time to come on.
+
+bro_n_bro_0 
+Thank you for your invitation.
+
+cyberobione 
+Thank you.
+
+altbro 
+Yeah, it was a pleasure to us to talk with you. Really interesting conversation.
+
+Citizen Web3 
+Thanks. Thanks guys, thanks.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+

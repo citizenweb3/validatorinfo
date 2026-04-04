@@ -1,0 +1,496 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/cryptolabtech
+
+Episode name:
+Banks, Crypto and Friendly People with Greg Weld 
+
+Citizen Web3
+Hello everybody, welcome to a new episode of Citizen Web3 Podcast. Today I have Greg with me from Cryptolab. Greg, hi.
+
+Greg Weld (Crypto Lab Tech)
+Happy to be here. Thanks. I'm great.
+
+Citizen Web3
+How are you?
+
+Yeah, it's a good day, right? I don't know how it is for you, but it's a lovely day for me The weather is great. I don't know. Of course the listeners can't see it I don't know if you can see the little ray of light coming in my hope, you know Calling outside. How's the weather about in your place? It's all good. I hope
+
+Greg Weld (Crypto Lab Tech) 
+Yeah, yeah, I'm based out of San Diego, so it's usually awesome here, but we have had way more rain this year than like in a long time. It's crazy.
+
+Citizen Web3 
+Lovely. I don't think I've had guests from San Diego before, but I certainly know people living in San Diego and at least one person lives there and he always talks very lovely about the weather. So yeah. So now that this lovely weather conversation is done, I would love to ask you to introduce yourself for myself and for the audience, tell us everything you would like people to know about you.
+
+How did you get to Web3 and what you're currently working on maybe as well?
+
+Greg Weld (Crypto Lab Tech) 
+Cool. Yeah, I live in San Diego. I got into crypto around like 2011. My first experience with crypto was Bitcoin and I've been...
+
+exploring the cosmos since like 2019 I think, and I had this idea that I had a decent amount of coins staked and that maybe I should just run my own validator. So my first one that I spun up was on Akash and since then I've been adding new validators as I get the chance and I participate in a bunch of communities. I
+
+Greg Weld (Crypto Lab Tech) 
+idea where they have the like metaverse as a service or decenter the web browser or DVPN so I'm in like a hundred different discords and I just
+
+I love spending time with crypto outside of running a validator. I do consulting to teach people how to get into crypto, how to get stuff onto an exchange, and then with companies to how they can use blockchain.
+
+Citizen Web3 
+So interesting. So you basically had, how would I call it? The self-prophesy experience, right? It's like, sometimes you get people starting working in crypto, and then slowly they're like, okay, I'll start to like, just to do, you know, I don't know, either write something or code something, and then slowly they're like, ah, but this is interesting. So I'm gonna get my salary in crypto. And then, you know, the rabbit hole opens up for you. The rabbit hole was different, right? But I like that rabbit hole.
+
+Let's talk more about it. But what I mean, just having your own tokens. A lot of people have their own tokens, but they don't go to Validate. Why did you decide to do that?
+
+Greg Weld (Crypto Lab Tech) 
+So the validator community in Cosmos is amazing. Everybody's so friendly and welcoming. I've had people reach out to me and help them out and any like anytime that I Message somebody they're more than welcome to answer the questions. And so it wasn't difficult it was it just kind of was natural I start a conversation and
+
+people would be helpful. So that's been the best thing about the Cosmos ecosystem that I've worked with. Like, I mean not to down other ecosystems, but I mean I have had some less than pleasant experiences with either rugs or just grumpy people on like Solana or Ethereum, but they just I don't know what it is about the Cosmos, but people are super friendly.
+
+Citizen Web3 
+I definitely get some hang of what you say. We are chain agnostic. We are a validator, of course, a bare-metal validator ourselves, but we are chain agnostic. But I definitely can say that Cosmos is our validator home, even though I've started validating before Cosmos existed on Depos. But my first experiments, at least, in 2015, I believe, were 2015-16 with like... But not the point. The point is that...
+
+I can definitely feel what you're talking about it. And for me, even though we will, you know, doesn't matter how as a Valorator, we will evolve in the future. I will probably never say never, it just as never say always, I will consider Cosmos to be like our home, you know, have that little special place where we always kind of feel responsible for allowing us to.
+
+have the public good projects, just for example, as this podcast or everything else that we do. And in my opinion, it thanks to Cosmos. So I can definitely relate to what you say there. What's the goal though? I mean, you say kind of, OK, grumpiness, you know, happy people. I like that. But do you have like a personal goal in because you mentioned that you educate people on your consult, sorry, people on how to use crypto. So I'm guessing there is, you know,
+
+Again, there is something more dear to that than I would love to hear that. I know I'm digging at it. I know I'm sorry, but, uh,
+
+Greg Weld (Crypto Lab Tech)
+No, it's good. I think that crypto is a superior form of money over fiat currency. And there's always the possibility that fiat can evolve to what crypto is, a global currency that
+
+can be sent around the world in seconds at very low cost, but currently it is not. And even something as simple as opening a bank account, like I haven't been able to find a place to open a bank account as Crypto Lab Tech because crypto is in the name of my company and banks hate crypto and they won't allow you to open a bank account. And so I think that...
+
+between the people who are unbanked, who can't get bank accounts at all, or don't have a home, or even people who have a bunch of money that they need to deal with overseas transactions, or so many different use cases, there's always a use case for people to use crypto over other systems.
+
+Citizen Web3 
+I have a blitz question for you, a random blitz question for you. Unbanked the banked or banked the unbanked?
+
+Greg Weld (Crypto Lab Tech) 
+Yeah.
+
+Greg Weld (Crypto Lab Tech) 
+I think that if you mean by unbank the banked, then move everybody that's in banks to self-custody 100%. Because, I mean, there's so many benefits when you take out the middleman, you then pass all those benefits on to the end users. I mean, the whole idea of DeFi having smart contracts just pass on the earnings from...
+
+Citizen Web3 
+Thank you. Amen.
+
+Greg Weld (Crypto Lab Tech) 
+liquidity pools or whatever that there's no Entity in the middle sucking all the money out of the system people get so excited when they see like oh this savings account has 5% but like 5% is nothing and When the cost when the rate of inflation is currently riding, you know around 8% Then if you have money in a savings account, you're just losing money every year
+
+Citizen Web3
+And that is us not even getting into the conversation about the methods of calculating real inflation, right? And printing and all of that. This is just the tip of the iceberg. It's funny you mentioned it, you know, I've said it, I think several times on the show previously, but I can't get tired of saying this.
+
+Citizen Web3 
+The longer I spent time in it, the more I realized that if I want to, let's say in brackets, peel somebody, which is usually happens naturally for people. But the more I want to do it, the less I will mention the word crypto and just talk about the banking system and the fucking realities that people have to face. And then people are like, but what do I do then? You know, and then, hey, there we go. But let's talk about 2011 for a second. Greg, 2011 was.
+
+Man, I got a little bit after you, a little bit after you, but 2011 Loco, crazy, to be able to understand back then, in my opinion, to see what you saw. Yeah, it's mind blowing for me. I would love to hear a little bit of your story from that, if it's possible at all.
+
+Greg Weld (Crypto Lab Tech) 
+So, back then, my friend Chris emailed me and he said, hey, there's this new thing, it's like digital money and there's a low cost to transfer it, it's not very expensive, you'll be able to transfer money all over the world. And like that idea really interested me. So I looked into how to...
+
+how to get into it. And like the largest exchange was Mt. Gox, which now is a bad word. But the nightmare it was to get money from your bank account onto a crypto exchange was crazy. But I managed to get some money on there. And I think the first Bitcoin I bought was at like $11 or something. So.
+
+It was really interesting to be like to think back on that. It's such a weird feeling to be like I bought Bitcoin at like $11. I don't have that Bitcoin anymore. Just like the pizza guy, you know, that bought a pizza with a whole bunch of Bitcoin. But I have done a lot with.
+
+The crypto that I've had and traded and it's now invested in other cryptos, although I still have some Bitcoin But yeah, that was my experience with starting with crypto. It felt like
+
+like some shady thing because it was so difficult to get into. And I think that a lot of people who aren't in crypto still feel like it's something crazy like that. They have this idea that they're going to have to go through a crazy process and that it's going to be very complex to use. But it's really not. As you know, you know, you go through the KYC, it's now almost instantly confirmed in most cases. And
+
+Greg Weld (Crypto Lab Tech)
+then you can just send money anywhere. And I think that if more people could see all the benefits, and I think that the fact that crypto is so volatile is a huge benefit. Many people will not get into crypto just out of the fear of the volatility. And that I get, but they don't even see that there's stable coins and there's coins that are useful for other things.
+
+And so the fact that there's volatility gets the word out. So I've had, I always have more people hit me up near the top of the bull market and asking like, how do I get into crypto? And I'll tell them like, put away some money right now. And when we get back to the bear market, then I'll let you know, but this is the wrong time to buy.
+
+Citizen Web3 
+It's a never-ending, I think, not mission. Mission is the wrong word here, but it's a never-ending thinking process of what is the correct answer when people ask me the same questions. I can never... I don't know what to answer, but I know that as we were telling the story of Bitcoin at double figures, I remembered BTC-E, and there was such an exchange.
+
+It was a very popular Russian-based, well, Russian is a loud word. And even if I'm not mistaken, some years ago, the guy got arrested somewhere in Greece by the CIA or whatever for money laundering. I don't know whatever happened to him. Probably we'll never know, unfortunately, but I just remember one time after like in 2000, I found a password to it some years, like already in 2019, I think. So it was like years and years after I first started using it.
+
+And I just looked at the history. And of course, today it's not on as far as I know, but it was crazy. The amount of it was Litecoins. I was never into that heavy into Bitcoin back then, but it was more into Litecoin. And it was just the numbers of those Litecoins looking. I was like, wow, we were we were we were smoking a lot on Silk Road or whatever. It's funny. But do you feel that there is a difference between today's?
+
+You know, you said yourself that people are still afraid of going through that process. But do you feel that there has been a change in moods or in acceptance of the general public towards crypto and towards our space since that time?
+
+Greg Weld (Crypto Lab Tech) 
+I think that it's, I mean, it's been socialized way more and it's gotten a more publicity, like sadly, a lot of politicians spin it to be a negative thing. So I don't know, like, I think that it gets put up as like a money laundering vehicle really often. But anybody who's in crypto knows that.
+
+without things like tornado cash, but like all crypto transactions are visible on the blockchain and trackable. And so you'd have a whole lot easier time doing nefarious things with actual fiat currency, just like it has been for ages, like sending truckloads and like physical bills, because all of your crypto is trackable on the blockchain. It's difficult to hide that.
+
+Citizen Web3 
+My apologies. Sorry, we're gonna edit this little mute later. It happens with the unmute button. It does, right? But do you feel like as if people, regardless of all the shadiness, right? Like not that. Do you feel as crypto? Okay, let me try a different angle here. I like to talk with guests about it because it's something that, I don't know, it gives me a...
+
+better and the listeners and myself, I think a better perspective of the whole industry. And what I like to ask is something, the next, the following question. Do you think that what you do today, that what you have been doing for the past 10 years, it's a bit of a devil's advocate question, right? Has influence on our world? Does it change the things that, you know, we talk about blockchain and crypto, the web through spaces,
+
+Sometimes it's even been a little bit religious, you know, I mean, we're not even shy of giving it a little bit of prophecies to we can cure, blah, blah. Bitcoin can do that. Ethereum can do that. Cosmos will be able to do that. ABC will be able to do that. And maybe they will. Maybe they won't. We don't know. But do you feel personally, does Greg feel it, that over the last your 10 year journey in crypto and your validation journey over the last few years?
+
+Has it changed anything around you? Has it changed something in the world around for you personally at least?
+
+Greg Weld (Crypto Lab Tech) 
+I mean, definitely for me, the world has changed. I mean, I run validators and I have a bunch of server equipment. So like for me personally, yes. But I've also brought a lot of people into crypto that they have been able to start using it, take payments for their businesses, be able to integrate different parts of crypto into their business, like NFTs or...
+
+just being able to accept crypto. But along those lines, I think that it has so much further to go. I mean, something as simple as like you look at the adoption of PayPal, where it took something as simple as them putting code on their site so that businesses could just grab the code and put it on their site and just says, you know, pay with PayPal when you go to checkout. Why doesn't that exist for anything in crypto where...
+
+Kepler, Leap, Metamask, Phantom, all these wallets could just put up a piece of code and say this is freely usable for people to put on their site. And when you go to checkout, it just has a button for Connect Wallet. And you can just use...
+
+your coins and that's the difficulty for crypto is that you can't get any adoption if it's impossible to use. I mean if I can get crypto into the hands of somebody that's one step but them being able to do anything is a whole other and there needs to be a bridge between what you and I know of the uses of crypto and what normal people know of uses of money because we think of crypto as digital money and they think of it as...
+
+some imaginary thing that can't be used in the real world.
+
+Citizen Web3 
+What about since we are on this topic? What about...
+
+Citizen Web3
+the what
+
+Citizen Web3
+For me, maybe it kind of happened, not the usage, but there is no such thing as mass usage. People are afraid. And regardless of whether you're gonna put the word usage there or adoption, regardless of what in your vocabulary translates to the correct word here, do you think, sorry, what role rather do you think that such end user vendors, such as like explorers, bullets that you mentioned right now, because for me, they play a big role in it. And for me, a lot of the ways that they
+
+portray information sometimes. And I don't want to like now shoot at anybody. A lot of them were our guests over the last four years, all over the ecosystem. And they are great developers, but I speak with them about it. And I want to know your opinion because for me, this is where the real adoption happens because everybody needs a wallet or an Explorer. As sooner or later, they have to do it if they're gonna be using crypto. And the way they sometimes portray information, whether it's inactive, the inability to delegate to
+
+a Validator outside the top set or just calling the Validator inactive when in fact he's not inactive or whatever. Anything like that kind of pushes, in my opinion, that adoption stage a little bit further. But okay, I didn't want to express my opinion. I wanted to ask yours. I'm sorry. It's a pain point. So what's in your opinion the role in that adoption that you're talking about, the wallets and the explorers and other end user?
+
+tools play in their adoption spectrum.
+
+Greg Weld (Crypto Lab Tech) 
+I mean, I think that the interfaces that people have to the crypto world are going to be the driver of adoption. Without a good UI, there's no reason for anybody to attempt to use it if it's too difficult. So whether it's using a wallet to connect to something or...
+
+an interface for a DeFi platform, it's all got to be easy for the user to manage. So Passage has been one of the projects that I work with that's been really strongly looking at that. I'm one of the alpha testers and we get in there and Lex will ask us to do stuff, we'll test things out, move around, and then we'll give them feedback. Like, what do you think? What are the problems? And I think that maybe there's just...
+
+not enough channels or not the correct channels for users to give feedback or even vote on what they think is most important because programmers and UI developers have very different ideas. If you had a ticketing system and it was designed by engineers that code, they're going to design something wildly different. And they'll just say, but it's so...
+
+functional it's got everything that you need and users will be like it may do all the things that I need but I can't figure out How to do any of that stuff and that's the problem is that if people are gonna adopt crypto. It's got to be simple it's got to be Intuitive that they can just open it up and just know how to use it and software has had that problem since software existed we have things like
+
+backup software that I've used before that you need to take a class to be able to use or even some banking software. You need something that users can open up and just know they see it and they're like, this is obvious. I know how to do this.
+
+Citizen Web3
+It's an interesting point. Devil's advocate response here, but crypto is new. How would they know how to do this? So would you just try to replicate their usual behavior on other apps to here? Is that what you're saying?
+
+Greg Weld (Crypto Lab Tech) 
+I'm not saying to replicate what the Fiat world has necessarily, but talk to users and say, what do you think is missing here? Or what do you find confusing? Or what are features that you would like this to have that you don't currently see? All the questions, you know?
+
+Citizen Web3
+I totally understand. And for example, the tool we are building now, a validator-staker tool that we are building now is the end goal of it is to be user interactive. And in my opinion, crypto gives a perfect tool to allow any developer to create, the reason is because it has user incentives, right? It's like, instant, sorry, instant on the second user incentive, which solves...
+
+the problem Web2 had, right? And it's interesting that a lot of those, until today, a lot of the tools that I see, that we see, sorry, in Web3 have either email logins, and okay, I can understand why, and analytics and all that, I can get it, but instead of that, allow the user to log in with your Web3 wallet, interact with your platform, receive some type of, I don't know, NFT reward, whatever, and that would already give you that feedback that the Web2 world...
+
+takes a year to give you words right here. You will, I totally agree with what you say. I'm just waiting for it to happen.
+
+Greg Weld (Crypto Lab Tech)
+So on the couple things that you just mentioned, those are excellent points. So one, we've seen in all kinds of software immense potential in gamified learning. So say we'll take the navigation app Waze. You earn points by reporting accidents.
+
+traffic, police officers, whatever, and people get into that. And then they can get different avatars, things like that. But education is going to be such an important thing, like you mentioned with staking interfaces. How do you get people to stake outside the top 10? Because intuitively, people go to the staking platform and they say, well, I want to stake my coins with the most safe
+
+reliable validators and well these are the top 10 so they must be the best 10 out of the 100 and there needs to be some level of simple straightforward quick education to say these top 10
+
+They're probably totally awesome. They're amazing. But the other 90 of them are also excellent. And look at the different factors of whether they vote on governance things in the same way that you do, or their uptime, you know, all the factors that make validators great, and give the smallest bit of education and give them some type of incentive to learn that so that we can help decentralize the whole crypto ecosystem.
+
+Citizen Web3 
+Absolutely. And just to finish off the topic, to say like, I think when I was trying to ask you about what's your opinion on what role do vendors play in it, and he just basically said it, instead of showing the top 100 by 1 to 10 by voting power, why not show it randomly? Why not show it backwards? Why not show it?
+
+I don't know anything, but just top 10 just by voting power. And that's it. You get a different set already and already people will not look at it like that. Because today, you really, when you go on a lot of those interfaces, you really cannot even delegate outside of the active set and it's bad because it's not like the validators outside the active set are bad. They just cannot get into it because they don't have the voting power to get, but they're still signing blocks. And in fact, they might be.
+
+better working and more functioning than the validators in the top and you won't. Yeah. So, yeah, go on, go on, please, Greg, go on.
+
+Greg Weld (Crypto Lab Tech)
+So I don't know if the solution is a random order. I mean, you have things like, right, like Restake. If you go there, they're not in the order of the top 10, like they say what their order is, but.
+
+Citizen Web3 
+Just a thought.
+
+Greg Weld (Crypto Lab Tech) 
+the top of the list obviously are people that have enabled restake and then you have different percentages. It's just that for somebody that's new to crypto, it's extremely overwhelming. I've taught a ton of people and even the simple thing of staking because they'll say, okay, I've bought these coins. Now is there something that I can do with them to make some money? And you know, I give them the different levels of risk and the lowest level, just stake your
+
+they say, okay, I went to the staking interface and I don't understand what I'm looking at. And they're numbered in rank, but there's all these other factors that I don't know what they mean. I don't know what exactly the uptime means or what all these votes mean, or the commission that they receive. Like so many people have misunderstandings even about commission. They see commission's 10% and...
+
+don't understand that that's 10% out of your rewards, not 10% of the whole reward. So it's a tiny fraction. And that leads to further problems like you are probably aware, validators don't make much. And if validator is doing something like relaying, they make even less. And so I think that education is...
+
+definitely the key to adoption and decentralization and so much in crypto. People just need to be educated. The problem is finding some way that's digestible and friendly for everybody.
+
+Citizen Web3 
+Absolutely. On that note or subject, what is your personal... Like, yeah, you said you have tokens and your tokens were enough maybe on some chains or maybe on all of them that you decided to put you into the active set. Yet, the question is more abstract, I guess, is more general. Yeah, part of it, what was your journey like, of course, to get to the active set? But...
+
+more of a general question because sometimes it feels today and again I'm going to be devil's advocate as I'm always am and I can't get tired of saying that but sometimes I have to I want to know opinions and sometimes you know asking questions directly doesn't allow you to get the opinion. But anyway sometimes we see you know those sets and you look at the top 10 and top 10 have been there for five years.
+
+And you're like, sometimes they stop. I'm not saying it's like that, but let's say chain A, and the top 10 validers on chain A have been there for five years. Nobody can get into the top 10. How did you manage to do it? How did you out of nowhere come to the stage? Yeah, you had your own stake. It helped. But what's your game plan here? What if you didn't have that?
+
+Greg Weld (Crypto Lab Tech) 
+So if you don't have that, then you need to communicate.
+
+with people and be part of communities. And beyond my own self-stake, that's what I've had to do. I've participated in the passage community or decentered community or any chains that I validate for. I'm in the discord, I'm answering questions, I'm learning about the projects and being involved. I mean, look at the big validators. Okay, so like, I first got into secret,
+
+back when I heard about the shade airdrop happening, and they said it in advance, there was like three different chains that if you had coins staked on, that you could get an airdrop. And so...
+
+I could not figure out how to get coins over to secret at the time. IBC was not enabled. And so I reached out to Lavender five nodes. I think it was Schultz. He answered all my questions and helped me out. Like that dude is everywhere. Um, and always answering questions, super helpful. And that's the way a lot of validators are. And.
+
+As I said, I think that makes it very friendly for the community and just easy to be in. But in order for you to get more delegators, you need to be helping people.
+
+Greg Weld (Crypto Lab Tech) 
+That's, yeah.
+
+Citizen Web3 
+What about, you know, this is retail, of course, you're talking about retail. What about foundations? How does anybody that starts a validator, in your opinion, what would be your advice to them to work just with retail, like you said, just said now, or to actually go and try to explore foundation delegations? Or maybe, I don't know, how do they look for whales, for example, because usually whales...
+
+aren't in the chats asking how do I, I don't know, stake my coins usually, or at least so the validators think so that whales aren't in the chats.
+
+Greg Weld (Crypto Lab Tech)
+I mean, I think it's still being involved in the community. I have had like whales on DeCenter delegate to me because I was in community calls. It's community involvement, 100%. And if whales don't delegate to you, then like.
+
+There's nothing you're going to be able to do to convince them. But whether you're providing RPC nodes or answering questions or running a relay or having yourself known in communities is going to be, in my opinion, the best organic way to get followers to...
+
+delegate to you. I mean, you know, some people on Twitter, I mean, you look at Crypto Ceto, he's got Stake Ceto and he's got a massive presence, but he's super helpful. He's always producing great content and, again, educating people. So, in my opinion, education is the best route.
+
+Citizen Web3
+Absolutely. What about, you know, chain selection or so to speak? How do you approach it? How do you currently decide because you mentioned the cash, you mentioned VPN, you mentioned mainly Cosmos chains. I don't know if you validate anything outside of Cosmos currently. What's your process here personally? How the Crypto Lab or Greg
+
+decide to okay or where is it going? Is there like an end goal of I don't know, we want to validate all the chains on Cosmos or want to violate all DVPNs or whatever. Is there is there such a goal or how does the selection work?
+
+Greg Weld (Crypto Lab Tech)
+I look at every project really closely and see how much value I think it has, whether I think it's going to succeed, whether it's adding positivity to crypto. So there's a lot of chains that I don't think I'd ever find interest in validating because I just don't.
+
+think that they're going to go anywhere and I don't want to name any of those chains but I think that there's some that I mean if I had like all the money in the world and I wanted to go like 100% all in on crypto there's an economy of scale running validators that the more that you run the more you can virtualize it and just make more money off of it but
+
+with the small amount that I have, I have to be choosy about what chains I validate for. So like one of them that I'm looking at currently is Nolus. I think it's a phenomenal product with a very intuitive interface and a great use case. And so that's something I haven't ventured into validating outside of the Cosmos ecosystem, but it's something I consider.
+
+outside Cosmos is like monolithic chains, not app chains, and that's why I find the Cosmos ecosystem interesting, because like every app has its own chain, and so you can explore how valuable that chain's functionality is. I mean, like Solana has a million things that it does, and so
+
+it's probably going to succeed. I think that's pretty safe chain to validate on. But yeah, but it's just something I haven't broken into.
+
+Citizen Web3
+I'm always curious to see validators become more and more broadening the infrastructure of Web3 because today's Web3 infrastructure, it's sometimes hard to call it Web3, especially when we get into API calls and data rendering and everything else. About infrastructure, are you currently using cloud infrastructure, bare metal mixtures?
+
+anything you can talk about here.
+
+Greg Weld (Crypto Lab Tech)
+Yeah, it's all bare metal. So I try to run as much of it as possible off of solar. I have a bunch of solar panels. I have Tesla Powerwalls. I have some NetApp storage equipment. I run Dell servers and switches. I run Starlink internet and currently Spectrum.
+
+cable internet so that I have redundant connections. So yeah, it's all bare metal. And that's been stuff that I had the knowledge to use already from previous work. And so that part is difficult for people to break into. And I've had conversations with other validators who are trying to get started of like, what do I use for a server to get started? And...
+
+starting bare metal can be difficult, especially if you don't know Linux or if you don't have the hardware or bandwidth. So cloud is a great place to start, but at the same time you need a pretty fast system and that can be expensive in the cloud. And even for me, being in California, power is very expensive, so if I didn't have solar to power it, it'd be unaffordable.
+
+Citizen Web3 
+Do you?
+
+Citizen Web3
+Do you use 610, 630s? The servers, the deals.
+
+Greg Weld (Crypto Lab Tech) 
+other R640s.
+
+Citizen Web3
+640 is interesting. Usually like 630, 610s are there. Why 640s? What's the capabilities there that attract you to 640s? I got a good deal. I like it. I like a good deal. Sorry, I didn't hear the answer. I love that. It's a great answer.
+
+Greg Weld (Crypto Lab Tech) 
+I got a good deal. And they're, yeah, they're small form factor. Like it's the rack mount, but they're, you know, one U, two U, I can't remember. But they're very small. So they've got, you know, the dual power supplies. They've got, I don't have any hard drives in mine. So they're just running off of network storage, but.
+
+Citizen Web3 
+Doesn't matter.
+
+Greg Weld (Crypto Lab Tech) 
+really fast network storage.
+
+Citizen Web3 
+That's an interesting solution, by the way, because disks are one of the biggest pain points of bare-metre validators. Well, electricity, of course, monitoring disks. But disks is something that I've had guests who are like, sing praises and then guests are like, oh my God, disks. So...
+
+And now you are the first bare metal validator that says, I run everything of network storage. How's that experience been? Why did you decide to go that way?
+
+Greg Weld (Crypto Lab Tech) 
+So the network storage has to be something very fast. So I use NetApp network storage. So it's got an NVRAM cache that confirms writes before it writes to disk that are battery-backed. So if you had a power outage, no data is lost. And it's writing to a RAID 6 array across really fast SSDs. So you get faster than SSD performance because you're writing.
+
+to basically NVMe that's dumping after two SSDs. So, and the network latency isn't an issue because I'm running multiple 10 gig links that only go like one foot, so.
+
+Citizen Web3 
+What about you mentioned you have currently Starlink also have, by the way, with my Starlink and of course, normal broadband. I remember talking to Greg, sorry, to Jacob. Sorry, my apologies, Greg. I remember talking to Jacob. I'm looking at your name and I'm saying Greg. I'm talking to Jacob and Jacob, one of the few people that likes to use house grade rather than.
+
+industrial-grade equipment for the servers. It's not the only one, but what stood out with me was his way of connecting internet because there was no option for him for Starlink. I remember he was saying that he has like four or five different mobile routers that switch on in case one... I mean, I'm guessing in California, or I'm assuming, excuse me, I'm assuming in California that problem doesn't exist when you have your Broadbonnet and Starlink.
+
+And this is my solution as well. How has your experience been with that?
+
+Greg Weld (Crypto Lab Tech) 
+Starlink is not amazing here. It's maybe getting better, but...
+
+Citizen Web3
+Yes, it's not here as well. Ping is terrible.
+
+Greg Weld (Crypto Lab Tech) 
+Yeah, so it's a great backup connection. That's the thing is that I have to have the internet up at all times. So two weeks ago, my spectrum connection died because my cable monitor just completely quit, but the validators just kept running because I had another connection. And that's the problem with like the area that I'm in is that there aren't other options for a connection unless it's very slow.
+
+And I want to stay up and running, but I don't want to be crawling along. So Starlink performance goes up and down. It can be pretty solid, and at times, I think it's the same speed as dial-up, but it's active, and most of the time, it's decent. So as a backup connection, it's fantastic, especially because, like I've said, I run off solar and off of power walls. And so if there was a major brownout or power outage in California, which we've had in the past,
+
+Since I'm running Starlink, I would keep running. Even with no power, where I'm at is going to be powered.
+
+Citizen Web3
+I definitely would love to reach a point where in five years time, or this is my goal at least as a validator, to have complete decentralized infrastructure for my validators. When I say that, I mean not just having a mega or whatever, two megawatts of production of electricity, but also being able to...
+
+Internet, whatever. And you mentioned that, okay, I have solved some experiments. For example, my Starlink is actually running off solar. But this is an experiment. It's not actually currently connected to any nodes. In fact, the last power outrage we had on the island had an issue with the setup that I did and good that it wasn't connected to any nodes, that it was just an experiment. But what is your experience? Because a lot of people, when they hear solar, first of all, of course, they start to calculate
+
+battery costs, then the you know, the war costs, then the like, that, that everything else, not efficient, not good. What would you say to them? Would you say that, hey, guys, nothing to be scared of, just know what you're doing and keep going? Yeah, go on. What would you say to this statement?
+
+Greg Weld (Crypto Lab Tech) 
+I mean, so any installation that you're going to do with solar, you're going to pay it back off of whatever you're doing with it. So obviously, there's a huge upfront cost. It's very expensive for not just solar panels, but batteries of some kind. But if you were doing anything in that location at all, whether it was crypto stuff or just a house.
+
+you're going to pay back that amount of money within five to ten years and then it's just extra money. So to anybody that would be thinking about solar, I would say it's worth it. If you can afford the upfront cost, and that's part of the problem at this point, is that it's a rich people thing. Like not everybody can afford to install solar, but
+
+like people who are on the edge of I don't know if I can afford it, I would say in the end if you're going to stay where you are, whether it's your house or whether it's your business, that it's going to pay itself off at some point and then it's just extra money.
+
+Citizen Web3
+Absolutely, I totally agree. You know, there is of course, other options, of course, I will back you up on to say that this is some sometimes rich people stuff the other options like wind energy and but thing is, I was surprised, you know, walking into Lerwa, Merlen, I don't know if I'm pronouncing it correctly, pardon my pronunciation, you know, just any big maintenance shop that sells a lot of stuff, I was surprised to see all those stuff suddenly.
+
+because I wasn't into those things over the years before that. And I had like a five or six year gap there. And then I went and I was like, Whoa, they have a Starlink here. They have like a wind generator. What's going on? You know, I mean, it's not cheap, not cheap at all. But yeah, it's fascinating to see that progress of the last 10 years, you know, to be enabled by a 3d printer, a Starlink and a wind turbine in your kind of, you know, like
+
+five minutes away driving from home to a shop. It's fascinating to me. It really is that, yeah.
+
+Greg Weld (Crypto Lab Tech)
+I think.
+
+eventually it won't be a rich people thing. As adoption gets greater, it's going to cut down manufacturing costs, it's going to cut down transportation costs and better technologies. Recycling a windmill blade at this point is near impossible, but they already have many solutions in the pipe where some are being used for other things or they're starting to make them out of wood or a million different things. And same thing with solar panels. They've already
+
+Citizen Web3 
+Yes.
+
+Greg Weld (Crypto Lab Tech)
+that can correctly delaminate the layers. But initially, solar panel recycling was a nightmare. EV battery recycling, a nightmare. But as it's like...
+
+getting wider adoption and there's just more there so that you won't if you were like a an EV battering recycling company, you would be waiting for cars to die and then be able to recycle them. But if it spreads to be like 50% of the US is using them, then you have a steady flow and you can make a more efficient process. It just becomes more profitable to
+
+Greg Weld (Crypto Lab Tech)
+learning and building stage but that eventually all of those energy-efficient things will be affordable for every people every person.
+
+Citizen Web3 
+I think like a great example of the learning curve or learning curve from what you mentioned. And again, this might be my personal learning curve because I'm not that familiar with it, at least until a certain point, like half a year ago, a year ago. So, but the simple fact, I didn't know, for example, until recently that a solar panel is able to generate if you have the right surface underneath it from both sides. Like, yeah, not every solar panel, but I wasn't aware of those things.
+
+curve of just like finding out, you know, or for example, again, today, you know, water energy to produce. I live on an island and you know, our island produces a very small amount of green energy, but a lot of my friends who understand better me who work in ecology, I have some friends.
+
+I have some friends was a good sentence, but I have some friends working in the ecological sector of the island. And they always talk about the silliness of not being able while we live on an island to use the water motion that we have to produce green energy because that is cheaper, better, more efficient. Yeah, technology is not that new. It's still, but why not? And nobody even looks at it. Nobody even cares and thinks about it. What the water is all around us.
+
+Greg Weld (Crypto Lab Tech) 
+Yeah, wave technology is behind, but like you said, it has massive potential. The biggest problem you have with wave energy is corrosion because it's salt water. But if they can figure out a solution to the corrosion part, like...
+
+Citizen Web3 
+man.
+
+Citizen Web3 
+Yes.
+
+Greg Weld (Crypto Lab Tech) 
+water is extremely powerful and just that motion of the waves which naturally happens from the wind can generate so much power. And you can stack energy sources on top of each other where you can have wave generation anchored to the bottom of the ocean and then have windmills standing on top of it and having the same power feeds going to the land. So it could be immensely more efficient than other sources of power.
+
+Citizen Web3 
+You know, I remember watching a documentary about technologies that we as humanity have lost access to or regained access to. And one of the most fascinating ones, which is, as far as I know, again, this is I sell for what I buy here kind of sentence before I say it, because it's a bit, but OK. What fascinated me was they were shown and I heard that it's a used thing now.
+
+And that they were looking at the buildings, you know, what makes me think about it's what you say about the cost of wave technology and the erosion. And anyways, and they were looking at the Roman and the Greek buildings around Europe and saying that's strange. You know, those buildings should be the wave, the wind, sorry, the next with the sea salt water should have by now destroyed the cement, but it doesn't. So they decided to, to see what the fuck is happening. Why is it not being destroyed? Because we believe for the last.
+
+few hundred years that it should not be like that. So when they analyze that cement, they realize that it has not just added salt water to it. It's using different like lava, a specific lava stone rock, which was broken. Anyways, the point is that wind with the salt water in it to that type of cement actually strengthened. And that's the reason why they've been standing there for 2000 years and not just untouched, but they look like they're sometimes.
+
+looking much better than the houses we built five years ago. So maybe that erosion thing, which we currently are stuck with, you know, hopefully we will manage to find the solution to that as well. Yeah, I have another kind of like quick question for you and then to jump into the bleeds to summarize what we kind of spoke about. What? Because we spoke a lot about education and a lot about technology.
+
+What's in your opinion, the role of a validator today? And the second part of the question, what would you do or what would you change in education to users about validators today?
+
+Greg Weld (Crypto Lab Tech) 
+So, I mean, the role of a validator, obviously, to validate the chain, but also to participate in community with whatever chains that they validate. And I think I've seen that with almost all the validators. If they're validating for a chain, then they're part of the community. They're on the Discord, they answer questions on Twitter, what not. And so I think that that's most of the way already there.
+
+what would I change about education? There's so much. I mean, I think that it would be amazing if somebody spun up an incentivized education platform on crypto to teach people about crypto. Like we have little things like Coinbase has Coinbase earn and CoinGecko has...
+
+things that they do occasionally that are incentivized by the chains that are launching them. But if there was some mechanism that could be built that rewarded people with either crypto or NFTs or something that they could go through and learn stuff, then that would be awesome. I think that could teach a lot of people and the incentive would be there.
+
+to onboard so many people to crypto. Because most people see it and know that it's there, but they don't see a reason to get into it. And so the incentive for education would be a way to get them there. And then once they learned about it, they would say, there's so many reasons to use crypto over the regular banking system. And I think that can drive adoption.
+
+Citizen Web3 
+Absolutely, absolutely. Okay, to jump from that, it's a good place, I think to jump into the blitz, you will see with the questions, it makes sense. But the first one is going to be a bit strange. Well, they're all a bit strange, but the first one is definitely strange. Give me one movie or one book or one song that has been with you for a substantial part of your life.
+
+Greg Weld (Crypto Lab Tech) 
+Uh, Goonies? I love the movie Goonies. I think that, like, that is what I always want to be inside, is like that interested in exploring young kid.
+
+Citizen Web3 
+great.
+
+Citizen Web3 
+I love it. No, I love it. This is this is a very original answer. I loved it. Um, what about, um, give me one type of technological direction, such as blockchain, for example, or machine learning, or I don't know, any other one that you find very fascinating apart from blockchain, of course.
+
+Greg Weld (Crypto Lab Tech) 
+that I find fascinating. I mean, I love green energy. I think that it's, I think that, no, yeah, you're leading the witness. So I think maybe green energy, but I think that home efficiency, sounds so nerdy and boring, but I think that it's, to me, fascinating the
+
+Citizen Web3 
+Green energy?
+
+Citizen Web3 
+Okay, there we go. Sorry, sorry, I stole it, but it's because of your answer. It was because of your answers, you know. I'm sorry about it, Greg.
+
+Citizen Web3 
+Nah, love it.
+
+Greg Weld (Crypto Lab Tech)
+materials for insulation, the idea of like insulating the... Yeah, like I think so many people don't really think about that when building a house. And so it's fascinating to me to see the savings of insulating the air-conditioned envelope on a house, so like your attic being insulated. Nobody does that, but...
+
+It's a little bit more expensive and then so much more beneficial to your AC system. Like nobody thinks about unblowing cold air through a 120 degree space, something like that. That's a way long answer, but...
+
+Citizen Web3 
+It's not, it's not. I could have a whole podcast on house efficiency because I'm fascinated with the topic. Seriously. It's, I think the way we design houses in general, the rooms is so outdated. It's worse than the educational system. It's got nothing to do with reality today. For example, the way the size of the rooms, even the size, I mean, it doesn't make sense, but anyways, we could do a whole, would love to one day. Definitely. Third question. Give me, of course, please don't say Bitcoin, Ethereum, Cosmos. You can.
+
+if you want, but give me one project from the crypto space, preferably something that people not necessarily heard of that you find fascinating.
+
+Greg Weld (Crypto Lab Tech)
+Can it be for a chain that I validate for? Is that cheating?
+
+Citizen Web3 
+you can be whatever you want. It can be also Bitcoin if you would like to choose their answer, but it's up to you.
+
+Greg Weld (Crypto Lab Tech) 
+I find the use cases that Passage has absolutely amazing. Like an environment where you can spin up a metaverse in 60 seconds has so many uses. I mean, people think of it as, oh, it's just a metaverse, but it could be used for things like education, like online education, you could have a virtual classroom. You could have a...
+
+competitor to Ticketmaster where all of the tickets are NFTs and you would be able to click on the location and see the view of the stage in a virtual world before you buy the tickets. There's just a million use cases. There's a million things you could do being able to spin up metaverses on demand. And the fact that it runs on Akash, the decentralized cloud, I think is just...
+
+amazing. You think of like now, if you buy a game, you have to download that game, and you have to have a powerful GPU, but if everything is rendered in the cloud and streamed to you, it opens up the access for so many more people that I can play things on my phone or on like a Chromebook, and I don't have to have a crazy GPU. So I think that the passage has
+
+like a lot of use cases that you could talk about all day that people aren't thinking of yet.
+
+Citizen Web3 
+I was just talking literally before our recording with a friend about AI and about the costs of the GPUs needed to render at home, Grok, which was open-sourced recently. And we're talking five of those cards. And I think each one of these costs roughly $30,000. So it's industrial-grade devices, of course. But yeah, not easy. OK, yeah, go on. Go on, sorry.
+
+Greg Weld (Crypto Lab Tech) 
+I think Greg Asuri was just posting yesterday about how he got Grok up and running on Akash on like 8 or 10 H100s or something. That's crazy to me.
+
+Citizen Web3 
+Nice. Nice, nice. Okay. The last two are going to be a bit weird, but I promise the last two. Um, even weirder than those. So the first one, give me one motivational thing that, uh, keeps Greg, you know, uh, improving the efficiency of his house, running validator nodes, I don't know. Um, exploring green energy and the being part of the community, waking out of bed, something motivational.
+
+Greg Weld (Crypto Lab Tech) 
+The thing that motivates me is helping other people, not just in crypto, but like altogether. It's driven me my whole life. It's gotten me from the East Coast in Massachusetts to Utah to California. I think that it betters me and it betters other people and I think that if everybody was more open-minded to just help other people, that in little steps we could just make the whole world a lot better place.
+
+Citizen Web3 
+Beautiful.
+
+Greg Weld (Crypto Lab Tech) 
+It's really maybe a naive outlook. I don't know, but I think it does. It makes an impact.
+
+Citizen Web3 
+I-I-
+
+It's not. It connects a lot with me personally. I honestly think that the bottom line is really about, you know, just a little bit better. Last one. Give me a character or a real person. They can be imaginary. They can be a friend. They can be family. They can be a cartoon character, can be a writer, can be a blockchain developer. Someone somewhat something that has had.
+
+some kind of inspiration on Greg throughout all his life. Again, not a guru, not an idol, because I don't like to believe in those personally, but something or somebody or a character or a personage that has had an inspiration on you personally throughout all your life, or part of your life, or today even maybe.
+
+Greg Weld (Crypto Lab Tech) 
+I mean, today, the most inspirational person in my life is my wife. She is the most positive person I have ever met.
+
+Citizen Web3 
+I really, this unmute thing, I want to do a click and then it un-mutes, but it doesn't work like that. I always love it when people finish on that note and go to their family members. Because having idols is one thing, but when a family member, somebody that inspires you or your lover or wife or whatever, I think it changes the perspective on the way we kind of interact with the world.
+
+Greg, I want to... Sorry, go on, sorry.
+
+Greg Weld (Crypto Lab Tech) 
+Oh yeah.
+
+I mean, I would be a completely different person without the positivity of my wife. Like for real, she's like a little positivity battery that's beaming out positive vibes all the time. And I think everybody should have somebody like that in their life who is just jam-packed full of positivity.
+
+Citizen Web3 
+You're a very lucky man, that's all I can say. Greg, I want to thank you very much for coming to the show, for answering the questions. I know some of them are a bit annoying, can be a little bit annoying. So thank you very much.
+
+Greg Weld (Crypto Lab Tech)
+Yeah, thank you. It was fantastic.
+
+Citizen Web3 
+Please don't hang up just yet. We're just gonna say goodbye to all the listeners. Thank you everybody for tuning in. And all the show notes are of course under the description of the episode. So everything Greg and me mentioned, you can find links to there. And see you guys next time. Thank you.
+
+Citizen Web3 
+So.
+
+Outro:
+This content was created by the citizen web3 validator you may support our work by delegating to any of our nodes.
+

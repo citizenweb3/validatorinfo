@@ -1,0 +1,563 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/davidholtzman
+
+Episode name:
+Silicon Valley, Quantum and Genetic Computing with David Holtzman
+
+Citizen Web3 
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. Today I have David Holtzman from Naoris Protocol. I'm very excited to introduce David. He's just currently a minute ago described himself as having a weird background and hence David, hi, welcome to the show. And my first question to you, please describe your background. What are you doing? What do you work? What do you do? What do you want people to know about you? And how did you get into Web3? Sorry for the long intro, but yeah, hi.
+
+David
+No, no, it's, mean, philosophically, I was Web 3 long before there was Web 3. And I want to talk about that a little bit. So let me go through the facts and then I'll try to tie it together. So I started off, I got a degree in philosophy. I taught philosophy. I got married. I had a child very young and I joined the United States Navy at the end of the Vietnam War.
+
+Citizen Web3
+Please.
+
+David 
+because of my test scores, they made me into an intelligence agent, a spion. So I spent eight years doing that in various forms. I went to a two -year school to learn Russian. I went to cryptographic school. I was a submariner. And I worked at the National Security Agency. So sometimes I would be out at sea doing the kind of things you might
+
+I think a Russian linguist would do in a submarine at the end of the Cold War. And sometimes I was back at the National Security Agency and I was an expert on the cosmonaut program. So I used to track all the Soyuz 7 launches and, I mean, the launches to Soyuz 7 and then Mir. And that kind of all blew up when the Challenger blew up.
+
+So I did that for a while. I was always interested in computers and I used the money that they gave me for that to buy. I think it was an Epson PX8 Geneva, which was a little laptop. It was a CPM machine.
+
+and it used micro cassette tape. was each micro cassette tape was 2k and it took an hour to load and it cost $500 to buy the thing and I was really happy to have it at the time. So I took that out to sea with me on submarines.
+
+Citizen Web3 
+Wow.
+
+David 
+went back to school, got a degree in computer science and math. And then I did grad work at Johns Hopkins. And I left the service, left the government and decided that this internet thing was going to be really, really big. And I wanted to be there. So this was in the very early eighties. Is this too much information Serj? Is this good? Okay. So, okay.
+
+Citizen Web3 
+This is more than perfect, please carry on. It's perfect.
+
+David 
+Okay. So, I saw, I saw things happening and I had the right educational background.
+
+And I was in the right spot. So most people wouldn't know this, but I think if 43 % of all packets in the internet go through Herndon, Virginia, right outside Washington, DC, it's because the internet was started by the National Science Foundation in the US. So several of the root servers were there for DNS. The NOX were there May East. So AOL at the time was a big deal. So
+
+The heart of the internet from an infrastructure perspective was within a mile or two of where I was living.
+
+So I started doing various internet programming jobs. I quickly got into software architecture. I designed some fairly big systems. I went to Booz Allen and Hamilton, the management consulting firm. I was in charge of the research. And I built a system called Minerva. This is mid-'80s. Heterogeneous data access. was tying in relational databases, free text, photos, anything I could get my hands on.
+
+And they didn't know how to deal with it, so they sold it to IBM and they sold me with it. So I took a team of about 12 people and the software and me, and I became the fledgling chief scientist of the Internet Information Group at IBM. So at the time, this is like around 1989 maybe, so at the time, IBM was, they probably wouldn't want to acknowledge this,
+
+David
+now, but everything they were doing was completely wrong as far as the internet goes. Every single thing. All their protocols. So they didn't use TCP IP. They used SNA. They didn't use ethernet. They use token ring. And they tried to make everybody else do that too. So they had a big network called IGN or Advanas down in, I guess it was Tampa, Florida. And they got their big customers.
+
+And they would tell them, no, we don't want to use this TCP IP stuff. Nobody wants it. Nobody's going to use it. And, you know, obviously they were wrong. And I knew they were wrong, too. So I became a big fan of TCP IP and just conceptually the OSI stack, even though that's not really that. So I was there for a couple of years. I built their their distributed rights management system.
+
+called Cryptolopes and it was ahead of its time. They didn't have the patents. It wasn't going anywhere. This is 96, 95. I was getting tons and tons and tons of job offers because virtually nobody actually knew the internet at that point. And the one I decided, I turned down some really big jobs. I spent four years working with.
+
+for Steve with Steve Jobs doing next computer programming when I was at Booth. So I knew Steve reasonably well and a lot of other people. And because of that background, it sharpened me up for what was about to come. So I was offered the job of head of operating systems at Apple.
+
+I was offered basically the CTO job at AOL. And I turned all that down and I took a job at a very small company called Network Solutions. And Network Solutions had about 80 people. And the thing they had that was kind of interesting is they had a contract to run a pretty significant part of the internet's infrastructure.
+
+David
+and they ran the domain name system, they ran the root servers, the CDPD, which was the cellular NIC, and a whole bunch of other things. And they didn't understand it, they didn't care. It's what was called a cost plus contract.
+
+So if they spent a dollar, they got a dollar and a nickel and that was their profit. So the company was bought by a large military company that I knew. They brought me in to be the CTO and then everything exploded. This was 96. We started that year at 50 ,000 domain names and we finished it at a million.
+
+There's 100 million now. today when you see domain names, so much of it's just marketing stuff for click bait and everything. At the time, almost every single domain name was an actual website. So if somebody bought a domain name, it's because they had just done a startup company or something. So this was basically what was called the dot com bubble.
+
+So you have all these people getting money from investors, venture capitalists. And it was very interesting. I can tell you all kinds of stories, crazy stories about that. So I ran all of that all the way through Y2K. So I was running the domain name system at Y2K and I was part of a task group that reported a
+
+the White House and President Clinton, and I represented the internet. And it was terrifying. I still don't know why the whole internet didn't flame out. It should have. So there was really nothing, yeah, there was nothing in place to stop it really. But got through that. The company went public. I made some money. We did two secondaries. We got bought by VeriSign and as part of the deal.
+
+Citizen Web3
+The ones and zeros.
+
+David 
+They vested me out and I got to leave and I started writing books on privacy I wrote a book called privacy lost that that was still taught in law schools and it's on Amazon and I went around and tried to convince people that the that their privacy was about to get screwed but of course nobody believed me and I mean now they do but at the time they didn't and then I from there I ran two United States presidential campaigns
+
+I was the CTO for Senator Bai's campaign and I was the chief security officer for General Wesley Clark's campaign. And then I got into blockchain and I was doing blockchain stuff. There's a company called Ocean. I was Ocean's first advisor when they weren't Ocean. They've been through three name changes back then and I was one of the first people. So I've been with them the whole way.
+
+and then eventually I got into Neorus and some other stuff. So now I write spy novels. So in addition to consulting. So again, pretty weird background.
+
+Citizen Web3 
+I wouldn't say it's weird. would say first of all, I think it's absolutely fascinating and I want to thank you for, you know, going through, you know, how they say in America, which I'm sorry, but there is a phrase in America that I could never connect to. It's thank you for your service. But to you, I could say thank you for your service because that really connects with me. And what you did is really like, man, this is like the life, dream life, you know.
+
+To be honest with you, there is a lot of things that connect with me. I started philosophy, I was in the Israeli army, the Russian army. And ironically, you were talking about $500 and something that really sprung into my mind of how the world is changing. But I want to put it back to you, but I just want to put that note out there because you were talking about the cassettes and $500 today for 500 bucks. You can go on Kickstarter and you can buy a
+
+DNA imprinted memory card. There is a startup that sells for 500 euros. Sorry one kilobyte. It's crazy. It's fascinating
+
+David 
+I saw that. Well, well, search, OK, so I mean, let's put some perspective on this. So here's brand new Apple Watch. There's more memory in there than there was in the entire planet when they landed on the moon. Think about that. It is crazy. And we've barely touched the surface. I mean, you mentioned DNA encoding.
+
+Citizen Web3
+Yes, it's crazy. This is crazy. Yes, yes, yes, it's mental.
+
+Absolutely
+
+David
+I mean, once we, we haven't gotten into three dimensional memory yet and they're starting to do that. And once we start having solid state three dimensional memory, mean, and then quantum computing and genetic computing. So it's an exciting time to be alive, I think.
+
+Citizen Web3 
+No. No.
+
+Citizen Web3 
+Yes, yes, yes, yes. I think this is why I say thank you for your service because for me, being like roughly a 40 year old or so, I think that what I'm going through and what I'm reliving is a lot thanks to the people who did AOL, who created all that. of course we can talk about the big, we will talk a little bit about it. Sorry, I'm running ahead of myself because I have a lot of questions for you because you have such a
+
+David 
+Sure.
+
+Citizen Web3
+rich background that I have so many things to ask, but I want to ask if you like chit chat questions first before we get to the hard stuff, because this is interesting first and otherwise my team will also kill me because they're like, Serge, man, this guy, you have to ask him this. We have to know this. We have to know the secrets who killed JFK, you but, know, you worked first. First of all, you know, the Soviet cosmonauts of the national security, the NSA, I want to ask
+
+David 
+Whoa.
+
+Yeah, yeah, yeah, of course.
+
+Citizen Web3
+How was that experience? Because that sounds an absolutely mind blowing story that I don't know. What did you do there that you can talk about, of course? And how did it influence your cybersecurity journey, so to speak?
+
+David
+That's a good question. So I was at NSA in the 80s and
+
+I mean, let's paint a picture, okay? The headquarters of NSA is Fort Meade, Maryland, and there's a huge building, and they call it the Puzzle Palace, and that's NSA's headquarters. So at the time when I worked there, there was like a drug store and a dry cleaner, because they didn't want people to leave, you just, know, they were all, everybody was a nerd. Anybody working in NSA was an absolute nerd. They did crossword puzzles.
+
+They spoke, many people spoke three or four languages and they had clubs that would get together in the cafeteria and just speak Serbian or something and it was, you know, everybody spoke Russian so that was an easy one. But we, I used to be able to park a car in front of the building next to the, where the drug store
+
+and leave the car running and run in and buy something and run back out and nobody cared. things have changed. Now let's compare that to Edward Snowden walking out of that same building with a USB dongle with a pretty significant amount of classified information on it. The digital world is a game changer.
+
+Citizen Web3 
+Yes.
+
+David 
+And the tech is an enormous game changer because in recorded history, there's always been a one -to -one correlation between the volume of a media and the amount of information stored on that media. That is no longer true. So.
+
+I could put out two chips and one's got the entire Encyclopedia Britannica on it and one has something I wrote this morning and they would look the same. There's no way to differentiate that. And it's very difficult to stop people from taking information when it's that easy. So that's one big change.
+
+If I could step out and make a philosophical comment for a because I want to get back to this. So my whole career was based on information. Intelligence agent, philosopher, writer, running the DNS system. It's all about information. When I was a kid, I was a bibliophile. I was a bookworm.
+
+I had really thick glasses. read everything I could find. And I've always been fascinated with facts and information and what's true and what isn't true. And I still am to this day. So the thing I realized when I was running the DNS system is in this, this is basically centralized control of information was a very bad thing.
+
+And I said this a lot, as you can imagine, people were not very receptive to that idea. So I had to design a new DNS system because the Department of Commerce in the US wanted us to create a group that would run it that was international. And that's where ICANN came from. So I was involved starting ICANN. I didn't want to start ICANN, but I had to.
+
+David 
+So the real issue was what was the new architecture of the DNS system going to be for registration? What they wanted, what was called a FAT registry. So there would be one registry and then everybody in the world had to get their domain names from that registry. And of course, presumably that registry would be in the United States or maybe the ITU or something. So I thought that was a horrible idea because anybody who knows DNS
+
+You can just turn a little switch, know, metaphorically, and you can turn, you can knock a country off the internet. We knocked, in 1997, we knocked, I think it was Armenia off the net for like a week. And I'm not even sure anybody noticed, to be honest, because they didn't have that many emails and domain names. But in 98, we had an accident and someone who worked for me screwed up.
+
+and they took pretty much the whole internet down overnight. And you can look it up in Google at those front page news everywhere. And I was the spokesman trying to explain it.
+
+So that kind of thing convinced me not to design a centralized system. So what I did is I used a slush fund of money I had. I hired some friends of mine who had a consulting company and I designed something and got them to build it and I still have the patent on it. And that's the registration system that ICANN is using today. But it's got an extra layer in it.
+
+So there's the icon piece at top, which has the dot, and then the second layer, which is country. So .ru, .us, whatever. And then you have registrars selling domain names. it creates some, it makes it harder to be fascist and control the whole thing. So the, yeah.
+
+Citizen Web3 
+I have a question. If I can ask you a question actually related to that, sorry, because they say you were talking, please do remember that point and please carry on from that. But it's a question that has been discussed for a long time. It's kind of like anecdotal information that is disproven. And maybe you can actually prove this to me because it's been mentioned over the last four years on the podcast several times. So they say, and I can still see that.
+
+David 
+Yeah.
+
+David 
+Of
+
+Citizen Web3
+that the way that the internet was designed during the Cold War, before the upper night and everything, was sort of, let's call it the switch that is still today used. This is when Google maps and everything starts to work crazy. If you live next to an army base, they say that they still use that. And there was some kind of scandal. I don't know if again, if it was true, if this was just rumors to remove that, that it's not needed anymore because the frequencies.
+
+that back then the army was afraid of that could be used by the civilians aren't used today in the internet technologies anyways. And apparently there is still like, I don't know if it's true. I don't know if this is all bullshit and fairy tales or is there... So, yes. apparently, apparently, apparently in the way that the internet was designed and there is like, you're a good person to ask this, this is kind of true.
+
+David
+I'm not, I'm not, can you, can you explain more? Cause I'm not sure I understand it.
+
+Citizen Web3
+that the US Army was really scared of people interfering with the frequencies and so they designed what was called, let's call it an off switch, which would switch from this particular frequency, which is used by everybody for the internet, to in quotations here, to some other special army frequency, which only they can use. But apparently it's all dated, but apparently it still exists and apparently they still use it.
+
+And apparently we feel when it's used, if you live next to an army base or something, and then sometimes when they have trainings, they use that. And that's when the GPS starts going crazy. And sometimes like I live on an island, so we have an army base. And when they do have trainings, usually for one or two days between 20 to 40 hours, your GPS will start just going like, that's it. You can use it, but it's pretty much unusable. So.
+
+The question is, is this true or is this a pile of bullshit that is invented by, you know, well, I can understand where it comes from.
+
+David
+My personal opinion is it's a pile of bullshit. there is sort of two things I can unpack there. Number one, the GPS system was designed for missile targeting. So it was never supposed to be a civilian use system ever. And then it just came out that way because people took advantage of the signal.
+
+So while we were doing that, the Russians had a system called GLONASS, which was, they still have it. It's like GPS. there's several countries have satellite constellations and I'm sure Elon Musk's Starlink stuff.
+
+probably provide sorted GPS services too. So they have a frequency. You can mess with that frequency. The other thing is, and this is true, the US Army has the ability, well, the government in the United States, supposedly, and I know this is true, they have the ability to change the accuracy of GPS instantly. So.
+
+So right now it's good to 10 feet. If they throw the switch, it goes to a hundred feet. And the reason is they don't want other countries to be able to use our GPS system for missile targeting. So that's true. But, but there's another piece to this. It's not really what you're saying, but it's good to bring out. So the internet was not created by, the military. The internet was created by scientists at,
+
+Citizen Web3 
+huh.
+
+David 
+a number of atomic facilities, Los Alamos, Sandia, White Plains, stuff like that. And it was created, and this is actually really interesting when you think about it, to avoid the danger of having a centralized communication system. Because in the United States, the entire telephone network,
+
+went to one place in a hub and spoke model and it's a city called Omaha, Nebraska. So Omaha was supposedly like one of the top two or three targets for an atomic attack because it would take out the whole phone system in the U .S. Now every other country was built pretty much the same. So that's what the hub and spoke. So everything goes back to the center like a wagon wheel. So the scientists thought that was a really bad idea.
+
+So a guy named Bob Kahn, with the help of another guy named Vin Cerf, created TCP IP. The whole concept of packet switching. So packet switching...
+
+When you send them a packet, a 256 byte packet, you actually send a bunch of them. If you send an email, in theory, that email is being broken down into 256 byte packets, and each one is going out half a dozen times. And then at the other end, it assembles them and makes an email message. And it happens in 50 milliseconds, and you don't know. But the neat part about that is you
+
+mess with it. And this is actually one of the reasons we have a cybersecurity problem. Well, it's one of the big reasons is because the internet was built to, and I'm not the first person to say this, but it was built to route around problem areas. So if there's a problem, like somebody nukes Washington DC, the internet will continue.
+
+David 
+And I think that's amazing, but that is number one, that is incredibly anarchistic. And to some extent, I'm an anarchist in a lot of ways, to be honest, at heart. Yeah, yeah, you understand, okay.
+
+Citizen Web3 
+Me too.
+
+David 
+And Web 3 is anarchy in a good way. I mean, the thing that's going to come out of Web 3, I think, is going to be an entire new governmental system. going to be like the French Revolution. It's going to change power and money. And it already is. And it's going to be very interesting to see where that goes. And the internet is designed to perfectly accommodate this.
+
+So once you put something with like ether for instance with smart contracts and other things or any of any of the other hundreds of cryptocurrencies with with their own blockchains on top I mean each blockchain is almost a sovereign nation
+
+Citizen Web3 
+Absolutely. I think that, you know, I've, I've, I, what you say right now in terms of the design anarchists, this is actually interesting that you say that it's the essence of the show. And we invite a lot of authors on and a lot of people that have had to either be standing at the building stages of the modern internet, of course, you know, more like the nineties, eighties, such as yourself. Not, I'm not talking sixties. That would be a bit more difficult, I guess.
+
+But it's exactly that and this is I'm very happy that you say those things because my next question is it's going to be again It's more about you. But of course in terms of in that perspective now you seem to go through a career which you know, you were working with the White House with the NSA and you know You work with organizations which to a lot of people would be deemed as enemy organizations
+
+They want to destroy us, they want to take over our lives and la la la. If you talk about anarchy. So let's kind of like devil's advocate this. Let's take the three big, big, big nights of the apocalypses of the internet, as I call them. The HTTP, DNS and TCP IP. Of course, without them, the internet would not be possible. But those are the three nights of the apocalypses that really make the internet on the one hand, decentralized. On the other hand, a surveillance machine that allows
+
+David
+Sure.
+
+Citizen Web3
+people to see everything that's happening. Do you think that Web3 can go beyond that? there a way? Because today, let me add something small to this, because the way people are building in Web3 today, sometimes it's very sad. Instead of using Web3 stack, which is actually almost possible to use, it's close enough, they're going back and they're using, know, they're going back to DNS, they're going back to the same...
+
+domain registrants, they're going back to the same issues and the same places. And there is such an opinion today by a lot of anarchists, let's call them in quotations like this, know, crypto anarchists, that the web tree that we are building today is basically lacking balls and lacking the possibility to be, it can be nuked. It can be nuked. That's what I'm trying to say. And the question is to you. Yeah. Can you please comment on that a little bit from your perspective?
+
+David 
+I agree with that.
+
+David
+Well, yeah, let me take the three pieces that you mentioned for a second. I don't think any of them should survive into the next phase except maybe TCPIP.
+
+Citizen Web3 
+Please.
+
+David 
+So the DNS system, I ran the DNS system for almost five years. I ran the root servers. I have one of the old root servers in my house, the one that was running the internet in 2000. When I left, they gave me the computer. So, I mean, I really understand DNS and, and it sucks. DNS is a tree. I mean, it's a hierarchical system. there's virtually no security at the time.
+
+we are authentication mechanism, I hate to admit this, was email addresses. And I couldn't get anyone else to do anything else. So if you sent me an email address, you know, from, don't know what your domain name is, but citizenweb3 .com or whatever it is, I would just let you do whatever you wanted because you must, I I knew better, but I couldn't get the system changed. So it's not much better today. There was a pro...
+
+And this has happened so many times. build something. Engineers build like a protocol or something. And usually like five or six people do it. And I've built a couple of those things in my life. And it's been five, six, seven people. And then the suits look at it and they see a lot of business opportunities. And the next thing you know, there's five or 600 people. And the next thing you know, you're having international conferences like
+
+IEEE and IETF and WWC and stuff like that and ICANN and they're traveling all over the goddamn world and two -thirds of the people there are lawyers not tech people and it's just it's a if you know the term boondoggle it's a boondoggle ICANN is one of the biggest boondoggles in the history of the internet so
+
+The protocols never change because it's not in any of their interests to change those protocols because then they can't take trips anymore. I mean, I guess I said I was cynical, but I think these things don't change. So you may have heard this story and I'm not even sure it's true, but I'll repeat it anyway. Supposedly the width of a road in Britain.
+
+Citizen Web3
+This is awesome. This is awesome.
+
+David 
+is exactly the width of the axle of a Roman chariot. And I've kind of validated that, but it's a great story.
+
+Citizen Web3
+I grew up in the UK. It's funny that you said it and studied some archaeology. So this is really funny that we're going there. Go on, please. We have a lot in common,
+
+David
+Well, well, so, good. well, so, so if let's pretend that's true, what would that mean? What it means is that they put a technology protocol into effect in the year, I don't know, 200 B, well, 200 AD, and all of a sudden it gets replaced, but not really. It gets augmented and augmented and augmented. And then like, I don't know, 1500 years later, they have the same protocol. And, and, and what
+
+Citizen Web3 
+80 % of the roads, European roads are still built on top of the Roman roads.
+
+David 
+Yeah, I mean, there's almost no European city where you can take an SUV and not get stuck in an alley somewhere. And what I just described, the phenomena I just described, is the history of Microsoft, one of the worst computer companies in the history of computer companies. They have never innovated anything. Everything they do, they're number two, number three, number four. And what they're very good at doing is intimidating people.
+
+to get them to follow their protocols even when they're stupid. And that's why people use Microsoft Edge. That's why people use Microsoft Office when they have to. It's not like Microsoft Word is a better word processor. And I use it, by the way, because I write books and my publishers and agents want to see it in Word. But it's an accepted protocol. It's not going to change. And so when I look at...
+
+HTTP and I look at DNS and I look at TCP IP, they're not going to change and this is going to sound awful unless somebody burns it down. This is not technology. There's two ways to look at technological progress. There's the kind way that history books teach and history books always teach you that that innovation is is smooth and continuous like
+
+they did this and then they built this and then they built this and you have this nice smooth curve that goes from Fred Flintstone and the dinosaurs all the way up to Elon Musk. But in reality, technological innovation is, it's what's called a punctuated equilibrium, to use Stephen Gold's words. It's huge bursts of intelligence and innovation and then this period where you entrench.
+
+So that is where we're at with Web3 right now. We've had that burst of innovation and now people are trying to figure out how to make money out of it. And the same thing happened with blockchain. So I just threw a bunch of thoughts. Go ahead.
+
+Citizen Web3 
+You know, it's exactly what I'm looking for because, this is the live conversation, non -rehearsed live conversation. I'm really looking for with people like yourself who are smarter than me and who can, you know, talk about things that are interesting, you know. so, yeah, it's all good. This is what I'm trying to say. So just to get back to what you said, two things, one about Microsoft. It's really true. And you know when I realized that, not because I've been
+
+since computing since I was a kid. No, I realized that because a year and a half ago, I started on Twitter to follow a developer from Microsoft, ex -developer, his name is David something. And he's the guy who used to work for Microsoft in the 80s and 90s and writes loads of code. And the reason I realized what you say is true is because since following him for a year and half, he tells the stories of how he developed all those protocols and that are still used by Microsoft today.
+
+David
+Mm.
+
+Citizen Web3
+And there is almost zero change in them, you know, and he's like, he doesn't tell it from a bad point of view and he's proud of it. You know, it's like, and everybody's like, yeah, this is so cool, but there is no fucking innovation. it, like you say, you know, if, if, if, somebody burns it down and just one more thought, you know, you mentioned the French revolution and I really want to add this because in my opinion, it's a really important point because a lot of people, start the, the,
+
+consensus or the social or the governance revolution with the French revolution. Now, in my opinion, it's a pile of bullshit. It started in Germany a few hundred years before with the invention of the printing press. And as soon as the printing press was invented, this is what allowed the French revolution to exist and to happen. What I'm trying to say is we are talking about the same things. We're talking about those protocols. So the question is here to you, do you think today somebody is capable of reinventing the printing press and starting
+
+a revolution or an evolution.
+
+David
+Yeah, absolutely. I actually used that example in my first book. So when Gutenberg invented the printing press, what it really did is it, let's see, let me step back. Before the printing press, there were like four languages that if you wanted to learn anything, you had to know. It was like Greek, Latin,
+
+two others I'm just missing at the moment. there were these classical ancient languages, right? And Hebrew, guess, is probably one too. And then, so the only way you could learn that is you'd have to be a member of the wealthy class and you would have to travel around Europe to go to monasteries and read the scrolls in Latin. there was no way on earth a peasant was going to A, travel to all the monasteries.
+
+B, get let into the monasteries and C, know how to read the goddamn scroll to begin with. So then Gutenberg comes along and now everything can be printed in vernacular, German, English, French, Spanish, Italian. So if you look at what happened within 50 years, the bourgeoisie was created. There was no middle class prior to the printing class because all of a sudden,
+
+people could freaking move. So back in the middle ages, prior to the printing press, you grew up and you died within, I don't know, like two miles from where your parents lived. There were no roadmaps, there were no street signs, there was no way to navigate. So because of that, with the printing press, they printed travel locks. Marco Polo did a whole, I mean, he,
+
+He lied more than Donald Trump, but even so, these were travel logs. So that's what the printing press did. It also created Protestantism, by the way, now that I think about this, because up until then, it was the Catholic Church or nothing, and then Martin Luther comes along. Martin Luther, the story about him nailing his theses all over the churches, those were not handwritten sheepskin manuscripts.
+
+Citizen Web3 
+Yes.
+
+David
+Those were printed. If there hadn't been a printing press, there would have been no Lutheranism. There would have been no bourgeoisie. There would have been no travel maps and no pornography, but that's another.
+
+Citizen Web3 
+That's a very important point. We want pornography. But a serious question. Do you think that the timestamp, because timestamp wasn't invented by Satoshi, but he was put in the right place for him to show people that, okay, there is consensus computing and verified timestamping. Could we compare that in a way, our modern printing press machine, the verifiable timestamp that the Bitcoin... No.
+
+David 
+Hmm.
+
+David
+I don't think so. So, so, so let me, let me just, well, let me distill the problem today down to something elegant. The real problem today is authentication. This is, this is, this is the problem everywhere. And if you look at almost any newspaper article that complains about technology, this is actually the issue. So it's authenticating people.
+
+Citizen Web3 
+What about consensus computing maybe?
+
+Okay, please. Go on, please.
+
+David
+It's authenticating locations and it's authenticating content. And, you know, is this story real? Is this photograph a deep fake? Is this person actually, you know, who they say they are? We don't really understand how to do that. So there's like a thousand different mechanisms to authenticate. None of them work particularly well. And just look at
+
+I mean, look at online stuff. You know, I captures are one of the dumbest things in history and they're finally going away. And then passwords. I mean, there's a story with password creation. It's kind of ugly, but there was a guy at NIST in America who was asked to come up with the rules for creating a good password 25 years ago. And he went out for the weekend, had a bunch of beers and he just made something up cause he forgot about it. And that's where all that
+
+eight letters and symbols and letters and numbers. He just fucking made it up. And, and well, it doesn't work. mean, and, and if you ask any cybersecurity person about anything, you know, any of this stuff, they get really cynical because they know it doesn't work. mean, anybody can be hacked and anybody can appear to be somebody else. I mean, it's just a matter of time and money and tools.
+
+Citizen Web3
+it's hilarious.
+
+No, it doesn't.
+
+David 
+So this is the world we're in. So rather than fighting it, and this is where the anarchy part comes in, I think. I think we need a system of life and governance that accepts the idea that nobody actually knows who you really are. And that was.
+
+Citizen Web3 
+So you would say, sorry, you would say just to complete the puzzle here that we're talking about, you would say that our printing press is the centralized governance, right?
+
+David
+Yeah. Well, and let's, I mean, let's, let's extrapolate. So we're, we're about to go into space again. So within 20 years, we'll have a pretty robust, probably more than one station on the moon. And we'll probably have one on Mars too. imagine that you've got, Google cloud or something like that or AWS or whatever.
+
+Citizen Web3
+Okay. Okay.
+
+David 
+It's not gonna work because the latency, even to the moon, the latency is six seconds or something. That's a lot. in Mars, it's, I don't know, what is it, 10 minutes or eight minutes? The latency is so much that once we get off the planet, the computers are gonna be artificially slowed down no matter whether they're quantum or regular or anything, you aren't gonna be able to do it. So if your authentication system,
+
+is centralized, good luck, because you're gonna have to go back to earth again to centralize every stupid transaction. And this is one of the reasons why when you go to load a newspaper article in any newspaper in the world today, it's slow and annoying because they have so many ads embedded in cookies and tracers that you're not downloading a newspaper article.
+
+you're downloading a hundred other things that come with it.
+
+Citizen Web3
+question for you here is because exactly about that. Why? Because I mean, at the end of the day, in your opinion, why not in the big suits? Forget the big suits. Forget because 90 % of the data is just the same data. It can be cached and the online status is a pile of bullshit and we all understand it, right? Like there is no such, the handshake happened. That's it. You don't need it anymore. No, no online status. There's no such thing. It's an invention of the ISP. But like, so why, why are we so, why, why, how did we get to this monkey stage? How did we get to be in monkeys?
+
+David
+That's true.
+
+Citizen Web3 
+Instead of being the smart, intelligent human, I'm sorry if I offend any of the listeners now, but I really feel like that sometimes with the internet, we have it all laid out here. I mean, for example, you you talk about passwords, private and public keeper, it's been invented. Dozens of years ago, there is nothing you don't need to reinvent it. That's it. It's gone. You know, same with caching, you know, with the online stuff. Why is it like that? How do we, how do we
+
+move ourselves from that? How do we like change the education?
+
+David
+Well, I can tell you where it came from. It came from this. right. it started, remember the internet started as a little game that physicists could use. And I mean, they literally created games because they were bored. So this is where...
+
+Citizen Web3 
+Okay, of course, money.
+
+David
+like there was a thing called the Colossal Cave and Adventure and it was the early text game that turned into Zork and this was the and I worked for Electronic Arts too for a while making computer games but anyway the so this is where the games came from and but they were still just scientists nobody else was using them and then it got to where the businesses and the high level non -profits and governments use them it still wasn't about money
+
+But once the marketing people got their hands on it, it's all about money. So when we were trying to create ICANN, we were forced to do it by the US government.
+
+because Network Solutions had a monopoly and they didn't want to establish a monopoly. So they did this thing called the green paper and the white paper and Al Gore's people put out these papers and then they had these meetings all over the world. We went to Zurich and Geneva and Washington DC and all these places and then all the interest, special interests would come and yell about what they wanted the new internet to be like. So
+
+I was at lunch one day, I think it was in Zurich, and there were all these people at the table with me and they didn't look like geeks. I mean, they weren't wearing, you know, rock and roll t -shirts like I'm wearing and their hair looked really neat and they were wearing ties. And I said, who are you guys? And they said, we're lawyers. And I said, well, who do you work for? And they said, Paramount. And I said, what do you do at Paramount?
+
+And they all said at the same time, we're Star Trek lawyers. were eight, eight Star Trek lawyers that thought it was important enough to their future to go to these conferences and talk about the future of the internet. And then when we went around the room and figured out who was what, most of the people in the room represented business interests, not technology interests, and they were lawyers. So that's my answer.
+
+Citizen Web3
+reacting like this because it's funny, but it's scary. Scary because this is how I imagined like that what you would say I would not imagine you to tell this story in any way different. I have a hope deep inside me that my next question that I have a list of questions here, know, like such as for example, well, you worked on the three different residencies is but it's not different. I know that your question is your answer is going to be that this cyber security didn't change under any of them.
+
+David 
+and
+
+Citizen Web3
+Probably, right? Maybe somebody did something different, but it wasn't, of course. It was... So I'm not gonna ask that, but like... So that's why I'm reacting like that, because I'm laughing at the same time. I'm like closing kind of my eyes, because I'm thinking, well, yeah, so how do we move on from here? What's... So back to the question, though, how do we start telling these lawyers or, you know, that, okay, they have... Okay, forget this, forget this. How do we go back?
+
+To the 92 or 93, when was the constitution of the internet by Cypherfunks released? Right? This is free of the government space. How do we get back to that? How can we? Where do we start? Not how do we get back? Because it's too difficult.
+
+David 
+So an old friend of mine who's been dead for a while is a guy named John Perry Barlow. And I don't know if you've heard of him, but he wrote, well, you should look it up. It's in Wikipedia. He wrote something called the Internet Manifesto. he was an anarchist. And he was one of the first writers for Wired Magazine. And oddly enough, he also wrote lyrics for The Grateful Dead.
+
+Citizen Web3 
+No.
+
+Please.
+
+Okay, of course I know, of course I know.
+
+David
+and he was a big internet guy. So he wrote this thing called, I think it was called the manifesto of the internet. And it's everything we're talking about, except it was like 30 years ago. So I believe that like every other revolution fueled by technology, a very small amount of people are going to make a very big change.
+
+And this is another problem because people, when people think technological visionary, they think people like Zuckerberg and these guys who are not, they're not innovators. They're not visionaries. Facebook, mean, Facebook was not like an act of brilliance. MySpace was already around. were like 20 different things like Facebook and they just happened to be lucky and caught a shooting start.
+
+Look at, well, I can give a bunch of other examples, but most of the people that we venerate today as being internet visionaries, by and large, are not all that clever. They're smart, like Bill Gates. Bill Gates is not a technical guy. He's a businessman. And everybody looks at his nerdy glasses and they just assume that he's like this. If you ask a normal person on the street, who's the smartest tech guy in the world?
+
+I bet half of them say Bill Gates and Bill Gates is not a tech guy. I knew Steve Jobs reasonably well. Steve Jobs was not a tech guy. Now what Steve Jobs was, was a real visionary. He had no marketing people. He said that he would build things because he personally wanted them and it pissed him off that there wasn't anything like that. So he wanted to play digital music.
+
+and it was really hard to do. And he basically told them, invent this thing. And that's where the iPod came from. And pretty much the same thing with the iPhone. So that's a visionary. You don't have to, so these are the people who are going to change the world. It's going to be visionaries who have strong ideas. the thing I really, I hate to say this, but if everybody thinks that you're wrong, you're probably right.
+
+David
+And if everybody thinks you're right, you're probably wrong. Anybody, anybody who is an entrepreneur, who's got a startup company and they talk to me and they say, everybody likes my company. They get it right away. I'm thinking, Jesus, what the hell is this company? Because if it's a good, innovative, ball -busting disruptive company, it should scare the shit out of people. They should say, I don't want that. That's terrifying. If, if they don't say that you're not, you have the wrong technology.
+
+Citizen Web3 
+Absolutely. Absolutely. know, know, what's even you know, when you you describe that and you talk about the people, you know, in in in the web to web not web to sorry, it's not web to we call it web to of course, you're talking about not even web one web zero, whatever. I'm gonna call it web two because everything that came before today. Yes, yes .com .com .com. Okay, thank you. The .com you know, and you describing like, I'm remembering my own conversations.
+
+David 
+It was like the dot com, the dot com era.
+
+Citizen Web3
+in blockchain like six, seven years ago, you know, back in 2015, 16, because I started even earlier before it was dead, but the conversations and the realization is the same. There aren't many successful smart web three founders. I mean, and I'm sorry to say that as somebody is going to be like, what are you saying? But it's true. There are several of them who are like you say visioners and they are probably going to change the industry and are changing the industry. But most of them are just lucky and we're in the same right place, right time. They're a businessman.
+
+They earned a lot of money. Yeah, they're running work in Web3 protocols, but they're there because they were there in the right time and the right place. Of course, that requires a brain, but yeah, it's scary that it's the same history.
+
+David 
+Right. Well, I, by and large, Silicon Valley is full of shit. Silicon Valley is, is a big digestive system where the mouth is schools like Stanford and the anus is venture capitalists and everything in the middle is, is startup companies being, digested. They, they're not innovative. These are people, these are people who they want to get rich. I know tons of them.
+
+Citizen Web3 
+Yes.
+
+Citizen Web3 
+Absolutely.
+
+Citizen Web3 
+Amen.
+
+David 
+They want to get rich and there's, and if they're really nerdy, they want to get laid too. So that's what this is about. It's there. There's things they want out of life and they see this as a way of getting it. That is not anarchy. That is not innovation. And web three is not going to happen with these people. Web three is going to happen with, like I said, five to seven people and they're going to come up with something and it's going to be, it's going to be scary.
+
+Citizen Web3
+You
+
+Citizen Web3 
+Absolutely.
+
+David 
+Like I'll give you an example. I, Sean Parker used to work for me. One of the guys, one of the guys that started Napster and, and Parker, I knew him right after Napster and Napster overturned an entire industry for all practical purposes. And there were two guys, Sean Fanning up in Boston and Sean Parker down near Washington, DC. And these two guys for just personal selfish reasons,
+
+completely disrupted the entire music industry to this day. mean, when you look at what they did, they created a situation where basically the value proposition was all the music you want for free. Well, who wouldn't do that? So that is anarchy. And that's why they got their asses sued off. But it doesn't matter.
+
+Citizen Web3
+Metallica, ironically. Ironically by Metallica. But I want to thank you for bringing that up because what you are talking about is having both. And I've been trying to lately because my podcast has been for a long time focused only on founders. And then I realized, no, I want to invite writers. I want to invite authors who talk about libertarianism, who talk about liberty, who talk about privacy. And sometimes they ask me, why? Why do you invite me? I have nothing to do with Web3.
+
+David 
+Yeah.
+
+Citizen Web3 
+I say you have everything to do with the three. If the people who are building web three today will not listen to your opinions, the libertarian opinions, anarchist opinions, not necessarily, you know, against somebody, but just about freedom. Then they will do the same things that we were doing 30, 40, 50, 60, 70, 80, 1000 years ago. Nothing will change. We need people that grow balls and, you know, do something. So.
+
+David 
+Yeah.
+
+It's a, you're bringing up a really good point that I should probably make. So when I think that web three is going to be disruptive, I think it's going to be like a big tenement square. mean, Putin's already terrified of the internet. China's terrified of the internet. Iran's terrified of the internet. That should tell you something, right? And that's why they shut, they should try and shut the internet down at borders.
+
+Citizen Web3 
+Yes.
+
+David 
+So I went to Tibet a couple of years ago, and I brought four different ways to get around the whole thing. And I was able to get to Google, even in China. But it took a lot of work. But I was able to do it. And you can't stop this shit.
+
+Citizen Web3
+Yeah!
+
+David
+And so what this means though, is it's going to win. Anarchy almost always wins for a while. And then you need a governmental system to replace it. And history is littered with examples of politically people who have done this, overthrown a government, not had a good government to put in, and ended up bringing in a fascist. So you look at Russia.
+
+and it started with Alexander Kerensky and the Mensheviks, who was basically a democratic group. And he has in for what, like 14 months or something. And he got pushed out. And that's where that's where Lennon came in. And then you look at China and they had Sun Yat -sen and, you know, and the same thing happened. So this is the pattern of history and patterns are happened for a reason.
+
+Citizen Web3
+Mm
+
+David
+And somebody older like me can spot the patterns. But the problem is we're not, we're not running things. So the average age of a CTO now it's like 27 or something like that. And I'm a lot older than that, but it's people who have my kind of background who might catch this. But we, we need, we need to also not only come up with a web three technology that works. It's got to be quantum proof and it's also.
+
+you need a governmental system that goes on top of it because there's so many ways to attack blockchain, know, civil attacks and voting attacks and stuff like that. And there are other ways of doing it. So we need a good governmental system that reflects the value system that those of us trying to make changes hold. And it's very unlikely that that value system is going to reflect any country that exists today.
+
+Citizen Web3 
+On, I think on that note, I have so I literally did. think, I think I didn't ask you 5 % of what I was planning to ask you, but on that pattern note, I'm going to jump into the Blitz just to finish it off with an hour because otherwise I think the information is, I would love to carry on this conversation, of course, depending on you, but we can talk about it separately on not, not on the, not live, but let me jump into them in Blitz with you, David, three questions. They're a bit strange, but they're about you. So there should be simple.
+
+David 
+Hmm.
+
+Citizen Web3 
+Can you please, it's gonna take you out of the conversation. So a little bit sorry for that, but we're gonna jump out of it. Give me one book or one movie or one song that has a positive influence on David throughout his life.
+
+David 
+That's fine. That's fine.
+
+David 
+that's interesting. There was a book called Godel Escher Bach by a guy named Douglas Hofstetter. And it's about, I think it won the Pulitzer. And it compares the mathematics of Godel's incompleteness theorem with the fugues of Bach. he tries to show that math
+
+Citizen Web3
+Ew, ew, ew.
+
+David 
+and music and then Escher paintings with the recursive patterns in the Escher painting and he tries to show that this is some fundamental force of the universe that maybe we just don't understand but it's a pattern. That book really opened my eyes when I read it.
+
+Citizen Web3
+For all the listeners, because I actually don't know this book as well, please check the show notes and everything me and David mentioned, of course, people, books and stories, it will be there. David, second question, give me one motivational thing that you can share, of course, with me and the listeners that keeps David for so many years not falling to the weak and keep on the mission to writing books.
+
+building what it is you're building, changing the internet, basically changing the world really. Something motivational.
+
+David
+I have two traits that are not obvious maybe. One is I'm curious and the second is I have a sense of wonder. So I took some time in the last decade and over six years I traveled to about 85 countries and I did crazy stuff all over the world. I climbed Mount Kilimanjaro, I rode horses across Mongolia with the nomads twice.
+
+I went to Tibet and rode a horse to the base camp of Everest. I've hiked through the Outback. I've hiked through the Amazonian jungle a couple of times. I sail, I scuba dive, and I'm not an athlete. I'm just curious. And I want to go to these places. And one of the things that I've been trying to do when I go...
+
+is I look at, I try to hang out with indigenous people like the Masai, the Sami people, and I want to see how they use technology because they do. Everybody uses some kind of technology now, even at least a cell phone, if nothing else.
+
+But they don't use a cell phone the way a spoiled European millennial would use a cell phone. They're not walking around doing that all day, right? There was a guy named Mohammed Yunus who won a Nobel Prize. In fact, he's the head of
+
+Bangladesh right now, think. And he wrote a book and he had this concept of micro lending. And the idea was that you loan a village in India enough money for one person to get a cell phone, and it's not a cell phone. It incubates businesses. And this has been proven time and again. So people start making crafts and selling them on the internet. And then they pay the lady with a cell phone rent to be able to go on to Etsy and sell it.
+
+David 
+This is what is fascinating about technology. Technology creates social change, whether you like it or not. no political or legal system can actually stop the kind of thing I just said. you can see, Russia's a good example, because no matter how much Putin is cracking down again,
+
+Citizen Web3
+Yes.
+
+David 
+Things get out of Russia pretty quickly. I am amazed you see interviews you read articles It's it's kind of frightening in some ways how a country that's tried really hard to clamp down Hasn't been very successful
+
+Citizen Web3
+Thanks.
+
+Citizen Web3 
+And I'm thankful that they have not been successful in that. like so many, we're thankful that things get out of there. Last one, I promise David, Dead or Alive, real, made up, somebody you know personally, somebody you heard about or seen in a cartoon or a movie, not a guru for you, this personage, this character, this persona. But sometimes when you're in a difficult situation,
+
+It helps you to think of that character or that person to help you get through that situation. But it's not a guru. It's somebody that's like,
+
+David
+Not a guru? That's a good question. I mean, there's people I admire. There was a guy named Richard Francis Burton, and I've always really admired this guy. And if you don't know him, you should look him up. He's the guy who translated, Thousand and One Nights, but he was a, he was a crazy man. He traveled all over the world and he went places nobody else could go.
+
+Citizen Web3
+Not the Guru,
+
+David 
+So he wanted to go into a holy place for Muslims and he was afraid he would get spotted.
+
+So he took his own knife and circumcised himself. He was like 45 years old so he could get in there. He was he was an intellectual. He was an academic. He was an explorer. These are the kind of guys that I like. And it used to be that we venerated people like that in every nationality. You can find people that were scientist explorers and that they had a sense of wonder and curiosity. In fact, I would argue
+
+that the early space program was like that too. The Apollo and Mercury program, they were pilots, but by the time they got up to the space station, they were also scientists. They were people who were brave, they wanted to explore. So I think of all these people and they've gone before us. I don't think of Bill Gates. Bill Gates is not my hero. Elon Musk, think is actually...
+
+Unfortunately, he actually is a visionary. I wish I could say he wasn't, but he actually is. But he's also an asshole. I mean, of one that it kind of overwhelms it. But the visionaries, the brave visionaries, just, they like the way for me and everybody else.
+
+Citizen Web3
+I want to advise to everybody pale blue dot, whoever everybody wants to listen to visionaries and listeners, of course, I'm talking about listeners because of course, you know what I'm talking about. I can see by your eyes. Guys, if you're looking for gurus, listen to the pale blue dot. It's just two, three minutes of a short speech and it will explain everything. David, I cannot thank you enough to find in the time to answer my annoying questions and sharing your views.
+
+Thank you. Please don't hang up just yet. This is just a goodbye for the listeners, everybody else. Thank you for tuning in and see you next week. Bye, David. Thank you.
+
+David 
+Thank you, Serge. Bye.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+
+

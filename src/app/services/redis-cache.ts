@@ -85,7 +85,31 @@ export const cacheGetOrFetch = async <T>(
   return value;
 };
 
+/**
+ * Check if a rate limit has been exceeded.
+ * Uses INCR + conditional EXPIRE to avoid resetting the TTL on every request.
+ * Fails closed: blocks requests if Redis is unavailable (protects paid APIs).
+ * @returns true if limit exceeded, false if OK
+ */
+export const checkRateLimit = async (key: string, limit: number, windowSeconds: number): Promise<boolean> => {
+  try {
+    const client = getRedis();
+    const count = await client.incr(key);
+    if (count === 1) {
+      await client.expire(key, windowSeconds);
+    }
+    return count > limit;
+  } catch (e) {
+    logError(`Redis rate limit UNAVAILABLE for key ${key} — blocking request: ${e}`);
+    return true; // fail closed: block request if Redis is down (protects paid LLM API)
+  }
+};
+
 export const CACHE_KEYS = {
+  ai: {
+    rateLimit: (ip: string) => `ai:rate:${ip}`,
+    summaryRateLimit: (ip: string) => `ai:summary:rate:${ip}`,
+  },
   aztec: {
     epochProgress: (chainName: string) => `aztec:${chainName}:epoch-progress`,
     activeAttesterCount: (chainName: string) => `aztec:${chainName}:active-attester-count`,

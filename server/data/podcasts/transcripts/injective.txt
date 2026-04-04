@@ -1,0 +1,358 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/injective
+
+Episode name:
+The Rabbit Hole, the DEX and the Red Herring with Eric Chen
+
+Citizen Web3 
+Guys, welcome to another yet another episode of Citizen Cosmos. We have today with us Eric, the co-founder of Injective. Hi, Eric.
+
+eric_injective_labs 
+Hey, how's it going? Really glad to be here.
+
+Citizen Web3 
+It's going good. I have a lot of questions for you planned, but let's see which way it goes. Hopefully you will tell us all about what you guys are doing, all about yourself, how you got here and your plans in the future. So let's start with a simple thing. Instead of me like doing like a whole introduction of what you do and what you don't do in your own words, what do you do and how did you get to doing what you do?
+
+eric_injective_labs 
+Yeah, sure. So this is Eric, co-founder of Injective Labs. So Injective Labs is a core contributor to Injective Network or Injective Chain, working on a lot of really exciting developments within the blockchain space, focusing on some of the coolest DeFi primitives. Started off with this on-chain order book infrastructure, derivatives infrastructure, and now onwards to Cosmos integration and a lot more exciting things to come.
+
+Citizen Web3 
+Can you say a little bit about the injective chain? You mentioned the chain. What is the difference and what are the goals of each one? The platform, the chain?
+
+eric_injective_labs
+Yeah. So Injective is built on top of Cosmos SDK and one of its core feature at the moment and one that's most powerful to everyone is that it has a fully on-chain order book that doesn't have any issues with front running, with race condition, with unfairness, with MEV and so forth. That's mainly due to the fruit of the batch auction mechanism at the end blocker that kind of takes out the factor of time from any type of calculation for matching.
+
+And on top of everything, it's highly scalable and it has a very, very decent throughput. Battle tested at this point with over 20 or 30 million transactions. We can't really keep count anymore. And so for the users generally, they would interact through the Relayer for any type of exchange purposes. And these are applications on top of Injective.
+
+that can host an exchange that can share the exact same liquidity with the rest of order book and the same matching process, but offer a much more superior user experience, specialty, and some alum features. We know that a lot of exchanges building on top of Injective has started to add stop loss orders and create a lot of really interesting mode and also a lot of community campaigns that basically can't be offered by any other application on top.
+
+And onwards to the next step, there's a Cosmos integration and later on, know, an EVM integration as well to ensure that, you know, it's not just the order book layer, but also all the DeFi application that are made possible by this order book layer. For example, coupling this with, you know, something that's more compound style lending protocol will allow for a global margining mechanism that allows you to go along with Bitcoin, using Bitcoin.
+
+and or, you know, go along with the BTC perp with Ethereum. And there's also, you know, automated market making contracts that allows you to kind of stake into a pool that market makes using order book based algorithms that are, you know, used by some of the top market makers and HFT shops in the world instead of suffering from IL. So it's honestly a very, very interesting and impressive.
+
+Citizen Web3 
+You say a couple of things that I want to ask you about. One, you mentioned like the phrase top market makers. Who's in your opinion are the top market makers currently in the world? I would love to hear that.
+
+eric_injective_labs 
+I think right now crypto is still a very fast growing space. So what is the top market maker now may very much be different in like just a week or two. I would say at the moment, certainly a lot of larger Chicago prop shops and institutions are moving in. So the top one would, I guess, be jump trading, a little bit of tower research, DRW.
+
+eric_injective_labs 
+Alameda certainly did very, very well starting from a very crypto native firm. Yeah, I would say these are certainly one of the best market makers in the space, deploying strategy. They don't necessarily market make for projects or tokens, but they certainly have a very sophisticated, definitely scalable and profitable model and infrastructure for their market making operations.
+
+Citizen Web3 
+If I'm not mistaken all of the guys that you named, the projects companies, guys, whatever, are based in the States, right? If I'm not mistaken.
+
+eric_injective_labs
+Yeah, they're in the space basically.
+
+Citizen Web3
+Do you think that the market making industry will grow outside of states? Will it go like into Europe? Will it be going to China, to Africa even maybe? Will we see bigger market makers grow in those new economics and those new industries which are not necessarily crypto-based?
+
+eric_injective_labs
+Yeah, certainly. It's just like off the top of my head. I just named the ones that I know of, which, you obviously most likely are in the US, but there are really great market making firms in Europe, you know, in Asia and also in Africa and all those countries. I think just to name a few, know, Brevin Howard, Allen Howard's firm certainly trades a lot of crypto as well.
+
+eric_injective_labs 
+QCP over at Singapore also does a great job. Three Arrow, I'm not sure if they market make, but they're certainly a very, big prop shop as well. Yeah, it's certainly not a US exclusive kind of thing. It's just my location bias.
+
+Citizen Web3 
+Yeah, location bias is a crazy thing, especially in crypto, right? mean, like when we see the metaverse growing, the crypto growing, and like, it's crazy how we still really, and everybody has it. I I have it. I think everybody has it. We're so connected to the space that we want that sometimes like, But anyways, and one more thing is Injective Ready IBC enabled.
+
+eric_injective_labs
+Yeah, so that's really exciting. I know Map of Zone is still, you know, sinking to the latest block, but there's been a lot of really crazy activity. Ever since there was a bridge to Terra, I think that really kickstarted a lot of things. And from that point on, really, there's a lot of activity around, I would say. Actually, no, that's incorrect. The first one that really kickstarted things would be BAM protocol, because it's one of the unique use cases where it's not just token transfer, but it's...
+
+actually requesting the Oracle data from Band and that results in extreme flexibility in grabbing all those price feeds through IBC. So that was really, really interesting back in the day. And definitely Terra promoted a lot of asset flow and also I would say Adam, the Adam Cosmos Hub to Injected Bridge is also one of the more popular ones due to the spot market plus the per market. And there's a lot more
+
+IBC Relayers and Bridges coming out. I think the previous big hurdle was that in order to integrate with all of Cosmos' native wallet integration, which is obviously most commonly used, Kepler, we faced a similar issue as FMOS, where as a chain built back in the day, Kepler actually wasn't the most widely used, so there was a key derivation process and the whole
+
+a pecky process, well, I guess now it's called Gravity Bridge, where the Ethereum assets transfer over has to be mapped to basically an Ethereum address with Ethereum key derivation. So that was kind of, I would say, one of the blockers. But now the most exciting part is that we've done a lot of engineering magic to make it work with Kepler.
+
+So you're going to see a lot more presence with all the front ends, all the bridges, all of the Cosmos zones starting to see the presence of injective really permeating through the Cosmos first.
+
+Citizen Web3 
+Do you use any other IBC enabled protocols like osmosis for example yourself?
+
+eric_injective_labs 
+Of course. Yeah, yeah. We've been keeping out on the wraps because it's an ongoing work to set up that bridge, especially because the IVC relay is always there, but the front-end component of it, know, supporting the TS library, not having the user to set up a metamask, but rather going through Kepler natively has been a very much of an ongoing work. And now, you know, with Kepler integration, Osmosis is like the next
+
+most exciting thing that I'm looking forward to.
+
+Citizen Web3 
+You mentioned one of the oracles, Band. There is another smaller as far as well. There's a few several price oracles roaming around cosmos. One interesting one, I'm not an expert on that, but I would like to ask you Microtik if I'm not mispronouncing it right. Are you aware of those guys?
+
+eric_injective_labs 
+No, actually, it would be great to learn more about it because for Injective, that's the ecosystem, the diversity and basically the access to all the price fees in the world is probably one most key for a derivative component of it. And there's a pretty long ongoing work with Chainlink on integration. They've been trying to figure out like IBC standard for their OCR. We're also working with a couple of pretty big
+
+Oracle providers that's under wraps at the moment. yeah, I think it's always going to be very much of a consistent effort to work on the integration and onboarding of Oracle to inject a chain.
+
+Citizen Web3 
+You mentioned just a second ago working with a couple of the bigger, or I assume the bigger Oracle provider names, whatever, what's the right way to call them. But you said you don't want to mention. I understand that. And now I have the typical question, when airdrops?
+
+I mean, seriously, in all seriousness, considering Injective is an old project with a big community, it's not a new project that needs to kickstart itself. You already guys have a lot of things going for you. You're not born not even yesterday, not even the day before yesterday. So the question is, are you guys planning anything like that? If you can talk about it, of course. Or is that something that you're currently not looking at to bootstrap Injective within IBC?
+
+eric_injective_labs
+Yeah, so I think that's actually the beauty of community spend pool. We're basically building the infrastructure to allow things like this to happen. But the community member can always propose a lot of airdrops, lot of cool activities, or lot of kind of like an auction campaign to basically get it through, utilize community spend pool, and get it into the token holders for promotion and so forth. So that's always very, very exciting.
+
+We've worked with other projects in terms of process of doing air drops, I Chihuahua to start, and there's actually FMO's DEX project that's also doing an air drop on top of injective validators and obviously stakers. So I think so far, a lot more of our attention is to help new projects, bootstrap, and expose the injective community to all these new blossoming projects that are building within the Cosmosverse.
+
+On the injective side, think the airdrop is really kind of baked into a protocol level at the moment with the ASTRA rewards, which allocates a huge percentage towards rewards on participating in a protocol. So I would say that is kind of a form of an airdrop. But again, the community spend pool is always there for people to utilize. We've been teaching community members, we've been telling them how
+
+how to request these community spent pool and create a governance proposal around it. So that's always an interesting process.
+
+Citizen Web3
+What do you think about Prop 16 on Juno? Come on, I'm gonna ask that considering it's safe. You're aware of the Prop 16 on Juno.
+
+eric_injective_labs 
+Yeah, of course. I think it's one of those things where it's up to the community of Juno or the stakers of Juno to decide instance. Like, at the end of the day, basically the blockchain or any type of network is the power rests within the people who participate in the network. And if they were to vote on, you know, like either direction,
+
+Obviously, it doesn't matter because that is the consensus in a sense for the network, just like the consensus for Bitcoin Ethereum and so forth. And I think that's generally fairly reasonable is that at the end of the day, network isn't really tamper-proof or censorship resistant per se. It just represents the ideology and direction of all the participants.
+
+Citizen Web3
+Let's make the question harder. What do you personally think about? I let's, I totally agree with every word you said. There is the network, there's the consensus, but I'm going to put you on the spot. What do you personally, what's your personal thoughts? Like, let's like go away from the whole, the network has to protect itself. The consensus decided. Let's screw that. What does Eric think about personally about the whole story? Should things like that happen in your personal opinion?
+
+eric_injective_labs 
+Yeah!
+
+eric_injective_labs 
+I have a pretty clear stance on this is that obviously I don't have 100 % context on who that holder is per se. But number one is that everyone, whenever they do destabilize incentives, whenever any community member of Juno would agree that they want to bring on more genuine users, they want to bring on more community members, they want to bring on more participants in the network.
+
+If there were to be someone who deviates out of that path, obviously it's not the goal of the community behind this, guess, airdrop or campaign in a sense. So I get why basically they want to create this governance proposal to remove everything. But on the other hand, I'm also conflicted by the fact that code is long.
+
+There is an opportunity to be exploited. Someone simply use that opportunity and kind of in a twisted sense, strengthen the protocol by kind of exposing this loophole almost. I would say that thank God it's an early protocol where the community is generally tightly aligned.
+
+Basically, they can come out of this just like how Ethereum came out of the DAO hack and basically come up with a very well aligned solution with it. You're not going to get that privilege as you grow as a chain, as you grow as a community. There's going to be so much diversity in voices. know, there's going to be newcomers who doesn't necessarily understand how the protocol works or the historical incidents. Bitcoin is probably the best example of this. So, yeah, like.
+
+eric_injective_labs
+It's a conflicted view, but I would say removing that stake is not exactly a horrific action per se.
+
+Citizen Web3
+It's an interesting topic in my opinion, like the whole minorities in governance thing. It's an ever going, like where do we, I mean, of course you're trying like to explain this out of like my question, are the blue and of course the words that you use might not necessarily be already like something you thought about, but for example, you said genuine users, right? Like that word. And I don't want to like, like, like how to say glue to the words that you said, because obviously you're just trying to explain your point of view.
+
+But I'm still curious, what's your thought about like, do we, at which point do we, if we are trying to build a decentralized governance system, at which point do we, I mean, do we always go with the majorities? we somehow, is there a way in your opinion to somehow include the minorities opinion? Or do they always have to fork and just make their own network? mean, what's your take on all of this?
+
+eric_injective_labs 
+So basically, there's two aspects of it, right? First of all, there's the philosophical aspect and second of all, there's the consensus aspect, is, you know, the life's more within the cryptography primitive. So, I'm not too well versed in the philosophical side. I would say that basically majority establishes a consensus and if you overweigh, you know, minority, then
+
+the consensus, like there has to be a very, very robust and flexible model when you try to prevent mob rule, when you try to prevent basically majority, basically populace. So I wouldn't be the best person to answer just because there's literally people who study political science on our team that can probably just go on and on about it for like hours.
+
+eric_injective_labs 
+That's like a philosophical governance. But from a crypto perspective or like from a consensus perspective, right, without the majority vote or like basically, you know, breaking the 51 % opinion rule means that you don't have a consensus and your networks simply break down. And obviously there are, you know, quorums, you know, localized, I guess, like kind of like shards or like zones.
+
+that basically organizes forking and prevents or kind of like resolves this 51 % issue. But it's no longer like a, I would say like a tightly coupled, like centralized, not a centralized network per se, but like a centralized chain. Okay, these terminologies. But yeah, like a congregated chain that's held in one place.
+
+eric_injective_labs 
+So yeah, simply put, within the world of CES, within the world of everyone being synonymous, 51 % is the only benchmark you can go by for any type of decision or basically for any type of consensus decision. And obviously, that is what maintains the security of the network. it often breaks down. It definitely breaks down in real world.
+
+Citizen Web3 
+Lets start to take a slightly different way than if it's not like about sociology and philosophy, politics. understand not everybody wants to go that way. I have a very different question then for you, because I told you I have a lot of questions planned. How on earth did you get here? mean, you woke up one day and said, hey, I'm going to build a crypto platform and a crypto thing. then you became the, you know, how did life brought you to crypto?
+
+eric_injective_labs
+I think I got into this space pretty lately, like just to have gotten into this space very much slightly or just first heard about Bitcoin back in like 2012, 2012 or so. Basically back then there was this concept of digital money. I tried to buy it. was in Hong Kong at the time. Couldn't because there's just weren't avenues, but
+
+I already started seeing utilization of it. Obviously back in the day, it's like generally used on like Silk Road and so forth. But it's a very, very interesting primitive and that kind of got me hooked in the beginning. Got a lot more into it, especially during college where there were so much, actually got kind of into it right before college where a lot of the consensus guys were in Boston at the time.
+
+And they were talking about, like they were working on blockchain technology. They were working on Ethereum and I have no idea what Ethereum was back then. And I was like, is that like the technology behind Bitcoin? And it just completely opened the world for us. Basically, you know, understanding the technology behind it, understanding what's interesting and novel about it and the possibility behind it kind of just like kickstarted.
+
+my entire journey in crypto almost. So in college, started doing a lot more research on the cryptography side. And then later on, wanted to go into more on the trading and also, I guess, like investing aspects. So went into like a fund, focusing on strategies because there were so much outfitting and efficiencies within the market. And obviously participated in a lot of research on the side. And one key thing that was basically the biggest complaint and
+
+One of the most obvious, I would say, value add within the crypto space was definitely, you know, this decentralized exchange of value. And it just doesn't make sense for a centralized exchange that's completely unregulated back in the day, that has so much malpractice that could just rugged funds to exist to begin with when, you know, like the underlying technology and also the infrastructure is decentralized. So...
+
+eric_injective_labs 
+really went down the rabbit hole there, got way too annoyed with all the centralized exchange trading experience, found out there were a lot of malicious behaviors. Definitely there were a few exchange rugs. Yeah, and then just became, just drank Kool-Aid for DeFi basically. There was also a pretty funny anecdote is that to this day, I'm still trying to find
+
+the Dogecoin that was sitting in the Cryptopia account back in the day. It's definitely gone up a lot. fingers crossed. But yeah, that was everything very funny because Cryptopia basically got hacked right as I started working. basically a few months, like close to a year working on Injective. And it was like, like that's like a, I'm a personal victim in this.
+
+Citizen Web3 
+Ha ha ha 
+
+Citizen Web3 
+I luckily didn't lose a lot on Cryptopia. was a bit lucky with it. think it was one coin, Bismuth. That was a very weird like shit talking. It still exists, I think. I that's the only one I lost around the thing. But you mentioned like Silk Road then. I remember smoking a lot of Bitcoin back in 2011, 12 and 13. But one cool thing that you did mention that I want to like kind of try and talk about, and I don't know what exactly to ask you, but it's just cool.
+
+So you basically found about BTC while you were still in school, right? So you're from the generation. This is really interesting because I'm a little bit like from a different generation, the generation before, but like you're from the generation. This has really fascinated me. When the generation that finds out about cryptocurrencies in school, I'm quite curious whether the way that you think about digital economies and the way it's like, I'm going to do a comparison. the way, for example, our generation.
+
+eric_injective_labs 
+Yeah.
+
+Citizen Web3 
+Like the eighties, the early nineties thinks about like technology, mobile phones, especially smartphones, the internet. We think it is just part of our life because we grew up with that. We don't think it is something that just came in a midway. We just kind of accept it as that's our life. We cannot live without it. So like in your generation, the generation that saw crypto while you were in school, while your brain was still kind of like much better accepting the things around you that might not have been native to you originally.
+
+How do you like, was there a lot of people, for example, in your college, in school that were into those things? Were there a lot of people who tried to find an alternative system?
+
+eric_injective_labs
+Yeah, definitely not.
+
+Citizen Web3 
+Definitely not. I love it.
+
+eric_injective_labs 
+Yeah, I there's maybe like two or three hits. Yeah. We think.
+
+Citizen Web3 
+Wow.
+
+Citizen Web3 
+Are you still in contact with them? Do know what they do? Are they still working in crypto?
+
+eric_injective_labs 
+Yeah, actually. So high school, definitely not a lot of people into Crypto, maybe like one or two most. College, know, slightly more people, but out of, you know, like a college of, you know, over four years, like in career masters, like 10 or 20,000 people, there's maybe like five or 10 people at most who are interested in it. Most of them, you know, like especially the overall space has definitely been through a few cycles.
+
+are just there to trade. Obviously that's understandable, but they should check out the underlying technology when they do that, it could have opened a world for them. Yeah, so I would say most of them, off that five or 10, half of them probably stopped working on it, did their half.
+
+state and crypto are still working on the tiny things. I'm trying to remember what they're doing now because I haven't kept in touch with them for like a few years. But yeah, it's definitely very much of a niche crowd until very, very recently. Because one key understanding here is that back then, people don't understand the value proposition of crypto. They just think of it as an asset that everyone just piles onto.
+
+So it's really the trading element of it that draw mainstream participation in a sense. But now there's so much more social phenomenon, NFTs. So much more things are basically a lot more powerful to the general user, to the people. there's the metaverse concept that Facebook adopted. They realized, this is interesting. There's NFT collectibles. Celebrities started wearing these. And that's interesting to them.
+
+So now, know, like, especially as the crypto develops, especially as this in our space develops, you're going to see a lot more mainstream participation. You're going to see a lot of people who didn't necessarily understand crypto and think of it just like some, I don't know, nerdy stuff two or three years ago are now going in, finding the social value, finding it interesting because it's so much more palpable. Like they find a way to understand it.
+
+eric_injective_labs 
+And now, you know, like they're finally going down the rabbit hole and just trying to understand.
+
+Citizen Web3 
+Where does the rabbit hole go? Where does it lead? Where does it end?
+
+eric_injective_labs 
+Well, mean, like, there's professors who studied photography for 20 or 30 years. Well, I guess like the research in space, the vicinity space for 20 or 30 years, they're, you know, fascinated by it, consistently working on it. So it never really ends. And I think over time that actually slowly becomes like red herring because it almost like
+
+becoming like a, we're focusing too much on academic purity, focusing too much on maximizing a certain value could create like a good hard law issue and kind of degrade user experience, kind of degrade actual adoption. So yeah, like the rabbit hole could go very deep, but it's not recommended that most of the guys go too deep because they get tunnel vision easily and they forget
+
+Citizen Web3 
+This is interesting because I always like to ask guests, what do they recommend in their opinion? What are the best resources and what are the best things? You kind of just mentioned the rabbit hole. Where do you personally go when you're trying to research this rabbit hole? I'm sure there are days when you wake up and you're like, shit, I'm going to go and try and understand that or that, whether it's cryptography or economic theory or political theory, whatever.
+
+Where do you personally go for those things? Is there something, any particular resource or writer or author or social media that you go on and you research that?
+
+eric_injective_labs
+So starting from the beginning, as a newcomer, the space was different back then, just to clarify. So it was breathing into a lot of Bitcoin forum stuff. I don't know who's still active in those forums these days, but back then it was definitely a very active community. You're not just talking about Bitcoin per se.
+
+Afterwards, going a little bit deeper into it. So one great thing about academic resources is that you can pretty much start at one place and have a complete understanding on all the context, all the knowledge gaps and all the knowledge barriers due to the organization of academic papers because there's references that you can look into. There's, know, primitives that you can just.
+
+easily Google, there's stuff that can look up, like, you know, like that's why, you know, research papers have like two or three pages of just plain references. And those are actually extremely useful because it allows you to start from basically zero for papers. And, you know, same thing can say for like people who study math is that when you look at like a certain math paper, you absolutely probably don't understand, you know, 9 % of it, it's very daunting.
+
+But then as you go down, you know, like one by one, you read the reference, you understand the context and stuff like that. You work your way through it, just reach an understanding really quickly. So I think that's good thing about academic papers, that it's daunting at first, but it's very methodical, it's very structured. So you can work your way past and just achieve the understanding you want, plus a lot more because other papers are associated with it to get the understanding you need. And afterwards, it's honestly like these days, lot of...
+
+medium article, a lot of documentation, going through code base because projects no longer do white paper and thank God for that. And yeah, like I would say that's been the primary source to study things.
+
+Citizen Web3 
+What's one of the papers, academic papers on crypto that impressed you in your time? And don't say Bitcoin, please, because this is like, it's an obvious answer, right?
+
+obviously we were all impressed by the Bitcoin white paper at the time when we all read it, but it doesn't matter when you read it, if you understand it or don't from the first time. I didn't personally, I had to read it like, I don't know, 10, 20 times. It took me two years to understand what the hell are they trying to say. but I was still impressed by a lot of other papers. And I'm quite curious, like from your perspective as a founder of quite a large project, what has impressed you apart from that?
+
+apart from big huge projects was there ever any of the smaller projects or whether it still being born with like writing? my god. This is really interesting
+
+eric_injective_labs 
+So in terms of research paper, a lot of them actually didn't become a project. There's interesting cryptography primitives. I would say actually one of the paper that kickstarted Injective was a very popular delay function, which is a decentralized trustless way of proving that a certain amount of time has elapsed. Salada used it in a certain way, but to this day, it's still in extremely heavy research and development phase where...
+
+They're trying to come up with the best candidate for despair-of-hybrid delay function. They're trying to figure out what's the most secure implementation from FPGA perspective. And maybe coming up with an A6 down the road using a certain candidate algorithm. So yeah, a paper is only, I would say, 10 % of the overall research on anything new. It's really the 90 % of the work that follows up to it.
+
+coming up with challenges, coming up with attack vectors, coming up with secure implementations, secure candidates. So I've been following that. And a lot of papers by Turun is generally really, really good. They look at things in a very interesting perspective. Of course, given that Turun's background is a lot of physics and also HFT.
+
+In terms of project papers, honestly these days I haven't been reading too many white paper, quote unquote. It's really about looking at documentation, looking at code base, because these days they're no longer exploring extremely brain wrecking primitives or consensus algorithms. So you can generally look at a pretty condensed documentation or code base and get a very fundamental understanding of it.
+
+Yeah, so there's also lot of interesting research. I think for a project like white paper or documentation, it only covers half of the story. The other half is really utilization of the protocol, a lot of the research work done around it that makes it really, really fascinating.
+
+Citizen Web3 
+I think you're definitely right in terms of saying about the white papers exploring consensus. think as we are finishing off, I hope so, the infrastructure stage, at least the first infrastructure stage was crypto, we're going to see more and more applications. then again, how deep of a paper, far from the economical theory, I guess you can write in terms of the application for, because you already have the whole consensus layer, network layer already laid out for you. So I guess there isn't that much, far from the economical theory to talk about. Definitely agree.
+
+You mentioned in the couple of questions before, value propositions. And this is like our favorite topic on a podcast. love talking value propositions. What is the value proposition? And I don't want you to answer as the co-founder of Injective right now. I want you to answer as somebody who has been using crypto. You've used crypto for a while. Obviously you've seen crypto for a while.
+
+Obviously you use, like you said, other IBC protocols. You use obviously Injective, I hope. And what is in your opinion as a crypto user, as somebody who is building maybe the crypto world as well, so feel free to mix it. What is the value proposition of Injective and where is it heading towards? Like, well, what is the goal in terms of value proposition of Injective?
+
+eric_injective_labs 
+Yeah, so always the consistent issue within the DeFi space. And the one reason why AMM is so popular is that EPM constraint is just insane. It has a lot of scalability issues. It has a lot of gas concerns. And all of those have to be factored in whenever someone builds an application on top of it. And XYK is...
+
+one of the most beautiful representations of liquidity on top of any type of exchange avenue. And they can create this always available and consistent price feed, but it's a static liquidity. It's not a dynamic liquidity. It doesn't reflect a real market time. And that's why LP generally suffers from IL or they're basically selling volatility in exchange for 0.3 % or for V3, like 0.2 or 0.1 % in fees.
+
+And obviously, IL, during extreme volatility, definitely gets insane. We noticed for a lot of the projects, and given the model of a lot of the AMM protocols, certainly they were expecting basically 100 % move or 200 % move in indefinite timeline. Then the IL is really when it gets absolutely insane.
+
+That is basically one day in crypto, especially a year ago. so, you know, gas concerns, MBV, you know, sandwich attacks starts getting rampant. And basically the users want to have the experience and kind of access to long-tailed asset without having to go on a centralized exchange that could very much, you know, see your fund.
+
+And more importantly, at the end of the day, it's just so much easier to use the decentralized exchange if you're a crypto native person, because you don't have to sign up for any account, you don't have to go through all those security procedures. You can just make a swap and it's done. And basically at the most fundamental level, Injective has this order book infrastructure that opens up a completely new primitive because this order or this representation of liquidity
+
+eric_injective_labs 
+is completely on chain. So people can tinker with it and people can use it as signal or people can turn it into something that's very much composable and so forth. So derivative positions can be exported or tokenized. It could be composed within a lot of interesting DeFi primitives. This entire representation of liquidity that mirrors in a much more dynamic way can actually
+
+Well, obviously it's extremely low cost as well, like to modify and adjust these liquidity in an extremely fast way within one or two seconds and also in an extremely safe way. It basically allows for a much more expressive information on the overall market dynamics. And for DeFi protocols trying to access our liquidity,
+
+it's always there. It's that data availability, it's that liquidity presence, and more importantly, it's that composability because these orders can also be tokenized and used for DeFi protocols. Like for example, right, this order book might be most commonly associated with Binance or like Alder Centralized Exchange or NASDAQ or CME, but it can come in very much different forms. You can create like a bonding curve mechanism using
+
+this smart order primitive, you can create Dutch auction, English auction and so forth. And you can just create this entire pricing mechanism around it. So it's really fascinating when this order book infrastructure is decentralized and it can be used by other protocols because now it's just, you know, like within a centralized exchange space, it just fragmented all over a place. Binance has their own order book. know, all those other protocols have their own order
+
+Citizen Web3 
+How do you see the future of DEX evolving? mean, from where we are today, and you just explained like pretty much so many differences between what are centralized like exchanges and what are the centralized amount of things you're possible to do with Injective, like I said, know, even Dutch auctions, English auctions and any other types of things.
+
+Where is the future? how does it look in five, in 10 years time? don't know. Not necessarily injective, but in general.
+
+eric_injective_labs 
+So for Injective's case, given that it's still decentralized, it probably won't be able to be number one volume for the entire world because centralized exchanges still delivers that throughput at the end of the because it is centralized. But what Injective could very much well evolve into is this liquidity hub that's cross-chain.
+
+that's chain agnostic almost in a sense, that can aggregate extremely thick, I would say, liquidity outlet that allows people to extract from it, that allows people to kind of use it as a reference. And with the ecosystem that blossoms around Injective that tries to leverage this cross-group liquidity hub almost, it could create an entire new primitive and entirely new like
+
+industry around, you know, like market making around, you know, lending around basically decentralizing a lot of the traditional financial primitives and improving upon it due to the efficiency that, you know, instant settlement can bring because one thing that we keep forgetting is that the traditional finance space is extremely slow in settling any type of purchase or trading. It's actually just like a credit, a good faith. So if you try to transfer your stock to anywhere, good luck with that.
+
+So yeah, with this efficiency, with this new primitive, really it's going to bring an entirely new financial industry, I think, in the future.
+
+Citizen Web3 
+totally agree with that because I think we've seen a lot of, especially during the last three years due to obvious reasons and whatever what happened and the change in the world. I think it showed a lot of weak points in a traditional financial system, which it did come and change the last financial system with gold. But still today it couldn't adjust to the speed, I think, of the digital era and the way it needed to be like, as I said, the settlements, everything else.
+
+And it seemed like it is quick, but it wasn't as quick as people thought it was. And I think that's what's going to change it. I have another small block of questions for you before we wrap it up so I can let you go. and there are a little bit more like about you and there's a couple of questions. And the first one is the main one is, I mean, all of us are like, you kind of answered this question. I mean, you spoke so much about the tools and traditional finance and the central is finance and how you wanted to improve those tools, how you have literally improved them with what you guys created.
+
+But what does it, what does make, what made you tick when you were like building, when you decided to build injective? mean, and I'm not talking about, I want to build this tool because it wasn't there. You know, like each one of us inside of us has kind of like the things that make them go forward. Somebody wants to change the world and make peace in a whole world. Another person, I don't know, wants all the trees to be, I don't know, yellow, whatever. What was the thing that made you tick and still makes you tick today?
+
+and carry on building whatever it is, not necessarily injective because you might have other projects on the side which you might do in the future.
+
+eric_injective_labs
+I think it's really about like palpable impact and palpable innovation. Basically, I don't want to be like a dead horse, but it's kind of, you know, Gandhi saying like be the change you want to see in the world. Really having that influence that you can see and feel and seeing, you you're improving something, you're doing something you're good at and you're using that ability or strength to
+
+you know, really make a meaningful and lasting impact on the world, basically. So I would say, you know, financial industry is like definitely very archaic, it's annoying, and yet it's, one of the largest industry in the world. And being in the industry will definitely not change it in any way. You can't really improve it. And as a matter of fact, it just forces you to reinforce this archaic infrastructure.
+
+So, what's best way to change that is to build something.
+
+Citizen Web3 
+Do you think that it has already like there's been a push already with the whole like the defy space on the theory among cosmos and all the other chains that do you think that changes what you're saying? Like is the world going to become better because of that in your opinion?
+
+eric_injective_labs
+Yeah, of course. Because right now, the world has kind of like a data sovereignty amongst like financial firms and also, I guess, asset and liquidity sovereignty. And it becomes extremely, it both becomes a defensible note for a of these like, you know, older financial firms and also a barrier to entry.
+
+and for user experience and for general efficiency for everyone else. So it's their way of remaining competitive while making the entire world worse off. And you can see the system all over the world. Why does it take three days to send a wire when other countries can do it in seconds? Why does it take a week or two to settle a stock and actually transfer it? why do
+
+Why are firms so heavily regulated for future trading? There's been so much innovation within crypto and there's been so much regulatory actions, especially from improving the infrastructure side. think recently, FTX also appealed to CFTC for...
+
+basically smoothing the clearing and settlement process. And I think, know, crypto is really bringing an impact to the entire financial world. And that's really amazing to see.
+
+Citizen Web3 
+I really hope that that's what's going to happen because it is a bit scary sometimes. We do see like in a lot of different networks and not just networks, chains and maybe ecosystems, different things happening. So it's interesting that is the beauty of decentralization, guess, right? Like being free to do what you think is right inside of the consensus, like you mentioned at the beginning with Juno. So the last kind of like question, which I guess would wrap it up for me personally, definitely.
+
+is what motivates you in your daily life to keep on, changing the world is what I understand. That's like the kind of internal thing, but is there anything like particular, do you meditate? you, I don't know, read books? Do you walk with the dog? What's Eric's daily thing to do? So you know you're in the office and you know you're building the best product. What would you recommend to everybody else who is
+
+using Injective or using any other protocol to guys do this daily. This will help you to reach your goals.
+
+eric_injective_labs 
+Yeah, I mean, like, honestly, like for me, it doesn't, it shouldn't be like work. It's just something that I like doing at the end of the day. So it never really felt like I needed motivation to keep doing what I'm doing. I would say like one of most impactful things I've done is, you know, like living right next to the office.
+
+eric_injective_labs 
+Yeah, honestly, I feel like the most impactful thing is like either turn home into an office or live in office or live right next to office. And that would just make really increase like overall productivity because you get to sleep more, you get to get more work done throughout the day. And if there's anything like emergency, it's just like a block away. And I think honestly, like it's really the little things.
+
+that really makes the most impact. It's not necessarily a routine and so forth. It's doing something consistently or having something that influences you every step of the way, every hour or something.
+
+Citizen Web3 
+I call this efficiency and taking care of yourself, what you just said? Could we summarize it like that? That's very important, I would say.
+
+eric_injective_labs 
+Yeah, yeah, maximizing efficiency is definitely appropriate said 
+
+Citizen Web3
+Nice nice Eric, it's been a huge pleasure. Thank you for your time. I know that founders or co-founders are usually very very busy people. It sometimes takes weeks, months to get hold of you guys but we get there you know we try to understand what you guys are living and what you guys are living by and what makes you tick that's my goal and I...
+
+Citizen Web3
+I think a lot of people who try to connect to project, it's nice when they are able to connect as well to their co-founders and understand what makes them build whatever it is they build. So thank you so much for your answers.
+
+eric_injective_labs 
+Great, really appreciate it. Thank you so much for having me. I really enjoyed this conversation. It's definitely not like any other podcast I've done before.
+
+Citizen Web3 
+Thank you. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+
+

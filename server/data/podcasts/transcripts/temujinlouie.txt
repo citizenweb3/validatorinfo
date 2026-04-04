@@ -1,0 +1,366 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/temujinlouie
+
+Episode name:
+Adoption, Cyberpunk Values and the Shift in Power with Temujin Louie
+
+Citizen Web3
+Hi everybody, welcome to a new episode of the Citizen Web3 Podcast. Today my guest is Temujin from Wanchain and without any longer dues, I'm going to say hi. Hi Temujin, how are you?
+
+Temujin - Wanchain
+Hi, I'm doing great. Thanks for having me on. I'm looking forward to this conversation.
+
+Citizen Web3 
+I'm me too. I've been waiting for it for a while. WanChain is a very old, long-going project. So I was very excited to get the chance to talk to you, the opportunity to talk to somebody as yourself who has been in the industry for such a long time. Before I dig any professional things, let's start with the traditional, maybe slightly a little bit of the boring stuff, but we have to do it. And I would love to hear your story, the listeners too. Please, Temujin, if you can tell me.
+
+what you're doing right now, what you're concentrating on. And if I could please ask you in that story to include a little bit about how did you get into Web3, your background? How did you end up in a life like this? in Web3.
+
+Temujin - Wanchain 
+Yeah, I ask myself that almost every day. But yeah, so I'm the CEO of Wanchain, as you mentioned, we are the kind of old guys of crypto have been around for a long time. But you know, I think my personal story is not so different from a lot of other people. You know, a lot of us from those early days were originally captured by Bitcoin. So for me, it was the same thing. You know, at that time, this is probably 2012, 2013.
+
+I was a grad student at the London School of Economics. And when you're a student, have a lot of time to just, you feel busy when you're in it. But in hindsight, you just had a lot of time to think. And it was really quite a wonderful time. And I was trying to figure out what I was supposed to be writing my thesis about. I know at that time I was very interested in notions of power, what power is, how it kind of takes shape. But I didn't really have a clear direction. I just knew this is where my interest lied.
+
+And still to this day, I I've the story a few times. Maybe that's why it's so fresh in my mind. But I remember very distinctly kind of reading the news and there was this hacker named Weev who had just hacked into AT &T and stolen a lot of people's personal information. And this trial was going on when I was in uni at this time. And I remember really distinctly, there was this one kind of scene that was always described in the news where this guy, the hacker who was on trial.
+
+He was in court and he went to grab his tablet or something like that. And then the US Marshals just like jumped in, slammed his head into the table, removed him from the courtroom. And then a few minutes later brought him back and he was in chains. And I remember finding this very odd. What was really the danger of this tablet? Okay, yes, he was a hacker, but he was in court. What's he gonna do just by grabbing a tablet?
+
+And was really this kind of fear of technology that really triggered something in me or witnessing this fear of technology, I should say. And I really felt like there was this shift in power happening from the incumbent to kind of the next wave. And eventually this led me to just kind of stumble upon something called Bitcoin. And it really kind of solidified this shift that I felt like I hadn't fully crystallized.
+
+Temujin - Wanchain
+witnessing it was triggering something and then Bitcoin was just like perfect real world example of all these things I was feeling.
+
+Citizen Web3 
+You mentioned Thesis in uni and I've noticed a trend. I've been speaking, well, interviewing people for five years, but just like yourself, I've been around in this industry since 11, 12, something like that. And I mean, I noticed an interesting trend. noticed, I'm myself not from the trend actually, but a lot of people who were students at the time, whether school or university or near it, done the Thesis in and around crypto. And as you were talking, I was wondering, I mean, you did speak about
+
+power and shifts in power. But I'm wondering whether that kind of defines the whole generation because it's like people so early exposed and not just exposed, but I mean, I remember my school or my uni, not sorry, not uni, college, this is I didn't do uni, but you know, it left a lot of my build up some of my personality. Is it the same for you? Do you think that it affects a whole generation with, I don't know, I don't know what I'm trying to get it here, but
+
+maybe like in printing that into them kind of thing, that information.
+
+Temujin - Wanchain 
+Yeah, definitely. think maybe it's not a full generation, but there was definitely those people who were in that little five-year window. think it was really informative and shaped the way that we view the world. think maybe funnily enough, one of the reasons for this is maybe just back then, you really couldn't do anything with blockchain. All you could do is really think about what did it all mean? wasn't anything like DeFi. Okay, you could transfer Bitcoin from one person to another, but even that was kind of...
+
+not a really great experience. So a lot of the ways that you had to interact with it was either, as you mentioned, if you're in school or uni or college, thinking about it and what it all meant or kind of the other way that that manifested was being kind of the annoying guy in the pub just wouldn't shut up about Bitcoin to all your friends. So I was that person as well.
+
+Citizen Web3 
+No way you had some marketplaces as well. Come on, don't don't don't don't take them off. I mean, they still of course exist. I think I don't know. But I really do think those marketplaces played a huge role, right, in accepting, you know, crypto as a digital currency now.
+
+Temujin - Wanchain 
+Yeah, I mean, I think in hindsight, they were definitely important from my own personal experience. You know, I really didn't do too much in terms of actually, you know, going on Silk Road or doing any type of things like that. Even like those early casinos, I knew they existed. Maybe tried them out once or twice, but that wasn't really my primary way of engaging with it. Whereas today, you know, I feel like if people are entering the market, the way they are interacting with this technology is very much
+
+more so on the, you know, back then we might have called it utility, but it really is, you know, just like, you know, trading or this type of speculation where you're actually kind of engaging with the asset itself. Whereas back then, least for me, it was really more conceptual.
+
+Citizen Web3 
+You were definitely a lot more sensible than myself and a lot of the people that I speak to because almost everybody I talked to, including myself here, amount of, well, in Bitcoins or in other tokens that were left on these platforms is astonishing sometimes. But anyways, you mentioned shift of power as well. And I'm curious, hand on your heart kind of thing. Let's be cheesy a little bit.
+
+Temujin - Wanchain 
+Mm-hmm.
+
+Citizen Web3
+Do you think that since then, the world has always shift on power thanks to blockchains and crypto? Have we seen or are we yet to see a shift in power that regardless of whether we championed by blockchain or not, curious if you did see it since then, since you thought about it first in 2012.
+
+Temujin - Wanchain 
+Yeah, I mean...
+
+If the point is blockchain, then the shift is still ongoing. We've not seen this necessarily revolutionary transfer where everything is now kind of controlled on blockchain. I think blockchain and Bitcoin specifically was really more so an example of a shift that did happen and continues to happen. And that is really the shift towards kind of algorithms controlling things. So this has obviously very much happened even since that
+
+everything has changed in that regard in terms of the ways algorithms are both controlling or directing conversations online, as well as just how we interact with these different platforms and how we interact with everything we do in daily life. And Bitcoin is a very clear or very cool example of what could take place in the financial sector, or at least as a digital currency. So I do see that shift happening.
+
+I think we have wanted to see maybe more of a shift towards things themselves running on blockchain and that is a work in progress.
+
+Citizen Web3 
+I actually have, you I had another question for you, but now that you said that about works on blockchain, I cannot not help bringing this into here because it's something that plooms straight away. Like social networks, because we're talking about shifts in power. And, you know, there has been many experiments since 2014, 15 roughly with Steemit, right? And I think there was something before even.
+
+trying to remember, don't really remember, but I'm sure there was. Nothing works. Social networks on blockchains simply do not function. After some time, the economics get milked. So will we ever see the blockchains attempt? I I mean, because we're talking about shifts in power, right? And we're talking about algorithms. So this is why social networks come to mind straight away. I'm sure you are not just thinking about social networks, but
+
+talking about social networks, will we see more of those applications working on blockchains and will those applications help to progress that shifting power that you're talking about?
+
+Temujin - Wanchain 
+I certainly hope so. I think there's definitely some major obstacles that need to be solved. This is a lot of what we focus on on Wanchain. So Personally, I'm obviously very biased, but I do think there needs to be major improvements in terms of blockchain interoperability before something like that you know is really feasible. But I certainly expect that to continue. I think in a worst case scenario, we will have niche applications or niche sectors applications that do get moved onto blockchain.
+
+And then you'll see, you know, we're seeing this originally in the, in the financial sector, but you know, there's potential for, for this, you know, in other industries as well. I right now who knows those, we'll see if it kind of comes to fruition, but know, things with like RWAs and things like that. So there's different types of verticals where there is a shift towards blockchain. But if we would really kind of want this, you know,
+
+call it mainstream adoption or this kind of widespread revolution where everything is running on blockchain, yeah, I think there's still some major things that need to be fixed. But I'm still optimistic. I might sound like I'm not, but I am. you know You said it when talking about steamit, back then things just really didn't work. And to an extent, that's still true, but things work better than they used to.
+
+So as long as that kind of continues to trend in that direction, you know, then I'm feeling still pretty optimistic. And I do hope that we get to that point where it is more so like the next internet is blockchain based rather than just having these niche applications. But there might have to be some compromises that get made along the way, particularly in terms of which parts of the stack are decentralized, which ones are centralized. Does, you know, every thing need a token?
+
+Does there have to be economics running all of this? So these are are issues that are still to be resolved. But like I said, things are still trending in that direction. So there's still a reason to be optimistic.
+
+Citizen Web3 
+That's a great point you're making. talking actually, you know, to think it was set for privacy some months ago and he made an point that really like kind of like, I don't know how to say, but it was a bit of a shock in a good way because we were talking about privacy and about losing and you know, and stuff like that. And then he said, well, the fact that those court cases happen and the fact that there is a battle.
+
+It means we are winning, not losing. And this is what you're saying in a sense. it's surprising in a good way to hear that because, you know, like the last three years or so or two, two and a half years haven't been perfect for crypto, right? Haven't been, and a lot of things have been negatively happening. but you know, you feel free to comment that, course, but I also wanted to ask you kind of more or less the last thing about this topic. You mentioned
+
+in a way, spectrums of everything being decentralized and apps working on blockchain. Does it have to go that way? I have my own opinion, but I want to know yours. And if it does, in your opinion, why? Why do we need everything on the blockchain? And does it have to be everything to have to be on a blockchain?
+
+Temujin - Wanchain 
+Yeah, I mean, certainly not everything has to be on the blockchain. But I think there are really boring advantages to having things on the blockchain in terms of just kind of offloading a lot of the back system expenses that a lot of these systems and projects will incur. So at the very least, there's this type of advantage. Now, my personal thoughts towards decentralization, centralization of these types of systems is that
+
+undoubtedly there will have to be some compromise. Some portions of this just have to be centralized if mainstream adoption is the goal. But where I would like us to get is we should at least be technically or theoretically able to do it in a decentralized way. First demonstrate that that's possible. That's the core technology. And then you can start making these decisions on the kind of application layer, which parts just for.
+
+you know, to be realistic, you know, we'll have to be centralized. But you should still have this kind of, at least decentralized layer. If you start kind of making these decisions to centralize a little too early before some of these fundamental problems are solved, you know, that's when I think you're really going to start undercutting the value of the technology. And, you know, while that might lead to kind of a short term boost in adoption, which might fill us all with optimism, I think ultimately, you're cutting yourself out of the knees.
+
+And then it kind of limits the potential of the technology itself. So I do think decentralization is important, but you can't be a maximalist if, you know, the big if here is if the goal is still mainstream adoption, you know, because like, frankly, some things just don't make sense to have, or it's just meaningless to have decentralized versions of it. So like one example that I like to think about is
+
+If you are trying to query, let's say, London's Stock Exchange. So this data itself is the centralized data. so you know it almost probably makes more sense to just have the London Stock Exchange themselves, just put it on chain, that piece of thing. They can maintain ownership. You just have to trust them. They're centralized component. This is the data you want. That still makes more sense than having an Oracle system that's like, let's all vote in a decentralized way on what the London Stock Exchange is saying off chain.
+
+Temujin - Wanchain 
+and then put that on chain. No, it just makes more sense. Okay, if I'm interested in the thing itself being, the thing itself that I'm interested in centralized, so just let that piece be centralized, even if it's on chain. So little things like that, just as kind of like a simple example of what I mean at the application layer, you can start centralizing, but we should still be able theoretically to build these things in a decentralized way.
+
+Citizen Web3 
+I agree with that. do have like, I guess, kind of the adoption topic, you know, we mentioned, you know, during the first 15 minutes of our conversation adoption, I think several times and you highlighted if the adoption is the goal. One thing that I personally noticed about adoption or the spectrum of adoption is the closer we get
+
+or a project, or a project, sorry, usually, usually. And we can talk about Bitcoin, of course, or anything else to adoption. The more values it loses. I have, and I'm talking about, of course, the centralized safer punk values. And of course, we just spoke that it's a spectrum or at least it can be a spectrum. So not everything has to be, like you said, on chain, but still.
+
+And where do we, how do we find the balance as an industry, as a space, web three or blockchain, whatever you want to call it, between those values and the rest of the goals such as adoption and what else not is on that side of the scale.
+
+Temujin - Wanchain
+I mean, this is probably one part where I'm less optimistic. So again, with that, with that big caveat of if, if what we want is adoption of this technology, then I think we will undoubtedly lose some of these values. potentially the way that it could play out is there could be corners of the larger blockchain space that you know, remains dedicated to being, you know, maximally decentralized and the kind of place to, to preserve these.
+
+values that almost undoubtedly this will force these these areas into kind of niche markets. So you go there, this is what you want. know, that's kind of OK as well. You know, if we're thinking about blockchain again in terms of interoperability, then you have multiple different blockchains. Each will have a different kind of, you know, unique value proposition or things that they are good at. Some will be more centralized. Some will be decentralized. We'll have this mechanism where they can interact together. So you could have
+
+corners of this blockchain web that as soon as you start interacting with this,
+
+It's the original vision. So something like that. And then you could still have kind of other corners where you've made different types of trade-offs that are there to kind of promote widespread adoption. So that's probably how I could see that playing out in a way where you don't have to totally abandon these original kind of cyberpunk values. But yeah, I'm not very optimistic if the goal is, we're gonna have mainstream adoption and preserve all of these original values.
+
+kind of from A to Z across the whole blockchain web, that's probably not possible. know, cause I, you know, we say mainstream adoption, think in some ways a lot of that is just code word for we want, you know, enterprises to come on chain and run these kinds of like big businesses. And just the, if you start considering enterprises that goes hand in hand with getting some sort of kind of government and government regulation.
+
+Temujin - Wanchain 
+on chain and so you're already kind of losing a lot of the potential for having these cyberpunk values be kind of widespread. But I think that's just somewhat inevitable, particularly as it relates to things with, I'm sure you saw the Bybit hack recently, so there's definitely a lot of maturing that the blockchain space needs to do in terms of AML and things like that, again, with the big caveat, if that mainstream adoption is the goal, because you know
+
+People who are early adopters like us, yes, maybe we do see the appeal of full custody, the decentralized web. But once you get everyone on, not everyone wants that. Not everyone wants to be able to lose your keys and therefore lose all of your money with no safeguards and no insurance. That's just not necessarily a super nice pitch to a lot of people. So you have these type of considerations as well that we'll have.
+
+to be accounted for.
+
+Citizen Web3
+Let me play the devil advocates part here. Shouldn't that person just go to the bank then?
+
+Temujin - Wanchain 
+Well, again, like I said, like if mainstream adoption is code word for enterprises, then we're talking about how do we get the banks on chain? So it's not about having like two totally separate systems where one is one is blockchain and one is not blockchain. want to bring everyone who's off chain on chain, and then you have to make these these considerations. But this is kind of like how in my in my ideal world, how it would play out is you have this pure decentralized core layer. Maybe it's slow.
+
+Maybe it's not totally usable, you could make it work if you're someone who wants to have full custody over everything in a maximally decentralized way. Then you could have this more application layer where maybe you've made certain trade-offs in terms of centralization so you can have better user experience or speed, something like that. And then you could have the on-chain banks that are operating on that level. Then users who maybe don't want to take full custody
+
+can quote unquote, like you said, go to the bank. In this case, the bank is on chain. And then here it's maybe more resembling something like a centralized exchange or something like that, where a lot of the internal transfers are maybe fake centralized, not actually on chain. But there's like an on chain component. So you could see it play out that way.
+
+Citizen Web3
+Let me move slightly to a different topic before we move. I will leave one comment. cannot help it and feel free again to comment if you want. I have heard several already to back what you say, opinions on the fact that like with Tornado Cash as a good example, the price was growing when all the market was falling because it was decentralized. Monero, the price
+
+was not fallen as opposed to the other. And yeah, we're talking on privacy coins now, but that's just not because privacy is the only value, but it just happened to be because of what was going on. So I do think that what you say, know, that we will see like decentralized alternatives. For sure, there will be centralized alternative, decentralized alternative. Yeah, I totally agree.
+
+Like again, feel free to comment that if you want, but I wanted to move to a slightly different topic and I wanted to ask you a little bit about, know, your story with Wanchain is quite a big story, right? You started at one position and then you grew slowly to be the CEO. Question, I'm not, I apologize if I'm mistaken here, but you grew from the community, right? And
+
+from a community kind of position, is that correct?
+
+Temujin - Wanchain 
+Actually, I joined in a marketing role.
+
+Citizen Web3 
+Apologies. How was the progress, the growth Can you talk a little bit about it? mean, there's a part listeners that, or I would say most of the listeners that listen to us, work in Web3. So I'm very curious about that part of the story with you.
+
+Temujin - Wanchain 
+Done, no worries.
+
+Temujin - Wanchain 
+Yeah, you know, so when I joined Wanchain, wasn't inexperienced in the blockchain space. So I'd already been in blockchain for a few years. But I joined Wanchain in large part because Wanchain is like a, you can almost say it's like an R &D focused blockchain project. So it's very, very tech focused, very, very real in that way. And so that held a lot of appeal for me. But it also was a good fit because I was coming more from marketing business side.
+
+in terms of my background. And that was a place where Wanchain was able to improve. So you're not totally wrong in saying that I came from a community perspective, but it wasn't a community role. It was just that I could join and really fill this gap that was very much needed where I could be the advocate of the people within the project itself and really kind of help try to align or...
+
+bring together these two parts of the project. One, which was excelling, which was developing on the tech side of things. And then the other, which was at that time lagging behind a little bit, which is giving a bit of ownership of the project to the community, both in terms of the direction and just kind of general decision making. So this kind of really helped me personally, I think, of rise through the ranks because it was something that was not really being filled or serviced at the project that time. Even today, we're still
+
+pretty lean on the marketing operations side, but it's filled out more than it was back then. for 40-ish people, 30 plus of them are engineers. So it was quite a value add, I think, to be able to represent the community.
+
+Citizen Web3 
+I have a few questions to you about developers communities and communities in general, but the marketing part, small trends. Again, I noticed, I like noticing small trends, I guess, that's the second time I say it today, about marketing in Web3. In the last few weeks, at least, I've seen a lot on Twitter, people and marketers especially talk about the difference between Web2 and Web3 marketing. Some people...
+
+you make the jokes. Some people are serious questions. what is the difference? I mean, you came in a marketing, like you said, has marketing changed since you, don't mean necessarily Wanchain again, feel free to give examples with Wanchain, but in general in crypto and yeah, what is the difference between web two and web three marketing really?
+
+Temujin - Wanchain 
+I mean, this might be an unpopular statement, but I think the biggest difference is just a lack of professionalism, I would say, in Web 3. So, know, Web 2 marketing is, you know, I'm talking about the good version of it. Of course, you can find crap anywhere, but you know, the Web 2 marketing, when it's running well, if you're in that top 25 % or something like that, it is.
+
+It is quite data driven and it is quite professional. There are processes in place. You're checking the efficacy of the things that you're doing. You have clear branding guidelines. You have a clear messaging. There's a clear narrative, all this type of stuff. All the stuff that you get taught in business school is all coming from Web2, right Or, well, pre-Web2, but has been, let's say, has filtered into Web2. Web3 is slowly getting there, but it is definitely not the case. You probably go to...
+
+Look at CMC top 500 projects, what maybe 10 of them, know, have clear brand guidelines, clear narratives that are actually, you're doing all these kind of best practices that have been developed over Web2. Now, maybe part of that is that I'm sure some people would argue that they don't work as well in Web3. Maybe there's some small kind of adjustment that needs to be
+
+to be done for the Web3 audience because in Web3, you're almost exclusively dealing with early adopters. Whereas in Web2, you have a more developed tail in terms of different profiles and things like that. But I think a lot of that is also just excuse making. think it's just the way Web3 is yet. It's still lacking a bit of that professionalism on the marketing side. But we will get there, you know I think, even compared to.
+
+the 2017 bull run and the 2020-ish one, it is starting to get better. There's less projects where it's all just being run by a single person. You can have different types of roles with marketing teams. All of that is getting there, but it's still lagging way behind Web2 for sure.
+
+Citizen Web3 
+This was my comment on some of the tweets. That's exactly that. That Web3 is just the market is just unprofessional. That's it. You know, it's funny that you say that it's growth because I definitely tend, I mean, even as somebody who considers themselves to be like an anarchist and I have my own projects for like five years and we build and we do media and we do a lot of things, infrastructure. but I have been in the industry longer, but I've noticed that
+
+Even for me, that's been in this industry for like 10 plus years now, even with my values, I've noticed that I went from, and I will make the question now, from putting values on top of everything, putting everything and values like kind of like were a bubble to understanding that, okay, there is a business. And if I'm trying to build a business, I have to not just delegate because delegating is a very simple thing.
+
+But well, but you know, I have to learn and understand, you know, all the aspects of it, even if I have the experience from a different world, it doesn't mean that here it's not applicable. and this is sort of the question. Do you think that, I mean, you kind of said that already, but apart from marketing, what are the other fields in terms of business that Web3 businesses need to grow and to become better at in order to see
+
+If I'm going to put it in brackets and highlight it, adoption is the goal.
+
+Temujin - Wanchain 
+Yeah, let me let me I think that's a great question. Let me just kind of approach it from two different angles, one more specific and one more less specific. Let's say that I totally agree with like you've mentioned the bubble and your values, you the values that are encompassing everything. And that's definitely something that is widespread in in blockchain and Web 3. You know, there's Web 3 versus Web 2, where everyone in Web 3, okay, Web 3 is better. There's even internally to Web 3, everyone has, you know,
+
+Everyone has their favorite project. There's a lot of tribalism. This is also an embodiment of this, here's my sphere of values. And anyone who isn't 100 % aligned with this can draw, I'm a special little flower, and this is how everything should be. in terms of the other angles for, besides marketing that.
+
+that Web3 needs to learn from. So one, think we need to break down these barriers. It's not a really particularly helpful way to approach things. You can learn from Web2, and I'd say you almost certainly have to. But in terms of the specific part of it, there's probably not that many Web3 projects who are revenue positive. And so that kind of creates
+
+a little bit of a tricky space, you konw if we're talking about growing the industry, you said building a business, but even just in terms of surviving, you know, so much of it right now is just kind of propped up either by kind of VCs or just by totally superfluous tokens. And it's hard to envision that being kind of the long-term solution. So this is probably something that Web3 also has to kind of grow into is, okay, fine.
+
+a way to make this a sustainable model, whether you want to call it a business or a project, it doesn't matter. You don't have to have this centralized component to it necessarily, but you have to find a way to make it sustainable. Because really right now, probably 99 % of the industry is not sustainable. So if you look at it from that angle, it doesn't really paint a very positive picture.
+
+Citizen Web3
+It is absolutely crazy. Sorry, was like, yes and no in there silently, but it's a big pain, right? mean, one of the tools we're building works with analytics, a lot of blockchain analytics. it's very sad, you know, seeing that a lot of people believe, a lot of founders tend to believe that inflationary tokens are a form of revenue, which, I mean, to me, it's clear that they're not. I'm not going to argue that thesis, but
+
+I do want to ask you something about economics because you guys have an example with one chain where you have bridge fees that go partially into the community pool, right? I mean, that's I think is a great example of real revenue. Yeah, it could be inflationary tokens or not. I don't know actually, but still I think it's an example that uses real life revenue and brings it back to the community and to the community pool.
+
+Also, I know that you have the thing with the burn. I want to ask you what are, because I've been asking this a lot of people and not many people tend to want to sorry, not even want to go speculate there because the question is like this. What are and what shall projects do? Because right now, just like you mentioned, 99 % or whatever of the projects don't have money. They're not making money, not making any revenue.
+
+Apart from printing inflationary tokens and spreading them around and apart from of course fees, I mean, I'm not talking about bridge fees now. I was talking about fees trading on a platform. What could be real examples how blockchains bring in real revenue and growth?
+
+Temujin - Wanchain
+Yeah, I I don't really think this is a question about blockchains themselves. You blockchains, the actual kind of mainnet, the chain itself, okay, here the coin serves a very clear purpose in most cases. And so from a design perspective, yeah, you can argue about, know, to what extent, you know, emissions, you know, okay, you can play around with the, you let the economists figure that one out, but kind of at a very kind of high level, okay, it makes sense, you know, if you're paying for the rights to access the system.
+
+and you know, you're gas-free. You you want to use a system, there's a fee element to it, and some level of emissions, some level of kind fee sharing to the nodes. Again, super high level, very broadly speaking, that's fine. Then at the application layer, it's not really about what can blockchains do. So, okay, what is your project actually doing? What is the business model? You know, you got to think about that at kind of the design phase. you know
+
+This is maybe slightly off topic, but it's another issue that I kind of am worried about when it comes to blockchain right now is, you know, what is the next innovative thing that's going to happen on chain? You know, right now we're kind of stuck slightly in terms of just kind of recreating a lot of what's happening in financial industries or kind of TradFi and doing it on chain. So you have things like swaps, have lending platforms. On the one hand, okay, here it's actually pretty easy to think about, okay, how can you
+
+theoretically design some sort of revenue generation, something sustainable, like Uniswap, I'm sure it's like bringing in crazy amount of trade fees and that's fine way to operate. You know, they probably didn't need to issue their token, but just in terms of you have this product swap, you're collecting a small fee on each swap. Okay. There's a clear loop here to kind of be sustainable. So thinking about it from the kind of project or business perspective, I think that's how you have to
+
+to approach it rather than what happens a lot of time right now is you have projects you are launching, there's no clear business model, there's not clear prospects for a business, and then they just issue a token that serves no purpose, call it governance, and then try to live off that token.
+
+Citizen Web3 
+Yeah, it's a bit of a sad state really, but it's good to see it's not good. what's the word? It's, it's refreshing to see when, for example, when I, when I was, didn't know that you guys had the bridge fees and it was refreshing to see it because it's a very easy solution that a lot of blockchains can implement, but they're not. mean, I've met up recently, I don't know if this person will listen if they are high. I met up recently several, a week ago or something like that with
+
+with dev rel from a blockchain project, not a small blockchain project, it's a big one. I mean, personally. And one of the questions, know, he asked the topic we were talking about was sustainability. Like, how do we make our chain better? What's your opinion? And, my answer was make it sustainable from the beginning, you know, make sure the chain needs to feed itself. I you have developers, need to eat food.
+
+I mean, sooner or later, even if you collect money, it will finish. And if you don't, even more importantly, So, you know, work with community pools. Why is it in your opinion? And here's the question, I guess, why is it in your opinion that most blockchains simply refuse, even though they have community pools, they refuse to work with them. They refuse to trade tokens to buy either stable coins or buying to another profitable projects, whether they are Web2 or Web3.
+
+because you could dedicate work groups if you wanted to. mean, it's not that difficult. Why, in your opinion, we are so... I don't know if fear is the right word. I'm going to use the word afraid, but feel free, of course, to change it and substitute for anything else to work with community pools as an industry.
+
+Temujin - Wanchain 
+Yeah, it's somewhat of a contradiction in a way because I think a lot of this fear actually stems from notions of decentralization. You know, trying to distribute funds, in most cases, there's a centralized component to this. Someone is holding the funds originally and then deciding, okay, how are we going to spread it out? And then that comes with it.
+
+some sort of responsibility or liability to how kind of those funds get used. you see it, I mean, I haven't seen it in probably a couple of years, but at least during the bowl, see it a lot. Chains will announce, okay, we have this huge kind of developer grant program. Here's 100 million, here's $500 million for projects to come. We're gonna fund everything. And then projects come and no one can really get funded because then you...
+
+the person holding the purse strings are maybe a little scared to, as you said, fear, scared to kind of distribute these funds because they don't want to lose $10 million.
+
+I think part of that is because when we as an industry are developing these kind of decentralized systems, part of it, whether it's spoken or unspoken, that decentralization is meant to protect in a way. It removes singular liability because it's a truly decentralized system. Theoretically, there's probably in practice it doesn't work out that way. So you have this kind of...
+
+weird kind of contradiction where you have the people who are building something that is meant to not hold themselves specifically or really anyone liable than being tasked with this responsibility, which is by its nature a centralized responsibility. And so then there's just a disconnect and it doesn't, people get stuck. That's how I view it anyways.
+
+Citizen Web3 
+wanted to ask you something and slightly take the topic to interoperability. And because we haven't talked at all about it, I'm sorry about that. But I'm going to try and shift from what you said. And I'm going to try and play devil's advocate here. I'm sorry about that, but I will try. So let's talk about bridges and interoperability, because bridges obviously are an essential part of interoperability. I'm not going to ask you to elify those words, but I will ask you.
+
+kind of a silly, but a question that I guess brings up to mind, right? If we are building, I mean, an interoperable system, however it may look centralized, decentralized, well, especially if it's decentralized, aren't bridges in a way, I like the double end stick because they kind of attract, in a decentralized system, a bridge is a place that will probably attract a lot of liquidity into itself.
+
+attract a lot of users, a lot of use case and wouldn't that then create a failure point or a larger failure point? Again, that was a good question, but I'm curious as to what you think.
+
+Citizen Web3
+You're muted.
+
+Temujin - Wanchain 
+Yeah, so this is definitely the topic that I love to talk about. So you mentioned bridges, but you said the word bridge. But what you're really kind of talking about is token bridges. So there's liquidity getting locked into kind of a smart contract here, a smart contract there, and it's creating these issues. When we think about interoperability, we want to move away from purely just token bridges. When we're talking about interoperability, it's really about
+
+one chain being able to access the data on another chain in a decentralized way. It's really about the data. So this is where a lot of the work that we we do kind of goes into establishing the types of industry-wide standards to kind of outline best practices on how to vet and verify the data.
+
+what type of off-chain relayers can be used to you know copy and  paste the data and how these off-chain relayers should be set up to a certain level of standard. Because this is how we view it long term. You should have almost like a zero profit layer. This is the core infrastructure layer of interoperability, which is solely focused on, like I said,
+
+Chain A needs to be able to access data on Chain B in a decentralized way whilst having a high confidence in the validity of that data. Now, that's the only thing that really matters for interoperability. It could be slow to do that. It could be expensive, ideally not too expensive, but there shouldn't necessarily be kind of a profit layer built on top of that. The only thing you care about is that this should be maximally decentralized. Then on top of that, you can create applications that...
+
+are built on top of this kind of core interoperability layer. And this is where things like the token bridges should exist. And here you can have different types of approaches and trade-offs. Some could focus on low-cost bridging transactions. Some could focus on high-speed bridging transactions for tokens. Some could be building interoperability products that are not token-based. you know Once you can just move data from one chain to another, then you can...
+
+Temujin - Wanchain 
+The only limitation is really kind of the imagination of the developer in terms of how they use that data. And so I think the problem that you're kind of rightly pointing out right now is that that core decentralized interoperability layer doesn't exist. So people went straight to the product layer, built token bridges, and now you have all sorts of different issues. I think the biggest and most concerning issue is that you've somewhat replaced core infrastructure with a proprietary product. Never a good idea.
+
+And two, because these are all proprietary products, at the end of the day, there's incompatibility between the different bridges that are out there, which again, this really kind of surfaced in that last cycle where you could have three different versions of wrapped USDT. All of them are backed by native USDT. There's no kind of naming standards. They're all incompatible with one another. It's kind of gerrymandering these DeFi ecosystems. you know 
+
+Also a little ironic, you know interoperability is meant to kind of bring things together to unify, but then you have these different bridges who are just kind of re-chopping up the different blockchains. So that's kind of how we're viewing interoperability. So yes, totally agree with what you're saying if interoperability is meant, it just equals token bridges. But I think we think that in itself is the problem. You need to zoom out, interoperability needs to be core infrastructure, and then all these things that people think of when they think bridges, this is...
+
+These are products and then you have different types of you think about it differently when it's a product. Okay. Yeah, there's risk. You're making different trade-offs at the product level, but you're not kind of sacrificing the security of the network itself.
+
+Citizen Web3 
+That's a good point. I never thought about it like that in terms of token bridges and jumping to that point. Thank you for that. Another kind of topic, I mean, we could take this for hours probably just itself, but while we're on the topic of interoperability, I'm going to throw a couple of smaller questions, guess. mean, you guys being a very old project and building interoperability, how do you, I mean, we spoke a little bit about developers earlier on.
+
+How do you deal, battle, again, feel free to substitute here the word, with trying to achieve a cross-chain developer community and avoid the tribalism part. mean, apart from meme talking, sadly,
+
+very sadly apart from I mean they seem to have cured more or less tribalism but not meme to meme tokens the proper change normal change normal projects have that I mean even if you go to the most like and this is the saddest part for me you know usually interoperability projects which are projects that are supposed to cure tribalism at least philosophically after some years again you see the community the bug holders becoming exactly the same way and saying hey
+
+my interoperable project is much better than your interoperable project and my interoperability will be more interoperable than your interoperability and so on and so forth. So how do you guys kind of avoid that? And especially with developers, what advice maybe you could give to other projects starting out or to do or not to do in terms of building communities?
+
+Temujin - Wanchain
+That's excellent question. I think there's a few ways to approach it. One, I the onus exists with the interoperability projects themselves. So right now, the actual interoperability, this means like the people who are building the bridges today, there is a lot of, whether you call it tribalism or distrust here as well. And so this is an area where we try to put a lot of effort on it, because it's not a matter of
+
+Okay, we have a way of moving data from chain A to chain B. And then another project has a different way of moving data from chain A to chain B. We kind of want to get everyone on a single standard. we do a lot of work here in kind of industry work groups. We're very involved in things like the Linux Foundation with the Enterprise Ethereum Alliance. Actually Wanchain , we're the chair of the interoperability work group at the EEA. And so here we're working
+
+at the standard development level with a lot of the other interoperability projects already to try to kind of get everyone on the same page so that we can at least break down this tribalism or this incompatibility amongst the interoperability projects themselves. That's number one. Then the other approach that's important is how we're dealing with the application developers.
+
+This is a slightly slower process. In the EVM world, actually, this has kind of made a lot of progress, just the presence of the EVM itself. A lot of the contracts that are being kind of developed by these applications, they're already mostly compatible across a lot of different types of chains, as long as they have a standard EVM. And then it's like a little bit of an easier pitch to these types of developers you're talking about. You don't need to limit yourself to kind of a single community or in a lot of cases, because we're sort of stuck in DeFi.
+
+this money on this chain. You know, it's pretty easy for you to kind of just expand your protocol to multiple chains and you can kind of engage with the liquidity and all of these chains and the communities as well. Where we're still somewhat stuck is the parts of interoperability that I find more interesting, which is non-EDM interoperability where here you're dealing with
+
+Temujin - Wanchain
+totally different tech stacks, different smart contract languages. But this is kind of where I think interoperability itself is more valuable. Because these different types of changes do have different types of pros and cons. And, know, if we're kind of fast forwarding a generation into the future and how, you know, I want a blockchain to look like, you know, non-EVMs play a super important role because, you know, they're not just basically all the same chain.
+
+with small adjustments to variables. And then once EVM to non-EVM, or rather I should say non-EVM interoperability is solved, then developers can start rather than thinking about their project on a single chain and then expanding to other chains, they can think about, OK, it's a singular application. Different components of it exist on different chains. And the various components,
+
+you can choose the chain based on the attributes of that chain. And we want to get to that point. But here, of course, it's much more difficult than we're still years away from this kind of really being super functional because everything still has to be very ad hoc. Every chain, every non-EVM has to be solved one at a time just because it is so different. Ultimately, there will be some improvements that we can make on that via industry-wide standards. but
+
+Especially for legacy chains where some of these decisions have been made years in the past, you might need these types of kind of ad hoc solutions for a while still.
+
+Citizen Web3 
+That's a very good point again about the non-EVM chains and their importance to the industry. think that it's worth highlighting that. Last kind of question very quickly and then I will jump into the blitz with you, which is non-related to blockchain 3 questions, but last blockchain related questions, which what we're kind of talking about very quickly. What do you think, in your opinion, is the biggest myth or misconception about bridges that you would like people to forget?
+
+Temujin - Wanchain 
+Yeah, it's obvious that bridges are unsafe. No, I think that's the biggest myth. Poorly built bridges are unsafe. Same as a poorly built smart contract is unsafe. I think just because of the number, like the sticker shock when you see these all these hacks that have happened over the years of the amount of money that isn't stolen from bridges, it's understandable why there's a lot of distrust. But I think there's a lot of misunderstanding about what bridges are.
+
+how bridges actually work so that people, when they see that, they think that these are risks that are unique to bridges. Where in fact, when the bridges that have gotten hacked, and you kind of analyze and look at, okay, what actually failed here, it's basically never something that is unique to the bridge itself. There's some sort of smart contract logic that has failed, but failure in smart contract logic is a risk factor for anything that's built on chain with smart contracts. So I would say,
+
+That's the biggest misconception that bridges are fundamentally unsafe. That's what we're working on trying to kind of educate that, this is not the case.
+
+Citizen Web3 
+I must add that that fight has been a big one since 2015-16 since Bridges started to appear trying to explain that to people. I feel I feel you definitely, I'm with you mentally at least in spirit on that mission and thank you guys for doing that. Okay, let's jump to the Blitz three non-related blockchain questions. They're gonna be weird. I always say that to my guests.
+
+But this is kind of to take us out of the blockchain conversation and to finish this off. So I call it Blitz. Feel free to answer longer answers. You don't have to like pop them out. Feel free to pop them out if you want to. It's up to you. So first one, Temujin, please give me either a book or a movie or a song that has a positive influence on your work.
+
+Citizen Web3 
+told you they will be unexpected.
+
+Temujin - Wanchain 
+Yes, yes. So I'll go with I'll go with book, very kind of influential to me, what is a book called Power or Radical View. So this is by an author called Steven Lukes. you know, kind of calling back to the start of our conversation, where you know, back in you thinking about what power is and how that's helped shape the way I think about a lot of things. You know, this is one of the the
+
+biggest contributor. So this book's very influential, both to me and also, you know, it's not some niche book. Just a very influential author and book. So that's something that I definitely would point out power a radical view. In terms of something that's a little more entertaining. I like reading sci fi, something like three body problem is a Netflix show now but the book itself also very interesting a lot of
+
+kind of big sci-fi ideas, know, character work, maybe not as strong, but the high level kind of sci-fi ideas, very fun. So I'll point out those two books.
+
+Citizen Web3 
+Okay.
+
+Citizen Web3 
+Just a second to all the listeners, everything me or Temujin mentioned, whether it's projects, people, don't know, anything else, please find link under the show notes or do go read whether it's books, whether it's bridges, whether it's other projects, it's all there. Second question, please give me one motivational thing, of course, that you can share that helps Temujin every day to wake up, get out of bed, keep on building
+
+Interoperability, keep on working on, you know, ideals, whether they're about enterprise or not about enterprise and the community on blockchain and Web3 in general. And, you know, just being motivated to do what it is you believe in important.
+
+Temujin - Wanchain
+One thing that motivates me, so it's not necessarily related to the work itself, but I'm a family man, so my kids definitely drive me forward. So that's the obvious answer that jumps to mind. Yes, I'm passionate about interoperability. I do believe in the power of blockchain. And I'm optimistic that it is a revolutionary technology.
+
+But the thing that really drives me forward in the morning is definitely my kids.
+
+Citizen Web3 
+That's nice. Thank you for saying that. Last one. This is going to be the weirdest one, I promise you. I promise you this is the last one and the weirdest one. So, dead or alive, a real or made-up character, could be a cartoon character. I mean, you kind of mentioned your kids as a motivation, so let's not answer it again. Could be a real persona, could be a made-up persona, could be, I don't know, a cartoon, could be a writer, a developer, it doesn't matter. Not a guru.
+
+But when you a person that when you feel stuck in terms of professionalism and you just don't know what to do, like that's it. You're stuck. There's nothing to do. Help thinking about that person, whether they're real or not, helps you to progress a little bit inside of your head and then essentially helps you to progress. Not just inside your head, but in reality, too.
+
+Temujin - Wanchain 
+Sure, I mean, usually with questions like that, just say Goku, that's only half serious. But let me answer it a little more seriously. Rather than character, I'll focus on the word persona. said, so it's not a specific character or person, but one thing that I have found very helpful when I am stuck is to...
+
+Temujin - Wanchain
+Think about is there a win outcome in a particular decision that you're facing. And if this is a no-win scenario, then it's not really something that you have to engage with. You can just move on to something else. To put it another way, if the best case outcome from the thing that you're facing is kind of the status quo, OK, then just move on.
+
+So this is kind of a little mental trick that I use for myself when I'm faced with whatever kind of decision making I have to make. if this persona of how to approach this kind of problem solving is to think about things in terms of what is the actual win outcome here and does it exist, most importantly? And if it does, OK, then I can consider it.
+
+Citizen Web3 
+I think that if I was doing it every time, I would do a lot more. But sometimes I remember doing that, but I just don't do it. And I go to other fantasies. So thank you for actually highlighting that again. would say so. Temujin, thank you for answering all the questions, for finding the time to come on. And please don't hang up just yet. This is going to be a goodbye for the listeners. For the listeners, thank you very much for listening in, tuning in. And see you guys next week. Temujin, thank you.
+
+Temujin - Wanchain 
+Thank you.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

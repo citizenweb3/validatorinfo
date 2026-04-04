@@ -1,0 +1,653 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/edwardfitzgerald
+
+Episode name:
+Proof of Work, AI & Large Language Models with Edward FitzGerald
+
+In this episode, Edward FitzGerald CTO of Fetch.AI is interviewed. He discusses his journey from centralized telecoms to decentralized AI. He gives his opinion on how to best structure a leadership team to cope with rapid decision making to allow for a more agile business. Edward also talks about the life cycles' of businesses, the costs of making the wrong decisions, healthy paranoia and the differences between AI and decentralised AI.
+
+Citizen Web3:
+Um There we go, that is my fuck up but Hi everybody. Welcome to a new episode of the season cosmos podcast today. I have with me Edward at Fitzgerald He's the CTO at fetch AI. I'm sure everybody All of our listeners know about this project and if you don't you will find out some things today But as you all know, we're gonna be talking with Edward and first of all, welcome to the show Hi, could you please introduce yourself a little bit more than just the CTO of a fetch if it's okay.
+
+Ed FitzGerald:
+Yeah, no worries. Glad to be on your podcast. Say it, I'm Ed, CTO at Fetch.io. I guess I've been with the company actually a while now, actually, I think it's been five years, and actually sort of started off, not as a sort of CTO, I actually worked on a sort of original ledger implementation. So I sort of feel myself a sort of a bit of a developer at heart, and then sort of almost begrudgingly in some sense, like sort of climbing up to sort of like a sort of greasy pole as it sort of worked well, And now my roommate is obviously much wider and broader for the whole of the fetch side of things. But yeah, that's where I started. I mean, I can go into a bit of my background if that's useful for your
+
+Citizen Web3:
+Please,
+
+Ed FitzGerald:
+listeners.
+
+Citizen Web3:
+I would love
+
+Ed FitzGerald:
+Cool, so
+
+Citizen Web3:
+to, I would love to.
+
+Ed FitzGerald:
+I started off actually from a embedded software perspective actually. I would say probably my Lingua Franca is sort of C++ and sort of C really in that sense. And I think that... that sort of straight out of university. I think that sort of nurtured in me this sort of lava of distributed systems. And I think often we don't think of these sort of embedded systems as being particularly distributed in the sort of traditional sense, but actually there's a lot of the same sort of fault-tolerant sort of shenanigans that goes on that you have to sort of deal with, you know, even if they're on the sort of same kind of like a circuit board or something like that. So I did that for a while. and that was learned an awful lot. I absolutely loved it. And then actually did a bit of a kind of crazy U-turn in some sense. And I did sort of video codec research for a number of years. And so I was always sort of fascinated with basically, I don't like problems that I don't understand effectively. So I always like to sort of work out what's going on. And that certainly drove the time sort of the sort of switch to kind of video codec stuff. And then I guess. After that, I kind of joined, did my kind of web three or kind of like blockchain kind of, uh, kind of careers, you know, switches what I'm on, obviously at the moment. Uh, and I sort of joined, um, Nokia originally as a sort of blockchain engineer and then, uh, moved on to the fetch afterwards.
+
+Citizen Web3:
+Oh, wait. I pressed the button twice. And wait, you said, because I know you were working for Nokia and for Ericsson, but
+
+Ed FitzGerald:
+Mm.
+
+Citizen Web3:
+I didn't know you did blockchain work over there. Could you talk a little bit more in detail if you can about that? We'll be curious
+
+Ed FitzGerald:
+Yes,
+
+Citizen Web3:
+to know.
+
+Ed FitzGerald:
+yeah, yeah. So it was an interesting time. It was around that sort of like 2017, 2018 sort of like blockchain boom, I guess, depending on, you know, your perspective, is it boom one or two, you know, but so it was around that kind of time and sort of Nokia were basically trying to understand what this sort of technology can be used for effectively. And so they were building up kind of competence effectively in teams to do that. And I was sort of part of their team. here in Cambridge and that's the reason why I moved up to Cambridge in the first place and then took on the journey. So yeah, it was good fun. We were thinking of very much on the enterprise context, what's applicable, what makes sense in the wider portfolio. And yeah, it was a good time, but I knew deep down I wanted to go to a startup at some point. My career history beforehand is obviously very, very enterprising. you know, depends on, you know, doesn't matter what they, what those sort of companies do. In some sense, you're always a bit of a sort of small cog in a larger machine in some sense. So I was really looking forward to an opportunity to, to sort of make a mark and make a difference and sort of, you know, move things, kind of move the needle forward. And so, yeah, when the opportunity for Fetch came up, then it was a sort of no-brainer.
+
+Citizen Web3:
+It's an interesting thing that you say that, you know, about, you know, being a bolt in a machine or, or what have a way you describe it, you know, there are many ways to describe it. I have definitely, uh, felt that in my, um, autelier career, but, um, I'm curious, like, was, um, working for, for Nokia like that, was it something that felt soulless?
+
+Ed FitzGerald:
+Uh, soulless is probably a bit too strong. I think it's just like, um, I think there's a sort of thing where. Decisions, um, take, take much longer than you would normally do. And like in comparison in fetch decisions are just sort of dispatch boss, you know, as quickly as we can sort of make them. And I think, you know, in some sense it's sort of, it's sort of a frustration more than the kind of soullessness. Like, and I think it comes with good measure in some sense, because, you know, you're dealing with a kind of very reputable brands, you know, and so. making the wrong decision can be in some sense more costly than making a particularly good right one in some sense. I think it's just the nature of the beast in some sense, but I felt like I needed a change and that prompted the change.
+
+Citizen Web3:
+Let me be a little bit devil's old cheeky, I guess even
+
+Ed FitzGerald:
+Hahaha
+
+Citizen Web3:
+when you say the beast, are we referring here to the corporational world? Are we referring to Nokia itself? Are we? I guess not if you worked for them. But then again, I don't know
+
+
+Citizen Web3:
+the feelings, what's the beast here?
+
+Ed FitzGerald:
+it's the corporation world. It's the sort of like layers of decision making and sort of stakeholders and those sorts of things in, you know, in some sense, you know, it's almost like a kind of like a, you know, BFT like consensus engine in some
+
+Citizen Web3:
+Mm-hmm.
+
+Ed FitzGerald:
+sense, right? If you've got lots of nodes, that is gonna take inherently longer than if you have, you know, sort of two or three nodes, right? And that's the sort of thing that's sort of there. I think it's very easy to be like, oh, you know, it's sort of... In some way it is sort of set up how these big companies work. They do have this lot of interlocking kind of dependencies, but it is what it is.
+
+Citizen Web3:
+It is definitely what it is. Yeah, we can, the beast is the decentralization consensus that
+
+Ed FitzGerald:
+Hahaha
+
+Citizen Web3:
+makes us, but I'm curious, wait, what about the decision making in Fetch right now? I mean, Fetch is not a small organization and surely as the CTO of Fetch, I mean, of course you said you worked your way, but still, I'm sure that you have more than two or one people working there. So how the decision process look for you these days?
+
+Ed FitzGerald:
+Yeah, so we have like a kind of tight knit, you know, like leadership team of about sort of, you know, three or four people like who are going to make the sort of the big top level decisions, I guess, I guess, why one of them at the moment now, like, but you know, in terms of fetch, we're actually very kind of like horizontally sort of spread. And so we have. So that decision, like depth effectively is not very high. And so we as a sort of management team, we try and keep very in sync with each other. And so like if we're not all available, someone can make a decision, especially most of the decisions can make the decisions and just sort of crack on. I would say sort of putting the fetch hat on a little bit, we're actually not that worried about a kind of culture of making mistakes from our kind of like our engineers and bits and pieces. One thing I absolutely love about the culture in the sense that mistakes will happen. We absolutely don't wanna have. two instances of the same mistake in that sense. We don't like that. But so long as the team and not being malicious effectively, then we'll adapt and move on. And I think that's a great thing from a place to work there. And it's part of the reason I've been around for the time that I have. And it's just very empowering, I think, for people on the ground. It's like, OK, we made a mistake. It's in the past. Let's move forward. Let's correct it and crack on, really.
+
+Citizen Web3:
+I understand that. I guess the reason I'm asking in the direction I guess I'm digging it is I speak to a lot of validator teams, especially like big ones. You know, like we're talking validators that are worth in terms of the money secured with them more than a lot of projects out there. And it's astonishing, right? But I'm curious that a lot of them are trying to develop and we are a small validator, of course, but we
+
+Ed FitzGerald:
+Mm-mm.
+
+Citizen Web3:
+also try to... trying to make those steps and to develop in some distributed, not decentralized, of course, but distributed governance, internal architectures. And I'm curious whether Fetch has anything like that or it's more currently, the company itself is more hierarchical these days still.
+
+Ed FitzGerald:
+is still hierarchical. I mean, I guess you've got to look for us from a perspective where we started, is that we've gone through a kind of radical change actually in some sense because we started basically everyone who was in the company was, let's say not everyone, but maybe 95% of people were Cambridge based and we had an office and we were sort of a regular kind of like team in that sense and then... pandemic hit and then we're sort of like, you know, forced absolutely to kind of go into a very much, you know, remote first, you know, you know mindset. Now we're kind of like, I don't know what the numbers would be, but sort of like maybe 60-40 or even sort of 50-50 in some sense. So, you know, that's sort of great and you know, we, you know, we're kind of remote first and decision-making bits and pieces, you know, we try and do our best, but probably we haven't done as much as we should do in that regard in some sense and yeah.
+
+Citizen Web3:
+I wasn't like digging in terms of you have to do it. I was curious as how it's done. This is what we always like try to understand, I guess. But you said, let me ask you like the following question here, still on the cheat sheet side.
+
+Ed FitzGerald:
+Mm-mm-mm.
+
+Citizen Web3:
+You mentioned the C++ and you mentioned the first or the second boom. I guess we could go further and say the boom of 2014, 2011, blah, blah. But what originally attracted you? to cryptocurrencies, was that a specific boom? Because I know C++ does open a certain direction, of course, being most of the native coins written on C++, but what attracted you to this industry?
+
+Ed FitzGerald:
+It was actually less to do with the kind of like the particular boom that was going on more, you know, I guess anchored in this sort of distributed system problem. I was aware of the kind of the complexities and how, you know, interesting those problems are. I thought, you know, proof of work from that sense was like, you know, really cool. Like, and I think in some sense, it's still the most elegant solution in some sense for all of for that kind of problem. And I think the other thing is that both in Fetch and in Nokia, like we were putting together some sort of low-level ledger technology. And anybody who's been a kind of like ledger developer knows that you basically touch the entire breadth of kind of computer science, you know, storage, networking, you know, kind of distributed systems. I mean, they're all basically the kind of hard problems there. And so I've always been, you know, actively seeking those kind of hard problems I like to sort of stretch myself effectively.
+
+Citizen Web3:
+I think that hard problems are a bit like darkness and light, right? If there was no problems, there'd be no solutions to them, right? But it's
+
+Ed FitzGerald:
+Yeah,
+
+Citizen Web3:
+true.
+
+Ed FitzGerald:
+yeah, yeah.
+
+Citizen Web3:
+Curiosity is what leads us to be the humanity we are today. Let me ask
+
+Ed FitzGerald:
+Thank
+
+Citizen Web3:
+you,
+
+Ed FitzGerald:
+you.
+
+Citizen Web3:
+slowly, it's a question I didn't plan to ask, I think, but since you're saying the word ledger, of course you are referring to a collection of a particular account type or anything like that, but since... We are recording today and it's the 17th of May for our listeners whenever this podcast, of course, comes out. And of course, the word ledger springs to mind now other things as well. What do you think about all the story with ledger and the recovery? I don't know what to call it. The recovery option, let's call it like that. What's your opinion, personal?
+
+Ed FitzGerald:
+Oh yeah, it's a bit of a fiasco, I think, like all of that side of things. Um, I mean, like, you know, from there, kind of like their first hack, um, I mean, I was affected, I still get now kind of like cold called and stuff like that on, on that stuff now. So it's a sort of like, yeah, a bit of a fiasco, I think. And I think that's, that's the, that's probably the summary there, but, um, you know, uh, you've got to, yeah, like you'd be madness not to have some kind of hardware, hardware wallet right like this is the problem, it's the nature of the beast. And I remember when I, when I, you know, I pretty much bought all of mine from Ledger, from the sort of paranoia side of things of, you know, can't get it from Amazon or anything like that, must get straight from the, you know, the horse's mouth, so to speak. But yeah, like it's, yeah.
+
+Citizen Web3:
+You may both, so it's okay, you know, it's good. It's not the only one with the paranoia. I can assure you of that, for sure. Um...
+
+Ed FitzGerald:
+Well, I mean, this industry does it to you, right? Like, I mean, I mean, that's the I mean, in some sense, that's the greatest thing and the greatest weakness, right? Like the kind of like the self sort of self control of your identity, right? So sort of Holy Grail and the most painful thing.
+
+Citizen Web3:
+I'm signing and then sign even more here because yeah, I don't even want to go that
+
+Ed FitzGerald:
+Hahaha
+
+Citizen Web3:
+down. That's rabbit hole. It's a big rabbit hole. We can talk about it for sure. But yeah, definitely that industry. I mean, one of the latest thing that of course, Cosmos listeners can relate to when not just Cosmos listeners, because we are not just in the Cosmos ecosystem, but for sure is definitely the luna stuff. And... course, that makes you more... But here's another question. What do you think in general about open source and closed source code? And do you think that open source is the way forward or does closed source have its own places where it can fit perfectly?
+
+Ed FitzGerald:
+Yeah, I mean, it's a trade off like on that stuff. In general, I think I lean to more open source, the better like in general, there are obvious sort of things where that kind of falls short, especially when you're doing like security updates of kind of like open source software and you know, you have to kind of refer, you know, you have to kind of close source some solutions and you're kind of attaching kind of stuff you do. Yeah, I mean, in general, I think we're moving more and more in that way anyway, I think. And I think it's interesting and I'm sure we'll get onto sort of this topic later on about kind of LLMs. But, you know, they're kind of, you know, there's kind of a nice analogy there with the kind of the big, you know, Google, Meto and OpenAI and their big models and, you know, the open source ones now kind of catching up in kind of comparable performance, which is sort of bonkers, especially because they're. relatively small as compared. So I think it's a really interesting dynamic. There's always a thing with engineering, I think there's no black and white, there's only just shades of grey and I think that's the sort of thing that, I don't know, maybe you start off in a way, certainly I think I did, it's like, oh there must be one true answer, but I think as you go further on in your kind of career, it's like no, it's just the particular trade-offs you need in the particular time that you're working with.
+
+Citizen Web3:
+I absolutely agree and I thought sorry I'm gonna make the joke for anyone that didn't read 50 shades of grey you just heard a very quick Which is pretty accurate to be honest if you ask me so
+
+Ed FitzGerald:
+I didn't think we'd go there, but I guess you know it's...
+
+Citizen Web3:
+so honestly on a serious note I have a question. I kind of wrote this and I don't know how to phrase that. It's a question I was trying to write my thinking cycle of things to ask a person with your career experience before we get to AI. And here's the thing, I'm going to try to word it somehow. I hope it makes sense. Can we talk a little bit about somebody who worked for Ericsson and for Nokia now? Nokia and Ericsson are on the mobile phone world, of course, are used to be. I'm also from the 80s. So, you know, I remember very well Nokia and Ericsson as well, of course. And Nokia tried to make a revival and actually talking about privacy. I had a BlackBerry phone until recent, like only two years ago. It was the key, the one with the it was a keyboard and a screen. So still, though, I'm curious, what is your opinion? on the cycle of corporations when we're talking about like the life and death, you know, and it's closely relates with blockchains and the recent hype of AI as well, I think. I don't know if I'm making any sense, but I'm trying. Help me out.
+
+Ed FitzGerald:
+In the sense that they sort of like, there's a sort of like managed decline that you sort of like see over time, or there's just a sort of a boom and sort of like, yeah, what's,
+
+Citizen Web3:
+way you understand it. I would like you to try to... I'm curious of whether you think that companies like that, for example, do they have a chance for second life when it's a big product like that, for example, with Nokia or Ericsson? Or does decentralized AI, for example, which had its first hype in 2017, does it still have a chance to survive today? Those kinds of cycles of... Corporations, I guess. This is what I'm getting at.
+
+Ed FitzGerald:
+Yeah, like, I think, like, maybe, but I think it's like a sort of, you know, 10 or 15% chance, I think it's sort of one of those sort of things where it's probably better to characterize it like, it's unlikely that say, the sort of Nokia, for example, it's unlikely that they will have another sort of mobile boom hike that they had in the same length, so you know, to the same degree, but equally so I don't really see them going away that often, you know, in any time sort of soon in a sense. And if there is a decline, it's sort of. It's an incredibly kind of slow, slow one in some sense. And, um, you know, from, from my side, actually, I was much more working from probably the side of both Ericsson, actually, and Nokia. I was actually much more closely working on the kind of network side of things, which is the bit that you don't actually, most people don't, you know, maybe don't associate with both of those companies actually. And that's the sort of, sort of bread winning, uh, sort of part of each of those kind of organizations, there's a bread and butter that just, just keeps everything else kind of ticking. I mean. All of those companies are, I think, always searching for another kind of mobile phone, kind of like, you know, high point again. And I think that one of the recent things with like the Nokia being specifically is, you know, they kind of bought Withings, which is a sort of French sort of IoT device, you know, kind of like startup and tried to sort of integrate it into their kind of like their wider portfolio. I sort of around the time that I was sort of with them there and And so they never quite recreate the sort of same thing. Going on to sort of decentralized AI, I think probably is quite similar in some sense. Like, the hype cycle is always a bit of a peak and then you kind of dissolve down into sort of the core benefits of these sort of bits of technology. And they end up being maybe not as glamorous as was previously kind of like suggested, but like still very, very useful.
+
+Citizen Web3:
+I guess as well what springs to mind now when you answer is whether or not do you think that distributed technologies have a longer life cycle. There is a sentence I heard, I don't remember who said that, I don't remember whose quote it was, but there was somebody trying to compare Web2 to Web3 and one of the things they did, they were like, look, one of the main differences is that these technologies... might live for a thousand years and we as humans have not yet seen anything like that. What do you think about this?
+
+Ed FitzGerald:
+Yeah, I think, you know, on the kind of like the blockchain side of things, I think it is a pretty interesting paradigm that we haven't seen. We don't know the kind of implications and I don't really see a good web to alternative that isn't got some major kind of drawbacks. I think it's I mean, you mean, look at the landscape of the kind of web three world, but like fundamentally a kind of a shared, you know, open database that everyone agrees on, like is a powerful, powerful kind of concept, you know, and certainly, you know, all the kind of. normal ways of building trust and transparency. And I think, you know, my side is like, again, it's a tool in the sort of arsenal. Maybe there's definitely many examples of when sort of like overused or used for sort of like that sake, but it's a very, very powerful bit of technology in the same way as all the open sourcing stuff that, you know, we've had the kind of boom on. And I don't think that's going away in the sort of same way. And neither will it sort of. decentralized technologies, I think we'll just get smarter about how we use them and you know, you know, and sort of like, you know, pay the cost. I mean, it's obviously cost a lot of money to, in some sense, to have all the kind of replication and the kind of full torrents that you have, you know, you have, you know, on every level kind of consensus or storage or whatever kind of access that you kind of have. And, you know, there's a kind of question about, you know, when does that make sense for a kind of particular problem you're kind of solving and when does it, you know, and yeah, so I think definitely going
+
+Citizen Web3:
+when
+
+Ed FitzGerald:
+to
+
+Citizen Web3:
+doesn't
+
+Ed FitzGerald:
+stay away.
+
+Citizen Web3:
+it?
+
+Ed FitzGerald:
+I think when there's no need to garner trust in that sense, I mean you're doing it for simplicity sort of sake, I think also a lot of the stuff that's, the sort of state explosion problems that we kind of have, and kind of change our kind of symptoms, a little bit of that in some sense, and I'm buoyed by the kind of like the sort of switch to more kind of roll-up bass techniques and stuff like that. They have their problems as well, obviously, but moving to the sort of like, keeping the blockchain to the most essential information, I think makes a lot of sense.
+
+Citizen Web3:
+And do you think that the consensus, in your opinion, of course, consensus algorithms that blockchain technology uses of today are efficient enough to work?
+
+Ed FitzGerald:
+I think there's always a trade-off between efficiency and maintainability effectively, and efficiency obviously has multiple different kind of axes as well. As I said, I think proof of work, I think most of your listeners will probably somewhat agree is a beautiful, elegant solution, but you can just look at the Bitcoin network as to how that can go wrong. maybe not lead to the same level of decentralization, the same type of like parameters of decentralization that you're kind of after. I mean, conversely, you know, the other end of the cake is sort of like, I mean, like the PBFT algorithms that power a lot of the kind of Cosmos base chains. They're very, I mean, it's very old tech in comparison, you know, about explicit message passing and kind of verification. So yeah, they're sort of like trade-offs in those sense. And yeah.
+
+Citizen Web3:
+But you worked with networking a lot, right? What would be, I mean, and of course, consensus is not exactly the same as networking, but it's very similar when we're talking about blockchain. There's
+
+
+Citizen Web3:
+a lot of overlapping. What's, again, taking the fetch hat off right now, can you give me an example of at least a paper that you've seen that aroused curiosity in the direction with you? Something that you were like, oh, this is this could... Make a difference.
+
+Ed FitzGerald:
+Well, I guess I liked the idea of the original stellar paper actually, like
+
+Citizen Web3:
+Everybody
+
+Ed FitzGerald:
+on those
+
+Citizen Web3:
+did.
+
+Ed FitzGerald:
+other... Yeah, yeah. And, you know, actually at my time in Nokia, I had a go at basically, you know, implementing it effectively, the kind of the two kinds of kind of consensus algorithms. I think, yeah, I think, yeah, like that was kind of interesting and novel on that side of things. from a kind of like a developer hat on in some sense. It was actually kind of very complicated to implement and to get working right and reliably in that sense. And so I think this is what I mean about the kind of like the trade-off. I think, I mean, just look at kind of like Raft versus Paxos, right? You know, like, you know, the kind of Paxos original implementation was absolutely a nightmare to kind of work with. And then you kind of have Raft coming out to miss other things. So. especially on these sort of critical safety systems. And obviously you have to, you know, you have to take into consideration, you know, number of nodes and validators and other bits and pieces, obviously inside that side of things. But, you know, that's the sort of trade off you're always making between, you know, what's the tip, what are you trying to achieve?
+
+Citizen Web3:
+I think there was a curious conversation you would have enjoyed definitely even participating in. We had, sorry to pull the quill, but it's really to carry on the thought.
+
+
+Citizen Web3:
+Like we had two episodes, I believe, with the core development team of Dash. And now their implementation of consensus is similar, but very different. And it's interesting. I think it would have, you would have had a lot to contribute to that, I think. Whether from which side is a different question, but...
+
+
+Citizen Web3:
+I'm pretty sure. Let me, let's go to AI. I mean, this is, no, I'm joking. This is not why we gathered here, of course. But let's go to AI, 50 shades of AI.
+
+
+Citizen Web3:
+Let's be very, I like taking things really down sometimes. And considering, I'm sorry, I'm going to call you, like I don't like the word expert, but I will call you an expert. You are, in my opinion. You are. very knowledgeable and you have a lot of experience working in that direction. Can you please, as an expert, and this is important, L.E. 5, the difference between AI and decentralized AI. Like really L.E. 5, really a seven-year-old kid. I'm a seven-year-old child and I want to understand what is the difference between AI because maybe I already understand what it is or maybe I'm 10. I don't know. And what is the difference between decentralized AI?
+
+Ed FitzGerald:
+Well, maybe this is a thing that I'm not so much of an expert in some sense. I'm not actually kind of an ML person by training actually. Distributed systems is sort of more of my gig actually on that side of things. I mean, I think, you know, on the sort of super high level, I guess, and I guess by decentralized AI, you're talking about these sort of protocols for sharing. And maybe we can actually talk a little bit about kind of like Fetch's sort of protocol in some sense. on this level. But, but, but yeah, I mean, like, you know, decentralized AI are trying to solve, you know, the sort of problem effectively, like, of not having to have this sort of centralization of either compute or data or other sort of other kind of factor that's required for training of your models and having your intelligence. So, like, the sort of traditional kind of starting point, obviously, is that, you know, more data, more compute, better model, better outcomes and that sort of thing. So when you're trying to do with sort of decentralized AI kind of techniques and kind of co-learn, which is the fetch one is one of those, you're trying to address some of those sort of problems and they come with kind of like some levels of trade off. So if you take the kind of co-learn example, what we're really trying to do there is tackle the kind of data problem actually more than the kind of compute side of things, which is like, how do I... how do I make a better model with a whole load of people together that I wouldn't be able to make on my own? And I really, I mean, so it comes with a trade-off in that the model is sort of inherently shared when you do this sort of kind of protocol. And, but that has a lot of benefits in a number of different use cases. And one of the ones that we featured, I think it was a few years ago, but it was sort of like the COVID kind of X-ray set, you know, and getting kind of hospitals together to kind of like work together. And... That's a really clear example where the model can be shared because you're trying to solve an actual problem like that's affecting people's health, but for various reasons, you can't share and pool all that data into a central place effectively. So that's what I would say. It's like you're trying to break down this problem of centralization effectively across a couple of axes.
+
+Citizen Web3:
+So if I was to break it down for a kid, I would say imagine that your toys are not owned anymore by you, but by the whole playground.
+
+Ed FitzGerald:
+Uh, yes, I guess so. Yeah. Like I guess, yeah. Uh, difficult to maybe draw a line from the sort of like training and the data in the bits and pieces, but no, I think that's a fair thing for a five or 10 year old.
+
+Citizen Web3:
+And I guess the benefit would here be then that it's not only your toys that owned by everybody, now you own everybody else toys as well, right? I guess that would be the benefit here.
+
+Ed FitzGerald:
+Yes, depending on the kind of like the protocol, yes and no, like in some sense, but yes, like there's a sort of a shared ownership of at least one element generally.
+
+Citizen Web3:
+Okay,
+
+Ed FitzGerald:
+Yeah, like, yeah.
+
+Citizen Web3:
+okay, I like
+
+Ed FitzGerald:
+I mean,
+
+Citizen Web3:
+it.
+
+Ed FitzGerald:
+you get you get into interesting things with a kind of like the sort of shared model and, you know, predicting other people's data from that. And, you know, there's a sort of like partial leak of information, but yes, that's not really relevant in the sort of 10 year old definition, I guess.
+
+Citizen Web3:
+No, but it's good to break it down. You know, this is what the point was. But okay, but we'll get to that. We'll get to that. I have one uncomfortable question for you
+
+Ed FitzGerald:
+Mmm
+
+Citizen Web3:
+and it is uncomfortable. There was now an opinion and I've heard it. I've heard it a couple of times and I want to ask you, why do you think that opinion existed and what is the difference now? because I think there is, at least in my personal opinion. Back few years ago, this was three to four years ago, I believe, maybe three, three and a half. A lot of people, when people were talking about Fetch and Fetch was talking about the ILO rules, and, oh, Fetch is just a marketplace. Why were people saying that in your opinion and what is the difference? Where is Fetch now? What is the product that Fetch is trying to deliver today?
+
+Ed FitzGerald:
+Yeah, I think we've gone through quite a few sort of cycles internally. Like broadly speaking, in Fetch, I would say, there's two main ones. I mean, we started off in sort of like 2018 much more sort of heavily on the kind of research side of things. And now we're much more switching into a kind of like a product focus sort of thing. And that's had... that's had changes sort of across sort of everything, in almost every dimension actually of the organization. So, you know, to do with staff, kind of like roadmaps, strategic directions, and the kind of information and content that we kind of put out on that sense. So, like, I think the problem always with Fetch has been that the vision is always huge, and actually breaking that down into sort of pieces and giving that to people is always difficult. like in that sense. And so people tend, there's actually, we sort of see this in sort of like the stats and stuff. We see people that basically coalesce onto the sort of aspect that they are particularly interested to or have an affinity to. And we end up having kind of clusters of community rather than sort of like one big cohesive kind of like community. I think that's starting to change and we're moving into that direction. And I think the biggest advantage that we have at the moment moving to this sort of product focus is people can sort of feel and touch kind of like the technology and maybe beforehand it was a little bit more abstract or you know it was a barrier of entry because it was sort of hidden behind our kind of developer tooling or you know a number of these sort of like reasons but um but yes like we're absolutely heading in a in a much more product focus and in my opinion much better direction.
+
+Citizen Web3:
+Do you currently, how do you currently view, I mean, because all of them, I mean, as far as I know, there is only one other AI project in the Cosmos ecosystem. But I'm curious, how do you view, you personally again, and I mean, you could answer from your personal side, you could answer from
+
+Ed FitzGerald:
+Mm.
+
+Citizen Web3:
+the fetch side. How do you view the other, not just in the Cosmos ecosystem, but outside of the other AI projects, do you view them as competitors? Do you view them as somebody you can... I work with, do you agree with what they do? Do you think they're crazy?
+
+Ed FitzGerald:
+Like a bit of both, I think, on all of the sort of fronts in some sense. So yeah, there's obviously ones that are more competitors than not on that sort of thing.
+
+Citizen Web3:
+Like.
+
+Ed FitzGerald:
+I think, well, I think the kind of, the sort of, the sort of Valerie team, I think, is kind of an interesting one with the kind of agents on that sort of things. And, you know, Singularity is obviously one that we get, you know, compared to quite a lot. And... And so yeah, like a notion obviously for the sort of data side of things. I would say like, you know, while we are certainly kind of an AI focus as a sort of project, you know, our big central kind of theme that runs through everything is the sort of autonomy, the sort of agents that we kind of build. And like the, that's kind of, the AI in some sense is a really nice sort of like additional benefit that you can kind of do. If you look at kind of that is basically an agent problem where you're sharing data and you're building a model together. It is the sort of AI kind of parts around it, but mostly, Fetch is all about kind of that connectivity of the different kind of autonomous services. And this sort of leads into the wider Fetch vision, which is that we're not gonna be in this world where we have to kind of pull information from the internet, not for much longer. Like, it's gonna be a push. The model is gonna... can, you know, we believe it's going to be completely upended. And I think, you know, we're stuck. I think people are starting to sort of really see this, especially with things like the Google bards and the sort of chat GPT side of things. And they're really, they kind of the, that kind of power that comes from there. And effectively the bit that really nicely works with is obviously, if you imagine this world where you've got all of this power and automation that's executing on your behalf. The problem has always been how do I basically share my intent, you know, with my bit of automation, my agent, my sort of smart API, whatever kind of analogy you'd like to call it. And I think, especially with these large language models, that is becoming like easier and there's a sort of pathway, a technology pathway to do that really, really nicely and efficiently. That isn't, you know, some kind of more elaborate, effectively kind of rules based system, like effectively, you know, it can be really nice in general. So, so yeah.
+
+Citizen Web3:
+Before we get to the LLMs or architecture of the agents, because I definitely want to talk about that, I must ask another slightly technological, slightly philosophical question.
+
+Ed FitzGerald:
+Love them.
+
+Citizen Web3:
+Now, I'm going to be devil's advocate completely because I also worked with AI and I am a huge... geek when it comes to those things. So this is going to be a complete, there's a good question, but I'm going to know I want to know
+
+Ed FitzGerald:
+Mm.
+
+Citizen Web3:
+your opinion. I don't know if you heard of a guy called Yuval Horari is the public speaker is a PhD guy in biology and then data science and whatnot. And he's advisor of what's his name, the guy, schnab, what's his name, the guy from the Ah, European finance, not financial, but...
+
+Ed FitzGerald:
+I'm pretty sure I know who you mean. Yeah, yeah, yeah.
+
+Citizen Web3:
+Okay,
+
+Ed FitzGerald:
+Yeah.
+
+Citizen Web3:
+thank you, because I got lost a little bit. He had a very interesting, and I must say, because I'm a geek, I love to read him even more because I disagree so much with a lot of what he says.
+
+Ed FitzGerald:
+Mm-mm.
+
+Citizen Web3:
+But he had a very interesting, very powerful quote, sentence. I'm not going to be able to quote it right now, but today it's became, well, in the past, like since ChatGPT came out, I guess it became super relevant. He said that, you know, in the past, we never seen an adversary, whether it was a government, whether it was the Nazis or, I don't know, the Soviet Union or Pol Pot or any other evil government or a company that had enough computational power and data to process what we can process today. And of course, with this, with those agents and LLMs and everything else, this changes, well, amplifies the game, not changes, but amplifies it. We already expected
+
+Ed FitzGerald:
+Mm.
+
+Citizen Web3:
+that. What's your opinion? Can that lead us to potentially to the Skynet scenario? Can we all die in the next half a year?
+
+Ed FitzGerald:
+My feeling is it's unlikely, maybe not unlikely is the wrong word, I don't foresee a kind of Skynet,
+
+Citizen Web3:
+It's a good start.
+
+Ed FitzGerald:
+I don't see a sort of Skynet in the sense of one huge great, you know, kind of uber AI like it in some sense. And, you know, if that did get out of control, then, you know, it would require an awful lot of computing so that, you know, basically the kind of physical constraints of it would be kind of problematic. What I actually see is... this is why I think the open source, LLM sort of things is really interesting, is I see a much more widespread, you know, applicability of kind of like these sorts of models. So I think it'll, it'll sort of touch sort of things much wider, probably the models will be less sophisticated, certainly in the sort of like short term. And I think it's, you know, like certainly at the moment with what we have at the moment, the sort of like the. sort of AGI spark or the sky dip it seems like an awful long like way away on that side of things. I mean it's certainly not I mean like we shouldn't underestimate the kind of like the effects of um kind of like AI and on the sort of wider society I think on that side of things. I'm not sure I'm not sure I have a particular opinion about like the best way to kind of solve that. I you know there's obviously lots of talk about regulation and these sort of bits and pieces. I think there's some very fairly obvious practical issues on that kind of line. So it's certainly gonna be an interesting couple of years, I think I would say, in some sense. And I think we will probably make a few mistakes as a sort of like, along the way, and we all sort of, sort of as we always do as a sort of human race in some sense, and we will sort of correct from that perspective. But I think that... you know, this is definitely a sort of turning point in some sense, or at least the starting of a sort of a turning point. And I mean, hopefully there's a kind of, you know, utopian vision actually, where, you know, we can end up on steer this in a way that is sort of a bit more, the AI sort of helping us being kind of super productive. And, you know, and that's what we should sort of strive for, but we need to be very careful about. the sort of unforeseen consequences, I think, which would be very difficult to predict.
+
+Citizen Web3:
+I think I'm not sure if all the listeners heard it or will hear it after the editing of course, but the irony of the ice cream Spooky music started to play the background was
+
+Ed FitzGerald:
+Yeah,
+
+Citizen Web3:
+just was perfect. Was it like that is good That is good. That is very good. I love it. I love it
+
+Ed FitzGerald:
+the, the joke for your listeners will be is it's pretty visible out here in, in Cambridge at the moment. So I mean, you must be ringing that, that thing quite, quite a lot to try and get people out. Yeah.
+
+Citizen Web3:
+It's hilarious. It's hilarious. Well, it is what it is, right? Let's carry on.
+
+Ed FitzGerald:
+Yeah.
+
+Citizen Web3:
+No, it was it was just hilarious, you know, seeing I got a little bit pissed off, to be honest. It was what's his name? The founder. I keep forgetting his name and actually will get a chance to talk one of their reps, hopefully soon.
+
+Ed FitzGerald:
+Mm-mm.
+
+Citizen Web3:
+The founder of Chad GPT and standing
+
+Ed FitzGerald:
+Sam Altman.
+
+Citizen Web3:
+in that said Sam Altman because in standing in court and saying now we need to. Not develop AI anymore. Of course you don't want to develop any of the competition anymore now. Of course, man. This was really making me pissed off. I'm sorry.
+
+Ed FitzGerald:
+I think, yeah, I don't know. Yeah, probably some sort of like a tactical, you know, like don't regulate me, I think a little bit
+
+Citizen Web3:
+Mm.
+
+Ed FitzGerald:
+like there. I think that's sort of part of it. And I think, I don't know, listening to a lot of stuff that he said, I think he's very clear that, you know, there's some serious knock-on implications like all this sort of stuff, but, you know, yeah. I just don't know. I mean, there's a lot of talk of this sort of, you know, international atomic agency kind of style regulation. I just... I don't see how that would work in practice, but we'll see.
+
+Citizen Web3:
+It's just to me, they knew about those, they understood those implications. They're very smart people and I think we all understood what was happening, what we're doing, you know, and, you know, to kind of stand up after you release already, and I'm sorry again, to pull the quilt. I'm just, it's makes me like a man. Come on, like, no,
+
+Ed FitzGerald:
+Mm-mm-mm.
+
+Citizen Web3:
+just be fair with everybody for you did it. Let everybody else do it anyways. Anyways, um, LLMs and architecture of how. agents are shaped and fetched. I want to talk a little bit about that. Could you please tell our listeners what are those? What are the agents and
+
+Ed FitzGerald:
+Yeah,
+
+Citizen Web3:
+how do they work?
+
+Ed FitzGerald:
+yeah, I loved it. So an agent is sort of like a piece of automation. That's the way I describe it. Practically, what does that look like? That looks like a very similar to any other kind of rest endpoint that you kind of have. So what Fetch does is that we build the sort of framework and tools for these sort of agents to kind of interconnect with each other. And they are kind of registered on the kind of Fetch blockchain. So the Fetch blockchain is effectively this sort of discovery hub. of all of these sort of agents. And these agents can sort of publish their kind of protocols and specs effectively so that other agents can like discover them and know how to kind of communicate with them. And then I guess you've probably seen, but like we've released a number of products in sort of end of March, April kind of time, as an agent verse, which maybe you've come across. And these are all tools that are meant to help out with this sort of framework. So one of the big things that's there is you can just, we have a kind of hosted runtime for these agents. So, you know, within sort of four or five clicks or something, you can kind of deploy one of these sort of smart agents, you know, on your behalf, you can kind of have like a mini kind of Python code editor inside the kind of window. That's a sort of starting process of where we want to go. So, you know, Fetch is this sort of infrastructure of these sort of smart automations, allowing them to kind of interconnect with each other and doing really cool, really cool things. And... sort of going on the LLM side, one of the things we also released with a sort of April release is sort of integration of the LLM into our Fetch wallet. So you can get it to do things like auto restaking if you're kind of like, your stake on the kind of Fetch network, for example. And this is sort of our beginning experiments. We're doing an awful lot of stuff in the background about kind of transferring your intent as a person. into kind of into this sort of automation and you're going to see a lot more in that in that area in the next couple of months which is super exciting.
+
+Citizen Web3:
+So today, anyone can loach an agent already, right?
+
+Ed FitzGerald:
+Yeah,
+
+Citizen Web3:
+Okay.
+
+Ed FitzGerald:
+yeah, yeah. So there's two main ways to do it. Like, so you can go onto this agent verse. So it's like a hosted runtime there and you can do whatever you want there. Or you can go and we have a sort of microagents runtime which is available on Python by package manager. So sort of pip install microagents or you agents if you're searching for it. So sort of micro symbol and yeah, you can get kind of started. It's all open source. You can have a look at it, how it kind of works. And yeah.
+
+Citizen Web3:
+And what are you mentioned that are cool things that have been done and that you can do and that you're planning to do? Could you talk a little bit of the ones that you're excited about or actually for our listeners, because we have techie listeners who will go and do that for sure. What are you looking for? What kind of agents are you personally expecting people to launch and to do what?
+
+Ed FitzGerald:
+Yeah, so I can talk a little bit of the kind of direction we're heading in, in the sense that what we find, yeah, one of the big problems with like sort of agents in some sense is how you compose and connect them all together. And actually, LLMs actually come in and they do a really nice job of doing the kind of like task separation and building all these sort of bits and pieces out. So, you know, in terms of what we want people to sort of build for the agent versus all things and everything in some sense. And it's relatively easy to get something like a Lang chain or any of these sort of LLM kind of projects together and connect the dots in very interesting kind of ways for your agents. So for example, to kind of make it kind of concrete, if you take say an agent that's gonna give you kind of like a hotel booking and maybe book some flights and kind of a taxi driver, it's quite easy to hook that together in the kind of LLM. to say, okay, great, you wanna go on holiday somewhere. I can take that objective and I can go and, okay, I need to call these sort of like three agents and sort of put all of that stuff together. So that's the bit that I'm most excited about actually, kind of from the fetch side of things. And I sort of describe it as this kind of, this intent, you know, transference from you to your agent that can go away and do these sort of like novel things.
+
+Citizen Web3:
+Can I somehow make today, at least theoretically, let's say a baby AGI agent talk to an agent on fetch or am I talking bullshit
+
+Ed FitzGerald:
+No,
+
+Citizen Web3:
+right
+
+Ed FitzGerald:
+no,
+
+Citizen Web3:
+now?
+
+Ed FitzGerald:
+it's absolutely, absolutely right. I mean, the fundamental tenant of the kind of the sort of agent verse that we have is it is fundamentally introspectable. So yes, you can, this is sort of, you know, what I was sort
+
+Citizen Web3:
+cool.
+
+Ed FitzGerald:
+of alluding to in some sense, right? Like that, you know, you have all this web of different connections. It's completely introspectable, you know, by you or your agent. And then it can decide what kind of capabilities it might want to use on that side of things, which is, you know. I mean, in some sense, you can do some of this already with kind of like a land chain in the tools for like Google searching and stuff like that. But there's much more power, like when you have these sort of systems together, like, and they kind of all incorporated. And the big fetch vision is, I mean, I'm not sure if you're familiar with this sort of idea, software pattern of sort of microservices, you know, but the big idea with the kind of the agencies that they can compose themselves into a big. microservices mesh that's really
+
+Citizen Web3:
+Hmm.
+
+Ed FitzGerald:
+owned and operated
+
+Citizen Web3:
+It's cool.
+
+Ed FitzGerald:
+by a whole series of different kind of people and you get this sort of really kind of nice like fundamental power, like power from that kind of like inherent like hierarchy of, hierarchy of abstractions basically.
+
+Citizen Web3:
+That's amazing because I think that hierarchy of obstructions talking to each other would be the coolest thing I'm expecting to see in the next half a year or so. You know, all those models starting to interact with each other and starting to... Where is the ice cream music van?
+
+Ed FitzGerald:
+Hopefully he's gone right?
+
+Citizen Web3:
+It's... Oh my God! But I'm really looking forward to the time. I don't know why. I get goosebumps when we talk about it. Like you cannot see it, but I really get goosebumps when we talk about different models interacting with each other from different places. I think it's going to be a mind blowing really.
+
+Ed FitzGerald:
+Yeah, definitely. I think it's gonna, yeah, you can super move things forward. And this is why I think that this, you can go back to LMS a little bit, like, you know, we've seen all the bits and pieces about how we, you know, there's gonna be kind of a commodification in some sense, right, because like, even if you have a really good model and they are kind of communicating via each other, you're gonna, the bad models will get better really kind of quickly and you'll get to a kind of a nice, I can't remember, yeah, a nice even level playing field should be really cool. Yeah.
+
+Citizen Web3:
+But man, guys, for the listeners, of course, I mean, please check out the links under the description of this episode and you will follow, follow that play with it. This is I think the more people join the movement playing with AI, the more exciting it's going to get. So,
+
+Ed FitzGerald:
+Oh absolutely,
+
+Citizen Web3:
+yeah.
+
+Ed FitzGerald:
+yeah.
+
+Citizen Web3:
+So one last question before I get to the Blitz. One is going to be a little bit, again, tweaky. So,
+
+Ed FitzGerald:
+Okay.
+
+Citizen Web3:
+and again, like I say, you already understood by now that I'm a geek when it comes to AI. I just say that, and
+
+Ed FitzGerald:
+Mm-mm.
+
+Citizen Web3:
+I get excited when people talk about that I use it in everyday life. And the thing is though, I had tried to help cyber a lot. I tried and I still try. And let's just say that it's not easy. to today's becoming easier. But when I was three or four years ago, talking and saying that there will be a personal AI assistant helping you to do things. Oh, look, are you stupid, man? What are you talking about? So the question is this. As somebody who works for an AI project, do you think that chat GPT, baby GPT, Bing, I don't know, Bard, whatever, have they killed any hope of decentralized AI? actually making it in the market because the UX they have is of course, well, I mean, again, this is a devil's a cut out question, but I want to know your opinion. What is the chance to fight here back? How do we fight back? All the big corps.
+
+Ed FitzGerald:
+Yeah, sorry, can you repeat the question? I think we might
+
+Citizen Web3:
+Yes,
+
+Ed FitzGerald:
+have got
+
+Citizen Web3:
+yes,
+
+Ed FitzGerald:
+a little bit,
+
+Citizen Web3:
+yes.
+
+Ed FitzGerald:
+yeah.
+
+Citizen Web3:
+Sorry about that. So the question is this, how do all these decentralized AI projects like such as Fetch, such as Singularity, Cyber, Cortex, whatever. How do they compete with Bard, with ChatGPT, with BabyAGI, whatever? Because today it seems that there is no way to compete. Do you think they can compete and how?
+
+Ed FitzGerald:
+Yes, I think there's definitely kind of like room to compete on that side. And you're sort of starting to see this already. And so I don't know if maybe you and your listeners have seen the kind of, I don't know if it is the leaked kind of like paper from Google. Did you see this on the sort of the LLM's and the, you know, there's a, you know, the open source community effectively moving at such a pace, you know, and the, the sort of summary of the paper is effectively Google has no moats and, you know, sort of will never will because you can't keep up with the sort of pace of, of kind of moving forward. And I think that's, that's the kind of niche that is very difficult for big companies to kind of like kind of work out. And that's the power of the kind of this decentralization of that. And, and so this sort of leads into my sort of thing. My earlier answer is that I think that, you know, maybe, um, there will not be, or maybe it'd be more barriers to kind of get to a larger kind of like more general model. in some sense, and that will be the kind of purview mostly of the of the kind of bigger organizations. But I don't actually think that matters too much in some sense because I, you know, I foresee these sort of lots of small, you know, kind of specific kind of models put together in the kind of open source community that can be combined and put together, you know, in a kind of like additive kind of way. So you know, the exact trade-off between those two, I mean, I guess time will tell. But I think the pace of innovation in the decentralized or the open source world is staggering and will always basically beat out the big corporates in that sense. So I don't think it's a solved problem and they're always going to win. And again, in that sense, I don't think we're going to have this super intelligence really. I don't think we're going to have a Google Bard or a chat GBT that we're just going to do everything to. I think certainly we're moving in the direction of going to a more appless kind of interface for how we work with stuff. I can see common UIs and stuff coming around the corner on that side of things. There's obviously challenges with the chat interface in that sense. I'm not sure that's the perfect solution there. But we're heading in that kind of direction, but I don't really foresee one big model to rule them all in that sense. It's going to be far more federated.
+
+Citizen Web3:
+When you said that, I am already thinking that now we need to do... We do it with debates every couple of months with big, like with all the projects together. And now we need to do an AI debate, decentralized AI debate for sure. This is now 100% because I can see that the difference of opinions and different projects is going to be fascinating. But sorry, back to you and thank you by the way for that answer because I loved it. Back to you though, back to the Blitz last kind of thing, three questions.
+
+Ed FitzGerald:
+Okay.
+
+Citizen Web3:
+Feel free to choose them. You don't have to answer... quickly like a blitz blitz. I call it a blitz, but it's not really a blitz.
+
+Ed FitzGerald:
+Okay, quick fire round. I love it.
+
+Citizen Web3:
+Yeah, quick fire round. Yeah.
+
+Ed FitzGerald:
+Do I get a 50-50 or a phone a friend? That's the question. Right?
+
+Citizen Web3:
+It's easy, believe me. Believe me, it's easy. Believe
+
+Ed FitzGerald:
+Okay.
+
+Citizen Web3:
+me. You don't need them. You get to ask ChadGPT if you want.
+
+Ed FitzGerald:
+Excellent.
+
+Citizen Web3:
+So Ed, give me three projects in or outside of crypto. Doesn't matter. Could be related AI completely, nothing to do with crypto blockchain that technologically arouse interest in what you do.
+
+Ed FitzGerald:
+I have to call out Lang chain. That's pretty cool. Like on that side of things, there's gonna be a little bit of a kind of like a theme here probably. I'm really interested in what's going on with sort of like, I'm gonna say red pajama, but this sort of like general kind of like space where they're kind of making models that can be used for more kind of commercial applications. That's gonna be kind of like a sort of parous here here. And then I would say the other one, which is maybe a bit kind of like left field in some sense is the. is the kind of like the requests Python library actually, and you're going completely other end of the scale of the spectrum. And I absolutely, I really, like I'm sort of a developer at heart and I love beautiful simple abstractions. And I think there's something that is sort of like, there's a reason that has effectively led the kind of like the standard for all HTTP clients. And so I think that's the sort of the perfect example in that sense.
+
+Citizen Web3:
+Nice. Two things that keep you in life, in your daily life, that keep you motivated to, not just to build fetch, but keep you motivated working on AI, LLMs and everything else.
+
+Ed FitzGerald:
+Yeah, I guess the sort of two ones would be like the team and, you know, that I kind of work with at the moment. It's very, you know, we're a lot of like-minded individuals there and, you know, we want to kind of move the needle forward on that side of things. And that gives me a lot of a lot of kind of energy on that side of things. And then I guess, I don't know, there's something about my personality type, I guess, that I love to bring sort of order to sort of like chaos effectively in some sense. And I find that's a sort of common theme. when I'm working and doing less coding now, but certainly is obviously a big thing when you're coding. And so, choosing the right subtractions, choosing the right solutions for the problems, trying to think about the longer term and seeing how that evolved. I just, I love the elegance of all of the things playing together as a orchestra basically like that. That's, yeah.
+
+Citizen Web3:
+Devil's Dream.
+
+Ed FitzGerald:
+Yeah, well, yeah.
+
+Citizen Web3:
+Last one. Wait, no, go on, go on, go on. You were going to say something. Wait, you were going to say something. I
+
+Ed FitzGerald:
+No,
+
+Citizen Web3:
+interrupted
+
+Ed FitzGerald:
+no,
+
+Citizen Web3:
+you. No? Okay,
+
+Ed FitzGerald:
+you absolutely hit
+
+Citizen Web3:
+sorry.
+
+Ed FitzGerald:
+the nail on the head I was going to say. That's exactly right, yeah.
+
+Citizen Web3:
+One last one. It's a bit of a weird one. And this time is one. It was three, two, and one. So, give me one personage, character. It could be a real persona. Could be dead or alive, it could be a cartoon character, it could be a developer, it could be a president, it doesn't matter, that inspired you in the past to do what you're doing today. And still inspires you. Not a good, not an icon, but inspiration.
+
+Ed FitzGerald:
+That is a hard one. That is a hard one, especially to pick one, like, because it feels like it should be kind of like, like...
+
+Citizen Web3:
+Let's go with one. Centralization, centralization. At least one.
+
+Ed FitzGerald:
+Okay, okay. I think the sort of easy one in some sense is specifically for my kind of like web three journey is probably Vitalik, I think,
+
+Citizen Web3:
+Mm-hmm.
+
+Ed FitzGerald:
+and for what he's done for, I mean,
+
+Citizen Web3:
+Okay.
+
+Ed FitzGerald:
+the sort of the smart contracts bit, I mean, that was a, I'm sure most of your listeners were the sort of saying, but like in many ways it's a very easy kind of like, kind of abstraction and obvious in hindsight, right? But... I remember when I was thinking about that, it was just like a boom, okay, that makes an awful lot of sense. So yeah, that was a light bulb moment for me.
+
+Citizen Web3:
+Nice. I also get that. Sometimes I have to reread what he's written eight times, but yeah, I think I'm not the only one probably.
+
+Ed FitzGerald:
+Hehehehe
+
+Citizen Web3:
+So, hopefully. Ed, it's been a huge pleasure. Thank you for answering the questions, the uncomfortable ones as well. And hopefully chat again in the future.
+
+Ed FitzGerald:
+Thank you very much. It was lovely chatting with you.
+
+Citizen Web3:
+Thanks, bye everybody. So let me just.
+
+Outro:
+This content was created by the citizen cosmos validator if you enjoyed it please support us by delegating to citizen cosmos and help us create more educational content.

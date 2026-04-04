@@ -7,7 +7,11 @@
 
 const { TwitterApi } = require('twitter-api-v2');
 
-const TWITTER_HANDLE = 'therealvalinfo';
+const TWITTER_HANDLE = process.env.TWITTER_HANDLE;
+if (!TWITTER_HANDLE) {
+  console.log(JSON.stringify({ success: false, error: 'TWITTER_HANDLE env var is required' }));
+  process.exit(1);
+}
 const MAX_RETRIES = 3;
 const BASE_DELAY_MS = 1000;
 
@@ -51,12 +55,10 @@ const tweetWithRetry = async (client, params, attempt = 1) => {
 const buildTweetUrl = (tweetId) =>
   `https://x.com/${TWITTER_HANDLE}/status/${tweetId}`;
 
-const main = async () => {
-  const args = parseArgs(process.argv);
-
-  if (!args.text && !args.thread) {
-    console.log(JSON.stringify({ success: false, error: 'Missing --text or --thread argument' }));
-    process.exit(1);
+const getTwitterClient = () => {
+  const oauth2AccessToken = process.env.TWITTER_OAUTH2_ACCESS_TOKEN;
+  if (oauth2AccessToken) {
+    return new TwitterApi(oauth2AccessToken);
   }
 
   const apiKey = process.env.TWITTER_API_KEY;
@@ -67,17 +69,29 @@ const main = async () => {
   if (!apiKey || !apiSecret || !accessToken || !accessTokenSecret) {
     console.log(JSON.stringify({
       success: false,
-      error: 'Twitter API keys not configured. Set TWITTER_API_KEY, TWITTER_API_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET',
+      error:
+        'Twitter credentials not configured. Set TWITTER_OAUTH2_ACCESS_TOKEN for OAuth 2.0 user auth, or TWITTER_API_KEY, TWITTER_API_SECRET, TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET for OAuth 1.0a.',
     }));
     process.exit(1);
   }
 
-  const client = new TwitterApi({
+  return new TwitterApi({
     appKey: apiKey,
     appSecret: apiSecret,
     accessToken: accessToken,
     accessSecret: accessTokenSecret,
   });
+};
+
+const main = async () => {
+  const args = parseArgs(process.argv);
+
+  if (!args.text && !args.thread) {
+    console.log(JSON.stringify({ success: false, error: 'Missing --text or --thread argument' }));
+    process.exit(1);
+  }
+
+  const client = getTwitterClient();
 
   try {
     if (args.text) {

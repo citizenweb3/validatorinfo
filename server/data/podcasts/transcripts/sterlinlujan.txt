@@ -1,0 +1,369 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/sterlinlujan
+
+Episode name:
+Propaganda, Parasitic Organizations and Cypherpunk with Sterlin Lujan
+
+Citizen Web3 
+Hi, everybody. Welcome to a new episode of the Citizen WebThree Podcast. Today, I am happy and glad to have another person I've been following for a while. They are a crypto anarchist. They're, I would say, a researcher, a person into governance, into development. They work with Logos, Polyslabs, well, the founder of Polyslabs. Anyways, long story short, Stalin, welcome to the show. Hi. How are you?
+
+Sterlin 
+Hey Serge, thanks for having me. Really happy to be here, my friend.
+
+Citizen Web3 
+Man, I am glad we finally managed to do it. We've been managing to trying to do it for a while, but we've managed to do it. And let me jump straight into asking you to introduce yourself a little bit broader because I think what I did, the intro, it kind of sucked. So I'm going to ask you to do another one for me, for the listeners, tell us about what you are busy on right now. How did you get into web three, maybe, and anything else you want me and the listeners to know about you.
+
+Sterlin 
+Yeah, absolutely. I love this particular discussion because it could go long because my story is quite lengthy, but we'll stay to the medium, the medium length one. Okay, so I've been working in crypto or crypto adjacent for 10 plus years. And I got into the space, I came into the space not from traditional finance, not from random interest. It was more as a result of activism actually. So in 2009, I got arrested for possession of MDMA.
+
+and cocaine, quite a hefty amount. And I thought I was going to go to prison for a long time. The courts were actually threatening me with 40 years in prison. I ended up hiring the greasiest, smarmiest attorney that I could find who had ends with the local district attorney. And I was able to get a deal and I got 10 years probation. It was in Texas, so was deferred adjudication, which just means that I can get off. If I get off.
+
+probation and I play by their rules and it's not a conviction on my record. So I actually did five years in probation and then was able to get off early because I was a, you I was a good kid in paper prison. So the reason why this is relevant to the story and how it relates back to crypto is because of this experience, it made me realize that I hadn't done anything personally wrong in my opinion. I felt like I was more of the
+
+the victim. I guess I, during that time, I had probably more of a victim mentality. I was, you know, a young man, 25 years old. So I started reading and looking into this particular situation because I felt like there was something wrong with the state. Why was this drug illegal? It actually had helped me. That's the reason that I got into selling it. It helped me wake up. I had sort of a spiritual revelation or as sort of a, a Zen, a Zen moment of, of mental peace and clarity.
+
+while on the compound. so how it ends up panning out is that I realized that a bad thing had happened to me and that this wasn't okay and there's some kind of social problem that exists at the core of this. I eventually found through, largely through the Ron Paul revolution that was emerging during that time, I was introduced to Murray Rothbard through Ron Paul and I read Murray Rothbard's book, Anatomy of the State.
+
+Sterlin 
+And I remember very clearly chapter three is literally titled the state. Actually, this might've been for a new Liberty. Actually, that was the first book of his I read for a new Liberty. Chapter three is called the state and it breaks down the nature of the state being this parasitic organization, this group of individuals who have a monopoly on force over a territorial region. And it clicked for me. Okay, now I understand formally and logically why the system is so corrupt and so
+
+morally bankrupt and what had happened to me. That was the epiphany. As a result of this, I started doing more research online. I started following people like Stefan Molyneux, who at the time was more of an anarchist. He has since kind of transitioned away from that, in my opinion. But it was through this constant research that in a little bit down the road in 2013, I came across people online calling themselves cypherpunks and crypto anarchists.
+
+talking about Bitcoin and Bitcoin being a tool to liberate themselves financially and to gain some sense of financial sovereignty and to escape having to deal with the state and the state's money via this new technology. So I started actually writing about, I made my first post on Facebook about Bitcoin in 2013. I think I said something akin to all that. It looks like all I want for my birthday is Bitcoin. Right. So.
+
+It wasn't until about three years later or so, two years later, in 2015, I went to Porcfest in New Hampshire. And at Porcfest, anybody who's familiar with it, it's a massive libertarian conference. They have an area called Agriest Valley where vendors set up and they sell their goods. And I was told to bring Bitcoin because all the vendors accept it. And this is what is kind of standard to use at Porcfest. and
+
+For anybody who is familiar with sort of the history of how Bitcoin started really spreading and circulating in the US, it was largely a result of the work by Ian Freeman, who's now in prison, unfortunately, right, as a result of running an unlicensed money transmitter. That's a whole nother story. But those guys on Free Talk Live talked about Bitcoin, which got Roger Verre interested in it, right? And then he ended up investing and seeding a lot of the ecosystem, generally speaking.
+
+Sterlin 
+and really helping popularize it along with people like Ross Ulbrich and the Silk Road. But I went to the 2015 event and of course, Ian was there, the whole free talk live people, I got to talk to everybody about Bitcoin and crypto more deeply. And this is when I put my money where my mouth is. I went home back to my wife and I said, we're going full into Bitcoin, going full into the cryptocurrency ecosystem. So we were now stakeholders in the ecosystem and I started working in the space. Coincidentally, this coincided with me losing, I lost a
+
+I was working as an assistant store manager at Walmart and I got fired. I lost my job because they did a random background test on me. They finally figured out I'd been working there for years. Like I was going to college and they found out about my background and they terminated my employment. But it ended up being the best thing that ever happened to me because then I was like, what am I going to do? I'm technically I'm not a felon, but my background would still show up if I try to get a job. Right. So I.
+
+I said, okay, maybe I need to experiment with another opportunity. This was around the two. So two things happened. I started publishing content on steam. I don't know if anybody remembers the steam it platform where you could blog and it was delegated proof of stake and you could get paid out in a cryptocurrency token. Well, I did that. ended up the platform ended up not working out in the long term, but I ended up doing quite well on steam it early on traded a lot of those tokens for Bitcoin. And then also around the same time.
+
+Roger actually reached out to me from Bitcoin.com, Jamie, to be exact, who helped open up the news desk. So I started working with Roger and Bitcoin.com in 2015. I helped open up the news desk there. I did that for three years. And I've been in the space ever since. More recently, I joined Logos two years ago and started working in the network state, cyber state. And this is a whole conversation we can have. I'm guessing we will in a moment. Cyber state movement, which is crypto adjacent, in my opinion.
+
+Somewhat related and then just here recently as a result of my experiences in crypto and working at logos I founded polis labs, which is a research institute focused on solving governance for cyber states and network states so my history is Largely geared around activism right and at things like agorism and trying to take power back by doing things that are active and productive rather than just complaining about the problems or being black-pilled like a lot of people are so anyway, that's
+
+Sterlin 
+That's a bit of the story.
+
+Citizen Web3
+Can we extend the interview to about six, seven hours? Because the questions I now have to ask you will take at least six, seven, because no, no, no, maybe nine, 10. I'm okay with five, but man, you don't understand. So first of all, first of all, I want to tell you respect for talking about not just having a history with correction institutes or with the punishment institutes, whatever it is or how you want to put it, but coming out to speak with it, not everybody does, especially when a history is
+
+Citizen Web3 
+and a little bit behind you not everybody has the balls not everybody has the courage to talk about it especially to be able to understand that they did nothing wrong so so kudos to that big respect for that and by the way what was your nickname on steam it i was top author on in the beginning on steam it's one of the top authors for three four months bro we we
+
+Sterlin 
+Now you say you can probably still find me in all my
+
+Citizen Web3
+You remember your nick though? Wait, you remember your nick? What was it?
+
+Sterlin 
+Yeah, yeah, it's either at Sterling Lujan or at Lujan Sterling. It's just my name.
+
+Citizen Web3 
+have to find it. I was not well, but I was a top, I was also a really successful author for like three, four months. I kept hitting like all the time top shit. This is how my crypto career started. I went on to launching the first fork of Steamit, which was called Golos. It was the first official and unofficial fork because the license was different before they changed it to completely open source. We had to pay them for the license. We had to give them 10 % of the ICO, which was 2016, I believe.
+
+Citizen Web3 
+A lot of connections there. Man, you did a cliffhanger, which I want to go back to. During your introduction, you mentioned reading several books and understanding or least grasping as to why and what's wrong with the society, why the system, not society, sorry, the system. I want to go back to that cliffhanger a little bit. I want you to answer the why before we will go further, if it's possible, of course.
+
+Sterlin 
+Yeah, sure. This is the end. This you're right. This could be a whole podcast in and of itself. Talk just talking about the structural and systemic problems that we're dealing with in society, but we can, break it down a bit. So. That as I mentioned, the first thing that happened that really got me to, so here's the thing before I took MDMA, that was a big, the chemical was a big factor in my intellectual and spiritual growth as a, as a human being. And so the first thing that happened when I took the pill.
+
+Is that I started at, and this was before I got ever got arrested. I started asking questions is for the first time ever asking very hard political questions. Why is this pill illegal? Why is this banned in society? And that's what got got me going down this rabbit hole. Eventually that led to the, the full formation of this anarchist attitude. So what, what the primary problem is, how you can break it down is that government first and foremost is.
+
+An illegitimate institution that has the mystique of legitimacy or the mystique of authority is the way to describe it, where it universally tells people how to live their lives on threat of violence. If they're living in a territorial region that is controlled by that state. Another way to describe this, the state, the system is called the Westphalian state. And so just a small history lesson, anybody.
+
+who has any knowledge of the 30 years war, which was a war between a variety of different states, one of the bloodiest wars in history. And the conclusion of the 30 years war was called the Peace of West Folly or the Westphalian Treaty. And this treaty basically set the precedent for nation state sovereignty and clearly defined borders with the hope of preventing these religious wars.
+
+that really engendered the 30 years war. So, but Westphalianism of course has failed. what has caused the development and the sustainability of these massive nation states of control. It also inevitably led to centralized banking and control of a fiat currency, which powers and fuels
+
+Sterlin 
+The inefficiencies that these nation states have, and it also fuels the warmongering and the control of the population, the totalitarian mentalities. Overall, it is what put us in this particular situation that we're, that we're in today. So that's, that's how that's the main, the main problem socially and culturally that we have to face is this idea that we're being aggressed against, against our will on a daily basis. So this is.
+
+The problem is I can summarize it most accurately and easily. And there's a lot of different people who've written and I mentioned Rothbard wrote about this and anatomy of the state for the, the libertarian manifesto is also written about the economic sides of it as well. And then there's a book I recommend by David Friedman called the machinery of freedom, which also describes a similar scenario. But I, but I want to be clear. This is a, this is a description from my own personal.
+
+background and experiences and also my understanding of anarcho capitalism or voluntary ism but that doesn't necessarily mean this is the strategy that i would employ to solve these problems which course we can get into but structurally from my from my vantage point the problem is the institutionalized and really commercialized use of aggressive force on society that
+
+under the ages or under the rubric of the use of law or regulation to control society is what I see as fundamentally problematic. And it's a problem of human governance that we need to figure out a way out of and try to figure out how to solve or how to correct for. So that's the issue as it stands.
+
+Citizen Web3 
+I find it fascinating to see two things in that, in what you mentioned. One, think it's fascinating to see how the institutions of correction and punishment in what slow motion and in a bad way they work. And what I mean is, for example, if we talk about MDMA or if we talk about FDA approving ketamine recently or MDMA has been used for...
+
+treating not just PTSD, but other disorders already. And it's crazy how if you go back to how the war on drugs started, and I'm not talking about the fifties or the sixties on not Reagan, I'm talking about the corn, the 1920s, the world marijuana, because the corn farmers didn't have fucking space to grow their fucking corn. And it's interesting to see how what you say kind of builds up.
+
+on all of that, know, what's wrong with the society, all this commercialism, all these things. The only thing I think I want to mention is about, you kind of mentioned quite, in my opinion, high, you know, like, A-class authors about anarchism. What I noticed and what I would like to maybe share with you, with the listeners from my anarchism,
+
+a mystical adventure story because I consider myself to be really hardcore and some people when they hear opinions, they're like, my God. But what I noticed is that people like Rochelle themselves, the things they were saying, the things they were fucking talking about had exactly what's on the box. one of the quotes, I'm not to quote it right now, but it was something like, the moment people will realize what the banking system is.
+
+it will be too late for them to act because there will be slaves to it. And I mean, the guy said it publicly, like, for, and I mean, that's what I mean. You know, I mean, what I'm trying to say is that sometimes we try to search for the truth too deep when it's like on the, on, on, on, on the, it's right there in front of us. And I know, for example, you, started psychology and I'm going to get this all into a question, not started or you, you, you have something to do with psychology in the background. And my question is like here, after seeing all, hearing you say what you said and me adding to that,
+
+Citizen Web3 
+Why do we act like that? Why do we wait as people for God knows what, sometimes we are already failed, we are already in a dump and we still don't get the ladder. We're still like, oh, let's dig in deeper. you know I mean, there was never a person in the five, it's not my own words, but I'm going to quote it. There was never a human being in the last 10, 15, whatever we start calculating our history, modern history from that on their deathbed stood up and said, hey,
+
+I fucking love my government and my country and died. Not one fucking person, not fucking one guy did that, not one girl, not one whatever. They all died for different reasons. But the question is why? As somebody who has the experience with anarchism and psychology, why are people so resilient to what can make potentially give them better life, better hope? don't know. It's a bit of a long, not really a question, but yeah.
+
+Sterlin 
+Yeah, no, that's a really good question. Basically, it's the extent of why don't people act? Why are people so easily, why do they so easily conform to the status quo and to the system? And I think this is really a multifaceted discussion. The first thing that comes to mind is that a lot of people, I think a big part of the problem is cultural indoctrination and propaganda.
+
+So I read a book at one point in time called by Jacques Ellul called Propaganda, the Formation of Men's Attitudes. And so one of the things that states try to do to prevent uprisings, prevent coup d'etats, to prevent revolution is to get people to buy into their own servitude, to buy into their own slavery. And what Ellul would say is that this requires a constant bombardment of propagandistic messages.
+
+of messages that speak to the sanctity and the power of the state and that we should be subversive to the state. This is the reason why public schooling is wholly a state-based propaganda machine. There's a reason that the Prussians developed the modern schooling system in a way that is meant to churn out obedient worker drones rather than self-thinking, autonomous individuals.
+
+So you can see very clearly through the education system, through the way that people are brought up, through the cultural messaging that people are bombarded with, that's constant, that is part of the signal of society. It's this, it's the aura of all of these gestures happening simultaneously that subvert a person's will to act. then combine this with the fact that people are very risk adverse.
+
+When it comes to pushing back against systems that are so large, so intrusive that they can simply crush you. Right? This is why, why Thomas Hobbes largely referred to the state as the Leviathan, because it's this monster that can constantly crush you at any time that you try to fight back. So it takes, it takes a person with a tremendous character and spirit and fortitude, intellectual and emotional fortitude to try to fight back against this. takes groups of people.
+
+Sterlin 
+With this revolutionary ethos and spirit to say, no, somebody has to do something. So I think there's a lot of different reasons why people are in this conformist mindset, but it's largely that, that, that risk tolerance piece. Of the fear of fighting back, not having the courage. And then it's also that a lot of people are engineered to actually believe that it, this is okay. It's just the way things are. Why shouldn't we just passively accept.
+
+the status quo. So there's a bit of education and also trying to help people come to terms with who they are that's vital to our work. But I'm a huge fan of promoting ideas and a culture of building technologies and products that lead people to greater liberty. Right. And that's an important part of the work. But yes, so the answer really lies in propaganda.
+
+and risk tolerance, I think.
+
+Citizen Web3
+Before we go on a of jump topic, I'm going to put one last comment question into here, a short one. mean, recently, again, not my words, unfortunately, but recently I saw this meme, sorry, online. I'm sure you've seen it. We probably follow a lot of the same people, but probably I know we do considering the Twitter public sizes that. Sorry. But something about it was a guy who said, bet...
+
+It wasn't you by any chance. even I was a guy who said, bet that if the wasn't the parents who would teach their kids to wipe their asses with toilet paper, but they would learn it at school, it would only take one generation for people to believe that it's the education system that teaches people to wipe their asses with toilet paper. So the question is, you know, we talk a lot about governance, but is it really the education system that the biggest elephant in the room?
+
+You're on mute. Sorry.
+
+Sterlin
+Yeah, it's, it's, yeah, it's, yeah, thanks. Thanks. No, it's, it's, it's multi-layered, multifaceted. The education system is definitely a big part of it, but it also starts in with the, the parental relationship and parenting structures in society and sort of this, the, the Veltensang of, of parenting worldwide is, and so I'm going to cite a psychologist now, Alice Miller, who wrote a book called For Your Own Good, where she analyzed
+
+A lot of the schooling, which he referred to as a poisonous pedagogy in Nazi Germany and looked at a lot of the ways that a lot of the Nazis were raised and a lot of the citizenry was raised and it was very formally structured. Some of this is part of just the German ethos anyway, but it's also extremely authoritarian and very punitive. People as they grew up got punished, they got hit, they got spanked. and what
+
+Miller would say is that the children, aside from the physical abuse, they would have their emotions ablated, basically removed, right? They weren't allowed to have an emotional reaction. They weren't allowed to be their human selves and experience a full range of emotions. So you can imagine what kind of psychological problems that this would precipitate if you weren't able to feel and to express your feelings and then to be
+
+potentially hit or abused as well that creates a dysfunctional personality, right? So I think looking at the psychological literature on child upbringing is important. And now I think here's where we can get really deep and a bit more philosophically attuned with the discussion. So notice in with governmental and nation state tropes that there's a lot of mirroring with childhood, right? And parental themes.
+
+where we refer to nation states as, you know, uncle Sam, the fatherland, the motherland. There's always a parental metaphor in the state. So there's this idea, I think that's embedded in most people's subconscious, that the nation state's a kind of protector, almost a very patronly figure, a paternalistic figure, a father figure that's gonna take care of you. And that if you step out of line, you should be punished.
+
+Sterlin 
+And then should accept that because father is taking care of you. So you can very, you can see how there is a relationship between the way that we think about our upbringing as children and the way that we think of the, the managers and the custodians of society, which are traditionally nation states. Right. So there's, we have to get over this fact that governments aren't, aren't our parents, that they're not paternalistic figures. Right. And then when you see it for what it is,
+
+fact that it's an aggressive entity that tries to control and micromanage society, that helps you escape psychologically from this matrix, right? And that very much is the metaphor of the matrix, right? You take the red pill, know, Neo, take the red pill, you wake up out of the matrix and you realize what it is. But that also takes a lot of courage, right? To come to terms with that and to realize that psychologically means all of a sudden you're at odds with everything that your society and that your culture stands for and you have to have that renegade or that maverick
+
+mentality. But yeah, think that parenting plays into it, psychological and subconscious attitudes about the state. And then the fact that this is all horizontally reinforced by the citizens. This is something that Larken Rose, who wrote a book called The Most Dangerous Superstition, talks about quite often this horizontal policing of people where you're, oh, you're out of line, you're a lawbreaker, you're doing drugs. So they reinforce the status quo.
+
+Right? Even if the status quo, for those of us that tend to think more logically, would say is morally abysmal, they support that and they keep it in place. So it makes pushing back against and creating reform or absolute change extremely difficult in society. And this is again, why I think that building novel structures and I forgive me for going, I'm to go on a bit of a
+
+a history lesson again, a bit of a tangent. So there are groups of people who eventually if they finally say enough is enough and they wake up to the fact that they're being controlled and the status quo is not great and the government has all these debt-fueled inefficiencies and all of these governance problems, they can create structures and institutions that run in parallel. These are called parallel societies or parallel institutions.
+
+Sterlin 
+And this is exactly what happened in the beginning in the 1960s in Czechoslovakia with the so-called velvet revolution. Right? What happened is these, these dissidents, these activists, they were referred to as chartists where they, they said, what we're going to do is create a parallel institution and structures. And we're going to use these structures to, instead of having a direct confrontation with the state, we're going to create a second culture or a second space. A few of these.
+
+Just to name a few folks involved in this, Ivan Heros is one and Vaklav Binda are another one who really wrote the guidebook on what they referred to as the parallel poli, the parallel polis. And their purpose for these institutions was giving people a second space, a second culture for existence. And what they did is they had an anti-propaganda campaign called Somistat, which is basically it's
+
+previously censored material that the state censored again, propaganda and indoctrination. And they, they republish the censored material as, as pamphlets and handouts. And they did this to keep their secondary institutions, their parallel institutions powerful and to keep that, that mind share, that Liberty based mind share very active. And this is the reason why the Czech Czech Republic today has a very strong crypto Anarch and an anarchic attitude. If you've been to Prague.
+
+You know, recently we spent time in any of the, any of the, institutions or places in, in the Czech Republic. It's very strong. Anyway, so the, the culmination of this story is, is finally the, the communist regime relinquished power peacefully as a result of the Chartist movement, as a result of these parallel institutions and parallel societies in, I think it was in the late, maybe it was 1989, I know it was in the late 1980s. And they.
+
+The interesting thing is they actually took over the power structures, the traditional power structures in society. An individual of Václav Havel actually became the president of the Czech Republic as a result of this. They would call it the Velvet Revolution because not a lot of blood was shed in this power transition. They didn't have to have a bloody coup d'état or anything of that nature. Instead, they created these parallel entities. this is the reason why I mention this and circling back around to this point of people being psychologically trapped.
+
+Sterlin 
+In order to escape these psychological traps, these mind traps and all this propaganda, the activists and the dissidents, instead of creating a bloody revolution or trying to fight fire with fire, they fight fire with water. Instead, they form these parallel institutions, these parallel societies, and then they allow the mind share of activism, of different ways of thinking to manifest and to flourish and to proliferate. And I think that's how you actually create change at the crux of
+
+Society when you're dealing with all of these these these propagandized attitudes all of the really it's what psychologist Charles Tart called a consensus trance everybody's in this this trance this matrix of illusion that requires some Demonstrable activity for them to snap out of it. So they it requires a movement and I think these parallel societies represent More than a movement it represents a different way of life that can be seen and demonstrated because we're very much social animals
+
+Right? have a mirror neuron system that activates when we see other people do things. And so when we come together and act in unison, that's what creates a, a wellspring of movement toward a different way of being and way of living and way of existence. I think that's really an important point that, that, comes out of, think everything that we do in crypto and web three and in, the network state, the nascent network state and cyber state movement.
+
+Citizen Web3 
+I'm going to try to make a comment and take it to Web3 from here because it's very hard not to stay in here because I have a lot to talk about this topic. And I'm going to try and make a transgression, but let's attempt. I was going to say that one thing that comes to mind when you say all that is coming back to the sad state of society. And I apologize to put it like that.
+
+What I'm gonna say, I recently had a kid and very recently and we are you know, kind of a family who's a lot like, know, we are we consider ourselves not to be The average politically inclined person, you know, let's just put it like that I would say, you know completely very full on anarchism self substantial living crypto And it's interesting that even in my closer and I hope that one of my closer
+
+circle of friends will actually hear this right now. But it's my big hope that they listen to me on the podcast. OK. But even in the closer circle of people that I interact with, when I mention the words homeschooling to anyone, people look at me like I'm, and I know in the states it's a bit different. But here I'm going to try and bring it to Web3 from here. like.
+
+I think that when what you mentioned people think that I'm crazy people look at you the like the moment you talk about homeschooling the first of all everybody assumes that you're gonna put your kid in prison I don't know why I don't know how it connects to them. I think the answer is movement I think really or you know what they say to you, but he will not be able to interact with other kids That's the fucking point. I don't want him to fucking interact with those fucking systems You know want them to do to be creative and not to be in it But I want to try and make that progression, you know, and you mentioned movement and I think
+
+To me, I never actually thought about it before. I know you weren't answering my question, but when you started to say about movements and the people, and I also believe that, also believe people, you we are social creatures and people in coma, they prove it. People in coma are part of the society, even if they smart and stupid people walk around earth all day. you know, they are part of the society. Sorry, people in coma are not part of the society. It doesn't matter how smart they are.
+
+Citizen Web3 
+They are just there lying there, know, like, unfortunately, and unfortunately, a lot of stupid people do walk around us and yeah, sorry, long story short, back to the movement. You know, I was hoping 12 years ago when I started in this industry, that this is what's going to change. You know, this is today and I'm going to try now to make sort of a question and to, to, grad us to a three. You've been here as long or longer than me. How do you.
+
+You know, WebThree development as a movement, not as a technology, but as a movement. I know we both probably believe that technology is what will help us to get free at the red pill, you know? But still, as a movement, did we progress if we progressed? I know the words WebThree only exist for a very little time, but let's assume that they existed since 2009 here. And I don't know, let's start with that. Let's start with that. Have we as a movement done anything fucking good?
+
+for actual people who are not in that movement? Can we put hand down on the heart and say, my work here in Web3 or or in crypto has changed people's fucking lives that have nothing to do with Web3? and because isn't that the fucking end goal, right? I mean, otherwise, what are we here glorifying ourselves every day? So, yeah, I guess let's here trying to sort of go to Web3.
+
+Sterlin 
+Yeah, think we've had so man, so we're gonna I want to we're gonna talk about web 3 but we're may also invoke what I would just call traditional like crypto ecosystem Bitcoin, etc. So I think we've had we've suffered our wins or we've had our wins and we've suffered our losses, right? We've so I think that we've done a lot to empower people. Let's talk about the wins first. We've done a lot to empower people financially in web 3, especially through
+
+decentralized finance, decentralized tooling. And just to give an example, any platform, and there's a lot of course, there's a lot of web three platforms and I want to shill or talk about any specific one, but the ability for us to do trading and lending and swapping in ways that are relatively safe in way, because the safety in these protocols have certainly improved since just 2017, 2018, where they were
+
+just shit basically. So I think we have empowered people financially way more than a lot of people give the space credit for. And the reason why this is happening is because there's been so much naysaying and negativity around web three and around the ecosystem largely because, and this is, this is true to an extent.
+
+There's been so many scams and schemes and negative fallout from a lot of web three activity, a lot of token projects, et cetera, that ended up being shady or dicey. And then of course the collapse of FTX not so long ago didn't help the situation. I, but I think it would be, I think it would be intellectually dishonest to suggest that web three and crypto generally speaking, hasn't produced some type of
+
+decency and helpfulness in the way that people manage their own financial lives, that manage their economic lives, manage their transactionality, and to some degree liberated them from the state apparatus. Right? So I think we're moving in the right direction. But now, of course, the sort of the negative side of this is what has become more popularized above Web3 is something like Bitcoin.
+
+Sterlin
+Right? Where I used to be a huge fan of Bitcoin. I've been in this space a long time, worked with Roger and Bitcoin has not lived up to its expectation at very least. at worst, at worst, it's been completely hijacked. All our Roger Farrer's recent book, got Arrested, has been hijacked and it's being used for nefarious purposes by state actors and corporate entities now that don't serve our cypherpunk interests. So this is one of the reasons why I actually gravitate more toward Web3.
+
+and some other projects, especially, and this is kind of tangentially related privacy projects like Monero, et cetera, are where the future is going to be in terms of liberating humanity, liberating society, and putting us continuously toward this path of greater freedom. So yeah, I think overall we've done a fine job. I think there's a lot of things that we can do better as an industry. And when I say we, I'm just referring to the industry and the ecosystem and
+
+the space generally speaking.
+
+Citizen Web3 
+Now You personally though participated in my opinion, and I'm not actually talking about logos, I'm talking about status right now. In a project that, yeah, it was a big ICO and you can point fingers and like what's happening, but what has status done? That is the question. Status did a lot. for me, was, well, let's say that today it's still...
+
+Sterlin 
+Mm.
+
+Citizen Web3
+pretty much the only decentralized messenger that exists as far as I know. mean, I don't really, I mean, we can take orbit probably, but orbit is it's federative, not decentralized. So I don't really know of, I mean, we can go to an argument, master donors, decentralized or federative or whatever, but you know what I'm talking about. I'm talking about blockchain level. And so, and I know, and I'm just trying to combine here into one question, status and logos. And I know that Nomos, sorry, Nomos is part of,
+
+the StackWrite codecs were cool, Nomos, right? I know that Logos kind of was raised out of status. I guess you could, I don't know if I'm correct in arguing that and please correct me if I'm wrong. I guess I'm asking here for the background story a little bit. I asked before what came out of Web3. And for example, here's an example of the way I see it where there was an ICO, yeah. And what grew out of that was a technological stack that is now being built.
+
+with its own language, with its own privacy protocols and governance protocols and whatnot. Now, I'm not that deep into Logos. I'm sorry if I'm cutting some corners there, but can you talk a little bit about that kind of connection and that progress of what is happening right now in there and what exactly has been built? Because...
+
+Sterlin 
+No worries.
+
+Citizen Web3 
+Yeah, you're not because. Just going to put the question mark here and let you kind of take it from there.
+
+Sterlin 
+Yeah, I'm glad you asked this question. So the thing that's really beautiful about the status ecosystem is it's one of the few projects that had an ICO and that came out of that relatively unscathed, right? I think a lot of the projects that were booming after the ICO craze in 2017 were absolutely abysmal failures. There was a lot of scams in Ponzi's as well. One of the very...
+
+One of the reasons, this is my personal opinion by the way, one of the reasons why status has succeeded and grown, and we'll talk about what I mean by succeeded and where they're at in just a moment, but I do want to say for the sake of argument that Jared Hope, the founder of status and the Logos ecosystem, has done all of the work that he's done in the space by being focused on a principle-centric design, staying focused on cypherpunk values.
+
+And being true and real to himself and to his vision and goals. And so that's the reason why the project is still around today. And that's why it's, it's grown and extended into the logos ecosystem. So yes, status has had some, some certainly had some growing pains. there's been some technological changes and shift, but just over the course of the last year and a half.
+
+At least since I've been at the organization, right? I can't really speak to before that. There's been a tremendous amount of work done on the status app. It's continuing to grow. Those guys have made great progress. Every aspect of the app is 100 % better now. And speaking of which, of course, you probably know that status is actually built on top of Waku. And the fact that Waku exists,
+
+And those guys took Gavin Woods whisper protocol and finished developing it and took that to its logical conclusion as a testament to the hard work that these guys, because there's already, there's a number of projects that are built on top of our walk, who is an active live protocol that truly is a decentralized peer to peer privacy enhancing messaging protocol that really is one of the few that exists at scale.
+
+Sterlin
+in the Ethereum ecosystem to say the least, not to mention you can just build other shit, anything you want on top of it, know, leveraging things like libp2p, etc. I don't know, don't get, we won't get too technical maybe. So I'm not a super technical guy, but I do, I've enough experience in the space to speak on it. So I will say this, status has grown, this is the conclusion, status has grown. It's continued to grow. Those guys, I mean, they're putting in the hard work to develop the tech and they've
+
+They've overcome a lot of opposite. There's a lot of very difficult engineering challenges to solve in developing something like this at scale. That's both, both like a wallet and a chat app that can maybe eventually parallel or compete with something like discord, plus have a, web three wallet built into it, right? Which is super impressive and very challenging. So the work is ongoing. The project hasn't stopped. It's, it's still as I would say it has even more momentum than it has previously. Again, my personal.
+
+That's my, my, that's not a, that's not a logos or status disclaimer work. And that's my personal opinion on the matter. Now the, and the cool thing of course, is that what came out of the existence of Waku is now the whole logos ecosystem and stack. And this is what I'm, this is where I personally work, right? I don't even work primarily with the status guys, although because that's just part of the whole organization. By the way, the, organization is housed under a, a, institution called
+
+the IFT, the Institute for Free Technology, I actually have the shirt on right now, Free.technology. And so I work with Logos specifically as one of the community leads. And we're developing infrastructure for the proliferation of network states. the idea at some point, and actually I'll use the term cyber state because that more, I think, accurately defines what we're doing. But these protocols include
+
+Waku, of course, which is peer-to-peer communication, Codex, which is decentralized data storage, which is a huge, that's a whole, that's a whole podcast. That's a two hour long podcast in itself talking about data storage. And then, so, then Nomos, which is the, consensus layer, the blockchain. So the goal one day is that people in this high level, people can build applications, cyber state applications, governance applications on top of it and using the stack, which effectively creates a new kind of internet.
+
+Sterlin 
+deployed for the purpose of creating anti-fragile cyber state institutions where communities can come together. They can have a rulemaking and sense making apparatus and they can eventually deploy those those cloud-based institutions if they want to a physical territory like a special economic zone or maybe they can create a parallel poli within the context like we were talking about earlier, it plays back nicely into that where they can do non-confrontational confrontation with nation states.
+
+And this, again, this is my opinion. The organization itself is credibly neutral or politically neutral in terms. We would just say that you can go out there and build whatever kind of institution you want on top of it. know, I give you my personal things of what I would like to see built, right? Cypherpunk applications, cyber state applications that allow people to come together as a second culture, right? As a parallel polis where they're living and they're being and they're doing economic transactions and they're voting and they're basically
+
+governing one another, right? Governance, not government in this ecosystem. So this is what Logos is up to. of course, to do this, Logos as an institution is constantly having to innovate, right? This is a sandbox for innovation where these guys, so there's a part of Logos that's called VAC. VAC is the
+
+Is the research arm of logos and these are like cryptographic wizards guys with PhDs in mathematics and shit. Formalized logic the whole nine yards and they're constantly breaking ground in zero knowledge cryptography right working on ZKPs for various aspects of the development to make sure that the cypherpunk values privacy anonymity censorship resistance decentralization are all built out.
+
+in their fullest form and there's there's no gaps on the the outset. So this is really the Logos ecosystem at large. And again, I primarily focus on the community building efforts that we're that we're currently doing in anticipation of continuing to develop this.
+
+Citizen Web3 
+For the sake of not having a conversation where I agreed with everything you say, I'm going to ask you a question that I will play the devil's advocate. Why will it succeed? I Aragon has failed to build a system for governance applications. We realize that everybody's better off doing their projects. I can name here hundreds of projects now that try to build an ecosystem or be a protocol for protocols or something like that. And most of them,
+
+I think all of them kind of failed. mean, even if we take Ethereum, know, Ethereum tried to create the only single true computer, Bitcoin, the only ever true single cryptocurrency. Everybody's failed because it's not so why will again, was a good question, but for the sake of not agreeing with everything, why will this work?
+
+Sterlin
+Yeah, I know that's a really good question. And I think in that with an attitude toward fairness, know, it's everything entrepreneurial is a risk, but I guess that goes without saying. And, you know, what succeeds is there's a lot of variables and factors, but this is why I personally think it will succeed or why it has a good shot at succeeding. So this network state movement, this is something I'm super passionate about this network state cyber state movement is, is growing leaps and bounds.
+
+there's a huge, a tremendous amount of interest in the novel organizations that are emerging and the companies that are emerging and the platforms that are emerging around this movement. Right. And let me just give you an example of how excited people are about this. So Praxis is a, is an, is a network state or, or internet native nation project that was founded by, I think his name is Dryden. It's a Dryden Brown. So their, their project,
+
+just, I think it was last year, received a 500 million dollar capital injection. Right? So there's, there's very serious players involved in wanting to see this ecosystem develop. And this is a non, this is just, I'm just mentioning this in passing. This is not a value judgment because I have my own opinions about tech. We could get into technocracy and discuss the
+
+Citizen Web3 
+You went mute there, Sterling. Technocracy issues was the last thing I heard.
+
+Sterlin
+Thanks. actually hit the space bar. Yeah. Yeah. Yeah. Yeah. So yeah, that, so the, there's a lot of talk about, you know, technocrats like Peter, Peter Till engaging with the Trump administration and anybody who follows like people like Derek brose's work, et cetera, have a, have a concern. There's concerns with this, but I just mentioned in passing that people like Peter Till and a biology, Serna of a song and a number of different Silicon Valley, techno folk have
+
+put a lot of money and institutional capital into the develop of the network state movement. But there were also sort of non-major players who have put all of their life savings and action into, like all of Logos is effectively funded by the founders, right? it it So anyway, there's all of these, all of this major, that's the point, there's all this major interest in seeing this particular movement succeed. So I think...
+
+In any kind of entrepreneurial endeavor, there's always an issue of timing. your timing right? Are you building what needs to be built at the proper time, at the right time? So I think Logos is right here where it needs to be in terms of its development time and timeline for the products versus the rollout of the network state ecosystem, right? Especially with all the capital that's being injected into the ecosystem.
+
+And there's also a lot of interest in doing public goods funding, right? So all of the protocols in the Logo Stack are public goods. looking at things like what GetCoin and Kevin Awakey are doing with public goods funding regenerative ecosystems and ecologies of regenerative funding, this is all, and my friend David, who does funding the commons, there's this trend of trying to figure out how we can fund projects like this.
+
+that don't always have an easily accessible business model built in because it's public goods, right? So this is also happening simultaneously, which feeds into the potential success of projects like these. So there's a couple of different things happening. There's a lot of momentum in the space right now. And this isn't to say that it's guaranteed success. Again, there's variables. Things can happen. Things change. But I do think
+
+Sterlin 
+that Logos is very well positioned to succeed because of the huge interest in network states. And also, by the way, this is running in conjunction with the fact that there's a lot of novel, special economic zones, opportunity zones, acceleration zones that are opening up right now to feed into this development of cyber states and network states.
+
+So I think we're on the precipice of a huge amount of change, generally speaking, with regard to the way that we organize as a species and the technology that we're all building and the ecosystems that we're part of are going to be hugely involved in seeding everything that's all these changes that are happening on a macro scale in what Marshall McLuhan called this global village that we're developing.
+
+Citizen Web3 
+I interviewed not so long ago Seth for privacy and one of the things he said which was like nothing new but a different way of thinking. When I asked him a similar question to what I just asked you, he said, well, we are actually winning. And I said, we are winning, how? And he said, well, if you look around us, those court cases that you've seen, those things that are happening, it means that we are
+
+we are winning because if we didn't, this didn't exist. I was like, well, that's actually a very interesting, basically kind of what you said in between the lines there, right? That it's happening. The fact that it's happening, it's already succeeding. mean, we were talking about, but anyways, let me jump. really want to, man, okay. Before I'm going to jump into the blitz, before I do it, one last kind of question with short, if we can try to maybe, whatever, try to answer it how you want, but maybe something for, maybe something against.
+
+Before I go into the blades, I'm going to ask you for your opinion. There are... Sorry, your advice, not your opinion. Sorry, I apologize. Your advice, Sterling, for a particular type of crypto founders. In my opinion, the problem is Web3, it has lost its balls. In fact, it never grew them. So, you know, the day it will happen, maybe Web3 will also change. Maybe we will all start, you know, drinking freedom of our tops. But...
+
+your advice to anarchists, founders in Web3 who consider themselves to be... Because I went through a lot of pain with my... I'm a founder and I went through a lot of pain with my project, not only the podcast, the infrastructure, the validation, everything else we do. And I found that it was a barrier. My values are a barrier to making products and to turning those products into...
+
+Hard-coded value that can be exchanged for goods So What would you say today to those guys who have a lot of values that are coming into this industry? very quickly like something that you would advise them to do and maybe Advise them not to do definitely but but still stay true to to themselves to those cypher corn values that we are talking about
+
+Sterlin 
+Yeah, that's a really challenging one. The first thing that comes to mind is your values are, you should always prioritize those for sure in everything that you do and you should make that a public statement. But I think also what's important is not to forget that your target audience or your target customer, your minimum viable product for that customer has to change with regard to their demand. So there's a
+
+is a market or a business case for also being flexible. And this doesn't mean you have to change your values, but it does mean you should be very, very specific about the market that you're trying to push your particular product or project onto and to change or to shift direction on a way. So, I mean, this is very sort of standard, I guess, startup advice. When you're you're starting up a business, you have to be flexible. But another thing that
+
+that I'd mention alongside that is if you do intend to maintain those values and you're steadfast and you believe in them, you also have to have a tremendous amount of risk tolerance. It is true that we're winning and a lot of things have changed. I was working, just a bit of personal experience, I was working, and I'll try to make this quick, I was working on a crypto exchange for a couple of years with a good friend of mine, his name's Ernesto and he has a company called Crypto Space and now it's in Mexico called Crypto Max. And we...
+
+wanted to keep our values. We wanted to make sure our customers were well protected and insulated and that we didn't just hand out information to the feds or have back doors. And that was really, really challenging to do. And we got, we got a lot of shit and this was before everything changed and we had to deal with government actors, bureaucrats, agents, subpoenas, summons, all kinds of shit. We eventually had to shut down crypto space in the U S because of regulatory scrutiny. And we moved the business over to Mexico and Ernesto is still working there with Crypto Max. So just make sure
+
+that you're willing to put up with a lot of BS and it may not be as bad now, right? Because things have changed, but do bear in mind that there's a lot of actors out there who absolutely loathe crypto and they'll do everything they can to shut you down. So prepare to come in with grit and fortitude.
+
+Citizen Web3
+and and Vaseline a lot of fucking Vaseline no seriously man you cannot do without it in the crypto industry I'm sorry I'm but but but okay let's try to jump into the blitz I call it the blitz you don't have to answer like without thinking and the questions I assume they would be as weird as they are I usually warn guests I probably shouldn't warn you they'll probably be to your liking
+
+Sterlin 
+Hell yeah.
+
+Fuck yeah.
+
+Citizen Web3 
+So you kind of gave the answer to the first one throughout all the show, but I'm still going to ask it. Please give me, you don't have to give, you can give more than one, but either a movie or a book or a song, which has a positive influence on your work, which I guess is very easy for you. But okay, I'm just going to ask the question and see.
+
+Sterlin
+Yeah, maybe I'll reference one that I did not mention that's been super influential, although it's kind of a bit strange. So Terrence McKenna's The Archaic Revival. I have it on the shelf, but maybe it's further down. Terrence McKenna's The Archaic Revival. in terms of films, personally, I'm a huge fan of communication and psychology. So Arrival, based on Ted Chiang's short story, is just a fantastic film that constantly inspires me to try to
+
+break down communication barriers and then it reminds me the importance of building right because if we're building we're needing to communicate what we're building and we're needing to ensure that it can create change and that's largely through communication.
+
+Citizen Web3 
+Okay, nice. Quick second, quick note for all the listeners, boys, girls, robots, whoever is listening to us. Please do your Dior, very easy, show notes, everything Mia, Stalin mentioned, protocols, books, movies, songs, whatever. Please go out there, have a look, Dior. Some of those things are fascinating. Be ready to take some pills. Have every each to his own. Sorry, Stalin, back to you.
+
+okay. Give me one motivational thing that keeps telling get out of bed every day, believing that he can build an alternative system, believing that this world is still got something better left in it. And yeah, keeping on working on governance and on protocols and everything else you work on, man.
+
+Sterlin 
+Yeah. So the thing that keeps gets me out of bed, I recently, you mentioned we didn't talk a lot about it. Maybe next time, Polis I founded with the idea that governance is not solved. It's an open question. I recently saw a talk by Vitalik in person. It was when I was in Malaysia at the network school that Balaji founded. He said,
+
+said on an opening, one of his opening slides that governance isn't solved, that membership isn't solved in network states and cyber states. And I had the epiphany that this is just generally speaking governance is not solved because all we've used in the past is government, just guys trying to tell you what to do when the reality is we need to hone in on our sense making apparatus, our incentive mechanisms, et cetera. And that's, we're, we're just really starting to work on that with crypto protocols. So every single day, what gets me out of bed is thinking about how can, how can we solve this, this problem? What kind of research do we need to do?
+
+How can we tackle it from not only a logical perspective, but maybe involving the wisdom traditions and all of our psychological knowledge. It's interdisciplinary. So that really excites me. that's really where I'm personally focused right now on really solving governance or helping to contribute to that.
+
+Citizen Web3 
+First of all, by the way, again, sorry for not really mentioning Polyslabs, which we are a founder of, course. And once again, please guys find it in the show notes. Have a look what the guys do, which is researching to governance, amazing work. second, guess, we didn't even talk governance, to be honest. We talk kind of governance and not governance actually. And I would love to, because on Twitter, there's a couple of times I disagreed with a couple of things he said. And there was a couple of things we did agree on and we did carry on conversation. So it'd be interesting to,
+
+Definitely go another time into it, but that's I don't even know if it's one episode or two or three or four But okay last one last one, um weirdest one Dead or alive or real or made up? Uh, somebody you know could be a family member could be I don't know a colleague could be a cartoon character could be a book character Not a guru because I don't believe in them. I don't believe in in in in worshiping things but a personage a persona
+
+that when you feel stuck, like professionally, especially professionally, let's try to keep it to the topic of the podcast kind of thing, or your values in terms of your values, you you kind of remember of that personage or persona or whoever that is, maybe a real person. And it helps you to build up on starting again and, you know, to push on forward. Again, not a guru, but somebody that you can look and think,
+
+Okay, that helps me now to progress kind of thing.
+
+Sterlin 
+Yeah, I mean, one of the first persons to come to mind, I mentioned McKenna's book, The Archaic Revival. I'm a huge fan of his work. Generally speaking, I've watched hundreds of hours of his video content and audio lectures, and I do a lot of public speaking. And I mentioned I'm a huge fan of communication. So anytime I feel stuck or maybe I'm feeling not myself or maybe I'm self-berating or self-flagellating. And so I try to invoke the McKinnon aesthetic.
+
+and form and think about this guy just did work. He just went out there and did it. He did his thing and he was magical and he had a oracular skill. Just an amazing thing. So I think Terrence McKenna has got to be up there on the top of the list somewhere.
+
+Citizen Web3 
+Nice. like that. There's definitely definitely so much there's so many mentions to anarchists and to uncaps and to libertarians. I love it. It's a lot of psychology as well. But I don't know in psychology. I see a lot of actually libertarian things in psychology. But but okay, are we going into another episode? I know i'm sorry. So sterling, I want to thank you so
+
+fucking much for your time. was really just for me. don't know, but for me it was amazing. So thank you very much for finding the time, answering my questions. This is going to be goodbye just for the listeners, for everybody else. I want to thank you for tuning in and see you next week. Sterling, thank you.
+
+Sterlin 
+Thank you, my friend.
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
+

@@ -1,0 +1,305 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/stakignfacility
+
+Episode name:
+Validation Management, the Engine of Progress and Liquid Staking with Julius Schmidt
+
+Citizen Web3: 
+Good space time, y'all. And this episode of the Citizen Cosmos podcast, I spoke with Julius Schmid from Staking Facilities. We discussed the socio-economical side of crypto incentives, the importance of blockchain, validation, institutional players and transparency when it comes to decision making. 
+
+Julius Schmidt: 
+Smaller validators, but they're as important, or probably the smaller ones are even more important than one or two of the big ones. And that's the challenge that we have. Stake is still driven by money in a sense, or stake is money in that sense. So if these big institutionals are able to accumulate a lot of stake, then that could also drive centralization. 
+
+Citizen Web3: 
+One thing I guess I've been very proud of is that, yeah, I've worked for over the last 10, 11 years for startups and for projects, but any project that we started, and it's particularly myself and Citizen Cosmos was always fully, completely independent of any outside investors. 
+
+Julius Schmidt: 
+It's really important to get the right people, because if there's just someone who wants to maximize on profits, you might make decisions that are bad because they're profitable in the short run, but in the long run, they hurt your company. 
+
+Citizen Web3: 
+Before we rock it off, into our next episode, here are some news from the sponsor of this episode, the Cyber Congress Dow. The foundation has started its delegations policy for validators on the Bostrom blockchain, and the Space Pussy Network was launched with 96% of its supply to be dropped to various Cosmos ecosystem chains. 
+
+Hi, everybody. Welcome to a new episode of the Citizen Cosmos podcast. I have with me Julius from Stakein Facilities today, a very, very large validator, not just in the Cosmos ecosystem, but around and about. And Julius, hi, welcome to the show. Tell us all about it. 
+
+Julius Schmidt: 
+Hello. Thank you for having me. 
+
+Citizen Web3: 
+Yes, man. Hi. It's nice to finally catch you. 
+
+Julius Schmidt: 
+Yeah, we had some problems during. We tried to catch each other during break point and managed with all our meetings that we missed us. So we decided to make it official and with a full podcast. So I'm really happy to be here now and really talk about the stuff that we're working on. 
+
+Citizen Web3: 
+Julius, first thing is first. Do you want to introduce yourself a little bit more like than just Julius Staking Facilities? I mean, I can go into the official stuff, but it's boring. Go on, in your own words. 
+
+Julius Schmidt: 
+I can tell a bit about myself. So my name is Julius. I'm 30 years old. I'm one of the co-founders of Staking Facilities and currently COO at the company. My background is actually non-technical. So I studied politics and economics. I spent some time at the European Parliament. That's also why I still somehow try to bring the space into or help with education on regulation for the space. But yeah, we started the company in 2017, I think, with my two now still friends, good friends and colleagues, Wolfgang and Florian. 
+
+Wolfgang is currently our CEO and Florian, our CTO. And I think it started back then just by the fascination of the space. So I got into it through Wolfgang, one of my really close friends back then, and he was talking about crypto in 2016 and 15 all the time. He was reading stuff in forums and through that at some point he said, Ethereum is coming and you need to invest in Ether. And I was like, I have no clue about this. 
+
+And then I at some point invested some money and after that I was really like, fuck what did I just buy? I had no clue back then. As I said, no technical background. And I was like, I broke the one rule I had, like don't invest in stuff that you don't understand. 
+
+So I was mad at myself and started reading and I picked the easiest lecture you can pick as a starter, which is the Ethereum white paper to go into. And back then I was in Hamburg. And I had my lucky thing was that I had Wolfgang and we had calls every evening. So I just wrote down all my questions and every evening I thought I found something how it's not working. And asked him and he explained to me. So at some point I think that moment that a lot of us had is that that click happened where understood like the bigger picture also from a socio-economic perspective and yeah, really fell into the rabbit holes, couldn't start reading stuff anymore. And we founded the company by just reset from early on. We want to really understand the technology, like not speculate on assets, but really understand what drives the technology. But our problems that the technology still has in the early days. So back then there was no cosmos or ICP or protocols that were dealing with inter-blockchain communication or also scalability was a big problem, proof of work. So we started really trying to understand what is needed for blockchain as an ecosystem to become what we or what I in my head and we also talked about as this vision of of a global infrastructure, global public infrastructure and for everything that is somewhat digital. So we started looking into projects that focus, for example, one thing was inter-blockchain communication. So how do these protocols that back then were all not communicating to each other? 
+
+How do they communicate at some point? So we started into look into different projects that did or that tried to tackle that problem. Obviously cosmos, I think one of the first or biggest hype project back then, I think polka dot as well. And then we also looked into scalability. That's when we came across a lot of different projects, like for example, Solana and also Leia twos. So our approach was always to understand the technology and then look for how we can provide value. And the first step was to provide infrastructure, but that mentality to provide value over just financials was always a part of it. We did as well because having skin in the game was also something that was really important from us in the beginning. Now I talked a lot. 
+
+Citizen Web3: 
+No, no, no, it's all good. It's brilliant. Excellent. I have like I'm writing down as we talk, but first thing, I might have missed it, but you said a couple of times back then, I'm assuming from the stories you're telling, we talk in 2016, roughly 17, 16. 
+
+Julius Schmidt: 
+Yes, we founded the company actually in February 2017. And I think I started dipping in that space in 2016, but late 2016, like mid late 2016. So I would say 2017 was the first real year where I fully focused on the company and where we decided, okay, we're going to stop everything we're doing and just focus on that space because yeah, it fascinates us a lot. 
+
+Citizen Web3: 
+It's crazy, man. I mean, since then, the space has definitely moved a lot and especially like the whole validator space, I think not just a lot, but it changed completely. And you mentioned Wolfgang. And I mean, I know Wolfgang. I mean, I don't know him, but we came across many, many times online, I think. 
+
+And it's really cool. You know, I've seen him like comment a lot of our stuff. We commented not a lot, but we commented some of the stuff that he says, I think a while ago, it was not that long ago, actually. But there's one point that you mentioned that really kind of sprung up with me was you said something about when you were reading Crypto and then you said suddenly the socioeconomical picture clicked together. Can we talk about that a little bit more? Yeah, sure. 
+
+Julius Schmidt: 
+I think that's really for myself just because of my background, one of the main drivers for me to be in this space. Like how incentives in this ecosystem work completely different to how we have it in our current systems. 
+
+And I had this feeling during breakpoint again where, and I think that's a pretty good example of what I mean. There was this talk from Jump Trading on the new client for Solana that they are building. And just to imagine that there is this huge trading company which is normally not really interested at all in the technology side or that the clients are better for the network. They just want to make profits from their trades, but that they see like, okay, if we would have a better client on the whole network that would increase the speed of the whole network would therefore also make our trades faster in the end probably. 
+
+And open sourcing that develop spending a lot of money to develop that technology that again provides value to the whole ecosystem and they even open source it. It just shows like the incentives are completely different. You have to imagine like if we as a validator operate on Solana, our incentive is not to be just the biggest of all, take it all because that would then again hurt the security of the network. So actually we're doing exactly the opposite. We're trying to work really well with our competitors, share knowledge about security risks that we are aware of. We're trying to, with Solana Beach for example, we're trying to, we're building a block explorer for Solana, Solana Beach. We have a validator page and we're not showing the top 16 validators and ourselves as well because if they would collude together, they could stop the system and our incentive in order for Solana to be successful or a network that we operate in is really to make the whole network more secure. So everybody that if you run a company in that ecosystem and one of these blockchain ecosystems, you're highly incentivized to work well together with other community members because like if you're hurting the ecosystem, you're technically also hurting yourself because less people will use the ecosystem. So for example, if you would have a super centralized ecosystem with only one validator that owns, I don't know, 30% of stake, probably a lot of the big corporations that are also companies or users that look for decentralization and understand the values of it. 
+
+They will not use that network for that reason. So there's a huge incentivization to actually work for that. So I think in terms of just how incentives are structured in that ecosystem, it really might provide a shift that we also need in our current system, capitalistic systems that I think we are failing somehow is that aspect of working together and doing something that is in favor that also integrates the thought of what is important for us as a bigger society, not just for us as a company, but also for the companies that work next to us and that are also operating in that ecosystem. And I think blockchain in that sense, it's amazing to see how incentives can shift. 
+
+Citizen Web3: 
+That's excellent that you touched on that. It's one of my very dear topics to the heart incentives. And I think blockchains and the whole reward cycle of the blockchain gives a very quick reward. I think we as humans underestimate how much the reward cycle plays a role in our lives, whether it's even just communication with anyone, whether it's a loved one or a friend, or whether it's a political situation, or whether it's like, I don't know, whatever. I think we underestimate how much quick rewards are actually pushing us to be humans and to explore and to build and so on and so forth. And I think blockchain changes the space very, very much, which I totally agree with with you there. 
+
+Julius Schmidt: 
+I think we just have, sometimes we're not trying to calculate with humans as they are. And humans have, if we have too much freedom and we do tend just based on our nature to not do the best for everyone, but rather for us. 
+
+So if we integrate a structure or if we use a structure as a basis that kind of incentivizes us also to think of others by nature, then we take away that little piece that we actually know humans are not really good in, or sometimes we just look for ourselves and we can use that infrastructure to kind of counter that thought or that way of people acting. 
+
+Citizen Web3: 
+Definitely. That is more or less actually the thought that I was carrying on. And so definitely agreeing there, man, absolutely 100%. One thing I wanted to ask you about the Explorer, because you mentioned that you're not showing top 16. And I think it's very important actually, because there has been recently again, of course, after the atom 2.0 proposal. And there has been again, conversations about the top validators having a big vote, and I think it's one of those most obvious things in an Explorer is to stop doing the list. 
+
+And I don't think it's just about explorers. I think like wallets, explorers, everything, like all of them should just stop doing that in terms of like voting power. And I mean, that would really in my opinion change situation. But what do you think about that?  
+
+Julius Schmidt:
+It's actually a good idea. I have never really thought about it. And that in that sense that I think for us, it was just, I mean, maybe go one step back when we never started Solana Beach with the idea to build a block explorer, but it was just the network started. And we saw that for us as a validator, there was no overview over where people could actually find our validator address. So we built like a super easy interface with all the validators and where they could show their address. And then also there, we did some read, we carried some data from the blockchain that also showed how much stake they have and everything. 
+
+But it's actually a good question if that wouldn't help. I think we need to shift focus on different things in terms of infrastructure. I think it's going to be a really tricky question because right now in this space we have, I think a very strong institutional drive into the infrastructure section with all the bigger validators that raised capital or crazy amounts of capital block demon figment that sit on a lot of money and I think trying to really grow or really focus on growth, then we also have players like Google that just announced they're going to provide infrastructure for Solana, which is definitely also again, I don't know if it's a too good story or it definitely also has some bad sides, I think, but there's a huge institutional drive into the infrastructure side and it's really important for us to keep in mind that it's not about the name that runs the infrastructure, it's also about thinking about the whole network and not just your personal gain again and okay, I'm going to choose Google as my validator because I know Google and I think they know what they're doing or also even staking facilities or whatever. There are other incentives that should play a role that are difficult to somehow integrate in people that are a bit more far away from the deep tech to understand. We're talking obviously also to institutionals and they want to offer staking to their customers and for them, obviously, they don't really care about the process for them to create one validator is really complicated. So for them saying like, okay, we're going to integrate like 10 or 20, even if it's probably the better idea for the whole network is way more difficult and they're probably not going to do it. They're going to look for the block demons and figments and those that have the infrastructure. And I think it's one of the biggest challenges that we also have as a validator community is to make sure that we spread stake or that we keep the decentralization and that we also educate. 
+
+I think especially education is a big topic for regulators but also for users to understand the benefits or the values of actually delegating to smaller validators or to make sure that the stakes actually spread. So I think it's a really interesting period that we're currently in a lot of different movements. 
+
+Citizen Web3: 
+You mentioned the institutionals a lot and I had a couple of questions at different directions, but if you don't mind, I'm going to like roll back here now and I like that you mentioned it. I think I'm going to try and dive with you into that. 
+
+Let's try to have a theoretical conversation here. How would you eli5 the word institutionals in crypto to somebody who just came to crypto? At which point a project becomes an institutional? What is an institutional? Let's eli5 completely. Let's pretend we are really on the ground here right now. 
+
+Julius Schmidt: 
+Yeah, that's a good question. So from my perspective or institutionals from our perspective as a validator, I would say our larger companies like for example, exchanges, banks or custody providers that are now starting at the first step also for example for us in Germany, I'm from Munich. We have a regulation now on the custody of crypto assets. So any company that has that license can now hold crypto assets for their customer. But obviously as soon as they have the customers, the customer asks, okay, now I have assets, I want to stake them. 
+
+Just if they are somewhat into the technology, they want to do something with their assets. So the next wave or the institutional wave that I'm talking about are I would still say like early adopters of crypto on a probably more regulated environment. It can be a small bank that dips their toe into crypto and it could be a traditional exchange that also offers holding and trading of crypto assets. 
+
+It could be a custody provider that is institutionalized in a way that they have licenses to follow or they have some regulation against anti-money laundering or whatever. So they have more requirements to onboard customers. They can't just or also service providers. And for them, it's way more difficult to just say like, okay, because if we talk to some of them, they have requirements in terms of SLAs for our infrastructure. 
+
+But also what happens if we get slashed, for example, is there an insurance? Because as a regulated entity, they have to basically make sure that customer funds are secure and that risks are determined in a perfect way so everybody knows what could happen in a worse case. So there are way more requirements for these type of entities. And obviously the big validators that are focusing on corporate infrastructure are providing more of that or can provide more information on that easier than smaller validators. But they're as important or probably the smaller ones are even more important than one or two of the big ones. 
+
+I'm very sure they are. And that's the challenge that we have. Stake is still driven by money in a sense or stake is money in that sense. So if these big institutionals are able to accumulate a lot of stake, then that could also drive centralization. 
+
+Citizen Web3: 
+I was going to try and like dig a little bit more. I know it sounds like silly, but I want to dig to the bottom of it, because you said a couple of times, small and big, when you talk about institutionals. And I'm curious to which point, because you mentioned the likes of figment. And I'm thinking of FTX, for example, right now, which already obviously like is the hot topic. 
+
+But Alameda research was not always at that point in 2019. At which point, in your opinion, does a small validate become an instance? Like when they get regulation or when they pass over a certain level of capitalization? Like when is the click happen? 
+
+Julius Schmidt: 
+That's a good question. Right now, I wouldn't defining the term institution is probably a good task. So
+
+Citizen Web3: 
+but it's just between me between us. You know, is that like, yeah, sure, just for our conversation. 
+
+Julius Schmidt: 
+So from my perspective right now, I would also not really call a block demon and figment already an institutional company, because what I'm talking more is about the way they are regulated. So for me, an institutional company has to have some financial license or some sort of 
+
+Citizen Web3: 
+I get it. 
+
+Julius Schmidt: 
+They are regulated, basically, I would say more regulated. And I would say the other comparison between figment and smaller validators would probably be a self run startup to corporate that would probably be and then the next step would be institution. So I would say figment and block demon are probably more corporate like, same as Coinbase whatsoever there. Yeah, they have a lot of employees, so they have different structures for us. We're currently around 30 employees, I would still call us and we want to keep that as well. 
+
+We're not aiming for hyper growth. I think one of the biggest values that we have is that or that the most important thing for us is that we're self funded that we can make our own decisions that we can do what we want to do that what we enjoy to do. So we want to keep that freedom and also we have a really familiar atmosphere in our team, really trying to integrate everybody in everything. And I think that can get lost as soon as you grow, we have some ideas how we even if we would grow could integrate that with basically decentralized structures inside our company, that would be a different topic. But in terms of institutional, I would say institutionals that I'm currently talking about are somewhat what regulated entities then corporates would be figment probably, and then they're smaller or I mean, I would probably not small but more still on a startup level and then 
+
+Citizen Web3: 
+another good topic to that for a lot of listeners might be something that we're not familiar with is that and I know for you it sounds like oh my god, like are we really talking about this? I think yes, I think this is the kind of thing sometimes we miss on and we jump like to not talking about like this conversation, but I'm talking about in general, like a lot of the times we jump onto the huge things and then we miss out the foundation like sometimes, you know, I mean, it took me three years to read the Bitcoin white paper until the end when I got into crypto. And by the time I read it, almost Ethereum almost came out and I was like, oh well, you know, one thing you mentioned was the words raised capital and we are a validator at Citizen Cosmos, you guys are like you said self-funded validator, can you maybe explain to me and to the listeners when you say a raised capital by a validator, because I think for a lot of people that might be a surprise and I think most people see validators as just like some nerds, you know, sitting in the house, okay, I kind of like a guy who's more out talking there, I kind of say, hey, let's start to node, we start to node, then that how it happens. 
+
+And then you kind of come in and you say, well, not really guys, there is a corporate level, there is an institutional level, there is a raised capital, there is like a whole big, big story behind it. 
+
+Julius Schmidt: 
+Yeah, it is. 
+
+Citizen Web3: 
+And I think a lot of people miss out on that. And that's maybe why a lot of people don't know about the small of validators. 
+
+Julius Schmidt: 
+First of all, I think that's a really good appreciation. And absolutely true. And I think it's super important that all of these exist, all of these players. So if we miss out on one, if the small nerds validators don't exist anymore, if validators like us don't exist anymore, but also corporate ones, we're missing. But I think that the main difference is you can definitely run a validator as just a nerdy person that knows tech, that loves tech, that loves the ecosystem, that wants to provide a value and note infrastructure, or you can also start reading up on it. 
+
+It is not the one that actually managed it, but our CTO here also know background in running blockchain infrastructure, same as our whole team that we have that works on the infrastructure. You can read up on that stuff and get into it. So there are these smaller persons that are doing it, I would say in parallel to their normal job. And it's totally fine and important for these networks as well to have these people. Because I think most of the times the commitment that they have is also a different one that bigger validators have because they are really into it by heart. It's not their primary drive money-wise. It's kind of like in hobby. 
+
+So there's more heart in it. That's why I think these people are also super important. Then we have, I would say, the next bigger stage is if you have probably three to four people that help you with you realize, okay, somehow, I mean, also in your sense with that podcast as well, we gain some traction, people enjoy what we're doing. We get more delegation. 
+
+We can think of incomes are growing to a way where it's not just a nice addition to my normal job, but I could actually maybe start something to live on it. So then you will probably get some more people. You try to focus more on redundancy  security topics become more relevant, and therefore you definitely need more people. 
+
+In our case, I think a long time we were only three people, then we were four, five, six. It steadily grew just with new networks. We then decided to onboard new networks and realized, oh, it's too much to stay, because I also think it's really important to really be active in the networks as well, even though we are definitely also not perfect in that sense. 
+
+Sometimes you just not manage to keep up with everything in every ecosystem that we're trying to. So what we're also trying to do is if we onboard people, we really try to show them how crypto, you have to understand if you're coming from the outside, for example, as a node operator, how the crypto dynamics work, where do I get my information? It's not like you don't get a handbook and read up what happens if my node crashes. You have to understand how the Discord channel works. You have to understand what are the important people in the Discord channels that I need to listen to? 
+
+How do I get fast information? So you need to somewhat also understand the crypto ways. And I'd say the next step is you have four to five people and that probably be the next, a little bit bigger validator. 
+
+And then we'll probably get pretty close to our side, or maybe there are definitely steps in between. But as soon as you get more than 10 people, I would say you just realize, okay, I need to manage people as well. How do I onboard people? How do we do accounting? How do we deal with any HR related topics, vacation, and you need to build structures? So the next step is really, I would say, growing the business. 
+
+And that's, I'd say, where a lot of the ways split. Some of the companies, they draw like a, they have a big vision on what they want to achieve and they want to go into hyper growth from that point on. They basically build a pitch deck and say, create a big vision on what they want to achieve, become whatever their vision is. And then they go out and talk to venture capital companies and say, like, hey, we are raising money. 
+
+We need, I don't know, four million for the next step to hire these 15 people with these 15 people we want to do XYZ. So they get external investors and that completely changes the structure as well. And also the motivation, obviously, because now you have people from the outside holding shares in your company that also have an interest in the development of your company. So it's really important to get the right people because if there's just someone who wants to maximize on profits, you might make decisions that are bad because they're profitable in the short run, but in the long run, they hurt your company. 
+
+So that was the point where we decided for us as a company, we don't want to in the hyper growth way, but grow more sustainable and stay. We invested in the Cosmos ICO, but also Polcadot ICO and a bunch of ICOs back in 2017 and 18 during when that was still possible. And so we were able through that to finance ourselves. And that was where we decided we want the biggest value that we have for us right now is like working with friends, providing value to these ecosystems, being able to just do what we want to do and not have someone who says like, there's a lot of profit, you do that now. So we wanted to keep that flexibility. 
+
+And I think that's still until today, one of our biggest values is to keep that. And that's probably the main difference between these different stages, but all of them are needed. Like also the big institutional validators are needed to onboard the big institutionals to that space. So we also need the large banks and people to actually be able to stay. Like that also increases the security of the network, but the balance is important. Balance is key between all. 
+
+Citizen Web3: 
+First of all, I think it was a very good description of the space in my opinion, and not just at this space, but in fact, I think most startups more or less work in the way you described. And what I would like to mention, I think to anybody out there who wants to start a business and validate in or anything like that is you mentioned investing from the outsides and people having shares in your company. And I don't want to mention names, of course, and I'm not going to obviously, but over the past, like let's say 10 or so years, a bit more in crypto, let's just say there is one company that everybody would know if I would mention, but there is exactly that story that you're talking about where outside shares at a very early stage played probably a pivot role to what the company is doing today. And from them becoming an independent entity and making their own cool decisions to having somebody saying, hey, guys, no, that's not what you're going to be doing. 
+
+This is what you're going to be doing. And this kind of shows a lot. And again, doesn't matter, but I'm sure there is a lot more examples like that out there, but let's hypothetically call them A. 
+
+Julius Schmidt: 
+I think two downside that these developments have. One is what we also see a lot of companies that do that, they lose or the people that work for the company, they lose their close touch to the ecosystem because they hire 30 new people. They don't have the time to onboard each one of them in the way that I described, but you actually would need to do is like take them into the ecosystems, talk to people with them, introduce them to the channels to like the important depths. That's not possible if you have like 30 new people. 
+
+So a lot of them are late on updates or whatever because the people just it's a different mechanism that takes place to get that many people on board. And I also think we're going to see what's going to happen now after what happened to FTX. I think it's also really a dangerous bet because now you have a company with especially in our space. And I think a lot of people don't understand in our space is how tricky it is to manage bear and bull markets at that stage and to understand why crypto assets are in a sense really a completely new asset class because you can trade at 24 seven. Basically, and we as a validator are so highly dependent on prices. 
+
+And that's what people sometimes there are years like 2021 was an amazing year. We earned a lot of money technically on the paper if you would sell everything. And if you would look at this year, basically probably lost 70 percent of our income. 
+
+So what we did a lot is spend time on financing and planning, building reserves. But I think a lot of these huge companies that now have 60 people on their payroll to run validators. And if prices drop like this, they the investors are going to have questions. 
+
+And I think sustainable growth in this space is super important just because it moves so fast and it's so dynamic. Things can change in a matter of days. I mean, that just unfolded in two days, basically. 
+
+Citizen Web3: 
+I would say seconds. 
+
+Julius Schmidt: 
+Yeah, probably seconds. There was a few Twitter posts. I think the first post from SPF saying like we're selling to Binance, we realized like what is going on? And it's just like dynamics are completely different. Unfolds on Twitter and live on all the explorers people are tweeting like here's a transaction from FDX to it's a completely different space. And I think a lot of VCs bring in an old mindset from web two or previous with timelines in mind like 10 years. OK, we invest now and then for 10 years, it's been but it's a completely different space and you have to understand the disadvantages or advantages. 
+
+Citizen Web3: 
+Just for the record, like for all the listeners out there, I would like to say that one thing I guess I've been very proud of is that, yeah, I've worked for over the last 10, 11 years for startups and for projects. 
+
+But any project that we started and is particular myself and Citizen Cosmos was always fully, completely independent of any outside investors. But on the other hand, I can totally relate to what you say because one stupid thing that I did during the bull market, because in my opinion, bull markets are the worst thing that can happen to a validator. Like don't give us bull markets, let us work. And when the bull market started for some stupid reason, like I could not explain this to you, I was putting profits in USD. Like don't ask me why. 
+
+There is no possibility for me to explain why I would do that. And of course, we lost a ton of money, like a ton of money even before the bull market was over, which actually gave us a slight advantage because we kind of started working before the bull market finished because we're like, oh, shit, we've got no money, we need to work and you know, I'm like, oh, damn, now the bull market is finished. Damn, we need to work more. Julius, you're giving a great overview here, which I think is missing. I really honestly think this is meaning for a lot of people to connect. You mentioned another interesting thing, considering you're the CEO, I have to ask you that you mentioned 30 people without revealing any security points or anything that you might think is touchy. How is that structured? What does the structure look like? 
+
+Julius Schmidt:
+I think we can talk about that's no problem. 
+
+Citizen Web3: 
+I mean, remote, remote, not remote, like a high level. 
+
+Julius Schmidt: 
+That's a good question. So first of all, we're focusing a lot on low hierarchies. So I think the biggest value for a company is if you're not dependent on one or two people. So if you're staking facilities would be dependent on me in everything, then I think we somehow failed because if something happens to me, then everything would fail. So what we're trying to build right now are structures that make decision making also independent in the team and create build ownership in the team. We are obviously, as the founders, trying to guide and build these processes. But we are our idea is if I hire someone, I hire you because you do things better than I do them. So who am I to tell you how to do things? 
+
+I want to hear your ideas, your suggestions. And then we talk about it and then we do a decision. And the idea is to transport that to the whole team and then build processes to make decision in the team or in certain smaller teams on certain topics. So I don't know if you've heard about circle models. 
+
+So you basically build circles for certain things. For example, let's say legal, then we would have one guy from the legal team. We would have one guy from if it's a contract with the institutional, we would have one from the tech team who knows how the infrastructure looks like to be able to make suggestions on SLAs and everything. Then we would have one from business development or me, for example, I'm doing a lot of talks as well that says, OK, they want this or that. 
+
+That's the communication. And then we have a small team that discusses how we make, how we do this. And we're not trying to build hierarchical structures, but rather decentralized knowledge also in our team. That's also why we try to invest a lot in building these structures to get knowledge to our employees and then also enabling them to make decisions or to have discussions that then lead to decisions. So that's, I would say, from the organizational perspective, what we're trying to achieve in terms of doing things different. I think also the second is, I think, from our perspective, our net also that's lost, I think, with a lot of companies is that we think that our employees are our most valuable asset. So we want to have a lot of transparency in regards to what we are actually doing. We don't have to hide anything. So we're trying to be pretty transparent with everything that we do, every decisions that we make, also financials so that people know, OK, that's where we are actually at. 
+
+And then that they also feel kind of the incentive to work towards achieving certain goal because they also feel connected to that. So we have an employee share program, obviously, but we're also, since we're earning a lot of tokens and also investing in projects, we also have a token pool inside the company for employees. We have a profit share as well. So if you pay out, if any owner pays out something, then all employees get it a share as well, because we think I see myself and it might sound stupid, but I provide certain values to that company, same as everyone else does, provide certain values to that company. 
+
+I'm not a better person or something different than same goals for Wolfgang, same goals for Florian. We want to help with everything same as everybody else. So I think in that regard, we're trying to build kind of new structures that are also more healthy, I think, and more sustainable. I think in the long run, these are decisions that and probably something, if you go back to the VC world, the VC would never say like, yeah, do it because it costs money and time to build these structures and they don't pay out immediately, maybe in three, four years. 
+
+If you have a good team that really is able to make all these decisions really independent, but still get every important opinion on it, then you can really, then you will also see on the profit side, you make good decisions. So we are investing a lot in these things. 
+
+Citizen Web3: 
+It's interesting because a lot of validators have been speaking to currently our playing around with structures and this has been going on for years now, of course, but I think the tooling was not there to create a lot of things like those were not as popular and trying to distribute you distribute certain aspects of the work was not it was possible. What was very difficult in terms of technicality and then the more we progress, the more interesting scene, more and more validators go that way in trying to build those structures. Julius, one question on sort of like the latest Cosmos topic and considering, of course, your validator and considering some of your talks during the Lisbon conferences, I think you are mentioning liquid staking as well. And I think liquid staking is currently one of the main hot topics discussed, not just in terms of the benefits, but in terms of the dangers as well. What's your opinion on liquid staking and is it a good thing to implement on the Cosmos hub, for example? And I don't specify the question just the Cosmos hub. Maybe it's like two parts of the question, generally liquid staking and then liquid staking on Cosmos hub. So if you could please share your thoughts there. 
+
+Julius Schmidt: 
+I think it depends how you do it. As always, technology is something that we can design in a way. So I think we need to be really careful on how we design liquid staking. 
+
+I think it definitely has some advantages. Like if you would imagine or also from a regulatory perspective, if you can't use an asset and most of the assets are locked in staking, they just say that they would probably say it's a security because you're not using it to do stuff with it. That could be just the definition thing. But I also think that being able to actually use these assets while they are locked up has advantages. But on the other side, I think it's really important to understand what this token actually represents. And it is a stake token that has a purpose in being staked. 
+
+There is a mechanism that locking periods and everything have or do something really important. And I think in general, what we see is like the more layers we add in terms of technology and liquid staking is another layer of technology on staking. It can also provide certain risks. If it's liquid staking token, deep hacks or whatever that could have, if there are a lot of people hold or do liquid staking with that particular provider, whatever, that could have a huge impact on the ecosystem is something there breaks, for example. 
+
+It's the same as with FTX. Like it's another layer of exposure to certain risks that we I think. And that's also something that we need to learn that we don't necessarily can see right now or understand. It's just something that becomes more risky the further the whole ecosystem develops. So if you maybe in the future, you can use liquid staking tokens for whatever. And then this implies a new risk that we can't really see right now because we don't understand what kind of developments might happen. 
+
+So I think it's a really tricky question. Since we are a founding member of Lido, I definitely do think it's an important thing, especially in terms of Ethereum, because you don't have delegation on Ethereum, at least in the current design. And I think it's super important that everybody that holds token can actually also delegate and participate in securing the network. But on the other side, I also think it's really crucial on how to design what I can say from Lido perspective or the Lido guys, I think one of the biggest goals was also always to really decentralize it as much as possible. So on board always new validators, so also smaller ones. I think the idea is really to get more also like a certain security standards for validators that are active in that liquid staking pool. 
+
+There's a positive side that I would definitely say that could also work in the Cosmos ecosystem is that if it's built by the right people with the right mindset, it can also be some sort of not licensed in a traditional way, but kind of an indicator for certain standards that you're meeting in terms of your you have to be a legal entity, you have to have certain registrations so that you cannot just disappear and hurt the liquid staking protocol and then just go off. So I would say both. I would also add that I'm not too deep in liquid staking from our side. There are definitely members now a team that are more involved in it. So they will probably have a better or more detailed opinion on that. 
+
+From my perspective, there are definitely advantages, definitely disadvantages. If I would say it's something really necessarily for the Cosmos Hub, I think for protocols that have native delegation as a feature, there is this aspect of it being a derivative is probably the most important thing. So being able to use that token, even though it's staked for something else. For Ethereum, I think you have to say it also fulfills a different purpose being people normally can't delegate if they don't have the technical knowledge to run the infrastructure. 
+
+So I think in the case of Ethereum, I would definitely say it's important as long as it's decentralized and really the mindset is to. And that's also definitely also still a difficulty, especially when we then talk about governance, for example, in Lido and whatever other protocols like engaging people in Lido, in Cosmos in general, as well as engaging. And I can also say from our perspective, it's really tricky from a legal perspective, because in Germany, we have this custody license. And one big part of the custody license is administration of crypto assets. If you administrate crypto assets, then you technically apply. 
+
+You need that license, even though it's mainly focused on custody, but administration is a big, big topic. And you could argue that if we vote with stake of our delegators, that we're actually administrating voting rights for people and execute votes on their behalf. So in our case, it's a huge risk. It's a huge risk because regulators from one day to the other put us on a black list and say, OK, you can only continue doing your work if you have that license. So that's maybe also a perspective a lot of people don't have right now. In our perspective, voting right now is and this for us to get this license would be a financially huge burden. 
+
+We couldn't would make no sense because we would just get it to the administration and voting, it wouldn't financially be possible for us to that and also to fulfill all the requirements that come with it. Yeah, and I'm drifting off, but back to liquid staking. I think it definitely has two sides to it and definitely depends in detail how it is designed and how mechanisms are designed. 
+
+Citizen Web3: 
+I don't think it's like drifting off. I think it's those things that we talk about that you mentioned are a lot of pains that some validators feel. And if a validator decides to follow the I don't want to call it custodial because it's not necessarily means you're providing a custodial service, but like a certain way of legalizing, I think that that people should understand that if they want those securities with that validator, that validator has to follow certain rules, which is what you mentioned currently. 
+
+And OK, so then there's those realities to look at. But to kind of shift the thing to the closing point, I would like you to maybe do like a quick blitz with you. It's a three very easy questions. I'm sure you can answer them. So let's go. Give me three projects outside of the cosmos ecosystem and not in the top like 20 preferably, so no Solana, no Ethereum, no Bitcoin that you follow and you think technologically are very, very interesting. 
+
+Julius Schmidt: 
+Definitely not a technical advice. What I think is super interesting, one would be render, render token, render network. I don't know. It's completely not specifically blockchain related, but it's basically using CPU power across the globe to render videos on your phone, for example, in VR. And it's a crazy concept how to use infrastructure. 
+
+Definitely Celestia is, I would say, one of the interesting networks in modular blockchain infrastructure. A third one. Good question. 
+
+Citizen Web3: 
+It can be two. 
+
+Julius Schmidt: 
+Aptos and Sui, we're looking into these. 
+
+Citizen Web3: 
+OK ok. Give me two daily things that motivate you to keep on building, taking facilities and doing everything else. Two things that you do daily that still keep you going. 
+
+Julius Schmidt: 
+Honestly, just work with the people in this space. Like this podcast, for example, just seeing the motivation of people that do stuff like you do. And I think also we have the same mentality and vibe to really be able to change something. I think that this is really seeing that we're working on changes on such an amazing big level. Then again, on a smaller level, also seeing the motivation or team definitely to work on these changes and also enjoying the structures that we're trying to create. That's definitely what motivates me on a day by day basis. 
+
+Citizen Web3: 
+Last one. Give me one person. Doesn't have to be in crypto. It doesn't have to be a blog. It could be Twitter account, a blog, I don't kno
+w, whatever. With one person that you suggest everybody to follow that will help them to make their life better and succeed in whatever they do in. In your opinion, of course. 
+
+Julius Schmidt: 
+Oh, that's a really tough question. I would answer that with maybe a bit describing myself. 
+
+Citizen Web3:
+Please. 
+
+Julius Schmidt: 
+I'm not that one of a person that just follows one person and says like, oh, everything that he says is amazing. I really like picking different thoughts and ideas from different people. So I don't have this one person where I said like every tweet, I read my dear. I read every thought that he has. So also I will take a lot of inspiration from myself from different people. 
+
+Citizen Web3: 
+So a combination, a combination. You should combine 
+
+Julius Schmidt: 
+a combination. Yeah, 
+
+Citizen Web3:
+I like 
+
+Julius Schmidt: 
+definitely for my tip would be combine. 
+
+Take things that you like. Don't follow just one person and take everything that it's there for granted. Just try also to filter that and pick from different ideas and concepts. 
+
+Citizen Web3: 
+I like it a lot. Julius, thank you very, very, very, very, very much for all the description of validator, I don't know what would be the right word, like not the setup, but 
+
+Julius Schmidt: 
+ecosystem or 
+
+Citizen Web3: 
+ecosystem. Yes, like the really going, I think this is really good. And I wish there would be sometimes more things like that when we start up because that really helps us to dive in and go. And man, thank you very much for all the work you're doing, guys, and for finding the time to join me. 
+
+Julius Schmidt: 
+Thank you very much for having me. It was an amazing talk and I love what you're doing. So keep it up and yeah, I'll definitely follow in the future. 
+
+Citizen Web3: 
+Thanks, Julius. Bye, everybody. 
+
+Julius Schmidt: 
+Thank you. Bye. 
+
+Citizen Web3: 
+This content was created by the Citizen Cosmos validator. If you enjoyed it, please support us by delegating to Citizen Cosmos and help us to create more educational content. 

@@ -1,0 +1,348 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/ki
+
+Episode name:
+Team building, VC and business during school with Reda Berrehili
+
+Anna: 
+Hey, it's Citizen Cosmos. We're serge and Anna and we discover cosmos by chatting with awesome people from various teams within the Cosmos ecosystem and the community. Join us if you are curious how dreams and ambitions become code. 
+
+Citizen Web3: 
+Hey, Cosmonauts and Cosmo Girls, of course, as well. Welcome to another episode of Citizen Cosmos and we have with us today Reda Barry-Ely. I'm gonna try to pronounce it correctly. 
+
+Reda Berrehili:
+It was correct, yeah. 
+
+Citizen Web3: 
+Yay! Reda is the founder and the CEO of KI Foundation and I like ourselves. I'm sure that not everybody has heard about them, but I'm sure Reda, you will tell us all about it, right? 
+
+Reda Berrehili: 
+Absolutely. That's the goal of this podcast and also to tell all about myself. 
+
+Citizen Web3: 
+Let's kick off with the simple things. In your own words, introduce yourself and what you guys do and of course in relation to Cosmos or in general at all. 
+
+Reda Berrehili: 
+Thank you for having me here. It's really a pleasure to be here with you guys and share a little bit more about the journey, about what we're building and the future. I think that we can start with just by introducing myself. I'm a serial tech entrepreneur. I have created many companies. I'm also an investor. I also help some institutional investors build their funds and invest in startups. 
+
+I have sold some companies, made some nice exits and yeah, the story of these exits is what led me to building KI Foundation. So KI is pronounced KI because it means energy in Japanese and at the end of the day, everything we do is about energy. When you want to go from place A to place B, it's about energy. 
+
+When you eat, it's about energy. So that's why I wanted to create this ecosystem of value with the underlying. So our coin, our value at the end of the day ends up sharing energy. So what is the KI Foundation? 
+
+The KI Foundation is an ecosystem of value in which we use the underlying assets, which is the key token as a single vector of value exchange. We are very business driven. The idea is not to build fancy technology just for the sake of building fancy technology, but we actually love people that build fancy technology for the sake of it because actually they're doing that work for us. And we are not the kind of people that will say, Hey, let's try to rebuild the wheel. 
+
+We're like, Hey, what are the tools available and how can we connect the dots altogether to create value? And this is what I've always been doing in my previous businesses. This is also what I've always been investing in. This is the way I do business and the people that following me do business also. So the first business that we're launching is in the finance world. So basically what we want to do is to bring the centralized value and share it in a decentralized manner. So we're launching club, which is a Neo private bank that enables people that have nothing to do with crypto and nothing to do with this blockchain ecosystem to get access to the value of crypto to the value of this cultural way of thinking, even cultural, like it's a cult. We're doing this to share the value and not to be in that old world where a few people stack up money, riches, wealth and shared few percent with their customers or partners. So basically what we're doing is that we're creating this new Neo private bank that gives access to a high risk product. 
+
+And the underlying assets of all those services is the key token that is being used to define you as a member of club or also provides you the yield that you're getting from the different assets. 
+
+Citizen Web3: 
+So could we say that you guys are focused on DeFi, right? 
+
+Reda Berrehili: 
+We are not focused on DeFi, but we bring C-Fi to DeFi. 
+
+Citizen Web3: 
+Okay, 
+
+Reda Berrehili: 
+we use the DeFi platforms. I'm not telling you that we're going to build the smart contract that will do the automated liquidity pool analysis, et cetera, et cetera. But we're going to use these guys to bring central life finance to them. And we do on ramp off ramp thanks to our core banking platform and our access to high networth. 
+
+Citizen Web3: 
+So is it in any way similar to what Terra is doing on Cosmos? 
+
+Reda Berrehili: 
+I think that's in terms of infrastructure that can be close to that. But in terms of go to market, it's completely different. Basically, what we're doing is that we have banking partner that I cannot cite yet. That gives us the ability to have your IDAN, put your money in it, your debit card and everything that is related to the core banking and also to do the transformation from your fiat money to your crypto money. And thanks to complex systems, you're able to put that money in less than 10 minutes, transform it into USDC or USDT and put it in smart contracts. And all of this in less than 15 minutes with very, very limited slippage. 
+
+Citizen Web3: 
+And how are you utilizing Cosmos and Tendermint and all of that? 
+
+Reda Berrehili: 
+Club as a business is not the only one. So the idea is to build an ecosystem of businesses that run on the key ecosystem. The key chain is a Cosmos Tendermint based chain. And the idea is to use that technology to run this ecosystem. We know that we have a lot of people that are working on other add-ons and technologies for Cosmos like Ethermint. 
+
+Also, we have persistence that is doing some great stuff on their side. There is also Cosmoswasm. So basically, when we think it's the right time, we will integrate additional technologies on our chain. 
+
+Right now, the only usage that we have with Cosmos as a chain is running our single asset, which is the key, and also putting new validators onto the key chain to share the value with them. So basically, how does it work? When we make money, there is 10 to 20% of that real life money that we make that is used to buy back key tokens and redistribute them to the actors in the ecosystem. So basically what we're doing is that we're stuffing the transaction fees with real tokens that are being bought in the market and we distribute them to the validators and to the stakers and delegators. So basically what we're doing is that we are faking transaction fees, but we're putting empty transactions with the high transaction fees that we put ourselves to share them with the ecosystem. 
+
+Citizen Web3: 
+So basically, it's kind of going to try to use as less blockchain words as possible here. It's basically a private investors club, which shares its value with the people who are holders of the key token, which is a Cosmos SDK blockchain. 
+
+Reda Berrehili: 
+Absolutely. The idea is to enhance and grow the value of key. And that means that the earlier you get into the key ecosystem, the more value you get over the long time. And we're using very simple concepts of money, velocity, supply, control, exchange of that control, etc. That makes actually the key a valuable asset that will grow over time in terms of value. And this is about all the philosophy of value sharing that we're trying to do. And that comes from my history of entrepreneur. I can tell you the story of one of the companies that got acquired three years ago that I built. 
+
+It was called Square Break. And it was a private rental, high end luxury business. And we grew 600% a year. And it was like we were skyrocketing and we got acquired in less than two years by the largest hotel chain in Europe, Accor. And it was a very nice transactions. 
+
+We were happy with me and my partners. How did we achieve that massive growth? It's because before blockchain, before decentralization, we adopted a new way of doing business. You look at Uber, basically Uber, they have drivers and they let them drive and they take part 20 to 30% of the value of the service. So we took that system, but we made it fairer. So basically we built actually a technology that made the property management business scalable. 
+
+And anytime we were doing a booking, we were sharing 50-50 the value of the booking commission with the property manager. He was not an employee. He was an entrepreneur. 
+
+He was sharing the risk with us and we were sharing the money with him. And basically some of the property managers went from making 15 to 20K a year. It's very low value job to making 150-200K a year, which means that we aligned the interests of the property managers, our business and the owners of the properties that we were managing. And this is what made us have a metoric growth, high value in terms of service, high quality service and having all of those partners wanting to work with us because they saw that people working with us were becoming rich for providing great service. 
+
+So this was the whole philosophy of Square Break. We're growing fast thanks to that alignment of incentives. And then we got acquired. When we got acquired, the finance arm of that big group that acquired us was, hey, what's that line where you're giving 50% of your revenue to those people? 
+
+This is our model. And they knew it. And then they said, okay, you know what? 
+
+Now we're going to start paying them by the hour. And when they did that, what happened is that 90% of those property managers left. Quality dropped like crazy. 
+
+And the whole business plummeted. So basically at that time, I understood one thing is that you need to align the incentives. It's actually there's more long-term value into sharing success and sharing value than trying to concentrate a lot of value only for yourself. And this is what led me to building the Key Foundation. And what's interesting is that most of the team of Key Foundation is actually my previous team of those other businesses. And we all share this will of sharing riches, sharing wealth with the ecosystem. 
+
+Citizen Web3: 
+I'll tell you a small fun fact before we carry on. Not many people know. It's not a good feeling information, but I used to work for our core hotels for quite a few years. And actually my last project in as a hotel year was the opening of a combo of Novo Tel Anibis from ground up to launch in it in 2016. 
+
+And then I left completely the FNB business. But yeah, just a fun fact. I did saw it on your Twitter idea. I was going to bring it up and the conversation, but the world is quite small. 
+
+Reda Berrehili: 
+Absolutely. 
+
+Anna: 
+And really interested in that incentives model because the motivation of people nowadays become one of the biggest issue for anyone who starts a business. And even in this centralized system, we can see that some of motivation models are more successful than others. So why do you think that revenue share model and the model where you share some part of your profit is more successful than other, let's say, random give some people like a lottery, give some people some part of the share of revenue at the end of the year or whatever. But the relationship between you as a founder and other people as your community or your employees, it's really interesting for me. How will you see that? 
+
+Reda Berrehili: 
+So I've been an entrepreneur for 14 years now. I have never been an employee in my life. Never. Even when we got acquired, I actually asked for not to be an employee. I had a freelancer contract. I wanted to be free. But I know that my way of thinking is not the way of thinking of 99% of the people in the world. 
+
+They are looking for some security. And I know that this cannot work for everyone. But that does not mean they do not deserve to make a comfortable living and to potentially become rich at certain points of their life. The problem is that today we're getting in a very centralized economy where riches are very centralized. 
+
+And I think that this is 100% wrong. Even if I have been making a lot of money in my entrepreneur's life, I think that we need to be able to share more of that money, to share more of that value of that wealth with people. So in a transaction of 100 million, I prefer if I have 20 people working with me, I prefer to make 50 million and share the rest with the other people that helped me get to that point rather than having 100 million for myself or 99 million for myself and that people share just small pieces. I think this is very important to understand how you're able to let people enjoy more than just living. 
+
+Because today, when you work for someone, you work for a salary and that salary just lets you live, pay your rent, eat and maybe travel sometime. And I think that's when you're in a situation of risk like that, because you actually don't see it as a risk. But let's say, for example, you need to buy a car, you have a new baby or your car is broken, you can get very fast in a very bad financial situation. And this is what can create inequalities in our society. So I think that if you're able to incentivize people not with just money, bonuses or something like that, but you give them a share of the ecosystem. And this is what the key is. 
+
+The key token is not just when you receive $100 of keys because you have done some kind of work and you received 1000 euros in euro and 100 euros in key. You have a choice. I give you the ability to make a choice. Do you want to liquidate those keys and get your 100 euros worth of keys? Or are you committed to the ecosystem and to the growth of the ecosystem and keep those keys? So basically what I'm doing is that I'm thinking that by creating this new currency, we're going to distribute it to the people in the ecosystem very early and during the whole lifetime of that ecosystem of businesses and value. And the people that commit are going to do very well in the future. And the people that do not commit are going to do very well in the present and the foreseeable future, but it's not the same. So basically what you're doing is that you're giving people the ability to make a choice. Do I want to commit in the future and maybe get a reward of that future? Or do I want just to enjoy now? 
+
+Citizen Web3: 
+So you're obviously very business driven and I mean, you can hear it from what you're saying, but I have a few questions. First of all, you mentioned that you came from an interpreter background and obviously looking at your LinkedIn, you have a lot of positions which you mentioned that you work as an entrepreneur. Could you share a little bit of the background, like say how you began investing, what led you to start investing and how you progressed to having the company that you sold to a core eventually and eventually came to blockchain or how did that progression happen with the investing? 
+
+Anna: 
+Really, that's super interesting for me. How did you manage never work in your life as employee? I mean, never gotten that relationship and that wheel and what's ring the bell in your mind and the initial point when you just said, okay, I want to live another life. 
+
+Reda Berrehili: 
+So I will start when I was born. No, 
+
+Anna: 
+good point. 
+
+Citizen Web3: 
+It's going to be a long story. 
+
+Reda Berrehili: 
+No, basically I started coding when I was 11 years old. This was 22 years ago. I was born in Morocco and in Morocco when I was 11, it was born in 1998. And I was among, I think the first households in Morocco that had access to internet. I was like, I want internet. I want the internet. I want the internet with my parents. So they were like, what is the internet? I say, I want the internet. 
+
+And basically we got the access to the internet. And for me, starting that time, they did not see me get out of my room for the next seven years. So basically I created a life, another life that I had on the internet. I was 12. I created a website, my first website, which was about Pokemons. It was called PokeTalk. And I actually appeared on the Moroccan TV and I was the first Moroccan who created the websites before actually our internet access provider had a website. I had a website before them. I enjoyed it so much that I knew that I was going to build stuff on the internet. So basically after that, I tried to create a startup when I was 14, which was a website that would help people who do not know how to code to create websites. 
+
+So basically you enter everything you wanted to enter and then it generates the whole code and you download it, put it on an FTP and then you have a website. So basically I built the whole thing that in Morocco at that time, you couldn't do anything. You couldn't buy a domain name. 
+
+You couldn't do nothing. So I was like, OK, you know what? I'm going to be a hacker. I'm going to do some bad stuff because you don't need any credit card. You don't need anything. So basically I built a website called I don't know if you heard about emulation. So basically it's about playing video games, console games on your computer. 
+
+I created emuplayer.net, which was I think number two or number three leader portal to download emulators, ROMs on the internet. And I was alone in Morocco. I was 15 and I had 2000 to 3000 visitors a day. 
+
+Anna:
+It's a lot. 
+
+Reda Berrehili:
+Yeah, at that time it was a lot. I was making some money with that. And one day I received an email from Nintendo telling me to shut down the Gameboy Advance part and I was kind of cocky at that time. 
+
+So I answered, come get me. I live in Morocco and I thought they couldn't do anything. And then two months after my website, my whole thing got shut down by the authorities. I still remember the date happened. It was on a Thursday. I was getting back from school and I saw my email inbox. 
+
+I had like hundreds of emails. What's happening to the website? What's happening to the website? And actually it was shut down and I cried. 
+
+And at that time it was really crazy. You didn't have any GitHub anything. Actually, the code was on the server. So I was coding basically on the server. 
+
+Citizen Web3:
+Very secure. 
+
+Reda Berrehili:
+After that, at 18, I went to computer science school, engineering school in France. I created my first real startup at that time. We raised half a million euros when I was 19. 
+
+Sold my shares at that time and then moved over because of the terms. I was young. The guys whom I was working with were older than me. They said, hey, come work with us. We're going to give you a part of the company. And then they gave me 0.6% of the company. And at a certain point I was the CTO and I was taking care of all the tech parts. And I was like, 0.6%? 
+
+No, I want more. And they didn't want to say, OK, so I'm selling my 0.6%. And I moved over right after that. So what happened? 
+
+And I will answer to your question, Anna. I was still a student at that time. Computer science. I had to do my internship. So I did my internship. And at that time I knew that I wasn't going to be an employee. I couldn't accept people telling me doing stuff without convincing me that it's the right thing to do. 
+
+Basically, sometimes I had my boss telling me to do something. I was like, no, I'm not going to do it because I don't think it's relevant. And I knew that this kind of behavior was not going to get me anywhere far in the professional world. So I was like, you know what? It's either I'm an entrepreneur or I'm dead. 
+
+So the only way forward for me was being an entrepreneur. Also, there was the wedding of my sister at the time. I had to go to her wedding and they just told me, no, I don't want to figure it out because I'm going anyway. 
+
+So this kind of relationship to authority, I'm not really good at this one. So this is how I knew that I was going to be an entrepreneur. And right after that story, so the startup was named Green Dizer. We were doing the materialization of invoices and automation of all of those processes with invoices. I created another project. It was a dating website. It was called E-Mates. I wanted to do something that was mixing dating websites and social networks. Actually It was very funny because when I launched it, I noticed that we had the same business model than Zeusk, which is a Russian startup, a dating website. It didn't work out because customer acquisition of customers is very high. 
+
+It was not very easy to bring communities without faking the fact that you have girls on your platform. I didn't like this kind of stuff. I moved on. I created another thing. At that time, I started very professionalizing the way I was launching businesses. I created a technology. It was a semantic engine that was doing semantic analysis of full text and extracting entities and sentiments from those texts. I created a personalized recommendation engine that will also gather information from the social networks to recommend you things that you would love, programs that you would like to watch, movies that you would like to see. I raised 450K on that business. I used the whole technology to build a personalized TV guide. We had great customer success, more than 100,000 downloads without any advertising or organic, but we didn't have any business model. 
+
+Tried to raise a Series A, couldn't raise the Series A, was about to be acquired by one of the largest TV channels in France, but the deal didn't go through because they actually had their CEO fired by one of their investors and the whole deal went kaput. After that, I lived in what we call the Valley of Death. I didn't have any money. It was very hard to me. I actually didn't have any way to crash. 
+
+I was living on my sister's place. Then I met my co-founders from Square Break and I was like, hey, this is amazing. We're going to make it a great company. In a year and a half after, we got acquired for very nice amounts of money. 
+
+Citizen Web3: 
+Nice. 
+That's a big chain. A large chain of events. We should like to one another with, obviously, the success story. 
+
+Anna: 
+Yeah, I love stories like this because I mostly work with startups, founders, entrepreneurs. For me, it's the pure way how it could be because everyone has their own ratio between success and failure and sometimes more success and sometimes it's the opposite. But all the time that then you fell down, you should stand up and just go. And sometimes it's not really easy, but it's some kind of thinking. 
+
+Reda Berrehili: 
+It was not easy because at a certain point of my life, I didn't have any money and I was owing 40,000 euros to the state and it was crazy. I was living like kamikaz and I was being offered jobs that I declined. So I said, no. I was offered jobs for 80,000, 100,000 a year and I had nothing and I said, no. And basically it was success or die. 
+
+This is the way I like going forward. What's interesting is that during that period of value of death, this is the period where one of my previous investors told me about something called Bitcoin. It was in 2013 and I was like, what's this? 
+
+What's this? Actually, I think I heard about Bitcoin a long time ago. And actually what happens is in 2011, Kevin Rose tweeted something about Bitcoin and I saw it on Twitter and I was like, OK, what's this? I downloaded the client on my computer and tried to mine some Bitcoins in 2011. 
+
+I said, hey, I'm not seeing any Bitcoin in my wallet. What's this? This is bullshit. 
+
+Shut it down. And then in 2013, one entrepreneur, actually very successful entrepreneur in France and also now in crypto. Maybe you heard about him. It's Frédéric Montagnon told me about Bitcoin. He told me, hey, look at this. We're doing some trading and I'm like, OK, what's this? And then I understood. I was like, what? This is crazy. 
+
+This is interesting. I'm going to buy some Bitcoins. So I didn't have any money, but I bought like six Bitcoins at the time. And then I started telling people around me to buy Bitcoins. 
+
+I was like, it was simple. I was like, hey, people, this asset is limited in supply. The demand is going to grow over time. So the value is going to grow. 
+
+This is simple supply and demand. And actually, I have a very good friend of mine who bought hundreds of Bitcoins, I think, on my advice. And then he sold everything in 2017. And yeah. So I was, hey, I bought this Bitcoin and then I met my partners from Square Break. 
+
+And I kind of forgot about all of this. What's funny is that I also met some other guy through my friend, investor, who is now very, very loaded in Bitcoins and Ethereum. He was telling us about the Ethereum ICO and I didn't participate. Well, this is life because I was very busy on my private rental thing. And then when I got acquired, when the private rental thing got acquired, it was in August 2017, I heard again about Bitcoins. I was like, hey, I have some Bitcoins. And then I was like, wow. And then I understood everything about blockchain. 
+
+This is where I was. What is Bitcoin? What is crypto? What is blockchain? And then I understood that anything out of Bitcoin, Ethereum, or an asset that is not value based is a shitcoin. This is where I started thinking about how I can integrate what I lived in my previous businesses into something very successful in the crypto industry. 
+
+Citizen Web3: 
+I have two questions. One, which regards obviously your chain. You didn't mention that, but there's just my guess. But I'm going to ask, is it going to be pro-I in terms of the validators are going to be selected by the foundation? Or is it open in terms of that any validator can join? So that's the first question. 
+
+Reda Berrehili: 
+We want it to be permissionless. So we want that anyone who wants a stake of the ecosystem to be able to join and make value out of the ecosystem. 
+
+Citizen Web3: 
+I know that Cosmos does obviously allow for permission to proof of authority systems. And from what you described, kind of seemed to me more closer to that part than the permissionless part. The second question obviously about investing. And I mean, you mentioned a lot of how you're able to bring your previous experience of entrepreneurship into creating value with the key foundation, the key chain, I assume, right? 
+
+And I'm interested in some of your thoughts because investing into crypto is not an easy thing. And obviously it's kind of like a private investors club which shares the value. How would someone make sure that your investment tools or your investment vehicle, especially being a private investment club, will guarantee them that value in the future? And I don't mean how you guys do it specifically in detail, but rather, let's say if you were now to open CoinGecko or CoinMarketCup or whatever. How would you go to pick the coins that if you had $10,000 or $100,000, and I know it's a difference of what some you would have? What is the criteria for investing into those things, into those projects for you personally? How do you do that? How do you pick those? I don't know if it does make sense. 
+
+Reda Berrehili: 
+No, no, I don't. The question makes a lot of sense. So I think let's get a focus on Club, which is the main project that we're launching in a few days now. 
+
+Yeah. So basically, Club is a neoprivate bank. When my company got acquired, I got approached by private banks because you got money, they want to get your money and they want to charge you fees for your money. 
+
+And I wasn't impressed by what they were offering. And I'm like, hey, thank you guys, you're very nice, but I'm going to invest my money myself. And if I fuck up, I fuck up myself. 
+
+But if I succeed, I succeed myself and I'm the only one taking fees on my successes. This is how led me to thinking about Club. I wanted actually with Club, I created the private bank that I would have wanted to have when I sold my company or when I was building my wealth. So basically, how does it work? 
+
+Club is separated in three different parts. The first part is the core banking platform. You need to have an account. 
+
+You need to have a debit card to make your payments, to receive your money, to send money, et cetera, et cetera. This is the first part. The second part is about the lifestyle. 
+
+This is crazy that today, when you are in a bank, they do not help you on having a better lifestyle. So basically, as we're targeting a kind of people that are Henry's high earners, not rich yet and high net worth individuals, we kind of know their lifestyle. So basically we partnered with a lot of brands, interesting brands to offer them rewards for spending. So they spend better. They spend our partners on their lifestyle and they get rewards in keys for their spending. So this is the second part. 
+
+It's about the lifestyle. The third part, and this is the most interesting part, is how can you make me money? How can you, how can club help me with my risk profile, with my patents to my need in terms of liquidity, risk and yield provide me best baskets of investments? So this is where club provides you a unique investment products platform that provides you risky or less risky high yield or low yield on a single platform. Basically crypto is not the only asset that we offer. So in the next few days, we are already offering a product that is very unique, that offers somewhere around 50 to 60% annual yield. And this is a physical asset. And this is where we're getting in this new way of investing your money. You are in control. 
+
+We just give you access to something you didn't have access to. So it can be, you know, electric scooters that are managed by a company and they share money with you when they generate revenue. It can be cryptocurrency. It can be stock market. It can be pre seed seed startups. 
+
+My personal deal flow, I receive deal flows, very high quality startups in my deal flows in which I invest personally. So I share it with the ecosystem. Basically what I'm doing with club, what we're doing with club is scaling what I've been doing for myself. And basically any kind of product that we offer is a product that I'm already a customer of or investor in. So this is how we provide investment products that are very interesting for the people. Obviously there is crypto in it because it's very liquid and very risky, but the upside is very interesting. 
+
+Now to get back to your very specific question, how do we manage to identify products like a crypto assets that you would invest in? When I invest in a business, in a startup, 85 to 90% of my decision is made on the team. You look at the team. I always say I prefer a very bad idea with an amazing team than a very good idea with a bad team because an amazing team would always figure it out. 
+
+Always. But a bad team, never. You look at the team, if the team is great and they have high values and this is important because having a great team is not enough. If you have a team with very low ethics, avoid even more in crypto. For example, when you raise funding with a crypto asset and then you launch another crypto asset on which you put all the value, this is not fair. This is not fair for the investors that took the risk. This is not fair. So basically great team, but very low ethics. And this is something that should not happen. Basically the team, the ethics and then the market. And at the end of the day, they will figure it out. 
+
+Citizen Web3: 
+Figuring it out is a good way to put it. But of course, market conditions still exist. I mean, if it doesn't have a product market fit, then there is no demand for the product. And even if I have the best team in the world, in your opinion, will I still succeed? Is that what you're trying to say? 
+
+Reda Berrehili: 
+Yes, because the best team in the world will figure out that there is no product market fit and will say, OK, let's stop guys. Let's stop and let's launch something else. See what I mean? 
+
+Citizen Web3: 
+OK, I still agree. But OK, still, I'm quite curious as to how you personally, because with your technical background and your entrepreneurship background and you've been in crypto long enough, I'm always quite curious to try to understand how people like yourself value or estimate the value of crypto assets. And this is quite an interesting thing. 
+
+Reda Berrehili: 
+OK, I can give you an example. I made a killing this year with an asset, Kava. Basically, in March, Kava dropped 60%. So I don't know the team, but I know that the team is based in Silicon Valley, heavily funded, high quality team. This is not normal. So I just went full in Kava. So I bought Kava. I was just, you know, I wanted to run a validator and I knew that it was not to get worse than the drop that they lived at that time. And yeah, I was right. I made times 20 in less than two months. 
+
+Citizen Web3: 
+So you're a price trader, right? 
+
+You're a price investor. Your main decision here in Kava, OK, it was based on the team. But technically you said, OK, the price is dropped. I think that it should be worth more. I like the team. 
+
+Reda Berrehili: 
+Exactly. 
+
+Citizen Web3: 
+I went and bought it. OK, OK. I guess that was my question. 
+
+Reda Berrehili: 
+And for example, right now I'm doing a killing in one asset. So basically, you know, Celsius and Nexo. So Nexo, initially they were doing dividends, blah, blah, blah. So annual buyback, etc. OK, I was like, interesting, I'm going to use it. I'm going to buy some Nexo. And then I was looking at Celsius, heavily valued and Nexo very undervalued comparing to Celsius. 
+
+And I was like, this is something interesting. Nexo does not offer the ability to get boosted rewards if you get them into Nexo. But Celsius offers this ability. And I was like, OK, the day Nexo offers that, that uplift that Celsius is having, they will have it. So I bought a lot of Nexo tokens. And now I'm three times the value or four times the value. 
+
+Citizen Web3: 
+So once again, you based your decision a lot on the price. 
+
+Reda Berrehili: 
+I think it's very important to look at the price, to look at the tokenomics, to look at the team and benchmark. Benchmark is very important because at the end of the day, benchmark tells the truth. If you have two or three businesses that do the same business and that there is one that is doing a killing but undervalued besides another, that means that they're just missing one thing. And when they figure it out, they will get to the same value than the other. 
+
+Anna: 
+And for me, because I really interesting in seed stage and around take, could you mention the most important characteristic in your opinion of team personalities? 
+
+Reda Berrehili: 
+It's not about personalities. I think it's about skills. I'll tell you about skills, product centric and technology and business centric. So basically, if you have a team of three people with one that is very product and technology centric and one that is business oriented, this is 100 percent guaranteed success because the product and tech, they work together to create value. So if he is product centric, that means that he will listen to the metrics, KPIs to make a product that works. And if they have someone in the team that is very business oriented, he will go to market and make money. 
+
+And this is very important. But the most important part, if you have someone in the team that already made an exit success, then you can go and put your money without even thinking. 
+
+Citizen Web3: 
+So a key success metric here is not just estimating risk, but making sure that the team itself knows how to estimate risk and when to say, OK, stop, we had enough and let's go and let's fix here. But then that raises the question, what about projects, for example, that very technology centric in terms like things that try to create protocols and so on and so forth? 
+
+Reda Berrehili: 
+I don't like this kind of project. 
+
+Citizen Web3: 
+Right, right. 
+
+Reda Berrehili: 
+Because it's a very bad is go big or go home and it's 99 percent of go home. So this is not the kind of investment that I do because they're also very, very hyped because of the VCs that are pouring tens of millions, hundreds of millions in this kind of project. They're over, overvalued. 
+
+You also have very a lot of back office deals that happens that you're not aware of. So they're inflated. Look at Fyrecoin, look at many projects that are inflated. Polkadot, Polkadot is 100 percent inflated by Silicon Valley money. I wouldn't put a penny on Polkadot not because of the technology. The technology is great. 
+
+The guys is great. They copied everything of Cosmos. It's amazing. 
+
+Citizen Web3: 
+That's a harsh statement. 
+
+Reda Berrehili: 
+No, no, it's a Cosmos copycat with great engineers and technology. I talked with the guys. They're amazing. They have great tech, but it's, you know, like any Silicon Valley startup, heavily inflated with VC money. 
+
+Citizen Web3: 
+I Have a statement, but OK, it's your opinion, of course. I mean, in my opinion, they're different in terms of technological approach to the problem they're trying to solve. 
+
+Reda Berrehili: 
+I know they use Rust. Rust, very sexy language from Silicon Valley developers. Everything that is hyped usually is hyped for the wrong reasons in the beginning. But at the end of the day, they end up being the right technology. I know it's a great technology, Rust. But at the end of the day, when you start using Rust in the beginning, you will have all the troubles if you have very low funding, etc. You don't want to have those troubles. You don't want to be the one that fixes the issue because it costs a lot of money. That's why it's great to have Silicon Valley startups that VC's burn hundreds of millions on those because they make the world advance. But I don't want to be the dumb guy that puts his money in it because I won't be getting the reward that the big guys will get from it. 
+
+Citizen Web3: 
+Can't say I agree, but I like that. I like the opinion. I like hearing strong opinions and it gives good insight into how the person thinks. And again, you mentioned that the best way to evaluate a project is by looking at the team. That's why we like talking to the people who like to see who's the person behind what motivates them, what drives them, what they think about business and going to the market strategies, but how they think about the other things. And they generally make up their project and I like what I'm hearing. It's really interesting. 
+
+Anna: 
+I don't have any question. I have just a comment here because the thing that pop up in my mind that fun challenge, you have 20 Pokemons and found the programming language among these Pokemons. 
+
+Citizen Web3: 
+That's actually a good challenge. 
+
+Anna: 
+Yeah, it's a good challenge. By the way, but it's like rust. OK, great technology. Oh, Huskel. Oh,
+
+Citizen Web3:  
+exactly. I think I think Huskel will still be right in the code, but people will still be trying to figure it out, the expression. So traditional question left to all our guests is what current blockchain projects? So maybe those that don't exist anymore motivate you and which ones you think are excited to watch out for? 
+
+Reda Berrehili: 
+I'm very excited about Ethereum, too. I think that they're taking a great approach and I'm looking really forward towards seeing how it unveils in the future, because I think it will be transformational for DeFi and it will be crazy for the Cosmos ecosystem. Because when you will have interoperability between Cosmos and Ethereum, too, well, it will be ecosystem changing. 
+
+Citizen Web3: 
+Any other projects or from Ethereum? Maybe low key projects as well. 
+
+Reda Berrehili: 
+No, I love what Kava is doing. I'm really great team, great project, great product. I have nothing to say obvious that we have here some very high skilled entrepreneurs. I like what they're building. 
+
+Citizen Web3: 
+Rada, it's been pleasure speaking to you and I think it's a great way to shed light on projects. I was going to say that I didn't hear about Key Foundation until Massey from SG1 made the email intro kind of thing. And I'm looking forward to seeing you guys around more in the ecosystem and going to look out till when Club comes out and seeing where you guys are going to take it. 
+
+Reda Berrehili: 
+Sure, we actually have been very low key because we are kind of builders when we try to build before we communicate. I personally don't like to communicate and overstate stuff, announcing stuff that is not valuable to people. Now we got to the point where we have something really interesting to be delivered and we're happy to start sharing this with the community and the ecosystem and we'll be happy to have you on boarded on Club. I think you'll like what we're doing. 
+
+Citizen Web3: 
+Awesome. Thanks for joining in. 
+
+Reda Berrehili: 
+Thank you. 
+
+Anna:
+Thank you. Bye. 
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.

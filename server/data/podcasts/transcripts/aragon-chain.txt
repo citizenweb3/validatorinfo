@@ -1,0 +1,247 @@
+#citizenweb3
+
+Episode link:
+https://www.citizenweb3.com/aragon-chain
+
+Episode name: 
+Social issues, DAOs and America with ChainSafe & Aragon One
+
+Anna
+hey it's citizen cosmos we are serge and anna and we discover cosmos by chatting with awesome people from various teams within the cosmos ecosystem and the community join us if you're curious how dreams and ambitions become code 
+
+Citizen Web3
+hi everyone hey guys and today we have a special episode usually we talk to one guest today we first of all we talked to a few guests and second we've invited uh some of the guys from chainsafe which is a firm that specializes in web 3 infrastructure and making aragon chain and we have jorge as well from aragon who will let us a little bit on the inside what is arrogant chain how it's gonna connect the cosmos so i'm not really sure how i should introduce you guys so maybe i will just ask each one of you to introduce yourself briefly and say what you're doing and how is what you guys doing has to do with cosmos 
+
+Jorge
+hi thanks for having me super super glad to be here my name is jorge quiro i'm one of the co-founders of the r1 project the project was started way back in in 2016 with the idea of giving people tools to organize with without regard for borders or or any limitations at the beginning we and right now we have a system that allows people to create dows on ethereum so that is decentralized autonomous organizations that people create for for all sorts of purposes from small groups to totally internet native communities and yeah and like we got introduced to the cosmos world when we were looking for options for us to build our own chain concerns especially by scalability issues with with ethereum and we we worked with with chainsafe to analyze what the uh what the best options for building our own chainware and building the chain on cosmos sdk with the ethernet what's the best the best path forward that we saw so yeah super super excited to be building this 
+
+Citizen Web3
+thanks aiden do you wanna tell us a little bit about chain safe in general maybe because i mean i've looked at your github guys it's not like i've heard about you yesterday i mean or arrogant to that matter but you guys have a very impressive github a very impressive list of clients there including different web3 services and infrastructure maybe you can tell us a little bit about that and what you guys doing for aragon and how you guys planning to make that bridge 
+
+Aidan
+first of all thank you so much for inviting us to be here um it's such a pleasure to talk about um this incredible project and just to kind of put it into context we very seriously take the mission of creating the infrastructure for web3 and that means for us building technologies that will lead to the vision for decentralized and distributed organizations infrastructure and the internet really as a whole as you know our core value for why we get up every day um and so at chainsafe we're a forty person blockchain research and development firm where that is what we do and that mostly looks like building blockchains and uh we're currently contributing to uh youth 2.0 of course the cosmos ecosystem with ether mint and building an implementation of the polka dot host as well as working on some etc work and the latest project we started working on is a rust implementation of filecoin and i guess just to go backwards personally why ethereum got me so excited was the capacity to codify human organization you know bitcoin was cool but ethereum was powerful and so to be working on a project like this one that truly solves the problems that got me into the space in the first place is a real honor and a really exciting one because together i think we're going to build something extremely powerful and extremely revolutionary
+
+Colin
+so my name is colin schwartz i've been working with chainsafe for about two years now and primarily within the capacity of a project manager and i have the honor to be working on some really exciting projects right now one of them is lodestar our eth 2.0 implementation in typescript i worked on some internal projects as well and then uh what's really been getting me most excited recently is of course aragon chain so it's been really an honor and a privilege to be able to have worked on this right from the beginning in last fall all the way up to what we've accomplished to the present and just being able to work with some of the aragon team and get more familiar with their awesome software and their really incredible vision has been really inspiring and uh it's great to be here now with all of you 
+
+Citizen Web3
+and um i've read what i don't i don't remember when it was i think this was back in november when um aragon released i think it was on on one of the blogs of aragon and maybe jorge you can correct me here uh it was a post you guys released talking about how you hire chain safe if i'm correct to decide what is better for arrogant chain polka dot cosmos am i correct or am i mixing up something here it was november right
+
+Jorge
+yeah i think it was um in october it was actually during def con uh during defcon in in japan how do you how did the process work this um we yeah we we started working uh closely with uh with chainsafe around during the summer and they basically produce um a report analyzing like what the what the best possible technology was for the things that we wanted to to get out of um out of blockchain and then it was in october when um they prepared their uh their proposal for for the argon network 
+
+Aidan
+yeah i mean you know our our kind of aim is to be a technically objective organization and you know i believe there were six questions that we were tasked with answering and you know the questions themselves led to the decision as opposed to us you know coming and saying hey you should do this explicitly and so it was a real treat to be able to kind of go and produce this document that was able to kind of contrast the two things and put more um out there in terms of information as opposed to kind of the normal narrative of going and saying hey this is better and i'm not ex not even kind of explaining or even coming to that decision because there's never really a better solution as must as much as there is the best one for the kind of given circumstances in time so it was a real pleasure to work on that document and to have to see where it's led to now 
+
+Citizen Web3
+when you guys made the document was there did you always as soon as you started making that investigation or evaluation uh did you know that you were gonna go with cosmos or were there some decisions or some uh metrics that you when you were evaluating between polka and cosmos that made you think okay maybe this is better suited for polka or i'm let's say consensus wise or security or whatever any any metrics at all 
+
+Aidan
+so one of the big things here is that multiple people were working on this report that are directly working on those protocols so it's not as if one person with a specific bias worked on it and it was rather kind of answering these questions that led to the decision and so one of like the big big factors was evm compatibility and being able to bootstrap a chain as quickly as possible and as effectively as possible taking advantage of all the incredible work the aragon team has been producing over the few years of the past few years and so that was i would say kind of one of the big sure metrics or whatever um features that were truly important but it's important to note that again you know we had a bunch of different people working on this report that work across the different projects and so it's not as if we came in looking to kind of have the answer fit our cognitive bias as opposed to getting people to answer these questions that are working on these protocols and then seeing what comes after that 
+
+Colin
+sure yeah so my name is colin schwartz i've been working with chainsafe for about two years now and primarily within the capacity of the project manager and i have the honor of the exciting projects right now one of them uh is lodestar our 2.0 implementation and typescript uh as well and then what's really been getting me most excited recently is of course paragon chain so it's been really an honor and approved to have worked on this right from the beginning uh yeah fall all the way up to what we've accomplished to the president and to work with some of the aragon team and get more familiar with their awesome software and their really incredible vision has been really inspiring and it's great to be here now 
+
+Citizen Web3
+like talking about going back to the document the evaluation that you guys did which again was very impressive did you participate in that as well Colin i'm not sure what your tasks are the pm so like 
+
+Colin
+i was there uh within like a an editor's capacity um i have a communications background as well so i was definitely not doing the technical research but i did take part in that process and i would just say started to reiterate aiden it was very much we tried to be as objective as possible and simply present the various pros and cons of all of the various choices based on the questions presented to us from aragon and then you know we really let them make the final decision there based on the research that we did 
+
+Anna
+could i start asking the controller questions yeah okay
+
+maybe my question more addres more Jorge when you feel that etheorem is not enough for your project and you decided ok we have to go in and find something else for our project how would that happen
+
+Jorge
+yeah so that was kind of um kind of a process of things that that we had been been seeing and and especially came out to doing uh running running some numbers in terms of um the the growth that are going along could have what the capacity of the ethereum network was and also taking into account that there would be other other things running on ethereum that would also gain a lot in popularity and use that was something that made us feel like by just being being 100% on ethereum on lithium one that the there was a kind of like this this glass ceiling to to how much how much growth we would be having there's also the fact that the um the gas market we had seen some indications of it of it going going crazy but that's something that deeply concerned us in terms of one or product being like very very expensive to use for users and to something that is even so they could be even more worrying it's like not not being able to know uh how how expensive uh our product is to is to use and right now we are uh we're seeing this this past couple of days kind of like displaying out uh in real time with gas prices uh going through a roof some a team member say that yesterday had spent 30 dollars interacting with uh with argon dowse and it is something that if he had done it last week he would have been like maybe five for maximum right and that's that's something that it's kind of in the nature of ethereum it would say you have uh kind of this auction uh or this phrase for for block space and the moment that that is full the the prices they just have massive growth so that was something also very worrying that we could see happening and it happened a bunch of times this week for not very known reasons like a couple months ago in around the black thursday events where it went absolutely bananas as people were running to to do traits as everything was i was crashing so those were two of the main concerns that that made us start thinking about this and then there's also the aspect of of ownership and an agency even with the with the protocols with so many stakeholders and people building it as ethereum it's possible that some decisions that get made for the well-being of the of the entire protocol uh end up hurting someone in particular and being able to have control and being able to govern your chain it's like makes it harder or impossible to to happen and with this we we had this this incident last year with the istanbul hard fork where we had these two smart contracts that we use for for all our contracts which are these proxies that enable upgradability and they're kind of the only part of our system that cannot be upgraded and of course pricing that happened in the hard fork some of these contracts kind of broke we had to change them and like people that really needed them uh fixed it it's like not as is if they completely stop working but like an important feature uh stop working in them and it was a little bit of um of a mess having to do that and then that's kind of an example of protocol rules changing under you and not being able to to do anything and end users being uh being damaged by that i would say as i've said multiple times i think that decision that ethereum core developers made was like absolutely the right call and like it was like a needed needy change but um the fact that some of these things um happen and there's just like no nothing that you you can do and your things can can break makes it difficult to be reliant just on other platform 
+
+Anna
+yeah make a lot of sense and by the way i understand why you are so involved in that project because uh now you put everything so correct and polite way yeah 
+
+Citizen Web3
+so i was gonna ask i think more um i don't know probably aiden or colin i'm not sure maybe jorge can answer as well maybe going more to the technical side about how what is argon chain because i know that arrogant chain is gonna i know you know what i'm not gonna say anything i'm gonna ask you guys and then you can explain it because it will sound much better from from your words than from mine so maybe you can explain a little bit how does ethernet arrogant chain and arago and ethereum how are they going to work together how is it going to shape a single puzzle and how is that puzzle going to look for the end user or maybe how it might look for the end user 
+
+Jorge
+i can start with the high level um and then culinary and can go a little bit more into details so this is like something very important argon chain will be um another environment for for running the argon system so that is like deploying dows like managing dows like running around in these communities right now that can only be done on ethereum and argon chain will be this other option for for people so in that sense it's important that deem thousand ethereum and thousands on argon chain can can communicate so there's gonna be a bridge using chainsafes chain switch between ethereum in it and an argon chain that will allow to transfer assets and and also do cross-chain agent transactions so that could allow like a dao to have be running on one chain but be able to have interactions and have actions on on the other chain uh so that's kind of the the high level argon will still be running on on ethereum and being able to do it on aragon chain will be another environment 
+
+Colin
+i can build on what jorge is saying yeah so basically uh under the hood there are a lot of different processes and various different pieces of software that have been brought together here obviously there's the cosmos core stack and then there's ethernet which has been built on top of that and then we've done some modifications to actually make that software uh more optimized for the aragon contracts the aragon apps the aragon test suites so there are a lot of different parts that have come together in this project but our goal is that from an end user perspective the environment will be very very similar to how it is currently on ethereum so that users who are already familiar with aragon apps dows etc will be able to seamlessly deploy and build new things on aragon chain without having too much overhead or without having to learn any new systems and then the bridge aspect is also a really fascinating piece of this the fact that we have this two-way chain bridge that is capable not only of passing value back and forth but of arbitrary messages opens up a lot of really interesting use cases in terms of how different dows can interact between ethereum sorry the bridge is uh is actually multi-chain not not just two-way so two ways between these two networks but uh you can you know endless integrations are possible but yeah it just like really being able to see what is possible between different dows and also potentially using aragon court on ethereum and having that be able to trigger actions on etherment it's a really exciting area that we're still exploring and we hope to see a lot of a lot of sort of augmentation to the current functionality come out of that
+
+Citizen Web3
+that is aragon chorus is definitely something i'm quite excited to be able to see how it will work in in cross chain functionality 
+
+Anna
+are you going to provide some choice for the some moment for end users what kind of chain they're going to choose for this kind of dao because obviously some users already create some dao using ethereum network so uh how would that will happen 
+
+Citizen Web3
+i mean i will build up on that question it will be a difference at the end of the day obviously those are two different environments and connected via bridge will there be a difference for anyone choosing cosmos uh whether he wants to build a dao on cosmos or a daw on ethereum using aragon 
+
+Jorge
+um i think a really like a big differentiator would be like the amount of interaction that these cells need to have with other other things running right now ethereum so for example there are argon dows that are governing ethereum particles for example decentraland and they're able to do that directly they're running their dial and they do now call administrative functions on this internal protocol or other dials that are like uni dial that are heavily interacting with with other defi protocols so those are things that even if there's the ability to do things across the bridge that they might decide uh to stay on on ethereum even if it's like more expensive to use and they can have some some issues but for other things for other communities that are kind of like self-contained communities that interact with other other argon dao communities for those argan chain will probably be the better again this will be up to the users to to decide 
+
+Citizen Web3
+a reason i'm asking because well i don't wanna again like pull the quilt over but um what we do is we already sort of like we have a dowel on on on oregon and we are building on cosmos and when we first heard about it like in our project and i don't wanna again like talk too much about us but we were at first confused and then we were excited and then we were confused again we got excited again and but at the end of the day i think it's really cool that you guys will provide those instruments because for example right now we are already we've already built some instruments that allow people to use our application which is on using cosmos as the car but use the tools that we build using our gondola on our upfire some of the connections we made by ourselves and it's a little bit confusing right now but but this is why i'm personally really excited for all of this to like happen whether it is going to take a year or whatever and see i mean the the only reason we decided to go with two different projects at the beginning was because there was no way um to to connect to make it sorry on one chain so yeah anyways without like going on too much too much what we do and then pulling the quilt over maybe i do have a question for Aidan like in terms of the technical aspect of things and maybe you can talk a little bit about how it's all going to work in terms of either mint and arrogant chain itself and the bridge i mean that is behind all that 
+
+Aidan
+yeah i mean so one of the kind of core things here is that there needed to be a capacity to basically be able to come to a conclusion on something in one chain and then execute it on another chain and so allowing for you could think of it as a much more reduced cost way of going ahead with certain operations and then being able to potentially finalize that on ethereum or even for example bring something to aragon court so there's a lot of potential for functionality and the aragon agent kind of makes that very much possible and so yeah i mean we're really excited about more than just token transfers and the capacity to really take advantage of cross chain functionality in a way that allows for each side to take advantage of its own kind of value proposition 
+
+Citizen Web3
+a good question i think this arises from what you said in terms obviously of of data transfer and generally and already mentioned aragon court are there any other cases you guys can think of currently and i know obviously in the future there are so many cases that i can imagine with protocol transfer but obviously you guys said token transfer obviously you said arrogant card obviously you guys said dao's that make decisions in terms of governance on one at one place and happen at the other chain are there any other cases you guys can can think of right now in terms of data transfer that might be imaginable or useful 
+
+Jorge
+yeah i think it is getting the interactions for this this main tool when it's like being able to have doubts that are kind of split between the two chains and can make decisions somewhere and act on the other and then interacting with with our own court and get getting those interactions to uh to work really well where the focus is but as you were saying there there could be this endless possibilities in the future 
+
+Aidan
+by having integrations across so many different blockchains we also bring out the possibility to have those different blockchains transferring assets and transferring lots of different things i mean there's so many zones and pair chains with incredible use cases that can now interact with aragon daos so there are so many use cases and it's really about making those use cases possible and so we're not kind of limiting what people can do with the technology and as Jorge said like we're really trying to focus on where we're targeting so that we can ensure that we are able to uh execute on these use cases at the highest standard 
+
+Citizen Web3
+sure what do you got what are your main concerns right now technically when making this thing and what is the main issues you guys came across or something that you think you might come across 
+
+Colin
+uh yeah i can speak to that a little bit i guess on a higher level the most difficult thing has so yeah on a higher level one of the the most challenging aspects of the project so far has just been all of the different pieces of software that it's bringing together and so obviously the result is really positive that it's it's creating this very powerful system that we have to work with but sort of trying to reconcile the differences between how the evm works how etherement itself works how the cosmos stack works and then making that all compatible with the existing aragon software i would say that has been the biggest challenge so far and will likely continue to be something that is challenging for us but at the same time it's necessary in order to get this incredible functionality that we're aiming for and it's also been a very rewarding process and it's it's been really incredible to get to work with all these different technologies and bring them together so uh it you know it's a positive thing but it's also uh definitely probably the single most difficult thing that we've had to work with so far 
+
+Citizen Web3
+do you work with any other projects from the cosmos ecosystem right now
+
+Colin
+well chainsafe built etherement last year so 
+
+Citizen Web3
+yeah yeah yeah of course of course i mean apart from apart from ether mint and and aragon is there anyone else that like maybe cover or terra whatever there are quite a few 
+
+Colin
+uh not just it's just etherement in the air gun chain so far
+
+Citizen Web3
+cool cool because i mean there is a lot of projects in the reason i'm asking because for example foam they are obviously and sentinel they started what they still work with ethereum and they're talking seriously 20. so i was just wondering if maybe they are going to be using eithermint i mean i presume they will be but okay we'll see sorry Aidan did you want to add something there 
+
+Aidan
+yeah i mean we're definitely seeing a lot of interest in ethereumt as a cosmos sdk module and are kind of talking to different projects about potential porting and or use of the evm module so it's been really incredible to see kind of this pioneering work like inspire other projects to see what is possible so that's been a real kind of pleasure to see that and also in general the work that we've done with aragon has made ethermint that much stronger in terms of just bringing in equivalent filters and just a lot of things that are necessary to do this kind of work and so by being able to work together we've also brought etherman as a cosmos sdk module to a place where it's now much more usable than it ever was and so the open source ramifications of this um are still to be seen but there seems to be an incredible amount of interest in ethermint in general 
+
+Citizen Web3
+then maybe i will ask a question or to build up on what you said why did you guys go with etherement as the cosmos module that you guys wanted to build why not anything else i mean you could have built whatever i don't know something else 
+
+Aidan
+yeah so just to kind of talk about it you know um we very simply put like i was hanging out with ethan buckman and i was asking him about ethermant and how much we want to play around with it and um that's how this conversation started you know where we build blockchains and so it was a natural kind of progression we work on other evm based chains and on other proof-of-stake ethereum chains and so this was obviously something that we naturally wanted to experiment with beyond
+
+just working on it but also wanting to put it into action like we are today with aragon chain so for us it was a real natural process and we're just kind of fortunate to have an incredible community here in toronto where we can have conversations like that and can interact with people and learn about what they're doing and how we can contribute to their incredible work 
+
+Citizen Web3
+that's um funny you say we actually have a recording with ethan sorry and um i think next week it should be next week so it'll be good to um i want to ask him as well what he's excited about which projects because a lot of people are really excited about aragon and obviously it's been like one of the well a long lasting project within the blockchain space and the question to jorge maybe here uh that i wanted to ask before as well making projects blockchain and running blockchain projects by ourselves i know how difficult it is uh when you have to take care of of the ecosystem of one particular blockchain and the users in that particular blockchain so right now obviously you have aragon which is on on ethereum and with when the bridge is gonna be up and running i mean when arrogant chain is gonna be up and running uh obviously you're gonna have not maybe twice as many users but let's say just twice as many hustle taking care of the ecosystem on arrogant chain and on ethereum are you guys like excited about that are you guys uh terrified of all the work that is gonna come with it i mean do you have any thoughts or ideas in regards to that 
+
+Jorge
+yeah it's um definitely something that i'm very very excited to see as we were saying it's like something very very very different from running the system just on ethereum so yeah more more excited to to see everything uh building up and it's i guess we'll we'll see some some issues that were we haven't had before but i think those won't be big problems um and also team the community that there will be around uh with all the all the excitement sure also gonna take care of some of so it is 
+
+Citizen Web3
+sure because i mean i think i mean right now if somebody is coming to aragon you probably have like tons of questions about aragon court and how to stake hunge or whatever and i mean i can only imagine the doubling or the tripling in questions so how do i take this token to get the other token on the other chain or how do i make this dow to get with this agent to the other you know what i'm saying like it will be more and more complicated in terms of the interlayers that a person has to understand that those are two separate environments that they are connected but I assume that this will bring a lot of questions 
+
+Jorge
+yeah with regards to the two tokens like our argon court is already kind of a proof of stake system it's like okay people take their int they convert it to this other token called a and j and they need to just stake it and even if the the work is like very very different from the work that proves like validators there's there's already some some of that knowledge that that has been has been built from the from the supply side of the of the protocol but yeah for for sure on team on the side of the of the end user uh we will work hard on making it very very simple for for people to to understand just use their dao and whatever environment it's it's better for them 
+
+Citizen Web3
+and what i mean this is a question i think maybe for um well no let's make it two separate questions so the first question is are you guys planning to as soon as when aragon chain is ready obviously you'll take some time to see how it works you'll have the processes up and running are you guys planning to go further uh to other protocols and here where maybe chainsafe can can help you to let's say uh have another aragon chain two on polka dot or argon chain three on another protocol and so on and so forth or is cosmos and ethereum are the only two networks that you guys planning to build on 
+
+Jorge
+yeah that's a great question i i think for for the foreseeable feature there there will only be one one hour went in but like again this is like if someone in the in the argon community decides zoom to do it and have another r1 chain that is working on on polkadots that's only totally fine and totally plausible i just think that focusing on having one chain running running properly is already a pretty exciting and big undertaking so at least from the side of our team we're not thinking about having having more than more than one our own chain for the for the time being 
+
+Citizen Web3
+yeah more the more change the better i'm kidding and maybe this is a question to chain save here are you guys obviously you made that uh cosmos sdk module terms of ethernet are you guys planning to do something like this for other protocols 
+
+Aidan
+um i believe there is some kind of evm based module that exists within substrate i'm not exactly sure but i guess one of the things that is exciting here is really the rpc layer ensuring that the tooling is able to work across the different protocols so yeah i mean we're always open to experimenting with new technologies but yeah definitely definitely focusing on the ethernet zone right now and getting that up and running as well as obviously aragon chain first open to new opportunities but very much focused on the five six block chains we're working on right now 
+
+Citizen Web3
+you said you're focused on five or six particular blockchains assume that is what substrate ethereum cosmos or what else 
+
+Aidan
+we have looked at things with substrate before and are working on tooling surrounding it but specifically our implementation of the polka dot host which is in golang which will eventually provide the capacity for developers to build pair chains in go is a big focus of ours and as much as possible we want to bring that to production and so that's kind of a big focus of ours within the polka dot ecosystem and we want to kind of further that development and bring that to a place of maturity before kind of looking at potential integrations and stuff like that but outside of that we're working on file coin ethereum classic heath 2.0 ethermint obviously aragon chain and the polka dot host work so yeah there's a bunch of stuff going on and we're we're constantly starting new projects but definitely a lot of these proof of stake chains need to get to a place of maturity before there is an ability to truly develop a lot of use cases that make sense just by having running networks and so we're just really excited to get to a place where a lot more of our work is reaching a place of production and then kind of building from there 
+
+Citizen Web3
+yeah you said there a very good point you pointed very good thing about maturity and proof of stake what you guys thoughts about how soon are we going to see proof of stake chains mature at least to the extent of proof-of-work 
+
+Aidan
+i mean i personally think you know it's just we're there already i mean with things like the cosmos hub it's just incredible to see what has been able to be done um so that for us is extremely exciting we have a multi-client test net in each 2.0 we have you know game of zones going on we had kusama happening we are still happening and polka dot coming soon and so many other chains as well so i really do think that the time is here and the time is now more than anything we just want to see more and more experimentation and more and more development across these ecosystems and we'd love to be involved in that as much as possible 
+
+Citizen Web3
+are you guys taking part in the game of zones anyhow 
+
+Aidan
+we are not directly now 
+
+Citizen Web3
+i know there is uh the relaunch and actually phase one now because there was some trouble with with phase one but it looks like there was quite a big i think there was like 140 teams or something like that the joint which was really really cool and amazing to see
+
+Anna
+it's a personal question but what is your drive personally to do what you're doing obviously you are going deep into technologies failed and so on but my question is what is your driver why you go in there and spend a lot of time probably for that kind of development 
+
+Aidan
+yeah i mean simply put our mission is to build the infrastructure for web3 we want to build things that realize a new internet an internet that's owned by the people an internet that empowers people and that puts power back in the hands of individuals and so when we joined the ethereum space or at least learned about ethereum way back when it was really clear for us that for the first time in human history we have a way to decentralize human organization to achieve common goals and common outputs and so yeah it's really a matter of being able to contribute to that because with open source technology no one can stop you from contributing and so seeing those things align and seeing the potential for you know having to actually have a contribution to that shift in kind of human organization was something that and there's still something that um how could you not want to get involved 
+
+cole thank you it's very exciting uh jorge 
+
+Jorge
+yeah for me like more with regards to aragon more in general i think it's like it's been very interesting to to see what what people have been having building with the tools that that we've built like this very very different organizations for for very different purposes but it's coming to a point now that we're focusing on these communities that haven't had the the tools to organize up until now i mean they've had team the tools to kind of like share information together or like have have discussions but um something that we can do now is like actually give them them the tools to to take action in the same way that web one kind of like gave give a voice to everyone and take the ability to pass something on the on the internet web 2 allowed to these communities to start informing and around some share interests or cert values um the super interesting thing about web 3 and daos is that it allows these communities to actually take action right being able to have these community economies that are kind of like whatever they they want to decide it to be and with that take action to do whatever the community wants to be that building like a charity or doing an activist movement for for whatever reason so that's like the most exciting thing just being able to give technology tools to these these new communities and see where what happens with that 
+
+Citizen Web3
+cher Colin 
+
+Colin
+uh there's just so much about the space that i love but what really got me into it initially uh was just sort of learning about how we can use these new technologies to help empower members of society that were previously disenfranchised and just expanding sort of reimagining information and how it can be shared and how it can be used to empower people through these decentralized trustless systems is really what's the most inspiring thing for me and the more i work within the industry and within the space the more use cases for that i see and the more amazing people i meet trying to do similar things so for me that's the the number one biggest thing 
+
+Anna
+thank you 
+
+Citizen Web3
+so uh going back to um you explained what kind of drove you to in terms of aragon but it is there like a personal story behind how you go into the blockchain and what made you um you know co-found aragon or well anything you want to say about it 
+
+Jorge
+when we started aragon we were kind of working on another another company previously it was called a patent and we're like building a software to take down stupid patents that are used by patent trolls for that use them against people that they're innovative with just by having something similar in what they do to what something that someone happened to patent a long time ago or that someone happened to patent and then their company went bankrupt and someone bought bought a patent for for pennies working on that that was a kind of a very very unjust uh problem that we were working on solving and then something that we really wanted to to build based on what our our users were telling us is like okay we uh we really want insurance here just like going after individual patents is like too much of a hassle uh we just want to like be insured against against this problem and this is something that didn't exist and seen that's the moment that we started working on an insurance vehicle built on ethereum uh and seen the that potential to like build like a team of two people built something something like that in a way that that worked that was super super powerful uh but also made us made us consider that ethereum was way way more powerful than that and that with this technology we could we could build basically any any type of organization not just insurance and that was like the the turning point and how how aragon got started that was like one of the one of the inputs there uh there was also the the fact that ours was a u.s centric business and we were at the time based in the us and then we were there by the time that donald trump got elected and that was also a big suck of something that we didn't expect happening and that was kind of like an accelera we saw it as an accelerating force to the the us not being this the center of all of the world's innovation and value and economic growth uh so that's also something that we kind of saw as a signal that hey this the us may not be the biggest power in the world for forever and also we saw this kind of an issue with that it kind of saw some issues more broadly with democracy that we we thought that advancing in that in in that field building tools for allowing people to self-govern was was something uh worth it too
+
+Anna
+it's really very very interesting could you highlight in two words maybe why everyone needs aragon now in the world because obviously it's like a very powerful system you know that it's gartner thinks that dao is just the beginning of the hype cycle so why we need this what is the core problem we can solve using argon 
+
+Jorge
+we'd be empowered to communicate through these tools they didn't have before it's kind of this is a very very good quote from joel monega from placeholder one of our investors who said that an argon dao is kind of like more than a facebook group but less than a company so it's kind of there in that in that sweet spot of this is it's not a dao it's like not a company that needs to incorporate and follow all the regulations and limitations that companies have but it's also more than just like a group of people hanging out and guessing about something right just like gives you some of the some of the tools that you can have as a corporation bringing people together bringing capital together and being able to basically organize for some purpose so yeah into words better tools for for communities 
+
+Citizen Web3
+i have a controversial question this lately for you talking about dows and foundations and jurisdictions do you think that uh at daw regardless of what it does okay let's imagine for the sake of of the conversation that a dao is i don't know some blockchain project and it's a fund that is governed in that project do you think that daw needs to have foundation which has a real jurisdiction or do you think it's much better for such things to be guided by code and code is the law and you know no jurisdiction no ceo no so technology good technology doesn't need well anyways i want to put thoughts into your mind i want to say what do you think 
+
+Jorge
+yeah i think that true dow decentralized autonomous organizations don't you shouldn't need to be registered in any jurisdiction you can have basically if you want to keep it like sufficiently decentralized it kind of needs to be autonomous from from that so that the dow is like fully fully sovereign and then you can of course have things at the edges that allow you to interact with the plan jurisdictions i think if an organization is sufficiently decentralized and that's like an important and important aspect this is this really uh sufficiently centralized uh are there like one or two people that are really pushing it forward and without them it would stop and that that could be um an indicator that that dow isn't really a dow but if it does a sufficiently centralized community where there are no no specific leaders or someone that is really needed for the thing to work it's interesting not to be tied to any in jurisdiction 
+
+Citizen Web3
+yeah i totally agree with you you said there and that at the edges a dao could have some bridges to interact with uh land registries or so it's whatever else do you think we will ever see a time where uh daos will not need those edges where everything will come to the point where you know we don't need to interact with the centralized registry anymore because the decentralized registries do the work that we need to be done or or will that time not come at our age
+
+Jorge
+i certainly hope uh we would see this like i think this is something that will definitely start happening in some some jurisdictions for for sure it's something that we will we will definitely see it's probably something that would happen in a kind of jurisdiction by jurisdiction manner and it wouldn't be something something that happens uh from one day to the other globally but uh if the daos really become a strong force and something that that drives um varies a lot of value and that a lot of people are are involved with them like some jurisdictions will certainly start recognizing them and making sure that they can for example own on property or things like that because like otherwise you're you're kind of like removing like a big part of the economy from from it so i think we will certainly uh once i'll start becoming 
+
+Citizen Web3
+last question for me 
+
+Anna
+we usually ask about any projects that inspired you i mean blockchain projects yeah but we discover mostly and we're speaking mostly about cosmos ecosystem maybe you can say us a little bit about projects that inspire you recently and related with aragon
+
+Jorge
+absolutely let me see there's it's always like a an interesting question music it's hard to know what to what to highlight there's this super interesting dial called one hive which is like one building technology but what they really want to it's like foster these open source commons and they have like tens of dao members that just come together and they they work together on projects so that's that's pretty neat then there's uh this super interesting dial that kind of related with the with the previous question uh that is called excel and it's a dao formed by uh by lawyers uh by legal hackers so they're they they have their dao and they're working on on different projects such as like uh escrow contracts or like certifying certain certain things so it's like very interesting to see like one profession like uh like lawyers like building building up a dao and doing a bunch of bunch of cool stuff i also love this this style called same fame which um started to induce this concept of a speculative fashion uh i would say they would launch a token for that could be that each unit of the token could be redeemed by um for for a physical piece of clothing so they the first one that they did was um was a shirt and the second one was actually a mask and it was super super interesting to see like a dao coming coming together launching the dao itself launching the token and then dao using like personal tokens by a designer to like uh get the design done and then the dao voting on like what the design would be and this was like fascinating what was it it's token for that you could exchange for for sure it's like at some point it was at eight hundred dollars um so i was like really fun to do uh fantasy um they're now building this this company called sora and they launched um a tape by a grammy um artist called rack and so it's like super super interesting things yeah there's interesting things going on daos such as decentraland which is like fascinating that they they're using um they basically gave control over their their protocol um until the land smart contract uh which is a huge a huge economy and they gave control over that to um an Aragon dial controlled by their token holders 
+
+Anna
+oh cool thank you and you mentioned mask and shirts for me it's like a pizza and bitcoin it's could be for aragon that masks that comes from real life during that unstable and certain times so and it's really nice i like this kind of things 
+
+Citizen Web3
+yeah thanks and definitely i think everybody's excited and thanks for uh for coming on thanks for coming on the show thanks for sharing everything with us 
+
+Jorge
+thank you so much for for having having us it's yeah it's been super super fun 
+
+Colin
+yeah thank you so much for having us guys it's been great 
+
+Aidan
+hopefully we can join again soon when we're ready to kind of talk more directly on how the community can get involved in aragon chain 
+
+Anna
+thank you and thank you everyone for listening us see you next time
+
+Outro:
+This content was created by the citizen web3 validator if you enjoyed it please support us by delegating on citizenweb3.com/staking and help us create more educational content.
