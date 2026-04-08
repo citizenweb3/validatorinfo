@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import { networkProfileExample } from '@/app/networks/[name]/(network-profile)/networkProfileExample';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
 import ToolTip from '@/components/common/tooltip';
@@ -13,6 +12,15 @@ interface OwnProps {
 
 const SocialStatistics: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkStatistics');
+
+  const telegramMembers = chain?.telegramMembers ?? 0;
+  const discordMembers = chain?.discordMembers ?? 0;
+  const membersTotal = telegramMembers + discordMembers;
+
+  const tooltipParts: string[] = [];
+  if (telegramMembers > 0) tooltipParts.push(`Telegram: ${telegramMembers.toLocaleString()}`);
+  if (discordMembers > 0) tooltipParts.push(`Discord: ${discordMembers.toLocaleString()}`);
+  const membersTooltip = tooltipParts.length > 0 ? tooltipParts.join(' | ') : t('members tooltip no data');
 
   return (
     <div className="mb-10 mt-10">
@@ -30,17 +38,22 @@ const SocialStatistics: FC<OwnProps> = async ({ chain }) => {
             dataClassName={'my-5'}
           />
         </ToolTip>
-        {networkProfileExample.socialMetrics.map((item) => (
-          <ToolTip key={item.title} tooltip={'text'} direction={'top'}>
-            <MetricsCardItem
-              key={item.title}
-              title={t(item.title as 'believers')}
-              data={item.data}
-              className={'pb-2 pt-2.5'}
-              dataClassName={'my-5'}
-            />
-          </ToolTip>
-        ))}
+        <ToolTip tooltip={t('believers tooltip')} direction={'top'}>
+          <MetricsCardItem
+            title={t('believers')}
+            data={t('under development')}
+            className={'pb-2 pt-2.5'}
+            dataClassName={'my-5'}
+          />
+        </ToolTip>
+        <ToolTip tooltip={membersTooltip} direction={'top'}>
+          <MetricsCardItem
+            title={t('members')}
+            data={membersTotal > 0 ? membersTotal.toLocaleString() : '-'}
+            className={'pb-2 pt-2.5'}
+            dataClassName={'my-5'}
+          />
+        </ToolTip>
       </div>
     </div>
   );

@@ -374,6 +374,7 @@ return <span>{t('myLabel')}</span>;
 - ❌ Inline CSS or `<style>` tags → Tailwind classes only
 - ❌ `function` declarations for components → use `const` arrow functions
 - ❌ Forgetting `npx prisma generate` after schema changes → always regenerate client
+- ❌ Running `npx prisma migrate dev` without reviewing generated SQL → ALWAYS check the migration file for unintended `DROP INDEX` on vector indexes (e.g. `podcast_chunks_embedding_idx`). Prisma cannot track indexes on `Unsupported` type fields and will try to drop them.
 
 ---
 
@@ -386,6 +387,7 @@ return <span>{t('myLabel')}</span>;
 | Indexer job hangs | Worker thread OOM or API timeout | Check job logs, see `server/jobs/AGENTS.md` |
 | AI chat returns 500 | Missing `GOOGLE_GENERATIVE_AI_API_KEY` | Check `.env` against `.env.example` |
 | Redis connection refused | Redis container not running | `docker compose up -d redis` |
+| `prisma migrate dev` drops vector indexes | Prisma doesn't track `Unsupported` field indexes | Review migration SQL, remove `DROP INDEX` for HNSW/vector indexes, re-create manually if needed |
 
 For debugging indexer jobs, chain data, and database issues — use the `validatorinfo-testing` skill.
 

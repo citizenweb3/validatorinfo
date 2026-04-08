@@ -75,6 +75,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://cosmos.network',
     githubUrl: 'https://github.com/cosmos',
     twitterUrl: 'https://x.com/cosmoshub',
+    telegramUrl: 'https://t.me/cosmosproject',
+    discordInviteCode: 'cosmosnetwork',
     tags: ['Cosmos Ecosystem', 'Network', 'Tendermint', 'L1', 'Staking', 'Hub', 'IBC', 'PoS'],
   },
 
@@ -101,6 +103,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://cosmos.network',
     githubUrl: 'https://github.com/cosmos',
     twitterUrl: 'https://x.com/cosmoshub',
+    telegramUrl: 'https://t.me/cosmosproject',
+    discordInviteCode: 'cosmosnetwork',
     tags: ['Cosmos Ecosystem', 'Testnet'],
   },
 
@@ -127,6 +131,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.celestia.org/',
     githubUrl: 'https://github.com/celestiaorg',
     twitterUrl: 'https://x.com/celestia',
+    telegramUrl: 'https://t.me/CelestiaCommunity',
+    discordInviteCode: 'celestia',
     tags: ['Cosmos Ecosystem', 'Data Availability', 'L1', 'Rollup', 'Modular', 'PoS'],
   },
 
@@ -153,6 +159,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://dao.like.co/LikeCoin-the-DeBook-Protocol-c6d5098081544675883a4d44d8ac1240',
     githubUrl: 'https://github.com/likecoin/',
     twitterUrl: 'https://twitter.com/likecoin',
+    telegramUrl: 'https://t.me/LikeCoin',
+    discordInviteCode: 'likecoin',
     tags: ['Social', 'Cosmos Ecosystem', 'Creator Economy', 'Media', 'Staking', 'PoS'],
   },
 
@@ -179,6 +187,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.stride.zone/docs/getting-started',
     githubUrl: 'https://github.com/Stride-Labs',
     twitterUrl: 'https://twitter.com/stride_zone',
+    discordInviteCode: 'stride-zone',
     tags: ['Cosmos Ecosystem', 'Tendermint', 'Liquid Staking', 'Staking Derivatives', 'Staking', 'PoS'],
   },
 
@@ -205,6 +214,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.quicksilver.zone',
     githubUrl: 'https://github.com/quicksilver-zone',
     twitterUrl: 'https://x.com/quicksilverzone',
+    telegramUrl: 'https://t.me/quicksilverzone',
+    discordInviteCode: 'xrSmYMDVrQ',
     tags: ['L1', 'Liquid Staking', 'Cosmos Ecosystem', 'Staking Derivatives', 'Staking', 'PoS'],
   },
 
@@ -231,6 +242,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.quicksilver.zone',
     githubUrl: 'https://github.com/quicksilver-zone',
     twitterUrl: 'https://x.com/quicksilverzone',
+    telegramUrl: 'https://t.me/quicksilverzone',
+    discordInviteCode: 'xrSmYMDVrQ',
     tags: ['Quicksilver Ecosystem', 'Testnet'],
   },
 
@@ -257,6 +270,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.uptick.network/',
     githubUrl: 'https://github.com/UptickNetwork',
     twitterUrl: 'https://twitter.com/Uptickproject',
+    telegramUrl: 'https://t.me/uptickproject',
+    discordInviteCode: 'H6YBueBrjm',
     tags: ['Cosmos Ecosystem', 'NFT', 'Creator Economy', 'IBC', 'Staking', 'PoS'],
   },
 
@@ -283,6 +298,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://github.com/Gravity-Bridge/Gravity-Docs',
     githubUrl: 'https://github.com/Gravity-Bridge',
     twitterUrl: 'https://twitter.com/gravity_bridge',
+    discordInviteCode: 'd3DshmHpXA',
     tags: ['Bridges', 'Cosmos Ecosystem', 'Ethereum Ecosystem', 'IBC', 'Staking', 'PoS'],
   },
 
@@ -310,6 +326,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.neutron.org',
     githubUrl: 'https://github.com/neutron-org',
     twitterUrl: 'https://x.com/neutron_org',
+    telegramUrl: 'https://t.me/neutron_community',
+    discordInviteCode: 'bzPBzbDvWC',
     tags: ['Cosmos Ecosystem', 'Smart Contracts', 'CosmWasm', 'Consumer Chains', 'Staking', 'PoS'],
   },
 
@@ -338,6 +356,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.neutron.org',
     githubUrl: 'https://github.com/neutron-org',
     twitterUrl: 'https://x.com/neutron_org',
+    telegramUrl: 'https://t.me/neutron_community',
+    discordInviteCode: 'bzPBzbDvWC',
     tags: ['Neutron Ecosystem', 'Testnet'],
   },
 
@@ -364,6 +384,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.dymension.xyz',
     githubUrl: 'https://github.com/dymensionxyz',
     twitterUrl: 'https://x.com/dymension',
+    telegramUrl: 'https://t.me/dymensionXYZ',
+    discordInviteCode: 'dymension',
     tags: ['Cosmos Ecosystem', 'Rollups', 'L1', 'RollApp Framework', 'IBC', 'PoS', 'Staking'],
   },
 
@@ -390,6 +412,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '123',
     githubUrl: 'https://github.com/althea-net',
     twitterUrl: 'https://twitter.com/AltheaNetwork',
+    discordInviteCode: 'hHx7HxcycF',
     tags: ['Cosmos Ecosystem', 'Tendermint', 'L1', 'Liquid Infrastructure', 'DePin', 'DeFi', 'Telecom', 'PoS', 'Staking'],
   },
 
@@ -416,6 +439,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.atom.one',
     githubUrl: 'https://github.com/atomone-hub',
     twitterUrl: 'https://x.com/_atomone',
+    discordInviteCode: 'atomone',
     tags: ['Cosmos Ecosystem', 'Tendermint', 'L1', 'Staking', 'PoS', 'Hub'],
   },
 
@@ -462,6 +486,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.union.build',
     githubUrl: 'https://github.com/unionlabs',
     twitterUrl: 'https://twitter.com/union_build',
+    discordInviteCode: 'union-build',
     tags: ['Cosmos Ecosystem', 'Zero-Knowledge', 'Interoperability', 'IBC', 'ZK Bridge', 'Staking', 'PoS'],
   },
 
@@ -686,6 +711,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.namada.net',
     githubUrl: 'https://github.com/anoma',
     twitterUrl: 'https://x.com/namada',
+    telegramUrl: 'https://t.me/namadaprotocol',
+    discordInviteCode: 'namada',
     tags: ['Privacy', 'L1', 'Shielded Actions', 'IBC', 'Multi-Asset Privacy', 'Staking', 'PoS'],
   },
 
@@ -712,6 +739,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://cybercongress.ai/docs/',
     githubUrl: 'https://github.com/cybercongress/cyberd',
     twitterUrl: 'https://twitter.com/cyber_devs',
+    telegramUrl: 'https://t.me/bostrom_news',
+    discordInviteCode: 'ARwv74ZyGH',
     tags: ['DeAI', 'Cosmos Ecosystem', 'AI', 'Knowledge Graph', 'Staking', 'PoS'],
   },
 
@@ -758,6 +787,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://orchestralabs.org/documentation/',
     githubUrl: 'https://github.com/Orchestra-Labs',
     twitterUrl: 'https://x.com/orchestra_labs',
+    discordInviteCode: 'symphony',
     tags: ['Cosmos Ecosystem', 'Intents', 'MEV', 'Cross-Chain Liquidity', 'DeFi', 'Staking', 'PoS'],
   },
 
@@ -802,6 +832,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://orchestralabs.org/documentation/',
     githubUrl: 'https://github.com/Orchestra-Labs',
     twitterUrl: 'https://x.com/orchestra_labs',
+    discordInviteCode: 'symphony',
   },
 
   'space-pussy': {
@@ -827,6 +858,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '',
     githubUrl: 'https://github.com/greatweb',
     twitterUrl: 'https://x.com/SpacePussy_ai',
+    discordInviteCode: 'ARwv74ZyGH',
     tags: ['Bostrom Ecosystem', 'Testnet'],
   },
 
@@ -853,6 +885,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.osmosis.zone',
     githubUrl: 'https://github.com/osmosis-labs',
     twitterUrl: 'https://twitter.com/osmosiszone',
+    telegramUrl: 'https://t.me/osmosis_chat',
+    discordInviteCode: 'osmosis',
     tags: ['DeFi', 'L1', 'Cosmos Ecosystem', 'AMM', 'DEX', 'IBC', 'Tendermint', 'Staking', 'PoS'],
   },
 
@@ -890,6 +924,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.orai.io',
     githubUrl: 'https://github.com/oraichain',
     twitterUrl: 'https://twitter.com/oraichain',
+    telegramUrl: 'https://t.me/oraichain',
+    discordInviteCode: 'oraichain',
     tags: ['DeAI', 'Cosmos Ecosystem', 'AI Oracle', 'Data Marketplace', 'L1', 'IBC', 'Staking', 'PoS'],
   },
 
@@ -916,6 +952,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '',
     githubUrl: 'https://github.com/nomic-io',
     twitterUrl: 'https://x.com/nomicbtc',
+    discordInviteCode: 'DJ2f2YtfpJ',
     tags: ['Bridges', 'L1', 'Bitcoin DeFi', 'Cosmos Ecosystem', 'nBTC', 'Staking', 'PoS'],
   },
 
@@ -973,6 +1010,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: '',
     githubUrl: 'https://github.com/nymtech/nym',
     twitterUrl: 'https://x.com/nymproject',
+    telegramUrl: 'https://t.me/nymchan',
+    discordInviteCode: 'nym',
     genesis: 'https://nymtech.net/genesis/genesis.json',
     tags: ['Privacy', 'Mixnet', 'L1', 'Cosmos Ecosystem', 'Anonymity Network', 'Staking', 'PoS'],
   },
@@ -1073,6 +1112,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.namada.net',
     githubUrl: 'https://github.com/anoma',
     twitterUrl: 'https://x.com/namada',
+    telegramUrl: 'https://t.me/namadaprotocol',
+    discordInviteCode: 'namada',
     tags: ['Namada Ecosystem', 'Testnet'],
   },
 
@@ -1106,6 +1147,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.solana.com',
     githubUrl: 'https://github.com/solana-labs',
     twitterUrl: 'https://x.com/namada',
+    telegramUrl: 'https://t.me/solana',
+    discordInviteCode: 'solana',
     tags: ['Network', 'L1', 'Staking', 'High Throughput', 'SVM', 'Staking', 'PoS'],
   },
 
@@ -1139,6 +1182,8 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.polkadot.com/',
     githubUrl: 'https://github.com/paritytech',
     twitterUrl: 'https://x.com/Polkadot',
+    telegramUrl: 'https://t.me/polkadotofficial',
+    discordInviteCode: 'polkadot',
     tags: ['Network', 'L1', 'Staking', 'Parachains', 'Substrate', 'PoS'],
   },
 
@@ -1167,6 +1212,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.aztec.network/',
     githubUrl: 'https://github.com/AztecProtocol',
     twitterUrl: 'https://x.com/aztecnetwork',
+    discordInviteCode: 'aztec',
     tags: ['Ethereum Ecosystem', 'L2', 'Rollup', 'Privacy', 'Smart Contract Platform', 'DeFi', 'ZK', 'Staking', 'PoS'],
   },
 
@@ -1195,6 +1241,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://docs.aztec.network/',
     githubUrl: 'https://github.com/AztecProtocol',
     twitterUrl: 'https://x.com/aztecnetwork',
+    discordInviteCode: 'aztec',
     tags: ['Aztec Ecosystem', 'Testnet'],
   },
 
@@ -1256,6 +1303,7 @@ const chainParams: Record<string, AddChainProps> = {
     docs: 'https://ethereum.org/en/developers/docs/',
     githubUrl: 'https://github.com/ethereum',
     twitterUrl: 'https://x.com/ethdotorg',
+    discordInviteCode: 'ethereum-org',
     seeds: [
       'enode://4e5e92199ee224a01932a377160aa432f31d0b351f84ab413a8e0a42f4f36476f8fb1cbe914af0d9aef0d51665c214cf653c651c4bbd9d5550a934f241f1682b@138.197.51.181:30303',
       'enode://143e11fb766781d22d92a2e33f8f104cddae4411a122295ed1fdb6638de96a6ce65f5b7c964ba3763bba27961738fef7d3ecc739268f3e5e771fb4c87b6234ba@146.190.1.103:30303',
@@ -1331,6 +1379,7 @@ const chainParams: Record<string, AddChainProps> = {
       'enode://10d62eff032205fcef19497f35ca8477bea0eadfff6d769a147e895d8b2b8f8ae6341630c645c30f5df6e67547c03494ced3d9c5764e8622a26587b083b028e8@139.59.49.206:30303',
       'enode://9e9492e2e8836114cc75f5b929784f4f46c324ad01daf87d956f98b3b6c5fcba95524d6e5cf9861dc96a2c8a171ea7105bb554a197455058de185fa870970c7c@138.68.123.152:30303',
     ],
+    discordInviteCode: 'ethereum-org',
     tags: ['Ethereum Ecosystem', 'Testnet'],
   },
 };

@@ -325,6 +325,9 @@
     "followers": "Followers",
     "followers tooltip": "Amount of Twitter (X) followers",
     "members": "Members",
+    "under development": "Under Development",
+    "believers tooltip": "This metric is under development",
+    "members tooltip no data": "No community data available",
     "Transaction Volume": "Transaction Volume + MAU",
     "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete.",
     "distribution map": "Distributrion Map"

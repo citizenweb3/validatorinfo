@@ -21,18 +21,6 @@ export const networkProfileExample = {
       tooltip: 'revenue',
     },
   ],
-  socialMetrics: [
-    {
-      title: 'believers',
-      data: 90,
-      tooltip: '',
-    },
-    {
-      title: 'members',
-      data: 90,
-      tooltip: '',
-    },
-  ],
   totalStatistics: [
     {
       title: 'healthy validators',
