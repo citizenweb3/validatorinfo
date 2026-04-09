@@ -4,11 +4,17 @@ import Redis from 'ioredis';
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
 import aztecIndexer from '@/services/aztec-indexer-api';
+import { getLatestFinalizedBlock } from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
 import { getRewardConfig } from '@/server/tools/chains/aztec/utils/get-reward-config';
+import {
+  AZTEC_INDEXER_MAX_BLOCK_RANGE,
+  getAztecBlockHeight,
+  isAztecFinalizedStatus,
+} from '@/utils/aztec';
 
-const { logInfo, logError, logWarn } = logger('aztec-total-earned-rewards');
+const { logInfo, logWarn } = logger('aztec-total-earned-rewards');
 
-const BATCH_SIZE = 100;
+const BATCH_SIZE = AZTEC_INDEXER_MAX_BLOCK_RANGE;
 const ZERO = BigInt(0);
 const BPS_DIVISOR = BigInt(10000);
 const MAX_RETRIES = 3;
@@ -30,7 +36,9 @@ const resolveLastProcessedBlock = async (chainName: string, dbChainId: number): 
   const cached = await redis.get(redisKey);
   if (cached) {
     const height = parseInt(cached, 10);
-    if (!isNaN(height) && height > 0) return height;
+    if (!isNaN(height) && height > 0) {
+      return height;
+    }
   }
 
   const chain = await db.chain.findFirst({
@@ -64,20 +72,21 @@ export const getTotalEarnedRewards = async (
   chainName: 'aztec' | 'aztec-testnet',
   dbChain: { id: number },
 ): Promise<void> => {
-  const latestHeight = await aztecIndexer.getLatestHeight();
-  if (latestHeight === 0) {
-    logWarn(`${chainName}: Latest height is 0, skipping`);
+  const latestFinalizedBlock = await getLatestFinalizedBlock().catch(() => null);
+  if (!latestFinalizedBlock) {
+    logWarn(`${chainName}: Latest finalized block is unavailable, skipping`);
     return;
   }
 
+  const latestHeight = getAztecBlockHeight(latestFinalizedBlock.height);
   const lastProcessed = await resolveLastProcessedBlock(chainName, dbChain.id);
 
   if (lastProcessed >= latestHeight) {
-    logInfo(`${chainName}: No new blocks to process (last=${lastProcessed}, latest=${latestHeight})`);
+    logInfo(`${chainName}: No new finalized blocks to process (last=${lastProcessed}, latest=${latestHeight})`);
     return;
   }
 
-  logInfo(`${chainName}: Processing blocks ${lastProcessed + 1} to ${latestHeight}`);
+  logInfo(`${chainName}: Processing finalized blocks ${lastProcessed + 1} to ${latestHeight}`);
 
   const rewardConfig = await getRewardConfig(chainName);
   const rewardPerBlock = rewardConfig.blockReward * rewardConfig.sequencerBps / BPS_DIVISOR;
@@ -92,7 +101,10 @@ export const getTotalEarnedRewards = async (
 
   const coinbaseToOperator = new Map<string, string>();
   for (const event of stakedEvents) {
-    if (!event.coinbaseSplitContractAddress) continue;
+    if (!event.coinbaseSplitContractAddress) {
+      continue;
+    }
+
     try {
       const coinbase = getAddress(event.coinbaseSplitContractAddress).toLowerCase();
       const attester = getAddress(event.attesterAddress).toLowerCase();
@@ -118,17 +130,20 @@ export const getTotalEarnedRewards = async (
 
   const coinbaseBlockCount = new Map<string, number>();
   let currentFrom = lastProcessed + 1;
-
   let consecutiveFailures = 0;
 
   while (currentFrom <= latestHeight) {
-    const limit = Math.min(BATCH_SIZE, latestHeight - currentFrom + 1);
+    const currentTo = Math.min(currentFrom + BATCH_SIZE - 1, latestHeight);
 
-    let blocks: Awaited<ReturnType<typeof aztecIndexer.getBlocks>> | null = null;
+    let blocks: Awaited<ReturnType<typeof aztecIndexer.getBlocksStrict>> | null = null;
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
-      blocks = await aztecIndexer.getBlocks({ from: currentFrom, limit });
-      if (blocks && blocks.length > 0) break;
-      logWarn(`${chainName}: No blocks returned for from=${currentFrom}, limit=${limit} (attempt ${attempt}/${MAX_RETRIES})`);
+      blocks = await aztecIndexer.getBlocksStrict({ from: currentFrom, to: currentTo }, { cache: 'no-store' });
+
+      if (blocks.length > 0) {
+        break;
+      }
+
+      logWarn(`${chainName}: No blocks returned for range ${currentFrom}-${currentTo} (attempt ${attempt}/${MAX_RETRIES})`);
       if (attempt < MAX_RETRIES) {
         await new Promise((resolve) => setTimeout(resolve, RETRY_DELAY_MS));
       }
@@ -140,7 +155,8 @@ export const getTotalEarnedRewards = async (
         logWarn(`${chainName}: ${MAX_CONSECUTIVE_FAILURES} consecutive failures at block ${currentFrom}, stopping`);
         break;
       }
-      logWarn(`${chainName}: Retries exhausted for from=${currentFrom}, waiting ${LONG_RETRY_DELAY_MS / 1000}s before next attempt (${consecutiveFailures}/${MAX_CONSECUTIVE_FAILURES})`);
+
+      logWarn(`${chainName}: Retries exhausted for range ${currentFrom}-${currentTo}, waiting ${LONG_RETRY_DELAY_MS / 1000}s before next attempt (${consecutiveFailures}/${MAX_CONSECUTIVE_FAILURES})`);
       await new Promise((resolve) => setTimeout(resolve, LONG_RETRY_DELAY_MS));
       continue;
     }
@@ -148,8 +164,14 @@ export const getTotalEarnedRewards = async (
     consecutiveFailures = 0;
 
     for (const block of blocks) {
+      if (!isAztecFinalizedStatus(block.finalizationStatus)) {
+        continue;
+      }
+
       const coinbase = block.header.globalVariables.coinbase;
-      if (!coinbase) continue;
+      if (!coinbase) {
+        continue;
+      }
 
       try {
         const normalizedCoinbase = getAddress(coinbase).toLowerCase();
@@ -157,15 +179,13 @@ export const getTotalEarnedRewards = async (
       } catch {}
     }
 
-    const batchEnd = currentFrom + blocks.length - 1;
-    await saveCursor(chainName, dbChain.id, batchEnd);
-
-    logInfo(`${chainName}: Processed batch ${currentFrom}-${batchEnd} (${blocks.length} blocks)`);
-    currentFrom = batchEnd + 1;
+    await saveCursor(chainName, dbChain.id, currentTo);
+    logInfo(`${chainName}: Processed batch ${currentFrom}-${currentTo} (${blocks.length} blocks)`);
+    currentFrom = currentTo + 1;
   }
 
   if (coinbaseBlockCount.size === 0) {
-    logInfo(`${chainName}: No coinbase addresses found in new blocks`);
+    logInfo(`${chainName}: No coinbase addresses found in new finalized blocks`);
     return;
   }
 
@@ -205,7 +225,6 @@ export const getTotalEarnedRewards = async (
   logInfo(`${chainName}: Distributing rewards to ${operatorRewards.size} operators`);
 
   const operatorAddressList = Array.from(operatorRewards.keys());
-
   const existingNodes = await db.node.findMany({
     where: {
       chainId: dbChain.id,
@@ -226,6 +245,7 @@ export const getTotalEarnedRewards = async (
   const updates = Array.from(operatorRewards.entries()).map(([operator, newReward]) => {
     const existing = existingRewardsMap.get(operator) || ZERO;
     const total = existing + newReward;
+
     return db.node.updateMany({
       where: { operatorAddress: getAddress(operator) },
       data: { totalEarnedRewards: total.toString() },
@@ -233,6 +253,5 @@ export const getTotalEarnedRewards = async (
   });
 
   await db.$transaction(updates);
-
   logInfo(`${chainName}: Updated totalEarnedRewards for ${updates.length} nodes`);
 };

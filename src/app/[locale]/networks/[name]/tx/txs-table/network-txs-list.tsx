@@ -4,9 +4,9 @@ import { FC } from 'react';
 import TablePagination from '@/components/common/table/table-pagination';
 import NetworkTxsItem from '@/app/networks/[name]/tx/txs-table/network-txs-items';
 import { networkTxsExample } from '@/app/networks/[name]/tx/txs-table/networkTxsExample';
-import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import TxService, { TxItem } from '@/services/tx-service';
 import { formatTimestamp } from '@/utils/format-timestamp';
+import { isAztecChainName } from '@/utils/aztec';
 
 interface OwnProps {
   currentPage?: number;

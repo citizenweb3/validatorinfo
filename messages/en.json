@@ -1317,6 +1317,7 @@
     "blobs hash": "Blobs Hash",
     "in hash": "In Hash",
     "out hash": "Out Hash",
+    "sponge blob hash": "Sponge Blob Hash",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"
@@ -1593,4 +1594,3 @@
     "New chat": "New chat"
   }
 }
-

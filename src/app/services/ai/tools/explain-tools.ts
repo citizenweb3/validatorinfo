@@ -6,6 +6,7 @@ import BlocksService from '@/services/blocks-service';
 import ChainService from '@/services/chain-service';
 import aztecIndexer from '@/services/aztec-indexer-api';
 import { AztecTxEffect, AztecPendingTx, AztecDroppedTx, AztecBlock } from '@/services/aztec-indexer-api/types';
+import { getAztecFinalizationLabel, getAztecTimestampMs, isAztecFinalizedStatus } from '@/utils/aztec';
 import { ZERO_HASH } from './utils';
 
 const { logError } = logger('ai-tools:explain');
@@ -63,9 +64,9 @@ const summarizeBlock = (block: AztecBlock) => {
   return {
     hash: block.hash,
     height: Number(block.height),
-    finalized: block.finalizationStatus === 3,
-    finalizationStatus: block.finalizationStatus === 3 ? 'finalized' : 'pending',
-    timestamp: gv?.timestamp ? new Date(gv.timestamp * 1000).toISOString() : null,
+    finalized: isAztecFinalizedStatus(block.finalizationStatus),
+    finalizationStatus: getAztecFinalizationLabel(block.finalizationStatus),
+    timestamp: gv?.timestamp ? new Date(getAztecTimestampMs(gv.timestamp)).toISOString() : null,
     transactionCount: txCount,
     slotNumber: gv?.slotNumber ?? null,
     blockProducer: gv?.coinbase ?? null,
@@ -196,7 +197,7 @@ export const explainTools = {
             hash: b.hash,
             height: b.height,
             timestamp: b.timestamp,
-            finalized: b.finalizationStatus === 3,
+            finalized: isAztecFinalizedStatus(b.finalizationStatus),
           })),
         };
       } catch (error) {

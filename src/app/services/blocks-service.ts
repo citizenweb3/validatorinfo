@@ -1,5 +1,10 @@
 import aztecIndexer from '@/services/aztec-indexer-api';
 import { formatTimestamp } from '@/utils/format-timestamp';
+import {
+  AZTEC_INDEXER_MAX_BLOCK_RANGE,
+  getAztecBlockHeight,
+  getAztecTimestampMs,
+} from '@/utils/aztec';
 
 export interface BlockItem {
   hash: string;
@@ -15,27 +20,29 @@ export interface BlocksResponse {
 
 const getAztecBlocks = async (currentPage: number, perPage: number): Promise<BlocksResponse> => {
   try {
-    const latestHeight = await aztecIndexer.getLatestHeight({ cache: 'no-store' });
-    const totalPages = Math.ceil(latestHeight / perPage);
-    const from = Math.max(1, latestHeight - currentPage * perPage + 1);
-    const upperBlock = latestHeight - (currentPage - 1) * perPage;
+    const pageSize = Math.max(1, Math.min(perPage, AZTEC_INDEXER_MAX_BLOCK_RANGE));
+    const latestBlock = await aztecIndexer.getLatestBlock({ cache: 'no-store' });
 
-    const aztecBlocks = await aztecIndexer.getBlocks({ from, limit: perPage }, { cache: 'no-store' });
+    if (!latestBlock) {
+      return { blocks: [], totalPages: 1 };
+    }
 
-    const filteredBlocks = aztecBlocks.filter((block) => {
-      const height = typeof block.height === 'string' ? parseInt(block.height, 10) : block.height;
-      return height <= upperBlock;
-    });
+    const latestHeight = getAztecBlockHeight(latestBlock.height);
+    const totalPages = Math.ceil(latestHeight / pageSize);
+    const upperBlock = latestHeight - (currentPage - 1) * pageSize;
+    const from = Math.max(1, upperBlock - pageSize + 1);
 
-    const blocks: BlockItem[] = filteredBlocks.map((block) => {
-      const timestamp = new Date(block.header.globalVariables.timestamp);
+    const aztecBlocks = await aztecIndexer.getUiBlocks({ from, to: upperBlock }, { cache: 'no-store' });
+
+    const blocks: BlockItem[] = aztecBlocks.map((block) => {
+      const timestamp = new Date(getAztecTimestampMs(block.timestamp));
       const formattedTimestamp = formatTimestamp(timestamp);
 
       return {
-        hash: block.hash,
+        hash: block.blockHash,
         height: block.height,
         timestamp: formattedTimestamp,
-        finalizationStatus: block.finalizationStatus,
+        finalizationStatus: block.blockStatus,
       };
     });
 

@@ -1214,7 +1214,7 @@
     "transactions 30d": "Транзакции (30д)",
     "transactions yesterday": "Транзакции (Вчера)",
     "tps": "TPS (Последние 20 Блоков)",
-    "average fee": "Средняя Комиссия",
+    "average fee": "Средняя комиссия",
     "noTransactionsYet": "Транзакций пока нет",
     "transactionsWillAppear": "Отображение транзакций появится, когда в сети начнутся транзакции",
     "txListLoadError": "Не удалось загрузить транзакции. Попробуйте перезагрузить страницу.",
@@ -1318,6 +1318,7 @@
     "blobs hash": "Хеш Блобов",
     "in hash": "Входящий Хеш",
     "out hash": "Исходящий Хеш",
+    "sponge blob hash": "Хеш Sponge Blob",
     "Tabs": {
       "Expand": "Развернуть",
       "JSON": "JSON"
@@ -1594,4 +1595,3 @@
     "New chat": "Новый чат"
   }
 }
-

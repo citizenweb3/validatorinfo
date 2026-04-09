@@ -1333,6 +1333,7 @@
     "blobs hash": "Hash de Blobs",
     "in hash": "Hash de Entrada",
     "out hash": "Hash de Saída",
+    "sponge blob hash": "Hash Sponge Blob",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"

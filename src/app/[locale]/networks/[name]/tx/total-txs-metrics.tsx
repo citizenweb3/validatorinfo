@@ -38,7 +38,9 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
       },
       {
         title: 'tps',
-        data: 'N/A',
+        data: metrics.tps !== null
+          ? `${metrics.tps.toLocaleString('en-US', { maximumFractionDigits: 2 })} txs/s`
+          : 'N/A',
       },
       {
         title: 'average fee',

@@ -5,21 +5,13 @@ import { FC } from 'react';
 import CopyButton from '@/components/common/copy-button';
 import { ChainWithParams } from '@/services/chain-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
-import { BufferData } from '@/services/aztec-indexer-api/types';
 
 interface OwnProps {
   chain: ChainWithParams | null;
   hash: string;
 }
 
-const bufferToHex = (buffer: BufferData): string => {
-  if (!buffer || !buffer.data || !Array.isArray(buffer.data)) {
-    return '0x';
-  }
-  return '0x' + buffer.data.map(byte => byte.toString(16).padStart(2, '0')).join('');
-};
-
-const ExpandedBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
+const ExpandedBlockInformation: FC<OwnProps> = async ({ hash }) => {
   const t = await getTranslations('BlockInformationPage');
   const isHeight = /^\d+$/.test(hash);
 
@@ -109,18 +101,8 @@ const ExpandedBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
       type: 'number',
     },
     {
-      title: 'blobs hash',
-      data: bufferToHex(block.header.contentCommitment.blobsHash),
-      type: 'hash',
-    },
-    {
-      title: 'in hash',
-      data: bufferToHex(block.header.contentCommitment.inHash),
-      type: 'hash',
-    },
-    {
-      title: 'out hash',
-      data: bufferToHex(block.header.contentCommitment.outHash),
+      title: 'sponge blob hash',
+      data: block.header.spongeBlobHash ?? '0x',
       type: 'hash',
     },
   ];

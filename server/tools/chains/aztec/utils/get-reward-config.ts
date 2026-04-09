@@ -12,9 +12,10 @@ export interface RewardConfig {
 
 interface RewardConfigResult {
   rewardDistributor: `0x${string}`;
-  sequencerBps: number;
+  sequencerBps: number | bigint;
   booster: `0x${string}`;
-  blockReward: bigint;
+  blockReward?: bigint;
+  checkpointReward?: bigint;
 }
 
 export const getRewardConfig = async (chainName: 'aztec' | 'aztec-testnet'): Promise<RewardConfig> => {
@@ -32,9 +33,14 @@ export const getRewardConfig = async (chainName: 'aztec' | 'aztec-testnet'): Pro
     functionName: 'getRewardConfig',
   })) as RewardConfigResult;
 
+  const blockReward = config.blockReward ?? config.checkpointReward;
+  if (blockReward === undefined) {
+    throw new Error(`${chainName}: getRewardConfig returned neither blockReward nor checkpointReward`);
+  }
+
   const result = {
-    sequencerBps: BigInt(config.sequencerBps),
-    blockReward: config.blockReward,
+    sequencerBps: typeof config.sequencerBps === 'bigint' ? config.sequencerBps : BigInt(config.sequencerBps),
+    blockReward,
   };
 
   logInfo(`${chainName}: blockReward=${result.blockReward}, sequencerBps=${result.sequencerBps}`);

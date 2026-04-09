@@ -26,8 +26,10 @@ import {
   TotalTxEffectsResponse,
   TxEffectsLast24hResponse,
   TxEffectsQueryParams,
+  UiBlockTableItem,
   UiTxEffectTableItem,
 } from './types';
+import { AZTEC_INDEXER_MAX_BLOCK_RANGE } from '@/utils/aztec';
 
 const { logDebug, logError } = logger('aztec-indexer-endpoints');
 
@@ -44,6 +46,21 @@ const safeRequest = async <T>(fn: () => Promise<T>, fallback: T, errorContext: s
     logError(`${errorContext}: ${error instanceof Error ? error.message : String(error)}`);
     return fallback;
   }
+};
+
+const normalizeBlockQueryParams = (params?: BlocksQueryParams): BlocksQueryParams | undefined => {
+  if (!params) {
+    return undefined;
+  }
+
+  if (params.to !== undefined || params.from === undefined || params.limit === undefined) {
+    return params;
+  }
+
+  return {
+    ...params,
+    to: params.from + Math.min(params.limit, AZTEC_INDEXER_MAX_BLOCK_RANGE) - 1,
+  };
 };
 
 // ============================================
@@ -71,6 +88,11 @@ export const getLatestHeight = async (options?: AztecIndexerRequestOptions): Pro
   );
 };
 
+export const getLatestHeightStrict = async (options?: AztecIndexerRequestOptions): Promise<LatestHeightResponse> => {
+  logDebug('Fetching latest height (strict)');
+  return client.get<LatestHeightResponse>('/l2/latest-height', null, options);
+};
+
 /**
  * Get latest block
  *
@@ -94,6 +116,11 @@ export const getLatestBlock = async (options?: AztecIndexerRequestOptions): Prom
   );
 };
 
+export const getLatestBlockStrict = async (options?: AztecIndexerRequestOptions): Promise<AztecBlock> => {
+  logDebug('Fetching latest block (strict)');
+  return client.get<AztecBlock>('/l2/blocks/latest', null, options);
+};
+
 /**
  * Get list of blocks with pagination
  *
@@ -111,11 +138,21 @@ export const getBlocks = async (
   options?: AztecIndexerRequestOptions,
 ): Promise<AztecBlock[]> => {
   logDebug(`Fetching blocks with params: ${JSON.stringify(params)}`);
+  const normalizedParams = normalizeBlockQueryParams(params);
   return safeRequest(
-    () => client.get<AztecBlock[]>('/l2/blocks', params as client.QueryParams | null, options),
+    () => client.get<AztecBlock[]>('/l2/blocks', normalizedParams as client.QueryParams | null, options),
     [],
     'Failed to fetch blocks',
   );
+};
+
+export const getBlocksStrict = async (
+  params?: BlocksQueryParams,
+  options?: AztecIndexerRequestOptions,
+): Promise<AztecBlock[]> => {
+  const normalizedParams = normalizeBlockQueryParams(params);
+  logDebug(`Fetching blocks (strict) with params: ${JSON.stringify(normalizedParams)}`);
+  return client.get<AztecBlock[]>('/l2/blocks', normalizedParams as client.QueryParams | null, options);
 };
 
 /**
@@ -145,6 +182,14 @@ export const getBlockByHeight = async (
   );
 };
 
+export const getBlockByHeightStrict = async (
+  height: number,
+  options?: AztecIndexerRequestOptions,
+): Promise<AztecBlock> => {
+  logDebug(`Fetching block at height ${height} (strict)`);
+  return client.get<AztecBlock>(`/l2/blocks/${height}`, null, options);
+};
+
 /**
  * Get block by hash
  *
@@ -167,6 +212,28 @@ export const getBlockByHash = async (
     null,
     `Failed to fetch block with hash ${hash}`,
   );
+};
+
+export const getUiBlocks = async (
+  params?: BlocksQueryParams,
+  options?: AztecIndexerRequestOptions,
+): Promise<UiBlockTableItem[]> => {
+  const normalizedParams = normalizeBlockQueryParams(params);
+  logDebug(`Fetching UI blocks with params: ${JSON.stringify(normalizedParams)}`);
+  return safeRequest(
+    () => client.get<UiBlockTableItem[]>('/l2/ui/blocks-for-table', normalizedParams as client.QueryParams | null, options),
+    [],
+    'Failed to fetch UI blocks',
+  );
+};
+
+export const getUiBlocksStrict = async (
+  params?: BlocksQueryParams,
+  options?: AztecIndexerRequestOptions,
+): Promise<UiBlockTableItem[]> => {
+  const normalizedParams = normalizeBlockQueryParams(params);
+  logDebug(`Fetching UI blocks (strict) with params: ${JSON.stringify(normalizedParams)}`);
+  return client.get<UiBlockTableItem[]>('/l2/ui/blocks-for-table', normalizedParams as client.QueryParams | null, options);
 };
 
 // ============================================
