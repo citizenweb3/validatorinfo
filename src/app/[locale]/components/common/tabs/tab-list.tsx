@@ -26,7 +26,7 @@ const TabList: FC<OwnProps> = ({ page, tabs }) => {
   const highlight = hoverTarget === 'tabs' ? 'outline outline-2 outline-dottedLine outline-offset-2' : 'outline-0';
 
   return (
-    <div className={`relative mr-6 flex flex-row space-x-12 pb-1 font-handjet sm:space-x-10 md:space-x-4 ${highlight}`}>
+    <div className={`relative mr-6 flex flex-row gap-1 overflow-x-auto pb-1 font-handjet sm:gap-3 md:gap-4 ${highlight}`}>
       {tabs.map((item) => (
         <TabListItem page={page} key={item.href} item={item} />
       ))}
