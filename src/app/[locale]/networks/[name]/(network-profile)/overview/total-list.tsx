@@ -6,7 +6,9 @@ import Tooltip from '@/components/common/tooltip';
 import aztecContractService from '@/services/aztec-contracts-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
+import { getLatestFinalizedBlock } from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
 import formatCash from '@/utils/format-cash';
+import { getAztecBlockHeight } from '@/utils/aztec';
 import Link from 'next/link';
 
 interface OwnProps {
@@ -20,8 +22,6 @@ interface AztecMetricsProps {
 const AztecTxCard: FC = async () => {
   const t = await getTranslations('NetworkPassport');
   const totalTxs = await aztecIndexer.getTotalTxEffects();
-
-  console.log(`total txs - ${totalTxs}`);
 
   return (
     <MetricsCardItem
@@ -46,7 +46,8 @@ const AztecTxCardLoading: FC = () => {
 
 const AztecBlocksSlotsEpochs: FC<AztecMetricsProps> = async ({ chainName }) => {
   const t = await getTranslations('NetworkPassport');
-  const totalBlocks = await aztecIndexer.getLatestHeight({ cache: 'no-store' });
+  const latestFinalizedBlock = await getLatestFinalizedBlock().catch(() => null);
+  const totalBlocks = latestFinalizedBlock ? getAztecBlockHeight(latestFinalizedBlock.height) : null;
   const totalSlots = await aztecContractService.getLatestSlot(chainName);
   const totalEpochs = await aztecContractService.getLatestEpoch(chainName);
 

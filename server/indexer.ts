@@ -119,6 +119,7 @@ const runServer = async () => {
     { name: 'check-nodes-health', schedule: timers.everyHour },
     { name: 'update-chain-rewards', schedule: timers.everyHour },
     { name: 'update-twitter-followers-amount', schedule: timers.everyDay },
+    { name: 'update-community-members', schedule: timers.everyDay },
     { name: 'update-validators-aztec-logos', schedule: timers.everyHour },
     { name: 'sync-aztec-committee', schedule: timers.every10mins },
     { name: 'update-aztec-l1-contracts', schedule: timers.every6hours },

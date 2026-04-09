@@ -325,6 +325,9 @@
     "followers": "Seguidores",
     "followers tooltip": "Quantidade de seguidores no Twitter (X)",
     "members": "Membros",
+    "under development": "Em Desenvolvimento",
+    "believers tooltip": "Esta métrica está em desenvolvimento",
+    "members tooltip no data": "Dados da comunidade não disponíveis",
     "Transaction Volume": "Volume de transações + MAU",
     "chart unavailable": "Os dados do volume de transações estão indisponíveis no momento. As métricas ao vivo retornarão assim que a manutenção for concluída.",
     "distribution map": "Mapa de Distribuição"
@@ -1330,6 +1333,7 @@
     "blobs hash": "Hash de Blobs",
     "in hash": "Hash de Entrada",
     "out hash": "Hash de Saída",
+    "sponge blob hash": "Hash Sponge Blob",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"

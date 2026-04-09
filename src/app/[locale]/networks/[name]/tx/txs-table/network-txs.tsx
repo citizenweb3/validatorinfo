@@ -4,7 +4,7 @@ import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { PagesProps } from '@/types';
 import NetworkTxsList from '@/app/networks/[name]/tx/txs-table/network-txs-list';
-import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import { isAztecChainName } from '@/utils/aztec';
 
 interface OwnProps extends PagesProps {
   perPage: number;

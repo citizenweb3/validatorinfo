@@ -77,7 +77,8 @@ export interface GlobalVariables {
  */
 export interface BlockHeader {
   lastArchive: TreeState;
-  contentCommitment: ContentCommitment;
+  contentCommitment?: ContentCommitment;
+  spongeBlobHash?: HexString;
   state: BlockState;
   globalVariables: GlobalVariables;
   totalFees: string;
@@ -120,6 +121,7 @@ export interface AztecBlock {
  */
 export interface BlocksQueryParams {
   from?: number; // Start from block height
+  to?: number; // End at block height (inclusive)
   limit?: number; // Max number of results
   [key: string]: string | number | boolean | undefined;
 }
@@ -404,6 +406,18 @@ export interface UiTxEffectTableItem {
   txHash: HexString;
   transactionFee: number | string;
   timestamp: number;
+}
+
+/**
+ * UI: Lightweight block for table display
+ * Response from /l2/ui/blocks-for-table
+ */
+export interface UiBlockTableItem {
+  blockHash: HexString;
+  height: number | string;
+  timestamp: number;
+  txEffectsLength: number;
+  blockStatus: number;
 }
 
 /**
