@@ -40,7 +40,7 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
         <TabList page="AboutPage" tabs={aboutTabs} />
       </PageHeaderVisibilityWrapper>
       <RichPageTitle>
-        <div className="m-4">
+        <div className="mx-4 mt-4 md:m-4">
           {t.rich('title', {
             validatorInfoLink: (chunks) => <TextLink content={chunks} href="/" withCursor={true} />,
             validatorsAndMiningPoolsLink: (chunks) => <TextLink content={chunks} href="/validators" withCursor={true} />,
@@ -49,7 +49,7 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
       </RichPageTitle>
 
       <div>
-        <div className="m-4 w-2/3 whitespace-pre-line pt-2 text-base">
+        <div className="m-4 w-full md:w-2/3 whitespace-pre-line pt-2 text-base">
           {t.rich('description', {
             homeLink: (chunks) => <TextLink content={chunks} href="/" />,
             citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/" target="_blank" />,
@@ -62,7 +62,7 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
             ),
           })}
         </div>
-        <div className="flex flex-row space-x-32">
+        <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-32">
           <div>
             <OurToolsModal />
           </div>
@@ -70,7 +70,7 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
             <OurManifestoModal />
           </div>
         </div>
-        <div className="relative mt-9 h-10 bg-bgSt">
+        <div className="hidden md:relative md:mt-9 md:h-10 md:bg-bgSt md:block">
           <Image
             src="/img/icons/green-man.png"
             alt="Pixelated, 90s game-style character, robin hood styled, explaining about validatorinfo.com"
