@@ -18,28 +18,32 @@ const OurManifestoModal = () => {
           {t('Our Manifesto')}
         </RoundedButton>
       </div>
-      <div className="hidden md:block">
-        <BaseModal
-          title={t('Our Manifesto')}
-          isRelative={false}
-          opened={isToolsOpened}
-          onClose={() => setIsToolsOpened(false)}
-          className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-        >
-          <div className="w-max max-w-[80vw] whitespace-pre-line p-10 pt-5 text-base">{t('Manifesto')}</div>
-        </BaseModal>
-      </div>
-      <div className="block md:hidden">
-        <BaseModalMobile
-          title={t('Our Manifesto')}
-          isRelative={false}
-          opened={isToolsOpened}
-          onClose={() => setIsToolsOpened(false)}
-          className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
-        >
-          <div className="max-w-[90vw] whitespace-pre-line p-4 pt-3 text-base">{t('Manifesto')}</div>
-        </BaseModalMobile>
-      </div>
+      {isToolsOpened && (
+        <div className="hidden md:block">
+          <BaseModal
+            title={t('Our Manifesto')}
+            isRelative={false}
+            opened={isToolsOpened}
+            onClose={() => setIsToolsOpened(false)}
+            className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          >
+            <div className="w-max max-w-[80vw] whitespace-pre-line p-10 pt-5 text-base">{t('Manifesto')}</div>
+          </BaseModal>
+        </div>
+      )}
+      {isToolsOpened && (
+        <div className="block md:hidden">
+          <BaseModalMobile
+            title={t('Our Manifesto')}
+            isRelative={false}
+            opened={isToolsOpened}
+            onClose={() => setIsToolsOpened(false)}
+            className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
+          >
+            <div className="max-w-[90vw] whitespace-pre-line p-4 pt-3 text-base">{t('Manifesto')}</div>
+          </BaseModalMobile>
+        </div>
+      )}
     </>
   );
 };
