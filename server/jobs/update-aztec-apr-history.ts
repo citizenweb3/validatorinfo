@@ -1,10 +1,15 @@
 import db, { eventsClient } from '@/db';
 import logger from '@/logger';
-import aztecIndexer from '@/services/aztec-indexer-api';
+import { AztecBlock } from '@/services/aztec-indexer-api';
 import { countBlocksForDay } from '@/server/tools/chains/aztec/utils/count-blocks-for-day';
+import {
+  AztecIndexerUnavailableError,
+  getLatestFinalizedBlock,
+} from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
 import { getRewardConfig } from '@/server/tools/chains/aztec/utils/get-reward-config';
 import { getTotalStakedForDay } from '@/server/tools/chains/aztec/utils/get-total-staked-for-day';
 import { syncAprToTokenomics } from '@/server/tools/chains/aztec/utils/sync-apr-to-tokenomics';
+import { getAztecBlockHeight, getAztecTimestampMs, getUtcDayStart } from '@/utils/aztec';
 
 const { logInfo, logError, logWarn } = logger('update-aztec-apr-history');
 
@@ -39,12 +44,58 @@ const getStartDate = async (chainId: number): Promise<Date> => {
   return startDate;
 };
 
+const getLatestFinalizedDay = (latestFinalizedBlock: AztecBlock): Date => {
+  return getUtcDayStart(getAztecTimestampMs(latestFinalizedBlock.header.globalVariables.timestamp));
+};
+
+const writeIndexerUnavailableAprRecord = async (
+  chainId: number,
+  recordDate: Date,
+  latestFinalizedBlock: AztecBlock,
+): Promise<number> => {
+  const prevRecord = await db.chainAprHistory.findFirst({
+    where: { chainId, date: { lt: recordDate } },
+    orderBy: { date: 'desc' },
+  });
+
+  const latestFinalizedDay = getLatestFinalizedDay(latestFinalizedBlock);
+  const fallbackApr = prevRecord?.apr ?? 0;
+
+  await db.chainAprHistory.upsert({
+    where: { chainId_date: { chainId, date: recordDate } },
+    create: {
+      chainId,
+      date: recordDate,
+      apr: fallbackApr,
+      blocksCount: 0,
+      rewards: '0',
+      totalStaked: prevRecord?.totalStaked ?? '0',
+      metadata: {
+        indexerUnavailable: true,
+        latestFinalizedDate: latestFinalizedDay.toISOString().split('T')[0],
+      },
+    },
+    update: {
+      apr: fallbackApr,
+      blocksCount: 0,
+      rewards: '0',
+      totalStaked: prevRecord?.totalStaked ?? '0',
+      metadata: {
+        indexerUnavailable: true,
+        latestFinalizedDate: latestFinalizedDay.toISOString().split('T')[0],
+      },
+    },
+  });
+
+  return fallbackApr;
+};
+
 const recalculateZeroRecords = async (
   chainId: number,
   chainName: string,
   rewardConfig: { blockReward: bigint; sequencerBps: bigint },
+  latestFinalizedBlock: AztecBlock,
 ) => {
-  // Find records with blocksCount = 0 or null (written when indexer was down)
   const zeroRecords = await db.chainAprHistory.findMany({
     where: {
       chainId,
@@ -63,22 +114,20 @@ const recalculateZeroRecords = async (
 
   logInfo(`${chainName}: Found ${zeroRecords.length} zero-block records to recalculate`);
 
-  // Check if indexer is available before attempting recalculation
-  const latestHeight = await aztecIndexer.getLatestHeight();
-  if (latestHeight === 0) {
-    logWarn(`${chainName}: Indexer unavailable, skipping recalculation`);
-    return;
-  }
-
+  const latestFinalizedDay = getLatestFinalizedDay(latestFinalizedBlock);
   let recalculated = 0;
 
   for (const record of zeroRecords) {
     const dateKey = record.date.toISOString().split('T')[0];
 
-    try {
-      const blocksCount = await countBlocksForDay(record.date);
+    if (record.date.getTime() > latestFinalizedDay.getTime()) {
+      logWarn(`${chainName}: Latest finalized Aztec block only covers ${latestFinalizedDay.toISOString().split('T')[0]}, stopping recalculation`);
+      break;
+    }
 
-      // Skip if still 0 (day genuinely had no blocks)
+    try {
+      const blocksCount = await countBlocksForDay(record.date, { latestFinalizedBlock });
+
       if (blocksCount === 0) {
         logInfo(`${chainName}: ${dateKey} - confirmed 0 blocks, skipping`);
         continue;
@@ -109,8 +158,13 @@ const recalculateZeroRecords = async (
 
       recalculated++;
       logInfo(`${chainName}: ${dateKey} - recalculated: blocks=${blocksCount}, apr=${(apr * 100).toFixed(2)}%`);
-    } catch (err: any) {
-      logError(`${chainName}: Error recalculating ${dateKey}: ${err.message}`);
+    } catch (error) {
+      if (error instanceof AztecIndexerUnavailableError) {
+        logWarn(`${chainName}: ${error.message}, stopping recalculation`);
+        break;
+      }
+
+      logError(`${chainName}: Error recalculating ${dateKey}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
@@ -132,11 +186,14 @@ const updateAztecAprHistory = async () => {
       }
 
       const rewardConfig = await getRewardConfig(chainName);
+      const latestFinalizedBlock = await getLatestFinalizedBlock();
+      const latestFinalizedHeight = getAztecBlockHeight(latestFinalizedBlock.height);
+      const latestFinalizedDay = getLatestFinalizedDay(latestFinalizedBlock);
 
       logInfo(`${chainName}: blockReward=${rewardConfig.blockReward}, sequencerBps=${rewardConfig.sequencerBps}`);
+      logInfo(`${chainName}: latest finalized height=${latestFinalizedHeight}, latest finalized day=${latestFinalizedDay.toISOString().split('T')[0]}`);
 
-      // Recalculate previously failed records before processing new days
-      await recalculateZeroRecords(dbChain.id, chainName, rewardConfig);
+      await recalculateZeroRecords(dbChain.id, chainName, rewardConfig, latestFinalizedBlock);
 
       const startDate = await getStartDate(dbChain.id);
       const endDate = new Date();
@@ -155,48 +212,17 @@ const updateAztecAprHistory = async () => {
 
       while (currentDate <= endDate) {
         const dateKey = currentDate.toISOString().split('T')[0];
+        const recordDate = new Date(`${dateKey}T00:00:00.000Z`);
 
         try {
-          const recordDate = new Date(currentDate.toISOString().split('T')[0] + 'T00:00:00.000Z');
-          const blocksCount = await countBlocksForDay(currentDate);
-
-          // Indexer down: carry forward previous day's APR, keep blocksCount=0 for later recalculation
-          if (blocksCount === 0) {
-            const latestHeight = await aztecIndexer.getLatestHeight();
-            if (latestHeight === 0) {
-              const prevRecord = await db.chainAprHistory.findFirst({
-                where: { chainId: dbChain.id, date: { lt: recordDate } },
-                orderBy: { date: 'desc' },
-              });
-
-              const fallbackApr = prevRecord?.apr ?? 0;
-
-              await db.chainAprHistory.upsert({
-                where: { chainId_date: { chainId: dbChain.id, date: recordDate } },
-                create: {
-                  chainId: dbChain.id,
-                  date: recordDate,
-                  apr: fallbackApr,
-                  blocksCount: 0,
-                  rewards: '0',
-                  totalStaked: prevRecord?.totalStaked ?? '0',
-                  metadata: { indexerDown: true },
-                },
-                update: {
-                  apr: fallbackApr,
-                  blocksCount: 0,
-                  rewards: '0',
-                  totalStaked: prevRecord?.totalStaked ?? '0',
-                  metadata: { indexerDown: true },
-                },
-              });
-
-              logWarn(`${chainName}: ${dateKey} - indexer down, using previous APR=${(fallbackApr * 100).toFixed(2)}%`);
-              currentDate.setUTCDate(currentDate.getUTCDate() + 1);
-              continue;
-            }
+          if (recordDate.getTime() > latestFinalizedDay.getTime()) {
+            const fallbackApr = await writeIndexerUnavailableAprRecord(dbChain.id, recordDate, latestFinalizedBlock);
+            logWarn(`${chainName}: ${dateKey} - finalized indexer data stops at ${latestFinalizedDay.toISOString().split('T')[0]}, using previous APR=${(fallbackApr * 100).toFixed(2)}%`);
+            currentDate.setUTCDate(currentDate.getUTCDate() + 1);
+            continue;
           }
 
+          const blocksCount = await countBlocksForDay(currentDate, { latestFinalizedBlock });
           const totalStaked = await getTotalStakedForDay(dbChain.id, currentDate, 'reward-earning');
           const rewards = BigInt(blocksCount) * rewardConfig.blockReward * rewardConfig.sequencerBps / BPS_DIVISOR;
 
@@ -228,18 +254,22 @@ const updateAztecAprHistory = async () => {
           });
 
           logInfo(`${chainName}: ${dateKey} - blocks=${blocksCount}, apr=${(apr * 100).toFixed(2)}%`);
-        } catch (dayError: any) {
-          logError(`${chainName}: Error processing ${dateKey}: ${dayError.message}`);
+        } catch (error) {
+          if (error instanceof AztecIndexerUnavailableError) {
+            const fallbackApr = await writeIndexerUnavailableAprRecord(dbChain.id, recordDate, latestFinalizedBlock);
+            logWarn(`${chainName}: ${dateKey} - ${error.message}, using previous APR=${(fallbackApr * 100).toFixed(2)}%`);
+          } else {
+            logError(`${chainName}: Error processing ${dateKey}: ${error instanceof Error ? error.message : String(error)}`);
+          }
         }
 
         currentDate.setUTCDate(currentDate.getUTCDate() + 1);
       }
 
       logInfo(`${chainName}: ✓ APR history update completed`);
-
       await syncAprToTokenomics(dbChain.id, chainName);
-    } catch (e: any) {
-      logError(`Error processing ${chainName}: ${e.message}`);
+    } catch (error) {
+      logError(`Error processing ${chainName}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 

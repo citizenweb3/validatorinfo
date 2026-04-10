@@ -18,11 +18,12 @@ export type {
   TotalTxEffectsResponse,
   TxEffectsLast24hResponse,
   TotalContractsResponse,
-  TotalContractsLast24hResponse,
-  AverageFeeResponse,
-  AverageBlockTimeResponse,
-  // Block structure types
-  TreeState,
+    TotalContractsLast24hResponse,
+    AverageFeeResponse,
+    AverageBlockTimeResponse,
+    UiBlockTableItem,
+    // Block structure types
+    TreeState,
   BufferData,
   ContentCommitment,
   PartialState,
@@ -49,14 +50,26 @@ export const aztecIndexer = {
   // ========== BLOCKS ==========
   /** Get latest block height */
   getLatestHeight: endpoints.getLatestHeight,
+  /** Get latest block height and throw on transport/indexer errors */
+  getLatestHeightStrict: endpoints.getLatestHeightStrict,
   /** Get latest block details */
   getLatestBlock: endpoints.getLatestBlock,
+  /** Get latest block details and throw on transport/indexer errors */
+  getLatestBlockStrict: endpoints.getLatestBlockStrict,
   /** Get list of blocks with pagination */
   getBlocks: endpoints.getBlocks,
+  /** Get list of blocks and throw on transport/indexer errors */
+  getBlocksStrict: endpoints.getBlocksStrict,
   /** Get block by height */
   getBlockByHeight: endpoints.getBlockByHeight,
+  /** Get block by height and throw on transport/indexer errors */
+  getBlockByHeightStrict: endpoints.getBlockByHeightStrict,
   /** Get block by hash */
   getBlockByHash: endpoints.getBlockByHash,
+  /** Get lightweight blocks for table display */
+  getUiBlocks: endpoints.getUiBlocks,
+  /** Get lightweight blocks for table display and throw on transport/indexer errors */
+  getUiBlocksStrict: endpoints.getUiBlocksStrict,
 
   // ========== CONTRACTS ==========
   /** Get all contract classes */

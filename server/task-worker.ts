@@ -43,6 +43,7 @@ import updateProposalParams from '@/server/jobs/update-proposal-params';
 import updateRewardAddress from '@/server/jobs/update-reward-address';
 import updateSlashingInfos from '@/server/jobs/update-slashing-infos';
 import updateStakingPageJson from '@/server/jobs/update-staking-page-json';
+import updateCommunityMembers from '@/server/jobs/update-community-members';
 import updateTwitterFollowersAmount from '@/server/jobs/update-twitter-followers-amount';
 import updateUnbondingTokens from '@/server/jobs/update-unbonding-tokens';
 import updateProposalTexts from '@/server/jobs/update-proposal-texts';
@@ -162,6 +163,9 @@ async function runTask() {
         break;
       case 'update-twitter-followers-amount':
         await updateTwitterFollowersAmount(chains);
+        break;
+      case 'update-community-members':
+        await updateCommunityMembers(chains);
         break;
       case 'sync-aztec-events':
         await syncAztecEvents();

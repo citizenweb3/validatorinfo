@@ -7,6 +7,7 @@ import RoundedButton from '@/components/common/rounded-button';
 import Tooltip from '@/components/common/tooltip';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
 import { ChainWithParams } from '@/services/chain-service';
+import { getAztecBlockHeight, getAztecFinalizationLabel, getAztecTimestampMs } from '@/utils/aztec';
 
 interface OwnProps {
   chain: ChainWithParams | null;
@@ -31,9 +32,9 @@ const BlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
     notFound();
   }
 
-  const blockHeight = typeof block.height === 'string' ? parseInt(block.height, 10) : block.height;
+  const blockHeight = getAztecBlockHeight(block.height);
 
-  const timestamp = new Date(block.header.globalVariables.timestamp);
+  const timestamp = new Date(getAztecTimestampMs(block.header.globalVariables.timestamp));
   const formattedTimestamp = timestamp
     .toISOString()
     .replace('T', ' ')
@@ -41,7 +42,7 @@ const BlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
 
   const txCount = block.body.txEffects.length;
 
-  const finalizationStatus = block.finalizationStatus === 3 ? 'finalized' : 'pending';
+  const finalizationStatus = getAztecFinalizationLabel(block.finalizationStatus);
 
   const blockData = [
     {

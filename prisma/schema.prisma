@@ -104,6 +104,8 @@ model Chain {
   shortDescription String?  @map("short_description")
   description      String?
   twitterFollowers Int?     @map("twitter_followers")
+  telegramMembers  Int?     @map("telegram_members")
+  discordMembers   Int?     @map("discord_members")
   tags             String[] @default([])
   supported        Boolean  @default(true) @map("supported")
 

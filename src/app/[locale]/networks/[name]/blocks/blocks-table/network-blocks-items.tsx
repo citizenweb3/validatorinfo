@@ -5,6 +5,7 @@ import { FC } from 'react';
 import BaseTableRow from '@/components/common/table/base-table-row';
 import BaseTableCell from '@/components/common/table/base-table-cell';
 import icons from '@/components/icons';
+import { getAztecFinalizationLabel } from '@/utils/aztec';
 import cutHash from '@/utils/cut-hash';
 
 interface OwnProps {
@@ -19,11 +20,11 @@ interface OwnProps {
 
 const NetworkBlocksItem: FC<OwnProps> = ({ name, item }) => {
   const getStatusIcon = () => {
-    return item.finalizationStatus === 0 ? icons.YellowSquareIcon : icons.GreenSquareIcon;
+    return getAztecFinalizationLabel(item.finalizationStatus) === 'pending' ? icons.YellowSquareIcon : icons.GreenSquareIcon;
   };
 
   const getStatus = () => {
-    return item.finalizationStatus === 0 ? 'Not Finalized' : 'Finalized';
+    return getAztecFinalizationLabel(item.finalizationStatus) === 'pending' ? 'Not Finalized' : 'Finalized';
   };
 
   const link = `/networks/${name}/blocks/${item.hash}`;

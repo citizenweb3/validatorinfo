@@ -69,6 +69,8 @@ export interface AddChainProps {
   peers?: string[];
   seeds?: string[];
   tags?: string[];
+  telegramUrl?: string;
+  discordInviteCode?: string;
 }
 
 export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;

@@ -112,19 +112,20 @@ const fetchWithTimeout = async (url: string, options: RequestInit, timeoutMs: nu
 
 const safeJsonParse = async <T>(response: Response, url: string): Promise<T> => {
   const contentType = response.headers.get('content-type');
-
-  if (contentType && !contentType.includes('application/json')) {
-    const text = await response.text().catch(() => '[unable to read response]');
-    throw new Error(
-      `Failed to parse JSON response: Expected JSON, got content-type: ${contentType} (URL: ${url}, Status: ${response.status})`,
-    );
-  }
+  const responseText = await response.text().catch(() => '[unable to read response]');
 
   try {
-    const data = await response.json();
+    const data = JSON.parse(responseText);
     return data as T;
   } catch (error) {
     const errorMsg = error instanceof Error ? error.message : String(error);
+
+    if (contentType && !contentType.includes('application/json')) {
+      throw new Error(
+        `Failed to parse JSON response: Expected JSON body, got content-type: ${contentType} (URL: ${url}, Status: ${response.status}, Body: ${responseText.slice(0, 200)})`,
+      );
+    }
+
     throw new Error(`Failed to parse JSON response: ${errorMsg} (URL: ${url}, Status: ${response.status})`);
   }
 };
@@ -200,7 +201,7 @@ export const post = async <T, B = unknown>(
 
 export const healthCheck = async (): Promise<boolean> => {
   try {
-    await get('/l2/info', null, { timeout: 5000, cache: 'no-store' });
+    await get('/health', null, { timeout: 5000, cache: 'no-store' });
     return true;
   } catch {
     return false;
