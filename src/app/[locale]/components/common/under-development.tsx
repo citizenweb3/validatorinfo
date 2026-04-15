@@ -18,6 +18,7 @@ const sizeStyles = {
 const UnderDevelopment: FC<UnderDevelopmentProps> = ({ title, description, size = 'md', className }) => {
   return (
     <div
+      data-no-explain
       className={cn(
         'flex items-center justify-center rounded border border-[#3E3E3E] bg-[#181818]',
         sizeStyles[size],

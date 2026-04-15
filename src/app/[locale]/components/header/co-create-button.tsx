@@ -40,9 +40,9 @@ const CoCreateButton = () => {
         isRelative={false}
         opened={isModalOpen}
         onClose={handleClose}
-        className="left-1/2 top-20 -translate-x-1/2 transform"
+        className="left-1/2 top-20 w-[calc(100vw-2rem)] max-w-4xl -translate-x-1/2 transform"
       >
-      <div className="w-max max-w-[80vw] p-10 pt-5">
+      <div className="p-10 pt-5">
         <p className="mb-5 text-base">
           {t.rich('CoCreate.tagline', {
             github: (chunks) => (
@@ -99,7 +99,11 @@ const CoCreateButton = () => {
                 link: (chunks) => <TextLink href="https://etherscan.io/address/0x92aC157Fa112f716C9368548441116DC64a170F5" content={chunks} target="_blank" />,
               })}
             </ListItem>
-            <ListItem>{t('CoCreate.xmrDonations')}</ListItem>
+            <ListItem>
+              {t.rich('CoCreate.xmrDonations', {
+                link: (chunks) => <TextLink href="https://xmrchain.net/search?value=47GjmSxee12LXaCSqQGE7yY2cnzAXnrZZbgGFsL8hB5pcw5a2qyVApt5FJ2puvvqpbjE7E53Gq5bS8Xbhyzn62tj6kGMXBn" content={chunks} target="_blank" />,
+              })}
+            </ListItem>
           </ul>
         </div>
       </div>
@@ -113,9 +117,9 @@ const CoCreateButton = () => {
         type="button"
         aria-label={t('Co-Create & Support')}
         onClick={handleOpen}
-        className="group flex items-center justify-center border border-dashed border-redDottedLine bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] px-2.5 py-0.5 shadow-[0px_6px_6px_0px_black,0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25)] hover:border-solid hover:bg-bgHover active:scale-95 active:border-solid active:border-bgSt active:bg-background active:from-transparent active:to-transparent active:shadow-none"
+        className="group flex h-6 w-60 items-center justify-center border border-dashed border-redDottedLine bg-table_row px-2.5 py-0 shadow-menu-button-rest hover:border-solid hover:bg-bgHover hover:shadow-menu-button-hover active:border-solid active:border-bgSt active:bg-card active:shadow-menu-button-pressed"
       >
-        <span className="text-dottedLine text-base text-gold-glow group-active:[text-shadow:none]">
+        <span className="text-dottedLine font-sfpro text-base font-semibold leading-none text-gold-glow group-active:text-shadow-none">
           {t('Co-Create & Support')}
         </span>
       </button>

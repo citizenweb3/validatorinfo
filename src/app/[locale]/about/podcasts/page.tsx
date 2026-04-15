@@ -9,7 +9,6 @@ import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
-import Story from '@/components/story';
 import { Locale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
 import TextLink from '@/components/common/text-link';
@@ -24,7 +23,6 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <Story src="podcast" alt="Pixelated, 90s game-style characters recording the Citizen Web3 podcast together" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <RichPageTitle>
         <div className="m-4">

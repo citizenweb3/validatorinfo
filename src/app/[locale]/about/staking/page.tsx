@@ -7,7 +7,6 @@ import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
-import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
 
@@ -19,7 +18,6 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <Story src="staking" alt="Pixelated, 90s game-style characters stake on validator and mining pool rewards" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <RichPageTitle>
         <div className="m-4">

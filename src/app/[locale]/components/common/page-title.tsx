@@ -9,7 +9,7 @@ interface OwnProps {
 
 const PageTitle: FC<OwnProps> = ({ prefix, suffix, text }) => {
   return (
-    <h1 className="mt-4 flex w-fit border-b border-bgSt px-4 font-handjet text-4xl text-highlight">
+    <h1 className="mt-4 flex w-fit border-b border-bgSt px-4 font-handjet text-7xl text-highlight sm:text-5xl md:text-4xl">
       <span className="mr-3">{prefix}</span>
       {text}
       <span className="ml-2">{suffix}</span>

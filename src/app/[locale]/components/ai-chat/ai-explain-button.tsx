@@ -32,7 +32,7 @@ const AiExplainButton: FC<OwnProps> = ({ type, hash }) => {
     <button
       type="button"
       onClick={handleClick}
-      className="flex items-center gap-1.5 border border-bgSt bg-background px-3 py-1.5 text-xs text-white transition-colors hover:bg-bgHover hover:text-highlight [border-image:linear-gradient(to_bottom,#4FB848,transparent)_1]"
+      className="flex items-center gap-1.5 border border-bgSt border-l-secondary bg-background px-3 py-1.5 text-xs text-white transition-colors hover:bg-bgHover hover:text-highlight"
       aria-label={t('Explain with AI')}
     >
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

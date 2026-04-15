@@ -1,12 +1,10 @@
 import { getTranslations } from 'next-intl/server';
 
 import SimpleValidators from '@/app/validators/simple-validators/simple-validators';
-import CollapsePageHeader from '@/components/common/collapse-page-header';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
-import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
@@ -31,12 +29,6 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
   return (
     <div>
       <PageHeaderVisibilityWrapper>
-        <CollapsePageHeader>
-          <Story
-            src="validators"
-            alt="Pixelated, 90s game-style characters carrying gold to and out to represent total value secured"
-          />
-        </CollapsePageHeader>
         <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />

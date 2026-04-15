@@ -12,20 +12,22 @@ interface OwnProps {
   isScroll?: boolean;
 }
 
-const SearchItem: FC<OwnProps> = ({ link, name, isSelected, icon, onClick, isScroll=true }) => {
+const SearchItem: FC<OwnProps> = ({ link, name, isSelected, icon, onClick, isScroll = true }) => {
   return (
     <Link
       href={link}
       onClick={onClick}
-      className={`${isSelected ? 'bg-bgHover' : ''} flex cursor-pointer items-center justify-between rounded-md px-4 py-2 hover:bg-bgHover`}
+      className={`${isSelected ? 'bg-bgHover' : ''} flex cursor-pointer items-center justify-between rounded-md px-3 py-2 hover:bg-bgHover md:px-4 md:py-2`}
       scroll={isScroll}
     >
-      <FallbackImage src={icon ?? icons.AvatarIcon}
-                     alt="Validator"
-                     width={40}
-                     height={40}
-                     className="md:h-7 md:w-7 sm:h-12 sm:w-12 h-20 w-20 rounded-full my-4 sm:my-1 md:my-0" />
-      <div className="ml-4 flex-grow md:text-base sm:text-2xl text-4xl">{name}</div>
+      <FallbackImage
+        src={icon ?? icons.AvatarIcon}
+        alt="Validator"
+        width={40}
+        height={40}
+        className="my-1 h-8 w-8 rounded-full object-contain md:my-0 md:h-7 md:w-7"
+      />
+      <div className="ml-3 flex-grow text-base md:ml-4">{name}</div>
     </Link>
   );
 };

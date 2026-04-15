@@ -5,9 +5,7 @@ import Link from 'next/link';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
-import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
-import SpreadModal from '@/app/about/modals/spread-modal';
 import SubDescription from '@/components/sub-description';
 
 export const dynamic = 'force-dynamic';
@@ -20,7 +18,6 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const size = 'h-24 w-24 min-w-24 min-h-24';
   return (
     <div>
-      <Story src="contacts" alt="Pixelated, 90s game-style characters giving contact info to validatorinfo.com logo" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <PageTitle text={t('Contacts.title')} />
       <SubDescription text={t('Contacts.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />

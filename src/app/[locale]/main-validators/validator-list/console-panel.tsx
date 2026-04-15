@@ -181,6 +181,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
               {t.rich('Validators nodes and mining pools.title', {
                 validatorsLink: (chunks) => <TextLink content={chunks} href="/validators" />,
                 nodesLink: (chunks) => <TextLink content={chunks} href="/nodes" />,
+                miningPoolsLink: (chunks) => <TextLink content={chunks} href="/mining-pools" />,
               })}
             </h3>
             <div className="font-sfpro text-sm">{t('Validators nodes and mining pools.text')}</div>
@@ -270,7 +271,7 @@ const ConsolePanel: FC<OwnProps> = ({ chainName }) => {
           </div>
         </div>
 
-        <div className="absolute left-[50%] top-[57%] z-[10] -translate-x-1/2">
+        <div className="absolute left-[50%] top-[52%] z-[10] -translate-x-1/2">
           <MenuOverlay
             visible={menuVisible}
             onClose={onMenuClose}

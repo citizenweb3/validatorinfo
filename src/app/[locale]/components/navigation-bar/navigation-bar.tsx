@@ -1,20 +1,32 @@
 'use client';
 
+import Image from 'next/image';
 import { FC, useCallback, useState } from 'react';
 
 import { TabOptions } from '@/components/common/tabs/tabs-data';
 import icons from '@/components/icons';
-import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
 import { useWindowEvent } from '@/hooks/useWindowEvent';
 
-export const mainTabs: TabOptions[] = [
+import NavigationBarItem from './navigation-bar-item';
+
+export const homeTabs: TabOptions[] = [
+  { name: 'Home', href: '/', icon: icons.GeneralIcon, iconHovered: icons.GeneralIconHovered },
+  { name: 'You', href: '/profile', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered },
+  { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
+  { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
+  { name: 'Play', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
+];
+
+export const networkTabs: TabOptions[] = [
+  { name: 'Networks', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
   { name: 'Validators', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
   { name: 'Nodes', href: '/nodes', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
-  { name: 'Networks', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
+  { name: 'Mining Pools', href: '/mining-pools', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
   { name: 'Ecosystems', href: '/ecosystems', icon: icons.EcosystemsIcon, iconHovered: icons.EcosystemsIconHovered },
 ];
 
-export const additionalTabs: TabOptions[] = [
+export const toolsTabs: TabOptions[] = [
+  { name: 'Rumor', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
   { name: 'Analyze', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
   {
     name: 'Calculate',
@@ -28,13 +40,7 @@ export const additionalTabs: TabOptions[] = [
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
-  { name: 'Rumors', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-];
-
-export const aboutTabs = [
-  { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
-  { name: 'Library', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
-  { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
+  { name: 'Explain', href: '/explain', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
 ];
 
 interface OwnProps {
@@ -54,9 +60,9 @@ const NavigationBar: FC<OwnProps> = ({ isGameMenuMode = false, activeSection = 0
   useWindowEvent<string | null>('section:hover', onSectionHover);
 
   const isItemActive = useCallback(
-    (_tab: TabOptions, idx: number, block: 'main' | 'additional' | 'about'): boolean => {
+    (_tab: TabOptions, idx: number, block: 'home' | 'network' | 'tools'): boolean => {
       if (!isGameMenuMode) return false;
-      const secIdx = block === 'main' ? 0 : block === 'additional' ? 1 : 2;
+      const secIdx = block === 'home' ? 0 : block === 'network' ? 1 : 2;
       return secIdx === activeSection && idx === activeItem;
     },
     [isGameMenuMode, activeSection, activeItem],
@@ -64,18 +70,34 @@ const NavigationBar: FC<OwnProps> = ({ isGameMenuMode = false, activeSection = 0
 
   const highlightNavBar =
     hoverTarget === 'navbar' ? 'outline outline-2 outline-dottedLine outline-offset-2 duration-0' : 'outline-0';
-
   const highlightArrow =
     hoverTarget === 'navbar-arrow' ? 'outline outline-2 outline-dottedLine outline-offset-2' : 'outline-0';
+
+  const renderGroup = (tabs: TabOptions[], ariaLabel: string, block: 'home' | 'network' | 'tools') => (
+    <div
+      className={`relative space-y-2.5 ${isOpened ? 'w-navigation-open' : 'w-16'}`}
+      aria-label={ariaLabel}
+      role="group"
+    >
+      {tabs.map((item, index) => (
+        <NavigationBarItem
+          key={item.name}
+          item={item}
+          isOpened={isOpened}
+          highlighted={isItemActive(item, index, block)}
+        />
+      ))}
+    </div>
+  );
 
   return (
     <div
       tabIndex={-1}
-      className={`${isOpened ? 'w-[15.5rem]' : 'w-10'} relative mt-2 hidden h-full border-transparent pt-6 font-handjet transition-all duration-300 md:block ${highlightNavBar}`}
+      className={`${isOpened ? 'w-navigation-open' : 'w-10'} relative mt-2 hidden h-full border-transparent pt-2 font-handjet transition-all duration-300 md:block ${highlightNavBar}`}
     >
       <div
-        className={`${isGameMenuMode ? 'hidden' : ''} group absolute -right-6 top-0 z-20 h-full w-6 cursor-pointer from-transparent to-bgSt hover:bg-gradient-to-b`}
-        onClick={() => setIsOpened(!isOpened)}
+        className={`${isGameMenuMode ? 'hidden' : ''} group absolute -right-7 top-0 z-20 h-full w-6 cursor-pointer from-transparent to-bgSt hover:bg-gradient-to-b`}
+        onClick={() => setIsOpened((prev) => !prev)}
         aria-hidden={isGameMenuMode}
       >
         <div
@@ -83,41 +105,25 @@ const NavigationBar: FC<OwnProps> = ({ isGameMenuMode = false, activeSection = 0
         />
       </div>
 
-      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`} aria-label="Main" role="group">
-        {mainTabs.map((item, i) => (
-          <NavigationBarItem
-            key={item.name}
-            item={item}
-            isOpened={isOpened}
-            highlighted={isItemActive(item, i, 'main')}
-          />
-        ))}
-      </div>
+      {renderGroup(homeTabs, 'Home', 'home')}
 
-      <div className="mb-5 mt-7" />
+      <div className="mb-4 mt-6" />
 
-      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`} aria-label="Additional" role="group">
-        {additionalTabs.map((item, i) => (
-          <NavigationBarItem
-            key={item.name}
-            item={item}
-            isOpened={isOpened}
-            highlighted={isItemActive(item, i, 'additional')}
-          />
-        ))}
-      </div>
+      {renderGroup(networkTabs, 'Networks', 'network')}
 
-      <div className="mb-5 mt-7" />
+      <div className="mb-4 mt-6" />
 
-      <div className={`relative space-y-2.5 ${isOpened ? 'w-[15.5rem]' : 'w-16'}`} aria-label="About" role="group">
-        {aboutTabs.map((item, i) => (
-          <NavigationBarItem
-            key={item.name}
-            item={item}
-            isOpened={isOpened}
-            highlighted={isItemActive(item, i, 'about')}
-          />
-        ))}
+      {renderGroup(toolsTabs, 'Tools', 'tools')}
+
+      <div className="mt-7 flex justify-center">
+        <Image
+          src="/img/icons/navbar/menu-avatar.png"
+          alt="validatorinfo.com logo"
+          width={106}
+          height={100}
+          className={isOpened ? 'w-28 grayscale drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]' : 'w-12 grayscale drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]'}
+          priority
+        />
       </div>
     </div>
   );

@@ -2,12 +2,10 @@ import { getTranslations } from 'next-intl/server';
 
 import Networks from '@/app/networks/networks-list/networks';
 import NetworkSupportToggle from '@/app/networks/networks-list/network-support-toggle';
-import CollapsePageHeader from '@/components/common/collapse-page-header';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
-import Story from '@/components/story';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
@@ -33,12 +31,6 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
   return (
     <div>
       <PageHeaderVisibilityWrapper>
-        <CollapsePageHeader>
-          <Story
-            src="networks"
-            alt="Pixelated, 90s game-style characters connecting web cables of web3 blockchain networks"
-          />
-        </CollapsePageHeader>
         <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />

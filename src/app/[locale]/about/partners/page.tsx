@@ -3,7 +3,6 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import PartnerItem from '@/app/about/partners/partner-item';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
-import Story from '@/components/story';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
 import TextLink from '@/components/common/text-link';
@@ -31,7 +30,6 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   return (
     <div>
-      <Story src="partners" alt="Pixelated, 90s game-style characters partner up and exchanging consensus" />
       <TabList page="AboutPage" tabs={aboutTabs} />
       <RichPageTitle>
         <div className="m-4">
