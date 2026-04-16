@@ -48,7 +48,10 @@
     "Click to logout": "Click to logout",
     "Profile": "Profile",
     "Search for a validator, pool, tx, address, network, etc": "Search for a validator, pool, tx, address, network, etc",
+    "Search": "Search",
+    "Settings": "Settings",
     "Lucky!?": "Lucky!?",
+    "Help": "Help",
     "Co-Create & Support": "Co-Create & Support",
     "CoCreate": {
       "tagline": "<github>Open-source. Ad-free. Privacy-respecting. Self-hosted!</github>. We're doing this independently - and it's staying that way. The Explorer Web3 Deserves!",
@@ -63,7 +66,7 @@
       "ghSponsorship": "<link>GH Sponsorship</link>",
       "btcDonations": "<link>BTC donations</link>",
       "ethDonations": "<link>ETH donations</link>",
-      "xmrDonations": "XMR donations"
+      "xmrDonations": "<link>XMR donations</link>"
     },
     "search": {
       "Validators": "Validators",
@@ -73,17 +76,27 @@
     }
   },
   "Navbar": {
+    "Home": "Home",
+    "You": "You",
+    "AI": "AI",
+    "About Us": "About Us",
+    "Play": "Play",
+    "Network": "Network",
     "Validators": "Validators",
     "Networks": "Networks",
-    "Metrics": "Metrics",
+    "Validator": "Validator",
+    "Nodes": "Nodes",
+    "Mining Pools": "Mining Pools",
+    "Ecosystems": "Ecosystems",
+    "Rumor": "Rumor",
+    "Analyze": "Analyze",
     "Calculate": "Calculate",
     "Compare": "Compare",
-    "Rumors": "Rumor",
-    "Analyze": "Analyze",
-    "About Us": "About Us",
+    "Explain": "Explain",
+    "Metrics": "Metrics",
     "Library": "Library",
-    "Ecosystems": "Ecosystems",
-    "Nodes": "Nodes",
+    "Global": "Global",
+    "Rumors": "Rumor",
     "mobile description": "Anon, please note that my mobile version has limited features. To enjoy all of my perks, and to login into your account, please visit my desktop version."
   },
   "Common": {
@@ -92,6 +105,48 @@
   "HomePage": {
     "title": "Web3 Blockchain Validator and Mining Pool Explorer",
     "description": "My landing page is your one-stop explorer for comparing top validators across multiple web3 blockchain networks. The table provides real-time data on validator and mining pool performance, summarized into easy to read metrics. You can sort and filter based on what matters most to you. The goal is to help you make smart staking choices by providing a clear and user-friendly overview of validator profiles across web3. The table is loaded randomly every time you visit the page. To create a permanent view, you need to connect your wallet and create a favorite list.",
+    "storyAlt": "Pixelated, 90s game-style main page scene for Validator Info",
+    "heroTitle": "Validator Info - the Explorer Web3 Deserves",
+    "heroSubtitle": "Live on chain data • Real AI answers • Self-hosted on Atlantic bare-metal",
+    "stats": {
+      "validators": "Validators",
+      "validatorsValue": "05.90%",
+      "claimedPages": "Claimed Val. Pages",
+      "claimedPagesValue": "100",
+      "networks": "Networks",
+      "networksValue": "1000",
+      "ecosystems": "Ecosystems",
+      "ecosystemsValue": "2345",
+      "tvl": "TVL",
+      "tvlValue": "$74.6B",
+      "dominance": "Dominance:",
+      "pow": "POW 56%",
+      "cosmos": "Cosmos 56%",
+      "eth": "ETH 56%",
+      "polkadot": "Polkadot 56%"
+    },
+    "links": {
+      "forum": "Forum",
+      "staking": "Staking",
+      "funnyBot": "Funny Bot",
+      "tokenSwap": "Token Swap",
+      "web3Login": "Web 3 Login",
+      "podcast": "Podcast",
+      "github": "Github",
+      "aiIntegration": "AI Dev"
+    },
+    "cashbackBanner": "2% Cash back on staking",
+    "infrastructureText": "Built and run on our own off-grid Atlantic bare-metal servers. Open-source. Ad-free. Privacy-respecting. By the Citizen Web3 team.",
+    "askExpert": "Ask the Validator Expert",
+    "topPerformers": "Top Performers & Highlights",
+    "placeholderName": "Name",
+    "topPerformersNote": "Short and visual overview of the top performers.",
+    "quickTools": {
+      "bestValidator": "Best Validator for Me",
+      "maxYield": "Max Yield Right Now",
+      "explainProposal": "Explain This Proposal",
+      "offGridHelp": "Off-Grid Setup Help"
+    },
     "Table": {
       "Validator": {
         "name": "Validator",
@@ -170,7 +225,20 @@
       "Compare": "Compare",
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
-      "Analyze": "Analyze"
+      "Analyze": "Analyze",
+      "Home": "Home",
+      "You": "You",
+      "AI": "AI",
+      "About Us": "About Us",
+      "Play": "Play",
+      "Network": "Network",
+      "Validators": "Validators",
+      "Nodes": "Nodes",
+      "Mining Pools": "Mining Pools",
+      "Ecosystems": "Ecosystems",
+      "Rumor": "Rumor",
+      "Explain": "Explain",
+      "Global": "Global"
     },
     "ConsolePanel": {
       "Get started": {
@@ -190,7 +258,7 @@
         "text": "Click Networks to see a comparison table of chains.<br></br>Open a Network profile to see stats including: tokenomics, transactions,<br></br>governance, validators and more."
       },
       "Validators nodes and mining pools": {
-        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and Mining Pools:",
+        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and <miningPoolsLink>Mining Pools</miningPoolsLink>:",
         "text": "Open Validator or Node profiles to see detailed statistics, earnings, projects and more."
       },
       "Ecosystems and metrics": {
@@ -688,8 +756,29 @@
     "TVS": "T.V.S. or Total Value Secured"
   },
   "AIPage": {
-    "title": "AI-Powered Web3 Validator Search: Tailored Results for Unique Criteria",
-    "description": "Welcome to our AI Search page—your personal web3 detective. This tool handles specific validator and mining pool queries, like finding validators with certain commission rates, network support, or political leanings. Our AI delivers precise, actionable results in seconds, making your search fast and efficient. Whether you're a staking newbie or pro, I'm here to help. Ready to see what I can do? Enter your criteria and watch the magic unfold!"
+    "title": "Ask the Validator Expert",
+    "description": "Quick AI answers, comparisons, and proposal explanations are coming here. For now, use the home page expert chat and quick tools.",
+    "storyAlt": "Pixelated game-style scene for the Validator Expert AI workspace"
+  },
+  "HelpPage": {
+    "title": "Help & Controls",
+    "description": "Use the console below as a guided game-style help panel. START opens the story, SELECT shows controls, and the A/B buttons jump between key sections.",
+    "storyAlt": "Pixelated help scene with the app's gameboy console and control hints"
+  },
+  "UnderDevelopment": {
+    "title": "Coming Soon",
+    "description": "This section is still being rebuilt. Check back soon for the updated experience.",
+    "buttonLabel": "Go Home"
+  },
+  "MiningPoolsPage": {
+    "title": "Mining Pools",
+    "description": "Mining pool coverage is being prepared for a dedicated multichain view with performance, rewards, and discovery tools.",
+    "storyAlt": "Pixelated game-style scene around mining pool infrastructure"
+  },
+  "ExplainPage": {
+    "title": "Explain",
+    "description": "This workspace will turn metrics, charts, and governance context into plain language.",
+    "storyAlt": "Pixelated game-style scene for metrics and explanations"
   },
   "ValidatorsPage": {
     "title": "Validator A-Z Directory: Comprehensive List with Social Links",

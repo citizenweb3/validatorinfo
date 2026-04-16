@@ -4,13 +4,11 @@ import Image from 'next/image';
 
 import OurManifestoModal from '@/app/about/modals/our-manifesto-modal';
 import OurToolsModal from '@/app/about/modals/our-tools-modal';
-import CollapsePageHeader from '@/components/common/collapse-page-header';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import RichPageTitle from '@/components/common/rich-page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
-import Story from '@/components/story';
 import { Locale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';
@@ -31,12 +29,6 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
   return (
     <div>
       <PageHeaderVisibilityWrapper>
-        <CollapsePageHeader>
-          <Story
-            src="about"
-            alt="Pixelated, 90s game-style characters are discussing the explorer with the validatorinfo head logo"
-          />
-        </CollapsePageHeader>
         <TabList page="AboutPage" tabs={aboutTabs} />
       </PageHeaderVisibilityWrapper>
       <RichPageTitle>

@@ -1,9 +1,10 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import React, { FC, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
-import { aboutTabs, additionalTabs, mainTabs } from '@/components/navigation-bar/navigation-bar';
+import { homeTabs, networkTabs, toolsTabs } from '@/components/navigation-bar/navigation-bar';
 
 interface OwnProps {
   visible: boolean;
@@ -14,7 +15,8 @@ interface OwnProps {
 }
 
 const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, onSelectProcessed }) => {
-  const allTabs = useMemo(() => [...mainTabs, ...additionalTabs, ...aboutTabs], []);
+  const t = useTranslations('Navbar');
+  const allTabs = useMemo(() => [...homeTabs, ...networkTabs, ...toolsTabs], []);
   const totalTabsCount = allTabs.length;
 
   const [flatItemIndex, setFlatItemIndex] = useState(0);
@@ -47,9 +49,9 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
   }, [visible, doSelect, allTabs, flatItemIndex, router, onClose, onSelectProcessed]);
 
   const mapFlatIndexToSectionIndex = (flatIndex: number) => {
-    if (flatIndex < mainTabs.length) return { section: 0, item: flatIndex };
-    if (flatIndex < mainTabs.length + additionalTabs.length) return { section: 1, item: flatIndex - mainTabs.length };
-    return { section: 2, item: flatIndex - mainTabs.length - additionalTabs.length };
+    if (flatIndex < homeTabs.length) return { section: 0, item: flatIndex };
+    if (flatIndex < homeTabs.length + networkTabs.length) return { section: 1, item: flatIndex - homeTabs.length };
+    return { section: 2, item: flatIndex - homeTabs.length - networkTabs.length };
   };
 
   const { section: activeSection, item: activeItem } = mapFlatIndexToSectionIndex(flatItemIndex);
@@ -88,7 +90,7 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
       role="dialog"
       aria-modal="true"
       aria-label="Game menu"
-      className="z-[9999]"
+      className="z-game-menu"
       onKeyDown={onKeyPress}
       onMouseDown={(e) => {
         if (e.target === containerRef.current) {
@@ -97,15 +99,14 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
       }}
     >
       <div
-        className="relative rounded-none border-0 bg-[#9DABA0] font-handjet font-semibold text-black
-        shadow-[0_4px_4px_rgba(0,0,0,0.25),0_4px_4px_rgba(0,0,0,0.25),0_4px_6px_rgba(0,0,0,1)] lg:h-[25rem] lg:w-[32rem]
-        lg:text-base xl:h-[25rem] xl:w-[35rem] xl:text-lg 2xl:h-[28rem] 2xl:w-[40rem] 2xl:text-xl"
+        className="relative rounded-none border-0 bg-gameboyBody font-handjet font-semibold text-black shadow-game-menu
+        lg:h-game-menu-lg lg:w-game-menu-lg lg:text-sm xl:h-game-menu-lg xl:w-game-menu-xl xl:text-base 2xl:h-game-menu-2xl 2xl:w-game-menu-2xl 2xl:text-lg"
       >
-        <div className="absolute left-0 right-0 top-1 my-4 h-1 bg-[#19281C]" />
-        <div className="absolute bottom-1 left-0 right-0 my-4 h-1 bg-[#19281C]" />
+        <div className="absolute left-0 right-0 top-1 my-4 h-1 bg-gameboyStripe" />
+        <div className="absolute bottom-1 left-0 right-0 my-4 h-1 bg-gameboyStripe" />
 
         <div className="pt-10 text-center">
-          <p className="font-handjet text-xl font-semibold ">
+          <p className="font-handjet text-xl font-semibold">
             FOR RANDOM: <span className="pl-2">(A)</span> VALIDATOR <span className="pl-2">(B)</span> NETWORK
           </p>
         </div>
@@ -114,13 +115,16 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
           {allTabs.map((item, idx) => {
             const isActive = idx === flatItemIndex;
             const code = 100 + idx;
+            const section = mapFlatIndexToSectionIndex(idx);
+            const isSectionActive = section.section === activeSection && section.item === activeItem;
+
             return (
               <div
                 key={item.name}
                 role="menuitem"
-                aria-selected={isActive}
+                data-active={isActive || isSectionActive ? 'true' : undefined}
                 tabIndex={-1}
-                className={`flex cursor-pointer items-center justify-center`}
+                className="flex cursor-pointer items-center justify-center"
                 onMouseEnter={() => setFlatItemIndex(idx)}
                 onClick={() => {
                   const href = item.href;
@@ -132,8 +136,8 @@ const MenuOverlay: FC<OwnProps> = ({ visible, onClose, onTabSelect, doSelect, on
               >
                 <div className="flex flex-row items-center justify-center uppercase">
                   {isActive && <div className="mr-2 h-5 w-5 bg-console_menu_arrow bg-contain bg-center bg-no-repeat" />}
-                  <span className="">{code} -</span>
-                  <span className="">&nbsp;{item.name}</span>
+                  <span>{code} -</span>
+                  <span>&nbsp;{t(item.name as 'Home')}</span>
                 </div>
               </div>
             );

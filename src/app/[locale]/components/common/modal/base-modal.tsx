@@ -11,6 +11,8 @@ interface OwnProps {
   className?: string;
   isRelative?: boolean;
   hideClose?: boolean;
+  closeClassName?: string;
+  contentClassName?: string;
   style?: CSSProperties;
   maxHeight?: string;
   copyText?: string;
@@ -26,6 +28,8 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
   title = '',
   style,
   hideClose = false,
+  closeClassName = 'h-9 w-9',
+  contentClassName = '',
   maxHeight = 'max-h-[80vh]',
   copyText = '',
 }) => {
@@ -38,7 +42,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
         <div className={`${!hideClose && 'pt-6'} relative p-3`}>
           {!hideClose && (
             <div
-              className={`absolute right-0 top-0 z-50 h-9 w-9 bg-close bg-contain hover:bg-close_h active:bg-close_a`}
+              className={`absolute right-0 top-0 z-50 bg-close bg-contain hover:bg-close_h active:bg-close_a ${closeClassName}`}
               onClick={(e) => {
                 e.stopPropagation();
                 e.preventDefault();
@@ -47,7 +51,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
             />
           )}
           {title && <div className="ml-9 text-lg text-highlight">{title}</div>}
-          <div className={`${maxHeight} overflow-y-auto overflow-x-hidden`}>{children}</div>
+          <div className={`${maxHeight} overflow-y-auto overflow-x-hidden ${contentClassName}`}>{children}</div>
           {copyText && (
             <div className="justify-self-end">
               <CopyButton value={copyText} size={'md'} />

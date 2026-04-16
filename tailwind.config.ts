@@ -20,6 +20,7 @@ const config: Config = {
     letterSpacing: {
       none: '0',
       normal: '.2em',
+      button: '.08em',
       wide: '.3em',
     },
     screens: {
@@ -64,6 +65,8 @@ const config: Config = {
         white: '#FFFFFFE5',
       },
       proposalLabel: '#B39B58',
+      gameboyBody: '#9DABA0',
+      gameboyStripe: '#19281C',
     },
     extend: {
       backgroundImage: {
@@ -83,6 +86,8 @@ const config: Config = {
         blog_h: `url('/img/icons/blog-h.png')`,
         search: `url('/img/icons/search.png')`,
         search_h: `url('/img/icons/search-h.png')`,
+        settings: `url('/img/icons/header/settings-gear.svg')`,
+        settings_h: `url('/img/icons/header/settings-gear-h.svg')`,
         hide: `url('/img/icons/navbar/hide.png')`,
         hide_h: `url('/img/icons/navbar/hide-h.png')`,
         hide_a: `url('/img/icons/navbar/hide-a.png')`,
@@ -169,6 +174,7 @@ const config: Config = {
         joystick_arrow_light: `url('/img/icons/joystick-arrow-light.svg')`,
       },
       textShadow: {
+        none: 'none',
         sm: '1px 1px 0 var(--tw-shadow-color)',
         DEFAULT: '0 2px 4px var(--tw-shadow-color)',
         lg: '0 8px 16px var(--tw-shadow-color)',
@@ -183,7 +189,40 @@ const config: Config = {
         button: '0 0 .125rem #000,0 0 .125rem #000,0 .5rem .5rem #000',
         'button-highlight': '0 0 .125rem #3E3E3E,0 0 .125rem #3E3E3E,0 .5rem .5rem #3E3E3E',
         'button-greenlight': '0 0 .125rem #4FB848,0 0 .125rem #4FB848,0 .5rem .5rem #4FB848',
+        'menu-button-rest':
+          '0 .125rem .25rem 0 rgba(0,0,0,1),0 .25rem .25rem 0 rgba(0,0,0,0.25),0 .25rem .25rem 0 rgba(0,0,0,0.25)',
+        'menu-button-hover':
+          '.125rem .5rem .625rem 0 rgba(0,0,0,1),0 .25rem .25rem 0 rgba(0,0,0,0.25),0 .5rem .5rem 0 rgba(0,0,0,0.25)',
+        'menu-button-pressed':
+          'inset 0 .25rem .25rem 0 rgba(0,0,0,1),inset 0 .25rem .25rem 0 rgba(0,0,0,0.25),inset 0 .375rem .375rem 0 rgba(0,0,0,0.25)',
+        'game-menu': '0 .25rem .25rem rgba(0,0,0,0.25),0 .25rem .25rem rgba(0,0,0,0.25),0 .25rem .375rem rgba(0,0,0,1)',
         line: '0 0 .125rem #000,0 .25rem .125rem #000,0 .5rem .5rem #000',
+      },
+      height: {
+        'home-mobile-panel': '62svh',
+        'story-compact': '3.3125rem',
+        'game-menu-lg': '30rem',
+        'game-menu-2xl': '34rem',
+      },
+      maxHeight: {
+        'ai-chat-modal': '43.75rem',
+      },
+      minHeight: {
+        'home-mobile-panel': '62svh',
+      },
+      width: {
+        'horizontal-tab': '19.5rem',
+        'navigation-open': '15.5rem',
+        'game-menu-lg': '32rem',
+        'game-menu-xl': '35rem',
+        'game-menu-2xl': '40rem',
+      },
+      maxWidth: {
+        'ai-chat-modal': '50rem',
+      },
+      zIndex: {
+        overlay: '60',
+        'game-menu': '9999',
       },
       charts: {
         width: '290px',
