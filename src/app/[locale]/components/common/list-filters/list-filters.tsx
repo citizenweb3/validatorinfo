@@ -5,6 +5,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { FC, ReactNode, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
+import { cn } from '@/utils/cn';
 import Dropdown from '@/components/common/list-filters/dropdown';
 import ValidatorListFiltersBattery from '@/components/common/list-filters/validator-list-filters-battery';
 import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
@@ -236,7 +237,7 @@ const ListFilters: FC<OwnProps> = ({
 
   if (expanded) {
     return (
-      <div className="mt-10 flex items-center justify-between">
+      <div className={cn('mt-10 flex items-center', !!children && 'justify-between')}>
         <div className="flex items-center gap-4">
           {filterItems}
         </div>
