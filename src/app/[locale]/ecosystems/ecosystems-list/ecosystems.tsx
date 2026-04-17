@@ -22,7 +22,7 @@ const Ecosystems: FC<OwnProps> = async ({ page, perPage, sort, currentPage, sele
     <div className="mt-2">
       <EcosystemsListFilters perPage={perPage} availableTags={availableTags} />
       <div>
-        <BaseTable className="my-4 table-fixed">
+        <BaseTable className="mb-4 table-fixed">
           <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name="Ecosystems" sortField="Ecosystems" defaultSelected />
