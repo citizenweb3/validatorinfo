@@ -270,8 +270,8 @@
         "text": "Ligue -<logInImg></logInImg>- a sua carteira Web3 para trocas de tokens, recompensas e mais funcionalidades.<br></br>Explore a Biblioteca -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- e partilhe a sua opinião no chat -<rumorsImg></rumorsImg>- p2p Rumor."
       }
     },
-    "Game": "Onde estou?",
-    "Dev": "Modo de desenvolvimento (WIP)"
+    "Game": "Modo Simples",
+    "Dev": "Modo Dev"
   },
   "GlobalPosPage": {
     "Metadata": {
@@ -789,6 +789,44 @@
       "Metrics": "Métricos",
       "Ecosystems": "Ecossistemas",
       "Nodes": "Nodes"
+    },
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Supported Assets": {
+        "name": "Ativos Suportados",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Bateria",
+        "hint": "O estado geral de saúde abrange ações de validadores verificáveis on-chain e off-chain e redes sociais"
+      },
+      "Technical": {
+        "name": "Técnico",
+        "hint": "Oferecer segurança de rede robusta e infraestrutura adicional aumenta a pontuação"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "Uma forte presença digital e numerosos fãs na rede aumentam a pontuação"
+      },
+      "Governance": {
+        "name": "Governança",
+        "hint": "A participação em eventos e iniciativas da vida de chaveiro aumenta a pontuação"
+      },
+      "User": {
+        "name": "Usuário",
+        "hint": "As interações usuário-validador na rede, como avaliações, elevam a pontuação"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": "Valor total garantido. Quantidade total de ativos apostados no validador"
+      }
     }
   },
   "ComparisonPage": {

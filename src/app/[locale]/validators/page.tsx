@@ -1,11 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import SimpleValidators from '@/app/validators/simple-validators/simple-validators';
-import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
+import ValidatorsDev from '@/app/validators/validators-dev';
+import ValidatorsFilters from '@/app/validators/validators-filters';
+import ValidatorsLayoutContainer from '@/app/validators/validators-layout-container';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
-import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 
@@ -25,20 +27,34 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
   const sortBy = (q.sortBy as 'moniker') ?? 'moniker';
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
+  const mode = (q.mode as 'simple' | 'dev') ?? 'simple';
 
   return (
     <div>
-      <PageHeaderVisibilityWrapper>
-        <TabList page="ValidatorsPage" tabs={validatorsTabs} />
-      </PageHeaderVisibilityWrapper>
-      <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <SimpleValidators
-        page="HomePage"
-        perPage={perPage}
-        currentPage={currentPage}
-        sort={{ sortBy, order }}
-        ecosystems={ecosystems}
+      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle text={t('title')} />
+      </CollapsiblePageHeader>
+      <ValidatorsFilters perPage={perPage} selectedEcosystems={ecosystems} mode={mode} />
+      <ValidatorsLayoutContainer
+        simpleMode={
+          <SimpleValidators
+            page="ValidatorsPage"
+            perPage={perPage}
+            currentPage={currentPage}
+            sort={{ sortBy, order }}
+            ecosystems={ecosystems}
+          />
+        }
+        devMode={
+          <ValidatorsDev
+            page="ValidatorsPage"
+            perPage={perPage}
+            currentPage={currentPage}
+            sort={{ sortBy, order }}
+            ecosystems={ecosystems}
+          />
+        }
       />
     </div>
   );
