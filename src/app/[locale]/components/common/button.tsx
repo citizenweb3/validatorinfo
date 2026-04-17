@@ -10,6 +10,7 @@ const activeClasses = {
 };
 
 type TActiveType = keyof typeof activeClasses;
+type TVariant = 'default' | 'menu';
 
 interface OwnProps {
   component?: 'button' | 'link';
@@ -21,6 +22,7 @@ interface OwnProps {
   activeType?: TActiveType;
   tooltip?: string;
   hasActiveFilters?: boolean;
+  variant?: TVariant;
 }
 
 const Button: FC<PropsWithChildren<OwnProps>> = ({
@@ -34,14 +36,23 @@ const Button: FC<PropsWithChildren<OwnProps>> = ({
   activeType = 'default',
   tooltip,
   hasActiveFilters = false,
+  variant = 'default',
 }) => {
+  const isMenu = variant === 'menu';
+
+  const baseStyles = isMenu
+    ? 'border-r border-t border-bgSt bg-table_row shadow-menu-button-hover hover:shadow-menu-button-hover hover:bg-card hover:text-highlight hover:fill-highlight active:shadow-menu-button-pressed active:border-transparent active:bg-card'
+    : 'shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:bg-bgHover hover:text-highlight hover:fill-highlight translate-y-0 active:translate-y-1 active:border-transparent active:bg-background active:shadow-none';
+
   const cn =
     (isActive
       ? `${activeClasses[activeType]} text-highlight`
       : hasActiveFilters
         ? 'border-2 border-primary/50 bg-primary/10 text-highlight'
-        : 'bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] border-r border-t border-bgSt') +
-    ` ${className} group/button shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:bg-bgHover hover:text-highlight hover:fill-highlight min-w-9 fill-black stroke-black p-px translate-y-0 active:translate-y-1 active:border-transparent active:bg-background active:shadow-none`;
+        : isMenu
+          ? ''
+          : 'bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] border-r border-t border-bgSt') +
+    ` ${className} group/button ${baseStyles} min-w-9 fill-black stroke-black p-px`;
   let content = (
     <div
       className={`${contentClassName} relative flex h-full items-center justify-center px-2 py-1.5 group-hover/button:text-highlight`}

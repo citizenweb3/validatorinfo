@@ -313,7 +313,34 @@
     "Active": "Active",
     "All": "All",
     "Stopped": "Stopped",
-    "stoppedTooltip": "Network indexing is currently paused by us"
+    "stoppedTooltip": "Network indexing is currently paused by us",
+    "Transactions": "Transactions",
+    "Table": {
+      "Networks": {
+        "name": "Networks",
+        "hint": ""
+      },
+      "Token Name": {
+        "name": "Token Name",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V.",
+        "hint": "Fully Diluted Valuation. All existing supply multiplied by price in USD."
+      },
+      "Supply": {
+        "name": "Supply",
+        "hint": "Current total supply relative to general total supply"
+      },
+      "Health": {
+        "name": "Health",
+        "hint": "Average uptime of network validators"
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      }
+    }
   },
   "NetworkProfileHeader": {
     "Tabs": {

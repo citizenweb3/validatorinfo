@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 
 import Button from '@/components/common/button';
 import Dropdown from '@/components/common/list-filters/dropdown';
@@ -25,6 +25,8 @@ interface OwnProps {
   isNetworkStage?: boolean;
   networksDropdown?: { value: string; title: string }[];
   allowedEcosystems?: string[];
+  expanded?: boolean;
+  children?: ReactNode;
 }
 
 export const stages = [
@@ -83,6 +85,8 @@ const ListFilters: FC<OwnProps> = ({
   isNetworkStage = false,
   networksDropdown = [],
   allowedEcosystems = [],
+  expanded = false,
+  children,
 }) => {
   const router = useRouter();
   const pathname = usePathname();
@@ -183,57 +187,71 @@ const ListFilters: FC<OwnProps> = ({
       ? ecosystemsDropdown.filter((eco) => allowedEcosystems.includes(eco.value))
       : ecosystemsDropdown;
 
+  const filterItems = (
+    <>
+      {isEcosystems && (
+        <Dropdown
+          filterValues={filteredEcosystemsDropdown}
+          title={t('Ecosystems')}
+          selectedValue={selectedEcosystems}
+          onChanged={onChainsChanged}
+        />
+      )}
+      {isNetworks && (
+        <Dropdown
+          filterValues={networksDropdown}
+          title={t('Networks')}
+          selectedValue={selectedNetworks}
+          onChanged={onNetworksChanged}
+        />
+      )}
+      {isNodeStatus && (
+        <Dropdown
+          filterValues={nodeStatus}
+          title={t('Node Status')}
+          selectedValue={selectedNodeStatus}
+          onChanged={onNodeStatusChanged}
+        />
+      )}
+      {isSetPositions && (
+        <Dropdown
+          filterValues={setPositions}
+          title={t('Set Position')}
+          selectedValue={selectedSetPosition}
+          onChanged={onSetPositionChanged}
+        />
+      )}
+      {isNetworkStage && (
+        <Dropdown
+          filterValues={stages}
+          title={t('Network Stage')}
+          selectedValue={selectedNetworkStage}
+          onChanged={onNetworkStageChanged}
+        />
+      )}
+      <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
+      {isBattery && <ValidatorListFiltersBattery />}
+    </>
+  );
+
+  if (expanded) {
+    return (
+      <div className="mt-10 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          {filterItems}
+        </div>
+        {children}
+      </div>
+    );
+  }
+
   return (
     <div className="flex h-8 items-center justify-end space-x-10">
-      {isOpened && (
-        <>
-          {isEcosystems && (
-            <Dropdown
-              filterValues={filteredEcosystemsDropdown}
-              title={t('Ecosystems')}
-              selectedValue={selectedEcosystems}
-              onChanged={onChainsChanged}
-            />
-          )}
-          {isNetworks && (
-            <Dropdown
-              filterValues={networksDropdown}
-              title={t('Networks')}
-              selectedValue={selectedNetworks}
-              onChanged={onNetworksChanged}
-            />
-          )}
-          {isNodeStatus && (
-            <Dropdown
-              filterValues={nodeStatus}
-              title={t('Node Status')}
-              selectedValue={selectedNodeStatus}
-              onChanged={onNodeStatusChanged}
-            />
-          )}
-          {isSetPositions && (
-            <Dropdown
-              filterValues={setPositions}
-              title={t('Set Position')}
-              selectedValue={selectedSetPosition}
-              onChanged={onSetPositionChanged}
-            />
-          )}
-          {isNetworkStage && (
-            <Dropdown
-              filterValues={stages}
-              title={t('Network Stage')}
-              selectedValue={selectedNetworkStage}
-              onChanged={onNetworkStageChanged}
-            />
-          )}
-          <ValidatorListFiltersPorPage onChange={onPerPageChanged} value={perPage} />
-          {isBattery && <ValidatorListFiltersBattery />}
-        </>
-      )}
+      {isOpened && filterItems}
       <div className="flex flex-row items-center">
         <Button
           activeType="switcher"
+          variant="menu"
           onClick={onCustomiseClick}
           isActive={isOpened}
           hasActiveFilters={hasActiveFilters}

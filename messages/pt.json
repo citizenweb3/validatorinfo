@@ -313,7 +313,34 @@
     "Active": "Ativas",
     "All": "Todas",
     "Stopped": "Parada",
-    "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós"
+    "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós",
+    "Transactions": "Transações",
+    "Table": {
+      "Networks": {
+        "name": "Redes",
+        "hint": ""
+      },
+      "Token Name": {
+        "name": "Nome do Token",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V.",
+        "hint": "Avaliação Totalmente Diluída. Toda a oferta existente multiplicada pelo preço em USD."
+      },
+      "Supply": {
+        "name": "Oferta",
+        "hint": "Oferta total atual em relação à oferta total geral"
+      },
+      "Health": {
+        "name": "Saúde",
+        "hint": "Tempo médio de atividade dos validadores da rede"
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      }
+    }
   },
   "NetworkProfileHeader": {
     "Tabs": {

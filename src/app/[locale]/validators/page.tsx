@@ -3,8 +3,9 @@ import { getTranslations } from 'next-intl/server';
 import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import SimpleValidators from '@/app/validators/simple-validators/simple-validators';
 import ValidatorsDev from '@/app/validators/validators-dev';
-import ValidatorsFilters from '@/app/validators/validators-filters';
+import ValidatorModeToggle from '@/app/validators/validator-mode-toggle';
 import ValidatorsLayoutContainer from '@/app/validators/validators-layout-container';
+import ListFilters from '@/components/common/list-filters/list-filters';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
@@ -35,7 +36,9 @@ const ValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle text={t('title')} />
       </CollapsiblePageHeader>
-      <ValidatorsFilters perPage={perPage} selectedEcosystems={ecosystems} mode={mode} />
+      <ListFilters expanded isEcosystems perPage={perPage} selectedEcosystems={ecosystems}>
+        <ValidatorModeToggle mode={mode} />
+      </ListFilters>
       <ValidatorsLayoutContainer
         simpleMode={
           <SimpleValidators

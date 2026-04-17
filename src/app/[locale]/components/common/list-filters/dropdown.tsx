@@ -27,6 +27,7 @@ const Dropdown: FC<OwnProps> = ({filterValues, title, selectedValue, onChanged }
         className="h-8 max-h-8"
         isActive={selectedValue.length > 0}
         activeType="switcher"
+        variant="menu"
       >
         {title}
         <TriangleButton direction={isOpened ? 't' : 'b'} />
@@ -42,6 +43,7 @@ const Dropdown: FC<OwnProps> = ({filterValues, title, selectedValue, onChanged }
               className="text-base"
               contentClassName="max-h-7 w-40 min-w-40"
               activeType="switcher"
+              variant="menu"
             >
               <div className="z-20 -my-1 flex flex-row items-center justify-center text-base font-medium">
                 {item.title}

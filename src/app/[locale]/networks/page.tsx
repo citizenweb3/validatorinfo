@@ -1,12 +1,13 @@
 import { getTranslations } from 'next-intl/server';
 
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import Networks from '@/app/networks/networks-list/networks';
 import NetworkSupportToggle from '@/app/networks/networks-list/network-support-toggle';
+import ListFilters from '@/components/common/list-filters/list-filters';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
-import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 
@@ -26,6 +27,7 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
   const sortBy = (q.sortBy as 'name') ?? 'name';
   const order = (q.order as SortDirection) ?? 'asc';
   const ecosystems: string[] = !q.ecosystems ? [] : typeof q.ecosystems === 'string' ? [q.ecosystems] : q.ecosystems;
+  const networkStage: string[] = !q.network_stage ? [] : typeof q.network_stage === 'string' ? [q.network_stage] : q.network_stage;
   const showAll = q.show === 'all';
 
   return (
@@ -33,11 +35,21 @@ const NetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale },
       <PageHeaderVisibilityWrapper>
         <TabList page="ValidatorsPage" tabs={validatorsTabs} />
       </PageHeaderVisibilityWrapper>
-      <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <NetworkSupportToggle />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle text={t('title')} />
+      </CollapsiblePageHeader>
+      <ListFilters
+        expanded
+        isEcosystems
+        isNetworkStage
+        perPage={perPage}
+        selectedEcosystems={ecosystems}
+        selectedNetworkStage={networkStage}
+      >
+        <NetworkSupportToggle />
+      </ListFilters>
       <Networks
-        page="HomePage"
+        page="NetworksPage"
         ecosystems={ecosystems}
         perPage={perPage}
         sort={{ sortBy, order }}
