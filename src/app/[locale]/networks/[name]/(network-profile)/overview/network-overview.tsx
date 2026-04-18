@@ -3,16 +3,87 @@ import Link from 'next/link';
 import { FC, Suspense } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
+import Tooltip from '@/components/common/tooltip';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import validatorService from '@/services/validator-service';
+import { aztecIndexer } from '@/services/aztec-indexer-api';
+import aztecContractService from '@/services/aztec-contracts-service';
+import { getLatestFinalizedBlock } from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
+import { getAztecBlockHeight } from '@/utils/aztec';
+import formatCash from '@/utils/format-cash';
 
 import AztecBlockTimeDisplay from './aztec-block-time-display';
 import CommitteeSizeDisplay from './committee-size-display';
-import NetworkOverviewSkeleton from './network-overview-skeleton';
+
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
 }
+
+const AztecTxRow: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const totalTxs = await aztecIndexer.getTotalTxEffects();
+
+  return (
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+      <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+        {t('total amount of tx')}
+      </div>
+      <Link
+        href={`/networks/${chainName}/tx`}
+        className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+      >
+        {totalTxs ?? 'N/A'}
+      </Link>
+    </div>
+  );
+};
+
+const AztecBlocksSlotsEpochsRows: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const latestFinalizedBlock = await getLatestFinalizedBlock().catch(() => null);
+  const totalBlocks = latestFinalizedBlock ? getAztecBlockHeight(latestFinalizedBlock.height) : null;
+  const totalSlots = await aztecContractService.getLatestSlot(chainName);
+  const totalEpochs = await aztecContractService.getLatestEpoch(chainName);
+
+  return (
+    <>
+      {totalBlocks != null && totalBlocks > 0 && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('total amount of blocks')}
+          </div>
+          <Link
+            href={`/networks/${chainName}/blocks`}
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+          >
+            {totalBlocks}
+          </Link>
+        </div>
+      )}
+      {totalSlots != null && Number(totalSlots) > 0 && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('total amount of slots')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {totalSlots}
+          </div>
+        </div>
+      )}
+      {totalEpochs != null && Number(totalEpochs) > 0 && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('total amount of epochs')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {totalEpochs}
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
 
 const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
@@ -24,6 +95,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
       ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
       : await validatorService.getActiveValidatorsByChainId(chain.id)
     : undefined;
+
+  const totalSupply =
+    chain?.tokenomics?.totalSupply && chain?.params?.coinDecimals != null
+      ? Number(chain?.tokenomics?.totalSupply) / Number(10 ** chain?.params?.coinDecimals)
+      : 0;
 
   const percentOfCommunityPool =
     chain?.tokenomics?.communityPool && chain?.tokenomics?.totalSupply
@@ -38,6 +114,33 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   return (
     <div className="mt-5">
       <SubTitle text={t('Network Overview')} />
+      {chain?.walletsAmount != null && chain.walletsAmount > 0 && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('amount of wallets')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {chain.walletsAmount.toLocaleString()}
+          </div>
+        </div>
+      )}
+      {isAztec && chain && (
+        <Suspense fallback={null}>
+          <AztecTxRow chainName={chain.name} />
+        </Suspense>
+      )}
+      {totalSupply > 0 && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('total supply')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            <Tooltip tooltip={totalSupply.toLocaleString()}>
+              {`${formatCash(totalSupply)} ${chain?.params?.denom}`}
+            </Tooltip>
+          </div>
+        </div>
+      )}
       {activeValidators && (
         <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
@@ -60,7 +163,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
       )}
-      {chain?.params?.communityTax !== null && chain?.params?.communityTax !== undefined && (
+      {chain?.params?.communityTax != null && chain.params.communityTax > 0 && (
         <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('community tax')}
@@ -71,7 +174,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
       )}
-      {chain?.params?.proposalCreationCost !== null && (
+      {chain?.params?.proposalCreationCost != null && (
         <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('proposal creation cost')}
@@ -84,7 +187,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
       )}
-      {chain?.params?.votingPeriod !== null && (
+      {chain?.params?.votingPeriod != null && (
         <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('voting period')}
@@ -94,32 +197,6 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
             <Link href={`/networks/${chain?.name}/governance`}>
               {chain?.params?.votingPeriod}
             </Link>
-          </div>
-        </div>
-      )}
-      {percentOfCommunityPool && (
-        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
-          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
-            {t('% of comm pool to total supply')}
-          </div>
-          <div
-            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-            {percentOfCommunityPool.toFixed(2)}%
-          </div>
-        </div>
-      )}
-      {communityPoolUsd && (
-        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
-          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
-            {t('comm pool value in usd')}
-          </div>
-          <div
-            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-            $
-            {communityPoolUsd.toLocaleString('en-US', {
-              minimumFractionDigits: 2,
-              maximumFractionDigits: 2,
-            })}
           </div>
         </div>
       )}
@@ -134,12 +211,38 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
       )}
-      {chain?.name === 'aztec' || chain?.name === 'aztec-testnet' ? (
+      {!!communityPoolUsd && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('comm pool value in usd')}
+          </div>
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            $
+            {communityPoolUsd.toLocaleString('en-US', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+          </div>
+        </div>
+      )}
+      {!!percentOfCommunityPool && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('% of comm pool to total supply')}
+          </div>
+          <div
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {percentOfCommunityPool.toFixed(2)}%
+          </div>
+        </div>
+      )}
+      {isAztec && chain ? (
         <>
-          <Suspense fallback={<NetworkOverviewSkeleton />}>
+          <Suspense fallback={null}>
             <AztecBlockTimeDisplay chainName={chain.name} />
           </Suspense>
-          {chain?.avgTxInterval && (
+          {!!chain?.avgTxInterval && (
             <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
               <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
                 {t('slot duration')}
@@ -152,9 +255,15 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
               </div>
             </div>
           )}
+          <Suspense fallback={null}>
+            <AztecBlocksSlotsEpochsRows chainName={chain.name} />
+          </Suspense>
+          <Suspense fallback={null}>
+            <CommitteeSizeDisplay chainName={chain.name} />
+          </Suspense>
         </>
       ) : (
-        chain?.avgTxInterval && (
+        !!chain?.avgTxInterval && (
           <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
             <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg ">
               {t('average block time')}
@@ -165,11 +274,6 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
             </div>
           </div>
         )
-      )}
-      {(chain?.name === 'aztec' || chain?.name === 'aztec-testnet') && (
-        <Suspense fallback={<NetworkOverviewSkeleton />}>
-          <CommitteeSizeDisplay chainName={chain.name} />
-        </Suspense>
       )}
     </div>
   );
