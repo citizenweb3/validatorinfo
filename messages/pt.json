@@ -728,6 +728,7 @@
     "title": "Diretório A-Z de Ecossistemas: Explore Projetos Web3",
     "description": "O Diretório A-Z de Ecossistemas é o seu portal para o universo Web3, apresentando uma lista de projetos e comunidades, incluindo aplicativos descentralizados e plataformas de governança, com informações adicionais como receita e projetos incluídos nesse ecossistema. Este diretório ajuda você a descobrir novos projetos, com estatísticas que destacam o ímpeto e a influência de cada projeto, e pode ser usado para encontrar seu próximo projeto favorito, além de permitir que você entre no nosso Chat P2P para discutir e compartilhar ideias com outros entusiastas do Web3, conectando-o às pessoas e plataformas que estão moldando o futuro do Web3.",
     "customize": "Customizar",
+    "UnderConstruction": "Página em construção...",
     "Table": {
       "Ecosystems": {
         "name": "Ecossistemas",
@@ -780,7 +781,8 @@
     "Token": "Token",
     "Total Supply": "Fornecimento total",
     "TVL": "T.V.L. or Valor Total Bloqueado",
-    "TVS": "T.V.S. ou Valor Total Garantido"
+    "TVS": "T.V.S. ou Valor Total Garantido",
+    "UnderConstruction": "Página em construção..."
   },
   "AIPage": {
     "title": "Pergunte ao Especialista da Validator",
@@ -1633,7 +1635,8 @@
     },
     "customize": "Personalizar",
     "Submit New Info": "Enviar Novas Informações",
-    "how to run a node on cosmos": "Como executar um nó na Cosmos"
+    "how to run a node on cosmos": "Como executar um nó na Cosmos",
+    "UnderConstruction": "Página em construção..."
   },
   "AccountPage": {
     "Tabs": {

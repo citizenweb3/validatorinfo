@@ -7,6 +7,7 @@ import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
+import SubTitle from '@/components/common/sub-title';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -39,6 +40,7 @@ const EcosystemsPage: NextPageWithLocale<PageProps> = async ({ params: { locale 
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle text={t('title')} />
       </CollapsiblePageHeader>
+      <SubTitle text={t('UnderConstruction')} className={'mt-4'} />
       <Ecosystems page="EcosystemsPage" perPage={perPage} sort={{ sortBy, order }} currentPage={currentPage}
                   selectedTags={selectedTags} />
     </div>

@@ -1,7 +1,6 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 import { ReactNode } from 'react';
 
-import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import TabList from '@/components/common/tabs/tab-list';
 import { libraryTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
@@ -14,18 +13,15 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default async function NodeProfileLayout({
-  children,
-  params: { locale },
-}: Readonly<{ children: ReactNode; params: { locale: Locale } }>) {
-  unstable_setRequestLocale(locale);
-
+export default async function NodeProfileLayout(
+  {
+    children,
+    params: { locale },
+  }: Readonly<{ children: ReactNode; params: { locale: Locale } }>) {
   return (
     <div>
-      <PageHeaderVisibilityWrapper>
-        <TabList page="LibraryPage" tabs={libraryTabs} />
-        {children}
-      </PageHeaderVisibilityWrapper>
+      <TabList page="LibraryPage" tabs={libraryTabs} />
+      {children}
     </div>
   );
 }

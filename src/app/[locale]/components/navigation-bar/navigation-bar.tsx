@@ -40,7 +40,7 @@ export const toolsTabs: TabOptions[] = [
     icon: icons.ComparisonIcon,
     iconHovered: icons.ComparisonIconHovered,
   },
-  { name: 'Explain', href: '/explain', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
+  { name: 'Explain', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
 ];
 
 interface OwnProps {

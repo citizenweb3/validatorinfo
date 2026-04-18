@@ -728,6 +728,7 @@
     "title": "Ecosystem A-Z Directory: Explore Web3 Projects",
     "description": "The Ecosystem A-Z Directory is your gateway to web3, featuring a list of projects and communities, including decentralized apps and governance platforms, with additional information like revenue and projects included in that ecosystem. This directory helps you discover new projects, with stats highlighting each project's momentum and influence, and you can use it to find your next favorite project, then join our P2P Chat to discuss and share ideas with other web3 enthusiasts, connecting you to the people and platforms shaping the future of web3.",
     "customize": "customize",
+    "UnderConstruction": "Page Under Construction...",
     "Table": {
       "Ecosystems": {
         "name": "Ecosystems",
@@ -780,7 +781,8 @@
     "Token": "Token",
     "Total Supply": "Total Supply",
     "TVL": "T.V.L. or Total Value Locked",
-    "TVS": "T.V.S. or Total Value Secured"
+    "TVS": "T.V.S. or Total Value Secured",
+    "UnderConstruction": "Page Under Construction..."
   },
   "AIPage": {
     "title": "Ask the Validator Expert",
@@ -1641,7 +1643,8 @@
     },
     "customize": "Customize",
     "Submit New Info": "Submit New Info",
-    "how to run a node on cosmos": "How to run a node on Cosmos"
+    "how to run a node on cosmos": "How to run a node on Cosmos",
+    "UnderConstruction": "Page Under Construction..."
   },
   "AccountPage": {
     "Tabs": {
