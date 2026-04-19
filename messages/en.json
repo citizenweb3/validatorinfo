@@ -425,7 +425,8 @@
     "members tooltip no data": "No community data available",
     "Transaction Volume": "Transaction Volume + MAU",
     "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete.",
-    "distribution map": "Distributrion Map"
+    "distribution map": "Distributrion Map",
+    "UnderConstruction": "Page Under Construction..."
   },
   "NetworkGovernance": {
     "title": "Governance Portal: Network Voting",

@@ -425,7 +425,8 @@
     "members tooltip no data": "Dados da comunidade não disponíveis",
     "Transaction Volume": "Volume de transações + MAU",
     "chart unavailable": "Os dados do volume de transações estão indisponíveis no momento. As métricas ao vivo retornarão assim que a manutenção for concluída.",
-    "distribution map": "Mapa de Distribuição"
+    "distribution map": "Mapa de Distribuição",
+    "UnderConstruction": "Página em construção..."
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",

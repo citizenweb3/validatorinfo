@@ -17,7 +17,7 @@ import GovernanceSlashingEventsTable
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TableDropdown from '@/components/common/table-dropdown';
-import SubDescription from '@/components/sub-description';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import chainService from '@/services/chain-service';
@@ -89,14 +89,13 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
 
     return (
       <div className="mb-6">
-        <PageTitle prefix={chain.prettyName ?? 'Network'} text={t('title')} />
-        <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-        <div className="flex flex-row gap-20">
-          <GovernanceTokenDistribution />
-          <div>
-            <TotalsListProposals proposals={proposalsList} chain={chain} />
-            <AztecGovernanceConfig chain={chain} />
-          </div>
+        <CollapsiblePageHeader description={t('description')}>
+          <PageTitle prefix={chain.prettyName ?? 'Network'} text={t('title')} />
+        </CollapsiblePageHeader>
+        <GovernanceTokenDistribution />
+        <div className="mt-8 grid grid-cols-5 gap-6">
+          <TotalsListProposals proposals={proposalsList} chain={chain} />
+          <AztecGovernanceConfig chain={chain} />
         </div>
         <div className="mt-8">
           <LiveProposals proposals={proposalsList} chainName={name} />
@@ -159,10 +158,11 @@ const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { 
 
   return (
     <div className="mb-6">
-      <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <div className="flex flex-row gap-20">
-        <GovernanceTokenDistribution />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
+      </CollapsiblePageHeader>
+      <GovernanceTokenDistribution />
+      <div className="mt-8 grid grid-cols-5 gap-6">
         <TotalsListProposals proposals={proposalsList} chain={chain} />
       </div>
       <LiveProposals proposals={proposalsList} chainName={name} />
