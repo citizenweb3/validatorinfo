@@ -46,6 +46,14 @@ const TokenomicsParams: FC<OwnProps> = ({
   const price = tokenPriceValue ?? 0;
   const isUsd = !isToken;
 
+  const hasCommunityPool = communityPool > 0;
+  const hasTvs = tvs > 0;
+  const hasRewards = rewardsInTokens !== undefined && rewardsInTokens > 0;
+  const hasInflation = inflation > 0;
+  const hasCirculating = circulatingTokensPercent !== undefined && circulatingTokensPercent > 0;
+  const hasPending = pendingUndelegations !== undefined && pendingUndelegations > 0;
+  const hasFdv = fdv !== undefined && fdv > 0;
+
   const formatTokenValue = (tokens: number): ReactNode => (
     <Tooltip tooltip={tokens.toLocaleString()}>
       <div className="text-center">{formatCash(tokens)} {denom}</div>
@@ -93,49 +101,45 @@ const TokenomicsParams: FC<OwnProps> = ({
       <div className="grid grid-cols-[repeat(2,auto)] md:grid-cols-[repeat(4,auto)] gap-6 justify-center w-full mt-6">
         <MetricsCardItem
           title={t.communityPoolTvl}
-          data={communityPoolData}
+          data={hasCommunityPool ? communityPoolData : 12}
           className="pb-8 pt-2.5"
-          dataClassName="mt-6"
+          dataClassName={`mt-6 ${!hasCommunityPool ? 'blur-sm' : ''}`}
         />
         <MetricsCardItem
           title={t.tokensStaked}
-          data={`${(tvs * 100).toFixed(2)}%`}
+          data={hasTvs ? `${(tvs * 100).toFixed(2)}%` : 12}
           className="pb-8 pt-2.5"
-          dataClassName="mt-6"
+          dataClassName={`mt-6 ${!hasTvs ? 'blur-sm' : ''}`}
         />
         <MetricsCardItem
           title={t.rewardToPayout}
-          data={rewardsData}
+          data={hasRewards ? rewardsData : 12}
           className="pb-8 pt-2.5"
-          dataClassName="mt-6"
+          dataClassName={`mt-6 ${!hasRewards ? 'blur-sm' : ''}`}
         />
         <MetricsCardItem
           title={t.inflationRate}
-          data={`${(inflation * 100).toFixed(2)}%`}
+          data={hasInflation ? `${(inflation * 100).toFixed(2)}%` : 98}
           className="pb-8 pt-2.5"
-          dataClassName="mt-6"
+          dataClassName={`mt-6 ${!hasInflation ? 'blur-sm' : ''}`}
         />
-        {circulatingTokensPercent !== undefined && (
-          <MetricsCardItem
-            title={t.circulatingTokens}
-            data={`${circulatingTokensPercent.toFixed(2)}%`}
-            className="pb-8 pt-2.5"
-            dataClassName="mt-6"
-          />
-        )}
-        {pendingData !== undefined && (
-          <MetricsCardItem
-            title={t.pendingUndelegations}
-            data={pendingData}
-            className="pb-8 pt-2.5"
-            dataClassName="mt-6"
-          />
-        )}
+        <MetricsCardItem
+          title={t.circulatingTokens}
+          data={hasCirculating ? `${circulatingTokensPercent!.toFixed(2)}%` : 12}
+          className="pb-8 pt-2.5"
+          dataClassName={`mt-6 ${!hasCirculating ? 'blur-sm' : ''}`}
+        />
+        <MetricsCardItem
+          title={t.pendingUndelegations}
+          data={hasPending ? pendingData : 12}
+          className="pb-8 pt-2.5"
+          dataClassName={`mt-6 ${!hasPending ? 'blur-sm' : ''}`}
+        />
         <MetricsCardItem
           title={t.fdv}
-          data={fdvData}
+          data={hasFdv ? fdvData : 98}
           className="pb-8 pt-2.5"
-          dataClassName="mt-6"
+          dataClassName={`mt-6 ${!hasFdv ? 'blur-sm' : ''}`}
         />
       </div>
     </>

@@ -1,17 +1,16 @@
 import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
 
 import DistributionGiniParameters
   from '@/app/networks/[name]/(network-profile)/tokenomics/distribution-gini-parameters';
 import TokenPrice from '@/app/networks/[name]/(network-profile)/tokenomics/token-price';
 import PageTitle from '@/components/common/page-title';
-import SubDescription from '@/components/sub-description';
-import UnderDevelopment from '@/components/common/under-development';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import priceHistoryService from '@/services/price-history-service';
 import TokenomicsService from '@/services/tokenomics-service';
+import Image from 'next/image';
 import SubTitle from '@/components/common/sub-title';
 import RoundedButton from '@/components/common/rounded-button';
 
@@ -48,14 +47,13 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { 
 
   return (
     <div>
-      <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
+      </CollapsiblePageHeader>
       <div className="flex flex-row justify-between items-end">
         <SubTitle text={t('Token Price')} />
-        <div className="flex flex-col gap-4">
-          <Link href={`/networks/${name}/token-flow`}>
-            <RoundedButton className="text-lg" contentClassName="px-12">{t('Token Flow')}</RoundedButton>
-          </Link>
+        <div className="flex flex-col gap-4 blur-sm pointer-events-none">
+          <RoundedButton className="text-lg" contentClassName="px-12">{t('Token Flow')}</RoundedButton>
         </div>
       </div>
       <div className="flex flex-col xl:flex-row gap-6">
@@ -68,8 +66,14 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { 
           {chartData.length > 0 ? (
             <TokenPriceChart chartData={chartData} />
           ) : (
-            <div className="mt-6 ml-20">
-              <UnderDevelopment title={t('No chart data available')} size="lg" />
+            <div className="mt-6 blur-sm pointer-events-none">
+              <Image
+                src="/img/charts/token-price-chart.svg"
+                alt="Token Price Chart"
+                width={800}
+                height={400}
+                className="w-full"
+              />
             </div>
           )}
         </div>
