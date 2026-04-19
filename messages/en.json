@@ -270,8 +270,8 @@
         "text": "Connect -<logInImg></logInImg>- your Web3 wallet for token swaps, rewards and more features.<br></br>Explore Library -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- and share your opinion in the p2p Rumor -<rumorsImg></rumorsImg>- chat."
       }
     },
-    "Game": "Where am I?",
-    "Dev": "Dev Mode (WIP)"
+    "Game": "Simple Mode",
+    "Dev": "Dev Mode"
   },
   "GlobalPosPage": {
     "Metadata": {
@@ -313,7 +313,34 @@
     "Active": "Active",
     "All": "All",
     "Stopped": "Stopped",
-    "stoppedTooltip": "Network indexing is currently paused by us"
+    "stoppedTooltip": "Network indexing is currently paused by us",
+    "Transactions": "Transactions",
+    "Table": {
+      "Networks": {
+        "name": "Networks",
+        "hint": ""
+      },
+      "Token Name": {
+        "name": "Token Name",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V.",
+        "hint": "Fully Diluted Valuation. All existing supply multiplied by price in USD."
+      },
+      "Supply": {
+        "name": "Supply",
+        "hint": "Current total supply relative to general total supply"
+      },
+      "Health": {
+        "name": "Health",
+        "hint": "Average uptime of network validators"
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      }
+    }
   },
   "NetworkProfileHeader": {
     "Tabs": {
@@ -398,7 +425,8 @@
     "members tooltip no data": "No community data available",
     "Transaction Volume": "Transaction Volume + MAU",
     "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete.",
-    "distribution map": "Distributrion Map"
+    "distribution map": "Distributrion Map",
+    "UnderConstruction": "Page Under Construction..."
   },
   "NetworkGovernance": {
     "title": "Governance Portal: Network Voting",
@@ -701,6 +729,7 @@
     "title": "Ecosystem A-Z Directory: Explore Web3 Projects",
     "description": "The Ecosystem A-Z Directory is your gateway to web3, featuring a list of projects and communities, including decentralized apps and governance platforms, with additional information like revenue and projects included in that ecosystem. This directory helps you discover new projects, with stats highlighting each project's momentum and influence, and you can use it to find your next favorite project, then join our P2P Chat to discuss and share ideas with other web3 enthusiasts, connecting you to the people and platforms shaping the future of web3.",
     "customize": "customize",
+    "UnderConstruction": "Page Under Construction...",
     "Table": {
       "Ecosystems": {
         "name": "Ecosystems",
@@ -753,7 +782,8 @@
     "Token": "Token",
     "Total Supply": "Total Supply",
     "TVL": "T.V.L. or Total Value Locked",
-    "TVS": "T.V.S. or Total Value Secured"
+    "TVS": "T.V.S. or Total Value Secured",
+    "UnderConstruction": "Page Under Construction..."
   },
   "AIPage": {
     "title": "Ask the Validator Expert",
@@ -789,6 +819,44 @@
       "Networks": "Networks",
       "Ecosystems": "Ecosystems",
       "Metrics": "Metrics"
+    },
+    "Table": {
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Supported Assets": {
+        "name": "Supported Assets",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Battery",
+        "hint": "General health status, encomprasses on-chain off-chain verifiable validator actions and social networks"
+      },
+      "Technical": {
+        "name": "Technical",
+        "hint": "Offering robust network security and additional infrastructure increases the score"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "A strong digital presence and numerous on-chain fans raise the score"
+      },
+      "Governance": {
+        "name": "Governance",
+        "hint": "Participation in keychain life events and initiative boost the score"
+      },
+      "User": {
+        "name": "User",
+        "hint": "On-chain user-validator interactions, like reviews, elevate the score"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": "Total Secured Value. Total amount of assets staked to validator"
+      }
     }
   },
   "ComparisonPage": {
@@ -1576,7 +1644,8 @@
     },
     "customize": "Customize",
     "Submit New Info": "Submit New Info",
-    "how to run a node on cosmos": "How to run a node on Cosmos"
+    "how to run a node on cosmos": "How to run a node on Cosmos",
+    "UnderConstruction": "Page Under Construction..."
   },
   "AccountPage": {
     "Tabs": {

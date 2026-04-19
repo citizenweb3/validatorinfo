@@ -20,8 +20,9 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
       : 0;
 
   return (
-    <div className="flex w-full flex-col gap-1">
-      <div className="flex items-center justify-between rounded bg-card pl-10 pr-2 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight">
+    <div className={`${validatorCost ? 'flex w-full flex-col gap-1' : 'flex w-full flex-col gap-1 blur-sm'}`}>
+      <div
+        className="flex items-center justify-between rounded bg-card pl-10 pr-2 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight">
         <span className="font-sfpro text-base">{t('validator cost')}</span>
         <div className="flex items-center">
           <span className="font-handjet text-lg mr-8">
@@ -33,7 +34,7 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
       {networkProfileExample.headerMetrics.map((item) => (
         <div
           key={item.title}
-          className="flex items-center justify-between rounded bg-card pl-10 pr-2 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight"
+          className="flex items-center justify-between rounded bg-card pl-10 pr-2 py-2 my-1 hover:shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:text-highlight blur-sm"
         >
           <span className="font-sfpro text-base">{t(item.title as 'tvl')}</span>
           <div className="flex items-center">

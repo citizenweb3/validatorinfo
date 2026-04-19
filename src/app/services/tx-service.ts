@@ -133,8 +133,12 @@ const getAztecTxs = async (currentPage: number, perPage: number): Promise<TxsRes
       timestamp: confirmedBlockTimestamps.get(Number(tx.blockNumber)),
     }));
 
+    const allTxs = [...pendingItems, ...confirmedItems].sort((a, b) => {
+      return (b.timestamp ?? 0) - (a.timestamp ?? 0);
+    });
+
     return {
-      txs: [...pendingItems, ...confirmedItems],
+      txs: allTxs,
       totalPages: Math.max(1, totalPages),
     };
   } catch (error) {

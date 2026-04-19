@@ -32,6 +32,13 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
   const centerLogoSizes =
     'sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] 2xl:w-[124px] 2xl:h-[124px]';
 
+  const isAztec = chain?.name === 'aztec';
+
+  const validatorsLink = `/networks/${chainName}/validators`;
+  const nodesLink = `/networks/${chainName}/nodes`;
+  const txLink = `/networks/${chainName}/tx`;
+  const blockLink = `/networks/${chainName}/blocks`;
+
   return (
     <div className="mb-5 mt-4 rounded border-b border-bgSt bg-table_row p-6">
       <div className="grid grid-cols-4 items-start gap-4">
@@ -58,9 +65,9 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
           />
 
           <div className="flex gap-6 mt-3">
-            {validators?.length != 0 && (
-              <Tooltip tooltip={t('Validators')} direction="top">
-                <Link href={`/networks/${chainName}/validators`}>
+            <Tooltip tooltip={t('Validators')} direction="top">
+              <div className={`${validators?.length != 0 ? '' : 'blur-sm'}`}>
+                <Link href={validators?.length != 0 ? validatorsLink : ''}>
                   <div className={iconBtnClass}>
                     <Image src={icons.ValidatorsIcon} alt={t('Validators')} width={40} height={40}
                            className="group-hover/btn:hidden" />
@@ -68,61 +75,78 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
                            className="hidden group-hover/btn:block" />
                   </div>
                 </Link>
-              </Tooltip>
-            )}
-            <Tooltip tooltip={t('Nodes')} direction="top">
-              <Link href={`/networks/${chainName}/nodes`}>
-                <div className={iconBtnClass}>
-                  <Image src={icons.NodesIcon} alt={t('Nodes')} width={40} height={40}
-                         className="group-hover/btn:hidden" />
-                  <Image src={icons.NodesIconHovered} alt={t('Nodes')} width={40} height={40}
-                         className="hidden group-hover/btn:block" />
-                </div>
-              </Link>
+              </div>
             </Tooltip>
+
+            <Tooltip tooltip={t('Nodes')} direction="top">
+              <div className={`${validators?.length != 0 ? '' : 'blur-sm'}`}>
+                <Link href={validators?.length != 0 ? nodesLink : ''}>
+                  <div className={iconBtnClass}>
+                    <Image src={icons.NodesIcon} alt={t('Nodes')} width={40} height={40}
+                           className="group-hover/btn:hidden" />
+                    <Image src={icons.NodesIconHovered} alt={t('Nodes')} width={40} height={40}
+                           className="hidden group-hover/btn:block" />
+                  </div>
+                </Link>
+              </div>
+            </Tooltip>
+
             <Tooltip tooltip={t('Transactions')} direction="top">
-              <Link href={`/networks/${chainName}/tx`}>
-                <div className={iconBtnClass}>
-                  <Image src={icons.NetworkProfileHeaderTxs} alt={t('Transactions')} width={40} height={40}
-                         className="group-hover/btn:hidden" />
-                  <Image src={icons.NetworkProfileHeaderTxsHovered} alt={t('Transactions')} width={40} height={40}
-                         className="hidden group-hover/btn:block" />
-                </div>
-              </Link>
+              <div className={`${isAztec ? '' : 'blur-sm'}`}>
+                <Link href={isAztec ? txLink : ''}>
+                  <div className={iconBtnClass}>
+                    <Image src={icons.NetworkProfileHeaderTxs} alt={t('Transactions')} width={40} height={40}
+                           className="group-hover/btn:hidden" />
+                    <Image src={icons.NetworkProfileHeaderTxsHovered} alt={t('Transactions')} width={40} height={40}
+                           className="hidden group-hover/btn:block" />
+                  </div>
+                </Link>
+              </div>
             </Tooltip>
           </div>
 
           <div className="flex gap-6">
             <Tooltip tooltip={t('distribution tooltip')} direction="top">
-              <div className={iconBtnClass}>
-                <Image src={icons.NetworkDistribution} alt={t('distribution tooltip')} width={40} height={40}
-                       className="group-hover/btn:hidden" />
-                <Image src={icons.NetworkDistributionHovered} alt={t('distribution tooltip')} width={40} height={40}
-                       className="hidden group-hover/btn:block" />
-              </div>
-            </Tooltip>
-            <Tooltip tooltip={t('Blocks')} direction="top">
-              <Link href={`/networks/${chainName}/blocks`}>
+              <div className="blur-sm">
                 <div className={iconBtnClass}>
-                  <Image src={icons.NetworkBlocks} alt={t('Blocks')} width={40} height={40}
+                  <Image src={icons.NetworkDistribution} alt={t('distribution tooltip')} width={40} height={40}
                          className="group-hover/btn:hidden" />
-                  <Image src={icons.NetworkBlocksHovered} alt={t('Blocks')} width={40} height={40}
+                  <Image src={icons.NetworkDistributionHovered} alt={t('distribution tooltip')} width={40} height={40}
                          className="hidden group-hover/btn:block" />
                 </div>
-              </Link>
-            </Tooltip>
-            <Tooltip tooltip={t('Apps')} direction="top">
-              <div className={iconBtnClass}>
-                <Image src={icons.NetworkApps} alt={t('Apps')} width={40} height={40}
-                       className="group-hover/btn:hidden" />
-                <Image src={icons.NetworkAppsHovered} alt={t('Apps')} width={40} height={40}
-                       className="hidden group-hover/btn:block" />
               </div>
             </Tooltip>
-            <div className={iconBtnClass}>
-              <Image src={icons.NetworkSupply} alt="" width={40} height={40} className="group-hover/btn:hidden" />
-              <Image src={icons.NetworkSupplyHovered} alt="" width={40} height={40}
-                     className="hidden group-hover/btn:block" />
+
+            <Tooltip tooltip={t('Blocks')} direction="top">
+              <div className={`${isAztec ? '' : 'blur-sm'}`}>
+                <Link href={isAztec ? blockLink : ''}>
+                  <div className={iconBtnClass}>
+                    <Image src={icons.NetworkBlocks} alt={t('Blocks')} width={40} height={40}
+                           className="group-hover/btn:hidden" />
+                    <Image src={icons.NetworkBlocksHovered} alt={t('Blocks')} width={40} height={40}
+                           className="hidden group-hover/btn:block" />
+                  </div>
+                </Link>
+              </div>
+            </Tooltip>
+
+            <Tooltip tooltip={t('Apps')} direction="top">
+              <div className="blur-sm">
+                <div className={iconBtnClass}>
+                  <Image src={icons.NetworkApps} alt={t('Apps')} width={40} height={40}
+                         className="group-hover/btn:hidden" />
+                  <Image src={icons.NetworkAppsHovered} alt={t('Apps')} width={40} height={40}
+                         className="hidden group-hover/btn:block" />
+                </div>
+              </div>
+            </Tooltip>
+
+            <div className="blur-sm">
+              <div className={iconBtnClass}>
+                <Image src={icons.NetworkSupply} alt="" width={40} height={40} className="group-hover/btn:hidden" />
+                <Image src={icons.NetworkSupplyHovered} alt="" width={40} height={40}
+                       className="hidden group-hover/btn:block" />
+              </div>
             </div>
           </div>
         </div>
@@ -131,8 +155,10 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
           <div className={`${centerLogoSizes} relative inline-block hover:scale-105`}>
             <Image src={chainLogo} alt="Chain Logo" fill className="rounded-full object-contain shadow-button" />
             <Link href={`/networks/${chainName}/nodes`}
-              className="group/planet absolute bottom-[-40%] left-[-40%] flex h-[95%] w-[95%] cursor-pointer items-center justify-center">
-              <Tooltip tooltip={t('validator map tooltip', { chainName: chainName.charAt(0).toUpperCase() + chainName.slice(1) })} direction="top">
+                  className="group/planet absolute bottom-[-40%] left-[-40%] flex h-[95%] w-[95%] cursor-pointer items-center justify-center">
+              <Tooltip
+                tooltip={t('validator map tooltip', { chainName: chainName.charAt(0).toUpperCase() + chainName.slice(1) })}
+                direction="top">
                 <Image src={icons.NetworkProfilePlanet} alt="Planet" width={200} height={200}
                        className="group-hover/planet:hidden group-active/planet:hidden" />
                 <Image src={icons.NetworkProfilePlanetHovered} alt="Planet" width={200} height={200}
@@ -158,7 +184,8 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
         </div>
       </div>
     </div>
-  );
+  )
+    ;
 };
 
 export default NetworkProfileHeader;

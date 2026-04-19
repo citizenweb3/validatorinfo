@@ -32,7 +32,7 @@ const EcosystemListItemTags: FC<OwnProps> = ({ tags }) => {
   }
 
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-1">
+    <div className="flex flex-row flex-wrap justify-start gap-1">
       {tags.map((tag) => (
         <div
           key={tag}

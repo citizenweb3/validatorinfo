@@ -9,7 +9,7 @@ import DeveloperActivityTable
   from '@/app/networks/[name]/(network-profile)/dev/developer-activity/developer-activity-table';
 import DevInfoParameters from '@/app/networks/[name]/(network-profile)/dev/dev-info-parameters';
 import PeersSeedsBlocks from '@/app/networks/[name]/(network-profile)/dev/peers-seeds-blocks';
-import SubDescription from '@/components/sub-description';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import { SortDirection } from '@/server/types';
 import githubService from '@/services/github-service';
 import SubTitle from '@/components/common/sub-title';
@@ -45,8 +45,9 @@ const NetworkDevInfoPage: NextPageWithLocale<PageProps> = async ({
 
   return (
     <div>
-      <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
+      </CollapsiblePageHeader>
       <SubTitle text={t('Parameters')} />
       <DevInfoParameters chain={chain} />
       <PeersSeedsBlocks chain={chain} />

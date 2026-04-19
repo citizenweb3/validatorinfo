@@ -63,7 +63,6 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
       activeNodesLength = nodeDistribution?.active ?? null;
     } catch (error) {
       console.error('Failed to fetch node distribution:', error);
-      // Fallback to old method
       try {
         activeNodesLength = await aztecContractService.getActiveAttesterCount(chain.name);
       } catch (e) {
@@ -80,13 +79,14 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
     inactiveNodesLength = nodes && activeNodesLength ? nodes.length - activeNodesLength : null;
   }
 
+  const hasNodeData = activeNodesLength != null || (isAztec && nodeDistribution != null);
   const data = generateData();
 
   return (
     <div className="mt-12">
       <SubTitle text={t('Operator Distributions')} />
       <div className="mt-12 flex flex-row">
-        <div className={isAztec && nodeDistribution ? 'w-1/4' : 'w-1/5'}>
+        <div className={`${isAztec && nodeDistribution ? 'w-1/4' : 'w-1/5'} ${!hasNodeData ? 'blur-sm pointer-events-none' : ''}`}>
           {isAztec && nodeDistribution ? (
             <>
               <DistributionRow
@@ -125,7 +125,7 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
             </>
           )}
         </div>
-        <div className={isAztec && nodeDistribution ? 'w-3/4' : 'w-4/5'}>
+        <div className={`${isAztec && nodeDistribution ? 'w-3/4' : 'w-4/5'} blur-sm pointer-events-none`}>
           <Image
             src={'/img/charts/operator-distribution-coef.svg'}
             width={990}
@@ -135,14 +135,12 @@ const OperatorDistribution: FC<OwnProps> = async ({ chain }) => {
           />
         </div>
       </div>
-      <div className="mt-10 mr-24 flex justify-end">
-        <Link href={`/networks/${chain?.name}/nodes`}>
-          <RoundedButton contentClassName={'text-lg'}>
-            {t('distribution map')}
-          </RoundedButton>
-        </Link>
+      <div className="mt-10 mr-24 flex justify-end blur-sm pointer-events-none">
+        <RoundedButton contentClassName={'text-lg'}>
+          {t('distribution map')}
+        </RoundedButton>
       </div>
-      <div className="mt-16 flex">
+      <div className="mt-16 flex blur-sm pointer-events-none">
         <PowerBarChart data={data} />
       </div>
     </div>

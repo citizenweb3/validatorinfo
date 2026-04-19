@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
+import icons from '@/components/icons';
 import BaseTableRow from '@/components/common/table/base-table-row';
 import BaseTableCell from '@/components/common/table/base-table-cell';
 import TableAvatar from '@/components/common/table/table-avatar';
@@ -19,12 +21,30 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
   const t = await getTranslations('NetworksPage');
   const fdv = item?.name === 'ethereum-sepolia' || item?.name === 'warden-testnet' ? 0 : item?.tokenomics?.fdv;
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
+  const supply = 100;
+
+  const isAztec = item.name === 'aztec';
 
   return (
     <BaseTableRow>
       <BaseTableCell className="group/avatar w-1/3 px-2 py-2 font-sfpro hover:text-highlight">
         <div className="flex items-center justify-between">
-          <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}/overview`} />
+          <div className="flex items-center gap-2">
+            <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}/overview`} />
+            {isAztec && (
+              <Tooltip tooltip={t('Transactions')} direction="top">
+                <Link href={`/networks/${item.name}/tx`} aria-label={`Transactions for ${item.prettyName}`}>
+                  <Image
+                    src={icons.NetworkProfileHeaderTxs}
+                    alt="TX"
+                    width={30}
+                    height={30}
+                    className="opacity-70 hover:opacity-100"
+                  />
+                </Link>
+              </Tooltip>
+            )}
+          </div>
           {!item.supported && (
             <Tooltip tooltip={t('stoppedTooltip')} direction="top">
               <span className="font-handjet text-lg">{t('Stopped')}</span>
@@ -39,6 +59,17 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
         <Tooltip tooltip={`$${fdv?.toLocaleString()}`}>
           <div className="text-center">${formatCash(fdv ?? 0)}</div>
         </Tooltip>
+      </BaseTableCell>
+      <BaseTableCell className="px-2 py-3 font-sfpro text-base">
+        <div className="flex flex-col gap-1.5">
+          <span className="font-handjet text-base">%{supply}</span>
+          <div className="h-2.5 w-full overflow-hidden bg-primary">
+            <div
+              className="h-full bg-gradient-to-r from-[#2a3a1e] to-secondary"
+              style={{ width: `${supply}%` }}
+            />
+          </div>
+        </div>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {health !== undefined && health !== null ? (
@@ -79,15 +110,6 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
             </div>
           )}
         </div>
-      </BaseTableCell>
-      <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center">
-        <Link
-          href={`/networks/${item.name}/tx`}
-          className="text-highlight hover:underline"
-          aria-label={`Show transactions for ${item.prettyName}`}
-        >
-          Show TX
-        </Link>
       </BaseTableCell>
     </BaseTableRow>
   );

@@ -270,8 +270,8 @@
         "text": "Ligue -<logInImg></logInImg>- a sua carteira Web3 para trocas de tokens, recompensas e mais funcionalidades.<br></br>Explore a Biblioteca -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- e partilhe a sua opinião no chat -<rumorsImg></rumorsImg>- p2p Rumor."
       }
     },
-    "Game": "Onde estou?",
-    "Dev": "Modo de desenvolvimento (WIP)"
+    "Game": "Modo Simples",
+    "Dev": "Modo Dev"
   },
   "GlobalPosPage": {
     "Metadata": {
@@ -313,7 +313,34 @@
     "Active": "Ativas",
     "All": "Todas",
     "Stopped": "Parada",
-    "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós"
+    "stoppedTooltip": "A indexação desta rede está atualmente pausada por nós",
+    "Transactions": "Transações",
+    "Table": {
+      "Networks": {
+        "name": "Redes",
+        "hint": ""
+      },
+      "Token Name": {
+        "name": "Nome do Token",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V.",
+        "hint": "Avaliação Totalmente Diluída. Toda a oferta existente multiplicada pelo preço em USD."
+      },
+      "Supply": {
+        "name": "Oferta",
+        "hint": "Oferta total atual em relação à oferta total geral"
+      },
+      "Health": {
+        "name": "Saúde",
+        "hint": "Tempo médio de atividade dos validadores da rede"
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      }
+    }
   },
   "NetworkProfileHeader": {
     "Tabs": {
@@ -398,7 +425,8 @@
     "members tooltip no data": "Dados da comunidade não disponíveis",
     "Transaction Volume": "Volume de transações + MAU",
     "chart unavailable": "Os dados do volume de transações estão indisponíveis no momento. As métricas ao vivo retornarão assim que a manutenção for concluída.",
-    "distribution map": "Mapa de Distribuição"
+    "distribution map": "Mapa de Distribuição",
+    "UnderConstruction": "Página em construção..."
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",
@@ -701,6 +729,7 @@
     "title": "Diretório A-Z de Ecossistemas: Explore Projetos Web3",
     "description": "O Diretório A-Z de Ecossistemas é o seu portal para o universo Web3, apresentando uma lista de projetos e comunidades, incluindo aplicativos descentralizados e plataformas de governança, com informações adicionais como receita e projetos incluídos nesse ecossistema. Este diretório ajuda você a descobrir novos projetos, com estatísticas que destacam o ímpeto e a influência de cada projeto, e pode ser usado para encontrar seu próximo projeto favorito, além de permitir que você entre no nosso Chat P2P para discutir e compartilhar ideias com outros entusiastas do Web3, conectando-o às pessoas e plataformas que estão moldando o futuro do Web3.",
     "customize": "Customizar",
+    "UnderConstruction": "Página em construção...",
     "Table": {
       "Ecosystems": {
         "name": "Ecossistemas",
@@ -753,7 +782,8 @@
     "Token": "Token",
     "Total Supply": "Fornecimento total",
     "TVL": "T.V.L. or Valor Total Bloqueado",
-    "TVS": "T.V.S. ou Valor Total Garantido"
+    "TVS": "T.V.S. ou Valor Total Garantido",
+    "UnderConstruction": "Página em construção..."
   },
   "AIPage": {
     "title": "Pergunte ao Especialista da Validator",
@@ -789,6 +819,44 @@
       "Metrics": "Métricos",
       "Ecosystems": "Ecossistemas",
       "Nodes": "Nodes"
+    },
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Supported Assets": {
+        "name": "Ativos Suportados",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Bateria",
+        "hint": "O estado geral de saúde abrange ações de validadores verificáveis on-chain e off-chain e redes sociais"
+      },
+      "Technical": {
+        "name": "Técnico",
+        "hint": "Oferecer segurança de rede robusta e infraestrutura adicional aumenta a pontuação"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "Uma forte presença digital e numerosos fãs na rede aumentam a pontuação"
+      },
+      "Governance": {
+        "name": "Governança",
+        "hint": "A participação em eventos e iniciativas da vida de chaveiro aumenta a pontuação"
+      },
+      "User": {
+        "name": "Usuário",
+        "hint": "As interações usuário-validador na rede, como avaliações, elevam a pontuação"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": "Valor total garantido. Quantidade total de ativos apostados no validador"
+      }
     }
   },
   "ComparisonPage": {
@@ -1568,7 +1636,8 @@
     },
     "customize": "Personalizar",
     "Submit New Info": "Enviar Novas Informações",
-    "how to run a node on cosmos": "Como executar um nó na Cosmos"
+    "how to run a node on cosmos": "Como executar um nó na Cosmos",
+    "UnderConstruction": "Página em construção..."
   },
   "AccountPage": {
     "Tabs": {

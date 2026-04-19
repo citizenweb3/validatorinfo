@@ -1,12 +1,15 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 
 import Nodes from '@/app/nodes/nodes-list/nodes';
-import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
+import icons from '@/components/icons';
+import ListFilters from '@/components/common/list-filters/list-filters';
 import PageTitle from '@/components/common/page-title';
-import RoundedButton from '@/components/common/rounded-button';
 import TabList from '@/components/common/tabs/tab-list';
 import { validatorsTabs } from '@/components/common/tabs/tabs-data';
-import SubDescription from '@/components/sub-description';
+import Tooltip from '@/components/common/tooltip';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import chainService from '@/services/chain-service';
@@ -58,15 +61,36 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
 
   return (
     <div>
-      <PageHeaderVisibilityWrapper>
-        <TabList page="ValidatorsPage" tabs={validatorsTabs} />
-      </PageHeaderVisibilityWrapper>
-      <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <div className="mb-3 flex justify-end">
-        <RoundedButton href={''} className="font-handjet text-lg">
-          {t('show world node map')}
-        </RoundedButton>
+      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle text={t('title')} />
+      </CollapsiblePageHeader>
+      <div className="flex flex-row items-center justify-between gap-4">
+        <ListFilters
+          expanded
+          isEcosystems
+          isNetworks
+          isNodeStatus
+          isSetPositions
+          isNetworkStage
+          perPage={perPage}
+          selectedEcosystems={ecosystems}
+          selectedNetworks={networks}
+          selectedNodeStatus={nodeStatus}
+          networksDropdown={networksDropdown}
+          allowedEcosystems={allowedEcosystems}
+        />
+        <Tooltip tooltip={t('show world node map')} direction="top">
+          <Link href="" aria-label={t('show world node map')}>
+            <Image
+              src={icons.NetworkProfilePlanet}
+              alt="Planet"
+              width={70}
+              height={70}
+              className="opacity-70 hover:opacity-100"
+            />
+          </Link>
+        </Tooltip>
       </div>
       <Nodes
         page="NodesPage"
@@ -76,8 +100,6 @@ const NodesPage: NextPageWithLocale<PageProps> = async ({ params: { locale }, se
         perPage={perPage}
         sort={{ sortBy, order }}
         currentPage={currentPage}
-        networksDropdown={networksDropdown}
-        allowedEcosystems={allowedEcosystems}
       />
     </div>
   );
