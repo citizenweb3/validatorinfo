@@ -6,7 +6,7 @@ import {
   calculateAztecTps,
 } from '@/server/jobs/utils/aztec-tx-metrics';
 
-const { logInfo, logError, logWarn } = logger('update-aztec-tx-metrics');
+const { logInfo, logError, logWarn } = logger('aztec-tx-metrics');
 
 const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 const SNAPSHOT_LOOKBACK_DAYS = 30;
@@ -116,16 +116,25 @@ const processChain = async (chainName: string): Promise<void> => {
     // txs30d is derived from totalTxs — only compute/write when totalTxs is fresh.
     update.txs30d = await resolveTxs30d(chain.id, currentTotalTxsBigInt);
   }
-  if (txsLast24hResult.status === 'fulfilled') {
-    update.txsLast24h =
-      txsLast24hResult.value !== null && txsLast24hResult.value !== undefined
-        ? txsLast24hResult.value
-        : null;
+  if (
+    txsLast24hResult.status === 'fulfilled' &&
+    txsLast24hResult.value !== null &&
+    txsLast24hResult.value !== undefined
+  ) {
+    update.txsLast24h = txsLast24hResult.value;
   }
-  if (tpsResult.status === 'fulfilled') {
+  if (
+    tpsResult.status === 'fulfilled' &&
+    tpsResult.value !== null &&
+    tpsResult.value !== undefined
+  ) {
     update.tps = tpsResult.value;
   }
-  if (avgFeeResult.status === 'fulfilled') {
+  if (
+    avgFeeResult.status === 'fulfilled' &&
+    avgFeeResult.value !== null &&
+    avgFeeResult.value !== undefined
+  ) {
     update.avgFee = avgFeeResult.value;
   }
 
