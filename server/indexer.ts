@@ -129,6 +129,7 @@ const runServer = async () => {
     { name: 'update-aztec-validators-history', schedule: timers.every6hours },
     { name: 'update-aztec-node-distribution', schedule: timers.every6hours },
     { name: 'update-aztec-total-earned-rewards', schedule: timers.every6hours },
+    { name: 'update-aztec-tx-metrics', schedule: timers.everyDay },
     { name: 'update-proposal-texts', schedule: timers.every10mins },
     { name: 'update-validator-ranks', schedule: timers.every6hours },
   ];
