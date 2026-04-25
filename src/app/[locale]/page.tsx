@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
+import Description from '@/components/common/description';
 import PageTitle from '@/components/common/page-title';
-import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
 import AiChatInline from '@/components/home/ai-chat-inline';
@@ -21,9 +21,9 @@ const Home: NextPageWithLocale = async ({ params: { locale } }) => {
     <div className="flex min-w-0 flex-col">
       <TabList page="HomePage" tabs={mainTabs} />
 
-      <div className="flex w-full min-w-0 flex-col 2xl:max-w-screen-2xl">
+      <div className="flex w-full min-w-0 flex-col">
         <PageTitle text={t('heroTitle')} />
-        <SubTitle text={t('heroSubtitle')} size="h2" className="mt-1" />
+        <Description text={t('heroSubtitle')} className="mt-3 px-4" />
 
         <div className="mt-12 md:mt-8">
           <StatsTable />

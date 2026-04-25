@@ -1,11 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 
 import ComparisonTable from '@/app/comparevalidators/comparison-table';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
+import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
-import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 import nodeService from '@/services/node-service';
 
@@ -32,9 +33,13 @@ const ValidatorComparisonPage: NextPageWithLocale<PageProps> = async ({ params: 
       <PageHeaderVisibilityWrapper>
         <TabList page="HomePage" tabs={mainTabs} />
       </PageHeaderVisibilityWrapper>
-      <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-4 mt-2'} />
-      <ComparisonTable validator={validator} />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle text={t('title')} />
+      </CollapsiblePageHeader>
+      <SubTitle text={t('UnderConstruction')} className={'my-4'} />
+      <div className="blur-sm">
+        <ComparisonTable validator={validator} />
+      </div>
     </div>
   );
 };

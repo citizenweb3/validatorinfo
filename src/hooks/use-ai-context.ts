@@ -81,7 +81,8 @@ export const useAiContext = (): PageContext => {
     // Parse /validators/{id}/... routes
     if (localeRemoved[0] === 'validators' && localeRemoved.length >= 2) {
       context.validatorId = sanitize(localeRemoved[1], SAFE_NAME);
-      context.page = localeRemoved[2] || 'validator-profile';
+      const section = localeRemoved[2];
+      context.page = section ? `validator-${section}` : 'validator-profile';
       return context;
     }
 

@@ -54,7 +54,7 @@ const homeLinks: HomeLinkItem[] = [
   { key: 'web3Login', href: '/profile', logo: 'validatorinfo', isWalletLogin: true },
   {
     key: 'podcast',
-    href: 'https://podcast.staking.citizenweb3.com',
+    href: 'https://podcast.citizenweb3.com',
     logo: 'citizenweb3',
     external: true,
   },

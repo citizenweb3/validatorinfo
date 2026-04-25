@@ -2,8 +2,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 
-import OurManifestoModal from '@/app/about/modals/our-manifesto-modal';
-import OurToolsModal from '@/app/about/modals/our-tools-modal';
+import AboutModalsGroup from '@/app/about/modals/about-modals-group';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import RichPageTitle from '@/components/common/rich-page-title';
 import TabList from '@/components/common/tabs/tab-list';
@@ -41,7 +40,7 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
       </RichPageTitle>
 
       <div>
-        <div className="m-4 w-2/3 whitespace-pre-line pt-2 text-base">
+        <div className="m-4 whitespace-pre-line pt-2 text-base">
           {t.rich('description', {
             homeLink: (chunks) => <TextLink content={chunks} href="/" />,
             citizenLink: (chunks) => <TextLink content={chunks} href="https://www.citizenweb3.com/" target="_blank" />,
@@ -54,15 +53,8 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
             ),
           })}
         </div>
-        <div className="flex flex-row space-x-32">
-          <div>
-            <OurToolsModal />
-          </div>
-          <div>
-            <OurManifestoModal />
-          </div>
-        </div>
-        <div className="relative mt-9 h-10 bg-bgSt">
+        <AboutModalsGroup />
+        <div className="relative mt-40 h-10 bg-bgSt">
           <Image
             src="/img/icons/green-man.png"
             alt="Pixelated, 90s game-style character, robin hood styled, explaining about validatorinfo.com"

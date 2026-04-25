@@ -50,9 +50,11 @@ const StatsTable = async () => {
         ))}
       </div>
 
-      <div className="mt-2 flex w-full flex-col bg-table_row hover:bg-bgHover 2xl:flex-row">
+      <div
+        className="tvl-page-jump mt-2 flex w-full flex-col bg-table_row text-left transition-all duration-75 hover:bg-bgHover 2xl:flex-row"
+      >
         <div
-          className="flex min-h-24 items-center border-b border-bgSt py-7 pl-7 pr-4 font-sfpro text-5xl sm:min-h-16 sm:py-5 sm:pl-5 sm:text-3xl md:min-h-16 md:py-5 md:pl-10 md:pr-3 md:text-lg 2xl:w-32 2xl:border-r">
+          className="flex min-h-24 cursor-pointer items-center border-b border-bgSt py-7 pl-7 pr-4 font-sfpro text-5xl sm:min-h-16 sm:py-5 sm:pl-5 sm:text-3xl md:min-h-16 md:py-5 md:pl-10 md:pr-3 md:text-lg 2xl:w-32 2xl:border-r">
           {t('stats.tvl')}
         </div>
         <div
