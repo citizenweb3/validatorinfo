@@ -1389,6 +1389,8 @@
     "noTransactionsYet": "Ainda não há transações",
     "transactionsWillAppear": "A exibição de transações aparecerá quando as transações começarem na rede",
     "txListLoadError": "Não foi possível carregar as transações. Tente recarregar a página.",
+    "Confirmed": "Confirmadas",
+    "Pending": "Pendentes",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",

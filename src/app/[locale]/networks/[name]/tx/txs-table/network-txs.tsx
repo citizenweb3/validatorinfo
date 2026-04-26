@@ -12,9 +12,10 @@ interface OwnProps extends PagesProps {
   name: string;
   chainName: string;
   coinDecimals?: number;
+  showPending?: boolean;
 }
 
-const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, currentPage, coinDecimals }) => {
+const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, currentPage, coinDecimals, showPending }) => {
   const isAztec = isAztecChainName(chainName);
 
   return (
@@ -32,7 +33,7 @@ const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, curren
             <TableHeaderItem page={page} name="Timestamp" />
           </tr>
         </thead>
-        <NetworkTxsList name={name} chainName={chainName} perPage={perPage} currentPage={currentPage} coinDecimals={coinDecimals} />
+        <NetworkTxsList name={name} chainName={chainName} perPage={perPage} currentPage={currentPage} showPending={showPending} coinDecimals={coinDecimals} />
       </BaseTable>
     </div>
   );
