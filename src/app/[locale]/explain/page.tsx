@@ -1,5 +1,6 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
+import Description from '@/components/common/description';
 import UnderDevelopment from '@/components/common/under-development';
 import PageTitle from '@/components/common/page-title';
 import { NextPageWithLocale } from '@/i18n';
@@ -15,7 +16,7 @@ const ExplainPage: NextPageWithLocale = async ({ params: { locale } }) => {
   return (
     <div className="flex flex-col gap-4">
       <PageTitle text={t('title')} />
-      <div className="m-4 max-w-4xl text-base text-white/70">{t('description')}</div>
+      <Description text={t('description')} className="m-4 max-w-4xl" />
       <UnderDevelopment
         title={underDevelopment('title')}
         description={underDevelopment('description')}

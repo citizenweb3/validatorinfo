@@ -3,11 +3,12 @@ import { Suspense } from 'react';
 
 import { getChains } from '@/actions/chains';
 import Calculator from '@/app/stakingcalculator/calculator';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
+import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { mainTabs } from '@/components/common/tabs/tabs-data';
-import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
@@ -30,11 +31,15 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
       <PageHeaderVisibilityWrapper>
         <TabList page="HomePage" tabs={mainTabs} />
       </PageHeaderVisibilityWrapper>
-      <PageTitle text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mb-6'} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Calculator chainList={chainsWithPrices} />
-      </Suspense>
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle text={t('title')} />
+      </CollapsiblePageHeader>
+      <SubTitle text={t('UnderConstruction')} className={'my-4'} />
+      <div className="blur-sm">
+        <Suspense fallback={<div>Loading...</div>}>
+          <Calculator chainList={chainsWithPrices} />
+        </Suspense>
+      </div>
     </div>
   );
 }

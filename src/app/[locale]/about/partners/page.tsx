@@ -17,11 +17,7 @@ const partners = [
     { title: 'Web3 Society', icon: '/img/icons/partners/web3c.png', link: 'https://t.me/web_3_society' },
     { title: 'Bro n Bro', icon: '/img/icons/partners/bro-n-bro.png', link: 'https://bronbro.io/' },
     { title: 'Cyber Academy', icon: '/img/icons/partners/ca.png', link: 'https://cyberacademy.dev/' },
-  ],
-  [
     { title: 'B.V.C.', icon: '/img/icons/partners/bvc.png', link: 'https://bvc.citizenweb3.com' },
-    { title: 'White Hacker', icon: '/img/icons/partners/wh.png', link: 'https://t.me/WhiteHackerRu' },
-    { title: 'Voting Power', icon: '/img/icons/partners/vp.png', link: 'https://votingpower.org/' },
   ],
 ];
 
@@ -41,9 +37,15 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
       <SubDescription text={t('Partners.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="mt-10">
         {partners.map((partnerList, index) => (
-          <div className="flex mb-20 w-full items-center justify-center" key={index}>
+          <div
+            className="mb-20 grid w-full grid-cols-2 gap-y-10 px-4 md:flex md:items-center md:justify-center md:gap-y-0 md:px-0"
+            key={index}
+          >
             {partnerList.map((partner) => (
-              <div key={partner.link} className="mx-[5%] flex w-[10%] items-center justify-center">
+              <div
+                key={partner.link}
+                className="flex items-center justify-center md:mx-[5%] md:w-[10%]"
+              >
                 <PartnerItem title={partner.title} link={partner.link} icon={partner.icon} />
               </div>
             ))}

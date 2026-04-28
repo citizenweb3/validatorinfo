@@ -66,42 +66,38 @@ const getAztecConfirmedBlockTimestamps = async (blockHeights: number[]): Promise
   return timestamps;
 };
 
-const getAztecTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+const getAztecPendingTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
   try {
-    // Fetch pending txs and total count in parallel
-    const [pendingTxs, totalCount] = await Promise.all([
-      currentPage === 1 ? aztecIndexer.getPendingTxs({}, { cache: 'no-store' }) : Promise.resolve([]),
-      aztecIndexer.getTotalTxEffects(TX_LIST_CACHE),
-    ]);
+    const pendingTxs = await aztecIndexer.getPendingTxs({}, { cache: 'no-store' });
 
-    const pendingItems: TxItem[] = pendingTxs.map((tx) => ({
+    const sorted = [...pendingTxs].sort((a, b) => (b.birthTimestamp ?? 0) - (a.birthTimestamp ?? 0));
+    const totalPages = Math.max(1, Math.ceil(sorted.length / perPage));
+    const offset = (currentPage - 1) * perPage;
+
+    const pageItems: TxItem[] = sorted.slice(offset, offset + perPage).map((tx) => ({
       hash: tx.txHash,
       status: 'pending' as const,
       timestamp: tx.birthTimestamp,
       feePayer: tx.feePayer,
     }));
 
-    // On page 1: pending fill top slots, confirmed fill the rest
-    // On other pages: only confirmed
-    const pendingCount = currentPage === 1 ? pendingItems.length : 0;
-    const confirmedSlotsOnPage = perPage - pendingCount;
+    return { txs: pageItems, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Aztec pending transactions:', error);
+    return { txs: [], totalPages: 1, error: true };
+  }
+};
 
-    if (confirmedSlotsOnPage <= 0) {
-      // Entire page is pending txs (unlikely but handle it)
-      const totalPages = Math.max(1, Math.ceil((totalCount + pendingCount) / perPage));
-      return { txs: pendingItems.slice(0, perPage), totalPages };
-    }
-
-    const totalPages = Math.ceil((totalCount + pendingCount) / perPage);
+const getAztecConfirmedTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+  try {
+    const totalCount = await aztecIndexer.getTotalTxEffects(TX_LIST_CACHE);
+    const totalPages = Math.max(1, Math.ceil(totalCount / perPage));
 
     if (totalCount === 0) {
-      return { txs: pendingItems, totalPages: Math.max(1, totalPages) };
+      return { txs: [], totalPages };
     }
 
-    // For confirmed txs: adjust offset to account for pending slots on page 1
-    const confirmedOffset = currentPage === 1
-      ? 0
-      : (currentPage - 1) * perPage - pendingCount;
+    const confirmedOffset = (currentPage - 1) * perPage;
     const batchIndex = Math.floor(confirmedOffset / ITEMS_PER_BATCH);
     const offsetInBatch = confirmedOffset % ITEMS_PER_BATCH;
 
@@ -113,7 +109,7 @@ const getAztecTxs = async (currentPage: number, perPage: number): Promise<TxsRes
       batch = await aztecIndexer.getUiTxEffects({ to: lowestBlock }, TX_LIST_CACHE);
     }
 
-    const pageTxEffects = batch.slice(offsetInBatch, offsetInBatch + confirmedSlotsOnPage);
+    const pageTxEffects = batch.slice(offsetInBatch, offsetInBatch + perPage);
     const confirmedBlockTimestamps = await getAztecConfirmedBlockTimestamps(
       pageTxEffects.map((tx) => Number(tx.blockNumber)),
     );
@@ -126,18 +122,19 @@ const getAztecTxs = async (currentPage: number, perPage: number): Promise<TxsRes
       timestamp: confirmedBlockTimestamps.get(Number(tx.blockNumber)),
     }));
 
-    const allTxs = [...pendingItems, ...confirmedItems].sort((a, b) => {
-      return (b.timestamp ?? 0) - (a.timestamp ?? 0);
-    });
-
-    return {
-      txs: allTxs,
-      totalPages: Math.max(1, totalPages),
-    };
+    return { txs: confirmedItems, totalPages };
   } catch (error) {
     console.error('Failed to fetch Aztec transactions:', error);
     return { txs: [], totalPages: 1, error: true };
   }
+};
+
+const getAztecTxs = async (
+  currentPage: number,
+  perPage: number,
+  showPending = false,
+): Promise<TxsResponse> => {
+  return showPending ? getAztecPendingTxs(currentPage, perPage) : getAztecConfirmedTxs(currentPage, perPage);
 };
 
 /** Shorter timeout for cascading hash lookups (default 30s is too long for 3 sequential calls) */
@@ -175,11 +172,12 @@ const getTxsByChainName = async (
   chainName: string,
   currentPage: number = 1,
   perPage: number = 20,
+  showPending: boolean = false,
 ): Promise<TxsResponse> => {
   const normalizedChainName = chainName.toLowerCase();
 
   if (normalizedChainName === 'aztec') {
-    return getAztecTxs(currentPage, perPage);
+    return getAztecTxs(currentPage, perPage, showPending);
   }
 
   return { txs: [], totalPages: 1 };

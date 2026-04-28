@@ -7,7 +7,9 @@ import { FC, MouseEvent, useState } from 'react';
 
 import { TabOptions } from '@/components/common/tabs/tabs-data';
 import WalletModal from '@/components/wallet-connect/wallet-modal';
+import { AI_CHAT_OPEN_EVENT, AiChatOpenEventDetail } from '@/components/ai-chat/ai-explain-button';
 import { useWallet } from '@/context/WalletContext';
+import { emitWindowEvent } from '@/hooks/useWindowEvent';
 import { usePathname } from '@/i18n';
 
 interface OwnProps {
@@ -32,8 +34,15 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
 
   const isHighlighted = isActive || highlighted;
   const isWalletLogin = href === '/profile';
+  const isAiLink = href === '/ai';
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (isAiLink) {
+      event.preventDefault();
+      emitWindowEvent<AiChatOpenEventDetail>(AI_CHAT_OPEN_EVENT, { message: '' });
+      return;
+    }
+
     if (!isWalletLogin || walletData) {
       return;
     }
@@ -57,10 +66,46 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
             : `border-r border-t border-bgSt bg-table_row ${menuButtonRaisedShadow}`
         } ${menuButtonHoverShadow} ${menuButtonPressedShadow} group relative flex cursor-pointer flex-col items-center overflow-hidden p-0.5 text-sm transition-width duration-300 hover:bg-card hover:text-highlight active:border-transparent active:bg-card`}
       >
-        <div
-          className="relative flex h-full w-full flex-grow flex-row flex-nowrap items-center overflow-hidden text-base font-semibold leading-none group-hover:text-highlight"
-        >
-          <div className="absolute md:left-5 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
+        {isOpened ? (
+          <div
+            className="relative flex h-full w-full flex-grow flex-row flex-nowrap items-center overflow-hidden text-base font-semibold leading-none group-hover:text-highlight"
+          >
+            <div className="absolute md:left-5 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
+              {icon && (
+                <Image
+                  src={icon}
+                  alt={name}
+                  width={120}
+                  height={120}
+                  priority
+                  className="min-w-32 max-w-32 object-contain sm:min-w-16 sm:max-w-16 md:min-w-10 md:max-w-10"
+                />
+              )}
+            </div>
+            <div
+              className={`${isActive ? 'block' : 'hidden group-hover:block'} absolute md:left-5 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:transform`}
+            >
+              {iconHovered && (
+                <Image
+                  src={iconHovered}
+                  alt={name}
+                  width={120}
+                  height={120}
+                  priority
+                  className="min-w-32 max-w-32 object-contain sm:min-w-16 sm:max-w-16 md:min-w-10 md:max-w-10"
+                />
+              )}
+            </div>
+            <div
+              className={`${
+                isHighlighted ? 'text-highlight' : ''
+              } ml-36 text-nowrap font-handjet text-7xl tracking-wide group-hover:text-highlight sm:ml-20 sm:text-5xl md:ml-14 md:text-lg`}
+            >
+              {t(name as 'Validators')}
+            </div>
+          </div>
+        ) : (
+          <div className="relative flex h-full w-full items-center justify-center">
             {icon && (
               <Image
                 src={icon}
@@ -68,13 +113,9 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
                 width={120}
                 height={120}
                 priority
-                className="min-w-32 max-w-32 object-contain sm:min-w-16 sm:max-w-16 md:min-w-10 md:max-w-10"
+                className={`${isActive ? 'hidden' : 'block group-hover:hidden'} h-8 w-8 object-contain`}
               />
             )}
-          </div>
-          <div
-            className={`${isActive ? 'block' : 'hidden group-hover:block'} absolute md:left-5 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:transform`}
-          >
             {iconHovered && (
               <Image
                 src={iconHovered}
@@ -82,18 +123,11 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
                 width={120}
                 height={120}
                 priority
-                className="min-w-32 max-w-32 object-contain sm:min-w-16 sm:max-w-16 md:min-w-10 md:max-w-10"
+                className={`${isActive ? 'block' : 'hidden group-hover:block'} h-8 w-8 object-contain`}
               />
             )}
           </div>
-          <div
-            className={`${
-              isHighlighted ? 'text-highlight' : ''
-            } ml-36 text-nowrap font-handjet text-7xl tracking-wide group-hover:text-highlight sm:ml-20 sm:text-5xl md:ml-14 md:text-lg`}
-          >
-            {t(name as 'Validators')}
-          </div>
-        </div>
+        )}
       </Link>
       {isWalletLogin && <WalletModal isOpened={isWalletModalOpened} onClose={() => setIsWalletModalOpened(false)} />}
     </>

@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useMemo, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { cn } from '@/utils/cn';
@@ -144,12 +144,12 @@ const SUGGESTION_MAP: Record<string, SuggestionKey[]> = {
   nodes: [
     'Node count',
     'Top validators',
-    'Key metrics',
-    'Network overview',
     'Validator infrastructure',
     'Decentralization leaders',
     'Best bare-metal validators',
     'Most reliable',
+    'Help set up hardware',
+    'Network overview',
   ],
 };
 
@@ -160,30 +160,34 @@ const DEFAULT_SUGGESTIONS: SuggestionKey[] = [
   'APR comparison',
   'Most private validators',
   'Explain off-grid staking',
+  'Help set up hardware',
   'Compare ecosystems',
   'Staking security tips',
+  'Key metrics',
+  'Most reliable',
+  'Lowest commission',
+  'Recent proposals',
+  'Token price',
+  'Validator infrastructure',
+  'Decentralization leaders',
+  'Best bare-metal validators',
+  'Staking rewards',
 ];
 
 const AiChatSuggestions: FC<OwnProps> = ({ context, onSelect, inline = false }) => {
   const t = useTranslations('AiChat');
-  const [shuffleKey, setShuffleKey] = useState(0);
+  const [suggestions, setSuggestions] = useState<SuggestionKey[]>(() =>
+    (SUGGESTION_MAP[context.page] || DEFAULT_SUGGESTIONS).slice(0, 4),
+  );
 
   useEffect(() => {
-    setShuffleKey(Date.now());
-  }, []);
-
-  const suggestions = useMemo(() => {
     const pool = [...(SUGGESTION_MAP[context.page] || DEFAULT_SUGGESTIONS)];
-    let seed = shuffleKey % 2147483647;
-
     for (let i = pool.length - 1; i > 0; i--) {
-      seed = (seed * 16807 + 0) % 2147483647;
-      const j = seed % (i + 1);
+      const j = Math.floor(Math.random() * (i + 1));
       [pool[i], pool[j]] = [pool[j], pool[i]];
     }
-
-    return pool.slice(0, 4);
-  }, [context.page, shuffleKey]);
+    setSuggestions(pool.slice(0, 4));
+  }, [context.page]);
 
   return (
     <div

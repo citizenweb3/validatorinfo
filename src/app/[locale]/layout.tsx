@@ -12,6 +12,7 @@ import AiChatFloatingButton from '@/components/ai-chat/ai-chat-floating-button';
 import Footer from '@/components/footer';
 import Header from '@/components/header/header';
 import NavigationBar from '@/components/navigation-bar/navigation-bar';
+import { HeaderCollapsedProvider } from '@/context/HeaderCollapsedContext';
 import { WalletProviderComponent } from '@/context/WalletContext';
 import { locales } from '@/i18n';
 
@@ -111,21 +112,23 @@ export default async function LocaleLayout({
     <WalletProviderComponent>
       <ThemeProvider defaultTheme="dark" attribute="class">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <div className="mt-4 flex flex-grow flex-row">
-              <div className="hidden md:block">
-                <NavigationBar />
-              </div>
-              <div className="ml-14 flex flex-grow">
-                <div className="flex w-full flex-col">
-                  <div className="flex flex-grow flex-col">{children}</div>
-                  <Footer />
-                  <AiChatFloatingButton />
+          <HeaderCollapsedProvider>
+            <div className="flex min-h-screen flex-col transition-transform duration-75 has-[.tvl-page-jump:active]:translate-y-10">
+              <Header />
+              <div className="mt-4 flex flex-grow flex-row gap-4 md:gap-8">
+                <div className="hidden md:block">
+                  <NavigationBar />
+                </div>
+                <div className="flex min-w-0 flex-grow">
+                  <div className="flex w-full min-w-0 flex-col">
+                    <div className="flex min-w-0 flex-grow flex-col">{children}</div>
+                    <Footer />
+                    <AiChatFloatingButton />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </HeaderCollapsedProvider>
           <AiChatProvider />
         </NextIntlClientProvider>
         <ToastContainer

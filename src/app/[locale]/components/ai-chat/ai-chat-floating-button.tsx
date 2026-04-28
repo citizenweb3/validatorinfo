@@ -12,6 +12,7 @@ const HIDDEN_PATHS = ['/', '/help'];
 
 const AiChatFloatingButton = () => {
   const t = useTranslations('Navbar');
+  const tAi = useTranslations('AiChat');
   const pathname = usePathname();
   const [hidden, setHidden] = useState(false);
 
@@ -24,7 +25,7 @@ const AiChatFloatingButton = () => {
   }
 
   const handleClick = () => {
-    emitWindowEvent<AiChatOpenEventDetail>(AI_CHAT_OPEN_EVENT, { message: '' });
+    emitWindowEvent<AiChatOpenEventDetail>(AI_CHAT_OPEN_EVENT, { message: tAi('Explain this page') });
   };
 
   return (

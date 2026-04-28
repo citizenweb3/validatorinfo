@@ -52,6 +52,8 @@
     "Settings": "Configurações",
     "Lucky!?": "Sortudo!?",
     "Help": "Ajuda",
+    "Expand header": "Expandir cabeçalho",
+    "Collapse header": "Recolher cabeçalho",
     "Co-Create & Support": "Co-Criar & Apoiar",
     "CoCreate": {
       "tagline": "<github>Código aberto. Sem anúncios. Respeito à privacidade. Auto-hospedado!</github>. Estamos fazendo isso de forma independente — e vai continuar assim. O Explorer que a Web3 merece!",
@@ -283,6 +285,7 @@
     "total": "Total T.V.S. VS Pagamento de recompensas globais.",
     "cap": "Total de capitalização de criptomoedas VS Valor total garantido",
     "status": "Status da Web 3",
+    "UnderConstruction": "Página em construção...",
     "Footer": {
       "total validators": "Validadores",
       "total networks": "Redes",
@@ -305,7 +308,8 @@
     "earnings": "d Ganhos",
     "downloading validators": "Descarregamento de validadores...",
     "please choose network": "Escolha uma Rede",
-    "not supported yet": "Ainda não suportado"
+    "not supported yet": "Ainda não suportado",
+    "UnderConstruction": "Página em construção..."
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Descobrir as Redes Blockchain e a sua Avaliação",
@@ -767,12 +771,13 @@
   },
   "RumorsPage": {
     "title": "Chat P2P e Fórum: Conecte-se com Stakers e Mineradores Web3",
-    "description": "Junte-se ao nosso chat P2P anônimo ou visite o Fórum — um centro seguro e fácil de usar para os entusiastas da web3 discutirem redes de blockchain, pools de mineração e rumores de validadores. Ligue-se a outros delegados e mineiros, partilhe ideias sobre estratégias de staking e educação sobre criptomoedas. Use o Chat P2P para conversas rápidas em tempo real, ou vá ao Fórum para discussões aprofundadas e tópicos permanentes.",
+    "description": "Anon, como vais? Escolhe um nome de usuário e \"start spreading the news, I'm leaving today...\".\n\nDesculpa, Anon, problemas de IA. Onde estávamos? Ah sim, escolhe um nome de usuário e começa a espalhar rumores. Simples assim. Não há histórico de chat nem identidades. Tragam de volta os velhos tempos!",
     "Start": "Iniciar Chat",
     "Visit Forum": "Visitar Fórum",
     "forumDescription": "Prefere discussões estruturadas? Junte-se ao fórum da comunidade para tópicos aprofundados.",
     "or": "ou",
-    "noNameError": "Por favor, digite o nome de usuário para começar"
+    "noNameError": "Por favor, digite o nome de usuário para começar",
+    "UnderConstruction": "Página em construção..."
   },
   "MetricsPage": {
     "title": "Glossário de Métricas A-Z: Entenda as Principais Métricas do Web3",
@@ -877,6 +882,7 @@
     "Choose Providers": "Escolher provedores",
     "Profile": "Perfil",
     "Token": "Token",
+    "Asset": "Ativo",
     "Compare": "Comparar",
     "Health Change": "Mudança de saúde",
     "Technical Score Changes": "Pontuação técnica",
@@ -889,7 +895,8 @@
     "TVS Growth": "Crescimento da TVS",
     "Fan Growth": "Crescimento de fãs",
     "Add": "Adicionar",
-    "Ecosystems": "Ecossistemas"
+    "Ecosystems": "Ecossistemas",
+    "UnderConstruction": "Página em construção..."
   },
   "ProfilePage": {
     "Metadata": {
@@ -956,16 +963,32 @@
     },
     "description": "Eu sou o Validator Info, trazido à vida pela equipe <citizenLink>Citizen Web3</citizenLink>. Sou um explorador e agregador multichain focado em validadores, para diversas redes que prosperam no web3. Seja em cadeias de Proof of Work ou Proof of Stake, eu tenho todos os detalhes que você precisa sobre validadores, pools de mineração e as próprias redes.\n\nMeu objetivo? Capacitar você com as melhores informações sobre validadores e dados de pools de mineração, para que você possa navegar pelo universo web3 com confiança. Estou aqui para simplificar sua jornada no web3. Com métricas em tempo real e uma interface fácil de usar, ajudo você a encontrar o validador ou pool de mineração que atenda às suas necessidades.\n\nAinda estou em desenvolvimento e adoraria receber seu feedback à medida que eu cresço. Siga-me <xLink>no X</xLink>, explore meus <ghLink>repositórios do GitHub</ghLink> ou deixe um comentário com suas ideias — estou sempre aberto a sugestões! Juntos, podemos fazer deste recurso o ponto de referência para entusiastas do web3, como você.\n\nCitizen Web3 é um membro ativo da galáxia web3. <stakingLink>Staking com nossa self-hosted</stakingLink> infraestrutura baremetal permite que a CW3 trabalhe em vários projetos de bem público e contribua para o desenvolvimento do web3.",
     "title": "Sobre Validator Info: O seu guia para validadores Web3 e pools de mineração",
-    "Tools": [
-      "<link>Citizen Web3 Podcast</link>: Descobrir os contribuidores da Web3 para a descentralização da cadeia de blocos, a segurança da rede e a escalabilidade das aplicações",
-      "<link>Web3 Society</link>: Comunidade Web3 Baseada em Valores de Descentralização. Aprendendo a esquecer o tribalismo e a amar a tecnologia. Futuro DAO",
-      "<link>Validator Infra</link>: Infraestrutura de validação bare-metal auto-hospedada. Capacidade fora da grelha. Oferta de pontos finais, arquivo, instantâneos e retransmissão",
-      "<link>B.V.C.</link>: Baremetal Valdiator Coven. Comunidade de Operadores de Redes Blockcahin Auto-hospedadas e Baremetal",
-      "(NA no momento) Bazaar: NFTs, Merchandise, Decentraland"
-    ],
+    "Tools": {
+      "validatorInfo": {
+        "title": "ValidatorInfo.com",
+        "body": "O explorador Web3 mais ambicioso da Terra. Métricas em tempo real de validadores, pools de mineração, staking e redes, com agentes de IA autônomos ao vivo integrados ao produto:\n\n• Painéis interativos, rankings, calculadoras e comparações\n• Camada de gamificação (liderada pelo nosso agente de IA soberano) projetada para transformar dados em diversão, recompensas e crescimento viral\n• Explorador de Blockchain Web3 e Painel Interativo\n• Métricas on-chain de Validadores, Pools de Mineração, Tokens e Redes"
+      },
+      "staking": {
+        "title": "Citizen Web3 Staking e Infraestrutura Bare-Metal",
+        "body": "Validadores com prioridade de privacidade, energia renovável e capacidade off-grid, e pilha completa de infraestrutura:\n\n• Endpoints, arquivos, snapshots, relayers\n• Foco em redes de privacidade\n• Auto-hospedado, não custodial, resistente à censura por design\n• Cashback"
+      },
+      "aiWorkforce": {
+        "title": "Plataforma de Força de Trabalho de Agentes de IA",
+        "body": "Não apenas operamos validadores — construímos e integramos equipes autônomas de IA para qualquer projeto. Seja Web3, Web2 ou negócio real:\n\n• ValidatorInfo.com é nosso exemplo principal ao vivo\n• Agentes de IA como Serviço: Descoberta, Implantação, Resultados\n• Forças de trabalho de IA autônomas\n• Personalizado para o seu negócio"
+      },
+      "publicGoods": {
+        "title": "Outros Bens Públicos",
+        "body": "• <podcastLink>Citizen Web3 Podcast</podcastLink>: Entrevistas profundas com construtores, pensadores e operadores\n• <societyLink>Web3 Society</societyLink>: Comunidade antitribal orientada por valores (Telegram + futura DAO). Aprendendo a esquecer o tribalismo e a amar a tecnologia\n• <privacyLink>Privacy Forum</privacyLink>: Junte-se à luta!\n• <bvcLink>Baremetal Validator Coven (B.V.C.)</bvcLink>: Base de conhecimento e comunidade para operadores auto-hospedados\n• <indexerLink>Chain Data Indexer</indexerLink>: Framework de indexação de blockchain orientado a eventos e de alto desempenho\n• <bazaarLink>Bazaar</bazaarLink>: NFTs, produtos, Metaverso e mais. Em desenvolvimento ou em andamento\n• <manuscriptsLink>Manuscripts</manuscriptsLink>: Nosso blog. Pesquisa aberta, artigos, X spaces e guias para capacitar usuários e operadores em todos os ecossistemas"
+      }
+    },
     "Our tools": "Ferramentas",
     "Our Manifesto": "Manifesto",
-    "Manifesto": "Deste ponto de vista distante, a Terra pode não parecer ter nenhum interesse particular. Mas para nós é diferente. Considere novamente naquele ponto. Isso está aqui. Essa é a casa. Somos nós. Nele, todos que você ama, todos que você conhece, todos de quem você já ouviu falar, todos os seres humanos que já existiram, viveram suas vidas. O conjunto de nossa alegria e sofrimento, milhares de religiões, ideologias e doutrinas econômicas confiantes, cada caçador e coletor, cada herói e covarde, cada criador e destruidor de civilização, cada rei e camponês, cada jovem casal apaixonado, cada mãe e cada pai, filho esperançoso, inventor e explorador, todo professor de moral, todo político corrupto, todo “superstar”, todo “líder supremo”, todo santo e pecador na história de nossa espécie viveram lá – em um grão de poeira suspenso em um raio de sol... Nossas posturas, nossa auto-importância imaginada, a ilusão de que temos alguma posição privilegiada no Universo, são desafiadas por este ponto de luz pálida. Nosso planeta é um pontinho solitário na grande escuridão cósmica envolvente. Na nossa obscuridade, em toda esta vastidão, não há indícios de que a ajuda virá de outro lugar para nos salvar de nós mesmos...\n\nExtraído de 'Um Pálido Ponto Azul', de Carl Sagan.\n\n\nAcreditamos na liberdade acima das necessidades. Acreditamos em possibilidades acima da aplicação. Acreditamos em valores acima dos desejos. Acreditamos que a censura matou mais pessoas do que qualquer outra coisa combinada. Valorizamos a honestidade e valorizamos a verdade. Valorizamos o amor e valorizamos todas as criaturas existentes. Valorizamos a inteligência e valorizamos a descentralização.\n\nAcreditamos na comunicação, que permite aos participantes pensar, decidir e votar pessoalmente sobre qualquer tema e assunto. Pensamos que o conteúdo deve esforçar-se por não ter opiniões subjetivas e ajudar os seus consumidores a formar uma opinião, o que resultará numa melhor discussão e, por sua vez, num consenso mais eficiente.\n\nAcreditamos que as blockchains não são simplesmente uma forma de nações digitais. Mas, blockchains abertos e verificáveis \u200B\u200Bsão um tanto semelhantes a colmeias naturais, florestas, padrões da natureza que nos permitem comunicar melhor. Sem comunicação, estamos condenados, e o consenso descentralizado é uma ferramenta que pode e irá ajudar aqueles que desejam fazer do nosso pálido ponto azul um lugar um pouco melhor.\n\nE QUE O CÓDIGO ESTEJA COM VOCÊ!",
+    "Manifesto": {
+      "intro": "Não estamos aqui para perseguir o hype. Estamos aqui para construir a descentralização.\n\nEstamos aqui para construir a camada de infraestrutura que sobrevive a todos os ciclos — soberana, preservadora de privacidade, sustentável e agora inteligente.\n\nAcreditamos na liberdade acima das necessidades, nas possibilidades acima da imposição e nos valores acima dos desejos.\n\nA partir de um grão de poeira suspenso em um raio de sol, a humanidade alcança as estrelas por meio do código. Pretendemos dar a esse código liberdade, resiliência e alegria.\n\nNosso planeta é um pálido ponto azul...",
+      "quote": "Nosso planeta é uma mota solitária... Em nossa obscuridade, em toda essa vastidão, não há qualquer indício de que a ajuda virá de outro lugar para nos salvar de nós mesmos.",
+      "attribution": "— Carl Sagan",
+      "outro": "Vislumbramos uma Web3 definida pela comunicação, respeito entre ecossistemas, privacidade e crescimento coletivo.\n\nEstamos construindo essa ajuda — um validador, um explorador, uma IA autônoma de cada vez.\n\nQue o código esteja com você."
+    },
     "Podcast": {
       "title": "Citizen Web3 Podcast: Conversas com aqueles que constroem o Web3",
       "description": "Bem-vindo ao Citizen Web3 Podcast! Entrevistamos os construtores, pensadores e visionários que impulsionam o futuro descentralizado, abordando insights sobre validadores, dicas de staking e grandes ideias no web3. Seja você um expert em staking ou esteja apenas começando, há algo aqui para despertar sua curiosidade. Confira nossos episódios mais recentes e inscreva-se para se manter atualizado.",
@@ -1005,7 +1028,7 @@
     "title": "Perfil de validador: Redes Suportadas",
     "description": "A aba Networks oferece uma visão abrangente de todas as redes blockchain suportadas por este validador, apresentando uma tabela com estatísticas-chave, como APR esperado, comissões, valor total protegido, tempo de atividade e delegadores ativos. Isso é ideal para os stakers que buscam a melhor rede ou para aqueles curiosos sobre o alcance do validador, permitindo que você compare o desempenho entre as cadeias e escolha o melhor local para atingir seus objetivos de staking. Para informações mais detalhadas, confira nosso Diretório de Redes A-Z. Essas estatísticas são cruciais para entender o desempenho do validador em diferentes ecossistemas, ajudando você a tomar decisões informadas no mundo multichain.",
     "Validator": "Validador",
-    "Node": "N\u00f3",
+    "Node": "Nó",
     "Table": {
       "Network": {
         "name": "Rede",
@@ -1366,6 +1389,8 @@
     "noTransactionsYet": "Ainda não há transações",
     "transactionsWillAppear": "A exibição de transações aparecerá quando as transações começarem na rede",
     "txListLoadError": "Não foi possível carregar as transações. Tente recarregar a página.",
+    "Confirmed": "Confirmadas",
+    "Pending": "Pendentes",
     "Table": {
       "Type of Tx": {
         "name": "Tipo de Tx",
@@ -1701,6 +1726,7 @@
     "Welcome": "Olá! Sou o assistente de IA do ValidatorInfo. Veja o que posso fazer:\n\n• Buscar validadores por nome e mostrar suas métricas\n• Comparar redes e mostrar estatísticas\n• Explicar propostas de governança e resultados de votação\n• Mostrar tokenomics, APR, TVS e dados de mercado\n• Fornecer links para páginas relevantes\n\nPergunte-me qualquer coisa!",
     "Welcome Chain": "Olá! Sou seu assistente de IA para {chainName}. Posso ajudar com:\n\n• Validadores, staking e comissões\n• Propostas de governança e votação\n• Métricas da rede, APR e tokenomics\n• Blocos, transações e dados de nós\n\nO que você gostaria de saber?",
     "Explain with AI": "Explicar com IA",
+    "Explain this page": "Explique do que se trata esta página",
     "AI unavailable": "A IA está temporariamente indisponível. Tente novamente mais tarde.",
     "Rate limited": "Você está enviando mensagens muito rápido. Aguarde um momento e tente novamente.",
     "Empty response": "Não consegui gerar uma resposta. Tente reformular sua pergunta.",

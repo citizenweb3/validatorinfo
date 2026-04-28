@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { FC, useCallback, useState } from 'react';
 
 import { TabOptions } from '@/components/common/tabs/tabs-data';
@@ -114,17 +113,6 @@ const NavigationBar: FC<OwnProps> = ({ isGameMenuMode = false, activeSection = 0
       <div className="mb-4 mt-6" />
 
       {renderGroup(toolsTabs, 'Tools', 'tools')}
-
-      <div className="mt-7 flex justify-center">
-        <Image
-          src="/img/icons/navbar/menu-avatar.png"
-          alt="validatorinfo.com logo"
-          width={106}
-          height={100}
-          className={isOpened ? 'w-28 grayscale drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]' : 'w-12 grayscale drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)]'}
-          priority
-        />
-      </div>
     </div>
   );
 };

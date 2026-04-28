@@ -1,25 +1,29 @@
 'use client';
 
+import { Node } from '@prisma/client';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import { getStakingRates } from '@/actions/staking';
+import SpreadModal from '@/app/about/modals/spread-modal';
 import { DropdownListItem } from '@/app/stakingcalculator/choose-dropdown';
 import ChooseNetwork from '@/app/stakingcalculator/choose-network';
 import ChooseValidator from '@/app/stakingcalculator/choose-validator';
 import StakingResults from '@/app/stakingcalculator/staking-results';
-import { ChainItem, StakingRates } from '@/types';
 import Button from '@/components/common/button';
 import RoundedButton from '@/components/common/rounded-button';
-import { Node } from '@prisma/client';
-import { useTranslations } from 'next-intl';
-import SpreadModal from '@/app/about/modals/spread-modal';
-import { useRouter } from 'next/navigation';
+import { ChainItem, StakingRates } from '@/types';
 
 interface OwnProps {
   chainList: ChainItem[];
 }
+
+const iconSize = 'h-10 min-h-10 w-10 min-w-10';
+const cardClassName = 'border-r border-t border-bgSt bg-table_row shadow-menu-button-rest';
+const placeholderCard = `${cardClassName} flex min-h-[170px] items-center justify-center p-6 text-lg`;
 
 const Calculator: FC<OwnProps> = ({ chainList }) => {
   const t = useTranslations('CalculatorPage');
@@ -47,8 +51,6 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
     setSelectedDate(new Date());
   };
 
-  const iconSize = 'h-10 min-h-10 w-10 min-w-10'; 
-  
   const handleChainChange = (chain?: ChainItem) => {
     if (!chain) return;
     setChain(chain);
@@ -80,72 +82,85 @@ const Calculator: FC<OwnProps> = ({ chainList }) => {
     getValidatorsFromAPI();
   };
 
+  const handleClearChain = () => {
+    setChain(undefined);
+    setValidator(undefined);
+    setValidatorsList(undefined);
+    setValidatorsError(false);
+  };
+
+  const handleClearValidator = () => {
+    setValidator(undefined);
+  };
+
   return (
-    <div>
-      <div className="mt-4 flex flex-row space-x-12 text-lg">
-        <div className="flex-[2]">
-          <ChooseNetwork value={chain?.id} onChange={handleChainChange} chains={chainList} />
-        </div>
-        <div className="relative w-[37.5rem]">
-          {stakingRates && <StakingResults values={stakingRates} chain={chain} />}
-          <div className="mt-3 flex items-center justify-between border-b border-bgSt">
-            <div className="flex items-center">
-              <div className="border-r border-bgSt">
-                <div className={`${iconSize} mx-6 my-2 bg-calendar bg-contain`} />
-              </div>
-              <DatePicker
-                selected={selectedDate}
-                onChange={(date: Date | null) => {
-                  if (date) {
-                    setSelectedDate(date);
-                  }
-                }}
-                dateFormat="dd/MM/yyyy"
-                popperClassName="custom-popper"
-                className="ml-3.5 cursor-pointer bg-background font-handjet text-lg hover:text-highlight focus:outline-none active:text-base" 
-              />
-            </div>
-            <div
-              onClick={handleResetDate}
-              className={`${iconSize} cursor-pointer bg-reset bg-contain hover:bg-reset_h active:bg-reset_a`}
-            />
+    <div className="mx-auto mt-4 flex w-full max-w-3xl flex-col gap-3 text-lg">
+      {stakingRates && <StakingResults values={stakingRates} chain={chain} />}
+      <div className={`${cardClassName} flex items-center justify-between`}>
+        <div className="flex items-center">
+          <div className="border-r border-bgSt">
+            <div className={`${iconSize} mx-6 my-2 bg-calendar bg-contain`} />
           </div>
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date: Date | null) => {
+              if (date) {
+                setSelectedDate(date);
+              }
+            }}
+            dateFormat="dd/MM/yyyy"
+            popperClassName="custom-popper"
+            className="ml-3.5 cursor-pointer bg-transparent font-handjet text-lg hover:text-highlight focus:outline-none active:text-base"
+          />
         </div>
-        <div className="flex-[2] text-lg">
-          {chain ? (
-            validatorsError ? (
-              <div className="border-b border-bgSt pl-4 text-lg">{t('not supported yet')}</div>
-            ) : validatorsList ? (
-              <>
-                <ChooseValidator
-                  value={validator}
-                  onChange={handleValidatorChange}
-                  list={validatorsList}
-                />
-                {validator && (
-                  <div className="flex flex-row justify-between">
-                    <Button className="relative z-20 h-16 w-9">
-                      <div className="min-h-8 min-w-8 bg-star bg-contain" />
-                    </Button>
-                    <div className="mt-4 flex flex-col items-end justify-end space-y-4">
-                      <RoundedButton onClick={() => {
+        <div
+          onClick={handleResetDate}
+          className={`${iconSize} mx-4 cursor-pointer bg-reset bg-contain hover:bg-reset_h active:bg-reset_a`}
+        />
+      </div>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        <ChooseNetwork
+          value={chain?.id}
+          onChange={handleChainChange}
+          onClear={handleClearChain}
+          chains={chainList}
+        />
+        <div className="flex flex-col gap-3">
+          {!chain && <div className={placeholderCard}>{t('please choose network')}</div>}
+          {chain && validatorsError && (
+            <div className={placeholderCard}>{t('not supported yet')}</div>
+          )}
+          {chain && !validatorsError && !validatorsList && (
+            <div className={placeholderCard}>{t('downloading validators')}</div>
+          )}
+          {chain && !validatorsError && validatorsList && (
+            <>
+              <ChooseValidator
+                value={validator}
+                onChange={handleValidatorChange}
+                onClear={handleClearValidator}
+                list={validatorsList}
+              />
+              {validator && (
+                <div className="flex flex-row justify-between">
+                  <Button className="relative z-20 h-16 w-9">
+                    <div className="min-h-8 min-w-8 bg-star bg-contain" />
+                  </Button>
+                  <div className="flex flex-col items-end justify-end space-y-4">
+                    <RoundedButton
+                      onClick={() => {
                         if (validator) {
                           router.push(`/comparevalidators?validator=${validator}`);
                         }
                       }}
-                      >
-                        Compare
-                      </RoundedButton>
-                      <SpreadModal />
-                    </div>
+                    >
+                      Compare
+                    </RoundedButton>
+                    <SpreadModal />
                   </div>
-                )}
-              </>
-            ) : (
-              <div className="border-b border-bgSt pl-4 text-lg">{t('downloading validators')}</div>
-            )
-          ) : (
-            <div className="border-b border-bgSt pl-4 text-lg">{t('please choose network')}</div>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>
