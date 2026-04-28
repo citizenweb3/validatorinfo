@@ -19,7 +19,7 @@ askAgent server action                 ← src/actions/ai-chat.ts
   │
   ▼
 Vercel AI SDK generateText()
-  │  model: Gemini 2.5 Flash           ← ai-service.ts
+  │  model: Gemini 3 Flash (preview)   ← ai-service.ts
   │  system prompt with page context   ← ai-service.ts buildSystemPrompt()
   │  tools: aiTools                    ← tools/tools.ts
   │
