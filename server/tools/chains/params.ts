@@ -49,6 +49,12 @@ export const ecosystemParams = [
       'https://raw.githubusercontent.com/paritytech/gift-app/d77349c97e125e7e76456e478716de42ffee2666/src/images/polkadot-circle.png',
     tags: ['Parachains', 'PoS', 'Interoperability', 'Substrate'],
   },
+  {
+    name: 'logos',
+    prettyName: 'Logos',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/logos/logos.svg',
+    tags: ['Privacy', 'PoS', 'Cryptarchia', 'Anonymous Proposers'],
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {
@@ -1243,6 +1249,32 @@ const chainParams: Record<string, AddChainProps> = {
     twitterUrl: 'https://x.com/aztecnetwork',
     discordInviteCode: 'aztec',
     tags: ['Aztec Ecosystem', 'Testnet'],
+  },
+
+  'logos-testnet': {
+    rang: 3,
+    ecosystem: 'logos',
+    hasValidators: false,
+    name: 'logos-testnet',
+    prettyName: 'Logos Testnet',
+    shortDescription: 'Privacy-preserving PoS testnet with anonymous block proposers (Cryptarchia + Blend)',
+    chainId: 'logos-testnet-v0.1.2',
+    bech32Prefix: '',
+    coinDecimals: 0,
+    coinGeckoId: '',
+    coinType: 0,
+    denom: '',
+    minimalDenom: '',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/logos/logos.svg',
+    nodes: [
+      { type: 'rpc', url: 'https://rpc.logos-testnet.citizenweb3.com', provider: 'citizenweb3' },
+      { type: 'indexer', url: 'https://indexer.testnet-logos.citizenweb3.com', provider: 'citizenweb3' },
+    ],
+    mainRepo: 'https://github.com/logos-blockchain/logos-blockchain',
+    docs: 'https://logos.co/testnet-v01-faqs',
+    githubUrl: 'https://github.com/logos-blockchain',
+    twitterUrl: 'https://x.com/Logos_State',
+    tags: ['Logos Ecosystem', 'Testnet', 'Privacy', 'Cryptarchia'],
   },
 
   ethereum: {
