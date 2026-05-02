@@ -10,7 +10,7 @@ interface OwnProps {
 }
 
 const MenuBurgerButton: FC<OwnProps> = ({ isOpened, onToggle }) => {
-  const base = 'group shadow-button hover:bg-[#272727] hover:text-highlight active:mt-1 active:bg-background active:shadow-none';
+  const base = 'group shadow-button hover:bg-card hover:text-highlight active:mt-1 active:bg-background active:shadow-none';
   const opened = 'border border-secondary active:border-transparent';
   const closed = 'border border-transparent border-r-bgSt border-t-bgSt hover:border hover:border-secondary active:border-transparent';
 

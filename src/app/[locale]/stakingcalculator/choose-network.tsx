@@ -9,10 +9,11 @@ import { ChainItem } from '@/types';
 interface OwnProps {
   value?: number;
   onChange: (value?: ChainItem) => void;
+  onClear?: () => void;
   chains: ChainItem[];
 }
 
-const ChooseNetwork: FC<OwnProps> = ({ value, onChange, chains }) => {
+const ChooseNetwork: FC<OwnProps> = ({ value, onChange, onClear, chains }) => {
   const t = useTranslations('CalculatorPage');
 
   const chainList = useMemo(() => {
@@ -25,6 +26,8 @@ const ChooseNetwork: FC<OwnProps> = ({ value, onChange, chains }) => {
       list={chainList}
       selected={value}
       onChange={(value) => onChange(chains.find((v) => v.id === value))}
+      onClear={onClear}
+      variant="card"
       modalClassName="min-w-80 max-w-96"
     />
   );

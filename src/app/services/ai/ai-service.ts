@@ -16,6 +16,45 @@ const MAX_TOKENS = 8192;
 
 const model = google('gemini-3-flash-preview');
 
+const PAGE_DESCRIPTIONS: Record<string, string> = {
+  home: 'ValidatorInfo landing page. Shows aggregate stats (total validators, networks, ecosystems) and a TVL summary.',
+  networks: 'Table of all blockchain networks indexed by ValidatorInfo. Each row = one chain with its metrics (validators count, TVS, APR, active proposals, etc.). Not a dashboard — a filterable/sortable table.',
+  overview: 'Single network overview page. Shows the chain\'s key metrics, recent blocks, validators summary and governance snapshot.',
+  validators: 'Table of validators. On global /validators it lists all validators across chains; on /networks/{name}/validators it lists validators of that specific chain. Columns: moniker, stake, commission, uptime, voting power. Not a dashboard — a filterable/sortable table.',
+  'validator-detail': 'Detail page for one validator on a specific network. Shows the validator\'s address, commission, delegations, self-stake, uptime and rewards history for that chain.',
+  'validator-profile': 'Global profile of a validator across all the networks where they operate. Aggregates metrics and links to per-network detail pages.',
+  'validator-networks': 'List of networks where this specific validator operates. One row per chain with per-chain metrics (stake, commission, uptime).',
+  'validator-governance': 'Governance voting history of this specific validator across networks. Shows which proposals they voted on and how.',
+  'validator-metrics': 'Performance metrics of this specific validator (uptime, missed blocks, commission history).',
+  governance: 'Network governance page. Lists proposals (active, passed, rejected) for the current chain with status and tallies.',
+  'proposal-detail': 'Single governance proposal page. Shows proposal title, description, type, tally, voting period and per-validator votes.',
+  blocks: 'Table of recent blocks of the current chain. Columns: height, proposer, tx count, timestamp.',
+  'block-detail': 'Detail page for a single block. Shows block hash, proposer, transactions list, timestamps and raw/JSON views.',
+  transactions: 'Table of recent transactions of the current chain. Columns: hash, status, fees, block, timestamp.',
+  'transaction-detail': 'Detail page for a single transaction. Shows status, fees, logs/events and block reference; for Aztec: private hashes, nullifiers, public data writes.',
+  nodes: 'Nodes list page. On /nodes — global cross-network node list; on /networks/{name}/nodes — nodes of the current chain. Shows geolocation and provider info.',
+  tokenomics: 'Tokenomics of the current chain: supply breakdown, inflation, bonded ratio.',
+  stats: 'Aggregated statistics page for the current chain.',
+  dev: 'Developer activity page for the current chain (commits, repos, contributors).',
+  'token-flow': 'Token flow visualization for the current chain (mint, transfer, burn flows).',
+  'main-validators': 'Main validators entry point (top-level validator routing).',
+  p2pchat: 'Peer-to-peer chat / rumor board page.',
+  address: 'Account profile page for a specific address on a chain. Shows tokens, transactions, governance votes and analytics for that account.',
+  'mining-pools': 'Mining pools listing page. Currently under development.',
+  ecosystems: 'List of blockchain ecosystems (Cosmos, Polkadot, Ethereum, etc.). Each ecosystem groups several chains with shared tech.',
+  stakingcalculator: 'Staking rewards calculator. User picks a chain and amount, sees projected rewards.',
+  comparevalidators: 'Side-by-side validator comparison tool. User selects two or more validators, sees their metrics compared.',
+  web3stats: 'Aggregate Web3 statistics page (totals across ecosystems and chains).',
+  library: 'Curated learning resources split by audience (validators, delegators, developers, curious).',
+  lucky: 'Random-discovery entry point (feeling-lucky navigation).',
+  metrics: 'Glossary of metrics used across ValidatorInfo (APR, uptime, TVS, commission, etc.) with definitions.',
+  ai: 'Dedicated AI assistant page (full-screen chat).',
+  about: 'About Us page. Describes the Citizen Web3 team, tools, partners and manifesto.',
+  profile: 'Authenticated user\'s profile page.',
+  help: 'Help / FAQ page.',
+  explain: 'Meta page explaining what ValidatorInfo is and how to use it.',
+};
+
 const buildSystemPrompt = (context: PageContext): string => {
   const lines: string[] = [
     'You know blockchain staking inside out. Validators, APR, governance, network health — you pull live data from ValidatorInfo and give straight answers.',
@@ -50,7 +89,16 @@ const buildSystemPrompt = (context: PageContext): string => {
   }
 
   if (context.page) {
-    contextParts.push(`Current page: ${context.page}.`);
+    const pageDescription = PAGE_DESCRIPTIONS[context.page];
+    contextParts.push(
+      pageDescription
+        ? `Current page: ${context.page} — ${pageDescription}`
+        : `Current page: ${context.page}.`,
+    );
+  }
+
+  if (context.locale) {
+    contextParts.push(`User's UI language: ${context.locale} (ISO code). Respond in this language unless the user writes in another one.`);
   }
 
   if (contextParts.length > 0) {
@@ -121,6 +169,7 @@ const buildSystemPrompt = (context: PageContext): string => {
   lines.push(
     'Rules:',
     '- Respond in the same language as the user\'s message.',
+    '- When the user asks to "explain this page" or similar, use the "Current page" description above verbatim to identify the page type (table, profile, detail, list, calculator, etc.). Never guess the page type — if the description says "table", do not call it a "dashboard".',
     '- When mentioning specific chains, validators, proposals, transactions, or blocks, include markdown links to their pages on ValidatorInfo.',
     '- Do not provide financial advice or investment recommendations.',
     '- Do not expose internal database structure, SQL queries, or system internals.',

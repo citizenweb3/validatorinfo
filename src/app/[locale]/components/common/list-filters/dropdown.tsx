@@ -27,12 +27,13 @@ const Dropdown: FC<OwnProps> = ({filterValues, title, selectedValue, onChanged }
         className="h-8 max-h-8"
         isActive={selectedValue.length > 0}
         activeType="switcher"
+        variant="menu"
       >
         {title}
         <TriangleButton direction={isOpened ? 't' : 'b'} />
       </Button>
       {isOpened && (
-        <div className="absolute top-8 z-40 flex-col">
+        <div className="absolute top-8 z-40 flex max-h-96 min-w-40 flex-col overflow-y-auto whitespace-nowrap">
           {filterValues.map((item) => (
             <Button
               key={item.value}
@@ -40,10 +41,11 @@ const Dropdown: FC<OwnProps> = ({filterValues, title, selectedValue, onChanged }
               onClick={() => onChanged(item.value)}
               isActive={selectedValue.indexOf(item.value) !== -1}
               className="text-base"
-              contentClassName="max-h-7 w-40 min-w-40"
+              contentClassName="max-h-7 min-w-40 whitespace-nowrap px-3"
               activeType="switcher"
+              variant="menu"
             >
-              <div className="z-20 -my-1 flex flex-row items-center justify-center text-base font-medium">
+              <div className="z-20 -my-1 flex flex-row items-center justify-center whitespace-nowrap text-base font-medium">
                 {item.title}
               </div>
             </Button>

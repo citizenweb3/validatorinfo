@@ -16,6 +16,8 @@ const SocialStatistics: FC<OwnProps> = async ({ chain }) => {
   const telegramMembers = chain?.telegramMembers ?? 0;
   const discordMembers = chain?.discordMembers ?? 0;
   const membersTotal = telegramMembers + discordMembers;
+  const hasFollowers = !!chain?.twitterFollowers && chain.twitterFollowers > 0;
+  const hasMembers = membersTotal > 0;
 
   const tooltipParts: string[] = [];
   if (telegramMembers > 0) tooltipParts.push(`Telegram: ${telegramMembers.toLocaleString()}`);
@@ -27,32 +29,38 @@ const SocialStatistics: FC<OwnProps> = async ({ chain }) => {
       <SubTitle text={t('Social')} />
       <div className="mx-auto mt-16 flex w-fit items-center justify-between rounded border border-bgSt bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] px-4 py-1 shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black]">
         <div className="font-sfpro text-lg">{t('price of active user')}:</div>
-        <div className="ml-24 px-24 font-handjet text-xl text-highlight">N/A</div>
+        <div className="ml-24 px-24 font-handjet text-xl text-highlight blur-sm pointer-events-none">$124,438</div>
       </div>
       <div className="mt-12 flex w-full flex-row justify-center gap-6">
         <ToolTip tooltip={t('followers tooltip')} direction={'top'}>
-          <MetricsCardItem
-            title={t('followers')}
-            data={chain?.twitterFollowers ?? '-'}
-            className={'pb-2 pt-2.5'}
-            dataClassName={'my-5'}
-          />
+          <div className={!hasFollowers ? 'blur-sm pointer-events-none' : ''}>
+            <MetricsCardItem
+              title={t('followers')}
+              data={hasFollowers ? chain.twitterFollowers : '50'}
+              className={'pb-2 pt-2.5'}
+              dataClassName={'my-5'}
+            />
+          </div>
         </ToolTip>
         <ToolTip tooltip={t('believers tooltip')} direction={'top'}>
-          <MetricsCardItem
-            title={t('believers')}
-            data={t('under development')}
-            className={'pb-2 pt-2.5'}
-            dataClassName={'my-5'}
-          />
+          <div className="blur-sm pointer-events-none">
+            <MetricsCardItem
+              title={t('believers')}
+              data={'50'}
+              className={'pb-2 pt-2.5'}
+              dataClassName={'my-5'}
+            />
+          </div>
         </ToolTip>
         <ToolTip tooltip={membersTooltip} direction={'top'}>
-          <MetricsCardItem
-            title={t('members')}
-            data={membersTotal > 0 ? membersTotal.toLocaleString() : '-'}
-            className={'pb-2 pt-2.5'}
-            dataClassName={'my-5'}
-          />
+          <div className={!hasMembers ? 'blur-sm pointer-events-none' : ''}>
+            <MetricsCardItem
+              title={t('members')}
+              data={hasMembers ? membersTotal.toLocaleString() : '50'}
+              className={'pb-2 pt-2.5'}
+              dataClassName={'my-5'}
+            />
+          </div>
         </ToolTip>
       </div>
     </div>

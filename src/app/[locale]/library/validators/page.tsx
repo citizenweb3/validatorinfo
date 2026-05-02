@@ -3,13 +3,13 @@ import { getTranslations } from 'next-intl/server';
 import LibraryTagsFilter from '@/app/library/library-tags-filter';
 import Letter from '@/app/metrics/letter';
 import Letters from '@/app/metrics/letters';
-import PageTitle from '@/components/common/page-title';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import PlusButton from '@/components/common/plus-button';
-import RoundedButton from '@/components/common/rounded-button';
-import { NextPageWithLocale } from '@/i18n';
-import SubDescription from '@/components/sub-description';
-import TextLink from '@/components/common/text-link';
 import RichPageTitle from '@/components/common/rich-page-title';
+import RoundedButton from '@/components/common/rounded-button';
+import SubTitle from '@/components/common/sub-title';
+import TextLink from '@/components/common/text-link';
+import { NextPageWithLocale } from '@/i18n';
 
 interface PageProps {
   params: NextPageWithLocale;
@@ -22,38 +22,42 @@ const LibraryValidatorsPage: NextPageWithLocale<PageProps> = async ({ params: { 
 
   return (
     <div>
-      <RichPageTitle>
-        <div className="m-4">
-          {t.rich('Validators.title', {
-            validatorInfoLink: (chunks) => <TextLink content={chunks} href="/" />,
-          })}
+      <CollapsiblePageHeader description={t('Validators.description')}>
+        <RichPageTitle>
+          <div>
+            {t.rich('Validators.title', {
+              validatorInfoLink: (chunks) => <TextLink content={chunks} href="/" />,
+            })}
+          </div>
+        </RichPageTitle>
+      </CollapsiblePageHeader>
+      <SubTitle text={t('UnderConstruction')} className={'my-4'} />
+      <div className="blur-sm">
+        <LibraryTagsFilter selectedTags={tags} />
+        <Letters />
+        <div className="flex flex-row items-center justify-between">
+          <Letter letter="H" />
+          <RoundedButton href={''} className="font-handjet text-lg">
+            {t('Submit New Info')}
+          </RoundedButton>
         </div>
-      </RichPageTitle>
-      <SubDescription text={t('Validators.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <LibraryTagsFilter selectedTags={tags} />
-      <Letters />
-      <div className="flex flex-row items-center justify-between">
-        <Letter letter="H" />
-        <RoundedButton href={''} className="font-handjet text-lg">
-          {t('Submit New Info')}
-        </RoundedButton>
-      </div>
-      <div className="mt-6">
-        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
-          <div>{t('how to run a node on cosmos')}</div>
-          <PlusButton size="sm" isOpened={false} />
-        </div>
-        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
-          <div>Text</div>
-          <PlusButton size="sm" isOpened={false} />
-        </div>
-        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
-          <div>Text</div>
-          <PlusButton size="sm" isOpened={false} />
-        </div>
-        <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
-          <div>Text</div>
-          <PlusButton size="sm" isOpened={false} />
+        <div className="mt-6">
+          <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+            <div>{t('how to run a node on cosmos')}</div>
+            <PlusButton size="sm" isOpened={false} />
+          </div>
+          <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+            <div>Text</div>
+            <PlusButton size="sm" isOpened={false} />
+          </div>
+          <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+            <div>Text</div>
+            <PlusButton size="sm" isOpened={false} />
+          </div>
+          <div className="flex w-1/2 items-center justify-between border-b border-primary p-5 px-5 text-base font-bold">
+            <div>Text</div>
+            <PlusButton size="sm" isOpened={false} />
+          </div>
         </div>
       </div>
     </div>

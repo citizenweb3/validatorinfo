@@ -50,6 +50,11 @@ const buildHeaders = (customHeaders?: HeadersInit): HeadersInit => {
     Accept: 'application/json',
   };
 
+  const apiToken = process.env.AZTEC_INDEXER_API_TOKEN;
+  if (apiToken) {
+    headers.Authorization = `Bearer ${apiToken}`;
+  }
+
   if (customHeaders) {
     if (customHeaders instanceof Headers) {
       customHeaders.forEach((value, key) => {

@@ -44,17 +44,19 @@ const MetricsCardItem: FC<OwnProps> = ({
       2xl:w-[250px]
       ${className}`)
     }>
-      <div className={`${titleClassName} text-center text-base text-highlight`}>{title}</div>
+      <div className={`${titleClassName} flex items-center justify-center gap-1 text-center text-base text-highlight`}>
+        {title}
+        {isModal && (
+          <MetricsCardsModal
+            title={modalTitle}
+            list={Array.isArray(modalItem) ? modalItem : undefined}
+            item={!Array.isArray(modalItem) ? String(modalItem) : undefined}
+            plusButtonSize={plusButtonSize}
+          />
+        )}
+      </div>
       <div className={`${dataClassName} font-handjet text-lg`}>{isPercents ? `${data}%` : data}</div>
       {addLineData && <div className={`${addLineClassName}`}>{addLineData}</div>}
-      {isModal && (
-        <MetricsCardsModal
-          title={modalTitle}
-          list={Array.isArray(modalItem) ? modalItem : undefined}
-          item={!Array.isArray(modalItem) ? String(modalItem) : undefined}
-          plusButtonSize={plusButtonSize}
-        />
-      )}
     </div>
   );
 };

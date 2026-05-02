@@ -12,7 +12,7 @@ const ValidatorLeftPanel: FC<OwnProps> = ({ isChart }) => {
   return (
     <div className="flex max-w-96 flex-grow flex-col">
       <ValidatorItemRow left className="!min-h-20 border-b border-bgSt font-bold">
-        {t('Choose Providers')}
+        {t('Choose Providers')}:
       </ValidatorItemRow>
       <ValidatorItemRow left>{t('Health Change')}</ValidatorItemRow>
       <ValidatorItemRow left>{t('Technical Score Changes')}</ValidatorItemRow>

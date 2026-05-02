@@ -38,7 +38,18 @@ const ValidatorNodes: FC<OwnProps> = async ({
 
   const totalPages = Math.ceil(totalCount / perPage);
 
-  const nodeTypeMapping: Record<string, string> = {
+  type NodeTitleKey =
+    | 'rpc nodes'
+    | 'rest nodes'
+    | 'grpc nodes'
+    | 'websocket nodes'
+    | 'indexer nodes'
+    | 'lcd nodes'
+    | 'masp indexer nodes'
+    | 'interface nodes'
+    | 'others nodes';
+
+  const nodeTypeMapping: Record<string, NodeTitleKey> = {
     rpc: 'rpc nodes',
     rest: 'rest nodes',
     grpc: 'grpc nodes',
@@ -51,7 +62,7 @@ const ValidatorNodes: FC<OwnProps> = async ({
 
   const nodesList = Object.entries(groupedByType)
     .map(([type, typeNodes]) => ({
-      title: nodeTypeMapping[type] || `${type} nodes`,
+      title: nodeTypeMapping[type] ?? ('others nodes' as NodeTitleKey),
       type: type,
       nodes: typeNodes as InfrastructureNode[],
     }))

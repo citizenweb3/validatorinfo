@@ -4,6 +4,7 @@ import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 import TotalTxsMetrics from '@/app/networks/[name]/tx/total-txs-metrics';
 import NetworkTxs from '@/app/networks/[name]/tx/txs-table/network-txs';
+import TxStatusToggle from '@/app/networks/[name]/tx/tx-status-toggle';
 import Link from 'next/link';
 import SubDescription from '@/components/sub-description';
 
@@ -32,7 +33,9 @@ const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
   const t = await getTranslations({ locale, namespace: 'TotalTxsPage' });
   const currentPage = parseInt((q.p as string) || '1');
   const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
+  const showPending = q.status === 'pending';
   const chain = await chainService.getByName(name);
+  const isAztec = name.toLowerCase() === 'aztec';
 
   return (
     <div className="mb-24">
@@ -51,7 +54,12 @@ const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <TotalTxsMetrics chainName={name} />
-      <NetworkTxs chainName={name} name={name} page={'TotalTxsPage'} perPage={perPage} currentPage={currentPage} coinDecimals={chain?.params?.coinDecimals} />
+      {isAztec && (
+        <div className="mt-10 flex justify-end">
+          <TxStatusToggle />
+        </div>
+      )}
+      <NetworkTxs chainName={name} name={name} page={'TotalTxsPage'} perPage={perPage} currentPage={currentPage} showPending={showPending} coinDecimals={chain?.params?.coinDecimals} />
     </div>
   );
 };

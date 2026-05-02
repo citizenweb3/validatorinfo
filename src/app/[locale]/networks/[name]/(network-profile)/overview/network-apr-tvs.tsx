@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic';
 import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
-import UnderDevelopment from '@/components/common/under-development';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import aztecDbService from '@/services/aztec-db-service';
 import validatorService from '@/services/validator-service';
@@ -38,7 +38,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
     : 0;
 
   return (
-    <div className="mt-16">
+    <div className="mt-4">
       <SubTitle text={t('Historical Trend')} />
       <div className="mt-12 flex flex-row items-center gap-6">
         <div className="w-1/5 rounded bg-table_row">
@@ -77,8 +77,15 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
           {isAztec ? (
             <NetworkTvsAztecChart initialData={chartData} />
           ) : (
-            <UnderDevelopment
-              title="Data is currently unavailable. Live metrics will return once maintenance is complete." size="lg" />
+            <div className="blur-sm">
+              <Image
+                src="/img/charts/network-apr-tvs-chart.svg"
+                alt="Historical Trend Chart"
+                width={1050}
+                height={300}
+                className="w-full"
+              />
+            </div>
           )}
         </div>
       </div>

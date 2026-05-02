@@ -29,7 +29,9 @@ const ChartButtons: FC<OwnProps> = ({
   const t = useTranslations('ComparisonPage');
   return (
     <div className="flex space-x-4">
-      {ecosystems && <Dropdown filterValues={ecosystemsDropdown} title={t('Ecosystems')} selectedValue={[]} onChanged={() => {}} />}
+      {ecosystems && (
+        <Dropdown filterValues={ecosystemsDropdown} title={t('Ecosystems')} selectedValue={[]} onChanged={() => {}} />
+      )}
       {!onlyDays && (
         <Button
           isActive={isChart}
@@ -43,18 +45,18 @@ const ChartButtons: FC<OwnProps> = ({
         </Button>
       )}
       {buttons.map((name) => (
-          <Button
-            key={name}
-            isActive={chartType === name}
-            activeType="switcher"
-            contentClassName="py-0 px-2 max-h-6 text-base hover:text-highlight"
-            onClick={() => {
-              onTypeChanged(name);
-            }}
-          >
-            {t(name as 'Weekly' | 'Monthly' | 'Daily' | 'Yearly')}
-          </Button>
-        ))}
+        <Button
+          key={name}
+          isActive={chartType === name}
+          activeType="switcher"
+          contentClassName="py-0 px-2 max-h-6 text-base hover:text-highlight"
+          onClick={() => {
+            onTypeChanged(name);
+          }}
+        >
+          {t(name as 'Weekly' | 'Monthly' | 'Daily' | 'Yearly')}
+        </Button>
+      ))}
     </div>
   );
 };

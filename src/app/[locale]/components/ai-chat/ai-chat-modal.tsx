@@ -43,11 +43,10 @@ const AiChatModal: FC<OwnProps> = ({ isOpen, onClose, initialMessage }) => {
   }, [isOpen, initialMessage, sendMessage]);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    }
+    document.body.classList.toggle('overflow-hidden', isOpen);
+
     return () => {
-      document.body.style.overflow = '';
+      document.body.classList.remove('overflow-hidden');
     };
   }, [isOpen]);
 
@@ -65,25 +64,24 @@ const AiChatModal: FC<OwnProps> = ({ isOpen, onClose, initialMessage }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+    <div className="fixed inset-0 z-overlay flex items-center justify-center bg-black/50 p-3 backdrop-blur-sm md:p-4">
       <div
         ref={modalRef}
         role="dialog"
         aria-modal="true"
         aria-label={t('AI Assistant')}
-        className="flex w-full max-w-[800px] flex-col border border-bgSt bg-background shadow-3xl"
-        style={{ height: 'min(75vh, 700px)' }}
+        className="flex h-3/4 max-h-ai-chat-modal w-full max-w-ai-chat-modal flex-col border border-bgSt bg-background shadow-3xl"
       >
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-bgSt px-4 py-3">
+        <div className="flex items-center justify-between border-b border-bgSt px-3 py-2.5 md:px-4 md:py-3">
           <div className="flex items-center gap-2">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-highlight">
               <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
               <path d="M18 14l1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3z" />
             </svg>
-            <span className="font-handjet text-lg text-highlight">{t('AI Assistant')}</span>
+            <span className="font-handjet text-xl text-highlight md:text-lg">{t('AI Assistant')}</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5 md:gap-3">
             {messages.length > 0 && (
               <RoundedButton onClick={clearMessages} contentClassName="!px-4 !py-1 text-sm">
                 {t('New chat')}
@@ -92,7 +90,7 @@ const AiChatModal: FC<OwnProps> = ({ isOpen, onClose, initialMessage }) => {
             <button
               type="button"
               onClick={onClose}
-              className="h-9 w-9 bg-close bg-contain hover:bg-close_h active:bg-close_a"
+              className="h-8 w-8 bg-close bg-contain hover:bg-close_h active:bg-close_a md:h-9 md:w-9"
               aria-label="Close"
               tabIndex={0}
             />
@@ -108,7 +106,7 @@ const AiChatModal: FC<OwnProps> = ({ isOpen, onClose, initialMessage }) => {
         )}
 
         {/* Input */}
-        <AiChatInput onSend={sendMessage} isLoading={isLoading} />
+        <AiChatInput onSend={sendMessage} isLoading={isLoading} autoFocus />
       </div>
     </div>
   );

@@ -14,13 +14,14 @@ interface OwnProps {
   name: string;
   chainName: string;
   coinDecimals?: number;
+  showPending?: boolean;
 }
 
-const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentPage = 1, coinDecimals }) => {
+const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentPage = 1, coinDecimals, showPending = false }) => {
   const t = await getTranslations('TotalTxsPage');
 
   if (isAztecChainName(chainName)) {
-    const { txs, totalPages, error } = await TxService.getTxsByChainName(chainName, currentPage, perPage);
+    const { txs, totalPages, error } = await TxService.getTxsByChainName(chainName, currentPage, perPage, showPending);
 
     if (txs.length === 0) {
       return (

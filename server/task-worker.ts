@@ -18,6 +18,7 @@ import updateAztecL1Contracts from '@/server/jobs/update-aztec-l1-contracts';
 import updateAztecTvsHistory from '@/server/jobs/update-aztec-tvs-history';
 import updateAztecAprHistory from '@/server/jobs/update-aztec-apr-history';
 import updateAztecTotalEarnedRewards from '@/server/jobs/update-aztec-total-earned-rewards';
+import updateAztecTxMetrics from '@/server/jobs/update-aztec-tx-metrics';
 import { updateAztecValidatorsHistory } from '@/server/jobs/update-aztec-validators-history';
 import { updateAztecNodeDistribution } from '@/server/jobs/update-aztec-node-distribution';
 import updateAztecSequencerStake from '@/server/jobs/update-aztec-sequencer-stake';
@@ -199,6 +200,9 @@ async function runTask() {
         break;
       case 'update-aztec-total-earned-rewards':
         await updateAztecTotalEarnedRewards();
+        break;
+      case 'update-aztec-tx-metrics':
+        await updateAztecTxMetrics();
         break;
       case 'update-aztec-validators-history':
         await updateAztecValidatorsHistory('aztec');

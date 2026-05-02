@@ -17,11 +17,19 @@ interface OwnProps {
 
 const AiChatMessages: FC<OwnProps> = ({ messages, isLoading, context, onLinkClick }) => {
   const t = useTranslations('AiChat');
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const messagesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, isLoading]);
+    if (messages.length === 0 && !isLoading) return;
+
+    const messagesElement = messagesRef.current;
+    if (!messagesElement) return;
+
+    messagesElement.scrollTo({
+      top: messagesElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  }, [messages.length, isLoading]);
 
   const handleClick = useCallback(
     (e: MouseEvent<HTMLDivElement>) => {
@@ -38,9 +46,9 @@ const AiChatMessages: FC<OwnProps> = ({ messages, isLoading, context, onLinkClic
     : t('Welcome');
 
   return (
-    <div className="flex-1 overflow-y-auto p-4" onClick={handleClick}>
+    <div ref={messagesRef} className="min-h-0 flex-1 overflow-y-auto p-6 sm:p-5 md:p-4" onClick={handleClick}>
       {messages.length === 0 && (
-        <div className="mb-4 whitespace-pre-wrap rounded border border-bgSt bg-bgHover p-3 text-sm text-gray-400">
+        <div className="mb-4 whitespace-pre-wrap rounded border border-bgSt bg-bgHover p-6 text-5xl leading-snug text-gray-400 sm:p-4 sm:text-3xl md:p-3 md:text-sm">
           {welcomeText}
         </div>
       )}
@@ -56,7 +64,7 @@ const AiChatMessages: FC<OwnProps> = ({ messages, isLoading, context, onLinkClic
         >
           <div
             className={cn(
-              'max-w-[85%] break-words px-3 py-2 text-sm',
+              'max-w-full break-words px-6 py-5 text-5xl leading-snug sm:px-4 sm:py-3 sm:text-3xl md:max-w-prose md:px-3 md:py-2 md:text-sm',
               message.role === 'user' && 'whitespace-pre-wrap bg-highlight/20 text-white',
               message.role === 'assistant' && 'border border-bgSt bg-bgHover text-gray-300',
             )}
@@ -68,20 +76,18 @@ const AiChatMessages: FC<OwnProps> = ({ messages, isLoading, context, onLinkClic
 
       {isLoading && (
         <div className="mb-3 flex justify-start">
-          <div className="border border-bgSt bg-bgHover px-3 py-2 text-sm text-gray-400">
+          <div className="border border-bgSt bg-bgHover px-6 py-5 text-5xl leading-snug text-gray-400 sm:px-4 sm:py-3 sm:text-3xl md:px-3 md:py-2 md:text-sm">
             <span className="inline-flex items-center gap-1">
               {t('AI is thinking')}
               <span className="inline-flex gap-0.5">
-                <span className="h-1 w-1 animate-bounce rounded-full bg-gray-400" />
-                <span className="h-1 w-1 animate-bounce rounded-full bg-gray-400 [animation-delay:150ms]" />
-                <span className="h-1 w-1 animate-bounce rounded-full bg-gray-400 [animation-delay:300ms]" />
+                <span className="h-4 w-4 animate-bounce rounded-full bg-gray-400 sm:h-3 sm:w-3 md:h-1 md:w-1" />
+                <span className="h-4 w-4 animate-bounce rounded-full bg-gray-400 sm:h-3 sm:w-3 md:h-1 md:w-1" />
+                <span className="h-4 w-4 animate-bounce rounded-full bg-gray-400 sm:h-3 sm:w-3 md:h-1 md:w-1" />
               </span>
             </span>
           </div>
         </div>
       )}
-
-      <div ref={bottomRef} />
     </div>
   );
 };

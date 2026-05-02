@@ -8,10 +8,11 @@ import ChooseDropdown, { DropdownListItem } from '@/app/stakingcalculator/choose
 interface OwnProps {
   value?: string | number;
   onChange: (value?: string) => void;
+  onClear?: () => void;
   list: DropdownListItem[];
 }
 
-const ChooseValidator: FC<OwnProps> = ({ value, onChange, list }) => {
+const ChooseValidator: FC<OwnProps> = ({ value, onChange, onClear, list }) => {
   const t = useTranslations('CalculatorPage');
 
   return (
@@ -20,6 +21,8 @@ const ChooseValidator: FC<OwnProps> = ({ value, onChange, list }) => {
       list={list}
       selected={value}
       onChange={(value) => onChange(value as string)}
+      onClear={onClear}
+      variant="card"
       modalClassName="min-w-80 max-w-96"
     />
   );

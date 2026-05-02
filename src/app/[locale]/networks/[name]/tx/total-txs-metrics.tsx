@@ -30,7 +30,7 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
       },
       {
         title: 'transactions 30d',
-        data: 'N/A',
+        data: metrics.txs30d !== null ? metrics.txs30d.toLocaleString('en-US') : 'N/A',
       },
       {
         title: 'transactions yesterday',

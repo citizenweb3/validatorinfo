@@ -18,6 +18,7 @@ const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
           onClick={() => onChange(25)}
           contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl sm:text-6xl font-handjet hover:text-highlight"
           activeType="switcher"
+          variant="menu"
         >
           25
         </Button>
@@ -26,6 +27,7 @@ const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
         onClick={() => onChange(50)}
         contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl sm:text-6xl font-handjet hover:text-highlight"
         activeType="switcher"
+        variant="menu"
       >
         50
       </Button>
@@ -34,6 +36,7 @@ const ValidatorListFiltersPorPage: FC<OwnProps> = ({ value, onChange }) => (
         onClick={() => onChange(100)}
         contentClassName="py-0 px-2 md:max-h-4 max-h-32 mx-10 md:mx-0 md:text-lg text-7xl sm:text-6xl font-handjet hover:text-highlight"
         activeType="switcher"
+        variant="menu"
       >
         100
       </Button>

@@ -48,7 +48,12 @@
     "Click to logout": "Click to logout",
     "Profile": "Profile",
     "Search for a validator, pool, tx, address, network, etc": "Search for a validator, pool, tx, address, network, etc",
+    "Search": "Search",
+    "Settings": "Settings",
     "Lucky!?": "Lucky!?",
+    "Help": "Help",
+    "Expand header": "Expand header",
+    "Collapse header": "Collapse header",
     "Co-Create & Support": "Co-Create & Support",
     "CoCreate": {
       "tagline": "<github>Open-source. Ad-free. Privacy-respecting. Self-hosted!</github>. We're doing this independently - and it's staying that way. The Explorer Web3 Deserves!",
@@ -63,7 +68,7 @@
       "ghSponsorship": "<link>GH Sponsorship</link>",
       "btcDonations": "<link>BTC donations</link>",
       "ethDonations": "<link>ETH donations</link>",
-      "xmrDonations": "XMR donations"
+      "xmrDonations": "<link>XMR donations</link>"
     },
     "search": {
       "Validators": "Validators",
@@ -73,17 +78,27 @@
     }
   },
   "Navbar": {
+    "Home": "Home",
+    "You": "You",
+    "AI": "AI",
+    "About Us": "About Us",
+    "Play": "Play",
+    "Network": "Network",
     "Validators": "Validators",
     "Networks": "Networks",
-    "Metrics": "Metrics",
+    "Validator": "Validator",
+    "Nodes": "Nodes",
+    "Mining Pools": "Mining Pools",
+    "Ecosystems": "Ecosystems",
+    "Rumor": "Rumor",
+    "Analyze": "Analyze",
     "Calculate": "Calculate",
     "Compare": "Compare",
-    "Rumors": "Rumor",
-    "Analyze": "Analyze",
-    "About Us": "About Us",
+    "Explain": "Explain",
+    "Metrics": "Metrics",
     "Library": "Library",
-    "Ecosystems": "Ecosystems",
-    "Nodes": "Nodes",
+    "Global": "Global",
+    "Rumors": "Rumor",
     "mobile description": "Anon, please note that my mobile version has limited features. To enjoy all of my perks, and to login into your account, please visit my desktop version."
   },
   "Common": {
@@ -92,6 +107,48 @@
   "HomePage": {
     "title": "Web3 Blockchain Validator and Mining Pool Explorer",
     "description": "My landing page is your one-stop explorer for comparing top validators across multiple web3 blockchain networks. The table provides real-time data on validator and mining pool performance, summarized into easy to read metrics. You can sort and filter based on what matters most to you. The goal is to help you make smart staking choices by providing a clear and user-friendly overview of validator profiles across web3. The table is loaded randomly every time you visit the page. To create a permanent view, you need to connect your wallet and create a favorite list.",
+    "storyAlt": "Pixelated, 90s game-style main page scene for Validator Info",
+    "heroTitle": "Validator Info - the Explorer Web3 Deserves",
+    "heroSubtitle": "Live on chain data • Real AI answers • Self-hosted on Atlantic bare-metal",
+    "stats": {
+      "validators": "Validators",
+      "validatorsValue": "05.90%",
+      "claimedPages": "Claimed Val. Pages",
+      "claimedPagesValue": "100",
+      "networks": "Networks",
+      "networksValue": "1000",
+      "ecosystems": "Ecosystems",
+      "ecosystemsValue": "2345",
+      "tvl": "TVL",
+      "tvlValue": "$74.6B",
+      "dominance": "Dominance:",
+      "pow": "POW 56%",
+      "cosmos": "Cosmos 56%",
+      "eth": "ETH 56%",
+      "polkadot": "Polkadot 56%"
+    },
+    "links": {
+      "forum": "Forum",
+      "staking": "Staking",
+      "funnyBot": "Funny Bot",
+      "tokenSwap": "Token Swap",
+      "web3Login": "Web 3 Login",
+      "podcast": "Podcast",
+      "github": "Github",
+      "aiIntegration": "AI Dev"
+    },
+    "cashbackBanner": "2% Cash back on staking",
+    "infrastructureText": "Built and run on our own off-grid Atlantic bare-metal servers. Open-source. Ad-free. Privacy-respecting. By the Citizen Web3 team.",
+    "askExpert": "Ask the Validator Expert",
+    "topPerformers": "Top Performers & Highlights",
+    "placeholderName": "Name",
+    "topPerformersNote": "Short and visual overview of the top performers.",
+    "quickTools": {
+      "bestValidator": "Best Validator for Me",
+      "maxYield": "Max Yield Right Now",
+      "explainProposal": "Explain This Proposal",
+      "offGridHelp": "Off-Grid Setup Help"
+    },
     "Table": {
       "Validator": {
         "name": "Validator",
@@ -170,7 +227,20 @@
       "Compare": "Compare",
       "ValidatorInfo": "ValidatorInfo",
       "Rumors": "Rumor",
-      "Analyze": "Analyze"
+      "Analyze": "Analyze",
+      "Home": "Home",
+      "You": "You",
+      "AI": "AI",
+      "About Us": "About Us",
+      "Play": "Play",
+      "Network": "Network",
+      "Validators": "Validators",
+      "Nodes": "Nodes",
+      "Mining Pools": "Mining Pools",
+      "Ecosystems": "Ecosystems",
+      "Rumor": "Rumor",
+      "Explain": "Explain",
+      "Global": "Global"
     },
     "ConsolePanel": {
       "Get started": {
@@ -190,7 +260,7 @@
         "text": "Click Networks to see a comparison table of chains.<br></br>Open a Network profile to see stats including: tokenomics, transactions,<br></br>governance, validators and more."
       },
       "Validators nodes and mining pools": {
-        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and Mining Pools:",
+        "title": "<validatorsLink>Validators</validatorsLink>, <nodesLink>Nodes</nodesLink> and <miningPoolsLink>Mining Pools</miningPoolsLink>:",
         "text": "Open Validator or Node profiles to see detailed statistics, earnings, projects and more."
       },
       "Ecosystems and metrics": {
@@ -202,8 +272,8 @@
         "text": "Connect -<logInImg></logInImg>- your Web3 wallet for token swaps, rewards and more features.<br></br>Explore Library -<libraryImg></libraryImg>, AI -<aiImg></aiImg>- and share your opinion in the p2p Rumor -<rumorsImg></rumorsImg>- chat."
       }
     },
-    "Game": "Where am I?",
-    "Dev": "Dev Mode (WIP)"
+    "Game": "Simple Mode",
+    "Dev": "Dev Mode"
   },
   "GlobalPosPage": {
     "Metadata": {
@@ -215,6 +285,7 @@
     "total": "Total T.V.S. and Rewards Payout",
     "cap": "Crypto Capitalization and Value Secured",
     "status": "Web 3 Status",
+    "UnderConstruction": "Page Under Construction...",
     "Footer": {
       "total validators": "Validators",
       "total networks": "Networks",
@@ -232,12 +303,13 @@
     "Choose a Validator": "Choose a Validator",
     "Please select": "Please select validator and chain!",
     "Token": "Token",
-    "Enter Stake Amount": "Enter Stake Amount",
+    "Enter Stake Amount": "Enter Staking Amount",
     "Wrong amount": "Wrong amount",
-    "earnings": "d Earnings",
+    "earnings": "d Earning",
     "downloading validators": "Downloading Validators...",
     "please choose network": "Please Choose a Network",
-    "not supported yet": "Not Supported Yet"
+    "not supported yet": "Not Supported Yet",
+    "UnderConstruction": "Page Under Construction..."
   },
   "NetworksPage": {
     "title": "Network A-Z Directory: Discover Blockchain Networks and their Valuation",
@@ -245,7 +317,34 @@
     "Active": "Active",
     "All": "All",
     "Stopped": "Stopped",
-    "stoppedTooltip": "Network indexing is currently paused by us"
+    "stoppedTooltip": "Network indexing is currently paused by us",
+    "Transactions": "Transactions",
+    "Table": {
+      "Networks": {
+        "name": "Networks",
+        "hint": ""
+      },
+      "Token Name": {
+        "name": "Token Name",
+        "hint": ""
+      },
+      "FDV": {
+        "name": "F.D.V.",
+        "hint": "Fully Diluted Valuation. All existing supply multiplied by price in USD."
+      },
+      "Supply": {
+        "name": "Supply",
+        "hint": "Current total supply relative to general total supply"
+      },
+      "Health": {
+        "name": "Health",
+        "hint": "Average uptime of network validators"
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      }
+    }
   },
   "NetworkProfileHeader": {
     "Tabs": {
@@ -330,7 +429,9 @@
     "members tooltip no data": "No community data available",
     "Transaction Volume": "Transaction Volume + MAU",
     "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete.",
-    "distribution map": "Distributrion Map"
+    "distribution map": "Distributrion Map",
+    "UnderConstruction": "Page Under Construction...",
+    "no blocks found": "No Blocks Found"
   },
   "NetworkGovernance": {
     "title": "Governance Portal: Network Voting",
@@ -633,6 +734,7 @@
     "title": "Ecosystem A-Z Directory: Explore Web3 Projects",
     "description": "The Ecosystem A-Z Directory is your gateway to web3, featuring a list of projects and communities, including decentralized apps and governance platforms, with additional information like revenue and projects included in that ecosystem. This directory helps you discover new projects, with stats highlighting each project's momentum and influence, and you can use it to find your next favorite project, then join our P2P Chat to discuss and share ideas with other web3 enthusiasts, connecting you to the people and platforms shaping the future of web3.",
     "customize": "customize",
+    "UnderConstruction": "Page Under Construction...",
     "Table": {
       "Ecosystems": {
         "name": "Ecosystems",
@@ -670,12 +772,13 @@
   },
   "RumorsPage": {
     "title": "P2P Chat & Forum: Connect with Web3 Stakers and Miners",
-    "description": "Join our anon P2P Chat or visit the Forum — a secure and easy-to-use hub for web3 enthusiasts to discuss blockchain networks, mining pools, and validator rumors. Connect with other delegators and miners, share insights on staking strategies and crypto education, or simply - chat. Use the real-time P2P Chat for quick conversations, or head to the Forum for in-depth discussions and lasting threads.",
+    "description": "Anon, how are ya? Pick yaself a username and \"start spreading the news, I'm leaving today...\".\n\nSorry Anon, AI issues. Where were we? Ah yes, Pick a username and start rumoring. As simple as that. There is no chat history and no identities. Bring back the old days!",
     "Start": "Start Chat",
     "Visit Forum": "Visit Forum",
     "forumDescription": "Prefer structured discussions? Join the community forum for in-depth topics and lasting threads.",
     "or": "or",
-    "noNameError": "Please enter username to start"
+    "noNameError": "Please enter username to start",
+    "UnderConstruction": "Page Under Construction..."
   },
   "MetricsPage": {
     "title": "Metric A-Z Glossary: Understand Key Web3 Metrics",
@@ -685,11 +788,33 @@
     "Token": "Token",
     "Total Supply": "Total Supply",
     "TVL": "T.V.L. or Total Value Locked",
-    "TVS": "T.V.S. or Total Value Secured"
+    "TVS": "T.V.S. or Total Value Secured",
+    "UnderConstruction": "Page Under Construction..."
   },
   "AIPage": {
-    "title": "AI-Powered Web3 Validator Search: Tailored Results for Unique Criteria",
-    "description": "Welcome to our AI Search page—your personal web3 detective. This tool handles specific validator and mining pool queries, like finding validators with certain commission rates, network support, or political leanings. Our AI delivers precise, actionable results in seconds, making your search fast and efficient. Whether you're a staking newbie or pro, I'm here to help. Ready to see what I can do? Enter your criteria and watch the magic unfold!"
+    "title": "Ask the Validator Expert",
+    "description": "Quick AI answers, comparisons, and proposal explanations are coming here. For now, use the home page expert chat and quick tools.",
+    "storyAlt": "Pixelated game-style scene for the Validator Expert AI workspace"
+  },
+  "HelpPage": {
+    "title": "Help & Controls",
+    "description": "Use the console below as a guided game-style help panel. START opens the story, SELECT shows controls, and the A/B buttons jump between key sections.",
+    "storyAlt": "Pixelated help scene with the app's gameboy console and control hints"
+  },
+  "UnderDevelopment": {
+    "title": "Coming Soon",
+    "description": "This section is still being rebuilt. Check back soon for the updated experience.",
+    "buttonLabel": "Go Home"
+  },
+  "MiningPoolsPage": {
+    "title": "Mining Pools",
+    "description": "Mining pool coverage is being prepared for a dedicated multichain view with performance, rewards, and discovery tools.",
+    "storyAlt": "Pixelated game-style scene around mining pool infrastructure"
+  },
+  "ExplainPage": {
+    "title": "Explain",
+    "description": "This workspace will turn metrics, charts, and governance context into plain language.",
+    "storyAlt": "Pixelated game-style scene for metrics and explanations"
   },
   "ValidatorsPage": {
     "title": "Validator A-Z Directory: Comprehensive List with Social Links",
@@ -700,6 +825,44 @@
       "Networks": "Networks",
       "Ecosystems": "Ecosystems",
       "Metrics": "Metrics"
+    },
+    "Table": {
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Supported Assets": {
+        "name": "Supported Assets",
+        "hint": ""
+      },
+      "Battery": {
+        "name": "Battery",
+        "hint": "General health status, encomprasses on-chain off-chain verifiable validator actions and social networks"
+      },
+      "Technical": {
+        "name": "Technical",
+        "hint": "Offering robust network security and additional infrastructure increases the score"
+      },
+      "Social": {
+        "name": "Social",
+        "hint": "A strong digital presence and numerous on-chain fans raise the score"
+      },
+      "Governance": {
+        "name": "Governance",
+        "hint": "Participation in keychain life events and initiative boost the score"
+      },
+      "User": {
+        "name": "User",
+        "hint": "On-chain user-validator interactions, like reviews, elevate the score"
+      },
+      "TVS": {
+        "name": "TVS",
+        "hint": "Total Secured Value. Total amount of assets staked to validator"
+      }
     }
   },
   "ComparisonPage": {
@@ -720,6 +883,7 @@
     "Choose Providers": "Choose Providers",
     "Profile": "Profile",
     "Token": "Token",
+    "Asset": "Asset",
     "Compare": "Compare",
     "Health Change": "Health",
     "Technical Score Changes": "Technical Score ",
@@ -732,7 +896,8 @@
     "TVS Growth": "TVS Growth",
     "Fan Growth": "Fan Growth",
     "Add": "Add",
-    "Ecosystems": "Ecosystems"
+    "Ecosystems": "Ecosystems",
+    "UnderConstruction": "Page Under Construction..."
   },
   "ProfilePage": {
     "Metadata": {
@@ -799,16 +964,32 @@
     },
     "description": "I'm Validator Info, brought to life by the <citizenLink>Citizen Web3</citizenLink> team. I'm a multichain, validator-focused explorer and aggregator for various networks thriving in web3. Whether it's Proof of Work or Proof of Stake chains, I've got the details you need about validators, mining pools, and the networks themselves.\n\nMy goal? To empower you with the best validator information and mining pool data so you can navigate the web3 space with confidence. I'm here to simplify your web3 journey. With real-time metrics and an easy-to-use interface, I help you find the validator or mining pool that fits your needs.\n\nI'm still a work in progress, and I'd love your input as I grow. Follow me <xLink>on X</xLink>, explore my <ghLink>GitHub repos</ghLink>, or drop me a comment with your ideas—I'm all ears! Together, we can make this a go-to resource for web3 enthusiasts like you.\n\nCitizen Web3 is an active member of the web3 galaxy. <stakingLink>Staking with our self-hosted</stakingLink> baremetal infrastructure allows CW3 to work on various public good projects and contribute to the development of web3.",
     "title": "About <validatorInfoLink>Validator Info</validatorInfoLink>: Your Guide to Web3 <validatorsAndMiningPoolsLink>Validators and Mining Pools</validatorsAndMiningPoolsLink>",
-    "Tools": [
-      "<link>Citizen Web3 Podcast</link>: Discovering Web3 Contributors to Blockchain Decentralization, Network Security and App Scalability",
-      "<link>Web3 Society</link>: Web3 Community Based on Values of Decentralization. Learning to Forget Tribalism and Love the Tech. Future DAO",
-      "<link>Validator Infra</link>: Self-Hosted, Bare-Metal Validator Infrastructure. Off the Grid Capacity. Offering Endpoints, Archive, Snapshots and Relaying",
-      "<link>B.V.C.</link>: Baremetal Valdiator Coven. Community of Selfhosted and Baremetal Blockcahin Network Operators",
-      "(NA at the moment) Bazaar: NFTs, Merchandise, Decentraland"
-    ],
+    "Tools": {
+      "validatorInfo": {
+        "title": "ValidatorInfo.com",
+        "body": "The most ambitious Web3 explorer on Earth. Real-time validator, mining pool, staking, and network metrics with live autonomous AI agents embedded inside the product:\n\n• Interactive dashboards, rankings, calculators, and comparisons\n• Gamification layer (led by our sovereign AI agent) designed to turn data into play, rewards, and viral growth\n• Web3 Blockchain Explorer and Interactive Dashboard\n• Validator, Mining Pool, Token and Network Onchain Metrics"
+      },
+      "staking": {
+        "title": "Citizen Web3 Staking & Bare-Metal Infrastructure",
+        "body": "Privacy-first, renewable-energy, off-grid capable validators and full infrastructure stack:\n\n• Endpoints, archives, snapshots, relayers\n• Focused on privacy networks\n• Self-hosted, non-custodial, censorship-resistant by design\n• Cashback"
+      },
+      "aiWorkforce": {
+        "title": "AI Agent Workforce Platform",
+        "body": "We don't just run validators — we build and integrate autonomous AI teams for any projects. Whether Web3, Web2 or real business:\n\n• ValidatorInfo.com is our flagship live example\n• AI Agents as a Service: Discovery, Deployment, Results\n• Autonomous AI workforces\n• Tailored for Your Business"
+      },
+      "publicGoods": {
+        "title": "Other Public Goods",
+        "body": "• <podcastLink>Citizen Web3 Podcast</podcastLink>: Deep interviews with builders, thinkers, and operators\n• <societyLink>Web3 Society</societyLink>: Anti-tribal, values-driven community (Telegram + future DAO). Learning to Forget Tribalism and Love the Tech\n• <privacyLink>Privacy Forum</privacyLink>: Join the Fight!\n• <bvcLink>Baremetal Validator Coven (B.V.C.)</bvcLink>: Knowledge base and community for self-hosted operators\n• <indexerLink>Chain Data Indexer</indexerLink>: High-performance, event-driven blockchain indexing framework\n• <bazaarLink>Bazaar</bazaarLink>: NFTs, Merchandise, Metaverse and more. Under or on-going Development\n• <manuscriptsLink>Manuscripts</manuscriptsLink>: Our blog. Open research, articles, X spaces and guides to empower users and operators across ecosystems"
+      }
+    },
     "Our tools": "Tools",
     "Our Manifesto": "Manifesto",
-    "Manifesto": "From this distant vantage point, the Earth might not seem of any particular interest. But for us, it's different. Consider again at that dot. That's here. That's home. That's us. On it everyone you love, everyone you know, everyone you ever heard of, every human being who ever was, lived out their lives. The aggregate of our joy and suffering, thousands of confident religions, ideologies, and economic doctrines, every hunter and forager, every hero and coward, every creator and destroyer of civilization, every king and peasant, every young couple in love, every mother and father, hopeful child, inventor and explorer, every teacher of morals, every corrupt politician, every \"superstar,\" every \"supreme leader,\" every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam... Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves...\n\nFrom 'A Pale Blue Dot', by Carl Sagan.\n\n\nWe believe in freedom above needs. We believe in possibilities above enforcement. We believe in values above desires. We believe that censorship has killed more people than anything else together combined. We value honesty and we value the truth. We value love and cherish all existing creatures. We value intelligence and we value decentralization.\n\nWe believe in communication, which allows participants to think, make their mind up and cast personal votes on any topic and subject. We think that content should strive to lack subjective opinions and help its consumers to form an opinion, which will result in better discussion, and in turn in a more efficient consensus.\n\nWe believe that blockchains are not simply a form of digital nations. But, open and verifiable blockchains are somewhat similar to natural hives, forests, patterns in the nature that allow us to communicate better. Without communication, we are doomed, and decentralized consensus is a tool that can and will help those who desire to make our pale blue dot a slightly better place.\n\nAND MAY THE CODE BE WITH YOU!",
+    "Manifesto": {
+      "intro": "We are not here to chase hype. We are here to build decentralization.\n\nWe are here to build the infrastructure layer that outlives every cycle — self-sovereign, privacy-preserving, sustainable, and now intelligent.\n\nWe believe in freedom above needs, possibilities above enforcement, and values above desires.\n\nFrom a mote of dust suspended in a sunbeam, humanity is reaching for the stars through code. We intend to give that code freedom, resilience, and joy.\n\nOur planet is a pale blue dot...",
+      "quote": "Our planet is a lonely speck… In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.",
+      "attribution": "— Carl Sagan",
+      "outro": "We envision Web3 defined by communication, cross-ecosystem respect, privacy and collective growth.\n\nWe are building that help — one validator, one explorer, one autonomous AI at a time.\n\nMay the code be with you."
+    },
     "Podcast": {
       "title": "<citizenLink>Citizen Web3</citizenLink> Podcast: Conversations with those that Build Web3",
       "description": "Welcome to the Citizen Web3 Podcast! We interview the builders, thinkers, and visionaries driving the decentralized future, covering validator insights, staking tips, and big ideas in web3. Whether you're a staking pro or just starting out, there's something here to spark your curiosity. Check out our latest episodes and subscribe to stay updated.",
@@ -1218,6 +1399,8 @@
     "noTransactionsYet": "No transactions yet",
     "transactionsWillAppear": "Transaction display will appear when transactions begin on the network",
     "txListLoadError": "Could not load transactions. Please try reloading the page.",
+    "Confirmed": "Confirmed",
+    "Pending": "Pending",
     "Table": {
       "Type of Tx": {
         "name": "Type of Tx",
@@ -1318,6 +1501,14 @@
     "in hash": "In Hash",
     "out hash": "Out Hash",
     "sponge blob hash": "Sponge Blob Hash",
+    "leader key": "Leader Key",
+    "voucher commitment": "Voucher Commitment",
+    "entropy": "Entropy",
+    "parent block": "Parent Block",
+    "indexed at": "Indexed At",
+    "block root": "Block Root",
+    "entropy contribution": "Entropy Contribution",
+    "proof size": "Proof Size (bytes)",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"
@@ -1344,6 +1535,10 @@
       "Block Height": {
         "name": "Block Height",
         "hint": "The number of block"
+      },
+      "Slot": {
+        "name": "Slot",
+        "hint": "Cryptarchia time slot of the block"
       }
     }
   },
@@ -1487,7 +1682,8 @@
     },
     "customize": "Customize",
     "Submit New Info": "Submit New Info",
-    "how to run a node on cosmos": "How to run a node on Cosmos"
+    "how to run a node on cosmos": "How to run a node on Cosmos",
+    "UnderConstruction": "Page Under Construction..."
   },
   "AccountPage": {
     "Tabs": {
@@ -1559,6 +1755,7 @@
     "Welcome": "Hi! I'm your ValidatorInfo AI assistant. Here's what I can do:\n\n• Search validators by name and show their metrics\n• Compare networks and show chain statistics\n• Explain governance proposals and voting results\n• Show tokenomics, APR, TVS and market data\n• Provide links to relevant pages\n\nAsk me anything!",
     "Welcome Chain": "Hi! I'm your AI assistant for {chainName}. I can help with:\n\n• Validators, staking and commission info\n• Governance proposals and voting\n• Network metrics, APR and tokenomics\n• Blocks, transactions and node data\n\nWhat would you like to know?",
     "Explain with AI": "Explain with AI",
+    "Explain this page": "Explain what this page is about",
     "AI unavailable": "AI is temporarily unavailable. Please try again later.",
     "Rate limited": "You're sending messages too quickly. Please wait a moment and try again.",
     "Empty response": "I couldn't generate a response. Please try rephrasing your question.",

@@ -6,9 +6,9 @@ import OperatorDistribution from '@/app/networks/[name]/(network-profile)/stats/
 import OperatorDistributionSkeleton from '@/app/networks/[name]/(network-profile)/stats/operator-distribution-skeleton';
 import SocialStatistics from '@/app/networks/[name]/(network-profile)/stats/social-statistics';
 import TransactionVolumeChart from '@/app/networks/[name]/(network-profile)/stats/transaction-volume-chart';
+import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
-import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import chainService from '@/services/chain-service';
 
@@ -33,8 +33,10 @@ const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({ params: { 
 
   return (
     <div className="mb-16">
-      <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
-      <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+      <CollapsiblePageHeader description={t('description')}>
+        <PageTitle prefix={chain?.prettyName ?? 'Network'} text={t('title')} />
+      </CollapsiblePageHeader>
+      <SubTitle text={t('UnderConstruction')} className={'my-4'} />
       <NetworkStatistics chain={chain} />
       <SocialStatistics chain={chain} />
       <SubTitle text={t('Transaction Volume')} />

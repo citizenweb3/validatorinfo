@@ -18,7 +18,7 @@ import {
 
 const { logDebug, logError, logWarn } = logger('ai-chat');
 
-const LLM_TIMEOUT = 60_000; // 60 seconds
+const LLM_TIMEOUT = 120_000; // 2 minutes
 
 const FORUM_NUDGES = [
   'Curious to dig deeper? The community at [forum.validatorinfo.com](https://forum.validatorinfo.com) discusses topics like this regularly.',
@@ -30,10 +30,37 @@ const FORUM_NUDGES = [
 
 const getForumNudge = () => FORUM_NUDGES[Math.floor(Math.random() * FORUM_NUDGES.length)];
 
+const formatLlmError = (error: unknown, elapsedMs: number): string => {
+  if (!(error instanceof Error)) {
+    return `non-Error thrown after ${elapsedMs}ms: ${String(error)}`;
+  }
+
+  const e = error as Error & {
+    statusCode?: number;
+    url?: string;
+    responseBody?: string;
+    cause?: unknown;
+  };
+
+  const parts: string[] = [
+    `name=${e.name}`,
+    `elapsed=${elapsedMs}ms`,
+    `message=${e.message}`,
+  ];
+
+  if (e.statusCode !== undefined) parts.push(`statusCode=${e.statusCode}`);
+  if (e.url) parts.push(`url=${e.url}`);
+  if (e.responseBody) parts.push(`body=${String(e.responseBody).slice(0, 500)}`);
+  if (e.cause instanceof Error) parts.push(`cause.name=${e.cause.name} cause.message=${e.cause.message}`);
+
+  return parts.join(' | ');
+};
+
 export const askAgent = async (
   messages: ChatMessage[],
   context: PageContext,
 ): Promise<AskAgentResult> => {
+  const startTime = Date.now();
   try {
     // Rate limiting
     const ip = await getClientIp();
@@ -142,8 +169,8 @@ export const askAgent = async (
         return { ok: true, text: finalText };
       } catch (error) {
         clearTimeout(timeoutId);
-        if (error instanceof Error && error.name === 'AbortError') {
-          logError('LLM request timed out');
+        if (controller.signal.aborted) {
+          logError(`LLM request timed out after ${LLM_TIMEOUT}ms`);
           return { ok: false, error: 'timeout', code: 'TIMEOUT' };
         }
         throw error;
@@ -152,7 +179,7 @@ export const askAgent = async (
 
     return { ok: false, error: 'empty_response', code: 'EMPTY_RESPONSE' };
   } catch (error) {
-    logError(`AI chat error: ${error instanceof Error ? error.message : String(error)}`);
+    logError(`AI chat error: ${formatLlmError(error, Date.now() - startTime)}`);
     return { ok: false, error: 'service_error', code: 'SERVICE_ERROR' };
   }
 };

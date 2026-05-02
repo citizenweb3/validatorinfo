@@ -24,25 +24,23 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals, chain }) => {
     : undefined;
 
   return (
-    <div>
-      <div className="mt-8 flex w-full flex-row justify-start items-start gap-6">
-        <ToolTip tooltip={t('total tooltip')} direction={'top'}>
-          <MetricsCardItem title={t('total')}
-                           data={proposals.length}
-                           className={'pb-6 pt-2.5'}
-                           dataClassName={'mt-5'} />
-        </ToolTip>
-        <MetricsCardItem title={t('passed')}
-                         data={proposalsPassed.length}
+    <>
+      <ToolTip tooltip={t('total tooltip')} direction={'top'}>
+        <MetricsCardItem title={t('total')}
+                         data={proposals.length}
                          className={'pb-6 pt-2.5'}
                          dataClassName={'mt-5'} />
-        <MetricsCardItem title={t('rejected')}
-                         data={proposalsRejected.length}
-                         className={'pb-6 pt-2.5'}
-                         dataClassName={'mt-5'} />
-      </div>
+      </ToolTip>
+      <MetricsCardItem title={t('passed')}
+                       data={proposalsPassed.length}
+                       className={'pb-6 pt-2.5'}
+                       dataClassName={'mt-5'} />
+      <MetricsCardItem title={t('rejected')}
+                       data={proposalsRejected.length}
+                       className={'pb-6 pt-2.5'}
+                       dataClassName={'mt-5'} />
       {chain?.name !== 'aztec' && chain?.name !== 'aztec-mainnet' && (
-        <div className="mt-8 flex w-full flex-row justify-start items-start gap-6">
+        <>
           {participationRate && (
             <MetricsCardItem title={t('voting participation rate')}
                              data={participationRate}
@@ -55,9 +53,9 @@ const TotalsListProposals: FC<OwnProps> = async ({ proposals, chain }) => {
                              className={'pb-6 pt-2.5'}
                              dataClassName={'mt-5'} />
           )}
-        </div>
+        </>
       )}
-    </div>
+    </>
   );
 };
 

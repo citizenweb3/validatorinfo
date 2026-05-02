@@ -130,6 +130,7 @@ model Chain {
   validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
   aztecNodeDistributionHistory AztecNodeDistributionHistory[] @relation("chain_aztec_node_distribution_history")
   txMetrics  ChainTxMetrics?  @relation("chain_tx_metrics")
+  txDailySnapshots ChainTxDailySnapshot[] @relation("chain_tx_daily_snapshots")
   podcastEpisodes PodcastEpisode[] @relation("PodcastChain")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
@@ -505,6 +506,20 @@ model ChainTxMetrics {
   chain Chain @relation("chain_tx_metrics", fields: [chainId], references: [id])
 
   @@map("chain_tx_metrics")
+}
+
+model ChainTxDailySnapshot {
+  id         Int      @id @default(autoincrement())
+  chainId    Int      @map("chain_id")
+  snapshotAt DateTime @map("snapshot_at") @db.Date
+  totalTxs   BigInt   @map("total_txs")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  chain Chain @relation("chain_tx_daily_snapshots", fields: [chainId], references: [id])
+
+  @@unique([chainId, snapshotAt])
+  @@index([chainId, snapshotAt])
+  @@map("chain_tx_daily_snapshots")
 }
 
 model PodcastEpisode {

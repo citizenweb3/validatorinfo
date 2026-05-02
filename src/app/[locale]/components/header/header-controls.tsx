@@ -1,26 +1,22 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { FC, useCallback, useState } from 'react';
 
-import HeaderActionButtons from '@/components/header/header-action-buttons';
 import HeaderSearch from '@/components/header/header-search/header-search';
 import MenuBurgerButton from '@/components/navigation-bar/menu-burger-button';
-import WalletButton from '@/components/wallet-connect/wallet-button';
 import MobileNavigationBar from '@/components/navigation-bar/mobile-navigation-bar';
+import { useHeaderCollapsed } from '@/context/HeaderCollapsedContext';
 import { useWindowEvent } from '@/hooks/useWindowEvent';
+import { cn } from '@/utils/cn';
 
 interface OwnProps {}
 
 const HeaderControls: FC<OwnProps> = () => {
-  const t = useTranslations('Header');
-  const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-
   const [hoverTarget, setHoverTarget] = useState<string | null>(null);
+  const { isCollapsed, toggle } = useHeaderCollapsed();
+  const t = useTranslations('Header');
 
   const onSectionHover = useCallback((detail: string | null) => {
     setHoverTarget(detail);
@@ -34,81 +30,30 @@ const HeaderControls: FC<OwnProps> = () => {
       : 'outline-0';
 
   return (
-    <div className={`mx-6 mt-4 flex h-64 flex-row items-start sm:h-36 md:mx-11 md:h-24 ${highlight}`}>
-      <Link
-        href="/"
-        onClick={() => {
-          if (pathname === '/') {
-            window.location.reload();
-          }
-        }}
-        className="group cursor-pointer border-r border-t border-bgSt bg-gradient-to-t from-[#181818] from-[26%] to-[rgba(62,62,62,0.3)] shadow-[0px_6px_6px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_rgba(0,0,0,0.25),0px_4px_4px_0px_black] hover:bg-bgHover hover:text-highlight active:mt-1 active:border-transparent active:shadow-none"
+    <div className={`flex w-full items-center gap-2 sm:gap-2.5 ${highlight}`}>
+      <div className="min-w-0 flex-1">
+        <HeaderSearch />
+      </div>
+      <button
+        type="button"
+        onClick={toggle}
+        aria-label={isCollapsed ? t('Expand header') : t('Collapse header')}
+        aria-expanded={!isCollapsed}
+        className="group/toggle hidden h-10 w-7 items-center justify-center md:flex"
       >
-        <div className="relative flex flex-col items-center px-2 py-1">
-          <div className="group-hover:text-shadowed hidden font-handjet text-lg text-highlight md:block">
-            {t('Home')}
-          </div>
-          <Image
-            src="/img/logo.svg"
-            alt="validatorinfo.com logo. Futuristic robot head with a V-style tick symbol"
-            width={186}
-            height={174}
-            className="w-64 sm:w-44 md:w-16"
-            priority
-          />
-          <Image
-            src="/img/icons/alpha.svg"
-            alt="logo"
-            width={68}
-            height={55}
-            className="absolute -bottom-6 -right-7 w-[4.5rem]"
-            priority
+        <div className="relative h-8 w-5">
+          <div
+            className={cn(
+              'absolute left-1/2 top-1/2 min-h-5 min-w-7 -translate-x-1/2 -translate-y-1/2 transform bg-hide bg-contain bg-no-repeat transition-transform duration-300 group-hover/toggle:bg-hide_h group-active/toggle:bg-hide_a',
+              isCollapsed ? '-rotate-90' : 'rotate-90',
+            )}
           />
         </div>
-      </Link>
-      <div className="relative mx-1 mt-48 flex h-1 flex-grow justify-center border-white bg-gradient-to-r from-primary to-secondary shadow-line sm:mt-24 sm:h-0.5 md:mt-7 md:h-0.5">
-        <svg
-          width="6"
-          height="10"
-          viewBox="0 0 6 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute -left-3 top-2/4 h-7 translate-y-[-52%] fill-primary sm:-left-1 sm:h-4 md:h-3"
-        >
-          <path d="M-2.18557e-07 5L6 0.669872L6 9.33013L-2.18557e-07 5Z" />
-        </svg>
-
-        <div>
-          <HeaderSearch />
-          <div className="hidden md:block">
-            <HeaderActionButtons />
-          </div>
-        </div>
-
-        <svg
-          width="6"
-          height="10"
-          viewBox="0 0 6 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute -right-3 top-2/4 h-7 translate-y-[-52%] rotate-180 fill-secondary sm:-right-1 sm:h-4 md:h-3"
-        >
-          <path d="M-2.18557e-07 5L6 0.669872L6 9.33013L-2.18557e-07 5Z" />
-        </svg>
-      </div>
-      <div className="hidden md:block">
-        <WalletButton />
-      </div>
+      </button>
       <div className="block md:hidden">
-        <MenuBurgerButton
-          isOpened={mobileOpen}
-          onToggle={() => setMobileOpen(o => !o)}
-        />
+        <MenuBurgerButton isOpened={mobileOpen} onToggle={() => setMobileOpen((o) => !o)} />
       </div>
-      <MobileNavigationBar
-        isOpened={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-      />
+      <MobileNavigationBar isOpened={mobileOpen} onClose={() => setMobileOpen(false)} />
     </div>
   );
 };

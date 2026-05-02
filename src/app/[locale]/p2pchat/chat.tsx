@@ -62,32 +62,20 @@ const Chat: FC<OwnProps> = ({ username }) => {
 
   return (
     <div style={heightStyle} className="mt-4 flex flex-grow items-stretch">
-      <div className="flex h-full w-full items-stretch bg-bgHover shadow-chat">
+      <div className="flex h-full w-full items-stretch bg-table_row shadow-chat">
         <div className="w-40 border-r border-bgSt" />
         <div className="flex flex-grow flex-col">
-          <div className="flex flex-grow">
-            <div ref={messegesRef} style={messagesHeightStyle} className="w-full px-4 py-2">
-              {messages.map((message) => (
-                <div key={message.date.toString()} className="flex space-x-2 text-lg">
-                  <div className="text-secondary">{format(message.date, 'HH:mm:ss')} |</div>
-                  <div className="text-highlight">{message.name}:</div>
-                  <div>{message.text}</div>
-                </div>
-              ))}
-            </div>
-            <div
-              style={messagesHeightStyle}
-              className="flex w-40 flex-col justify-end space-y-2 border-l border-bgSt p-4 text-base text-highlight"
-            >
-              <div className="max-h-full">
-                {usersInside.map((user) => (
-                  <div>{user}</div>
-                ))}
+          <div ref={messegesRef} style={messagesHeightStyle} className="w-full flex-grow px-4 py-2">
+            {messages.map((message) => (
+              <div key={message.date.toString()} className="flex space-x-2 text-lg">
+                <div className="text-secondary">{format(message.date, 'HH:mm:ss')} |</div>
+                <div className="text-highlight">{message.name}:</div>
+                <div>{message.text}</div>
               </div>
-            </div>
+            ))}
           </div>
           <input
-            className="h-16 border-t border-bgSt bg-bgHover px-10 text-lg focus:outline-0 focus:ring-0"
+            className="h-16 border-0 border-t border-bgSt bg-table_row px-10 text-lg focus:border-bgSt focus:outline-none focus:ring-0"
             type="text"
             onKeyDown={(e) => {
               if (e.key === 'Enter' && value) {
@@ -110,6 +98,13 @@ const Chat: FC<OwnProps> = ({ username }) => {
             onChange={onTextChanged}
             placeholder="..."
           />
+        </div>
+        <div className="flex w-40 flex-col justify-end space-y-2 border-l border-bgSt p-4 text-base text-highlight">
+          <div className="max-h-full">
+            {usersInside.map((user) => (
+              <div key={user}>{user}</div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

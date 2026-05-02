@@ -15,7 +15,7 @@ const PartnerItem: FC<OwnProps> = ({ link, icon, title }) => (
       alt={title}
       width={261}
       height={261}
-      className="w-[5.5rem] cursor-pointer rounded-full shadow-3xl group-hover:shadow-2xl"
+      className="w-32 cursor-pointer rounded-full shadow-3xl group-hover:shadow-2xl md:w-[5.5rem]"
     />
     <div className="text-black-shadowed group-hover:text-shadowed mt-2 text-center font-handjet text-lg font-normal">
       {title}

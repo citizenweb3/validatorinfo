@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
 const sizeItems = {
-  h1: 'text-3xl py-5 px-6',
-  h2: 'text-xl py-4 px-4',
-  h3: 'text-lg py-3 px-4',
-  h4: 'text-base py-2 px-3',
+  h1: 'text-6xl py-5 px-6 sm:text-4xl md:text-3xl',
+  h2: 'text-5xl py-4 px-4 sm:text-3xl md:text-xl',
+  h3: 'text-4xl py-3 px-4 sm:text-2xl md:text-lg',
+  h4: 'text-2xl py-2 px-3 sm:text-xl md:text-base',
 };
 
 interface OwnProps {

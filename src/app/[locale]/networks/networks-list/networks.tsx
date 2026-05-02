@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
 import NetworksList from '@/app/networks/networks-list/networks-list';
-import ListFilters from '@/components/common/list-filters/list-filters';
 import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import { SortDirection } from '@/server/types';
@@ -18,26 +17,19 @@ interface OwnProps extends PagesProps {
 const Networks: FC<OwnProps> = async ({ ecosystems, page, perPage, sort, currentPage, showAll }) => {
   return (
     <div>
-      <ListFilters
-        perPage={perPage}
-        selectedEcosystems={ecosystems}
-        isEcosystems
-        isNetworkStage />
-      <div>
-        <BaseTable className="my-4">
-          <thead>
+      <BaseTable className="mb-4">
+        <thead>
           <tr className="bg-table_header">
-            <TableHeaderItem page={page} name="Network" sortField="name" defaultSelected />
-            <TableHeaderItem page={page} name="Token" sortField="token" />
-            <TableHeaderItem page={page} name="FDV" sortField="fdv"/>
+            <TableHeaderItem page={page} name="Networks" sortField="name" defaultSelected />
+            <TableHeaderItem page={page} name="Token Name" sortField="token" />
+            <TableHeaderItem page={page} name="FDV" sortField="fdv" />
+            <TableHeaderItem page={page} name="Supply" />
             <TableHeaderItem page={page} name="Health" />
             <TableHeaderItem page={page} name="Links" />
-            <TableHeaderItem page={page} name="Show TX" />
           </tr>
-          </thead>
-          <NetworksList ecosystems={ecosystems} perPage={perPage} sort={sort} currentPage={currentPage} showAll={showAll} />
-        </BaseTable>
-      </div>
+        </thead>
+        <NetworksList ecosystems={ecosystems} perPage={perPage} sort={sort} currentPage={currentPage} showAll={showAll} />
+      </BaseTable>
     </div>
   );
 };

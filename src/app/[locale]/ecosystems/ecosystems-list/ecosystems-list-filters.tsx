@@ -5,7 +5,6 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
 import Button from '@/components/common/button';
 import ValidatorListFiltersPorPage from '@/components/common/list-filters/validator-list-filters-perpage';
-import PlusButton from '@/components/common/plus-button';
 import EcosystemListFilterTvl from '@/app/ecosystems/ecosystems-list/ecosystems-list-filters-tvl';
 import { checkHasActiveFilters } from '@/components/common/list-filters/list-filters';
 import { cn } from '@/utils/cn';
@@ -64,7 +63,21 @@ const ListFilters: FC<OwnProps> = ({ perPage, availableTags }) => {
   };
 
   return (
-    <div className="flex h-6 items-center justify-end">
+    <div className="flex h-min-20 h-10 items-center justify-start mt-10">
+      <div className="flex flex-row justify-end items-end mr-4">
+        <Button
+          activeType="switcher"
+          variant="menu"
+          onClick={onCustomiseClick}
+          isActive={isOpened}
+          hasActiveFilters={hasActiveFilters}
+          tooltip={t('Click 3 times to reset all filters')}
+        >
+          <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-base font-medium">
+            <div>{t('Customize')}</div>
+          </div>
+        </Button>
+      </div>
       {isOpened && (
         <>
           <EcosystemListFilterTvl />
@@ -88,20 +101,6 @@ const ListFilters: FC<OwnProps> = ({ perPage, availableTags }) => {
           </div>
         </>
       )}
-      <div className="flex flex-row items-center">
-        <Button
-          activeType="switcher"
-          onClick={onCustomiseClick}
-          isActive={isOpened}
-          hasActiveFilters={hasActiveFilters}
-          tooltip={t('Click 3 times to reset all filters')}
-        >
-          <div className="z-20 -my-1 flex flex-row items-center justify-center py-px text-base font-medium">
-            <div>{t('Customize')}</div>
-            <PlusButton size="sm" isOpened={isOpened} />
-          </div>
-        </Button>
-      </div>
     </div>
   );
 };

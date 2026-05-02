@@ -24,19 +24,19 @@ const EcosystemListItem: FC<OwnProps> = async ({ item }) => {
                      href={ecosystemLink} />
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center hover:text-highlight">
-        <div className="select-text cursor-default">$50B</div>
+        <div className="select-text cursor-default blur-sm">$50B</div>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center hover:text-highlight">
-        <div className="select-text cursor-default">$430B</div>
+        <div className="select-text cursor-default blur-sm">$430B</div>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center hover:text-highlight">
-        <div className="select-text cursor-default">120</div>
+        <div className="select-text cursor-default blur-sm">120</div>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center hover:text-highlight">
-        <div className="select-text cursor-default">25000</div>
+        <div className="select-text cursor-default blur-sm">25000</div>
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-handjet text-lg text-center hover:text-highlight">
-        <div className="select-text cursor-default">$10M</div>
+        <div className="select-text cursor-default blur-sm">$10M</div>
       </BaseTableCell>
       <BaseTableCell className="w-3/12 px-2 py-2 font-handjet text-lg text-center">
         <EcosystemListItemTags tags={item.tags} />

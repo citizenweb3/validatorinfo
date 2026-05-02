@@ -19,30 +19,28 @@ const ChatWrapper: FC<OwnProps> = () => {
       {isChatOpened ? (
         <Chat username={username} />
       ) : (
-        <div className="flex items-center justify-center gap-24 mt-20">
-          <div className="flex flex-col items-center gap-10">
-            <div className="flex justify-center">
-              <div className="border-b border-r border-bgSt p-4 text-lg font-black text-highlight">
+        <div className="mt-20 flex items-center justify-center gap-24">
+          <div className="flex flex-col items-center gap-6">
+            <div className="flex bg-table_row bg-clip-padding shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+              <div className="border-r border-bgSt px-8 py-4 text-lg font-black text-highlight">
                 Username
               </div>
-              <div className="border-b border-bgSt text-lg font-black text-highlight">
-                <input
-                  type="text"
-                  className="bg-background p-4 font-black text-white"
-                  placeholder="User1"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
-                    if (e.key === 'Enter') {
-                      if (username) {
-                        setIsChatOpened(true);
-                      } else {
-                        toast.error(t('noNameError'));
-                      }
+              <input
+                type="text"
+                className="bg-transparent px-8 py-4 text-lg font-black text-white outline-none"
+                placeholder="User1"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
+                  if (e.key === 'Enter') {
+                    if (username) {
+                      setIsChatOpened(true);
+                    } else {
+                      toast.error(t('noNameError'));
                     }
-                  }}
-                />
-              </div>
+                  }
+                }}
+              />
             </div>
             <RoundedButton
               className="text-xl"
@@ -62,7 +60,10 @@ const ChatWrapper: FC<OwnProps> = () => {
             <span className="font-handjet text-lg text-gray-500">{t('or')}</span>
             <div className="w-px self-stretch bg-bgSt" />
           </div>
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center gap-6">
+            <p className="max-w-[330px] text-center font-handjet text-lg">
+              {t('forumDescription')}
+            </p>
             <RoundedButton
               className="text-xl"
               href="https://forum.validatorinfo.com"
@@ -70,9 +71,6 @@ const ChatWrapper: FC<OwnProps> = () => {
             >
               {t('Visit Forum')}
             </RoundedButton>
-            <p className="max-w-[330px] text-center font-handjet text-lg mt-4">
-              {t('forumDescription')}
-            </p>
           </div>
         </div>
       )}

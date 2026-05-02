@@ -12,7 +12,7 @@ const { logDebug, logError, logWarn } = logger('ai-summary');
 
 const FALLBACK_LENGTH = 50_000;
 const MAX_OUTPUT_TOKENS = 4096;
-const LLM_TIMEOUT = 60_000;
+const LLM_TIMEOUT = 120_000;
 const RATE_LIMIT = 5;
 const RATE_WINDOW = 60;
 const SENTENCE_END = /[.!?。！？]$/;

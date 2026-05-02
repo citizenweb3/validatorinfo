@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
@@ -50,7 +49,7 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
   return (
     <div className="mb-12">
       <SubTitle className={"mb-20"} text={t('Gini Coefficient')} />
-      <div className="mt-6 w-[80%] mx-auto">
+      <div className="mt-6 w-[80%] mx-auto blur-sm pointer-events-none">
         <div className="relative h-10 w-full overflow-hidden rounded-sm bg-table_row">
           <div
             className="h-full rounded-sm transition-all duration-500"
@@ -65,12 +64,9 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
         </div>
         <div className="mt-2 flex flex-col items-start gap-2 font-sfpro text-base">
           <div>{t('number of validators')}</div>
-          <Link
-            href={`/networks/${chain?.name}/validators`}
-            className="font-handjet text-lg text-highlight hover:underline"
-          >
+          <div className="font-handjet text-lg text-highlight">
             {totalValidators?.length ?? 'N/A'}
-          </Link>
+          </div>
         </div>
       </div>
 

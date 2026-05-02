@@ -7,7 +7,7 @@ const excludeChains: string[] = [
   'warden-testnet'
 ];
 
-const includeChains: string[] = [];
+const includeChains: string[] = ['logos-testnet'];
 
 const chainNames = chainParamsArray
   .map((chain) => chain.name)

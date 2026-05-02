@@ -1,12 +1,6 @@
 import db from '@/db';
 import aztecIndexer from '@/services/aztec-indexer-api';
-import { getLatestFinalizedBlock } from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
-import {
-  AZTEC_INDEXER_MAX_BLOCK_RANGE,
-  getAztecBlockHeight,
-  getAztecTimestampMs,
-  isAztecFinalizedStatus,
-} from '@/utils/aztec';
+import { getAztecTimestampMs } from '@/utils/aztec';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
 
@@ -35,7 +29,6 @@ export interface TxMetrics {
 
 /** API returns up to 100 tx-effects per request */
 const ITEMS_PER_BATCH = 100;
-const TPS_BLOCK_WINDOW = AZTEC_INDEXER_MAX_BLOCK_RANGE;
 
 /** Short cache for tx list — reduces indexer load under high traffic */
 const TX_LIST_CACHE = { revalidate: 3 };
@@ -73,42 +66,38 @@ const getAztecConfirmedBlockTimestamps = async (blockHeights: number[]): Promise
   return timestamps;
 };
 
-const getAztecTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+const getAztecPendingTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
   try {
-    // Fetch pending txs and total count in parallel
-    const [pendingTxs, totalCount] = await Promise.all([
-      currentPage === 1 ? aztecIndexer.getPendingTxs({}, { cache: 'no-store' }) : Promise.resolve([]),
-      aztecIndexer.getTotalTxEffects(TX_LIST_CACHE),
-    ]);
+    const pendingTxs = await aztecIndexer.getPendingTxs({}, { cache: 'no-store' });
 
-    const pendingItems: TxItem[] = pendingTxs.map((tx) => ({
+    const sorted = [...pendingTxs].sort((a, b) => (b.birthTimestamp ?? 0) - (a.birthTimestamp ?? 0));
+    const totalPages = Math.max(1, Math.ceil(sorted.length / perPage));
+    const offset = (currentPage - 1) * perPage;
+
+    const pageItems: TxItem[] = sorted.slice(offset, offset + perPage).map((tx) => ({
       hash: tx.txHash,
       status: 'pending' as const,
       timestamp: tx.birthTimestamp,
       feePayer: tx.feePayer,
     }));
 
-    // On page 1: pending fill top slots, confirmed fill the rest
-    // On other pages: only confirmed
-    const pendingCount = currentPage === 1 ? pendingItems.length : 0;
-    const confirmedSlotsOnPage = perPage - pendingCount;
+    return { txs: pageItems, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Aztec pending transactions:', error);
+    return { txs: [], totalPages: 1, error: true };
+  }
+};
 
-    if (confirmedSlotsOnPage <= 0) {
-      // Entire page is pending txs (unlikely but handle it)
-      const totalPages = Math.max(1, Math.ceil((totalCount + pendingCount) / perPage));
-      return { txs: pendingItems.slice(0, perPage), totalPages };
-    }
-
-    const totalPages = Math.ceil((totalCount + pendingCount) / perPage);
+const getAztecConfirmedTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+  try {
+    const totalCount = await aztecIndexer.getTotalTxEffects(TX_LIST_CACHE);
+    const totalPages = Math.max(1, Math.ceil(totalCount / perPage));
 
     if (totalCount === 0) {
-      return { txs: pendingItems, totalPages: Math.max(1, totalPages) };
+      return { txs: [], totalPages };
     }
 
-    // For confirmed txs: adjust offset to account for pending slots on page 1
-    const confirmedOffset = currentPage === 1
-      ? 0
-      : (currentPage - 1) * perPage - pendingCount;
+    const confirmedOffset = (currentPage - 1) * perPage;
     const batchIndex = Math.floor(confirmedOffset / ITEMS_PER_BATCH);
     const offsetInBatch = confirmedOffset % ITEMS_PER_BATCH;
 
@@ -120,7 +109,7 @@ const getAztecTxs = async (currentPage: number, perPage: number): Promise<TxsRes
       batch = await aztecIndexer.getUiTxEffects({ to: lowestBlock }, TX_LIST_CACHE);
     }
 
-    const pageTxEffects = batch.slice(offsetInBatch, offsetInBatch + confirmedSlotsOnPage);
+    const pageTxEffects = batch.slice(offsetInBatch, offsetInBatch + perPage);
     const confirmedBlockTimestamps = await getAztecConfirmedBlockTimestamps(
       pageTxEffects.map((tx) => Number(tx.blockNumber)),
     );
@@ -133,14 +122,19 @@ const getAztecTxs = async (currentPage: number, perPage: number): Promise<TxsRes
       timestamp: confirmedBlockTimestamps.get(Number(tx.blockNumber)),
     }));
 
-    return {
-      txs: [...pendingItems, ...confirmedItems],
-      totalPages: Math.max(1, totalPages),
-    };
+    return { txs: confirmedItems, totalPages };
   } catch (error) {
     console.error('Failed to fetch Aztec transactions:', error);
     return { txs: [], totalPages: 1, error: true };
   }
+};
+
+const getAztecTxs = async (
+  currentPage: number,
+  perPage: number,
+  showPending = false,
+): Promise<TxsResponse> => {
+  return showPending ? getAztecPendingTxs(currentPage, perPage) : getAztecConfirmedTxs(currentPage, perPage);
 };
 
 /** Shorter timeout for cascading hash lookups (default 30s is too long for 3 sequential calls) */
@@ -178,143 +172,31 @@ const getTxsByChainName = async (
   chainName: string,
   currentPage: number = 1,
   perPage: number = 20,
+  showPending: boolean = false,
 ): Promise<TxsResponse> => {
   const normalizedChainName = chainName.toLowerCase();
 
   if (normalizedChainName === 'aztec') {
-    return getAztecTxs(currentPage, perPage);
+    return getAztecTxs(currentPage, perPage, showPending);
   }
 
   return { txs: [], totalPages: 1 };
 };
 
-const toBigIntValue = (value: string | number | bigint): bigint => {
-  if (typeof value === 'bigint') {
-    return value;
-  }
-
-  if (typeof value === 'number') {
-    return BigInt(Math.trunc(value));
-  }
-
-  return BigInt(value);
-};
-
-const calculateAztecTps = async (): Promise<number | null> => {
-  try {
-    const latestFinalizedBlock = await getLatestFinalizedBlock();
-    const latestFinalizedHeight = getAztecBlockHeight(latestFinalizedBlock.height);
-    const from = Math.max(1, latestFinalizedHeight - TPS_BLOCK_WINDOW + 1);
-
-    const recentBlocks = await aztecIndexer.getUiBlocksStrict(
-      { from, to: latestFinalizedHeight },
-      { cache: 'no-store' },
-    );
-
-    const finalizedBlocks = recentBlocks
-      .filter((block) => isAztecFinalizedStatus(block.blockStatus))
-      .sort((left, right) => Number(left.height) - Number(right.height));
-
-    if (finalizedBlocks.length === 0) {
-      return null;
-    }
-
-    const totalTxs = finalizedBlocks.reduce((sum, block) => sum + Number(block.txEffectsLength || 0), 0);
-    if (finalizedBlocks.length === 1) {
-      return totalTxs;
-    }
-
-    const firstTimestamp = getAztecTimestampMs(finalizedBlocks[0].timestamp);
-    const lastTimestamp = getAztecTimestampMs(finalizedBlocks[finalizedBlocks.length - 1].timestamp);
-    const elapsedSeconds = Math.max((lastTimestamp - firstTimestamp) / 1000, 1);
-
-    return totalTxs / elapsedSeconds;
-  } catch (error) {
-    console.error('Failed to calculate Aztec TPS:', error);
-    return null;
-  }
-};
-
-const calculateAztecAverageFee = async (): Promise<string | null> => {
-  try {
-    const recentTxEffects = await aztecIndexer.getTxEffects({ cache: 'no-store' });
-    const confirmedTxEffects = recentTxEffects.filter((tx) => !tx.isOrphaned);
-
-    if (confirmedTxEffects.length === 0) {
-      return null;
-    }
-
-    const totalFees = confirmedTxEffects.reduce((sum, tx) => {
-      return sum + toBigIntValue(tx.transactionFee);
-    }, BigInt(0));
-
-    return (totalFees / BigInt(confirmedTxEffects.length)).toString();
-  } catch (error) {
-    console.error('Failed to calculate Aztec average fee:', error);
-    return null;
-  }
-};
-
 const getAztecTxMetrics = async (chainId: number): Promise<TxMetrics> => {
-  const cached = await db.chainTxMetrics.findUnique({
-    where: { chainId },
-  });
+  const cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
 
-  try {
-    const [totalTxs, txsLast24h, tps, avgFee] = await Promise.all([
-      aztecIndexer.getTotalTxEffects({ cache: 'no-store' }),
-      aztecIndexer.getTxEffectsLast24h({ cache: 'no-store' }),
-      calculateAztecTps(),
-      calculateAztecAverageFee(),
-    ]);
-
-    const metrics: TxMetrics = {
-      totalTxs: totalTxs || null,
-      txsLast24h: txsLast24h || null,
-      txs30d: null,
-      tps,
-      avgFee,
-    };
-
-    await db.chainTxMetrics.upsert({
-      where: { chainId },
-      update: {
-        totalTxs: metrics.totalTxs ? BigInt(metrics.totalTxs) : null,
-        txsLast24h: metrics.txsLast24h,
-        tps: metrics.tps,
-        avgFee: metrics.avgFee,
-      },
-      create: {
-        chainId,
-        totalTxs: metrics.totalTxs ? BigInt(metrics.totalTxs) : null,
-        txsLast24h: metrics.txsLast24h,
-        tps: metrics.tps,
-        avgFee: metrics.avgFee,
-      },
-    });
-
-    return metrics;
-  } catch (error) {
-    console.error('Failed to fetch Aztec tx metrics:', error);
-
-    if (cached) {
-      return {
-        totalTxs: cached.totalTxs ? Number(cached.totalTxs) : null,
-        txsLast24h: cached.txsLast24h,
-        txs30d: cached.txs30d,
-        tps: cached.tps,
-        avgFee: cached.avgFee,
-      };
-    }
-
-    return {
-      totalTxs: null,
-      txsLast24h: null,
-      txs30d: null,
-      tps: null,
-      avgFee: null,
-    };
+  if (!cached) {
+    return { totalTxs: null, txsLast24h: null, txs30d: null, tps: null, avgFee: null };
   }
+
+  return {
+    totalTxs: cached.totalTxs ? Number(cached.totalTxs) : null,
+    txsLast24h: cached.txsLast24h,
+    txs30d: cached.txs30d,
+    tps: cached.tps,
+    avgFee: cached.avgFee,
+  };
 };
 
 const TxService = {

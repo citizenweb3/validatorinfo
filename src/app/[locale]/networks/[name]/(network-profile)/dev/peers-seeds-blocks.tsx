@@ -33,38 +33,43 @@ const PeersSeedsBlocks: FC<OwnProps> = async ({ chain }) => {
   const activityData = chain?.id ? await githubService.getActivityData(chain.id) : [];
   const activity = getMonthlyCommits(activityData);
 
+  const hasActivity = activity > 0;
+  const hasPeers = peersList != null && peersList.length > 0;
+  const hasSeeds = seedsList != null && seedsList.length > 0;
+  const hasBinaries = binariesList.length > 0;
+
   return (
     <div className="my-20">
       <div className="flex w-full flex-row justify-center gap-6">
         <MetricsCardItem
           title={t('commits p/month')}
-          data={activity}
-          className={'pt-2.5'}
-          dataClassName={'mt-5'}
+          data={hasActivity ? activity : 12}
+          className={'pt-2.5 pb-4'}
+          dataClassName={`mt-5 ${!hasActivity ? 'blur-sm' : ''}`}
         />
         <MetricsCardItem
           title={t('peers')}
-          data={peersList?.length ?? 12}
-          className={'pt-2.5'}
-          dataClassName={'mt-5'}
-          isModal
-          modalItem={peersList}
+          data={hasPeers ? peersList.length : 12}
+          className={'pt-2.5 pb-4'}
+          dataClassName={`mt-5 ${!hasPeers ? 'blur-sm' : ''}`}
+          isModal={hasPeers}
+          modalItem={hasPeers ? peersList : undefined}
         />
         <MetricsCardItem
           title={t('seeds')}
-          data={seedsList?.length ?? 12}
-          className={'pt-2.5'}
-          dataClassName={'mt-5'}
-          isModal
-          modalItem={seedsList}
+          data={hasSeeds ? seedsList.length : 12}
+          className={'pt-2.5 pb-4'}
+          dataClassName={`mt-5 ${!hasSeeds ? 'blur-sm' : ''}`}
+          isModal={hasSeeds}
+          modalItem={hasSeeds ? seedsList : undefined}
         />
         <MetricsCardItem
           title={t('binary versions')}
-          data={binariesList?.length ?? 12}
-          className={'pt-2.5'}
-          dataClassName={'mt-5'}
-          isModal
-          modalItem={binariesList}
+          data={hasBinaries ? binariesList.length : 12}
+          className={'pt-2.5 pb-4'}
+          dataClassName={`mt-5 ${!hasBinaries ? 'blur-sm' : ''}`}
+          isModal={hasBinaries}
+          modalItem={hasBinaries ? binariesList : undefined}
         />
       </div>
     </div>
