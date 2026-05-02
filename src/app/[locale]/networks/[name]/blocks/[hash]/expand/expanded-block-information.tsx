@@ -5,14 +5,80 @@ import { FC } from 'react';
 import CopyButton from '@/components/common/copy-button';
 import { ChainWithParams } from '@/services/chain-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
+import logosIndexer from '@/services/logos-indexer-api';
 
 interface OwnProps {
   chain: ChainWithParams | null;
   hash: string;
 }
 
-const ExpandedBlockInformation: FC<OwnProps> = async ({ hash }) => {
+const ExpandedBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const t = await getTranslations('BlockInformationPage');
+  const isLogos = chain?.name === 'logos-testnet';
+
+  if (isLogos) {
+    let block;
+    try {
+      block = await logosIndexer.getBlock(hash, { revalidate: false });
+    } catch (error) {
+      console.error('Error fetching Logos block for expanded view:', error);
+      notFound();
+    }
+    if (!block) {
+      notFound();
+    }
+
+    const proof = block.raw?.header.proof_of_leadership;
+    const expandedData: Array<{ title: string; data: string | number; type: 'hash' | 'number' | 'text' }> = [
+      { title: 'block root', data: block.block_root, type: 'hash' },
+      { title: 'parent block', data: block.parent_block, type: 'hash' },
+      { title: 'leader key', data: block.leader_key, type: 'hash' },
+      { title: 'voucher commitment', data: block.voucher_cm, type: 'hash' },
+      { title: 'entropy', data: block.entropy, type: 'hash' },
+      ...(proof
+        ? [
+            { title: 'entropy contribution', data: proof.entropy_contribution, type: 'hash' as const },
+            { title: 'proof size', data: proof.proof.length, type: 'number' as const },
+          ]
+        : []),
+      { title: 'transaction count', data: block.tx_count, type: 'number' },
+    ];
+
+    const formatData = (data: string | number, type: 'hash' | 'number' | 'text') => {
+      if (type === 'hash') {
+        return (
+          <div className="flex flex-row items-center gap-2">
+            <span className="break-all font-handjet text-lg hover:text-highlight">{data}</span>
+            <CopyButton value={data.toString()} size="md" />
+          </div>
+        );
+      }
+      if (type === 'number') {
+        return (
+          <div className="font-handjet text-lg hover:text-highlight">
+            {typeof data === 'number' ? data.toLocaleString('en-US') : data}
+          </div>
+        );
+      }
+      return <div className="hover:text-highlight">{data}</div>;
+    };
+
+    return (
+      <div className="mb-5 mt-5">
+        {expandedData.map((item) => (
+          <div key={item.title} className="mt-2 flex w-full hover:bg-bgHover">
+            <div className="w-3/12 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+              {t(item.title as 'block root')}
+            </div>
+            <div className="flex w-9/12 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-sfpro text-base">
+              {formatData(item.data, item.type)}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   const isHeight = /^\d+$/.test(hash);
 
   let block;

@@ -430,7 +430,8 @@
     "Transaction Volume": "Volume de transações + MAU",
     "chart unavailable": "Os dados do volume de transações estão indisponíveis no momento. As métricas ao vivo retornarão assim que a manutenção for concluída.",
     "distribution map": "Mapa de Distribuição",
-    "UnderConstruction": "Página em construção..."
+    "UnderConstruction": "Página em construção...",
+    "no blocks found": "Nenhum Bloco Encontrado"
   },
   "NetworkGovernance": {
     "title": "Portal de Governança: Votação na Rede",
@@ -1435,6 +1436,10 @@
       "Block Height": {
         "name": "Altura do Bloco",
         "hint": "Número do bloco"
+      },
+      "Slot": {
+        "name": "Slot",
+        "hint": "Slot temporal Cryptarchia do bloco"
       }
     }
   },
@@ -1516,6 +1521,14 @@
     "in hash": "Hash de Entrada",
     "out hash": "Hash de Saída",
     "sponge blob hash": "Hash Sponge Blob",
+    "leader key": "Chave do Líder",
+    "voucher commitment": "Compromisso do Voucher",
+    "entropy": "Entropia",
+    "parent block": "Bloco Pai",
+    "indexed at": "Indexado Em",
+    "block root": "Raiz do Bloco",
+    "entropy contribution": "Contribuição de Entropia",
+    "proof size": "Tamanho da Prova (bytes)",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"

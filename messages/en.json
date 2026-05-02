@@ -430,7 +430,8 @@
     "Transaction Volume": "Transaction Volume + MAU",
     "chart unavailable": "Transaction volume data is currently unavailable. Live metrics will return once maintenance is complete.",
     "distribution map": "Distributrion Map",
-    "UnderConstruction": "Page Under Construction..."
+    "UnderConstruction": "Page Under Construction...",
+    "no blocks found": "No Blocks Found"
   },
   "NetworkGovernance": {
     "title": "Governance Portal: Network Voting",
@@ -1500,6 +1501,14 @@
     "in hash": "In Hash",
     "out hash": "Out Hash",
     "sponge blob hash": "Sponge Blob Hash",
+    "leader key": "Leader Key",
+    "voucher commitment": "Voucher Commitment",
+    "entropy": "Entropy",
+    "parent block": "Parent Block",
+    "indexed at": "Indexed At",
+    "block root": "Block Root",
+    "entropy contribution": "Entropy Contribution",
+    "proof size": "Proof Size (bytes)",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"
@@ -1526,6 +1535,10 @@
       "Block Height": {
         "name": "Block Height",
         "hint": "The number of block"
+      },
+      "Slot": {
+        "name": "Slot",
+        "hint": "Cryptarchia time slot of the block"
       }
     }
   },

@@ -1,4 +1,5 @@
 import aztecIndexer from '@/services/aztec-indexer-api';
+import logosIndexer from '@/services/logos-indexer-api';
 import { formatTimestamp } from '@/utils/format-timestamp';
 import {
   AZTEC_INDEXER_MAX_BLOCK_RANGE,
@@ -53,6 +54,47 @@ const getAztecBlocks = async (currentPage: number, perPage: number): Promise<Blo
   }
 };
 
+const LOGOS_MAX_PER_PAGE = 100;
+
+const getLogosBlocks = async (currentPage: number, perPage: number): Promise<BlocksResponse> => {
+  try {
+    const pageSize = Math.max(1, Math.min(perPage, LOGOS_MAX_PER_PAGE));
+    const stats = await logosIndexer.getStats({ cache: 'no-store' });
+    const totalBlocks = stats.total_blocks;
+
+    if (!totalBlocks || totalBlocks <= 0) {
+      return { blocks: [], totalPages: 1 };
+    }
+
+    const computedFromStats = Math.max(1, Math.ceil(totalBlocks / pageSize));
+    const offset = (currentPage - 1) * pageSize;
+    const { data, pagination } = await logosIndexer.getBlocks(
+      { finalized: 'all', limit: pageSize, offset },
+      { cache: 'no-store' },
+    );
+
+    const computedFromHasMore = pagination.has_more ? currentPage + 1 : currentPage;
+    const totalPages = Math.max(computedFromStats, computedFromHasMore);
+
+    // Indexer API does not preserve slot ordering across the dataset; sort the
+    // current page by slot desc so within-page rows look chronologically correct.
+    const sorted = [...data].sort((a, b) => b.slot - a.slot);
+    const blocks: BlockItem[] = sorted.map((b) => ({
+      hash: b.id,
+      // height is null until finalization on Cryptarchia — fall back to slot so the
+      // column is never empty (slot is unique-and-monotonic per block).
+      height: b.height ?? b.slot,
+      timestamp: formatTimestamp(new Date(b.indexed_at)),
+      finalizationStatus: b.finalized ? 3 : 0,
+    }));
+
+    return { blocks, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Logos blocks:', error);
+    return { blocks: [], totalPages: 1 };
+  }
+};
+
 const getBlocksByChainName = async (
   chainName: string,
   currentPage: number = 1,
@@ -64,12 +106,17 @@ const getBlocksByChainName = async (
     return getAztecBlocks(currentPage, perPage);
   }
 
+  if (normalizedChainName === 'logos-testnet') {
+    return getLogosBlocks(currentPage, perPage);
+  }
+
   return { blocks: [], totalPages: 1 };
 };
 
 const BlocksService = {
   getBlocksByChainName,
   getAztecBlocks,
+  getLogosBlocks,
 };
 
 export default BlocksService;

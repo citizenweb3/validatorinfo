@@ -1,3 +1,4 @@
+import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import NetworkBlocksItem from '@/app/networks/[name]/blocks/blocks-table/network-blocks-items';
@@ -11,14 +12,16 @@ interface OwnProps {
 }
 
 const NetworkBlocksList: FC<OwnProps> = async ({ name, perPage, currentPage = 1 }) => {
+  const t = await getTranslations('NetworkStatistics');
   const { blocks, totalPages } = await BlocksService.getBlocksByChainName(name, currentPage, perPage);
 
-  if (blocks.length === 0 && name.toLowerCase() !== 'aztec') {
+  const supportsBlocks = ['aztec', 'logos-testnet'].includes(name.toLowerCase());
+  if (blocks.length === 0 && !supportsBlocks) {
     return (
       <tbody>
         <tr>
           <td colSpan={4} className="py-8 text-center">
-            <div className="text-gray-500 font-sfpro text-lg">Under Development</div>
+            <div className="font-sfpro text-lg">{t('under development')}</div>
           </td>
         </tr>
       </tbody>
@@ -30,7 +33,7 @@ const NetworkBlocksList: FC<OwnProps> = async ({ name, perPage, currentPage = 1 
       <tbody>
         <tr>
           <td colSpan={4} className="py-8 text-center">
-            <div className="text-gray-500 font-sfpro text-lg">No blocks found</div>
+            <div className="font-sfpro text-lg">{t('no blocks found')}</div>
           </td>
         </tr>
       </tbody>

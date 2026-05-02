@@ -90,6 +90,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const price = chain ? await chainService.getTokenPriceByChainId(chain?.id) : undefined;
 
   const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
+  const isLogos = chain?.name === 'logos-testnet';
   const activeValidators = chain
     ? isAztec
       ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
@@ -261,6 +262,32 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <Suspense fallback={null}>
             <CommitteeSizeDisplay chainName={chain.name} />
           </Suspense>
+        </>
+      ) : isLogos && chain ? (
+        <>
+          {!!chain.uptimeHeight && (
+            <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+              <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+                {t('total amount of blocks')}
+              </div>
+              <Link
+                href={`/networks/${chain.name}/blocks`}
+                className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+              >
+                {chain.uptimeHeight.toLocaleString('en-US')}
+              </Link>
+            </div>
+          )}
+          {!!chain.avgTxInterval && (
+            <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+              <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+                {t('slot duration')}
+              </div>
+              <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+                {(chain.avgTxInterval / 1000).toFixed(2)}s
+              </div>
+            </div>
+          )}
         </>
       ) : (
         !!chain?.avgTxInterval && (
