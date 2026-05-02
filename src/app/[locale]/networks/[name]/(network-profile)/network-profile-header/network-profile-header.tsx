@@ -32,7 +32,8 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
   const centerLogoSizes =
     'sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] 2xl:w-[124px] 2xl:h-[124px]';
 
-  const isAztec = chain?.name === 'aztec';
+  const isBlocks = chain?.name === 'aztec' || chain?.name === 'logos-testnet';
+  const isTxs = chain?.name === 'aztec';
 
   const validatorsLink = `/networks/${chainName}/validators`;
   const nodesLink = `/networks/${chainName}/nodes`;
@@ -92,8 +93,8 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
             </Tooltip>
 
             <Tooltip tooltip={t('Transactions')} direction="top">
-              <div className={`${isAztec ? '' : 'blur-sm'}`}>
-                <Link href={isAztec ? txLink : ''}>
+              <div className={`${isTxs ? '' : 'blur-sm'}`}>
+                <Link href={isTxs ? txLink : ''}>
                   <div className={iconBtnClass}>
                     <Image src={icons.NetworkProfileHeaderTxs} alt={t('Transactions')} width={40} height={40}
                            className="group-hover/btn:hidden" />
@@ -118,8 +119,8 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
             </Tooltip>
 
             <Tooltip tooltip={t('Blocks')} direction="top">
-              <div className={`${isAztec ? '' : 'blur-sm'}`}>
-                <Link href={isAztec ? blockLink : ''}>
+              <div className={`${isBlocks ? '' : 'blur-sm'}`}>
+                <Link href={isBlocks ? blockLink : ''}>
                   <div className={iconBtnClass}>
                     <Image src={icons.NetworkBlocks} alt={t('Blocks')} width={40} height={40}
                            className="group-hover/btn:hidden" />

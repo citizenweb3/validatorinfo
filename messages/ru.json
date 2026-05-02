@@ -430,7 +430,8 @@
     "Transaction Volume": "Объём транзакций + MAU",
     "chart unavailable": "Данные об объёме транзакций временно недоступны. Метрики появятся после завершения технического обслуживания.",
     "distribution map": "Карта дистрибьюции",
-    "UnderConstruction": "Страница в разработке..."
+    "UnderConstruction": "Страница в разработке...",
+    "no blocks found": "Блоки не найдены"
   },
   "NetworkGovernance": {
     "title": "Портал управления: Голосование в сети",
@@ -1501,6 +1502,14 @@
     "in hash": "Входящий Хеш",
     "out hash": "Исходящий Хеш",
     "sponge blob hash": "Хеш Sponge Blob",
+    "leader key": "leader key",
+    "voucher commitment": "voucher commitment",
+    "entropy": "entropy",
+    "parent block": "родительский блок",
+    "indexed at": "проиндексирован",
+    "block root": "корень блока",
+    "entropy contribution": "вклад энтропии",
+    "proof size": "размер пруфа (байт)",
     "Tabs": {
       "Expand": "Развернуть",
       "JSON": "JSON"
@@ -1527,6 +1536,10 @@
       "Block Height": {
         "name": "Высота блока",
         "hint": "Номер блока"
+      },
+      "Slot": {
+        "name": "Слот",
+        "hint": "Временной слот Cryptarchia, в котором был создан блок"
       }
     }
   },
