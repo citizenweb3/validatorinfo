@@ -63,7 +63,7 @@ const runServer = async () => {
     { name: 'validators', schedule: timers.everyHour },
     { name: 'update-reward-address', schedule: timers.everyDay },
     { name: 'chain-proposals', schedule: timers.everyDay },
-    { name: 'chain-tvls', schedule: timers.every5mins },
+    { name: 'chain-tvls', schedule: timers.everyHour },
     { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
     { name: 'chain-staking-params', schedule: timers.everyDay },
     { name: 'chain-slashing-params', schedule: timers.everyDay },
