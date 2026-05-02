@@ -58,24 +58,23 @@ const runServer = async () => {
   }
 
   const tasks = [
-    // [logos-testnet smoke test] only chain-tvls — calls getChainUptime first; other Cosmos-shaped tasks disabled.
-    // { name: 'sync-aztec-events', schedule: timers.every10mins },
-    // { name: 'prices', schedule: timers.every5mins },
-    // { name: 'validators', schedule: timers.everyHour },
-    // { name: 'update-reward-address', schedule: timers.everyDay },
-    // { name: 'chain-proposals', schedule: timers.everyDay },
+    { name: 'sync-aztec-events', schedule: timers.every10mins },
+    { name: 'prices', schedule: timers.every5mins },
+    { name: 'validators', schedule: timers.everyHour },
+    { name: 'update-reward-address', schedule: timers.everyDay },
+    { name: 'chain-proposals', schedule: timers.everyDay },
     { name: 'chain-tvls', schedule: timers.every5mins },
-    // { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
-    // { name: 'chain-staking-params', schedule: timers.everyDay },
-    // { name: 'chain-slashing-params', schedule: timers.everyDay },
-    // { name: 'chain-node-params', schedule: timers.everyDay },
-    // { name: 'community-tax', schedule: timers.everyDay },
-    // { name: 'wallets-amount', schedule: timers.everyDay },
-    // { name: 'proposal-params', schedule: timers.everyDay },
-    // { name: 'update-staking-page-json', schedule: timers.everyDay },
-    // { name: 'community-pool', schedule: timers.everyDay },
-    // { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
-    // { name: 'inflation-rate', schedule: timers.everyDay },
+    { name: 'chain-aprs', schedule: timers.in15MinEveryHour },
+    { name: 'chain-staking-params', schedule: timers.everyDay },
+    { name: 'chain-slashing-params', schedule: timers.everyDay },
+    { name: 'chain-node-params', schedule: timers.everyDay },
+    { name: 'community-tax', schedule: timers.everyDay },
+    { name: 'wallets-amount', schedule: timers.everyDay },
+    { name: 'proposal-params', schedule: timers.everyDay },
+    { name: 'update-staking-page-json', schedule: timers.everyDay },
+    { name: 'community-pool', schedule: timers.everyDay },
+    { name: 'active-set-min-amount', schedule: timers.in45MinEveryHour },
+    { name: 'inflation-rate', schedule: timers.everyDay },
   ];
 
   tasks.forEach((task) => {
@@ -100,8 +99,6 @@ const runServer = async () => {
   });
 
   const specialTasks: Array<{ name: string; schedule: string }> = [
-    // [logos-testnet smoke test] all special tasks disabled — Aztec/Cosmos-only.
-    /*
     { name: 'validatorInfo', schedule: timers.everyDay },
     { name: 'update-aztec-sequencer-stake', schedule: timers.everyHour },
     { name: 'update-aztec-coinbase-address', schedule: timers.everyHour },
@@ -135,7 +132,6 @@ const runServer = async () => {
     { name: 'update-aztec-tx-metrics', schedule: timers.everyDay },
     { name: 'update-proposal-texts', schedule: timers.every10mins },
     { name: 'update-validator-ranks', schedule: timers.every6hours },
-    */
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

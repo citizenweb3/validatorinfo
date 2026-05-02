@@ -83,7 +83,7 @@ const DevInfoParameters: FC<OwnProps> = async ({ chain }) => {
         </div>
       )}
 
-      {chain?.params?.coinType !== undefined && (
+      {chain?.params?.coinType !== undefined && chain.params.coinType > 0 && (
         <div className="mt-4 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/4 items-center border-b border-r border-bgSt py-6 pl-6 font-sfpro text-lg">
             {t('slip44')}
