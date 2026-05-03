@@ -46,18 +46,18 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
             <div className="w-2/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">APR</div>
             <div
               style={{ color: '#4FB848' }}
-              className="flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
+              className={`flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg ${chain?.tokenomics?.apr ?? 'blur-sm'}`}
             >
-              {((chain?.tokenomics?.apr ?? 0.15) * 100).toFixed(2)}%
+              {((chain?.tokenomics?.apr ?? 0) * 100).toFixed(2)}%
             </div>
           </div>
           <div className="mt-2 flex w-full flex-wrap">
             <div className="w-2/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-base">TVS</div>
             <div
               style={{ color: '#E5C46B' }}
-              className="flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
+              className={`flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg ${chain?.tokenomics?.apr ?? 'blur-sm'}`}
             >
-              {((chain?.tokenomics?.tvs ?? 0.5) * 100).toFixed(2)}%
+              {((chain?.tokenomics?.tvs ?? 0) * 100).toFixed(2)}%
             </div>
           </div>
           <div className="mt-2 flex w-full flex-wrap">
@@ -67,7 +67,7 @@ const NetworkAprTvs: FC<OwnProps> = async ({ chain }) => {
             <Link
               href={`/networks/${chain?.name}/validators`}
               style={{ color: '#2077E0' }}
-              className="flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:underline"
+              className={`flex w-1/3 items-center justify-between gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:underline ${validatorsCount == 0 ? 'blur-sm' : ''}`}
             >
               {validatorsCount}
             </Link>
