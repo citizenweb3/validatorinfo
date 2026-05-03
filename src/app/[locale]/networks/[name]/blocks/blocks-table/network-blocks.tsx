@@ -16,7 +16,6 @@ const NetworkBlocks: FC<OwnProps> = async ({ name, page, perPage, currentPage })
   const t = await getTranslations('TotalBlocksPage.Table');
   // Cryptarchia: blocks have a slot (time slot of leader election) but height is null
   // until a finality layer assigns it. For Logos we surface slot directly.
-  const heightColumnKey = name.toLowerCase() === 'logos-testnet' ? 'Slot.name' : 'Block Height.name';
 
   return (
     <div className="mt-12">
@@ -24,7 +23,7 @@ const NetworkBlocks: FC<OwnProps> = async ({ name, page, perPage, currentPage })
         <thead>
           <tr className="bg-table_header">
             <TableHeaderItem page={page} name={t('Block Hash.name')} />
-            <TableHeaderItem page={page} name={t(heightColumnKey as 'Block Height.name')} />
+            <TableHeaderItem page={page} name={t('Block Height.name')} />
             <TableHeaderItem page={page} name={t('Timestamp.name')} />
             <TableHeaderItem page={page} name={t('Status.name')} />
           </tr>
