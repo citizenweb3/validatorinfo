@@ -125,6 +125,7 @@ export interface ChainUptime {
   lastUptimeUpdated: Date;
   uptimeHeight: number;
   avgTxInterval: number;
+  blockTime?: number | null;
 }
 
 export interface RewardAddress {
@@ -160,6 +161,10 @@ export type GetDelegatorsAmount = (chain: AddChainProps) => Promise<DelegatorsAm
 export type GetUnbondingTokens = (chain: AddChainProps) => Promise<string | null>;
 export type GetChainUptime = (dbChain: Chain) => Promise<ChainUptime | null>;
 export type GetRewardAddress = (chain: AddChainProps, dbChainId: number) => Promise<RewardAddress[]>;
+export type GetTotalTxs = (dbChain: Chain) => Promise<bigint | null>;
+export type GetTxsLast24h = (dbChain: Chain) => Promise<number | null>;
+export type GetTps = (dbChain: Chain) => Promise<number | null>;
+export type GetAvgFee = (dbChain: Chain) => Promise<string | null>;
 
 export interface ChainMethods {
   getNodes: GetNodesFunction;
@@ -185,4 +190,8 @@ export interface ChainMethods {
   getUnbondingTokens: GetUnbondingTokens;
   getChainUptime: GetChainUptime;
   getRewardAddress: GetRewardAddress;
+  getTotalTxs: GetTotalTxs;
+  getTxsLast24h: GetTxsLast24h;
+  getTps: GetTps;
+  getAvgFee: GetAvgFee;
 }

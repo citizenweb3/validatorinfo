@@ -5,8 +5,10 @@ import getNodes from '@/server/tools/chains/ethereum/get-nodes';
 import getSlashingParams from '@/server/tools/chains/ethereum/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
 import getTvs from '@/server/tools/chains/ethereum/get-tvs';
+import nullTxMetrics from '@/server/tools/chains/null-tx-metrics';
 
 const chainMethods: ChainMethods = {
+  ...nullTxMetrics,
   getNodes,
   getStakingParams,
   getTvs,

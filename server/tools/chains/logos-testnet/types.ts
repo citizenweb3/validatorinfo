@@ -10,3 +10,18 @@ export interface LogosStats {
   node_mode: 'Online' | 'Syncing' | string;
   lag_slots: number;
 }
+
+export interface LogosBlockSample {
+  slot: number;
+  height: number | null;
+  indexed_at: string;
+}
+
+export interface LogosBlocksResponse {
+  data: LogosBlockSample[];
+  pagination: {
+    limit: number;
+    offset: number;
+    has_more: boolean;
+  };
+}

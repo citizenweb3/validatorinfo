@@ -8,6 +8,7 @@ import RoundedButton from '@/components/common/rounded-button';
 import Tooltip from '@/components/common/tooltip';
 import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { AztecDroppedTx, AztecPendingTx, AztecTxEffect } from '@/services/aztec-indexer-api/types';
+import { LogosTxDetail } from '@/services/logos-indexer-api';
 import TxService, { TxStatus } from '@/services/tx-service';
 import { ChainWithParams } from '@/services/chain-service';
 import { formatTimestamp } from '@/utils/format-timestamp';
@@ -31,6 +32,109 @@ const getStatusLabel = (status: TxStatus) => {
 
 const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const t = await getTranslations('TxInformationPage');
+
+  if (chain?.name === 'logos-testnet') {
+    const result = await TxService.getLogosTxByHash(hash);
+
+    if (!result) {
+      return (
+        <div className="mt-2">
+          <div className="mb-8 ml-5 flex justify-between">
+            <div className="flex flex-row">
+              <div className="mr-5 flex">
+                <Tooltip tooltip={t('hash txs tooltip')} direction={'bottom'}>
+                  <div className="h-24 min-h-24 w-24 min-w-24 bg-hash_txs bg-contain bg-no-repeat hover:bg-hash_txs_h" />
+                </Tooltip>
+              </div>
+              <div className="flex flex-col justify-center">
+                <div className="flex items-end justify-end font-handjet text-lg">
+                  {hash}
+                  <CopyButton value={hash} size="md" />
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <RoundedButton href={`/networks/${chain.name}/tx`} className="mb-4 font-handjet text-lg active:mb-3">
+                {t('show all transactions')}
+              </RoundedButton>
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-4 py-12">
+            <div className="font-sfpro text-lg">{t('tx not found')}</div>
+            <div className="font-sfpro text-base text-gray-400">{t('tx not found hint')}</div>
+          </div>
+        </div>
+      );
+    }
+
+    const { status, data } = result;
+    const tx = data as LogosTxDetail;
+    const statusInfo = getStatusLabel(status);
+
+    return (
+      <div className="mt-2">
+        <div className="mb-8 ml-5 flex justify-between">
+          <div className="flex flex-row">
+            <div className="mr-5 flex">
+              <Tooltip tooltip={t('hash txs tooltip')} direction={'bottom'}>
+                <div className="h-24 min-h-24 w-24 min-w-24 bg-hash_txs bg-contain bg-no-repeat hover:bg-hash_txs_h" />
+              </Tooltip>
+            </div>
+            <div className="flex flex-col justify-center">
+              <div className="mb-1 flex flex-row text-center font-handjet text-lg">
+                <div className={`mr-6 rounded-full px-6 shadow-button ${statusInfo.className}`}>
+                  {t(statusInfo.labelKey)}
+                </div>
+              </div>
+              <div className="flex items-end justify-end font-handjet text-lg">
+                {hash}
+                <CopyButton value={hash} size="md" />
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <RoundedButton href={`/networks/${chain.name}/tx`} className="mb-4 font-handjet text-lg active:mb-3">
+              {t('show all transactions')}
+            </RoundedButton>
+          </div>
+        </div>
+        {[
+          { title: 'chain', value: <Link href={`/networks/${chain.name}/overview`} className="hover:text-highlight hover:underline">{chain.prettyName}</Link> },
+          { title: 'block id', value: (
+              <Link href={`/networks/${chain.name}/blocks/${tx.block_id}`} className="break-all font-handjet text-lg hover:text-highlight hover:underline">
+                {tx.block_id}
+              </Link>
+            ) },
+          ...(tx.height != null
+            ? [{ title: 'block height', value: (
+                <Link href={`/networks/${chain.name}/blocks/${tx.block_id}`} className="font-handjet text-lg hover:text-highlight hover:underline">
+                  {tx.height.toLocaleString('en-US')}
+                </Link>
+              ) }]
+            : []),
+          { title: 'slot', value: <div className="font-handjet text-lg">{tx.slot.toLocaleString('en-US')}</div> },
+          { title: 'index in block', value: <div className="font-handjet text-lg">{tx.position}</div> },
+          { title: 'op count', value: <div className="font-handjet text-lg">{tx.op_count}</div> },
+          ...(tx.op_types && tx.op_types.length > 0
+            ? [{ title: 'op types', value: <div className="font-sfpro text-base">{tx.op_types.join(', ')}</div> }]
+            : []),
+          ...(tx.proof_types && tx.proof_types.length > 0
+            ? [{ title: 'proof types', value: <div className="font-sfpro text-base">{tx.proof_types.join(', ')}</div> }]
+            : []),
+          { title: 'timestamp', value: <div className="font-sfpro text-base">{formatTimestamp(new Date(tx.indexed_at))}</div> },
+        ].map((item) => (
+          <div key={item.title} className="mt-2 flex w-full hover:bg-bgHover">
+            <div className="w-3/12 items-center border-b border-r border-bgSt py-4 pl-11 font-sfpro text-lg">
+              {t(item.title as 'chain')}
+            </div>
+            <div className="flex w-9/12 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-sfpro text-base hover:text-highlight">
+              {item.value}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
 
   if (chain && isAztecChainName(chain.name)) {
     const result = await TxService.getAztecTxByHash(hash);

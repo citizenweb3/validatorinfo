@@ -1386,6 +1386,7 @@
     "transactions 30d": "Transacções (30d)",
     "transactions yesterday": "Transacções (Ontem)",
     "tps": "TPS (Últimos 20 Bloqueios)",
+    "tps 24h": "TPS (24h)",
     "average fee": "Taxa média",
     "noTransactionsYet": "Ainda não há transações",
     "transactionsWillAppear": "A exibição de transações aparecerá quando as transações começarem na rede",
@@ -1412,6 +1413,10 @@
       "Fee": {
         "name": "Taxa",
         "hint": "Valor da taxa de transação"
+      },
+      "Op Type": {
+        "name": "Tipo de Op",
+        "hint": "Tipo de operação da transação Logos (ex.: ChannelInscribe)"
       }
     }
   },
@@ -1481,7 +1486,16 @@
     "validator address": "Endereço do Validador",
     "amount": "Quantidade",
     "auto claim reward": "Reivindicação Automática de Recompensa",
-    "Search by validator name and tx hash": "Pesquisa por nome do validador e hash tx"
+    "Search by validator name and tx hash": "Pesquisa por nome do validador e hash tx",
+    "block id": "ID do Bloco",
+    "slot": "Slot",
+    "op count": "Quantidade de Ops",
+    "op types": "Tipos de Op",
+    "proof types": "Tipos de Prova",
+    "format": "Formato",
+    "storage gas price": "Preço de Gás (Armazenamento)",
+    "execution gas price": "Preço de Gás (Execução)",
+    "operations": "Operações"
   },
   "BlockInformationPage": {
     "title": "Detalhes do Bloco Blockchain: Informações Detalhadas do Bloco",

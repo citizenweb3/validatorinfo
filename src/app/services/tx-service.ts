@@ -1,5 +1,7 @@
 import db from '@/db';
 import aztecIndexer from '@/services/aztec-indexer-api';
+import logosIndexer from '@/services/logos-indexer-api';
+import { LogosTxDetail } from '@/services/logos-indexer-api';
 import { getAztecTimestampMs } from '@/utils/aztec';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
@@ -11,6 +13,11 @@ export interface TxItem {
   transactionFee?: string;
   timestamp?: number;
   feePayer?: string;
+  // Logos-specific
+  opType?: string;
+  opCount?: number;
+  slot?: number;
+  blockId?: string;
 }
 
 export interface TxsResponse {
@@ -168,6 +175,85 @@ const getAztecTxByHash = async (hash: string): Promise<{ status: TxStatus; data:
   return null;
 };
 
+const formatLogosOpTypes = (opTypes: string[] | undefined): string | undefined => {
+  if (!opTypes || opTypes.length === 0) {
+    return undefined;
+  }
+
+  if (opTypes.length === 1) {
+    return opTypes[0];
+  }
+
+  return `${opTypes[0]} +${opTypes.length - 1}`;
+};
+
+/**
+ * Logos: list confirmed+pending transactions (finalized=all). API returns latest first by `height`.
+ * Total page count comes from `stats.total_transactions`.
+ */
+const getLogosTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+  try {
+    const offset = (currentPage - 1) * perPage;
+    const [{ data, pagination }, stats] = await Promise.all([
+      logosIndexer.getTransactions(
+        { finalized: 'all', limit: perPage, offset, sort: 'height', order: 'desc' },
+        TX_LIST_CACHE,
+      ),
+      logosIndexer.getStats(TX_LIST_CACHE),
+    ]);
+
+    const totalFromStats = stats?.total_transactions
+      ? Math.max(1, Math.ceil(stats.total_transactions / perPage))
+      : 0;
+    const totalFromHasMore = pagination.has_more ? currentPage + 1 : currentPage;
+    const totalPages = Math.max(1, totalFromStats, totalFromHasMore);
+
+    const txs: TxItem[] = data.map((tx) => ({
+      hash: tx.id,
+      status: tx.finalized ? 'confirmed' : 'pending',
+      blockHeight: tx.height ?? undefined,
+      blockId: tx.block_id,
+      slot: tx.slot,
+      timestamp: new Date(tx.indexed_at).getTime(),
+      opCount: tx.op_count,
+      opType: formatLogosOpTypes(tx.op_types),
+    }));
+
+    return { txs, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Logos transactions:', error);
+    return { txs: [], totalPages: 1, error: true };
+  }
+};
+
+const getLogosTxByHash = async (
+  id: string,
+): Promise<{ status: TxStatus; data: LogosTxDetail } | null> => {
+  const tx = await logosIndexer.getTransaction(id, { cache: 'no-store' }).catch(() => null);
+  if (!tx) {
+    return null;
+  }
+
+  return { status: tx.finalized ? 'confirmed' : 'pending', data: tx };
+};
+
+const getLogosTxMetrics = async (chainId: number): Promise<TxMetrics> => {
+  const cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
+
+  if (!cached) {
+    return { totalTxs: null, txsLast24h: null, txs30d: null, tps: null, avgFee: null };
+  }
+
+  return {
+    totalTxs: cached.totalTxs ? Number(cached.totalTxs) : null,
+    txsLast24h: cached.txsLast24h,
+    txs30d: cached.txs30d,
+    tps: cached.tps,
+    // Logos testnet: gas prices are 0; avg_fee is meaningless and stays null.
+    avgFee: cached.avgFee,
+  };
+};
+
 const getTxsByChainName = async (
   chainName: string,
   currentPage: number = 1,
@@ -178,6 +264,10 @@ const getTxsByChainName = async (
 
   if (normalizedChainName === 'aztec') {
     return getAztecTxs(currentPage, perPage, showPending);
+  }
+
+  if (normalizedChainName === 'logos-testnet') {
+    return getLogosTxs(currentPage, perPage);
   }
 
   return { txs: [], totalPages: 1 };
@@ -204,6 +294,9 @@ const TxService = {
   getAztecTxs,
   getAztecTxByHash,
   getAztecTxMetrics,
+  getLogosTxs,
+  getLogosTxByHash,
+  getLogosTxMetrics,
 };
 
 export default TxService;

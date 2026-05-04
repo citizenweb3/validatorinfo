@@ -23,7 +23,7 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
   const supply = 100;
 
-  const isAztec = item.name === 'aztec';
+  const hasTxPage = ['aztec', 'logos-testnet'].includes(item.name);
 
   return (
     <BaseTableRow>
@@ -31,7 +31,7 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}/overview`} />
-            {isAztec && (
+            {hasTxPage && (
               <Tooltip tooltip={t('Transactions')} direction="top">
                 <Link href={`/networks/${item.name}/tx`} aria-label={`Transactions for ${item.prettyName}`}>
                   <Image

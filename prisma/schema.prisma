@@ -141,6 +141,7 @@ model Chain {
   uptimeHeight          Int      @default(0) @map("uptime_height")
   lastUptimeUpdated     DateTime @default(now()) @map("last_uptime_updated") @db.Timestamptz(6)
   avgTxInterval         Float    @default(0) @map("avg_tx_interval")
+  blockTime             Float?   @map("block_time")
   totalRewardsLastBlock String?  @map("total_rewards_last_block")
 
   @@map("chains")
