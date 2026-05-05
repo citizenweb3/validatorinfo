@@ -1,4 +1,5 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import nullTxMetrics from '@/server/tools/chains/null-tx-metrics';
 import getCirculatingTokensOnchain from '@/server/tools/chains/solana/get-circulating-tokens-onchain';
 import getCirculatingTokensPublic from '@/server/tools/chains/solana/get-circulating-tokens-public';
 import getInflationRate from '@/server/tools/chains/solana/get-inflation-rate';
@@ -9,6 +10,7 @@ import getStakingParams from '@/server/tools/chains/solana/get-staking-params';
 import getTvs from '@/server/tools/chains/solana/get-tvs';
 
 const chainMethods: ChainMethods = {
+  ...nullTxMetrics,
   getNodes,
   getStakingParams,
   getTvs,

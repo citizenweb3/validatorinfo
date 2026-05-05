@@ -1,5 +1,9 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import getAvgFee from '@/server/tools/chains/logos-testnet/get-avg-fee';
 import getChainUptime from '@/server/tools/chains/logos-testnet/get-chain-uptime';
+import getTotalTxs from '@/server/tools/chains/logos-testnet/get-total-txs';
+import getTps from '@/server/tools/chains/logos-testnet/get-tps';
+import getTxsLast24h from '@/server/tools/chains/logos-testnet/get-txs-last-24h';
 
 // Logos — privacy-preserving PoS testnet (Cryptarchia + Blend mix-network).
 // Anonymous block proposers (one-time leader_keys) + ZK-hidden stake make
@@ -44,6 +48,10 @@ const chainMethods: ChainMethods = {
   getUnbondingTokens: async () => null,
   getChainUptime,
   getRewardAddress: async () => [],
+  getTotalTxs,
+  getTxsLast24h,
+  getTps,
+  getAvgFee,
 };
 
 export default chainMethods;

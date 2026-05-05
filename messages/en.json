@@ -1395,6 +1395,7 @@
     "transactions 30d": "Transactions (30d)",
     "transactions yesterday": "Transactions (Yesterday)",
     "tps": "TPS (Last 20 Blocks)",
+    "tps 24h": "TPS (24h)",
     "average fee": "Average Fee",
     "noTransactionsYet": "No transactions yet",
     "transactionsWillAppear": "Transaction display will appear when transactions begin on the network",
@@ -1421,6 +1422,10 @@
       "Fee": {
         "name": "Fee",
         "hint": "Transaction fee amount"
+      },
+      "Op Type": {
+        "name": "Op Type",
+        "hint": "Logos transaction operation type (e.g. ChannelInscribe)"
       }
     }
   },
@@ -1461,7 +1466,16 @@
     "delegate address": "Delegate Address",
     "validator address": "Validator Address",
     "amount": "Amount",
-    "auto claim reward": "Auto Claim Reward"
+    "auto claim reward": "Auto Claim Reward",
+    "block id": "Block ID",
+    "slot": "Slot",
+    "op count": "Op Count",
+    "op types": "Op Types",
+    "proof types": "Proof Types",
+    "format": "Format",
+    "storage gas price": "Storage Gas Price",
+    "execution gas price": "Execution Gas Price",
+    "operations": "Operations"
   },
   "BlockInformationPage": {
     "title": "Blockchain Block Details: In-Depth Information of the Block",

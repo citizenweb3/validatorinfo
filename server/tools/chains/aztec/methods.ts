@@ -1,3 +1,4 @@
+import getAvgFee from '@/server/tools/chains/aztec/get-avg-fee';
 import getChainUptime from '@/server/tools/chains/aztec/get-chain-uptime';
 import getMissedBlocks from '@/server/tools/chains/aztec/get-missed-blocks';
 import getNodeRewards from '@/server/tools/chains/aztec/get-nodes-rewards';
@@ -5,6 +6,9 @@ import getNodes from '@/server/tools/chains/aztec/get-nodes';
 import getProposalParams from '@/server/tools/chains/aztec/get-proposal-params';
 import getProposals from '@/server/tools/chains/aztec/get-proposals';
 import getSlashingParams from '@/server/tools/chains/aztec/get-slashing-params';
+import getTotalTxs from '@/server/tools/chains/aztec/get-total-txs';
+import getTps from '@/server/tools/chains/aztec/get-tps';
+import getTxsLast24h from '@/server/tools/chains/aztec/get-txs-last-24h';
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import getNodeParams from '@/server/tools/chains/ethereum/get-node-params';
 import getStakingParams from '@/server/tools/chains/ethereum/get-staking-params';
@@ -38,6 +42,10 @@ const chainMethods: ChainMethods = {
   getUnbondingTokens: async () => null,
   getChainUptime,
   getRewardAddress: async () => [],
+  getTotalTxs,
+  getTxsLast24h,
+  getTps,
+  getAvgFee,
 };
 
 export default chainMethods;

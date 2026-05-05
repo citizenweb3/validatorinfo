@@ -21,8 +21,10 @@ import getUnbondingTokens from '@/server/tools/chains/cosmoshub/get-unbonding-to
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
 import getChainUptime from '@/server/tools/chains/cosmoshub/get-chain-uptime';
 import getRewardAddress from '@/server/tools/chains/cosmoshub/get-reward-address';
+import nullTxMetrics from '@/server/tools/chains/null-tx-metrics';
 
 const chainMethods: ChainMethods = {
+  ...nullTxMetrics,
   getNodes,
   getApr,
   getTvs,

@@ -19,8 +19,10 @@ interface OwnProps {
 
 const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentPage = 1, coinDecimals, showPending = false }) => {
   const t = await getTranslations('TotalTxsPage');
+  const isAztec = isAztecChainName(chainName);
+  const isLogos = chainName.toLowerCase() === 'logos-testnet';
 
-  if (isAztecChainName(chainName)) {
+  if (isAztec || isLogos) {
     const { txs, totalPages, error } = await TxService.getTxsByChainName(chainName, currentPage, perPage, showPending);
 
     if (txs.length === 0) {
@@ -49,7 +51,8 @@ const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentP
             key={item.hash}
             name={name}
             item={item}
-            isAztec
+            isAztec={isAztec}
+            isLogos={isLogos}
             coinDecimals={coinDecimals}
             timestampSlot={
               <span className="font-sfpro text-base">
@@ -67,7 +70,7 @@ const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentP
     );
   }
 
-  // Non-Aztec chains: keep existing mock data
+  // Non-Aztec/Logos chains: keep existing mock data
   const pages = 1;
 
   return (

@@ -14,14 +14,18 @@ interface OwnProps {
 const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
   const t = await getTranslations('TotalTxsPage');
 
-  if (isAztecChainName(chainName)) {
+  const isLogos = chainName.toLowerCase() === 'logos-testnet';
+
+  if (isAztecChainName(chainName) || isLogos) {
     const chain = await chainService.getByName(chainName);
 
     if (!chain) {
       return null;
     }
 
-    const metrics = await TxService.getAztecTxMetrics(chain.id);
+    const metrics = isLogos
+      ? await TxService.getLogosTxMetrics(chain.id)
+      : await TxService.getAztecTxMetrics(chain.id);
 
     const metricsData = [
       {
@@ -37,17 +41,22 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
         data: metrics.txsLast24h !== null ? metrics.txsLast24h.toLocaleString('en-US') : 'N/A',
       },
       {
-        title: 'tps',
+        title: isLogos ? 'tps 24h' : 'tps',
         data: metrics.tps !== null
           ? `${metrics.tps.toLocaleString('en-US', { maximumFractionDigits: 2 })} txs/s`
           : 'N/A',
       },
-      {
-        title: 'average fee',
-        data: metrics.avgFee !== null && chain.params?.coinDecimals != null
-          ? `${(Number(metrics.avgFee) / 10 ** chain.params.coinDecimals).toLocaleString('en-US', { maximumSignificantDigits: 3 })} AZTEC`
-          : 'N/A',
-      },
+      // Logos testnet has all gas prices = 0; avg fee is meaningless. Hide the card.
+      ...(isLogos
+        ? []
+        : [
+            {
+              title: 'average fee',
+              data: metrics.avgFee !== null && chain.params?.coinDecimals != null
+                ? `${(Number(metrics.avgFee) / 10 ** chain.params.coinDecimals).toLocaleString('en-US', { maximumSignificantDigits: 3 })} AZTEC`
+                : 'N/A',
+            },
+          ]),
     ];
 
     return (
@@ -55,7 +64,7 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
         {metricsData.map((item) => (
           <MetricsCardItem
             key={item.title}
-            title={t(item.title as 'total transactions')}
+            title={t(item.title as 'tps')}
             data={item.data}
             className="pb-6 pt-2.5"
             dataClassName="mt-5"

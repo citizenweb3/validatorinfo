@@ -33,7 +33,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
     'sm:w-[60px] sm:h-[60px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] 2xl:w-[124px] 2xl:h-[124px]';
 
   const isBlocks = chain?.name === 'aztec' || chain?.name === 'logos-testnet';
-  const isTxs = chain?.name === 'aztec';
+  const isTxs = chain?.name === 'aztec' || chain?.name === 'logos-testnet';
 
   const validatorsLink = `/networks/${chainName}/validators`;
   const nodesLink = `/networks/${chainName}/nodes`;

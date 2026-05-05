@@ -28,6 +28,7 @@ export const getChainUptime = async (chainNames: string[]) => {
             lastUptimeUpdated: uptime.lastUptimeUpdated,
             uptimeHeight: uptime.uptimeHeight,
             avgTxInterval: uptime.avgTxInterval,
+            blockTime: uptime.blockTime ?? null,
           },
         });
       }

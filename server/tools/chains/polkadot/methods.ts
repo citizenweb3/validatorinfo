@@ -1,10 +1,12 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
+import nullTxMetrics from '@/server/tools/chains/null-tx-metrics';
 import getCommunityPool from '@/server/tools/chains/polkadot/get-community-pool';
 import getNodes from '@/server/tools/chains/polkadot/get-nodes';
 import getStakingParams from '@/server/tools/chains/polkadot/get-staking-params';
 import getTvs from '@/server/tools/chains/polkadot/get-tvs';
 
 const chainMethods: ChainMethods = {
+  ...nullTxMetrics,
   getNodes,
   getStakingParams,
   getTvs,

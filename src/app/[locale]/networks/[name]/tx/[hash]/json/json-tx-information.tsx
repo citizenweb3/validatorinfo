@@ -13,9 +13,12 @@ interface OwnProps {
 
 const JsonTxInformation: FC<OwnProps> = async ({ chainName, hash }) => {
   const t = await getTranslations('TxInformationPage');
+  const isLogos = chainName.toLowerCase() === 'logos-testnet';
 
-  if (isAztecChainName(chainName)) {
-    const result = await TxService.getAztecTxByHash(hash);
+  if (isAztecChainName(chainName) || isLogos) {
+    const result = isLogos
+      ? await TxService.getLogosTxByHash(hash)
+      : await TxService.getAztecTxByHash(hash);
 
     if (!result) {
       return (
