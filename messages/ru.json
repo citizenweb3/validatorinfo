@@ -1395,6 +1395,7 @@
     "transactions 30d": "Транзакции (30д)",
     "transactions yesterday": "Транзакции (Вчера)",
     "tps": "TPS (Последние 20 Блоков)",
+    "tps 24h": "TPS (24ч)",
     "average fee": "Средняя комиссия",
     "noTransactionsYet": "Транзакций пока нет",
     "transactionsWillAppear": "Отображение транзакций появится, когда в сети начнутся транзакции",
@@ -1421,6 +1422,10 @@
       "Fee": {
         "name": "Комиссия",
         "hint": "Сумма комиссии транзакции"
+      },
+      "Op Type": {
+        "name": "Тип операции",
+        "hint": "Тип операции Logos транзакции (напр. ChannelInscribe)"
       }
     }
   },
@@ -1462,7 +1467,16 @@
     "validator address": "Адрес Валидатора",
     "amount": "Количество",
     "auto claim reward": "Автоматически полученные вознаграждения",
-    "Search by validator name and tx hash": "Поиск по имени валидатора и хэшу транзакции"
+    "Search by validator name and tx hash": "Поиск по имени валидатора и хэшу транзакции",
+    "block id": "ID блока",
+    "slot": "Слот",
+    "op count": "Количество операций",
+    "op types": "Типы операций",
+    "proof types": "Типы доказательств",
+    "format": "Формат",
+    "storage gas price": "Цена газа (хранилище)",
+    "execution gas price": "Цена газа (исполнение)",
+    "operations": "Операции"
   },
   "BlockInformationPage": {
     "title": "Детали блока в блокчейне: Подробная информация о блоке",

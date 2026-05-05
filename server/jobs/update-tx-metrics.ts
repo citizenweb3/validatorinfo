@@ -1,14 +1,9 @@
 import db from '@/db';
 import logger from '@/logger';
-import aztecIndexer from '@/services/aztec-indexer-api';
-import {
-  calculateAztecAverageFee,
-  calculateAztecTps,
-} from '@/server/jobs/utils/aztec-tx-metrics';
+import getChainMethods from '@/server/tools/chains/methods';
 
-const { logInfo, logError, logWarn } = logger('aztec-tx-metrics');
+const { logInfo, logError, logWarn } = logger('tx-metrics');
 
-const AZTEC_CHAINS = ['aztec', 'aztec-testnet'] as const;
 const SNAPSHOT_LOOKBACK_DAYS = 30;
 
 const getUtcDate = (): Date => {
@@ -52,7 +47,6 @@ const resolveTxs30d = async (
   }
 
   const delta = currentTotalTxs - referenceSnapshot.totalTxs;
-  // Guard against any decreasing-totals anomaly from the indexer.
   return delta >= BigInt(0) ? Number(delta) : null;
 };
 
@@ -64,11 +58,11 @@ const processChain = async (chainName: string): Promise<void> => {
     return;
   }
 
-  const [totalTxsResult, txsLast24hResult, tpsResult, avgFeeResult] = await Promise.allSettled([
-    aztecIndexer.getTotalTxEffects({ cache: 'no-store' }),
-    aztecIndexer.getTxEffectsLast24h({ cache: 'no-store' }),
-    calculateAztecTps(),
-    calculateAztecAverageFee(),
+  const methods = getChainMethods(chainName);
+
+  const [totalTxsResult, txsLast24hResult] = await Promise.allSettled([
+    methods.getTotalTxs(chain),
+    methods.getTxsLast24h(chain),
   ]);
 
   if (totalTxsResult.status === 'rejected') {
@@ -77,6 +71,21 @@ const processChain = async (chainName: string): Promise<void> => {
   if (txsLast24hResult.status === 'rejected') {
     logError(`Failed to fetch txsLast24h for ${chainName}: ${formatError(txsLast24hResult.reason)}`);
   }
+
+  const totalTxs =
+    totalTxsResult.status === 'fulfilled' && totalTxsResult.value !== null
+      ? totalTxsResult.value
+      : null;
+  const txsLast24h =
+    txsLast24hResult.status === 'fulfilled' && txsLast24hResult.value !== null
+      ? txsLast24hResult.value
+      : null;
+
+  const [tpsResult, avgFeeResult] = await Promise.allSettled([
+    methods.getTps(chain),
+    methods.getAvgFee(chain),
+  ]);
+
   if (tpsResult.status === 'rejected') {
     logError(`Failed to compute tps for ${chainName}: ${formatError(tpsResult.reason)}`);
   }
@@ -84,23 +93,24 @@ const processChain = async (chainName: string): Promise<void> => {
     logError(`Failed to compute avgFee for ${chainName}: ${formatError(avgFeeResult.reason)}`);
   }
 
-  const totalTxsFulfilled =
-    totalTxsResult.status === 'fulfilled' && totalTxsResult.value !== null && totalTxsResult.value !== undefined;
-  const currentTotalTxsBigInt: bigint | null = totalTxsFulfilled
-    ? BigInt(totalTxsResult.value)
-    : null;
-
-  if (currentTotalTxsBigInt !== null) {
+  if (totalTxs !== null) {
     const today = getUtcDate();
     await db.chainTxDailySnapshot.upsert({
       where: { chainId_snapshotAt: { chainId: chain.id, snapshotAt: today } },
-      update: { totalTxs: currentTotalTxsBigInt },
+      update: { totalTxs },
       create: {
         chainId: chain.id,
         snapshotAt: today,
-        totalTxs: currentTotalTxsBigInt,
+        totalTxs,
       },
     });
+  }
+
+  const tps = tpsResult.status === 'fulfilled' ? tpsResult.value : null;
+  const avgFee = avgFeeResult.status === 'fulfilled' ? avgFeeResult.value : null;
+
+  if (totalTxs === null && txsLast24h === null && tps === null && avgFee === null) {
+    return;
   }
 
   const update: {
@@ -111,31 +121,18 @@ const processChain = async (chainName: string): Promise<void> => {
     txs30d?: number | null;
   } = {};
 
-  if (totalTxsFulfilled) {
-    update.totalTxs = currentTotalTxsBigInt;
-    // txs30d is derived from totalTxs — only compute/write when totalTxs is fresh.
-    update.txs30d = await resolveTxs30d(chain.id, currentTotalTxsBigInt);
+  if (totalTxs !== null) {
+    update.totalTxs = totalTxs;
+    update.txs30d = await resolveTxs30d(chain.id, totalTxs);
   }
-  if (
-    txsLast24hResult.status === 'fulfilled' &&
-    txsLast24hResult.value !== null &&
-    txsLast24hResult.value !== undefined
-  ) {
-    update.txsLast24h = txsLast24hResult.value;
+  if (txsLast24h !== null) {
+    update.txsLast24h = txsLast24h;
   }
-  if (
-    tpsResult.status === 'fulfilled' &&
-    tpsResult.value !== null &&
-    tpsResult.value !== undefined
-  ) {
-    update.tps = tpsResult.value;
+  if (tps !== null) {
+    update.tps = tps;
   }
-  if (
-    avgFeeResult.status === 'fulfilled' &&
-    avgFeeResult.value !== null &&
-    avgFeeResult.value !== undefined
-  ) {
-    update.avgFee = avgFeeResult.value;
+  if (avgFeeResult.status === 'fulfilled') {
+    update.avgFee = avgFee;
   }
 
   await db.chainTxMetrics.upsert({
@@ -157,10 +154,10 @@ const processChain = async (chainName: string): Promise<void> => {
   );
 };
 
-const updateAztecTxMetrics = async (): Promise<void> => {
-  logInfo('Starting Aztec tx metrics update');
+const updateTxMetrics = async (chainNames: string[]): Promise<void> => {
+  logInfo('Starting tx metrics update');
 
-  for (const chainName of AZTEC_CHAINS) {
+  for (const chainName of chainNames) {
     try {
       await processChain(chainName);
     } catch (error) {
@@ -168,7 +165,7 @@ const updateAztecTxMetrics = async (): Promise<void> => {
     }
   }
 
-  logInfo('Aztec tx metrics update completed');
+  logInfo('Tx metrics update completed');
 };
 
-export default updateAztecTxMetrics;
+export default updateTxMetrics;

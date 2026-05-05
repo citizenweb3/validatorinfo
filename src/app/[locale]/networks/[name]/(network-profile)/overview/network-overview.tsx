@@ -7,6 +7,7 @@ import Tooltip from '@/components/common/tooltip';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import validatorService from '@/services/validator-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
+import logosIndexer from '@/services/logos-indexer-api';
 import aztecContractService from '@/services/aztec-contracts-service';
 import { getLatestFinalizedBlock } from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
 import { getAztecBlockHeight } from '@/utils/aztec';
@@ -85,6 +86,64 @@ const AztecBlocksSlotsEpochsRows: FC<{ chainName: string }> = async ({ chainName
   );
 };
 
+const LogosTxRow: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const stats = await logosIndexer.getStats({ cache: 'no-store' }).catch(() => null);
+  const totalTxs =
+    stats && typeof stats.total_transactions === 'number'
+      ? stats.total_transactions.toLocaleString('en-US')
+      : 'N/A';
+
+  return (
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+      <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+        {t('total amount of tx')}
+      </div>
+      <Link
+        href={`/networks/${chainName}/tx`}
+        className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+      >
+        {totalTxs}
+      </Link>
+    </div>
+  );
+};
+
+const LogosBlocksSlotsRows: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const stats = await logosIndexer.getStats({ cache: 'no-store' }).catch(() => null);
+  const totalBlocks = stats && typeof stats.latest_height === 'number' ? stats.latest_height : null;
+  const latestSlot = stats && typeof stats.latest_slot === 'number' ? stats.latest_slot : null;
+
+  return (
+    <>
+      {totalBlocks !== null && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('total amount of blocks')}
+          </div>
+          <Link
+            href={`/networks/${chainName}/blocks`}
+            className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+          >
+            {totalBlocks.toLocaleString('en-US')}
+          </Link>
+        </div>
+      )}
+      {latestSlot !== null && (
+        <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+          <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+            {t('total amount of slots')}
+          </div>
+          <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+            {latestSlot.toLocaleString('en-US')}
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
 const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
   const price = chain ? await chainService.getTokenPriceByChainId(chain?.id) : undefined;
@@ -130,6 +189,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <AztecTxRow chainName={chain.name} />
         </Suspense>
       )}
+      {isLogos && chain && (
+        <Suspense fallback={null}>
+          <LogosTxRow chainName={chain.name} />
+        </Suspense>
+      )}
       {totalSupply > 0 && (
         <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
@@ -142,7 +206,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           </div>
         </div>
       )}
-      {activeValidators && (
+      {!!activeValidators?.length && (
         <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
           <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
             {t('active validators')}
@@ -265,19 +329,9 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
         </>
       ) : isLogos && chain ? (
         <>
-          {!!chain.uptimeHeight && (
-            <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
-              <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
-                {t('total amount of blocks')}
-              </div>
-              <Link
-                href={`/networks/${chain.name}/blocks`}
-                className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
-              >
-                {chain.uptimeHeight.toLocaleString('en-US')}
-              </Link>
-            </div>
-          )}
+          <Suspense fallback={null}>
+            <LogosBlocksSlotsRows chainName={chain.name} />
+          </Suspense>
           {!!chain.avgTxInterval && (
             <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
               <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
@@ -285,6 +339,16 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
               </div>
               <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
                 {(chain.avgTxInterval / 1000).toFixed(2)}s
+              </div>
+            </div>
+          )}
+          {!!chain.blockTime && (
+            <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+              <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+                {t('average block time')}
+              </div>
+              <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+                {(chain.blockTime / 1000).toFixed(2)}s
               </div>
             </div>
           )}
