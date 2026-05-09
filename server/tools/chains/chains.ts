@@ -9,7 +9,7 @@ const excludeChains: string[] = [
   'quicksilver-testnet'
 ];
 
-const includeChains: string[] = [''];
+const includeChains: string[] = [];
 
 const chainNames = chainParamsArray
   .map((chain) => chain.name)
