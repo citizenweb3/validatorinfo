@@ -15,8 +15,9 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
   const t = await getTranslations('TotalTxsPage');
 
   const isLogos = chainName.toLowerCase() === 'logos-testnet';
+  const isCosmoshub = chainName.toLowerCase() === 'cosmoshub';
 
-  if (isAztecChainName(chainName) || isLogos) {
+  if (isAztecChainName(chainName) || isLogos || isCosmoshub) {
     const chain = await chainService.getByName(chainName);
 
     if (!chain) {
@@ -25,7 +26,11 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
 
     const metrics = isLogos
       ? await TxService.getLogosTxMetrics(chain.id)
-      : await TxService.getAztecTxMetrics(chain.id);
+      : isCosmoshub
+        ? await TxService.getCosmosTxMetrics(chain.id)
+        : await TxService.getAztecTxMetrics(chain.id);
+
+    const feeUnit = isCosmoshub ? (chain.params?.denom ?? 'ATOM') : 'AZTEC';
 
     const metricsData = [
       {
@@ -53,7 +58,7 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
             {
               title: 'average fee',
               data: metrics.avgFee !== null && chain.params?.coinDecimals != null
-                ? `${(Number(metrics.avgFee) / 10 ** chain.params.coinDecimals).toLocaleString('en-US', { maximumSignificantDigits: 3 })} AZTEC`
+                ? `${(Number(metrics.avgFee) / 10 ** chain.params.coinDecimals).toLocaleString('en-US', { maximumSignificantDigits: 3 })} ${feeUnit}`
                 : 'N/A',
             },
           ]),

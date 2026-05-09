@@ -1495,7 +1495,16 @@
     "format": "Formato",
     "storage gas price": "Preço de Gás (Armazenamento)",
     "execution gas price": "Preço de Gás (Execução)",
-    "operations": "Operações"
+    "operations": "Operações",
+    "code": "Código",
+    "gas wanted": "Gás Solicitado",
+    "gas used": "Gás Utilizado",
+    "signers": "Assinantes",
+    "log summary": "Resumo do Log",
+    "messages": "Mensagens",
+    "events": "Eventos",
+    "failed": "Falhou",
+    "none": "Nenhum"
   },
   "BlockInformationPage": {
     "title": "Detalhes do Bloco Blockchain: Informações Detalhadas do Bloco",
@@ -1543,6 +1552,12 @@
     "block root": "Raiz do Bloco",
     "entropy contribution": "Contribuição de Entropia",
     "proof size": "Tamanho da Prova (bytes)",
+    "proposer address": "Endereço do Proponente",
+    "evidence count": "Contagem de Evidências",
+    "last commit hash": "Hash do Último Commit",
+    "app hash": "Hash do App",
+    "data hash": "Hash dos Dados",
+    "size bytes": "Tamanho (bytes)",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"

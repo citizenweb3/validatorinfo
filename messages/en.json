@@ -1475,7 +1475,16 @@
     "format": "Format",
     "storage gas price": "Storage Gas Price",
     "execution gas price": "Execution Gas Price",
-    "operations": "Operations"
+    "operations": "Operations",
+    "code": "Code",
+    "gas wanted": "Gas Wanted",
+    "gas used": "Gas Used",
+    "signers": "Signers",
+    "log summary": "Log Summary",
+    "messages": "Messages",
+    "events": "Events",
+    "failed": "Failed",
+    "none": "None"
   },
   "BlockInformationPage": {
     "title": "Blockchain Block Details: In-Depth Information of the Block",
@@ -1523,6 +1532,12 @@
     "block root": "Block Root",
     "entropy contribution": "Entropy Contribution",
     "proof size": "Proof Size (bytes)",
+    "proposer address": "Proposer Address",
+    "evidence count": "Evidence Count",
+    "last commit hash": "Last Commit Hash",
+    "app hash": "App Hash",
+    "data hash": "Data Hash",
+    "size bytes": "Size (bytes)",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"

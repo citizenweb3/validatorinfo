@@ -7,6 +7,7 @@ import Tooltip from '@/components/common/tooltip';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import validatorService from '@/services/validator-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
+import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import aztecContractService from '@/services/aztec-contracts-service';
 import { getLatestFinalizedBlock } from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
@@ -86,6 +87,28 @@ const AztecBlocksSlotsEpochsRows: FC<{ chainName: string }> = async ({ chainName
   );
 };
 
+const CosmoshubTxRow: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const stats = await cosmosIndexer.getTxsStats({ cache: 'no-store' }).catch(() => null);
+  const totalTxs = stats?.data?.total_txs
+    ? Number(stats.data.total_txs).toLocaleString('en-US')
+    : 'N/A';
+
+  return (
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+      <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+        {t('total amount of tx')}
+      </div>
+      <Link
+        href={`/networks/${chainName}/tx`}
+        className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+      >
+        {totalTxs}
+      </Link>
+    </div>
+  );
+};
+
 const LogosTxRow: FC<{ chainName: string }> = async ({ chainName }) => {
   const t = await getTranslations('NetworkPassport');
   const stats = await logosIndexer.getStats({ cache: 'no-store' }).catch(() => null);
@@ -150,6 +173,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
 
   const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
   const isLogos = chain?.name === 'logos-testnet';
+  const isCosmoshub = chain?.name === 'cosmoshub';
   const activeValidators = chain
     ? isAztec
       ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
@@ -192,6 +216,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
       {isLogos && chain && (
         <Suspense fallback={null}>
           <LogosTxRow chainName={chain.name} />
+        </Suspense>
+      )}
+      {isCosmoshub && chain && (
+        <Suspense fallback={null}>
+          <CosmoshubTxRow chainName={chain.name} />
         </Suspense>
       )}
       {totalSupply > 0 && (

@@ -1,5 +1,7 @@
 import db from '@/db';
 import aztecIndexer from '@/services/aztec-indexer-api';
+import cosmosIndexer from '@/services/cosmos-indexer-api';
+import { CosmosTxDetail } from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import { LogosTxDetail } from '@/services/logos-indexer-api';
 import { getAztecTimestampMs } from '@/utils/aztec';
@@ -254,6 +256,87 @@ const getLogosTxMetrics = async (chainId: number): Promise<TxMetrics> => {
   };
 };
 
+/**
+ * Cosmoshub: keyset cursor is forward-only (`before_height` + `before_index`).
+ * For arbitrary `currentPage` we walk forward in chunks of `perPage` until reaching the offset,
+ * then fetch the page. O(currentPage) — acceptable for typical UI usage; deep pages are slow.
+ */
+const getCosmosTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+  try {
+    const stats = await cosmosIndexer.getTxsStats(TX_LIST_CACHE);
+    const total = Number(stats.data.total_txs);
+    const totalPages = Math.max(1, Math.ceil(total / perPage));
+    const skip = (currentPage - 1) * perPage;
+
+    let cursor: { before_height?: string; before_index?: number } | undefined;
+    let walked = 0;
+
+    while (walked < skip) {
+      const step = Math.min(perPage, skip - walked);
+      const r = await cosmosIndexer.getTxsList({ limit: step, ...cursor }, TX_LIST_CACHE);
+
+      if (!r.has_more || !r.cursor) {
+        break;
+      }
+
+      cursor = {
+        before_height: r.cursor.next_before_height,
+        before_index: 'next_before_index' in r.cursor ? r.cursor.next_before_index : undefined,
+      };
+      walked += r.data.length;
+    }
+
+    const page = await cosmosIndexer.getTxsList({ limit: perPage, ...cursor }, TX_LIST_CACHE);
+
+    const txs: TxItem[] = page.data.map((t) => ({
+      hash: t.tx_hash,
+      // `code !== 0` in Cosmos means the tx is included in the block but execution failed.
+      // We surface that as 'dropped' since `TxStatus` has no 'failed' member.
+      status: t.code === 0 ? ('confirmed' as const) : ('dropped' as const),
+      blockHeight: Number(t.height),
+      timestamp: new Date(t.time).getTime(),
+      transactionFee: t.fee?.amount ?? undefined,
+      opType: t.first_msg_type ?? undefined,
+    }));
+
+    return { txs, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Cosmos transactions:', error);
+    return { txs: [], totalPages: 1, error: true };
+  }
+};
+
+const getCosmosTxByHash = async (
+  hash: string,
+): Promise<{ status: TxStatus; data: CosmosTxDetail } | null> => {
+  const tx = await cosmosIndexer.getTxByHash(hash, { cache: 'no-store' }).catch(() => null);
+
+  if (!tx) {
+    return null;
+  }
+
+  return {
+    status: tx.data.code === 0 ? 'confirmed' : 'dropped',
+    data: tx.data,
+  };
+};
+
+const getCosmosTxMetrics = async (chainId: number): Promise<TxMetrics> => {
+  const cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
+
+  if (!cached) {
+    return { totalTxs: null, txsLast24h: null, txs30d: null, tps: null, avgFee: null };
+  }
+
+  return {
+    totalTxs: cached.totalTxs ? Number(cached.totalTxs) : null,
+    txsLast24h: cached.txsLast24h,
+    txs30d: cached.txs30d,
+    tps: cached.tps,
+    avgFee: cached.avgFee,
+  };
+};
+
 const getTxsByChainName = async (
   chainName: string,
   currentPage: number = 1,
@@ -268,6 +351,10 @@ const getTxsByChainName = async (
 
   if (normalizedChainName === 'logos-testnet') {
     return getLogosTxs(currentPage, perPage);
+  }
+
+  if (normalizedChainName === 'cosmoshub') {
+    return getCosmosTxs(currentPage, perPage);
   }
 
   return { txs: [], totalPages: 1 };
@@ -297,6 +384,9 @@ const TxService = {
   getLogosTxs,
   getLogosTxByHash,
   getLogosTxMetrics,
+  getCosmosTxs,
+  getCosmosTxByHash,
+  getCosmosTxMetrics,
 };
 
 export default TxService;
