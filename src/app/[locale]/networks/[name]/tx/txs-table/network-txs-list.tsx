@@ -21,8 +21,9 @@ const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentP
   const t = await getTranslations('TotalTxsPage');
   const isAztec = isAztecChainName(chainName);
   const isLogos = chainName.toLowerCase() === 'logos-testnet';
+  const isCosmoshub = chainName.toLowerCase() === 'cosmoshub';
 
-  if (isAztec || isLogos) {
+  if (isAztec || isLogos || isCosmoshub) {
     const { txs, totalPages, error } = await TxService.getTxsByChainName(chainName, currentPage, perPage, showPending);
 
     if (txs.length === 0) {
@@ -53,6 +54,7 @@ const NetworkTxsList: FC<OwnProps> = async ({ name, chainName, perPage, currentP
             item={item}
             isAztec={isAztec}
             isLogos={isLogos}
+            isCosmoshub={isCosmoshub}
             coinDecimals={coinDecimals}
             timestampSlot={
               <span className="font-sfpro text-base">

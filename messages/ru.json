@@ -1476,7 +1476,16 @@
     "format": "Формат",
     "storage gas price": "Цена газа (хранилище)",
     "execution gas price": "Цена газа (исполнение)",
-    "operations": "Операции"
+    "operations": "Операции",
+    "code": "Код",
+    "gas wanted": "Запрошено газа",
+    "gas used": "Использовано газа",
+    "signers": "Подписанты",
+    "log summary": "Сводка лога",
+    "messages": "Сообщения",
+    "events": "События",
+    "failed": "Ошибка",
+    "none": "Нет"
   },
   "BlockInformationPage": {
     "title": "Детали блока в блокчейне: Подробная информация о блоке",
@@ -1524,6 +1533,12 @@
     "block root": "корень блока",
     "entropy contribution": "вклад энтропии",
     "proof size": "размер пруфа (байт)",
+    "proposer address": "Адрес Предлагающего",
+    "evidence count": "Количество Доказательств",
+    "last commit hash": "Хеш Последнего Коммита",
+    "app hash": "Хеш Приложения",
+    "data hash": "Хеш Данных",
+    "size bytes": "Размер (байт)",
     "Tabs": {
       "Expand": "Развернуть",
       "JSON": "JSON"

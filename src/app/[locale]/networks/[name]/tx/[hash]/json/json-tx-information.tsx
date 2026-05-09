@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { txExample } from '@/app/networks/[name]/tx/txExample';
 import CopyButton from '@/components/common/copy-button';
 import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
+import cosmosIndexer from '@/services/cosmos-indexer-api';
 import TxService from '@/services/tx-service';
 
 interface OwnProps {
@@ -13,12 +14,40 @@ interface OwnProps {
 
 const JsonTxInformation: FC<OwnProps> = async ({ chainName, hash }) => {
   const t = await getTranslations('TxInformationPage');
-  const isLogos = chainName.toLowerCase() === 'logos-testnet';
 
-  if (isAztecChainName(chainName) || isLogos) {
-    const result = isLogos
-      ? await TxService.getLogosTxByHash(hash)
-      : await TxService.getAztecTxByHash(hash);
+  if (chainName === 'cosmoshub') {
+    const raw = await cosmosIndexer.getTxRaw(hash, { cache: 'no-store' }).catch((error) => {
+      console.error('Failed to fetch raw cosmos tx:', error);
+      return null;
+    });
+
+    if (!raw) {
+      return (
+        <div className="flex flex-col items-center gap-4 py-12">
+          <div className="font-sfpro text-lg">{t('tx not found')}</div>
+          <div className="font-sfpro text-base text-gray-400">{t('tx not found hint')}</div>
+        </div>
+      );
+    }
+
+    const jsonString = JSON.stringify(raw.data.raw_tx, null, 4);
+
+    return (
+      <div className="mb-5 mr-10 mt-8 hover:bg-bgHover">
+        <div className="flex flex-row">
+          <div className="ml-20">
+            <pre className="w-full whitespace-pre-wrap break-all font-handjet text-lg">{jsonString}</pre>
+          </div>
+          <div>
+            <CopyButton value={jsonString} size="md" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (isAztecChainName(chainName)) {
+    const result = await TxService.getAztecTxByHash(hash);
 
     if (!result) {
       return (

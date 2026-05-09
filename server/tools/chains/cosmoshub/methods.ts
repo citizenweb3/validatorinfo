@@ -1,6 +1,7 @@
 import { ChainMethods } from '@/server/tools/chains/chain-indexer';
 import getActiveSetMinAmount from '@/server/tools/chains/cosmoshub/get-active-set-min-amount';
 import getApr from '@/server/tools/chains/cosmoshub/get-apr';
+import getAvgFee from '@/server/tools/chains/cosmoshub/get-avg-fee';
 import getCirculatingTokensOnchain from '@/server/tools/chains/cosmoshub/get-circulating-tokens-onchain';
 import getCirculatingTokensPublic from '@/server/tools/chains/cosmoshub/get-circulating-tokens-public';
 import getCommunityPool from '@/server/tools/chains/cosmoshub/get-community-pool';
@@ -16,7 +17,10 @@ import getProposalParams from '@/server/tools/chains/cosmoshub/get-proposal-para
 import getProposals from '@/server/tools/chains/cosmoshub/get-proposals';
 import getSlashingParams from '@/server/tools/chains/cosmoshub/get-slashing-params';
 import getStakingParams from '@/server/tools/chains/cosmoshub/get-staking-params';
+import getTotalTxs from '@/server/tools/chains/cosmoshub/get-total-txs';
+import getTps from '@/server/tools/chains/cosmoshub/get-tps';
 import getTvs from '@/server/tools/chains/cosmoshub/get-tvs';
+import getTxsLast24h from '@/server/tools/chains/cosmoshub/get-txs-last-24h';
 import getUnbondingTokens from '@/server/tools/chains/cosmoshub/get-unbonding-tokens';
 import getWalletsAmount from '@/server/tools/chains/cosmoshub/get-wallets-amount';
 import getChainUptime from '@/server/tools/chains/cosmoshub/get-chain-uptime';
@@ -47,7 +51,11 @@ const chainMethods: ChainMethods = {
   getDelegatorsAmount,
   getUnbondingTokens,
   getChainUptime,
-  getRewardAddress
+  getRewardAddress,
+  getTotalTxs,
+  getTxsLast24h,
+  getTps,
+  getAvgFee,
 };
 
 export default chainMethods;

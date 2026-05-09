@@ -27,7 +27,9 @@ const NetworkBlocksItem: FC<OwnProps> = ({ name, item }) => {
     return getAztecFinalizationLabel(item.finalizationStatus) === 'pending' ? 'Not Finalized' : 'Finalized';
   };
 
-  const link = `/networks/${name}/blocks/${item.hash}`;
+  // Cosmos indexer only exposes lookup by height; route the detail page by height.
+  const isCosmoshub = name.toLowerCase() === 'cosmoshub';
+  const link = `/networks/${name}/blocks/${isCosmoshub ? item.height : item.hash}`;
 
   const heightValue = typeof item.height === 'string' ? parseInt(item.height, 10) : item.height;
 
