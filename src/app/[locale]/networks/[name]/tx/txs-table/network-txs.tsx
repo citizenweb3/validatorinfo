@@ -18,6 +18,7 @@ interface OwnProps extends PagesProps {
 const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, currentPage, coinDecimals, showPending }) => {
   const isAztec = isAztecChainName(chainName);
   const isLogos = chainName.toLowerCase() === 'logos-testnet';
+  const isCosmoshub = chainName.toLowerCase() === 'cosmoshub';
 
   return (
     <div className="mt-12">
@@ -27,7 +28,8 @@ const NetworkTxs: FC<OwnProps> = async ({ name, chainName, page, perPage, curren
             <TableHeaderItem page={page} name="Tx Hash" />
             {isAztec && <TableHeaderItem page={page} name="Fee" />}
             {isLogos && <TableHeaderItem page={page} name="Op Type" />}
-            {!isAztec && !isLogos && <TableHeaderItem page={page} name="Type of Tx" />}
+            {isCosmoshub && <TableHeaderItem page={page} name="Type of Tx" />}
+            {!isAztec && !isLogos && !isCosmoshub && <TableHeaderItem page={page} name="Type of Tx" />}
             <TableHeaderItem page={page} name="Block Height" />
             <TableHeaderItem page={page} name="Timestamp" />
           </tr>

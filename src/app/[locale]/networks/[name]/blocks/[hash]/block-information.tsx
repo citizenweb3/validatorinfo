@@ -9,6 +9,7 @@ import { aztecIndexer } from '@/services/aztec-indexer-api';
 import { ChainWithParams } from '@/services/chain-service';
 import { getAztecBlockHeight, getAztecFinalizationLabel, getAztecTimestampMs } from '@/utils/aztec';
 import LogosBlockInformation from '@/app/networks/[name]/blocks/[hash]/logos-block-information';
+import CosmosBlockInformation from '@/app/networks/[name]/blocks/[hash]/cosmos-block-information';
 
 interface OwnProps {
   chain: ChainWithParams | null;
@@ -18,6 +19,10 @@ interface OwnProps {
 const BlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
   if (chain?.name === 'logos-testnet') {
     return <LogosBlockInformation chain={chain} hash={hash} />;
+  }
+
+  if (chain?.name === 'cosmoshub') {
+    return <CosmosBlockInformation chain={chain} hash={hash} />;
   }
 
   const t = await getTranslations('BlockInformationPage');

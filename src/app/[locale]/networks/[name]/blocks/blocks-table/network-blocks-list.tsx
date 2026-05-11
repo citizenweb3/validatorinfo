@@ -15,7 +15,7 @@ const NetworkBlocksList: FC<OwnProps> = async ({ name, perPage, currentPage = 1 
   const t = await getTranslations('NetworkStatistics');
   const { blocks, totalPages } = await BlocksService.getBlocksByChainName(name, currentPage, perPage);
 
-  const supportsBlocks = ['aztec', 'logos-testnet'].includes(name.toLowerCase());
+  const supportsBlocks = ['aztec', 'logos-testnet', 'cosmoshub'].includes(name.toLowerCase());
   if (blocks.length === 0 && !supportsBlocks) {
     return (
       <tbody>
@@ -47,7 +47,7 @@ const NetworkBlocksList: FC<OwnProps> = async ({ name, perPage, currentPage = 1 
       ))}
       <tr>
         <td colSpan={4} className="pt-4">
-          <TablePagination pageLength={totalPages} />
+          <TablePagination pageLength={totalPages} hideLastPage />
         </td>
       </tr>
     </tbody>

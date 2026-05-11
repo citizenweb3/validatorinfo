@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import CopyButton from '@/components/common/copy-button';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
+import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import { ChainWithParams } from '@/services/chain-service';
 
@@ -13,11 +14,18 @@ interface OwnProps {
 
 const JsonBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const isLogos = chain?.name === 'logos-testnet';
+  const isCosmoshub = chain?.name === 'cosmoshub';
   const isHeight = /^\d+$/.test(hash);
 
   let block;
   try {
-    if (isLogos) {
+    if (isCosmoshub) {
+      if (!isHeight) {
+        notFound();
+      }
+      const response = await cosmosIndexer.getBlockByHeight(hash, { revalidate: false });
+      block = response?.data;
+    } else if (isLogos) {
       block = await logosIndexer.getBlock(hash, { revalidate: false });
     } else {
       block = isHeight

@@ -4,7 +4,9 @@ const excludeChains: string[] = [
   'nillion',
   'space-pussy',
   'symphony-testnet',
-  'warden-testnet'
+  'warden-testnet',
+  'quicksilver',
+  'quicksilver-testnet'
 ];
 
 const includeChains: string[] = [];
