@@ -15,9 +15,10 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
   const t = await getTranslations('TotalTxsPage');
 
   const isLogos = chainName.toLowerCase() === 'logos-testnet';
+  const isMiden = chainName.toLowerCase() === 'miden-testnet';
   const isCosmoshub = chainName.toLowerCase() === 'cosmoshub';
 
-  if (isAztecChainName(chainName) || isLogos || isCosmoshub) {
+  if (isAztecChainName(chainName) || isLogos || isMiden || isCosmoshub) {
     const chain = await chainService.getByName(chainName);
 
     if (!chain) {
@@ -26,9 +27,11 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
 
     const metrics = isLogos
       ? await TxService.getLogosTxMetrics(chain.id)
-      : isCosmoshub
-        ? await TxService.getCosmosTxMetrics(chain.id)
-        : await TxService.getAztecTxMetrics(chain.id);
+      : isMiden
+        ? await TxService.getMidenTxMetrics(chain.id)
+        : isCosmoshub
+          ? await TxService.getCosmosTxMetrics(chain.id)
+          : await TxService.getAztecTxMetrics(chain.id);
 
     const feeUnit = isCosmoshub ? (chain.params?.denom ?? 'ATOM') : 'AZTEC';
 
@@ -51,8 +54,9 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
           ? `${metrics.tps.toLocaleString('en-US', { maximumFractionDigits: 2 })} txs/s`
           : 'N/A',
       },
-      // Logos testnet has all gas prices = 0; avg fee is meaningless. Hide the card.
-      ...(isLogos
+      // Logos has all gas prices = 0; Miden v1 indexer has no per-tx fee.
+      // For both, avgFee is meaningless — hide the card.
+      ...(isLogos || isMiden
         ? []
         : [
             {

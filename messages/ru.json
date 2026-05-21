@@ -399,7 +399,10 @@
     "average block time": "Среднее время блока",
     "slot duration": "Время слота",
     "epoch progress": "Прогресс эпохи",
-    "committee size": "Размер комитета"
+    "committee size": "Размер комитета",
+    "indexer mode": "Режим индексатора",
+    "active": "Активен",
+    "inactive": "неактивен"
   },
   "NetworkStatistics": {
     "title": "Панель статистики блокчейна: Живые показатели сети",
@@ -1485,7 +1488,18 @@
     "messages": "Сообщения",
     "events": "События",
     "failed": "Ошибка",
-    "none": "Нет"
+    "none": "Нет",
+    "account id": "ID аккаунта",
+    "account id bech32": "ID аккаунта (Bech32)",
+    "init account state": "Начальное состояние аккаунта",
+    "final account state": "Конечное состояние аккаунта",
+    "input notes commitment": "Коммитмент входящих заметок",
+    "output notes commitment": "Коммитмент исходящих заметок",
+    "expiration block num": "Блок истечения",
+    "input nullifiers": "Входящие нуллификаторы",
+    "output note ids": "ID исходящих заметок",
+    "inserted at": "Добавлено",
+    "items count": "{count, plural, one {# элемент} few {# элемента} many {# элементов} other {# элементов}}"
   },
   "BlockInformationPage": {
     "title": "Детали блока в блокчейне: Подробная информация о блоке",
@@ -1539,6 +1553,20 @@
     "app hash": "Хеш Приложения",
     "data hash": "Хеш Данных",
     "size bytes": "Размер (байт)",
+    "block number": "Номер блока",
+    "parent commitment": "Коммитмент родителя",
+    "chain commitment": "Коммитмент цепи",
+    "account root": "Корень аккаунта",
+    "nullifier root": "Корень нуллификатора",
+    "note root": "Корень ноты",
+    "tx commitment": "Коммитмент транзакции",
+    "tx kernel commitment": "Коммитмент ядра транзакции",
+    "validator key": "Ключ валидатора",
+    "native asset id": "ID нативного актива",
+    "verification base fee": "Базовая комиссия верификации",
+    "note count": "Количество нот",
+    "nullifier count": "Количество нуллификаторов",
+    "version": "Версия",
     "Tabs": {
       "Expand": "Развернуть",
       "JSON": "JSON"

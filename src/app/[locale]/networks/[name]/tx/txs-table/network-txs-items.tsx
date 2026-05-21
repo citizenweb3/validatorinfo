@@ -39,11 +39,19 @@ interface CosmoshubItem {
   opType?: string;
 }
 
+interface MidenItem {
+  hash: string;
+  status: TxStatus;
+  blockHeight?: number;
+  accountId?: string;
+}
+
 interface OwnProps {
   name: string;
-  item: CosmosItem | AztecItem | LogosItem | CosmoshubItem;
+  item: CosmosItem | AztecItem | LogosItem | CosmoshubItem | MidenItem;
   isAztec?: boolean;
   isLogos?: boolean;
+  isMiden?: boolean;
   isCosmoshub?: boolean;
   coinDecimals?: number;
   timestampSlot?: ReactNode;
@@ -60,7 +68,55 @@ const getStatusIcon = (status: TxStatus) => {
   }
 };
 
-const NetworkTxsItem: FC<OwnProps> = ({ name, item, isAztec, isLogos, isCosmoshub, coinDecimals, timestampSlot }) => {
+const NetworkTxsItem: FC<OwnProps> = ({
+  name,
+  item,
+  isAztec,
+  isLogos,
+  isMiden,
+  isCosmoshub,
+  coinDecimals,
+  timestampSlot,
+}) => {
+  if (isMiden) {
+    const tx = item as MidenItem;
+    const link = `/networks/${name}/tx/${encodeURIComponent(tx.hash)}`;
+    const statusIcon = getStatusIcon(tx.status);
+    const accountLabel = tx.accountId ? cutHash({ value: tx.accountId, cutLength: 12 }) : '—';
+
+    return (
+      <BaseTableRow>
+        <BaseTableCell className="w-1/4 py-4 text-base hover:text-highlight">
+          <Link href={link} className="flex items-center">
+            <div className="flex-shrink-0">
+              <Image src={statusIcon} alt={tx.status} width={30} height={30} />
+            </div>
+            <div className="flex-grow text-center font-handjet text-lg underline underline-offset-3">
+              {cutHash({ value: tx.hash, cutLength: 12 })}
+            </div>
+          </Link>
+        </BaseTableCell>
+        <BaseTableCell className="w-1/4 px-2 py-2 hover:text-highlight">
+          <div className="flex justify-center break-all text-center font-handjet text-lg">{accountLabel}</div>
+        </BaseTableCell>
+        <BaseTableCell className="w-1/4 px-2 py-2 hover:text-highlight">
+          {tx.blockHeight != null ? (
+            <Link href={`/networks/${name}/blocks/${tx.blockHeight}`} className="flex justify-center">
+              <div className="text-center font-handjet text-lg hover:underline">
+                {tx.blockHeight.toLocaleString('en-US')}
+              </div>
+            </Link>
+          ) : (
+            <div className="text-center font-handjet text-lg">—</div>
+          )}
+        </BaseTableCell>
+        <BaseTableCell className="w-1/4 px-2 py-2 hover:text-highlight">
+          <div className="flex justify-center text-center">{timestampSlot}</div>
+        </BaseTableCell>
+      </BaseTableRow>
+    );
+  }
+
   if (isCosmoshub) {
     const tx = item as CosmoshubItem;
     const link = `/networks/${name}/tx/${encodeURIComponent(tx.hash)}`;

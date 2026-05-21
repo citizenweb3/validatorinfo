@@ -5,6 +5,7 @@ import CopyButton from '@/components/common/copy-button';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
+import midenIndexer from '@/services/miden-indexer-api';
 import { ChainWithParams } from '@/services/chain-service';
 
 interface OwnProps {
@@ -15,6 +16,7 @@ interface OwnProps {
 const JsonBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const isLogos = chain?.name === 'logos-testnet';
   const isCosmoshub = chain?.name === 'cosmoshub';
+  const isMiden = chain?.name === 'miden-testnet';
   const isHeight = /^\d+$/.test(hash);
 
   let block;
@@ -27,6 +29,8 @@ const JsonBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
       block = response?.data;
     } else if (isLogos) {
       block = await logosIndexer.getBlock(hash, { revalidate: false });
+    } else if (isMiden) {
+      block = await midenIndexer.getBlock(hash, { revalidate: false });
     } else {
       block = isHeight
         ? await aztecIndexer.getBlockByHeight(parseInt(hash, 10), { revalidate: false })

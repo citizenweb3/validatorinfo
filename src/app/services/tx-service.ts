@@ -4,6 +4,8 @@ import cosmosIndexer from '@/services/cosmos-indexer-api';
 import { CosmosTxDetail } from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import { LogosTxDetail } from '@/services/logos-indexer-api';
+import midenIndexer from '@/services/miden-indexer-api';
+import { MidenTxDetail } from '@/services/miden-indexer-api';
 import { getAztecTimestampMs } from '@/utils/aztec';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
@@ -20,6 +22,8 @@ export interface TxItem {
   opCount?: number;
   slot?: number;
   blockId?: string;
+  // Miden-specific: bech32-encoded account that submitted the tx.
+  accountId?: string;
 }
 
 export interface TxsResponse {
@@ -257,6 +261,82 @@ const getLogosTxMetrics = async (chainId: number): Promise<TxMetrics> => {
 };
 
 /**
+ * Miden: list transactions sorted by block_num desc. Total page count comes from
+ * the response's `total` field (falling back to `stats.total_transactions` if absent).
+ */
+const getMidenTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+  try {
+    const offset = (currentPage - 1) * perPage;
+    const [{ data, total }, stats] = await Promise.all([
+      midenIndexer.getTransactions(
+        { limit: perPage, offset, sort: 'block_num', order: 'desc' },
+        TX_LIST_CACHE,
+      ),
+      midenIndexer.getStats(TX_LIST_CACHE),
+    ]);
+
+    const isValidCount = (n: unknown): n is number =>
+      typeof n === 'number' && Number.isFinite(n) && n >= 0;
+    const totalCount = isValidCount(total)
+      ? total
+      : isValidCount(stats?.total_transactions)
+        ? stats.total_transactions
+        : 0;
+    // If the indexer's stats cache is stale (total === 0 while data has items),
+    // fall back to a data-length signal so the user isn't locked on page 1.
+    const totalFromData = data.length === perPage ? currentPage + 1 : currentPage;
+    const totalPages = Math.max(1, Math.ceil(totalCount / perPage), totalFromData);
+
+    const txs: TxItem[] = data.map((tx) => ({
+      hash: tx.tx_id,
+      status: 'confirmed' as const,
+      blockHeight: tx.block_num,
+      timestamp: new Date(tx.inserted_at).getTime(),
+      accountId: tx.account_id_bech32,
+    }));
+
+    return { txs, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Miden transactions:', error);
+    return { txs: [], totalPages: 1, error: true };
+  }
+};
+
+const getMidenTxByHash = async (
+  txId: string,
+): Promise<{ status: TxStatus; data: MidenTxDetail } | null> => {
+  let tx;
+  try {
+    tx = await midenIndexer.getTransaction(txId, { cache: 'no-store' });
+  } catch (e) {
+    console.error('Failed to fetch Miden transaction by hash:', e);
+    return null;
+  }
+  if (!tx) {
+    return null;
+  }
+
+  return { status: 'confirmed', data: tx };
+};
+
+const getMidenTxMetrics = async (chainId: number): Promise<TxMetrics> => {
+  const cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
+
+  if (!cached) {
+    return { totalTxs: null, txsLast24h: null, txs30d: null, tps: null, avgFee: null };
+  }
+
+  return {
+    totalTxs: cached.totalTxs !== null ? Number(cached.totalTxs) : null,
+    txsLast24h: cached.txsLast24h,
+    txs30d: cached.txs30d,
+    tps: cached.tps,
+    // Miden v1 indexer does not surface per-tx fees; avgFee stays null.
+    avgFee: cached.avgFee,
+  };
+};
+
+/**
  * Cosmoshub: keyset cursor is forward-only (`before_height` + `before_index`).
  * For arbitrary `currentPage` we walk forward in chunks of `perPage` until reaching the offset,
  * then fetch the page. O(currentPage) — acceptable for typical UI usage; deep pages are slow.
@@ -353,6 +433,10 @@ const getTxsByChainName = async (
     return getLogosTxs(currentPage, perPage);
   }
 
+  if (normalizedChainName === 'miden-testnet') {
+    return getMidenTxs(currentPage, perPage);
+  }
+
   if (normalizedChainName === 'cosmoshub') {
     return getCosmosTxs(currentPage, perPage);
   }
@@ -384,6 +468,9 @@ const TxService = {
   getLogosTxs,
   getLogosTxByHash,
   getLogosTxMetrics,
+  getMidenTxs,
+  getMidenTxByHash,
+  getMidenTxMetrics,
   getCosmosTxs,
   getCosmosTxByHash,
   getCosmosTxMetrics,

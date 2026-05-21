@@ -1,6 +1,7 @@
 import aztecIndexer from '@/services/aztec-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
+import midenIndexer from '@/services/miden-indexer-api';
 import { formatTimestamp } from '@/utils/format-timestamp';
 import {
   AZTEC_INDEXER_MAX_BLOCK_RANGE,
@@ -136,6 +137,42 @@ const getCosmosBlocks = async (currentPage: number, perPage: number): Promise<Bl
   }
 };
 
+const MIDEN_MAX_PER_PAGE = 100;
+
+const getMidenBlocks = async (currentPage: number, perPage: number): Promise<BlocksResponse> => {
+  try {
+    const pageSize = Math.max(1, Math.min(perPage, MIDEN_MAX_PER_PAGE));
+    const stats = await midenIndexer.getStats({ cache: 'no-store' });
+    const totalBlocks = stats.total_blocks;
+
+    if (!totalBlocks || totalBlocks <= 0) {
+      return { blocks: [], totalPages: 1 };
+    }
+
+    const totalPages = Math.max(1, Math.ceil(totalBlocks / pageSize));
+    const safePage = Math.max(1, Math.min(currentPage, totalPages));
+    const offset = (safePage - 1) * pageSize;
+
+    const { data } = await midenIndexer.getBlocks(
+      { limit: pageSize, offset, sort: 'block_num', order: 'desc' },
+      { cache: 'no-store' },
+    );
+
+    const sorted = [...data].sort((a, b) => Number(b.block_num) - Number(a.block_num));
+    const blocks: BlockItem[] = sorted.map((b) => ({
+      hash: b.block_hash,
+      height: Number(b.block_num),
+      timestamp: formatTimestamp(new Date(b.timestamp)),
+      finalizationStatus: 3,
+    }));
+
+    return { blocks, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Miden blocks:', error);
+    return { blocks: [], totalPages: 1 };
+  }
+};
+
 const getBlocksByChainName = async (
   chainName: string,
   currentPage: number = 1,
@@ -155,6 +192,10 @@ const getBlocksByChainName = async (
     return getCosmosBlocks(currentPage, perPage);
   }
 
+  if (normalizedChainName === 'miden-testnet') {
+    return getMidenBlocks(currentPage, perPage);
+  }
+
   return { blocks: [], totalPages: 1 };
 };
 
@@ -163,6 +204,7 @@ const BlocksService = {
   getAztecBlocks,
   getLogosBlocks,
   getCosmosBlocks,
+  getMidenBlocks,
 };
 
 export default BlocksService;
