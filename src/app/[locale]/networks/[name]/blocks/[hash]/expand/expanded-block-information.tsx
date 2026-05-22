@@ -5,6 +5,7 @@ import { FC } from 'react';
 import CopyButton from '@/components/common/copy-button';
 import { ChainWithParams } from '@/services/chain-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
+import atomoneIndexer from '@/services/atomone-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 
@@ -17,6 +18,7 @@ const ExpandedBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const t = await getTranslations('BlockInformationPage');
   const isLogos = chain?.name === 'logos-testnet';
   const isCosmoshub = chain?.name === 'cosmoshub';
+  const isAtomone = chain?.name === 'atomone';
 
   if (isCosmoshub) {
     if (!/^\d+$/.test(hash)) {
@@ -29,6 +31,71 @@ const ExpandedBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
       block = response?.data;
     } catch (error) {
       console.error('Error fetching Cosmos block for expanded view:', error);
+      notFound();
+    }
+    if (!block) {
+      notFound();
+    }
+
+    const expandedData: Array<{ title: string; data: string | number; type: 'hash' | 'number' | 'text' }> = [
+      { title: 'last commit hash', data: block.last_commit_hash ?? '—', type: 'hash' },
+      { title: 'data hash', data: block.data_hash ?? '—', type: 'hash' },
+      { title: 'app hash', data: block.app_hash ?? '—', type: 'hash' },
+      { title: 'proposer address', data: block.proposer_address, type: 'hash' },
+      { title: 'size bytes', data: block.size_bytes ?? '—', type: 'number' },
+      { title: 'evidence count', data: block.evidence_count, type: 'number' },
+      { title: 'transaction count', data: block.tx_count, type: 'number' },
+    ];
+
+    const formatData = (data: string | number, type: 'hash' | 'number' | 'text') => {
+      if (type === 'hash') {
+        if (typeof data === 'string' && data === '—') {
+          return <div className="font-handjet text-lg">{data}</div>;
+        }
+        return (
+          <div className="flex flex-row items-center gap-2">
+            <span className="break-all font-handjet text-lg hover:text-highlight">{data}</span>
+            <CopyButton value={data.toString()} size="md" />
+          </div>
+        );
+      }
+      if (type === 'number') {
+        return (
+          <div className="font-handjet text-lg hover:text-highlight">
+            {typeof data === 'number' ? data.toLocaleString('en-US') : data}
+          </div>
+        );
+      }
+      return <div className="hover:text-highlight">{data}</div>;
+    };
+
+    return (
+      <div className="mb-5 mt-5">
+        {expandedData.map((item) => (
+          <div key={item.title} className="mt-2 flex w-full hover:bg-bgHover">
+            <div className="w-3/12 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+              {t(item.title as 'block hash')}
+            </div>
+            <div className="flex w-9/12 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-sfpro text-base">
+              {formatData(item.data, item.type)}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (isAtomone) {
+    if (!/^\d+$/.test(hash)) {
+      notFound();
+    }
+
+    let block;
+    try {
+      const response = await atomoneIndexer.getBlockByHeight(hash, { revalidate: false });
+      block = response?.data;
+    } catch (error) {
+      console.error('Error fetching AtomOne block for expanded view:', error);
       notFound();
     }
     if (!block) {

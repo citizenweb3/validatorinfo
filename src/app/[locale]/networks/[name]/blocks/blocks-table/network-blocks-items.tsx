@@ -27,9 +27,10 @@ const NetworkBlocksItem: FC<OwnProps> = ({ name, item }) => {
     return getAztecFinalizationLabel(item.finalizationStatus) === 'pending' ? 'Not Finalized' : 'Finalized';
   };
 
-  // Cosmos indexer only exposes lookup by height; route the detail page by height.
-  const isCosmoshub = name.toLowerCase() === 'cosmoshub';
-  const link = `/networks/${name}/blocks/${isCosmoshub ? item.height : item.hash}`;
+  // Cosmos/AtomOne indexers only expose lookup by height; route the detail page by height.
+  const lowerName = name.toLowerCase();
+  const routeByHeight = lowerName === 'cosmoshub' || lowerName === 'atomone';
+  const link = `/networks/${name}/blocks/${routeByHeight ? item.height : item.hash}`;
 
   const heightValue = typeof item.height === 'string' ? parseInt(item.height, 10) : item.height;
 

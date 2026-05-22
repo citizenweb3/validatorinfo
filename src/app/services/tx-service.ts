@@ -1,9 +1,12 @@
 import db from '@/db';
+import atomoneIndexer from '@/services/atomone-indexer-api';
+import { AtomoneTxDetail } from '@/services/atomone-indexer-api';
 import aztecIndexer from '@/services/aztec-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import { CosmosTxDetail } from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import { LogosTxDetail } from '@/services/logos-indexer-api';
+import { refreshChainTxMetrics } from '@/server/jobs/update-tx-metrics';
 import { getAztecTimestampMs } from '@/utils/aztec';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
@@ -239,22 +242,63 @@ const getLogosTxByHash = async (
   return { status: tx.finalized ? 'confirmed' : 'pending', data: tx };
 };
 
-const getLogosTxMetrics = async (chainId: number): Promise<TxMetrics> => {
-  const cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
+const TX_METRICS_TTL_MS = 60 * 60 * 1000;
+const txMetricsRefreshInFlight = new Map<string, Promise<void>>();
 
-  if (!cached) {
-    return { totalTxs: null, txsLast24h: null, txs30d: null, tps: null, avgFee: null };
+const refreshTxMetricsOnce = (chainName: string): Promise<void> => {
+  const existing = txMetricsRefreshInFlight.get(chainName);
+  if (existing) {
+    return existing;
+  }
+  const promise = refreshChainTxMetrics(chainName).finally(() => {
+    txMetricsRefreshInFlight.delete(chainName);
+  });
+  txMetricsRefreshInFlight.set(chainName, promise);
+  return promise;
+};
+
+const EMPTY_TX_METRICS: TxMetrics = {
+  totalTxs: null,
+  txsLast24h: null,
+  txs30d: null,
+  tps: null,
+  avgFee: null,
+};
+
+const projectTxMetricsRow = (row: {
+  totalTxs: bigint | null;
+  txsLast24h: number | null;
+  txs30d: number | null;
+  tps: number | null;
+  avgFee: string | null;
+}): TxMetrics => ({
+  totalTxs: row.totalTxs ? Number(row.totalTxs) : null,
+  txsLast24h: row.txsLast24h,
+  txs30d: row.txs30d,
+  tps: row.tps,
+  avgFee: row.avgFee,
+});
+
+const readTxMetrics = async (chainId: number, chainName: string): Promise<TxMetrics> => {
+  let cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
+
+  const isStale =
+    !cached || Date.now() - cached.updatedAt.getTime() > TX_METRICS_TTL_MS;
+
+  if (isStale) {
+    try {
+      await refreshTxMetricsOnce(chainName);
+      cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
+    } catch (error) {
+      console.error(`Live tx-metrics refresh failed for ${chainName}:`, error);
+    }
   }
 
-  return {
-    totalTxs: cached.totalTxs ? Number(cached.totalTxs) : null,
-    txsLast24h: cached.txsLast24h,
-    txs30d: cached.txs30d,
-    tps: cached.tps,
-    // Logos testnet: gas prices are 0; avg_fee is meaningless and stays null.
-    avgFee: cached.avgFee,
-  };
+  return cached ? projectTxMetricsRow(cached) : EMPTY_TX_METRICS;
 };
+
+const getLogosTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
+  readTxMetrics(chainId, chainName);
 
 /**
  * Cosmoshub: keyset cursor is forward-only (`before_height` + `before_index`).
@@ -321,21 +365,73 @@ const getCosmosTxByHash = async (
   };
 };
 
-const getCosmosTxMetrics = async (chainId: number): Promise<TxMetrics> => {
-  const cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
+const getCosmosTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
+  readTxMetrics(chainId, chainName);
 
-  if (!cached) {
-    return { totalTxs: null, txsLast24h: null, txs30d: null, tps: null, avgFee: null };
+/**
+ * AtomOne uses the same citizenweb3 indexer shape as CosmosHub: keyset cursor
+ * forward-only via `before_height` + `before_index`.
+ */
+const getAtomoneTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+  try {
+    const stats = await atomoneIndexer.getTxsStats(TX_LIST_CACHE);
+    const total = Number(stats.data.total_txs);
+    const totalPages = Math.max(1, Math.ceil(total / perPage));
+    const skip = (currentPage - 1) * perPage;
+
+    let cursor: { before_height?: string; before_index?: number } | undefined;
+    let walked = 0;
+
+    while (walked < skip) {
+      const step = Math.min(perPage, skip - walked);
+      const r = await atomoneIndexer.getTxsList({ limit: step, ...cursor }, TX_LIST_CACHE);
+
+      if (!r.has_more || !r.cursor) {
+        break;
+      }
+
+      cursor = {
+        before_height: r.cursor.next_before_height,
+        before_index: 'next_before_index' in r.cursor ? r.cursor.next_before_index : undefined,
+      };
+      walked += r.data.length;
+    }
+
+    const page = await atomoneIndexer.getTxsList({ limit: perPage, ...cursor }, TX_LIST_CACHE);
+
+    const txs: TxItem[] = page.data.map((t) => ({
+      hash: t.tx_hash,
+      status: t.code === 0 ? ('confirmed' as const) : ('dropped' as const),
+      blockHeight: Number(t.height),
+      timestamp: new Date(t.time).getTime(),
+      transactionFee: t.fee?.amount ?? undefined,
+      opType: t.first_msg_type ?? undefined,
+    }));
+
+    return { txs, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch AtomOne transactions:', error);
+    return { txs: [], totalPages: 1, error: true };
+  }
+};
+
+const getAtomoneTxByHash = async (
+  hash: string,
+): Promise<{ status: TxStatus; data: AtomoneTxDetail } | null> => {
+  const tx = await atomoneIndexer.getTxByHash(hash, { cache: 'no-store' }).catch(() => null);
+
+  if (!tx) {
+    return null;
   }
 
   return {
-    totalTxs: cached.totalTxs ? Number(cached.totalTxs) : null,
-    txsLast24h: cached.txsLast24h,
-    txs30d: cached.txs30d,
-    tps: cached.tps,
-    avgFee: cached.avgFee,
+    status: tx.data.code === 0 ? 'confirmed' : 'dropped',
+    data: tx.data,
   };
 };
+
+const getAtomoneTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
+  readTxMetrics(chainId, chainName);
 
 const getTxsByChainName = async (
   chainName: string,
@@ -357,24 +453,15 @@ const getTxsByChainName = async (
     return getCosmosTxs(currentPage, perPage);
   }
 
+  if (normalizedChainName === 'atomone') {
+    return getAtomoneTxs(currentPage, perPage);
+  }
+
   return { txs: [], totalPages: 1 };
 };
 
-const getAztecTxMetrics = async (chainId: number): Promise<TxMetrics> => {
-  const cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
-
-  if (!cached) {
-    return { totalTxs: null, txsLast24h: null, txs30d: null, tps: null, avgFee: null };
-  }
-
-  return {
-    totalTxs: cached.totalTxs ? Number(cached.totalTxs) : null,
-    txsLast24h: cached.txsLast24h,
-    txs30d: cached.txs30d,
-    tps: cached.tps,
-    avgFee: cached.avgFee,
-  };
-};
+const getAztecTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
+  readTxMetrics(chainId, chainName);
 
 const TxService = {
   getTxsByChainName,
@@ -387,6 +474,9 @@ const TxService = {
   getCosmosTxs,
   getCosmosTxByHash,
   getCosmosTxMetrics,
+  getAtomoneTxs,
+  getAtomoneTxByHash,
+  getAtomoneTxMetrics,
 };
 
 export default TxService;
