@@ -16,8 +16,9 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
 
   const isLogos = chainName.toLowerCase() === 'logos-testnet';
   const isCosmoshub = chainName.toLowerCase() === 'cosmoshub';
+  const isAtomone = chainName.toLowerCase() === 'atomone';
 
-  if (isAztecChainName(chainName) || isLogos || isCosmoshub) {
+  if (isAztecChainName(chainName) || isLogos || isCosmoshub || isAtomone) {
     const chain = await chainService.getByName(chainName);
 
     if (!chain) {
@@ -25,12 +26,14 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
     }
 
     const metrics = isLogos
-      ? await TxService.getLogosTxMetrics(chain.id)
+      ? await TxService.getLogosTxMetrics(chain.id, chain.name)
       : isCosmoshub
-        ? await TxService.getCosmosTxMetrics(chain.id)
-        : await TxService.getAztecTxMetrics(chain.id);
+        ? await TxService.getCosmosTxMetrics(chain.id, chain.name)
+        : isAtomone
+          ? await TxService.getAtomoneTxMetrics(chain.id, chain.name)
+          : await TxService.getAztecTxMetrics(chain.id, chain.name);
 
-    const feeUnit = isCosmoshub ? (chain.params?.denom ?? 'ATOM') : 'AZTEC';
+    const feeUnit = isAtomone ? 'PHOTON' : isCosmoshub ? (chain.params?.denom ?? 'ATOM') : 'AZTEC';
 
     const metricsData = [
       {

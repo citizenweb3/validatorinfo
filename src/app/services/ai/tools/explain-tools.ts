@@ -109,7 +109,7 @@ export const explainTools = {
 
         let metrics = null;
         if (chain) {
-          metrics = await TxService.getAztecTxMetrics(chain.id);
+          metrics = await TxService.getAztecTxMetrics(chain.id, chain.name);
         }
 
         return {
