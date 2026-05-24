@@ -1,6 +1,6 @@
 # AI Chat Module
 
-**Purpose:** AI-powered chat assistant integrated into the ValidatorInfo frontend. Uses Google Gemini (via Vercel AI SDK) to answer user questions about blockchain networks, validators, governance, transactions, and blocks. The LLM has access to tools that query real-time data from the ValidatorInfo database.
+**Purpose:** AI-powered chat assistant integrated into the ValidatorInfo frontend. Uses Google Gemini via **Vertex AI** (Vercel AI SDK) to answer user questions about blockchain networks, validators, governance, transactions, and blocks. The LLM has access to tools that query real-time data from the ValidatorInfo database.
 
 ## Architecture Overview
 
@@ -36,7 +36,8 @@ Response → parseMarkdown → rendered in chat
 
 | File | Description |
 |------|-------------|
-| `ai-service.ts` | LLM model config (Gemini), system prompt builder, availability check |
+| `vertex-provider.ts` | Vertex AI provider factory: cached `createVertex()`; exposes `chatModel()` (gemini-3-flash-preview), `summaryModel()` (gemini-2.5-flash, for podcast/proposal summarization), `embeddingModel()` (gemini-embedding-001), `hasVertexConfig()` |
+| `ai-service.ts` | Chat LLM model wiring (delegates to `vertex-provider`), system prompt builder, availability check |
 | `tools/tools.ts` | Aggregates all tool groups into single `aiTools` export |
 | `tools/chain-tools.ts` | Tools: `getChainMetrics`, `compareChains`, `searchChains`, `getEcosystemChains` |
 | `tools/validator-tools.ts` | Tools: `getValidators`, `searchValidators`, `getValidatorById`, `getValidatorDetails` |
@@ -129,9 +130,11 @@ Key conventions:
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `GOOGLE_GENERATIVE_AI_API_KEY` | Yes | Google AI API key for Gemini model |
+| `GOOGLE_CLOUD_PROJECT` | Yes | GCP project ID for Vertex AI (chat + embeddings). AI chat disables itself if unset. |
+| `GOOGLE_APPLICATION_CREDENTIALS` | Yes | Absolute path to Vertex AI service account JSON inside the container. docker-compose mounts `./secrets/vertex-sa.json:/secrets/vertex-sa.json:ro` for both `frontend` and `init-podcasts` services. |
 | `PUBLIC_URL` | Yes | Used in system prompt for generating page links |
 | `REDIS_HOST` | Yes | Required for rate limiting |
+| `GOOGLE_GENERATIVE_AI_API_KEY` | No (deprecated) | Legacy Google AI Studio key. `@ai-sdk/google` is still in deps as a fallback but no code path uses it. |
 
 ## Knowledge Base RAG System
 
@@ -142,7 +145,7 @@ The AI assistant has access to a semantic search tool (`searchKnowledgeBase`) th
 
 ### How it works
 
-- Content is chunked, embedded via Google `gemini-embedding-001` (768 dims), and stored in `podcast_chunks` table with pgvector HNSW index
+- Content is chunked, embedded via `gemini-embedding-001` (768 dims) on **Vertex AI**, **L2-normalized** via `src/lib/vector.ts` `l2Normalize`, then stored in `podcast_chunks` table with pgvector HNSW index. Query vectors are normalized identically at retrieval time so cosine ranking is consistent.
 - At query time, the user's question is embedded and compared via cosine similarity
 - Results are deduplicated (max 2 per source) and returned to the LLM with context
 - The LLM combines facts from documentation with quotes from podcasts

@@ -42,3 +42,6 @@ Makefile
 *.tsbuildinfo
 next-env.d.ts
 .gitnexus
+
+# Vertex AI service account (second layer of defense — primary is secrets/.gitignore)
+/secrets/*.json
