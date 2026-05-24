@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.30",
+    "@ai-sdk/google-vertex": "4.0.128",
     "@cosmjs/proto-signing": "^0.32.4",
     "@cosmjs/stargate": "^0.32.4",
     "@cosmostation/cosmos-client": "0.0.5",
