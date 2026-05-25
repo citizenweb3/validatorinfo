@@ -4,6 +4,8 @@ import path from 'path';
 import { embedMany, generateText, Output } from 'ai';
 import { Prisma } from '@prisma/client';
 
+import { l2Normalize } from '@/lib/vector';
+
 import type { Chunk, EpisodeMeta, IndexEntry, Segment } from './shared';
 import {
   CHUNK_INSERT_BATCH_SIZE,
@@ -11,7 +13,8 @@ import {
   CHUNK_MIN_WORDS,
   CHUNK_OVERLAP_WORDS,
   db,
-  EMBEDDING_MODEL,
+  getEmbeddingModel,
+  getSummaryModel,
   HOST_ALIASES,
   logError,
   logWarn,
@@ -20,7 +23,6 @@ import {
   PODCAST_EMBEDDING_MODEL_ID,
   RATE_LIMIT_DELAY_MS,
   splitWithOverlap,
-  SUMMARY_MODEL,
   TRANSCRIPTS_DIR,
   wordCount,
 } from './shared';
@@ -215,7 +217,7 @@ const generateSummary = async (
 ): Promise<string | null> => {
   try {
     const { text } = await generateText({
-      model: SUMMARY_MODEL,
+      model: getSummaryModel(),
       maxOutputTokens: 8192,
       prompt: `Write a 500-1000 word English summary of this Citizen Web3 podcast interview with guest ${guestName}. Focus on the guest's key opinions, positions, insights and values. Include notable direct quotes. Plain prose, no headers or bullet points. Only include information directly stated in the transcript.\n\nTranscript:\n${transcript}`,
     });
@@ -235,7 +237,7 @@ const extractMetadata = async (
 ): Promise<{ primaryProject: string | null; mentionedEntities: string[] }> => {
   try {
     const { output } = await generateText({
-      model: SUMMARY_MODEL,
+      model: getSummaryModel(),
       maxOutputTokens: 4096,
       output: Output.object({ schema: metadataSchema }),
       prompt: `Extract metadata from this podcast episode summary. The guest is ${guestName}.\n\nSummary:\n${summary}`,
@@ -315,16 +317,20 @@ const processEpisode = async (entry: IndexEntry): Promise<boolean> => {
   for (let i = 0; i < embeddingInputs.length; i += EMBED_BATCH_SIZE) {
     const batch = embeddingInputs.slice(i, i + EMBED_BATCH_SIZE);
     const { embeddings: batchEmbeddings } = await embedMany({
-      model: EMBEDDING_MODEL,
+      model: getEmbeddingModel(),
       values: batch,
+      maxParallelCalls: 2,
       providerOptions: {
-        google: {
+        vertex: {
           taskType: 'RETRIEVAL_DOCUMENT',
           outputDimensionality: PODCAST_EMBEDDING_DIMENSIONS,
         },
       },
     });
-    embeddings.push(...batchEmbeddings);
+    const normalizedBatch = batchEmbeddings.map((e, idx) =>
+      l2Normalize(e, `podcast-chunk[${i + idx}]`),
+    );
+    embeddings.push(...normalizedBatch);
     if (i + EMBED_BATCH_SIZE < embeddingInputs.length) {
       await new Promise(r => setTimeout(r, RATE_LIMIT_DELAY_MS));
     }

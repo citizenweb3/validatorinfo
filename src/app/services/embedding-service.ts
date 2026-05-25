@@ -1,27 +1,26 @@
 import { embed } from 'ai';
-import { google } from '@ai-sdk/google';
+import { embeddingModel } from '@/services/ai/vertex-provider';
+import { l2Normalize } from '@/lib/vector';
 import logger from '@/logger';
 
-import { PODCAST_EMBEDDING_DIMENSIONS, PODCAST_EMBEDDING_MODEL_ID } from '@/server/config/podcast-config';
+import { PODCAST_EMBEDDING_DIMENSIONS } from '@/server/config/podcast-config';
 
 const { logError } = logger('embedding-service');
-
-const EMBEDDING_MODEL = google.textEmbeddingModel(PODCAST_EMBEDDING_MODEL_ID);
 
 const embedQuery = async (query: string): Promise<number[]> => {
   try {
     const { embedding } = await embed({
-      model: EMBEDDING_MODEL,
+      model: embeddingModel(),
       value: query,
       providerOptions: {
-        google: {
+        vertex: {
           taskType: 'RETRIEVAL_QUERY',
           outputDimensionality: PODCAST_EMBEDDING_DIMENSIONS,
         },
       },
     });
 
-    return embedding;
+    return l2Normalize(embedding);
   } catch (error) {
     logError('embedQuery failed', error);
     throw error;

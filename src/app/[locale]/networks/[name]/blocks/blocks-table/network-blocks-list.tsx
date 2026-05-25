@@ -15,7 +15,7 @@ const NetworkBlocksList: FC<OwnProps> = async ({ name, perPage, currentPage = 1 
   const t = await getTranslations('NetworkStatistics');
   const { blocks, totalPages } = await BlocksService.getBlocksByChainName(name, currentPage, perPage);
 
-  const supportsBlocks = ['aztec', 'logos-testnet', 'cosmoshub'].includes(name.toLowerCase());
+  const supportsBlocks = ['aztec', 'logos-testnet', 'cosmoshub', 'atomone'].includes(name.toLowerCase());
   if (blocks.length === 0 && !supportsBlocks) {
     return (
       <tbody>

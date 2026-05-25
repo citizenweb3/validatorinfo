@@ -1,9 +1,12 @@
 import { embedMany, generateText } from 'ai';
 import { Prisma } from '@prisma/client';
 
+import { l2Normalize } from '@/lib/vector';
+
 import {
   db,
-  EMBEDDING_MODEL,
+  getEmbeddingModel,
+  getSummaryModel,
   HOST_IDENTITY,
   HOST_MONIKER,
   logInfo,
@@ -11,7 +14,6 @@ import {
   PODCAST_EMBEDDING_DIMENSIONS,
   PODCAST_EMBEDDING_MODEL_ID,
   RATE_LIMIT_DELAY_MS,
-  SUMMARY_MODEL,
   wordCount,
 } from './shared';
 
@@ -70,7 +72,7 @@ export const generateHostMeta = async (processed: number): Promise<void> => {
         let bestText = '';
         for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
           const { text } = await generateText({
-            model: SUMMARY_MODEL,
+            model: getSummaryModel(),
             maxOutputTokens: 4096,
             system: 'You are a podcast content analyst writing an exhaustive profile. Rules: (1) Only include information directly stated in the provided text. (2) Always output in English. (3) Be extremely thorough — cover every subtopic mentioned. (4) Include specific names of projects, people, networks, and tools. (5) Include direct quotes where possible. (6) Your output MUST be at least 400 words. Shorter outputs are unacceptable.',
             prompt: `Below are remarks by the host of the Citizen Web3 podcast (Serj / Citizen Web3) across ~150 episodes of interviews with blockchain validators and projects.
@@ -130,16 +132,20 @@ ${hostTexts}`,
         const hostEmbeddingInputs = hostChunksWithTopics.map(
           (chunk) => `Citizen Web3 podcast host on ${chunk.topicName}:\n${chunk.text}`,
         );
-        const { embeddings: hostEmbeddings } = await embedMany({
-          model: EMBEDDING_MODEL,
+        const { embeddings: hostEmbeddingsRaw } = await embedMany({
+          model: getEmbeddingModel(),
           values: hostEmbeddingInputs,
+          maxParallelCalls: 2,
           providerOptions: {
-            google: {
+            vertex: {
               taskType: 'RETRIEVAL_DOCUMENT',
               outputDimensionality: PODCAST_EMBEDDING_DIMENSIONS,
             },
           },
         });
+        const hostEmbeddings = hostEmbeddingsRaw.map((e, i) =>
+          l2Normalize(e, `host-meta-chunk[${i}]`),
+        );
 
         await db.$transaction(async (tx) => {
           await tx.podcastEpisode.deleteMany({ where: { slug: hostMetaSlug } });

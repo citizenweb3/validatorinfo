@@ -149,8 +149,11 @@ services:
       - .env
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}?schema=public
+      GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT:-}
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/vertex-sa.json
     volumes:
       - uploads_data:/app/uploads
+      - ./secrets/vertex-sa.json:/secrets/vertex-sa.json:ro
 
   # Note: For full observability stack, run docker-compose-observability.yml
   # Alloy collector is in docker-compose-observability.yml
@@ -196,8 +199,11 @@ services:
       OTEL_SERVICE_NAME: ${OTEL_SERVICE_NAME_FRONTEND:-validatorinfo-frontend}
       OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-http://alloy:4317}
       PYROSCOPE_SERVER_URL: ${PYROSCOPE_SERVER_URL:-http://pyroscope:4040}
+      GOOGLE_CLOUD_PROJECT: ${GOOGLE_CLOUD_PROJECT:-}
+      GOOGLE_APPLICATION_CREDENTIALS: /secrets/vertex-sa.json
     volumes:
       - uploads_data:/app/uploads
+      - ./secrets/vertex-sa.json:/secrets/vertex-sa.json:ro
     networks:
       - default
       - observability

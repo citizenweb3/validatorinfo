@@ -100,7 +100,7 @@ export const generateProposalSummary = async (
     }
 
     if (!AiService.isAvailable) {
-      logWarn('AI is disabled — GOOGLE_GENERATIVE_AI_API_KEY not set');
+      logWarn('AI is disabled — GOOGLE_CLOUD_PROJECT not set');
       return { ok: false, error: 'ai_disabled', code: 'AI_DISABLED' };
     }
 

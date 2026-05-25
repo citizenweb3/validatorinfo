@@ -1,11 +1,11 @@
 import path from 'path';
 
-import { google } from '@ai-sdk/google';
 import { Prisma } from '@prisma/client';
 import { z } from 'zod';
 
 import db from '@/db';
 import logger from '@/logger';
+import { embeddingModel, summaryModel } from '@/services/ai/vertex-provider';
 import { PODCAST_EMBEDDING_DIMENSIONS, PODCAST_EMBEDDING_MODEL_ID } from '@/server/config/podcast-config';
 
 // --- Logger ---
@@ -18,9 +18,11 @@ export { db, Prisma, z, logInfo, logError, logWarn };
 export { PODCAST_EMBEDDING_DIMENSIONS, PODCAST_EMBEDDING_MODEL_ID };
 
 // --- AI Models ---
+// Lazy getters because the Vertex provider reads GOOGLE_CLOUD_PROJECT at first call.
+// Module-init time access would break the indexer if env is missing.
 
-export const EMBEDDING_MODEL = google.textEmbeddingModel(PODCAST_EMBEDDING_MODEL_ID);
-export const SUMMARY_MODEL = google('gemini-2.5-flash');
+export const getEmbeddingModel = () => embeddingModel();
+export const getSummaryModel = () => summaryModel();
 
 // --- Podcast Constants ---
 
