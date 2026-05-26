@@ -9,10 +9,10 @@ import { useWindowEvent } from '@/hooks/useWindowEvent';
 import NavigationBarItem from './navigation-bar-item';
 
 export const homeTabs: TabOptions[] = [
-  { name: 'Home', href: '/', icon: icons.GeneralIcon, iconHovered: icons.GeneralIconHovered },
+  { name: 'Home', href: '/', icon: icons.HomeIcon, iconHovered: icons.HomeIconHovered },
   { name: 'You', href: '/profile', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered },
   { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
-  { name: 'About Us', href: '/about', icon: icons.AboutIcon, iconHovered: icons.AboutIconHovered },
+  { name: 'About Us', href: '/about', icon: icons.LogoIcon, iconHovered: icons.LogoIconHovered },
   { name: 'Play', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
 ];
 
