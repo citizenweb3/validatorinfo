@@ -18,6 +18,14 @@ jobs:
           fetch-depth: 0
           clean: false
 
+      # Security: the PR tree is attacker-controlled. Remove any Claude/MCP config
+      # it carries before running `claude` — these files would otherwise execute
+      # SessionStart hooks / spawn MCP servers as the runner user. Tracked
+      # .claude/agents and .claude/skills are kept; only PR-introduced config dies.
+      - name: Strip attacker-controlled Claude/MCP config
+        run: |
+          rm -f .claude/settings.json .claude/settings.local.json .mcp.json .claude/.mcp.json
+
       - name: Review PR
         run: |
           DB="/data/monitoring/monitoring.db"

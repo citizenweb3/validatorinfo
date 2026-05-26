@@ -7,8 +7,10 @@ import CheckmarkIcon from '@/public/img/icons/checkmark.svg';
 import GreenSquareIcon from '@/public/img/icons/green-square.svg';
 import LuckyIconHovered from '@/public/img/icons/lucky-h.png';
 import LuckyIcon from '@/public/img/icons/lucky.png';
-import AboutIconHovered from '@/public/img/icons/navbar/about-h.png';
-import AboutIcon from '@/public/img/icons/navbar/about.png';
+import HomeIconHovered from '@/public/img/icons/navbar/home-h.png';
+import HomeIcon from '@/public/img/icons/navbar/home.png';
+import LogoIcon from '@/public/img/logo.svg';
+import LogoIconHovered from '@/public/img/logo.svg';
 import CalculatorIconHovered from '@/public/img/icons/navbar/calculator-h.png';
 import CalculatorIcon from '@/public/img/icons/navbar/calculator.png';
 import ComparisonIconHovered from '@/public/img/icons/navbar/comparison-h.png';
@@ -77,7 +79,7 @@ import WalletIconHovered from '@/public/img/icons/account-tabs/wallet-h.png';
 import Cosmonaut from '@/public/img/icons/cosmonaut.svg';
 import NotTodayMobileIcon from '@/public/img/icons/not-today-mobile.svg';
 import NetworkDistribution from '@/public/img/icons/network-profile-icons/network-distribution.png';
-import NetworkDistributionHovered from '@/public/img/icons/network-profile-icons/network-distribution-h.png'
+import NetworkDistributionHovered from '@/public/img/icons/network-profile-icons/network-distribution-h.png';
 import NetworkBlocks from '@/public/img/icons/network-profile-icons/network-blocks.png';
 import NetworkBlocksHovered from '@/public/img/icons/network-profile-icons/network-blocks-h.png';
 import NetworkApps from '@/public/img/icons/network-profile-icons/network-apps.png';
@@ -92,7 +94,7 @@ import NetworkProfileHeaderTxsHovered from '@/public/img/icons/network-profile-i
 
 
 const icons = {
-  AboutIcon,
+  HomeIcon,
   BatterySmallIcon,
   NetworksIcon,
   ValidatorsIcon,
@@ -100,7 +102,7 @@ const icons = {
   LibraryIcon,
   CalculatorIcon,
   ComparisonIcon,
-  AboutIconHovered,
+  HomeIconHovered,
   NetworksIconHovered,
   ValidatorsIconHovered,
   MetricsIconHovered,
@@ -183,6 +185,8 @@ const icons = {
   NetworkProfilePlanetActive,
   NetworkProfileHeaderTxs,
   NetworkProfileHeaderTxsHovered,
+  LogoIcon,
+  LogoIconHovered,
 };
 
 export default icons;
