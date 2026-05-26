@@ -1374,10 +1374,19 @@
       "Amount Slashed": {
         "name": "Montante reduzido",
         "hint": ""
+      },
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Sequencer": {
+        "name": "Sequenciador",
+        "hint": ""
       }
     },
     "show dropdown": "Evento de Corte de Espetáculo",
-    "hide dropdown": "Evento de Corte de Couro"
+    "hide dropdown": "Evento de Corte de Couro",
+    "no-slashing-events": "Nenhum evento de corte encontrado para este validador"
   },
   "TotalTxsPage": {
     "title": "Blockchain: Atividade de Transações",
@@ -1752,7 +1761,15 @@
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",
-      "description": ""
+      "description": "",
+      "not-available-for-chain": "As informações de governança estão disponíveis apenas para a rede Aztec",
+      "slashing-history-title": "Histórico de Cortes",
+      "voting-history-title": "Histórico de Votação",
+      "slashing-events-stat": "Eventos de Corte",
+      "total-votes-stat": "Total de Votos",
+      "total-slashed-stat": "Total Cortado",
+      "no-governance-activity": "Nenhuma atividade de governança encontrada para este endereço",
+      "proposal-id-column": "ID da Proposta"
     },
     "Analytics": {
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",
