@@ -119,13 +119,8 @@
       "networksValue": "1000",
       "ecosystems": "Экосистемы",
       "ecosystemsValue": "2345",
-      "tvl": "TVL",
-      "tvlValue": "$74.6B",
-      "dominance": "Доминирование:",
-      "pow": "POW 56%",
-      "cosmos": "Cosmos 56%",
-      "eth": "ETH 56%",
-      "polkadot": "Polkadot 56%"
+      "totalFdv": "Общий FDV",
+      "dominance": "Доминирование:"
     },
     "links": {
       "forum": "Forum",
@@ -141,8 +136,14 @@
     "infrastructureText": "Построено и работает на наших собственных off-grid bare-metal серверах в Атлантике. Open-source. Без рекламы. Уважает приватность. Команда Citizen Web3.",
     "askExpert": "Спросите эксперта Validator",
     "topPerformers": "Лучшие показатели и основные моменты",
-    "placeholderName": "Имя",
-    "topPerformersNote": "Короткий и визуальный обзор лучших результатов.",
+    "highlights": {
+      "stakeTop": "Топ валидаторов по стейку",
+      "delegatorsTop": "Топ валидаторов по делегаторам",
+      "priceGainers": "Топ сетей — рост цены за 24ч",
+      "aprTop": "Топ сетей по APR",
+      "fdvTop": "Топ сетей по FDV",
+      "uptimeTop": "Топ валидаторов по аптайму"
+    },
     "quickTools": {
       "bestValidator": "Лучший валидатор для меня",
       "maxYield": "Максимальная доходность сейчас",
