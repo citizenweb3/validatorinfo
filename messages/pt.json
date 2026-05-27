@@ -119,13 +119,8 @@
       "networksValue": "1000",
       "ecosystems": "Ecossistemas",
       "ecosystemsValue": "2345",
-      "tvl": "TVL",
-      "tvlValue": "$74.6B",
-      "dominance": "Domínio:",
-      "pow": "POW 56%",
-      "cosmos": "Cosmos 56%",
-      "eth": "ETH 56%",
-      "polkadot": "Polkadot 56%"
+      "totalFdv": "FDV Total",
+      "dominance": "Domínio:"
     },
     "links": {
       "forum": "Forum",
@@ -141,8 +136,14 @@
     "infrastructureText": "Criado e operado em nossos próprios servidores bare-metal off-grid no Atlântico. Open-source. Sem anúncios. Respeita a privacidade. Pela equipe Citizen Web3.",
     "askExpert": "Pergunte ao Especialista Validator",
     "topPerformers": "Principais desempenhos e destaques",
-    "placeholderName": "Nome",
-    "topPerformersNote": "Visão curta e visual dos principais destaques.",
+    "highlights": {
+      "stakeTop": "Principais validadores por stake",
+      "delegatorsTop": "Principais validadores por delegadores",
+      "priceGainers": "Principais redes — maiores altas de 24h",
+      "aprTop": "Principais redes por APR",
+      "fdvTop": "Principais redes por FDV",
+      "uptimeTop": "Principais validadores por uptime"
+    },
     "quickTools": {
       "bestValidator": "Melhor validador para mim",
       "maxYield": "Maior rendimento agora",

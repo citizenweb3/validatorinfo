@@ -119,13 +119,8 @@
       "networksValue": "1000",
       "ecosystems": "Ecosystems",
       "ecosystemsValue": "2345",
-      "tvl": "TVL",
-      "tvlValue": "$74.6B",
-      "dominance": "Dominance:",
-      "pow": "POW 56%",
-      "cosmos": "Cosmos 56%",
-      "eth": "ETH 56%",
-      "polkadot": "Polkadot 56%"
+      "totalFdv": "Total FDV",
+      "dominance": "Dominance:"
     },
     "links": {
       "forum": "Forum",
@@ -141,8 +136,14 @@
     "infrastructureText": "Built and run on our own off-grid Atlantic bare-metal servers. Open-source. Ad-free. Privacy-respecting. By the Citizen Web3 team.",
     "askExpert": "Ask the Validator Expert",
     "topPerformers": "Top Performers & Highlights",
-    "placeholderName": "Name",
-    "topPerformersNote": "Short and visual overview of the top performers.",
+    "highlights": {
+      "stakeTop": "Top Validators by Stake",
+      "delegatorsTop": "Top Validators by Delegators",
+      "priceGainers": "Top Networks — 24h Price Gainers",
+      "aprTop": "Top Networks by APR",
+      "fdvTop": "Top Networks by FDV",
+      "uptimeTop": "Top Validators by Uptime"
+    },
     "quickTools": {
       "bestValidator": "Best Validator for Me",
       "maxYield": "Max Yield Right Now",
