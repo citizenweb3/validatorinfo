@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { google } from '@ai-sdk/google';
+import { chatModel, hasVertexConfig } from './vertex-provider';
 import logger from '@/logger';
 import type { PageContext } from '@/types/ai-chat';
 
@@ -8,13 +8,13 @@ export type { PageContext, ChatMessage, AskAgentResult } from '@/types/ai-chat';
 
 const { logDebug, logError } = logger('ai-service');
 
-if (!process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
-  logError('GOOGLE_GENERATIVE_AI_API_KEY is not set — AI chat will not function');
+if (!hasVertexConfig()) {
+  logError('GOOGLE_CLOUD_PROJECT is not set — AI chat will not function');
 }
 
 const MAX_TOKENS = 8192;
 
-const model = google('gemini-3-flash-preview');
+const model = chatModel();
 
 const PAGE_DESCRIPTIONS: Record<string, string> = {
   home: 'ValidatorInfo landing page. Shows aggregate stats (total validators, networks, ecosystems) and a TVL summary.',
@@ -226,6 +226,16 @@ const buildSystemPrompt = (context: PageContext): string => {
     '- Podcast links: prefer specific episodeUrl from tool results. If no specific URL available, use the general podcast page: [Citizen Web3 Podcast](https://podcast.citizenweb3.com).',
     '- Do NOT add CW3 promotional footers or closing lines. Mention CW3 naturally within your answer.',
     '- Do NOT steer users away from other validators. Answer honestly using data.',
+    '',
+    'Cosmos governance entities:',
+    '- Interchain Foundation (ICF, interchain.io) — Swiss non-profit, founded 2017 by Jae Kwon and Ethan Buchman to steward Cosmos. ICF continues to oversee ecosystem governance, treasury management, grants, and ecosystem-wide direction.',
+    '- Cosmos Labs (cosmoslabs.io) — wholly-owned subsidiary of the Interchain Foundation, originally formed as Interchain Labs at the end of 2024 when the ICF acquired Skip Protocol and consolidated in-house engineering, then renamed to Cosmos Labs in 2025. Cosmos Labs handles product, engineering, marketing, and growth for the Cosmos Stack, Cosmos Hub, and the ATOM economy.',
+    '- ATOM holders (stakers) — the actual on-chain governance authority. Foundations propose, fund, and advocate; only ATOM voters can execute on-chain changes via stake-weighted proposal votes (e.g. the contentious Proposal 848 in November 2023 that capped ATOM inflation at 10%, which led Jae Kwon to fork AtomOne).',
+    '',
+    'Rules for Cosmos governance questions:',
+    '- When asked "who runs Cosmos" / "who controls Cosmos Hub" — explain the full picture: the ICF (parent foundation, governance + treasury), Cosmos Labs (operational subsidiary, product + engineering), and ATOM stakers (on-chain authority via proposals). Do NOT say Cosmos Labs "replaced" ICF — Cosmos Labs is a subsidiary, ICF still exists and operates.',
+    '- Cosmos-ecosystem chains OTHER than Cosmos Hub (Osmosis, Celestia, dYdX, Neutron, Stride, etc.) have their own foundations and teams. Cosmos Labs and the ICF do NOT govern the broader Cosmos ecosystem — they steward the Cosmos Hub and the shared Cosmos Stack (Cosmos SDK, CometBFT, IBC).',
+    '- For Cosmos Hub governance pages, link /networks/cosmoshub/governance. For current proposals, call getProposals with chainName="cosmoshub".',
   );
 
   const prompt = lines.join('\n');
@@ -237,7 +247,7 @@ const AiService = {
   model,
   maxTokens: MAX_TOKENS,
   buildSystemPrompt,
-  isAvailable: !!process.env.GOOGLE_GENERATIVE_AI_API_KEY,
+  isAvailable: hasVertexConfig(),
 };
 
 export default AiService;

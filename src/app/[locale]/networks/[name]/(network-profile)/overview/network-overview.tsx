@@ -7,6 +7,7 @@ import Tooltip from '@/components/common/tooltip';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import validatorService from '@/services/validator-service';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
+import atomoneIndexer from '@/services/atomone-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import midenIndexer from '@/services/miden-indexer-api';
@@ -91,6 +92,28 @@ const AztecBlocksSlotsEpochsRows: FC<{ chainName: string }> = async ({ chainName
 const CosmoshubTxRow: FC<{ chainName: string }> = async ({ chainName }) => {
   const t = await getTranslations('NetworkPassport');
   const stats = await cosmosIndexer.getTxsStats({ cache: 'no-store' }).catch(() => null);
+  const totalTxs = stats?.data?.total_txs
+    ? Number(stats.data.total_txs).toLocaleString('en-US')
+    : 'N/A';
+
+  return (
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+      <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+        {t('total amount of tx')}
+      </div>
+      <Link
+        href={`/networks/${chainName}/tx`}
+        className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+      >
+        {totalTxs}
+      </Link>
+    </div>
+  );
+};
+
+const AtomoneTxRow: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const stats = await atomoneIndexer.getTxsStats({ cache: 'no-store' }).catch(() => null);
   const totalTxs = stats?.data?.total_txs
     ? Number(stats.data.total_txs).toLocaleString('en-US')
     : 'N/A';
@@ -239,6 +262,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const isLogos = chain?.name === 'logos-testnet';
   const isCosmoshub = chain?.name === 'cosmoshub';
   const isMiden = chain?.name === 'miden-testnet';
+  const isAtomone = chain?.name === 'atomone';
   const activeValidators = chain
     ? isAztec
       ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
@@ -291,6 +315,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
       {isMiden && chain && (
         <Suspense fallback={null}>
           <MidenTxRow chainName={chain.name} />
+        </Suspense>
+      )}
+      {isAtomone && chain && (
+        <Suspense fallback={null}>
+          <AtomoneTxRow chainName={chain.name} />
         </Suspense>
       )}
       {totalSupply > 0 && (

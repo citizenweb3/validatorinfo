@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import CopyButton from '@/components/common/copy-button';
 import { aztecIndexer } from '@/services/aztec-indexer-api';
+import atomoneIndexer from '@/services/atomone-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import midenIndexer from '@/services/miden-indexer-api';
@@ -17,6 +18,7 @@ const JsonBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const isLogos = chain?.name === 'logos-testnet';
   const isCosmoshub = chain?.name === 'cosmoshub';
   const isMiden = chain?.name === 'miden-testnet';
+  const isAtomone = chain?.name === 'atomone';
   const isHeight = /^\d+$/.test(hash);
 
   let block;
@@ -26,6 +28,12 @@ const JsonBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
         notFound();
       }
       const response = await cosmosIndexer.getBlockByHeight(hash, { revalidate: false });
+      block = response?.data;
+    } else if (isAtomone) {
+      if (!isHeight) {
+        notFound();
+      }
+      const response = await atomoneIndexer.getBlockByHeight(hash, { revalidate: false });
       block = response?.data;
     } else if (isLogos) {
       block = await logosIndexer.getBlock(hash, { revalidate: false });

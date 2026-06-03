@@ -55,6 +55,9 @@ export interface MidenBlocksResponse {
  * Detail endpoint returns the same fields as the list item (no extra metadata).
  * `input_nullifiers` / `output_note_ids` arrive as `null` for the empty case
  * (not `[]`); when populated they are hex string arrays.
+ * `block_timestamp` (on-chain production time of the parent block) was added
+ * upstream on 2026-06-03; before that only `inserted_at` (indexer write time)
+ * was available. Optional for backward-compat with cached pre-fix responses.
  */
 export interface MidenTransaction {
   tx_id: string;
@@ -67,6 +70,7 @@ export interface MidenTransaction {
   expiration_block_num: number | null;
   input_nullifiers: string[] | null;
   output_note_ids: string[] | null;
+  block_timestamp?: string;
   inserted_at: string;
   account_id_bech32: string;
 }

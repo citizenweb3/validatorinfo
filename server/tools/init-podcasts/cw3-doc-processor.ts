@@ -4,6 +4,8 @@ import path from 'path';
 import { embedMany } from 'ai';
 import { Prisma } from '@prisma/client';
 
+import { l2Normalize } from '@/lib/vector';
+
 import type { CW3DocSource, DocChunk } from './shared';
 import {
   CHUNK_INSERT_BATCH_SIZE,
@@ -12,8 +14,8 @@ import {
   DOC_CHUNK_MAX_WORDS,
   DOC_CHUNK_MIN_WORDS,
   DOC_CHUNK_OVERLAP_WORDS,
-  EMBEDDING_MODEL,
   FETCH_TIMEOUT_MS,
+  getEmbeddingModel,
   HOST_IDENTITY,
   HOST_MONIKER,
   logError,
@@ -315,16 +317,20 @@ export const processCW3Document = async (source: CW3DocSource): Promise<boolean>
   for (let i = 0; i < embeddingInputs.length; i += EMBED_BATCH_SIZE) {
     const batch = embeddingInputs.slice(i, i + EMBED_BATCH_SIZE);
     const { embeddings: batchEmbeddings } = await embedMany({
-      model: EMBEDDING_MODEL,
+      model: getEmbeddingModel(),
       values: batch,
+      maxParallelCalls: 2,
       providerOptions: {
-        google: {
+        vertex: {
           taskType: 'RETRIEVAL_DOCUMENT',
           outputDimensionality: PODCAST_EMBEDDING_DIMENSIONS,
         },
       },
     });
-    embeddings.push(...batchEmbeddings);
+    const normalizedBatch = batchEmbeddings.map((e, idx) =>
+      l2Normalize(e, `cw3-doc-chunk[${i + idx}]`),
+    );
+    embeddings.push(...normalizedBatch);
     if (i + EMBED_BATCH_SIZE < embeddingInputs.length) {
       await new Promise(r => setTimeout(r, RATE_LIMIT_DELAY_MS));
     }

@@ -95,6 +95,7 @@ const MidenTxInformation: FC<OwnProps> = async ({ chain, hash }) => {
       title: 'output note ids',
       data: outputNoteIdsCount > 0 ? t('items count', { count: outputNoteIdsCount }) : EMPTY,
     },
+    { title: 'timestamp', data: tx.block_timestamp ? formatTimestamp(tx.block_timestamp) : EMPTY },
     { title: 'inserted at', data: formatTimestamp(tx.inserted_at) },
   ];
 
@@ -134,7 +135,7 @@ const MidenTxInformation: FC<OwnProps> = async ({ chain, hash }) => {
       );
     }
 
-    if (title === 'inserted at' && typeof data === 'string') {
+    if ((title === 'timestamp' || title === 'inserted at') && typeof data === 'string') {
       return (
         <div className="flex items-center gap-2">
           <span className="font-handjet text-lg">{data}</span>

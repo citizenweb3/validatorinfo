@@ -418,8 +418,64 @@ Before completing any code modification task, verify:
 
 ---
 
-## ClawMem — Semantic Code Memory
+# Implementation Protocol
 
-> ⚠️ Not indexed yet. Add to `~/.config/clawmem/index.yml` to enable.
+Applies when a task is a **feature or touches 3+ files**. For smaller changes
+(1-2 files, typo, question, research-only), skip this protocol and work normally.
 
-**When indexed:** use `memory_retrieve` MCP tool before code searches and `reindex` after each commit.
+## Preconditions (first step)
+- **git**: if the repo is under git, the commit rule is active. If not, skip
+  commits and note `Commit: N/A (no git)` in the diary.
+- **clawmem**: check the index (`index_stats` / `status`). If not indexed, index
+  it first (`reindex`; add the project to `~/.config/clawmem/index.yml` if
+  needed), then continue. If indexing is impossible, mirror the durable summary
+  into the diary with `clawmem: N/A`.
+
+## 1. Prior-art search (before planning)
+Search whether this was built or researched before:
+- **clawmem**: `search` / `intent_search` / `find_similar` on the feature topic
+- **git**: `git log --grep` and `git log -S`
+- **tasks**: grep past diaries in `.tasks/`
+
+Record findings in the diary. Reuse what exists, or state why you build anew.
+
+## 2. Diary (`.tasks/`, gitignored)
+Create `.tasks/YYYY-MM-DD-<slug>.md` first. One file per task. The agent only
+creates and appends — it never deletes (the human cleans manually).
+
+Structure:
+- **Plan**: checklist of tickets (T1, T2, …)
+- **Prior art**: clawmem / git / tasks findings + conclusion
+- **Per ticket on close**: what done, how, deviations from plan + why, research,
+  commit hash (if git), clawmem id
+
+## 3. Stages & commits
+A **stage = an atomic, revertable unit** that can be described as one change.
+Group tickets into a stage by this criterion, not by ticket count.
+
+On closing a stage → commit. The message is detailed and natural, the way a
+person writes it:
+- **what** changed (files / modules)
+- **why** (the problem it solves)
+- **how** (approach, key decisions)
+- **deviations** from plan, and research if it shaped the decision
+
+The commit message MUST stay sterile: no task slug, no clawmem id, no mention of
+`.tasks/`, clawmem, or this protocol, and no `Co-Authored-By` / "Generated with"
+trailer. The commit is the only artifact that leaves the machine.
+
+## 4. clawmem (per stage + final)
+- **Per stage**: a durable entry mirroring the commit content (what / how /
+  deviations / research) plus the commit hash.
+- **On task completion**: pin a final summary (`memory_pin`) — outcome, key
+  decisions, pitfalls. This survives diary cleanup and is what the next task's
+  prior-art search finds.
+
+## 5. The linked graph (wiring lives on the private side only)
+Join key = **commit hash** (a hash reveals nothing about the system).
+- diary ticket stores: commit hash + clawmem id
+- clawmem entry stores: commit hash + task slug
+- commit stores: nothing pointing back
+
+From any node, reach the other two via the hash. The commit stays clean; the
+working artifacts (slug, ids, diaries) never leave the machine.

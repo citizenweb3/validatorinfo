@@ -68,6 +68,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # Security: the PR tree is attacker-controlled. Remove any Claude/MCP config
+      # it carries before running `claude` — these files would otherwise execute
+      # SessionStart hooks / spawn MCP servers as the runner user. Placed AFTER
+      # rebase so deleting a PR-tracked file does not dirty the tree and break it.
+      - name: Strip attacker-controlled Claude/MCP config
+        run: |
+          rm -f .claude/settings.json .claude/settings.local.json .mcp.json .claude/.mcp.json
+
       - name: Check iteration limit
         id: check
         run: |
@@ -203,8 +211,10 @@ jobs:
           Do NOT add any Co-Authored-By trailer to commit messages.
           FIXRULESEOF
 
-          # Load fullstack.md as agent persona (provides Skills, Teams, GitNexus workflow)
-          AGENT_PERSONA=$(cat .claude/agents/fullstack.md 2>/dev/null || echo "")
+          # Load fullstack.md as agent persona (provides Skills, Teams, GitNexus workflow).
+          # Read from the trusted origin/dev blob, NOT the attacker-controlled PR tree —
+          # a PR editing this file would otherwise inject into --append-system-prompt.
+          AGENT_PERSONA=$(git show origin/dev:.claude/agents/fullstack.md 2>/dev/null || echo "")
 
           claude -p "$(cat "$PROMPT_FILE")" --model claude-opus-4-6 \
             --append-system-prompt "$AGENT_PERSONA" \

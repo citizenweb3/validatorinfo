@@ -11,6 +11,7 @@ import { getAztecBlockHeight, getAztecFinalizationLabel, getAztecTimestampMs } f
 import LogosBlockInformation from '@/app/networks/[name]/blocks/[hash]/logos-block-information';
 import CosmosBlockInformation from '@/app/networks/[name]/blocks/[hash]/cosmos-block-information';
 import MidenBlockInformation from '@/app/networks/[name]/blocks/[hash]/miden-block-information';
+import AtomoneBlockInformation from '@/app/networks/[name]/blocks/[hash]/atomone-block-information';
 
 interface OwnProps {
   chain: ChainWithParams | null;
@@ -28,6 +29,10 @@ const BlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
 
   if (chain?.name === 'miden-testnet') {
     return <MidenBlockInformation chain={chain} hash={hash} />;
+  }
+
+  if (chain?.name === 'atomone') {
+    return <AtomoneBlockInformation chain={chain} hash={hash} />;
   }
 
   const t = await getTranslations('BlockInformationPage');

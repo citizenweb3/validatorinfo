@@ -1,3 +1,4 @@
+import atomoneIndexer from '@/services/atomone-indexer-api';
 import aztecIndexer from '@/services/aztec-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
@@ -173,6 +174,45 @@ const getMidenBlocks = async (currentPage: number, perPage: number): Promise<Blo
   }
 };
 
+const ATOMONE_MAX_PER_PAGE = 100;
+
+const getAtomoneBlocks = async (currentPage: number, perPage: number): Promise<BlocksResponse> => {
+  try {
+    const pageSize = Math.max(1, Math.min(perPage, ATOMONE_MAX_PER_PAGE));
+    const stats = await atomoneIndexer.getBlocksStats({ cache: 'no-store' });
+    const lastHeight = BigInt(stats.data.last_height);
+
+    if (lastHeight <= BigInt(0)) {
+      return { blocks: [], totalPages: 1 };
+    }
+
+    const totalPages = Math.max(1, Math.ceil(Number(lastHeight) / pageSize));
+    const offset = BigInt((currentPage - 1) * pageSize);
+    const beforeHeightBig = lastHeight - offset + BigInt(1);
+
+    if (beforeHeightBig <= BigInt(1)) {
+      return { blocks: [], totalPages };
+    }
+
+    const { data } = await atomoneIndexer.getBlocksList(
+      { limit: pageSize, before_height: beforeHeightBig.toString() },
+      { cache: 'no-store' },
+    );
+
+    const blocks: BlockItem[] = data.map((b) => ({
+      hash: b.block_hash,
+      height: b.height,
+      timestamp: formatTimestamp(new Date(b.time)),
+      finalizationStatus: 3,
+    }));
+
+    return { blocks, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch AtomOne blocks:', error);
+    return { blocks: [], totalPages: 1 };
+  }
+};
+
 const getBlocksByChainName = async (
   chainName: string,
   currentPage: number = 1,
@@ -196,6 +236,10 @@ const getBlocksByChainName = async (
     return getMidenBlocks(currentPage, perPage);
   }
 
+  if (normalizedChainName === 'atomone') {
+    return getAtomoneBlocks(currentPage, perPage);
+  }
+
   return { blocks: [], totalPages: 1 };
 };
 
@@ -205,6 +249,7 @@ const BlocksService = {
   getLogosBlocks,
   getCosmosBlocks,
   getMidenBlocks,
+  getAtomoneBlocks,
 };
 
 export default BlocksService;

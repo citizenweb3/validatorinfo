@@ -12,6 +12,19 @@ interface OwnProps {
 
 type ExpandedRowType = 'hash' | 'number' | 'text';
 
+const EMPTY = '—';
+
+const formatTimestamp = (iso?: string): string => {
+  if (!iso) {
+    return EMPTY;
+  }
+  const d = new Date(iso);
+  if (!Number.isFinite(d.getTime())) {
+    return EMPTY;
+  }
+  return d.toISOString().replace('T', ' ').replace(/\.\d{3}Z$/, ' UTC');
+};
+
 const MidenExpandedTxInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const t = await getTranslations('TxInformationPage');
 
@@ -40,6 +53,7 @@ const MidenExpandedTxInformation: FC<OwnProps> = async ({ chain, hash }) => {
     { title: 'input notes commitment', data: tx.input_notes_commitment, type: 'hash' },
     { title: 'output notes commitment', data: tx.output_notes_commitment, type: 'hash' },
     { title: 'expiration block num', data: tx.expiration_block_num ?? '—', type: 'number' },
+    { title: 'timestamp', data: formatTimestamp(tx.block_timestamp), type: 'text' },
   ];
 
   const formatData = (data: string | number, type: ExpandedRowType) => {

@@ -119,13 +119,8 @@
       "networksValue": "1000",
       "ecosystems": "Ecossistemas",
       "ecosystemsValue": "2345",
-      "tvl": "TVL",
-      "tvlValue": "$74.6B",
-      "dominance": "Domínio:",
-      "pow": "POW 56%",
-      "cosmos": "Cosmos 56%",
-      "eth": "ETH 56%",
-      "polkadot": "Polkadot 56%"
+      "totalFdv": "FDV Total",
+      "dominance": "Domínio:"
     },
     "links": {
       "forum": "Forum",
@@ -141,8 +136,14 @@
     "infrastructureText": "Criado e operado em nossos próprios servidores bare-metal off-grid no Atlântico. Open-source. Sem anúncios. Respeita a privacidade. Pela equipe Citizen Web3.",
     "askExpert": "Pergunte ao Especialista Validator",
     "topPerformers": "Principais desempenhos e destaques",
-    "placeholderName": "Nome",
-    "topPerformersNote": "Visão curta e visual dos principais destaques.",
+    "highlights": {
+      "stakeTop": "Principais validadores por stake",
+      "delegatorsTop": "Principais validadores por delegadores",
+      "priceGainers": "Principais redes — maiores altas de 24h",
+      "aprTop": "Principais redes por APR",
+      "fdvTop": "Principais redes por FDV",
+      "uptimeTop": "Principais validadores por uptime"
+    },
     "quickTools": {
       "bestValidator": "Melhor validador para mim",
       "maxYield": "Maior rendimento agora",
@@ -1377,10 +1378,19 @@
       "Amount Slashed": {
         "name": "Montante reduzido",
         "hint": ""
+      },
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Sequencer": {
+        "name": "Sequenciador",
+        "hint": ""
       }
     },
     "show dropdown": "Evento de Corte de Espetáculo",
-    "hide dropdown": "Evento de Corte de Couro"
+    "hide dropdown": "Evento de Corte de Couro",
+    "no-slashing-events": "Nenhum evento de corte encontrado para este validador"
   },
   "TotalTxsPage": {
     "title": "Blockchain: Atividade de Transações",
@@ -1705,7 +1715,7 @@
   },
   "LibraryPage": {
     "Tabs": {
-      "Library": "Biblioteca",
+      "Library": "Jogar",
       "Validators": "Validadores",
       "Developers": "Desenvolvedores",
       "Delegators": "Delegadores",
@@ -1780,7 +1790,15 @@
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",
-      "description": ""
+      "description": "",
+      "not-available-for-chain": "As informações de governança estão disponíveis apenas para a rede Aztec",
+      "slashing-history-title": "Histórico de Cortes",
+      "voting-history-title": "Histórico de Votação",
+      "slashing-events-stat": "Eventos de Corte",
+      "total-votes-stat": "Total de Votos",
+      "total-slashed-stat": "Total Cortado",
+      "no-governance-activity": "Nenhuma atividade de governança encontrada para este endereço",
+      "proposal-id-column": "ID da Proposta"
     },
     "Analytics": {
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",

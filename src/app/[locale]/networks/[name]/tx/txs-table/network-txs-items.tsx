@@ -53,6 +53,7 @@ interface OwnProps {
   isLogos?: boolean;
   isMiden?: boolean;
   isCosmoshub?: boolean;
+  isAtomone?: boolean;
   coinDecimals?: number;
   timestampSlot?: ReactNode;
 }
@@ -75,6 +76,7 @@ const NetworkTxsItem: FC<OwnProps> = ({
   isLogos,
   isMiden,
   isCosmoshub,
+  isAtomone,
   coinDecimals,
   timestampSlot,
 }) => {
@@ -117,7 +119,7 @@ const NetworkTxsItem: FC<OwnProps> = ({
     );
   }
 
-  if (isCosmoshub) {
+  if (isCosmoshub || isAtomone) {
     const tx = item as CosmoshubItem;
     const link = `/networks/${name}/tx/${encodeURIComponent(tx.hash)}`;
     const statusIcon = getStatusIcon(tx.status);

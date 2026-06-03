@@ -50,7 +50,7 @@ const resolveTxs30d = async (
   return delta >= BigInt(0) ? Number(delta) : null;
 };
 
-const processChain = async (chainName: string): Promise<void> => {
+export const refreshChainTxMetrics = async (chainName: string): Promise<void> => {
   const chain = await db.chain.findFirst({ where: { name: chainName } });
 
   if (!chain) {
@@ -159,7 +159,7 @@ const updateTxMetrics = async (chainNames: string[]): Promise<void> => {
 
   for (const chainName of chainNames) {
     try {
-      await processChain(chainName);
+      await refreshChainTxMetrics(chainName);
     } catch (error) {
       logError(`Fatal error processing ${chainName}: ${formatError(error)}`);
     }
