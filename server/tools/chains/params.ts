@@ -55,6 +55,12 @@ export const ecosystemParams = [
     logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/logos/logos.svg',
     tags: ['Privacy', 'PoS', 'Cryptarchia', 'Anonymous Proposers'],
   },
+  {
+    name: 'miden',
+    prettyName: 'Miden',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/miden/miden.svg',
+    tags: ['Privacy', 'zkVM', 'STARK', 'Client-side Proving'],
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {
@@ -1275,6 +1281,32 @@ const chainParams: Record<string, AddChainProps> = {
     githubUrl: 'https://github.com/logos-blockchain',
     twitterUrl: 'https://x.com/Logos_State',
     tags: ['Logos Ecosystem', 'Testnet', 'Privacy', 'Cryptarchia'],
+  },
+
+  'miden-testnet': {
+    rang: 3,
+    ecosystem: 'miden',
+    hasValidators: false,
+    name: 'miden-testnet',
+    prettyName: 'Miden Testnet',
+    shortDescription: 'STARK-based zkVM rollup with client-side proving and privacy-preserving smart contracts',
+    chainId: 'miden-testnet-v0.13',
+    bech32Prefix: '',
+    coinDecimals: 0,
+    coinGeckoId: '',
+    coinType: 0,
+    denom: '',
+    minimalDenom: '',
+    logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/miden/miden.svg',
+    nodes: [
+      { type: 'grpc', url: 'https://grpc.miden.citizenweb3.com', provider: 'citizenweb3' },
+      { type: 'indexer', url: 'https://indexer.miden-testnet.citizenweb3.com', provider: 'citizenweb3' },
+    ],
+    mainRepo: 'https://github.com/0xMiden/miden-node',
+    docs: 'https://0xmiden.github.io/miden-docs/',
+    githubUrl: 'https://github.com/0xMiden',
+    twitterUrl: 'https://x.com/0xMiden',
+    tags: ['Miden Ecosystem', 'Testnet', 'zkVM', 'Privacy', 'STARK', 'Client-side Proving'],
   },
 
   ethereum: {

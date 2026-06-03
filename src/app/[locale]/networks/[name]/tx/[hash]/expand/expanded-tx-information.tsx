@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { txExample } from '@/app/networks/[name]/tx/txExample';
 import ExpandedCosmosTxInformation from '@/app/networks/[name]/tx/[hash]/expand/expanded-cosmos-tx-information';
 import ExpandedAtomoneTxInformation from '@/app/networks/[name]/tx/[hash]/expand/expanded-atomone-tx-information';
+import MidenExpandedTxInformation from '@/app/networks/[name]/tx/[hash]/expand/miden-expanded-tx-information';
 import CopyButton from '@/components/common/copy-button';
 import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { AztecTxEffect } from '@/services/aztec-indexer-api/types';
@@ -21,6 +22,10 @@ const ExpandedTxInformation: FC<OwnProps> = async ({ chain, hash }) => {
 
   if (chain?.name === 'cosmoshub') {
     return <ExpandedCosmosTxInformation chain={chain} hash={hash} />;
+  }
+
+  if (chain?.name === 'miden-testnet') {
+    return <MidenExpandedTxInformation chain={chain} hash={hash} />;
   }
 
   if (chain?.name === 'atomone') {

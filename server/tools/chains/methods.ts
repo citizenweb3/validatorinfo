@@ -20,6 +20,7 @@ import strideChainMethods from '@/server/tools/chains/stride/methods';
 import symphonyChainMethods from '@/server/tools/chains/symphony-testnet/methods';
 import aztecChainMethods from '@/server/tools/chains/aztec/methods';
 import logosTestnetChainMethods from '@/server/tools/chains/logos-testnet/methods';
+import midenTestnetChainMethods from '@/server/tools/chains/miden-testnet/methods';
 
 const chainMethods: Record<string, ChainMethods> = {
   namada: namadaChainMethods,
@@ -63,6 +64,7 @@ const chainMethods: Record<string, ChainMethods> = {
   'symphony-testnet': symphonyChainMethods,
   'aztec-testnet': aztecChainMethods,
   'logos-testnet': logosTestnetChainMethods,
+  'miden-testnet': midenTestnetChainMethods,
 };
 
 const getChainMethods = (chainName: string): ChainMethods => {

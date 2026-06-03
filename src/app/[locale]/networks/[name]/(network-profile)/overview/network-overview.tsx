@@ -10,6 +10,7 @@ import { aztecIndexer } from '@/services/aztec-indexer-api';
 import atomoneIndexer from '@/services/atomone-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
+import midenIndexer from '@/services/miden-indexer-api';
 import aztecContractService from '@/services/aztec-contracts-service';
 import { getLatestFinalizedBlock } from '@/server/tools/chains/aztec/utils/get-latest-finalized-block';
 import { getAztecBlockHeight } from '@/utils/aztec';
@@ -190,6 +191,69 @@ const LogosBlocksSlotsRows: FC<{ chainName: string }> = async ({ chainName }) =>
   );
 };
 
+const MidenTxRow: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const stats = await midenIndexer.getStats({ cache: 'no-store' }).catch(() => null);
+  const totalTxs =
+    stats && typeof stats.total_transactions === 'number'
+      ? stats.total_transactions.toLocaleString('en-US')
+      : 'N/A';
+
+  return (
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+      <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+        {t('total amount of tx')}
+      </div>
+      <Link
+        href={`/networks/${chainName}/tx`}
+        className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+      >
+        {totalTxs}
+      </Link>
+    </div>
+  );
+};
+
+const MidenIndexerHealthRow: FC = async () => {
+  const t = await getTranslations('NetworkPassport');
+  const isHealthy = await midenIndexer.healthCheck().catch(() => false);
+
+  return (
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+      <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+        {t('indexer mode')}
+      </div>
+      <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+        {isHealthy ? t('active') : t('inactive')}
+      </div>
+    </div>
+  );
+};
+
+const MidenBlocksRow: FC<{ chainName: string }> = async ({ chainName }) => {
+  const t = await getTranslations('NetworkPassport');
+  const stats = await midenIndexer.getStats({ cache: 'no-store' }).catch(() => null);
+  const lastBlock = stats?.last_block ? Number(stats.last_block) : null;
+
+  if (lastBlock === null || Number.isNaN(lastBlock)) {
+    return null;
+  }
+
+  return (
+    <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+      <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+        {t('total amount of blocks')}
+      </div>
+      <Link
+        href={`/networks/${chainName}/blocks`}
+        className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+      >
+        {lastBlock.toLocaleString('en-US')}
+      </Link>
+    </div>
+  );
+};
+
 const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const t = await getTranslations('NetworkPassport');
   const price = chain ? await chainService.getTokenPriceByChainId(chain?.id) : undefined;
@@ -197,6 +261,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
   const isLogos = chain?.name === 'logos-testnet';
   const isCosmoshub = chain?.name === 'cosmoshub';
+  const isMiden = chain?.name === 'miden-testnet';
   const isAtomone = chain?.name === 'atomone';
   const activeValidators = chain
     ? isAztec
@@ -245,6 +310,11 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
       {isCosmoshub && chain && (
         <Suspense fallback={null}>
           <CosmoshubTxRow chainName={chain.name} />
+        </Suspense>
+      )}
+      {isMiden && chain && (
+        <Suspense fallback={null}>
+          <MidenTxRow chainName={chain.name} />
         </Suspense>
       )}
       {isAtomone && chain && (
@@ -384,6 +454,25 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
           <Suspense fallback={null}>
             <CommitteeSizeDisplay chainName={chain.name} />
           </Suspense>
+        </>
+      ) : isMiden && chain ? (
+        <>
+          <Suspense fallback={null}>
+            <MidenBlocksRow chainName={chain.name} />
+          </Suspense>
+          <Suspense fallback={null}>
+            <MidenIndexerHealthRow />
+          </Suspense>
+          {!!chain.avgTxInterval && (
+            <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
+              <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+                {t('average block time')}
+              </div>
+              <div className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+                {(chain.avgTxInterval / 1000).toFixed(2)}s
+              </div>
+            </div>
+          )}
         </>
       ) : isLogos && chain ? (
         <>

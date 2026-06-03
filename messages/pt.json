@@ -400,7 +400,10 @@
     "average block time": "Tempo Médio de Bloqueio",
     "slot duration": "Duração do Slot",
     "epoch progress": "Progresso da Época",
-    "committee size": "Dimensão da Comissão"
+    "committee size": "Dimensão da Comissão",
+    "indexer mode": "Modo Indexador",
+    "active": "Ativo",
+    "inactive": "inativo"
   },
   "NetworkStatistics": {
     "title": "Painel de Estatísticas Blockchain: Métricas ao Vivo da Rede",
@@ -1514,7 +1517,18 @@
     "messages": "Mensagens",
     "events": "Eventos",
     "failed": "Falhou",
-    "none": "Nenhum"
+    "none": "Nenhum",
+    "account id": "ID da Conta",
+    "account id bech32": "ID da Conta (Bech32)",
+    "init account state": "Estado Inicial da Conta",
+    "final account state": "Estado Final da Conta",
+    "input notes commitment": "Compromisso das Notas de Entrada",
+    "output notes commitment": "Compromisso das Notas de Saída",
+    "expiration block num": "Bloco de Expiração",
+    "input nullifiers": "Anuladores de Entrada",
+    "output note ids": "IDs das Notas de Saída",
+    "inserted at": "Inserido em",
+    "items count": "{count, plural, one {# item} other {# itens}}"
   },
   "BlockInformationPage": {
     "title": "Detalhes do Bloco Blockchain: Informações Detalhadas do Bloco",
@@ -1568,6 +1582,20 @@
     "app hash": "Hash do App",
     "data hash": "Hash dos Dados",
     "size bytes": "Tamanho (bytes)",
+    "block number": "Número do Bloco",
+    "parent commitment": "Compromisso do Pai",
+    "chain commitment": "Compromisso da Cadeia",
+    "account root": "Raiz da Conta",
+    "nullifier root": "Raiz do Anulador",
+    "note root": "Raiz da Nota",
+    "tx commitment": "Compromisso da Tx",
+    "tx kernel commitment": "Compromisso do Kernel da Tx",
+    "validator key": "Chave do Validador",
+    "native asset id": "ID do Ativo Nativo",
+    "verification base fee": "Taxa Base de Verificação",
+    "note count": "Contagem de Notas",
+    "nullifier count": "Contagem de Anuladores",
+    "version": "Versão",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"

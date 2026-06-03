@@ -400,7 +400,10 @@
     "average block time": "Average Block Time",
     "slot duration": "Slot Duration",
     "epoch progress": "Epoch Progress",
-    "committee size": "Committee Size"
+    "committee size": "Committee Size",
+    "indexer mode": "Indexer Mode",
+    "active": "Active",
+    "inactive": "inactive"
   },
   "NetworkStatistics": {
     "title": "Blockchain Statistics Dashboard: Live Network Metrics",
@@ -1485,7 +1488,18 @@
     "messages": "Messages",
     "events": "Events",
     "failed": "Failed",
-    "none": "None"
+    "none": "None",
+    "account id": "Account ID",
+    "account id bech32": "Account ID (Bech32)",
+    "init account state": "Initial Account State",
+    "final account state": "Final Account State",
+    "input notes commitment": "Input Notes Commitment",
+    "output notes commitment": "Output Notes Commitment",
+    "expiration block num": "Expiration Block",
+    "input nullifiers": "Input Nullifiers",
+    "output note ids": "Output Note IDs",
+    "inserted at": "Inserted At",
+    "items count": "{count, plural, one {# item} other {# items}}"
   },
   "BlockInformationPage": {
     "title": "Blockchain Block Details: In-Depth Information of the Block",
@@ -1539,6 +1553,20 @@
     "app hash": "App Hash",
     "data hash": "Data Hash",
     "size bytes": "Size (bytes)",
+    "block number": "Block Number",
+    "parent commitment": "Parent Commitment",
+    "chain commitment": "Chain Commitment",
+    "account root": "Account Root",
+    "nullifier root": "Nullifier Root",
+    "note root": "Note Root",
+    "tx commitment": "Tx Commitment",
+    "tx kernel commitment": "Tx Kernel Commitment",
+    "validator key": "Validator Key",
+    "native asset id": "Native Asset ID",
+    "verification base fee": "Verification Base Fee",
+    "note count": "Note Count",
+    "nullifier count": "Nullifier Count",
+    "version": "Version",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"

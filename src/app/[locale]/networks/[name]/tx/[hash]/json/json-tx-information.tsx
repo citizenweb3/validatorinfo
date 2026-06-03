@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import { txExample } from '@/app/networks/[name]/tx/txExample';
+import MidenJsonTxInformation from '@/app/networks/[name]/tx/[hash]/json/miden-json-tx-information';
 import CopyButton from '@/components/common/copy-button';
 import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import atomoneIndexer from '@/services/atomone-indexer-api';
@@ -15,6 +16,10 @@ interface OwnProps {
 
 const JsonTxInformation: FC<OwnProps> = async ({ chainName, hash }) => {
   const t = await getTranslations('TxInformationPage');
+
+  if (chainName === 'miden-testnet') {
+    return <MidenJsonTxInformation hash={hash} />;
+  }
 
   if (chainName === 'cosmoshub') {
     const raw = await cosmosIndexer.getTxRaw(hash, { cache: 'no-store' }).catch((error) => {
