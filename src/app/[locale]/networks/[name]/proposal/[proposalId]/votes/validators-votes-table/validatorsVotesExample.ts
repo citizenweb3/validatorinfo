@@ -8,6 +8,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: 'YES',
+    txHash: null,
   },
   {
     validator: {
@@ -16,6 +17,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: null,
+    txHash: null,
   },
   {
     validator: {
@@ -24,6 +26,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: null,
+    txHash: null,
   },
   {
     validator: {
@@ -32,6 +35,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: 'YES',
+    txHash: null,
   },
   {
     validator: {
@@ -40,6 +44,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: 'NO',
+    txHash: null,
   },
   {
     validator: {
@@ -48,6 +53,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: null,
+    txHash: null,
   },
   {
     validator: {
@@ -56,6 +62,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: null,
+    txHash: null,
   },
   {
     validator: {
@@ -64,6 +71,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: 'YES',
+    txHash: null,
   },
   {
     validator: {
@@ -72,6 +80,7 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: 'NO',
+    txHash: null,
   },
   {
     validator: {
@@ -80,5 +89,6 @@ export const validatorsVotes = [
       iconUrl: '',
     },
     vote: 'YES',
+    txHash: null,
   },
 ] as ProposalValidatorsVotes[];

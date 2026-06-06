@@ -86,6 +86,7 @@ export interface NodeVote {
   address: string;
   proposalId: string;
   vote: string;
+  txHash?: string | null;
 }
 
 export interface AztecGovernanceConfigAdditional {

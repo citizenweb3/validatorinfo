@@ -45,3 +45,4 @@ next-env.d.ts
 
 # Vertex AI service account (second layer of defense — primary is secrets/.gitignore)
 /secrets/*.json
+/.agent-reviews

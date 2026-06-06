@@ -270,6 +270,7 @@ const getProposalVotersForDisplay = async (
             iconUrl: null,
           },
       vote: event.support ? VoteOption.YES : VoteOption.NO,
+      txHash: null,
     };
   });
 

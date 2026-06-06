@@ -130,3 +130,19 @@ export interface CosmosTxRawResponse {
 export interface CosmosTxsStatsResponse {
   data: CosmosTxsStats;
 }
+
+export type CosmosGovVoteOption = 'YES' | 'NO' | 'ABSTAIN' | 'VETO' | 'UNSPECIFIED';
+
+export interface CosmosGovVote {
+  proposal_id: string;
+  option: CosmosGovVoteOption;
+  weight: string | null;
+  height: string;
+  tx_hash: string;
+}
+
+export interface CosmosGovVotesCursor {
+  next_before_proposal_id: string;
+}
+
+export type CosmosGovVotesResponse = CosmosListResponse<CosmosGovVote, CosmosGovVotesCursor>;
