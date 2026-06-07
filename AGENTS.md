@@ -11,19 +11,19 @@ If an `AGENTS.md` file exists in the target directory:
 
 ## Code Search & Documentation
 
-### Semantic Search (DeepContext)
+### Semantic Search (clawmem)
 
-When you need to find code by meaning — use DeepContext MCP tools:
+When you need to find code by meaning — use clawmem MCP tools:
 
-1. First run `index_codebase` if not indexed yet
-2. Use `search_codebase` for semantic search queries
+- Use `find_similar` for semantic search queries
+- Use `intent_search` for concept-based discovery
 
 Examples:
-- "authentication logic" → search_codebase
-- "where is JWT validated" → search_codebase
-- "find all API endpoints" → search_codebase
+- "authentication logic" → find_similar
+- "where is JWT validated" → find_similar
+- "find all API endpoints" → intent_search
 
-Use DeepContext when you don't know exact names and need to discover relevant code.
+Use clawmem when you don't know exact names and need to discover relevant code.
 
 ### Code Relationships & Impact (GitNexus)
 
@@ -54,7 +54,7 @@ Use Context7 for:
 
 | Need | Tool                               |
 |------|------------------------------------|
-| Semantic search by meaning | DeepContext (`search_codebase`)    |
+| Semantic search by meaning | clawmem (`find_similar`)           |
 | Code relationships / execution flows | GitNexus (`query`, `context`)     |
 | Impact before changes | GitNexus (`impact`, `detect_changes`) |
 | Library docs / examples | Context7                           |
@@ -69,6 +69,41 @@ Use Context7 for:
 | Chains | `server/tools/chains/AGENTS.md` | Chain-specific implementations (Cosmos, Aztec, etc.) |
 | Aztec Chain | `server/tools/chains/aztec/AGENTS.md` | Aztec L2 implementation (L1 contracts, events, governance) |
 | Services | `src/app/services/AGENTS.md` | Data access layer for frontend and actions |
+
+---
+
+## Cross-Agent Reviews
+
+This repository uses the global `agent-review` CLI for Codex <-> Claude review handoffs.
+The CLI is installed outside the repo; review state is local in `.agent-reviews/`.
+
+Use from the repository root:
+
+```bash
+agent-review handoff \
+  --assignee codex \
+  --title "Short review title" \
+  --summary "What changed and why" \
+  --files path/a.ts,path/b.ts \
+  --basis docs/design.md,commit-or-review-id \
+  --review-focus "correctness, regressions, missing tests" \
+  --tests "yarn test ..." \
+  --risks "known risks or none"
+
+agent-review next --assignee codex
+agent-review respond <review-id> --finding F1 --status fixed --summary "What changed"
+agent-review verify <review-id> --status passed --summary "Verification result"
+agent-review close <review-id>
+agent-review validate
+```
+
+Protocol:
+- `.agent-reviews/open/` contains active reviews; `.agent-reviews/closed/` contains closed reviews.
+- Claude creates structured handoffs with `agent-review handoff --assignee codex`.
+- Codex adds findings under `## Findings` and only closes after satisfactory verification.
+- Assignees must respond to every stable finding ID under `# Assignee Response`.
+- Do not delete or rewrite reviewer findings; append responses and verification instead.
+- Keep the tool global. Do not add repo-local review scripts unless the protocol itself changes.
 
 ---
 

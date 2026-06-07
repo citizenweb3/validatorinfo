@@ -59,7 +59,6 @@ const ValidatorsVotes: FC<OwnProps> = async ({ page, perPage, sort, currentPage,
           <TableHeaderItem page={page} name="Validator" sortField="moniker" defaultSelected />
           <TableHeaderItem page={page} name="Tx Hash" />
           <TableHeaderItem page={page} name="Answer" sortField="vote" />
-          <TableHeaderItem page={page} name="Time" />
         </tr>
         </thead>
         <ValidatorsVotesList

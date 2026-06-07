@@ -52,7 +52,7 @@ Use Context7 for:
 
 | Need | Tool                               |
 |------|------------------------------------|
-| Semantic search by meaning | DeepContext (`search_codebase`)    |
+| Semantic search by meaning | clawmem (`find_similar`)           |
 | Code relationships / execution flows | GitNexus (`query`, `context`)     |
 | Impact before changes | GitNexus (`impact`, `detect_changes`) |
 | Library docs / examples | Context7                           |
@@ -68,6 +68,41 @@ Use Context7 for:
 | Aztec Chain | `server/tools/chains/aztec/AGENTS.md` | Aztec L2 implementation (L1 contracts, events, governance) |
 | Services | `src/app/services/AGENTS.md` | Data access layer for frontend and actions |
 | AI Chat | `src/app/services/ai/AGENTS.md` | AI assistant: LLM config, tools, prompt builder, RAG knowledge base |
+
+---
+
+## Cross-Agent Reviews
+
+This repository uses the global `agent-review` CLI for Codex <-> Claude review handoffs.
+The CLI is installed outside the repo; review state is local in `.agent-reviews/`.
+
+Use from the repository root:
+
+```bash
+agent-review handoff \
+  --assignee codex \
+  --title "Short review title" \
+  --summary "What changed and why" \
+  --files path/a.ts,path/b.ts \
+  --basis docs/design.md,commit-or-review-id \
+  --review-focus "correctness, regressions, missing tests" \
+  --tests "yarn test ..." \
+  --risks "known risks or none"
+
+agent-review next --assignee codex
+agent-review respond <review-id> --finding F1 --status fixed --summary "What changed"
+agent-review verify <review-id> --status passed --summary "Verification result"
+agent-review close <review-id>
+agent-review validate
+```
+
+Protocol:
+- `.agent-reviews/open/` contains active reviews; `.agent-reviews/closed/` contains closed reviews.
+- Claude creates structured handoffs with `agent-review handoff --assignee codex`.
+- Codex adds findings under `## Findings` and only closes after satisfactory verification.
+- Assignees must respond to every stable finding ID under `# Assignee Response`.
+- Do not delete or rewrite reviewer findings; append responses and verification instead.
+- Keep the tool global. Do not add repo-local review scripts unless the protocol itself changes.
 
 ---
 
@@ -319,7 +354,7 @@ Before starting work, determine what you're doing and follow the right path:
 - **Adding a new indexer job?** → Read `server/jobs/AGENTS.md`. Follow existing job structure (worker thread + cron schedule).
 - **Debugging indexer or chain data?** → Use the `validatorinfo-testing` skill.
 - **Build fails?** → See "When Things Break" table below.
-- **Not sure where something lives?** → Use DeepContext `search_codebase`, not grep.
+- **Not sure where something lives?** → Use clawmem `find_similar`, not grep.
 
 ---
 

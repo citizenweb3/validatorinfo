@@ -3,6 +3,7 @@ import {
   getBlockByHeight,
   getBlocksList,
   getBlocksStats,
+  getGovVotes,
   getTxByHash,
   getTxRaw,
   getTxsList,
@@ -19,6 +20,7 @@ export const cosmosIndexer = {
   getTxByHash,
   getTxRaw,
   getTxsStats,
+  getGovVotes,
   healthCheck,
   getBaseUrl,
 };

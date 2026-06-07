@@ -3,6 +3,7 @@ import {
   CosmosBlockDetailResponse,
   CosmosBlocksListResponse,
   CosmosBlocksStatsResponse,
+  CosmosGovVotesResponse,
   CosmosIndexerRequestOptions,
   CosmosTxDetailResponse,
   CosmosTxRawResponse,
@@ -91,3 +92,23 @@ export const getTxsStats = (
   options?: CosmosIndexerRequestOptions,
 ): Promise<CosmosTxsStatsResponse> =>
   client.get<CosmosTxsStatsResponse>('/api/v1/txs/stats', null, options);
+
+export interface GetGovVotesParams {
+  voter: string;
+  limit?: number;
+  before_proposal_id?: string;
+}
+
+export const getGovVotes = (
+  params: GetGovVotesParams,
+  options?: CosmosIndexerRequestOptions,
+): Promise<CosmosGovVotesResponse> =>
+  client.get<CosmosGovVotesResponse>(
+    '/api/v1/gov/votes',
+    {
+      voter: params.voter,
+      limit: params.limit,
+      before_proposal_id: params.before_proposal_id,
+    },
+    options,
+  );

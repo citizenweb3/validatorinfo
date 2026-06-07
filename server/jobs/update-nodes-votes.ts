@@ -40,23 +40,25 @@ const updateNodesVotes = async (chainNames: string[]) => {
           select: { id: true },
         });
         if (!proposal) {
-          logError(`${chainParams.chainId}: proposal ${vote.proposalId} not found`);
+          // Expected ordering condition (proposal not yet indexed), not an error — avoid spam.
+          logInfo(`${chainParams.chainId}: proposal ${vote.proposalId} not found, skipping`);
           continue;
         }
 
-        const exists = await db.nodeVote.findFirst({
-          where: { nodeId: node.id, proposalId: proposal.id },
-          select: { id: true },
-        });
-        if (exists) continue;
-
-        await db.nodeVote.create({
-          data: {
+        // Upsert (not insert-if-absent): a validator can change its vote during the voting
+        // period, and the indexer returns the final vote, so refresh existing rows too.
+        await db.nodeVote.upsert({
+          where: { nodeId_proposalId: { nodeId: node.id, proposalId: proposal.id } },
+          create: {
             nodeId: node.id,
             proposalId: proposal.id,
             chainId: dbChain.id,
             vote: unifyVotes(vote.vote),
-            txHash: null,
+            txHash: vote.txHash ?? null,
+          },
+          update: {
+            vote: unifyVotes(vote.vote),
+            txHash: vote.txHash ?? null,
           },
         });
       }
