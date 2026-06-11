@@ -18,6 +18,16 @@ export type NodeWithValidatorAndChain = Prisma.NodeGetPayload<{
   include: { validator: true; chain: { include: { params: true; tokenomics: true } } };
 }>;
 
+// Aztec mainnet only: existing self-stake sequencer nodes (validatorId = null) must be
+// relinked when the providers API starts claiming them. For other chains validatorId can
+// come from a nondeterministic fuzzy match, so re-asserting it on every update is unsafe.
+// Undefined validatorId never unlinks - an API outage must not drop existing links.
+export const buildNodeValidatorLinkUpdate = (
+  chainName: string,
+  validatorId?: number,
+): Prisma.NodeUpdateInput | Record<string, never> =>
+  validatorId && chainName === 'aztec' ? { validator: { connect: { id: validatorId } } } : {};
+
 const upsertNode = async (
   chain: Chain,
   bech32Prefix: string | undefined,
@@ -47,6 +57,7 @@ const upsertNode = async (
   const node = await db.node.upsert({
     where: { operatorAddress: val.operator_address },
     update: {
+      ...buildNodeValidatorLinkUpdate(chain.name, val.validatorId),
       accountAddress: accountAddress,
       rewardAddress: val.reward_address,
       ...(val.tokens && val.tokens !== '0' ? { tokens: val.tokens } : {}),

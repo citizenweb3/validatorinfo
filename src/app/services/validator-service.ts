@@ -165,8 +165,10 @@ const computeVotingPower = (node: { delegatorShares: string; chain: { tokenomics
   return bondedTokens === 0 ? 0 : (delegatorShares / bondedTokens) * 100;
 };
 
-const aggregateNodesByChain = (
+// Exported for the fixture script (scripts/test-aztec-selfstake.ts).
+export const aggregateNodesByChain = (
   nodes: validatorNodesWithChainData[],
+  providerRates: Record<string, number> | null = null,
 ): validatorNodesWithChainData[] => {
   const chainGroups = new Map<number, validatorNodesWithChainData[]>();
 
@@ -184,8 +186,14 @@ const aggregateNodesByChain = (
       return nodeScore > bestScore ? node : best;
     });
 
+    // Provider base take rate (e.g. Aztec providerTakeRate) overrides the primary node's
+    // rate in the aggregated row: self-stake nodes carry rate 0, which would otherwise
+    // misrepresent the provider's public commission when such a node ends up primary.
+    const providerRate = providerRates?.[primaryNode.chain.name];
+    const rateOverride = providerRate !== undefined ? { rate: String(providerRate) } : {};
+
     if (group.length === 1) {
-      return primaryNode;
+      return { ...primaryNode, ...rateOverride };
     }
 
     // Sum numeric metrics across all nodes in the group
@@ -197,6 +205,7 @@ const aggregateNodesByChain = (
 
     return {
       ...primaryNode,
+      ...rateOverride,
       tokens: totalTokens.toString(),
       delegatorShares: totalDelegatorShares.toString(),
       delegatorsAmount: totalDelegators,
@@ -237,6 +246,13 @@ const getValidatorNodesWithChains = async (
     where.chain = { ...where.chain, name: { in: chainFilters } };
   }
 
+  // Provider base take rates per chain (e.g. Aztec) - used to override the rate of
+  // aggregated rows so self-stake nodes (rate 0) don't misrepresent the provider commission.
+  const validatorProviderRates = aggregated
+    ? (((await db.validator.findUnique({ where: { id }, select: { providerRates: true } }))?.providerRates ??
+        null) as Record<string, number> | null)
+    : null;
+
   if (sortBy === 'votingPower') {
     const allNodes = await db.node.findMany({
       where,
@@ -256,7 +272,7 @@ const getValidatorNodesWithChains = async (
       return { ...node, votingPower };
     });
 
-    const finalNodes = aggregated ? aggregateNodesByChain(computedNodes) : computedNodes;
+    const finalNodes = aggregated ? aggregateNodesByChain(computedNodes, validatorProviderRates) : computedNodes;
     finalNodes.sort((a, b) => (order === 'asc' ? a.votingPower - b.votingPower : b.votingPower - a.votingPower));
 
     const totalCount = finalNodes.length;
@@ -292,7 +308,7 @@ const getValidatorNodesWithChains = async (
         return { ...node, votingPower };
       });
 
-      const aggregatedNodes = aggregateNodesByChain(allComputedNodes);
+      const aggregatedNodes = aggregateNodesByChain(allComputedNodes, validatorProviderRates);
 
       // Re-sort aggregated results
       if (sortBy === 'prettyName') {

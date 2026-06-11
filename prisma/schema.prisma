@@ -340,6 +340,7 @@ model Validator {
   wrongKey          Boolean @default(false) @map("wrong_key")
   chainId           Int?    @map("chain_id")
   providerAddresses Json?   @map("provider_addresses")
+  providerRates     Json?   @map("provider_rates")
 
   chain Chain? @relation("chain_validators", fields: [chainId], references: [id])
   nodes Node[] @relation("validator_node")
