@@ -21,6 +21,7 @@ export interface AztecProviderApiResponse {
     logo_url: string;
     email: string;
     discord: string;
+    providerSelfStake?: string[] | null;
   }>;
 }
 
@@ -31,9 +32,28 @@ export interface ProviderMetadata {
   logoUrl?: string;
 }
 
-export const fetchProviderMetadata = async (includeLogo = false): Promise<Map<string, ProviderMetadata>> => {
+const isValidProvidersResponse = (data: any): data is AztecProviderApiResponse =>
+  Boolean(data) && Array.isArray(data.providers);
+
+// The API is third-party: truthy non-string fields (e.g. name: {}) must not reach
+// node persistence, where they would crash .startsWith()/Prisma and drop the node.
+const asString = (value: unknown): string => (typeof value === 'string' ? value : '');
+
+const loadProvidersFromFile = (): AztecProviderApiResponse => {
+  const data = providersMonikersData as AztecProviderApiResponse;
+
+  if (!isValidProvidersResponse(data)) {
+    logError('Local providers JSON file has invalid shape, returning empty providers list');
+    return { providers: [] };
+  }
+
+  logInfo(`Loaded ${data.providers.length} providers from local JSON file`);
+  return data;
+};
+
+export const fetchProvidersApiResponse = async (): Promise<AztecProviderApiResponse> => {
   try {
-    logInfo('Attempting to fetch provider metadata from API');
+    logInfo('Attempting to fetch providers from API');
 
     const response = await fetch(AZTEC_PROVIDERS_API, {
       headers: {
@@ -52,60 +72,103 @@ export const fetchProviderMetadata = async (includeLogo = false): Promise<Map<st
     });
 
     if (!response.ok) {
-      logWarn(`Failed to fetch provider metadata from API: ${response.statusText}, falling back to local JSON`);
-      return loadProviderMetadataFromFile(includeLogo);
+      logWarn(`Failed to fetch providers from API: ${response.statusText}, falling back to local JSON`);
+      return loadProvidersFromFile();
     }
 
-    const data: AztecProviderApiResponse = await response.json();
-    const providerMetadata = new Map<string, ProviderMetadata>();
+    const data = await response.json();
 
-    for (const provider of data.providers) {
-      const checksummedAddress = getAddress(provider.address);
-      const metadata: ProviderMetadata = {
-        name: provider.name,
-        website: provider.website || '',
-        description: provider.description || '',
-      };
-
-      if (includeLogo && provider.logo_url) {
-        metadata.logoUrl = provider.logo_url;
-      }
-
-      providerMetadata.set(checksummedAddress, metadata);
+    if (!isValidProvidersResponse(data)) {
+      logWarn('Providers API returned invalid payload shape, falling back to local JSON');
+      return loadProvidersFromFile();
     }
 
-    logInfo(`Fetched ${providerMetadata.size} provider metadata entries from API`);
-    return providerMetadata;
+    logInfo(`Fetched ${data.providers.length} providers from API`);
+    return data;
   } catch (e: any) {
-    logWarn(`Error fetching provider metadata from API: ${e.message}, falling back to local JSON`);
-    return loadProviderMetadataFromFile(includeLogo);
+    logWarn(`Error fetching providers from API: ${e.message}, falling back to local JSON`);
+    return loadProvidersFromFile();
   }
 };
 
-const loadProviderMetadataFromFile = (includeLogo = false): Map<string, ProviderMetadata> => {
-  try {
-    const data = providersMonikersData as AztecProviderApiResponse;
-    const providerMetadata = new Map<string, ProviderMetadata>();
+export const buildProviderMetadata = (
+  data: AztecProviderApiResponse,
+  includeLogo = false,
+): Map<string, ProviderMetadata> => {
+  const providerMetadata = new Map<string, ProviderMetadata>();
 
-    for (const provider of data.providers) {
+  for (const provider of data.providers) {
+    try {
       const checksummedAddress = getAddress(provider.address);
       const metadata: ProviderMetadata = {
-        name: provider.name,
-        website: provider.website || '',
-        description: provider.description || '',
+        name: asString(provider.name),
+        website: asString(provider.website),
+        description: asString(provider.description),
       };
 
-      if (includeLogo && provider.logo_url) {
-        metadata.logoUrl = provider.logo_url;
+      const logoUrl = asString(provider.logo_url);
+      if (includeLogo && logoUrl) {
+        metadata.logoUrl = logoUrl;
       }
 
       providerMetadata.set(checksummedAddress, metadata);
+    } catch (e: any) {
+      logWarn(`Skipping provider ${provider?.id ?? '?'} with invalid address: ${provider?.address}`);
     }
-
-    logInfo(`Loaded ${providerMetadata.size} provider metadata entries from local JSON file`);
-    return providerMetadata;
-  } catch (e: any) {
-    logError(`Error loading provider metadata from local JSON file: ${e.message}`);
-    return new Map();
   }
+
+  return providerMetadata;
+};
+
+export const buildProviderSelfStakeMap = (data: AztecProviderApiResponse): Map<string, string> => {
+  const attesterClaims = new Map<string, string[]>();
+
+  for (const provider of data.providers) {
+    try {
+      if (!provider?.providerSelfStake?.length) {
+        continue;
+      }
+
+      const providerAddress = getAddress(provider.address);
+
+      for (const attester of provider.providerSelfStake) {
+        try {
+          const checksummedAttester = getAddress(attester);
+          const claims = attesterClaims.get(checksummedAttester) ?? [];
+          // Repeats within the same provider's list are data sloppiness, not an
+          // ownership conflict - only distinct providers count as competing claims.
+          if (!claims.includes(providerAddress)) {
+            claims.push(providerAddress);
+          }
+          attesterClaims.set(checksummedAttester, claims);
+        } catch {
+          logWarn(`Skipping invalid attester address in providerSelfStake of provider ${provider.id}: ${attester}`);
+        }
+      }
+    } catch {
+      logWarn(`Skipping malformed provider entry in providerSelfStake build: ${JSON.stringify(provider)?.slice(0, 200)}`);
+    }
+  }
+
+  const selfStakeMap = new Map<string, string>();
+
+  for (const [attester, claims] of Array.from(attesterClaims.entries())) {
+    if (claims.length > 1) {
+      logWarn(
+        `Attester ${attester} claimed in providerSelfStake by multiple providers (${claims.join(', ')}), ` +
+        'quarantined - keeping it anonymous until the source is corrected',
+      );
+      continue;
+    }
+    selfStakeMap.set(attester, claims[0]);
+  }
+
+  return selfStakeMap;
+};
+
+export const fetchProviderMetadata = async (includeLogo = false): Promise<Map<string, ProviderMetadata>> => {
+  const data = await fetchProvidersApiResponse();
+  const providerMetadata = buildProviderMetadata(data, includeLogo);
+  logInfo(`Built ${providerMetadata.size} provider metadata entries`);
+  return providerMetadata;
 };
