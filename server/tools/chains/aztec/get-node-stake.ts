@@ -53,7 +53,12 @@ export const fetchStakesForNodes = async (
         const tokens = await fetchNodeStake(node.operatorAddress, l1RpcUrls, chainName);
 
         const delegatedStake = delegatedStakesMap.get(node.operatorAddress);
-        const delegatorShares = delegatedStake ? delegatedStake.delegatedStake : '0';
+        const delegatedShares = delegatedStake ? delegatedStake.delegatedStake : '0';
+        // Self-staked sequencers stake directly, not through a provider, so they emit no
+        // delegation event and delegatedShares is 0 - yet they hold real bonded stake.
+        // tokens is effectiveBalanceOf (the on-chain bonded balance), so for them it IS the
+        // voting-power stake. Delegated nodes keep their event-derived shares.
+        const delegatorShares = delegatedShares !== '0' ? delegatedShares : String(tokens);
 
         if (tokens !== BigInt(0) || delegatorShares !== '0') {
           return {
