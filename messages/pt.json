@@ -1404,6 +1404,9 @@
     "noTransactionsYet": "Ainda não há transações",
     "transactionsWillAppear": "A exibição de transações aparecerá quando as transações começarem na rede",
     "txListLoadError": "Não foi possível carregar as transações. Tente recarregar a página.",
+    "retry": "Tentar novamente",
+    "prevPage": "Página anterior",
+    "nextPage": "Próxima página",
     "Confirmed": "Confirmadas",
     "Pending": "Pendentes",
     "Table": {
@@ -1786,7 +1789,7 @@
     },
     "Transactions": {
       "title": "Histórico de Transações da Conta Blockchain",
-      "description": "O registo completo das transações está aqui. Detalhei todas as enviadas, recebidas e interações, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!"
+      "description": "O registo completo das transações está aqui. Detalhei todas as transações que este endereço assinou ou nas quais participou, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!"
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",

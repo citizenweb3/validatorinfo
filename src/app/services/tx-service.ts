@@ -3,13 +3,14 @@ import atomoneIndexer from '@/services/atomone-indexer-api';
 import { AtomoneTxDetail } from '@/services/atomone-indexer-api';
 import aztecIndexer from '@/services/aztec-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
-import { CosmosTxDetail } from '@/services/cosmos-indexer-api';
+import { CosmosTxDetail, CosmosTxSummary } from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import { LogosTxDetail } from '@/services/logos-indexer-api';
 import midenIndexer from '@/services/miden-indexer-api';
 import { MidenTxDetail } from '@/services/miden-indexer-api';
 import { refreshChainTxMetrics } from '@/server/jobs/update-tx-metrics';
 import { getAztecTimestampMs } from '@/utils/aztec';
+import { cacheGetOrFetch, CACHE_KEYS, CACHE_TTL } from '@/services/redis-cache';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
 
@@ -370,6 +371,39 @@ const getMidenTxByHash = async (
 const getMidenTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
   readTxMetrics(chainId, chainName);
 
+export interface Cursor {
+  before_height: string;
+  before_index: number;
+}
+
+export interface TxBatch {
+  rows: TxItem[];
+  nextCursor: Cursor | null;
+  hasMore: boolean;
+  error?: true;
+}
+
+// Server-action result (defined here, not in the `'use server'` action file, which may only
+// export async functions). `code` lets the client map failures to a localized message + Retry.
+export type TxBatchResult =
+  | { ok: true; rows: TxItem[]; nextCursor: Cursor | null; hasMore: boolean }
+  | { ok: false; code: 'INVALID_REQUEST' | 'SERVICE_ERROR' };
+
+const EMPTY_BATCH: TxBatch = { rows: [], nextCursor: null, hasMore: false };
+const ERROR_BATCH: TxBatch = { rows: [], nextCursor: null, hasMore: false, error: true };
+
+// Shared mapper: indexer CosmosTxSummary -> UI TxItem.
+// `code !== 0` means the tx is in the block but execution failed; surfaced as 'dropped'
+// since TxStatus has no 'failed' member.
+const toCosmosTxItem = (t: CosmosTxSummary): TxItem => ({
+  hash: t.tx_hash,
+  status: t.code === 0 ? 'confirmed' : 'dropped',
+  blockHeight: Number(t.height),
+  timestamp: new Date(t.time).getTime(),
+  transactionFee: t.fee?.amount ?? undefined,
+  opType: t.first_msg_type ?? undefined,
+});
+
 /**
  * Cosmoshub: keyset cursor is forward-only (`before_height` + `before_index`).
  * For arbitrary `currentPage` we walk forward in chunks of `perPage` until reaching the offset,
@@ -402,22 +436,71 @@ const getCosmosTxs = async (currentPage: number, perPage: number): Promise<TxsRe
 
     const page = await cosmosIndexer.getTxsList({ limit: perPage, ...cursor }, TX_LIST_CACHE);
 
-    const txs: TxItem[] = page.data.map((t) => ({
-      hash: t.tx_hash,
-      // `code !== 0` in Cosmos means the tx is included in the block but execution failed.
-      // We surface that as 'dropped' since `TxStatus` has no 'failed' member.
-      status: t.code === 0 ? ('confirmed' as const) : ('dropped' as const),
-      blockHeight: Number(t.height),
-      timestamp: new Date(t.time).getTime(),
-      transactionFee: t.fee?.amount ?? undefined,
-      opType: t.first_msg_type ?? undefined,
-    }));
+    const txs: TxItem[] = page.data.map(toCosmosTxItem);
 
     return { txs, totalPages };
   } catch (error) {
     console.error('Failed to fetch Cosmos transactions:', error);
     return { txs: [], totalPages: 1, error: true };
   }
+};
+
+// ── by-address batched cursor pagination (read-through + Redis warm-cache + single-flight) ──
+
+const fetchTxsByAddressBatch = async (addresses: string[], cursor?: Cursor): Promise<TxBatch> => {
+  const page = await cosmosIndexer.getTxsByAddress(
+    {
+      address: addresses.join(','),
+      limit: ITEMS_PER_BATCH,
+      before_height: cursor?.before_height,
+      before_index: cursor?.before_index,
+      // cursor model never uses `total` — skip the expensive COUNT(*) server-side
+      count: 'false',
+    },
+    { cache: 'no-store' },
+  );
+
+  // Remap the indexer cursor ({next_before_*}) to the request/URL shape ({before_*}).
+  // null-guard: never restart from head if the API returns has_more with a null cursor.
+  const hasMore = page.has_more && page.cursor != null;
+  const nextCursor: Cursor | null = hasMore
+    ? { before_height: page.cursor!.next_before_height, before_index: page.cursor!.next_before_index }
+    : null;
+
+  return { rows: page.data.map(toCosmosTxItem), nextCursor, hasMore };
+};
+
+const txsByAddressInflight = new Map<string, Promise<TxBatch>>();
+
+/**
+ * Cosmoshub: one batch of transactions involving an address set (account, or account+operator for a
+ * validator — server-side `signers &&` union). Keyset cursor, no COUNT. Read-through Redis warm-cache
+ * (head 15s — mutable; deep 300s — immutable) + in-process single-flight to collapse cold-key
+ * stampedes. Indexer failure is caught into ERROR_BATCH so neither the action nor the RSC cold-load
+ * caller ever receives a rejection (which would blank the Suspense subtree). The catch is outside
+ * cacheGetOrFetch, so errors are not cached — the next call retries.
+ */
+const getCosmosTxsBatch = async (addresses: string[], cursor?: Cursor): Promise<TxBatch> => {
+  const list = addresses.filter(Boolean);
+  if (!list.length) return EMPTY_BATCH;
+
+  const address = list.join(',');
+  const cursorKey = cursor ? `c:${cursor.before_height}:${cursor.before_index}` : 'head';
+  const key = CACHE_KEYS.txs.byAddress(address, cursorKey);
+  const ttl = cursor ? CACHE_TTL.TXS_DEEP : CACHE_TTL.TXS_HEAD;
+
+  const existing = txsByAddressInflight.get(key);
+  if (existing) return existing;
+
+  const promise = cacheGetOrFetch<TxBatch>(key, () => fetchTxsByAddressBatch(list, cursor), ttl)
+    .then((v) => v ?? EMPTY_BATCH)
+    .catch(() => ERROR_BATCH)
+    .finally(() => {
+      txsByAddressInflight.delete(key);
+    });
+
+  txsByAddressInflight.set(key, promise);
+  return promise;
 };
 
 const getCosmosTxByHash = async (
@@ -549,6 +632,7 @@ const TxService = {
   getMidenTxByHash,
   getMidenTxMetrics,
   getCosmosTxs,
+  getCosmosTxsBatch,
   getCosmosTxByHash,
   getCosmosTxMetrics,
   getAtomoneTxs,
