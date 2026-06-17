@@ -6,6 +6,7 @@ import {
   getGovVotes,
   getTxByHash,
   getTxRaw,
+  getTxsByAddress,
   getTxsList,
   getTxsStats,
 } from './endpoints';
@@ -21,6 +22,7 @@ export const cosmosIndexer = {
   getTxRaw,
   getTxsStats,
   getGovVotes,
+  getTxsByAddress,
   healthCheck,
   getBaseUrl,
 };

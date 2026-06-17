@@ -120,6 +120,12 @@ export const CACHE_KEYS = {
     latestEpoch: (chainName: string) => `aztec:${chainName}:latest-epoch`,
     payloadUri: (chainName: string, address: string) => `aztec:${chainName}:payload-uri:${address}`,
   },
+  txs: {
+    // order-independent: the indexer predicate is `signers && ARRAY[...]` (array-overlap, commutative,
+    // dedups), so [acc,op] and [op,acc] return identical rows. Do NOT sort if it ever becomes positional.
+    byAddress: (addresses: string, cursorKey: string) =>
+      `txs:byaddr:${addresses.split(',').sort().join(',')}:${cursorKey}`,
+  },
 };
 
 export const CACHE_TTL = {
@@ -127,4 +133,6 @@ export const CACHE_TTL = {
   MEDIUM: 300,     // 5 minutes - for moderately changing data
   LONG: 600,       // 10 minutes - for slow-changing data
   STATIC: 86400,   // 24 hours - for data that never changes (payloadUri)
+  TXS_HEAD: 15,    // by-address head batch — mutable (new txs arrive at the top), keep fresh
+  TXS_DEEP: 300,   // by-address cursor batch — immutable window, cache long
 };
