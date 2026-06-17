@@ -13,6 +13,7 @@ export interface NodeStake {
   operatorAddress: `0x${string}`;
   tokens: string;
   delegatorShares: string;
+  minSelfDelegation: string;
 }
 
 export const fetchStakesForNodes = async (
@@ -59,12 +60,17 @@ export const fetchStakesForNodes = async (
         // tokens is effectiveBalanceOf (the on-chain bonded balance), so for them it IS the
         // voting-power stake. Delegated nodes keep their event-derived shares.
         const delegatorShares = delegatedShares !== '0' ? delegatedShares : String(tokens);
+        // For the same reason the whole bond is self-stake: no provider delegates to them, so
+        // effectiveBalanceOf is entirely the operator's own stake. Delegated nodes have no
+        // event-derived self-stake here and stay at 0.
+        const selfStake = delegatedShares !== '0' ? '0' : String(tokens);
 
         if (tokens !== BigInt(0) || delegatorShares !== '0') {
           return {
             operatorAddress: node.operatorAddress,
             tokens: String(tokens),
             delegatorShares: delegatorShares,
+            minSelfDelegation: selfStake,
           };
         }
 
@@ -72,6 +78,7 @@ export const fetchStakesForNodes = async (
           operatorAddress: node.operatorAddress,
           tokens: '0',
           delegatorShares: '0',
+          minSelfDelegation: '0',
         };
       } catch (e: any) {
         if (attempt < MAX_RETRIES - 1) {
@@ -90,6 +97,7 @@ export const fetchStakesForNodes = async (
               operatorAddress: node.operatorAddress,
               tokens: '0',
               delegatorShares: delegatedStake.delegatedStake,
+              minSelfDelegation: '0',
             };
           }
           logError(
