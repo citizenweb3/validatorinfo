@@ -3,10 +3,13 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
 import MiningPoolListItem from '@/app/mining-pools/mining-pool-list-item';
+import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import TablePagination from '@/components/common/table/table-pagination';
+import TabList from '@/components/common/tabs/tab-list';
+import { validatorsTabs } from '@/components/common/tabs/tabs-data';
 import db from '@/db';
 import { NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
@@ -64,6 +67,9 @@ const MiningPoolsPage: NextPageWithLocale<PageProps> = async ({ params: { locale
 
   return (
     <div className="mb-24">
+      <PageHeaderVisibilityWrapper>
+        <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      </PageHeaderVisibilityWrapper>
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle text={t('title')} />
       </CollapsiblePageHeader>

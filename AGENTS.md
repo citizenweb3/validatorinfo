@@ -25,16 +25,16 @@ Examples:
 
 Use clawmem when you don't know exact names and need to discover relevant code.
 
-### Code Relationships & Impact (GitNexus)
+### Code Relationships & Impact (Graphify)
 
-When you need to understand how code connects — use GitNexus MCP tools:
+When you need to understand how code connects — use the Graphify CLI:
 
-- `gitnexus_query({query: "concept"})` — find execution flows by concept
-- `gitnexus_context({name: "symbolName"})` — 360° view: callers, callees, processes
-- `gitnexus_impact({target: "functionName", direction: "upstream"})` — blast radius before editing
-- `gitnexus_detect_changes()` — pre-commit scope check
+- `graphify query "concept"` — find code/flows by concept
+- `graphify explain "symbolName"` — 360° view: neighbors, callers, file:line
+- `graphify affected "functionName"` — blast radius before editing
+- `graphify update .` — incremental graph re-extraction after edits
 
-Use GitNexus when you need to understand relationships, what will break, or trace execution flows.
+Use Graphify when you need to understand relationships, what will break, or trace execution flows.
 
 ### Library Documentation (Context7)
 
@@ -55,8 +55,8 @@ Use Context7 for:
 | Need | Tool                               |
 |------|------------------------------------|
 | Semantic search by meaning | clawmem (`find_similar`)           |
-| Code relationships / execution flows | GitNexus (`query`, `context`)     |
-| Impact before changes | GitNexus (`impact`, `detect_changes`) |
+| Code relationships / execution flows | Graphify (`query`, `explain`, `path`) |
+| Impact before changes | Graphify (`affected`) |
 | Library docs / examples | Context7                           |
 | Exact string match | grep                               |
 | Project architecture | Read CLAUDE.md and AGENTS.md files |
@@ -372,53 +372,52 @@ Follow these rules when you write code:
 - Develop modules, functions, classes, and components in accordance with the SOLID principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
 - Don't use BIGINT for PK autoincrement IDs in Prisma schema: use INT or STRING as ciud
 
-<!-- gitnexus:start -->
-# GitNexus — Code Intelligence
+<!-- graphify:start -->
+# Graphify — Code Intelligence
 
-This project is indexed by GitNexus as **validatorinfo** (3542 symbols, 9796 relationships, 223 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by Graphify as **validatorinfo** (5360 nodes, 10373 edges). The graph is a local, deterministic Tree-sitter AST graph in `graphify-out/graph.json` (zero tokens, no API key). Use the `graphify` CLI to understand code, assess impact, and navigate safely.
 
-> If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
+> If results look stale after edits, run `graphify update .` in terminal to re-extract (incremental, no LLM).
 
 ## Always Do
 
-- **MUST run impact analysis before editing any symbol.** Before modifying a function, class, or method, run `gitnexus_impact({target: "symbolName", direction: "upstream"})` and report the blast radius (direct callers, affected processes, risk level) to the user.
-- **MUST run `gitnexus_detect_changes()` before committing** to verify your changes only affect expected symbols and execution flows.
-- **MUST warn the user** if impact analysis returns HIGH or CRITICAL risk before proceeding with edits.
-- When exploring unfamiliar code, use `gitnexus_query({query: "concept"})` to find execution flows instead of grepping. It returns process-grouped results ranked by relevance.
-- When you need full context on a specific symbol — callers, callees, which execution flows it participates in — use `gitnexus_context({name: "symbolName"})`.
+- **MUST run impact analysis before editing any symbol.** Before modifying a function, class, or method, run `graphify affected "symbolName"` and report the blast radius (direct callers/importers, transitive deps, depth) to the user.
+- **MUST re-check scope before committing**: run `graphify update .`, then `graphify affected` on each changed symbol to verify only expected symbols are touched.
+- **MUST warn the user** if `affected` shows a wide blast radius (many d=1 dependents) before proceeding with edits.
+- When exploring unfamiliar code, use `graphify query "concept"` (BFS traversal) to find execution flows instead of grepping.
+- When you need full context on a specific symbol — neighbors, callers, file:line — use `graphify explain "symbolName"`.
 
 ## When Debugging
 
-1. `gitnexus_query({query: "<error or symptom>"})` — find execution flows related to the issue
-2. `gitnexus_context({name: "<suspect function>"})` — see all callers, callees, and process participation
-3. `READ gitnexus://repo/validatorinfo/process/{processName}` — trace the full execution flow step by step
-4. For regressions: `gitnexus_detect_changes({scope: "compare", base_ref: "main"})` — see what your branch changed
+1. `graphify query "<error or symptom>"` — find flows related to the issue
+2. `graphify explain "<suspect function>"` — see neighbors, callers, file:line
+3. `graphify path "A" "B"` — trace how two symbols connect
+4. For regressions: `graphify affected "<changed symbol>"` — see what your change reaches
 
 ## When Refactoring
 
-- **Renaming**: MUST use `gitnexus_rename({symbol_name: "old", new_name: "new", dry_run: true})` first. Review the preview — graph edits are safe, text_search edits need manual review. Then run with `dry_run: false`.
-- **Extracting/Splitting**: MUST run `gitnexus_context({name: "target"})` to see all incoming/outgoing refs, then `gitnexus_impact({target: "target", direction: "upstream"})` to find all external callers before moving code.
-- After any refactor: run `gitnexus_detect_changes({scope: "all"})` to verify only expected files changed.
+- **Renaming**: Graphify has no coordinated rename. First run `graphify affected "old"` to enumerate every caller/importer, edit each explicitly, then `graphify update .`. NEVER blind find-and-replace.
+- **Extracting/Splitting**: run `graphify explain "target"` for incoming/outgoing refs, then `graphify affected "target"` to find all external callers before moving code.
+- After any refactor: run `graphify update .` and re-check `affected` on the touched symbols.
 
 ## Never Do
 
-- NEVER edit a function, class, or method without first running `gitnexus_impact` on it.
-- NEVER ignore HIGH or CRITICAL risk warnings from impact analysis.
-- NEVER rename symbols with find-and-replace — use `gitnexus_rename` which understands the call graph.
-- NEVER commit changes without running `gitnexus_detect_changes()` to check affected scope.
+- NEVER edit a function, class, or method without first running `graphify affected` on it.
+- NEVER ignore a wide blast radius (many direct dependents) without telling the user.
+- NEVER rename symbols with find-and-replace — enumerate callers via `graphify affected` first.
+- NEVER commit without re-running `graphify update .` + `affected` to check scope.
 
 ## Tools Quick Reference
 
-| Tool | When to use | Command |
-|------|-------------|---------|
-| `query` | Find code by concept | `gitnexus_query({query: "auth validation"})` |
-| `context` | 360-degree view of one symbol | `gitnexus_context({name: "validateUser"})` |
-| `impact` | Blast radius before editing | `gitnexus_impact({target: "X", direction: "upstream"})` |
-| `detect_changes` | Pre-commit scope check | `gitnexus_detect_changes({scope: "staged"})` |
-| `rename` | Safe multi-file rename | `gitnexus_rename({symbol_name: "old", new_name: "new", dry_run: true})` |
-| `cypher` | Custom graph queries | `gitnexus_cypher({query: "MATCH ..."})` |
+| Command | When to use |
+|---------|-------------|
+| `graphify query "<q>"` | Find code by concept (BFS) |
+| `graphify explain "X"` | 360-degree view of one symbol |
+| `graphify affected "X"` | Blast radius before editing (reverse impact) |
+| `graphify path "A" "B"` | Shortest path between two symbols |
+| `graphify update .` | Incremental re-extract after edits (no LLM) |
 
-## Impact Risk Levels
+## Impact Depth (`graphify affected "X" --depth N`)
 
 | Depth | Meaning | Action |
 |-------|---------|--------|
@@ -426,30 +425,21 @@ This project is indexed by GitNexus as **validatorinfo** (3542 symbols, 9796 rel
 | d=2 | LIKELY AFFECTED — indirect deps | Should test |
 | d=3 | MAY NEED TESTING — transitive | Test if critical path |
 
-## Resources
-
-| Resource | Use for |
-|----------|---------|
-| `gitnexus://repo/validatorinfo/context` | Codebase overview, check index freshness |
-| `gitnexus://repo/validatorinfo/clusters` | All functional areas |
-| `gitnexus://repo/validatorinfo/processes` | All execution flows |
-| `gitnexus://repo/validatorinfo/process/{name}` | Step-by-step execution trace |
-
 ## Self-Check Before Finishing
 
 Before completing any code modification task, verify:
-1. `gitnexus_impact` was run for all modified symbols
-2. No HIGH/CRITICAL risk warnings were ignored
-3. `gitnexus_detect_changes()` confirms changes match expected scope
+1. `graphify affected` was run for all modified symbols
+2. No wide blast radius was left unreported
+3. `graphify update .` ran and the graph reflects the edits
 4. All d=1 (WILL BREAK) dependents were updated
 
 ## CLI
 
-- Re-index: `npx gitnexus analyze`
-- Check freshness: `npx gitnexus status`
-- Generate docs: `npx gitnexus wiki`
+- Re-index (incremental): `graphify update .`
+- Check freshness: `graphify check-update .`
+- Architecture/call-flow HTML: `graphify export callflow-html`
 
-<!-- gitnexus:end -->
+<!-- graphify:end -->
 
 ---
 

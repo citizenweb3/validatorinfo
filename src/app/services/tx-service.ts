@@ -586,6 +586,9 @@ const getAtomoneTxByHash = async (
 const getAtomoneTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
   readTxMetrics(chainId, chainName);
 
+// The set of chains handled below is the source of truth for tx support.
+// Keep it in sync with TX_SUPPORTED_CHAINS in `@/utils/tx-supported-chains`,
+// which gates the tx icon (/networks) and tx links (/ecosystems) on the UI side.
 const getTxsByChainName = async (
   chainName: string,
   currentPage: number = 1,

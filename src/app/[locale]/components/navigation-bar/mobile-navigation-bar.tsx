@@ -7,7 +7,7 @@ import { FC, useEffect } from 'react';
 import Footer from '@/components/footer';
 import icons from '@/components/icons';
 import NavigationBarItem from '@/components/navigation-bar/navigation-bar-item';
-import { homeTabs, networkTabs, toolsTabs } from '@/components/navigation-bar/navigation-bar';
+import { homeTabs, networkTabs, toolsTabs } from '@/components/common/tabs/tabs-data';
 
 interface OwnProps {
   isOpened: boolean;

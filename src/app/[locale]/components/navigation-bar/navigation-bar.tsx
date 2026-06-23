@@ -2,45 +2,10 @@
 
 import { FC, useCallback, useState } from 'react';
 
-import { TabOptions } from '@/components/common/tabs/tabs-data';
-import icons from '@/components/icons';
+import { homeTabs, networkTabs, toolsTabs, TabOptions } from '@/components/common/tabs/tabs-data';
 import { useWindowEvent } from '@/hooks/useWindowEvent';
 
 import NavigationBarItem from './navigation-bar-item';
-
-export const homeTabs: TabOptions[] = [
-  { name: 'Home', href: '/', icon: icons.HomeIcon, iconHovered: icons.HomeIconHovered },
-  { name: 'You', href: '/profile', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered },
-  { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
-  { name: 'About Us', href: '/about', icon: icons.LogoIcon, iconHovered: icons.LogoIconHovered },
-  { name: 'Play', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
-];
-
-export const networkTabs: TabOptions[] = [
-  { name: 'Networks', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
-  { name: 'Validators', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
-  { name: 'Nodes', href: '/nodes', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
-  { name: 'Mining Pools', href: '/mining-pools', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
-  { name: 'Ecosystems', href: '/ecosystems', icon: icons.EcosystemsIcon, iconHovered: icons.EcosystemsIconHovered },
-];
-
-export const toolsTabs: TabOptions[] = [
-  { name: 'Rumor', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
-  { name: 'Analyze', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
-  {
-    name: 'Calculate',
-    href: '/stakingcalculator',
-    icon: icons.CalculatorIcon,
-    iconHovered: icons.CalculatorIconHovered,
-  },
-  {
-    name: 'Compare',
-    href: '/comparevalidators',
-    icon: icons.ComparisonIcon,
-    iconHovered: icons.ComparisonIconHovered,
-  },
-  { name: 'Explain', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
-];
 
 interface OwnProps {
   isGameMenuMode?: boolean;

@@ -6,7 +6,7 @@ import AboutModalsGroup from '@/app/about/modals/about-modals-group';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import RichPageTitle from '@/components/common/rich-page-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { aboutTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
 import { Locale } from '@/i18n';
 
@@ -28,7 +28,7 @@ export default function AboutPage({ params: { locale } }: Readonly<{ params: { l
   return (
     <div>
       <PageHeaderVisibilityWrapper>
-        <TabList page="AboutPage" tabs={aboutTabs} />
+        <TabList page="HomePage" tabs={homeTabsHorizontal} />
       </PageHeaderVisibilityWrapper>
       <RichPageTitle>
         <div className="m-4">
