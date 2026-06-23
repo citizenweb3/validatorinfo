@@ -23,7 +23,7 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
   const supply = 100;
 
-  const hasTxPage = ['aztec', 'logos-testnet', 'cosmoshub', 'atomone'].includes(item.name);
+  const hasTxPage = ['aztec', 'logos-testnet', 'cosmoshub', 'atomone', 'miden-testnet', 'monero'].includes(item.name);
 
   return (
     <BaseTableRow>

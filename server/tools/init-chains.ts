@@ -33,6 +33,8 @@ async function addNetwork(chain: AddChainProps): Promise<void> {
     hasValidators: chain.hasValidators,
     tags: chain.tags,
     supported: true,
+    consensusType: chain.consensusType,
+    hashrateUnit: chain.hashrateUnit,
   };
 
   const existingChain = await db.chain.findUnique({

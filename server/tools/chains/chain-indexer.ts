@@ -71,6 +71,8 @@ export interface AddChainProps {
   tags?: string[];
   telegramUrl?: string;
   discordInviteCode?: string;
+  consensusType?: string;
+  hashrateUnit?: string;
 }
 
 export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;

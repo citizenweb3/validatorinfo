@@ -8,6 +8,7 @@ import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/co
 import atomoneIndexer from '@/services/atomone-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import TxService from '@/services/tx-service';
+import { getMoneroTransaction } from '@/server/tools/chains/monero/indexer-client';
 
 interface OwnProps {
   chainName: string;
@@ -16,6 +17,31 @@ interface OwnProps {
 
 const JsonTxInformation: FC<OwnProps> = async ({ chainName, hash }) => {
   const t = await getTranslations('TxInformationPage');
+
+  if (chainName === 'monero') {
+    const tx = await getMoneroTransaction(hash).catch(() => null);
+    if (!tx) {
+      return (
+        <div className="flex flex-col items-center gap-4 py-12">
+          <div className="font-sfpro text-lg">{t('tx not found')}</div>
+          <div className="font-sfpro text-base text-gray-400">{t('tx not found hint')}</div>
+        </div>
+      );
+    }
+    const jsonString = JSON.stringify(tx, null, 4);
+    return (
+      <div className="mb-5 mr-10 mt-8 hover:bg-bgHover">
+        <div className="flex flex-row">
+          <div className="ml-20">
+            <pre className="w-full whitespace-pre-wrap break-all font-handjet text-lg">{jsonString}</pre>
+          </div>
+          <div>
+            <CopyButton value={jsonString} size="md" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (chainName === 'miden-testnet') {
     return <MidenJsonTxInformation hash={hash} />;

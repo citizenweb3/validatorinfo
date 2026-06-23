@@ -21,6 +21,9 @@ interface OwnProps {
 const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkProfileHeader' });
   const chain = await chainService.getByName(chainName);
+  // PoW (Monero): no nodes / no validator distribution / no apps — blur + disable those header icons.
+  const isPow = chain?.consensusType === 'pow';
+  const powOff = isPow ? 'blur-sm pointer-events-none' : '';
   const chainLogo = chain?.logoUrl ?? icons.AvatarIcon;
   const chainHealth = 40;
 
@@ -58,6 +61,18 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
           />
 
           <div className="flex gap-6 mt-3">
+            {isPow && (
+              <Tooltip tooltip={t('Mining Pools')} direction="top">
+                <Link href={`/networks/${chainName}/mining-pools`}>
+                  <div className={iconBtnClass}>
+                    <Image src={icons.ValidatorsIcon} alt={t('Mining Pools')} width={40} height={40}
+                           className="group-hover/btn:hidden" />
+                    <Image src={icons.ValidatorsIconHovered} alt={t('Mining Pools')} width={40} height={40}
+                           className="hidden group-hover/btn:block" />
+                  </div>
+                </Link>
+              </Tooltip>
+            )}
             {validators?.length != 0 && (
               <Tooltip tooltip={t('Validators')} direction="top">
                 <Link href={`/networks/${chainName}/validators`}>
@@ -71,8 +86,8 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
               </Tooltip>
             )}
             <Tooltip tooltip={t('Nodes')} direction="top">
-              <Link href={`/networks/${chainName}/nodes`}>
-                <div className={iconBtnClass}>
+              <Link href={`/networks/${chainName}/nodes`} className={isPow ? 'pointer-events-none' : ''}>
+                <div className={`${iconBtnClass} ${isPow ? 'blur-sm' : ''}`}>
                   <Image src={icons.NodesIcon} alt={t('Nodes')} width={40} height={40}
                          className="group-hover/btn:hidden" />
                   <Image src={icons.NodesIconHovered} alt={t('Nodes')} width={40} height={40}
@@ -94,7 +109,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
 
           <div className="flex gap-6">
             <Tooltip tooltip={t('distribution tooltip')} direction="top">
-              <div className={iconBtnClass}>
+              <div className={`${iconBtnClass} ${powOff}`}>
                 <Image src={icons.NetworkDistribution} alt={t('distribution tooltip')} width={40} height={40}
                        className="group-hover/btn:hidden" />
                 <Image src={icons.NetworkDistributionHovered} alt={t('distribution tooltip')} width={40} height={40}
@@ -112,7 +127,7 @@ const NetworkProfileHeader: FC<OwnProps> = async ({ chainName, locale }) => {
               </Link>
             </Tooltip>
             <Tooltip tooltip={t('Apps')} direction="top">
-              <div className={iconBtnClass}>
+              <div className={`${iconBtnClass} ${powOff}`}>
                 <Image src={icons.NetworkApps} alt={t('Apps')} width={40} height={40}
                        className="group-hover/btn:hidden" />
                 <Image src={icons.NetworkAppsHovered} alt={t('Apps')} width={40} height={40}

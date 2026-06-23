@@ -12,6 +12,7 @@ import LogosBlockInformation from '@/app/networks/[name]/blocks/[hash]/logos-blo
 import CosmosBlockInformation from '@/app/networks/[name]/blocks/[hash]/cosmos-block-information';
 import MidenBlockInformation from '@/app/networks/[name]/blocks/[hash]/miden-block-information';
 import AtomoneBlockInformation from '@/app/networks/[name]/blocks/[hash]/atomone-block-information';
+import MoneroBlockInformation from '@/app/networks/[name]/blocks/[hash]/monero-block-information';
 
 interface OwnProps {
   chain: ChainWithParams | null;
@@ -19,6 +20,10 @@ interface OwnProps {
 }
 
 const BlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
+  if (chain && chain.consensusType === 'pow') {
+    return <MoneroBlockInformation chain={chain} hash={hash} />;
+  }
+
   if (chain?.name === 'logos-testnet') {
     return <LogosBlockInformation chain={chain} hash={hash} />;
   }

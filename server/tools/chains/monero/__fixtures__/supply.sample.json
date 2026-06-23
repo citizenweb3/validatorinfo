@@ -1,0 +1,19 @@
+{
+    "data": [
+        {
+            "height": 3699441,
+            "block_hash": "33bd68dcc561f51a87f2eb2faf950c12bd828c1360acf7fd209013c3e82bc156",
+            "block_timestamp": 1781840841,
+            "cumulative_emission_atomic": "18766842146869265440",
+            "cumulative_fee_atomic": "110489014124287421",
+            "source_method": "rpc:get_coinbase_tx_sum:incremental",
+            "computed_at": "2026-06-19T06:15:03.232Z"
+        }
+    ],
+    "pagination": {
+        "limit": 1,
+        "offset": 0,
+        "order": "desc",
+        "has_more": true
+    }
+}

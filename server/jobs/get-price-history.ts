@@ -2,6 +2,7 @@ import { sleep } from '@cosmjs/utils';
 
 import db from '@/db';
 import logger from '@/logger';
+import chainNames from '@/server/tools/chains/chains';
 import { chainParamsArray } from '@/server/tools/chains/params';
 
 const { logInfo, logError } = logger('get-price-history');
@@ -129,7 +130,9 @@ const processChainWithRetry = async (chain: { chainId: string; coinGeckoId: stri
 };
 
 export const getPriceHistory = async () => {
-  const chains = chainParamsArray.filter((c) => c.coinGeckoId);
+  const chains = chainParamsArray.filter(
+  (c) => c.coinGeckoId && chainNames.includes(c.name),
+);
 
   for (const chain of chains) {
     await processChainWithRetry(chain);

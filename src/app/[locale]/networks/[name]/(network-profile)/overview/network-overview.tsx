@@ -18,6 +18,7 @@ import formatCash from '@/utils/format-cash';
 
 import AztecBlockTimeDisplay from './aztec-block-time-display';
 import CommitteeSizeDisplay from './committee-size-display';
+import MoneroNetworkRows from './monero-network-rows';
 
 
 interface OwnProps {
@@ -263,6 +264,7 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
   const isCosmoshub = chain?.name === 'cosmoshub';
   const isMiden = chain?.name === 'miden-testnet';
   const isAtomone = chain?.name === 'atomone';
+  const isMonero = chain?.name === 'monero';
   const activeValidators = chain
     ? isAztec
       ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
@@ -500,6 +502,13 @@ const NetworkOverview: FC<OwnProps> = async ({ chain }) => {
             </div>
           )}
         </>
+      ) : isMonero && chain ? (
+        <Suspense fallback={null}>
+          <MoneroNetworkRows
+            chainName={chain.name}
+            blockTimeTarget={chain.avgTxInterval ? `${chain.avgTxInterval}s` : '120s'}
+          />
+        </Suspense>
       ) : (
         !!chain?.avgTxInterval && (
           <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">

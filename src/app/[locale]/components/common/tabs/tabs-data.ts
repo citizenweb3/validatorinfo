@@ -8,6 +8,9 @@ export interface TabOptions {
   icon?: StaticImageData;
   iconHovered?: StaticImageData;
   isScroll?: boolean;
+  // When true the tab renders blurred + non-clickable (a section that has no data for this entity,
+  // e.g. governance/revenue for a mining pool). Kept visible for layout parity with siblings.
+  disabled?: boolean;
 }
 
 export const mainTabs: TabOptions[] = [
@@ -93,6 +96,47 @@ export const getValidatorProfileTabs = (id: number): TabOptions[] => {
       href: `/validators/${id}/governance`,
       icon: icons.GovernanceIcon,
       iconHovered: icons.GovernanceIconHovered,
+    },
+  ];
+};
+
+// Mining-pool profile tabs — same positions as the validator profile, with one difference: Governance
+// is replaced by Blocks. The centre tab "Network Table" (= /networks) is the default landing tab and
+// is real, like the validator. Revenue/Metrics/Public Goods have no pool equivalent → blurred + disabled.
+export const getMiningPoolProfileTabs = (slug: string): TabOptions[] => {
+  return [
+    {
+      name: 'Revenue',
+      href: `/mining-pools/${slug}/revenue`,
+      icon: icons.RevenueIcon,
+      iconHovered: icons.RevenueIconHovered,
+      disabled: true,
+    },
+    {
+      name: 'Metrics',
+      href: `/mining-pools/${slug}/metrics`,
+      icon: icons.MetricsIcon,
+      iconHovered: icons.MetricsIconHovered,
+      disabled: true,
+    },
+    {
+      name: 'Network Table',
+      href: `/mining-pools/${slug}/networks`,
+      icon: icons.NetworkTableIcon,
+      iconHovered: icons.NetworkTableIconHovered,
+    },
+    {
+      name: 'Public Goods',
+      href: `/mining-pools/${slug}/public_goods`,
+      icon: icons.PublicGoodsIcon,
+      iconHovered: icons.PublicGoodsIconHovered,
+      disabled: true,
+    },
+    {
+      name: 'Blocks',
+      href: `/mining-pools/${slug}/blocks`,
+      icon: icons.NetworkBlocks,
+      iconHovered: icons.NetworkBlocksHovered,
     },
   ];
 };
@@ -183,7 +227,7 @@ export const getPassportAuthzTabs = (id: number, operatorAddress: string): TabOp
 };
 
 export const getNetworkProfileTabs = (networkName: string): TabOptions[] => {
-  return [
+  const tabs: TabOptions[] = [
     {
       name: 'Governance',
       href: `/networks/${networkName}/governance`,
@@ -215,6 +259,8 @@ export const getNetworkProfileTabs = (networkName: string): TabOptions[] => {
       iconHovered: icons.TokenomicsIconHovered,
     },
   ];
+
+  return tabs;
 };
 
 export const getTxInformationTabs = (networkName: string, txHash: string): TabOptions[] => {

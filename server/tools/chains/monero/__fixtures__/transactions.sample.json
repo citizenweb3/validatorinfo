@@ -1,0 +1,68 @@
+{
+    "data": [
+        {
+            "hash": "afe1639863978907e1b23184a056f8bf4bdea80a09603d06d5070a6912cb0f0b",
+            "block_hash": "7cf34d76d3c92fa859fa533fcf26e66f01b808204c48d75e2b21fbb78167eef6",
+            "block_height": 3699644,
+            "position": 22,
+            "version": 2,
+            "unlock_time": "0",
+            "is_coinbase": false,
+            "inputs_count": 1,
+            "outputs_count": 2,
+            "extra_size": 44,
+            "fee_atomic": "30640000",
+            "size": 1532,
+            "confirmations": 1,
+            "in_pool": false,
+            "is_canonical": true,
+            "is_settled": false,
+            "indexed_at": "2026-06-19T09:43:47.103Z",
+            "safe_decode": {
+                "format": "safe-monero-explorer-v1",
+                "version": 2,
+                "unlock_time": "0",
+                "is_coinbase": false,
+                "inputs_count": 1,
+                "outputs_count": 2,
+                "extra_length": 44,
+                "fee_atomic": "30640000"
+            }
+        },
+        {
+            "hash": "6b1395a36d363b9f5781d37fac1577265177b18c6e93d953a00023ff74733bd7",
+            "block_hash": "7cf34d76d3c92fa859fa533fcf26e66f01b808204c48d75e2b21fbb78167eef6",
+            "block_height": 3699644,
+            "position": 21,
+            "version": 2,
+            "unlock_time": "0",
+            "is_coinbase": false,
+            "inputs_count": 2,
+            "outputs_count": 2,
+            "extra_size": 44,
+            "fee_atomic": "44420000",
+            "size": 2221,
+            "confirmations": 1,
+            "in_pool": false,
+            "is_canonical": true,
+            "is_settled": false,
+            "indexed_at": "2026-06-19T09:43:47.103Z",
+            "safe_decode": {
+                "format": "safe-monero-explorer-v1",
+                "version": 2,
+                "unlock_time": "0",
+                "is_coinbase": false,
+                "inputs_count": 2,
+                "outputs_count": 2,
+                "extra_length": 44,
+                "fee_atomic": "44420000"
+            }
+        }
+    ],
+    "pagination": {
+        "limit": 2,
+        "offset": 0,
+        "order": "desc",
+        "has_more": true
+    }
+}
