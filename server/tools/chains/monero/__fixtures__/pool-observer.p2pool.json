@@ -1,0 +1,72 @@
+[
+    {
+        "main_block": {
+            "id": "a1d07de32552c46ec5b3f129aea69bc264c7c170ab6ecce9e8d62a116ad0ed00",
+            "height": 3699631,
+            "timestamp": 1781859695,
+            "reward": 610558820000,
+            "coinbase_id": "d762a26391b0bdeb2e0b1f3359ab3c7202c780b625babb3f5368136e4cdd7036",
+            "difficulty": 668593715383,
+            "side_template_id": "299bd0c12babbbd97e85befd5519a67ffe6946b731eddffc063687aab0ad2e31",
+            "root_hash": "55d49b49418c590438737c5389628c07de932a337b65c7552c89b195154ae175",
+            "coinbase_private_key": "80143d56ed5da80f333815108637f34c50fe0f9710c04139ac19f57da996b70c"
+        },
+        "side_height": 14504660,
+        "miner": 8957,
+        "effective_height": 14504660,
+        "window_depth": 540,
+        "window_outputs": 35,
+        "transaction_count": 20,
+        "difficulty": 2470789055,
+        "cumulative_difficulty": 28576795126711259,
+        "inclusion": 1,
+        "miner_address": "47KmpbWYHvG6VyCQcfzXC555Y53ogtTskNYFbBj3m5Ji3uTk48Ug9HP2EGMQa2khnyaD8BekfyTuQC2PSUTknxixFVbH7HL"
+    },
+    {
+        "main_block": {
+            "id": "c0190c0876554b1f6bbbaf6084596a8ecc0929129a18ff88945939770f94189f",
+            "height": 3699624,
+            "timestamp": 1781858954,
+            "reward": 609861860000,
+            "coinbase_id": "c6aa39d57863d86327ca0740a3050d3edde11d2bafd578abe13a896bf82d2018",
+            "difficulty": 665583039176,
+            "side_template_id": "020d6d45db80ef7c1e1afaf7e4648d03a07e9d293890916981c49e6438996645",
+            "root_hash": "8db8552e7cb93d86d844471761efd137e5c43df07587054c2005bacc49871342",
+            "coinbase_private_key": "40b5633a86167c93b3a56046790308d270e6c5c2ea7a3668b5fc857ea4fea00c"
+        },
+        "side_height": 14504587,
+        "miner": 3,
+        "effective_height": 14504587,
+        "window_depth": 540,
+        "window_outputs": 36,
+        "transaction_count": 21,
+        "difficulty": 2450130820,
+        "cumulative_difficulty": 28576598205158138,
+        "inclusion": 1,
+        "miner_address": "47ab14EokGgCTX7RYoVhrNMjVA7GfW1jyMAmL7qBQz9fa4RZ6ZsBUgeRGuPWjqeM1wLptSJH5xuX2H4mAepMYvu6JqWMsGw",
+        "miner_alias": "p2pool"
+    },
+    {
+        "main_block": {
+            "id": "7b256b368a58489da3ff565117d070423c023f1587cc819ad15730740bacfd23",
+            "height": 3699603,
+            "timestamp": 1781857382,
+            "reward": 601145260000,
+            "coinbase_id": "32058360287afa5c83744f072b7c427a4ce670cf0544292553dc5661814e242e",
+            "difficulty": 658752021255,
+            "side_template_id": "b2f985d442688118b984b2c9035e8ffd1768c12987ce95c50cb650ed3c7b9cfb",
+            "root_hash": "87fd8c69d344b71ab38d52736dafa8b7045255093f958e0ae8b3d9dc42bd8772",
+            "coinbase_private_key": "fb72e05b7f719f6948ce941ad0e398f82c5d54a02ef4444e5290611866b5740f"
+        },
+        "side_height": 14504449,
+        "miner": 10525,
+        "effective_height": 14504449,
+        "window_depth": 536,
+        "window_outputs": 40,
+        "transaction_count": 11,
+        "difficulty": 2509161497,
+        "cumulative_difficulty": 28576244788903235,
+        "inclusion": 1,
+        "miner_address": "47LiU29nx8k6Jryp89tG1PcMuvrtGuZfhfAUUUaYxNJ254h5oX9fr3vUuMiHMDLa9QPNThm1Zb9yGPqHVYc2moVsLyAN96N"
+    }
+]

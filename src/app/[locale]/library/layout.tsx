@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { ReactNode } from 'react';
 
 import TabList from '@/components/common/tabs/tab-list';
-import { libraryTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
@@ -20,7 +20,7 @@ export default async function NodeProfileLayout(
   }: Readonly<{ children: ReactNode; params: { locale: Locale } }>) {
   return (
     <div>
-      <TabList page="LibraryPage" tabs={libraryTabs} />
+      <TabList page="HomePage" tabs={homeTabsHorizontal} />
       {children}
     </div>
   );

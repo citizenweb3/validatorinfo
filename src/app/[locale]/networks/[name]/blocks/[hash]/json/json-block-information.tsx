@@ -8,6 +8,7 @@ import cosmosIndexer from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import midenIndexer from '@/services/miden-indexer-api';
 import { ChainWithParams } from '@/services/chain-service';
+import { getMoneroBlockDetail } from '@/server/tools/chains/monero/indexer-client';
 
 interface OwnProps {
   chain: ChainWithParams | null;
@@ -15,6 +16,27 @@ interface OwnProps {
 }
 
 const JsonBlockInformation: FC<OwnProps> = async ({ chain, hash }) => {
+  if (chain?.consensusType === 'pow') {
+    const block = await getMoneroBlockDetail(hash).catch(() => null);
+    if (!block) {
+      notFound();
+    }
+    // difficulty/cumulativeDifficulty are BigInt — stringify them so JSON.stringify doesn't throw.
+    const jsonString = JSON.stringify(block, (_key, value) => (typeof value === 'bigint' ? value.toString() : value), 4);
+    return (
+      <div className="mb-5 mr-10 mt-8 hover:bg-bgHover">
+        <div className="flex flex-row">
+          <div className="ml-20">
+            <pre className="w-full whitespace-pre-wrap break-all font-handjet text-lg">{jsonString}</pre>
+          </div>
+          <div>
+            <CopyButton value={jsonString} size="md" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const isLogos = chain?.name === 'logos-testnet';
   const isCosmoshub = chain?.name === 'cosmoshub';
   const isMiden = chain?.name === 'miden-testnet';

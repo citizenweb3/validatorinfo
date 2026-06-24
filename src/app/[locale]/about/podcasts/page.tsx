@@ -8,7 +8,7 @@ import Player from '@/app/about/podcasts/player';
 import RoundedButton from '@/components/common/rounded-button';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { aboutTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
 import TextLink from '@/components/common/text-link';
@@ -23,7 +23,7 @@ export default function PodcastPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <TabList page="AboutPage" tabs={aboutTabs} />
+      <TabList page="HomePage" tabs={homeTabsHorizontal} />
       <RichPageTitle>
         <div className="m-4">
           {t.rich('Podcast.title', {

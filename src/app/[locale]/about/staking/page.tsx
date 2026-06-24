@@ -5,7 +5,7 @@ import GetStakingList from '@/app/about/staking/get-staking-list';
 import RichPageTitle from '@/components/common/rich-page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { aboutTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
 import SubDescription from '@/components/sub-description';
 import { Locale } from '@/i18n';
@@ -18,7 +18,7 @@ export default function StakingPage({ params: { locale } }: Readonly<{ params: {
 
   return (
     <div>
-      <TabList page="AboutPage" tabs={aboutTabs} />
+      <TabList page="HomePage" tabs={homeTabsHorizontal} />
       <RichPageTitle>
         <div className="m-4">
           {t.rich('Staking.title', {

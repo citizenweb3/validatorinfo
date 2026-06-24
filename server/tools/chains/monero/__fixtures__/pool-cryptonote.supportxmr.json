@@ -1,0 +1,38 @@
+[
+    {
+        "ts": "1781862188916",
+        "hash": "fb6786507fff9b806371455f255a355d144361de973e9600b4c76c5484083d76",
+        "diff": "669185470579",
+        "shares": "1675992970042",
+        "height": 3699643,
+        "valid": true,
+        "unlocked": false,
+        "pool_type": "pplns",
+        "value": "637658674560",
+        "finder": "Being Implemented"
+    },
+    {
+        "ts": "1781861382778",
+        "hash": "6fe30bdc68d3d4e9830366e77839d199a43f75410ad7df116a6eb808d40fd423",
+        "diff": "669318949902",
+        "shares": "2443852499636",
+        "height": 3699640,
+        "valid": true,
+        "unlocked": false,
+        "pool_type": "pplns",
+        "value": "622586190000",
+        "finder": "Being Implemented"
+    },
+    {
+        "ts": "1781860201816",
+        "hash": "8732aa1683519b574f107c4684b23acdce88754003bf3e3335dd856a0a99e38b",
+        "diff": "671582364202",
+        "shares": "429381753993",
+        "height": 3699633,
+        "valid": true,
+        "unlocked": false,
+        "pool_type": "pplns",
+        "value": "614816600000",
+        "finder": "Being Implemented"
+    }
+]

@@ -3,6 +3,7 @@ import { sleep } from '@cosmjs/utils';
 import db from '@/db';
 import logger from '@/logger';
 import { AddChainProps } from '@/server/tools/chains/chain-indexer';
+import chainNames from '@/server/tools/chains/chains';
 import { chainParamsArray } from '@/server/tools/chains/params';
 
 const { logInfo, logError } = logger('get-tokenomics');
@@ -91,7 +92,9 @@ const processChainWithRetry = async (chain: AddChainProps, retries = RETRIES) =>
 };
 
 export const getCoingeckoData = async () => {
-  const chains = chainParamsArray.filter((c) => c.coinGeckoId);
+  const chains = chainParamsArray.filter(
+    (c) => c.coinGeckoId && chainNames.includes(c.name),
+  );
 
   for (const chain of chains) {
     await processChainWithRetry(chain);

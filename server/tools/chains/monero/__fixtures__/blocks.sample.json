@@ -1,0 +1,54 @@
+{
+    "data": [
+        {
+            "hash": "7cf34d76d3c92fa859fa533fcf26e66f01b808204c48d75e2b21fbb78167eef6",
+            "prev_hash": "fb6786507fff9b806371455f255a355d144361de973e9600b4c76c5484083d76",
+            "height": 3699644,
+            "timestamp": 1781862189,
+            "major_version": 16,
+            "minor_version": 16,
+            "nonce": 19026,
+            "block_size": 70297,
+            "block_weight": 70297,
+            "long_term_weight": 176470,
+            "num_txes": 23,
+            "miner_tx_hash": "63f14bf356841180248c038a33064a3ac234292278030c342670b038e1127474",
+            "reward_atomic": "602233660000",
+            "difficulty_hex": "0x9c8bb76226",
+            "cumulative_difficulty_hex": "0x8ffd8ae5558c59a",
+            "coinbase_extra_hex": "01d248c75cfddf6be5c6913fbf19ffba72a92fb6bab6616e737c31991a99c5049a0212000f427a466636436e760000000000000000",
+            "orphan_status": false,
+            "is_canonical": true,
+            "is_settled": false,
+            "indexed_at": "2026-06-19T09:43:47.103Z"
+        },
+        {
+            "hash": "fb6786507fff9b806371455f255a355d144361de973e9600b4c76c5484083d76",
+            "prev_hash": "dded6aecd670db45aa55af4926a0a93b0bbe14800282b75521197d88181e154a",
+            "height": 3699643,
+            "timestamp": 1781862170,
+            "major_version": 16,
+            "minor_version": 16,
+            "nonce": 420098601,
+            "block_size": 301896,
+            "block_weight": 301896,
+            "long_term_weight": 301896,
+            "num_txes": 147,
+            "miner_tx_hash": "13ae2fca34ea2d465d96d1bfbbef51acbe34369a5b9c846c91c60a2d1d848831",
+            "reward_atomic": "637658674560",
+            "difficulty_hex": "0x9bce8ff073",
+            "cumulative_difficulty_hex": "0x8ffd811c9a16374",
+            "coinbase_extra_hex": "032100d33fa06dbb6e2d92a70371bd40166a6f348739b28732c2d9ed95040555cb0b2e0180cfb6a658867d313602f8b144293762f76947ca8833885fc3d93b6ba378fea8022000000000000000006f7329645600000000000000000000000000000000000000",
+            "orphan_status": false,
+            "is_canonical": true,
+            "is_settled": false,
+            "indexed_at": "2026-06-19T09:43:16.529Z"
+        }
+    ],
+    "pagination": {
+        "limit": 2,
+        "offset": 0,
+        "order": "desc",
+        "has_more": true
+    }
+}

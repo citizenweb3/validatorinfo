@@ -2,64 +2,72 @@
 
 ## Purpose
 
-Интеграция Monero (PoW, mainnet) в ValidatorInfo. Ecosystem: `monero`. `hasValidators: false` — у Monero нет stake/validators по дизайну (PoW). Цель — отображать сетевые метрики (height, hashrate, difficulty, supply) и активность mining pools.
+Monero (PoW, mainnet) integration. Ecosystem `monero`, `hasValidators: false` —
+no stake/validators by design. Surfaces network metrics (height, hashrate,
+difficulty, supply) and **mining-pool share analytics**.
 
-## Why this module is small
+> Authoritative design: `docs/plans/2026-06-19-monero-pow-redesign-design.md`.
+> The older `2026-04-29-monero-integration-*` docs are superseded.
 
-PoW chain. Стандартная Cosmos-shape `ChainMethods` (validators, staking params, slashing, governance, votes, rewards) неприменима — нечего возвращать. Реализация = network-info job + помощник идентификации pools. Все validator/staking методы — null/empty stubs.
+## Architecture (single-source on the indexer)
 
-## Data sources
+VI talks to **one** infra dependency for chain data — the deployed indexer at
+`MONERO_INDEXER_BASE_URL` (`/api/v1/*`, Bearer `MONERO_INDEXER_API_TOKEN`) — plus
+the pools' own public APIs for attribution. **There is no direct monerod RPC**
+(`rpc-client.ts` was removed); supply, blocks and difficulty all come from the
+indexer.
 
-- **Self-hosted Monero RPC** (`https://rpc.monero.citizenweb3.com/json_rpc`)
-  - Auth: `Authorization: Bearer ${MONERO_RPC_TOKEN}` (env)
-  - Single-tenant — нет client-side rate-limit; burst protection — задача демона
-  - **Особенность**: `get_coinbase_tx_sum(0, tipHeight)` обходит весь chain (~3.6M блоков); сервер enforces ~180s rate-limit на этот метод
-  - Methods: `get_info`, `get_last_block_header`, `get_block_header_by_height`, `get_block`, `get_coinbase_tx_sum`
-- **citizenweb3 indexer** (`indexer-client.ts`) — для tx-метрик и pool activity (отдельный endpoint, тоже Bearer auth)
-- **Pool discovery**: `pool-apis.json` — статический реестр публичных pool API (XMRPool, MineXMR, etc.) для `identify-pool.ts`
-
-URL'ы — в `params.ts` через `nodes` массив. Токен — `MONERO_RPC_TOKEN` env.
+**Pool identification does NOT use coinbase `tx_extra`.** That signal is dead on
+modern blocks (verified: 0 ASCII/residue across hundreds of blocks, incl. pools'
+own claimed blocks). Instead: poll each pool's API for the blocks IT found, match
+by hash against the indexer's canonical set, and count per-pool share. VI does
+**not** consume `coinbase_extra_hex` at all (design decision 11).
 
 ## Files
 
 | File | Purpose |
 |---|---|
-| `constants.ts` | `MONERO_BLOCK_TIME_SECONDS = 120` (target block interval, для расчёта hashrate = difficulty / 120s) |
-| `rpc-client.ts` | JSON-RPC client с retry (3 попытки, backoff 250/500/1000ms) и AbortController-таймаутами. `TIMEOUT_MS = 240_000` дефолт; `COINBASE_TX_SUM_TIMEOUT_MS = 240_000` для тяжёлого метода. Retry на network/AbortError/HTTP 5xx; 4xx и JSON-RPC errors — non-retryable |
-| `indexer-client.ts` | Клиент к citizenweb3 indexer для tx-метрик (если включается в methods.ts через `nullTxMetrics` — то stubbed) |
-| `pool-apis.json` | Реестр публичных Monero mining pool APIs (URL + match-pattern) |
-| `identify-pool.ts` | Резолв coinbase tx `extra` / minerTxHash в pool id по `pool-apis.json` |
-| `methods.ts` | `ChainMethods`: spread `nullTxMetrics` + 22 null/empty stubs (никаких validators/staking/governance) |
+| `constants.ts` | `MONERO_BLOCK_TIME_SECONDS = 120`, `MONERO_INDEXER_PAGE_SIZE = 1000`, `MONERO_BACKFILL_START_HEIGHT` |
+| `indexer-client.ts` | Typed client for `/api/v1/*`: `listMoneroBlocks({limit,offset,order})` (→ `{items,hasMore,nextOffset}`), `getMoneroBlock`, `getTipBlock` (first canonical), `listMoneroSupply`/`getLatestSupply`, `getHealth`, `parseDifficultyHex` (→ `bigint \| null`, never Number). `{data,pagination}` envelope, snake→camel DTO, retry/timeout |
+| `pool-parse.ts` | Pure parsers (unit-tested): `parseCryptonoteBlocks`, `parseNanopoolBlocks`, `parseObserverBlocks` → `{height,hash,timestamp(s)}`; throws on all-unparseable (no silent truncation) |
+| `pool-client.ts` | `getPoolRegistry`, `fetchPoolBlocks` (dispatch by type, throws→caller isolates), `fetchPoolStats` (best-effort, type-aware), `sourceForPool` |
+| `pool-apis.json` | Registry of **end-to-end-verified** pools (v1: supportxmr, moneroocean, hashvault, c3pool, nanopool, p2pool). Each verified via Node `fetch` + hash↔indexer cross-check |
+| `attribution-source.ts` | Shared `AttributionSource`/`IdentificationMethod` unions + `UNKNOWN_POOL_SLUG/NAME` |
+| `methods.ts` | `ChainMethods`: `...nullTxMetrics` + null/empty stubs (no validators/staking/governance) |
+| `__fixtures__/` | Real captured API responses + `dto.check.ts` (`npx tsx …/dto.check.ts`) |
 
-## Indexer jobs (server/jobs/)
+## Indexer jobs (`server/jobs/`)
 
-| Job | Schedule | What it writes |
+| Job | Schedule | What it does |
 |---|---|---|
-| `monero-network-info` | every 5 min | `ChainHashrateSnapshot` (height, hashrate, difficulty по минуте) + `Tokenomics.totalSupply` (через `get_coinbase_tx_sum(0, tip)`) |
-| `monero-pool-discover` | периодически | Сканирует coinbase outputs против `pool-apis.json` → находит новые pools, регистрирует в DB |
-| `monero-pool-identify` | per block / batch | Резолв конкретного блока (coinbase / minerTxHash) → pool id. Дёргается из `identify-pool.ts` |
-| `monero-pool-stats` | rolling window | Агрегирует per-pool block count + hashrate share за окно |
-| `monero-pool-cluster` | реже | Кластеризует pools в operator-группы по общим payout-адресам (multi-pool операторы) |
+| `monero-network-info` | hourly | Tip-block `difficulty/120n` (BigInt) → `ChainHashrateSnapshot`; latest `/supply` `cumulative_emission_atomic` (RAW ATOMIC, **emission-only**, no `/1e12`, no `+fee`) → `Tokenomics.totalSupply`. Guards: skip on null difficulty, height floor (`< 1M` = ordering artifact), `abs(tip − node_height)` band, supply monotonic |
+| `monero-pool-attribution` | every 10 min | Poll each registry pool + p2pool.observer (isolated) → batch-confirm hashes against the indexer canonical set → upsert `MoneroBlockAttribution`. Conflicting claims on one hash → `isConflicted=true` (kept, excluded from named counts). Bounded two-way reorg re-verify. Batched DB writes |
+| `monero-pool-stats` | hourly | Per window {24h,7d,30d,all}: `networkBlocks = tipHeight − lowerHeight + 1` (EXACT — heights contiguous), `poolBlocks` = canonical, non-conflicted attributions in the same height range; `share`, window-avg `hashrateEstimate` (`'0'` for all). Unknown/solo = clamped residual. Upserts every named pool each run |
 
-Failure policy: outer try/catch — любая ошибка swallowed + logged; следующий тик cron = natural retry. Snapshot пишется ДО supply update — даже если `get_coinbase_tx_sum` упал, hashrate-метрики уже в DB.
+Deleted (do NOT re-add): `monero-pool-discover`, `monero-pool-cluster`,
+`monero-pool-identify`, `rpc-client.ts`, `identify-pool.ts` — all coinbase-
+fingerprint machinery, proven non-viable.
+
+## Data model
+
+`ChainHashrateSnapshot` (hashrate/difficulty time series), `Tokenomics.totalSupply`
+(raw atomic, emission-only — UI divides by `10^coinDecimals`=12), `MiningPool`,
+`MiningPoolStats` (windowed share), `MoneroBlockAttribution` (per-block
+hash→pool, `isCanonical`/`isConflicted`). UI reads these via `monero-service.ts`.
 
 ## Constraints
 
-- НЕ заполнять `Validator` table — у Monero нет валидаторов (PoW).
-- НЕ дёргать публичные `xmr.io` / community RPC без auth — наш self-hosted single-tenant даёт стабильный доступ.
-- `get_coinbase_tx_sum(0, N)` — медленный (≥180с на full chain), демон ограничивает rate-limit. НЕ вызывать в hot-path; только из cron job с budgeted timeout.
-- `totalSupply` хранится в `Tokenomics` (не `ChainParams`) — schema-specific. `dbChain` ищется по `name: 'monero'`, не по `chainId`.
-- `snapshotAt` округляется до минуты — для idempotent upsert по `[chainId, snapshotAt]` unique index.
+- Never fill `Validator` (no validators — PoW).
+- `totalSupply` is **raw atomic piconero, emission-only** — never add fees, never
+  pre-divide. FDV/UI divide by `10^coinDecimals`.
+- Difficulty must be parsed with `BigInt` (cumulative exceeds 2^53), never Number.
+- Pool registry holds only Node-`fetch`-verified endpoints (a `curl` 200 is not
+  enough — some pools are Cloudflare-TLS-blocked to undici).
 
 ## Testing
 
-- Прямой curl (см. `MONERO_RPC_TOKEN` в `.env`):
-  ```bash
-  curl -X POST https://rpc.monero.citizenweb3.com/json_rpc \
-    -H "Authorization: Bearer $MONERO_RPC_TOKEN" \
-    -H "Content-Type: application/json" \
-    -d '{"jsonrpc":"2.0","id":"0","method":"get_info"}' \
-    --max-time 240
-  ```
-- Запуск job вручную в indexer-контейнере: см. `validatorinfo-indexer-testing` skill (workflow для monero-network-info).
-- DB checks: `chain_hashrate_snapshots WHERE chain_id = (SELECT id FROM chains WHERE name = 'monero')`, `tokenomics WHERE chain_id = ...`.
+- DTO/parser check: `npx tsx server/tools/chains/monero/__fixtures__/dto.check.ts`
+- Indexer smoke: `GET {MONERO_INDEXER_BASE_URL}/api/v1/blocks?order=desc&limit=1` (Bearer)
+- DB checks: `chain_hashrate_snapshots`, `tokenomics`, `monero_block_attribution`,
+  `mining_pool_stats` `WHERE chain_id = (SELECT id FROM chains WHERE name='monero')`
+- Run a job manually: `validatorinfo-indexer-testing` skill.

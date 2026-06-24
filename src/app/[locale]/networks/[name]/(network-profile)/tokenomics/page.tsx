@@ -38,9 +38,11 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { locale, name } }) => {
-  const t = await getTranslations({ locale, namespace: 'NetworkTokenomics' });
+const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { name } }) => {
+  const t = await getTranslations('NetworkTokenomics');
   const chain = await chainService.getByName(name);
+  const isPow = chain?.consensusType === 'pow';
+
   const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain?.id) : null;
   const tokenomics = chain ? await TokenomicsService.getTokenomicsByChainId(chain?.id) : null;
   const chartData = chain ? await priceHistoryService.getChartData(chain.id) : [];
@@ -78,7 +80,10 @@ const NetworkTokenomicsPage: NextPageWithLocale<PageProps> = async ({ params: { 
           )}
         </div>
       </div>
-      <DistributionGiniParameters chain={chain} />
+      {/* Gini / staking distribution (community pool, rewards, undelegations) — N/A for PoW. */}
+      <div className={isPow ? 'blur-sm pointer-events-none' : ''}>
+        <DistributionGiniParameters chain={chain} />
+      </div>
     </div>
   );
 };

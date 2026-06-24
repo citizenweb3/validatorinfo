@@ -252,6 +252,7 @@ const getAztecValidatorsWithNodes = async (
 
     const firstNode = nodes[0];
     const totalTokens = nodes.reduce((sum, node) => sum + BigInt(node.tokens), BigInt(0));
+    const totalSelfDelegation = nodes.reduce((sum, node) => sum + BigInt(node.minSelfDelegation || '0'), BigInt(0));
     const totalDelegatorShares = nodes.reduce((sum, node) => sum + parseFloat(node.delegatorShares), 0);
     const nodesWithMissedBlocks = nodes.filter(
       (node) => node.missedBlocks !== null && node.missedBlocks !== undefined && node.uptime !== null && node.uptime !== undefined,
@@ -318,6 +319,7 @@ const getAztecValidatorsWithNodes = async (
       ...firstNode,
       tokens: totalTokens.toString(),
       delegatorShares: totalDelegatorShares.toString(),
+      minSelfDelegation: totalSelfDelegation.toString(),
       missedBlocks: totalMissedBlocks,
       outstandingRewards: totalOutstandingRewards > 0 ? totalOutstandingRewards.toString() : null,
       outstandingCommissions: totalOutstandingCommissions > 0 ? totalOutstandingCommissions.toString() : null,

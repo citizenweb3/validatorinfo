@@ -8,10 +8,16 @@ import { FC, useState } from 'react';
 import BaseModal from '@/components/common/modal/base-modal';
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
+import { hasTxPage } from '@/utils/tx-supported-chains';
 
 interface OwnProps {
   chains: Chain[];
 }
+
+// Chains with a working tx page link straight to it; the rest fall back to their
+// overview page so non-tx chains never land on the mock-data tx view.
+const chainHref = (chain: Chain) =>
+  hasTxPage(chain.name) ? `/networks/${chain.name}/tx` : `/networks/${chain.name}/overview`;
 
 const EcosystemListItemChains: FC<OwnProps> = ({ chains }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
@@ -20,7 +26,7 @@ const EcosystemListItemChains: FC<OwnProps> = ({ chains }) => {
     <div className="flex items-center justify-center space-x-0.5">
       {chains.length > 4 && <div className="mr-2 font-handjet text-sm">{chains.length}:</div>}
       {chains.slice(0, 4).map((chain) => (
-        <Link key={chain.id} href={`/networks/${chain.name}/tx`}>
+        <Link key={chain.id} href={chainHref(chain)}>
           <Tooltip direction="top" tooltip={chain.prettyName} className="font-normal">
             <Image
               src={chain.logoUrl}
@@ -52,7 +58,7 @@ const EcosystemListItemChains: FC<OwnProps> = ({ chains }) => {
             >
               <div className="flex max-h-96 w-40 flex-row flex-wrap items-center justify-center">
                 {chains.map((chain) => (
-                  <Link key={chain.id} href={`/networks/${chain.id}/tx`} className="h-7 w-7">
+                  <Link key={chain.id} href={chainHref(chain)} className="h-7 w-7">
                     <Tooltip direction="top" tooltip={chain.prettyName} className="font-normal">
                       <Image
                         src={chain.logoUrl}

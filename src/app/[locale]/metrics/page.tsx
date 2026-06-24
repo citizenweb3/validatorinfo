@@ -8,7 +8,7 @@ import PageTitle from '@/components/common/page-title';
 import PlusButton from '@/components/common/plus-button';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { validatorsTabs } from '@/components/common/tabs/tabs-data';
+import { toolsTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import { Locale, NextPageWithLocale } from '@/i18n';
 
 export const dynamic = 'force-dynamic';
@@ -30,7 +30,7 @@ const MetricsPage: NextPageWithLocale<PageProps> = async ({ params: { locale } }
 
   return (
     <div>
-      <TabList page="ValidatorsPage" tabs={validatorsTabs} />
+      <TabList page="HomePage" tabs={toolsTabsHorizontal} />
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle text={t('title')} />
       </CollapsiblePageHeader>

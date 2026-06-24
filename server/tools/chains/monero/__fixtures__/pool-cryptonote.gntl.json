@@ -1,0 +1,35 @@
+[
+    {
+        "ts": 1781864191233,
+        "hash": "001d5b2c4c55c73ea682bd443f2eac7423b4bf2a92fe6a6677b23b0123d4b1fe",
+        "diff": 79300137,
+        "shares": 252325410,
+        "height": 1383574,
+        "valid": true,
+        "unlocked": false,
+        "pool_type": "pplns",
+        "value": 19607147300
+    },
+    {
+        "ts": 1781863808366,
+        "hash": "ed069f7a707793d366f42fca2eb6a8764625c9b27938b5c266b0b786f1b19536",
+        "diff": 79000140,
+        "shares": 18334760,
+        "height": 1383572,
+        "valid": true,
+        "unlocked": false,
+        "pool_type": "pplns",
+        "value": 19607184698
+    },
+    {
+        "ts": 1781863744417,
+        "hash": "425eb27a3538ac0188032e94b1de15753644c8dab7d5af897bfb3c7b5b0aaad4",
+        "diff": 81800117,
+        "shares": 97963985,
+        "height": 1383571,
+        "valid": true,
+        "unlocked": false,
+        "pool_type": "pplns",
+        "value": 19607203397
+    }
+]

@@ -26,6 +26,8 @@ import SlashingEventService from '@/services/slashing-event-service';
 import { isAztecNetwork } from '@/utils/chain-utils';
 import GovernanceTokenDistribution
   from '@/app/networks/[name]/(network-profile)/governance/governance-token-distribution';
+import OffchainGovernanceInfo
+  from '@/app/networks/[name]/(network-profile)/governance/offchain-governance-info';
 
 const ProposalsVsTimeChart = nextDynamic(
   () => import('@/app/networks/[name]/(network-profile)/governance/charts/proposals-vs-time-chart'),
@@ -60,6 +62,19 @@ const defaultPerPage = 5;
 const NetworkGovernancePage: NextPageWithLocale<PageProps> = async ({ params: { locale, name }, searchParams: q }) => {
   const t = await getTranslations({ locale, namespace: 'NetworkGovernance' });
   const chain = await chainService.getByName(name);
+
+  const isPow = chain?.consensusType === 'pow';
+
+  if (isPow && chain) {
+    return (
+      <div className="mb-6">
+        <CollapsiblePageHeader description={t('description')}>
+          <PageTitle prefix={chain.prettyName ?? 'Network'} text={t('title')} />
+        </CollapsiblePageHeader>
+        <OffchainGovernanceInfo chainName={chain.name} />
+      </div>
+    );
+  }
 
   const proposalsList = await ProposalService.getListByChainName(name);
 

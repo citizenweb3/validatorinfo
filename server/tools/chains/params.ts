@@ -61,6 +61,12 @@ export const ecosystemParams = [
     logoUrl: 'https://raw.githubusercontent.com/citizenweb3/staking/refs/heads/chain-images/miden/miden.svg',
     tags: ['Privacy', 'zkVM', 'STARK', 'Client-side Proving'],
   },
+  {
+    name: 'monero',
+    prettyName: 'Monero',
+    logoUrl: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/xmr.svg',
+    tags: ['Privacy', 'PoW', 'L1', 'RandomX'],
+  },
 ];
 
 const chainParams: Record<string, AddChainProps> = {
@@ -1309,6 +1315,35 @@ const chainParams: Record<string, AddChainProps> = {
     tags: ['Miden Ecosystem', 'Testnet', 'zkVM', 'Privacy', 'STARK', 'Client-side Proving'],
   },
 
+  monero: {
+    rang: 2,
+    ecosystem: 'monero',
+    consensusType: 'pow',
+    hashrateUnit: 'H/s',
+    hasValidators: false,
+    name: 'monero',
+    prettyName: 'Monero',
+    shortDescription: 'Privacy-first PoW L1 with RandomX, ring signatures, RingCT, and stealth addresses',
+    chainId: 'mainnet',
+    bech32Prefix: '',
+    coinDecimals: 12,
+    coinGeckoId: 'monero',
+    coinType: 128,
+    denom: 'XMR',
+    minimalDenom: 'piconero',
+    logoUrl: 'https://raw.githubusercontent.com/spothq/cryptocurrency-icons/master/svg/color/xmr.svg',
+    nodes: [
+      { type: 'indexer', url: 'https://indexer.monero.citizenweb3.com', provider: 'citizenweb3' },
+    ],
+    mainRepo: 'https://github.com/monero-project/monero',
+    docs: 'https://docs.getmonero.org/',
+    githubUrl: 'https://github.com/monero-project',
+    twitterUrl: 'https://x.com/monero',
+    telegramUrl: 'https://t.me/monero',
+    discordInviteCode: 'SyGUMWBqvF',
+    tags: ['Privacy', 'PoW', 'L1', 'RandomX', 'CryptoNote'],
+  },
+
   ethereum: {
     rang: 1,
     ecosystem: 'ethereum',
@@ -1471,6 +1506,10 @@ export const updateChainParamsUpdated = async (chainName: string) => {
       logError(`Failed to fetch Namada infrastructure for ${chainName} - ${e}`);
       return params;
     }
+  }
+
+  if (params.consensusType === 'pow') {
+    return params;
   }
 
   const chainRegistryUrl = params.chainRegistry
