@@ -17,11 +17,12 @@ interface OwnProps {
 }
 
 const AccountTransactionsList: FC<OwnProps> = async ({ chainName, accountAddress, cursorToken, windowIndex }) => {
-  // CosmosHub carries REAL indexer data via cursor pagination. Other networks keep the static mock
-  // placeholder (no per-address tx indexer yet) — same fallback the global /tx table uses.
-  if (chainName.toLowerCase() === 'cosmoshub' && accountAddress) {
+  // CosmosHub and AtomOne carry REAL indexer data via cursor pagination. Other networks keep the
+  // static mock placeholder (no per-address tx indexer yet) — same fallback the global /tx table uses.
+  const normalizedChainName = chainName.toLowerCase();
+  if ((normalizedChainName === 'cosmoshub' || normalizedChainName === 'atomone') && accountAddress) {
     const cursor = decodeCursorToken(cursorToken);
-    const initial = await TxService.getCosmosTxsBatch([accountAddress], cursor);
+    const initial = await TxService.getTxsByAddressBatch(chainName, [accountAddress], cursor);
     const windows = Math.max(1, Math.ceil(initial.rows.length / PER_PAGE));
     const clampedWindow = Math.min(Math.max(0, windowIndex), windows - 1);
 

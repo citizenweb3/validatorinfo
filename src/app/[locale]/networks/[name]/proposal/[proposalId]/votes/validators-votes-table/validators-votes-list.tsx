@@ -69,7 +69,12 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
         </tr>
       </tbody>
     );
-  } else if (chainName === 'namada' || chainName === 'namada-testnet' || chainName === 'cosmoshub') {
+  } else if (
+    chainName === 'namada' ||
+    chainName === 'namada-testnet' ||
+    chainName === 'cosmoshub' ||
+    chainName === 'atomone'
+  ) {
     const result = await voteService.getProposalValidatorsVotes(
       chainName,
       proposalId,

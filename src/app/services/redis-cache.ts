@@ -123,8 +123,10 @@ export const CACHE_KEYS = {
   txs: {
     // order-independent: the indexer predicate is `signers && ARRAY[...]` (array-overlap, commutative,
     // dedups), so [acc,op] and [op,acc] return identical rows. Do NOT sort if it ever becomes positional.
-    byAddress: (addresses: string, cursorKey: string) =>
-      `txs:byaddr:${addresses.split(',').sort().join(',')}:${cursorKey}`,
+    // `chainName` namespaces the key: cosmoshub and atomone are separate indexer deployments, so the
+    // same-shaped cursorKey must never collide across chains.
+    byAddress: (chainName: string, addresses: string, cursorKey: string) =>
+      `txs:byaddr:${chainName}:${addresses.split(',').sort().join(',')}:${cursorKey}`,
   },
 };
 

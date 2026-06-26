@@ -3,6 +3,7 @@ import {
   AtomoneBlockDetailResponse,
   AtomoneBlocksListResponse,
   AtomoneBlocksStatsResponse,
+  AtomoneGovVotesResponse,
   AtomoneIndexerRequestOptions,
   AtomoneTxDetailResponse,
   AtomoneTxRawResponse,
@@ -91,3 +92,50 @@ export const getTxsStats = (
   options?: AtomoneIndexerRequestOptions,
 ): Promise<AtomoneTxsStatsResponse> =>
   client.get<AtomoneTxsStatsResponse>('/api/v1/txs/stats', null, options);
+
+export interface GetGovVotesParams {
+  voter: string;
+  limit?: number;
+  before_proposal_id?: string;
+}
+
+export const getGovVotes = (
+  params: GetGovVotesParams,
+  options?: AtomoneIndexerRequestOptions,
+): Promise<AtomoneGovVotesResponse> =>
+  client.get<AtomoneGovVotesResponse>(
+    '/api/v1/gov/votes',
+    {
+      voter: params.voter,
+      limit: params.limit,
+      before_proposal_id: params.before_proposal_id,
+    },
+    options,
+  );
+
+export interface GetTxsByAddressParams {
+  // comma-separated list of 1-5 bech32 addresses (e.g. account, or account+operator for a validator)
+  address: string;
+  limit?: number;
+  before_height?: string;
+  before_index?: number;
+  // 'false' skips the exact COUNT(*) `total` server-side. Cursor clients that don't read `total`
+  // should pass 'false'. Ignored by older deployments (unknown params are stripped).
+  count?: 'true' | 'false';
+}
+
+export const getTxsByAddress = (
+  params: GetTxsByAddressParams,
+  options?: AtomoneIndexerRequestOptions,
+): Promise<AtomoneTxsListResponse> =>
+  client.get<AtomoneTxsListResponse>(
+    '/api/v1/txs/by-address',
+    {
+      address: params.address,
+      limit: params.limit,
+      before_height: params.before_height,
+      before_index: params.before_index,
+      count: params.count,
+    },
+    options,
+  );
