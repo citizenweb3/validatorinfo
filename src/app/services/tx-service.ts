@@ -447,8 +447,17 @@ const getCosmosTxs = async (currentPage: number, perPage: number): Promise<TxsRe
 
 // ── by-address batched cursor pagination (read-through + Redis warm-cache + single-flight) ──
 
-const fetchTxsByAddressBatch = async (addresses: string[], cursor?: Cursor): Promise<TxBatch> => {
-  const page = await cosmosIndexer.getTxsByAddress(
+// CosmosHub and AtomOne are separate deployments of the same citizenweb3 indexer API, so their
+// `getTxsByAddress` share an identical request/response shape (structurally interchangeable). One
+// client type lets the batch core serve either chain.
+type TxsByAddressClient = { getTxsByAddress: typeof cosmosIndexer.getTxsByAddress };
+
+const fetchTxsByAddressBatch = async (
+  indexer: TxsByAddressClient,
+  addresses: string[],
+  cursor?: Cursor,
+): Promise<TxBatch> => {
+  const page = await indexer.getTxsByAddress(
     {
       address: addresses.join(','),
       limit: ITEMS_PER_BATCH,
@@ -473,26 +482,32 @@ const fetchTxsByAddressBatch = async (addresses: string[], cursor?: Cursor): Pro
 const txsByAddressInflight = new Map<string, Promise<TxBatch>>();
 
 /**
- * Cosmoshub: one batch of transactions involving an address set (account, or account+operator for a
- * validator — server-side `signers &&` union). Keyset cursor, no COUNT. Read-through Redis warm-cache
- * (head 15s — mutable; deep 300s — immutable) + in-process single-flight to collapse cold-key
- * stampedes. Indexer failure is caught into ERROR_BATCH so neither the action nor the RSC cold-load
- * caller ever receives a rejection (which would blank the Suspense subtree). The catch is outside
- * cacheGetOrFetch, so errors are not cached — the next call retries.
+ * Shared by-address batch core. Picks the indexer client + cache namespace by chain. One batch of
+ * transactions involving an address set (account, or account+operator for a validator — server-side
+ * `signers &&` union). Keyset cursor, no COUNT. Read-through Redis warm-cache (head 15s — mutable;
+ * deep 300s — immutable) + in-process single-flight to collapse cold-key stampedes. Indexer failure
+ * is caught into ERROR_BATCH so neither the action nor the RSC cold-load caller ever receives a
+ * rejection (which would blank the Suspense subtree). The catch is outside cacheGetOrFetch, so
+ * errors are not cached — the next call retries.
  */
-const getCosmosTxsBatch = async (addresses: string[], cursor?: Cursor): Promise<TxBatch> => {
+const runTxsByAddressBatch = (
+  indexer: TxsByAddressClient,
+  chainKey: string,
+  addresses: string[],
+  cursor?: Cursor,
+): Promise<TxBatch> => {
   const list = addresses.filter(Boolean);
-  if (!list.length) return EMPTY_BATCH;
+  if (!list.length) return Promise.resolve(EMPTY_BATCH);
 
   const address = list.join(',');
   const cursorKey = cursor ? `c:${cursor.before_height}:${cursor.before_index}` : 'head';
-  const key = CACHE_KEYS.txs.byAddress(address, cursorKey);
+  const key = CACHE_KEYS.txs.byAddress(chainKey, address, cursorKey);
   const ttl = cursor ? CACHE_TTL.TXS_DEEP : CACHE_TTL.TXS_HEAD;
 
   const existing = txsByAddressInflight.get(key);
   if (existing) return existing;
 
-  const promise = cacheGetOrFetch<TxBatch>(key, () => fetchTxsByAddressBatch(list, cursor), ttl)
+  const promise = cacheGetOrFetch<TxBatch>(key, () => fetchTxsByAddressBatch(indexer, list, cursor), ttl)
     .then((v) => v ?? EMPTY_BATCH)
     .catch(() => ERROR_BATCH)
     .finally(() => {
@@ -501,6 +516,23 @@ const getCosmosTxsBatch = async (addresses: string[], cursor?: Cursor): Promise<
 
   txsByAddressInflight.set(key, promise);
   return promise;
+};
+
+// Routed by-address batch entry — the single path used by both the pages' SSR initial fetch and the
+// client action, so chain→client routing lives in one place. Each branch pairs the chain's indexer
+// client with its cache namespace. Unsupported chains short-circuit to an empty batch.
+const getTxsByAddressBatch = (chainName: string, addresses: string[], cursor?: Cursor): Promise<TxBatch> => {
+  const normalizedChainName = chainName.toLowerCase();
+
+  if (normalizedChainName === 'cosmoshub') {
+    return runTxsByAddressBatch(cosmosIndexer, 'cosmoshub', addresses, cursor);
+  }
+
+  if (normalizedChainName === 'atomone') {
+    return runTxsByAddressBatch(atomoneIndexer, 'atomone', addresses, cursor);
+  }
+
+  return Promise.resolve(EMPTY_BATCH);
 };
 
 const getCosmosTxByHash = async (
@@ -635,12 +667,12 @@ const TxService = {
   getMidenTxByHash,
   getMidenTxMetrics,
   getCosmosTxs,
-  getCosmosTxsBatch,
   getCosmosTxByHash,
   getCosmosTxMetrics,
   getAtomoneTxs,
   getAtomoneTxByHash,
   getAtomoneTxMetrics,
+  getTxsByAddressBatch,
 };
 
 export default TxService;

@@ -130,3 +130,19 @@ export interface AtomoneTxRawResponse {
 export interface AtomoneTxsStatsResponse {
   data: AtomoneTxsStats;
 }
+
+export type AtomoneGovVoteOption = 'YES' | 'NO' | 'ABSTAIN' | 'VETO' | 'UNSPECIFIED';
+
+export interface AtomoneGovVote {
+  proposal_id: string;
+  option: AtomoneGovVoteOption;
+  weight: string | null;
+  height: string;
+  tx_hash: string;
+}
+
+export interface AtomoneGovVotesCursor {
+  next_before_proposal_id: string;
+}
+
+export type AtomoneGovVotesResponse = AtomoneListResponse<AtomoneGovVote, AtomoneGovVotesCursor>;

@@ -1,4 +1,5 @@
 import getAvgFee from '@/server/tools/chains/atomone/get-avg-fee';
+import getNodesVotes from '@/server/tools/chains/atomone/get-nodes-votes';
 import getProposalParams from '@/server/tools/chains/atomone/get-proposal-params';
 import getProposals from '@/server/tools/chains/atomone/get-proposals';
 import getTotalTxs from '@/server/tools/chains/atomone/get-total-txs';
@@ -15,6 +16,7 @@ const chainMethods: ChainMethods = {
   getTxsLast24h,
   getTps,
   getAvgFee,
+  getNodesVotes,
 };
 
 export default chainMethods;

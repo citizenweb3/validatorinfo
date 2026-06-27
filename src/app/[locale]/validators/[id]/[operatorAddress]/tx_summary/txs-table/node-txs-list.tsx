@@ -18,16 +18,17 @@ interface OwnProps {
 }
 
 const NodeTxsList: FC<OwnProps> = async ({ chainName, accountAddress, operatorAddress, cursorToken, windowIndex }) => {
-  // CosmosHub carries REAL indexer data via cursor pagination. Other networks keep the static mock
-  // placeholder (no per-address tx indexer yet) — same fallback the global /tx table uses.
-  if (chainName.toLowerCase() === 'cosmoshub') {
+  // CosmosHub and AtomOne carry REAL indexer data via cursor pagination. Other networks keep the
+  // static mock placeholder (no per-address tx indexer yet) — same fallback the global /tx table uses.
+  const normalizedChainName = chainName.toLowerCase();
+  if (normalizedChainName === 'cosmoshub' || normalizedChainName === 'atomone') {
     // Query the node's account AND operator address (server-side `signers &&` union). A null
     // accountAddress yields an operator-only feed (account-signed ops omitted) — known gap.
     const addresses = [accountAddress, operatorAddress].filter((address): address is string => !!address);
 
     if (addresses.length > 0) {
       const cursor = decodeCursorToken(cursorToken);
-      const initial = await TxService.getCosmosTxsBatch(addresses, cursor);
+      const initial = await TxService.getTxsByAddressBatch(chainName, addresses, cursor);
       const windows = Math.max(1, Math.ceil(initial.rows.length / PER_PAGE));
       const clampedWindow = Math.min(Math.max(0, windowIndex), windows - 1);
 
