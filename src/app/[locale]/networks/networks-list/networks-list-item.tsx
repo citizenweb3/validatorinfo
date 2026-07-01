@@ -11,6 +11,7 @@ import Tooltip from '@/components/common/tooltip';
 import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import colorStylization from '@/utils/color-stylization';
 import formatCash from '@/utils/format-cash';
+import { hasTxPage } from '@/utils/tx-supported-chains';
 
 interface OwnProps {
   item: ChainWithParamsAndTokenomics;
@@ -23,7 +24,7 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
   const size = 'h-12 w-12 min-w-12 min-h-12 mx-auto';
   const supply = 100;
 
-  const hasTxPage = ['aztec', 'logos-testnet', 'cosmoshub', 'atomone'].includes(item.name);
+  const showTxIcon = hasTxPage(item.name);
 
   return (
     <BaseTableRow>
@@ -31,7 +32,7 @@ const NetworksListItem: FC<OwnProps> = async ({ item, health }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <TableAvatar icon={item.logoUrl} name={item.prettyName} href={`/networks/${item.name}/overview`} />
-            {hasTxPage && (
+            {showTxIcon && (
               <Tooltip tooltip={t('Transactions')} direction="top">
                 <Link href={`/networks/${item.name}/tx`} aria-label={`Transactions for ${item.prettyName}`}>
                   <Image

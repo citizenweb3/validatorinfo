@@ -5,6 +5,8 @@ import { FC } from 'react';
 import { txExample } from '@/app/networks/[name]/tx/txExample';
 import CosmosTxInformation from '@/app/networks/[name]/tx/[hash]/cosmos-tx-information';
 import AtomoneTxInformation from '@/app/networks/[name]/tx/[hash]/atomone-tx-information';
+import MidenTxInformation from '@/app/networks/[name]/tx/[hash]/miden-tx-information';
+import MoneroTxInformation from '@/app/networks/[name]/tx/[hash]/monero-tx-information';
 import CopyButton from '@/components/common/copy-button';
 import RoundedButton from '@/components/common/rounded-button';
 import Tooltip from '@/components/common/tooltip';
@@ -34,8 +36,16 @@ const getStatusLabel = (status: TxStatus) => {
 const TxInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const t = await getTranslations('TxInformationPage');
 
+  if (chain && chain.consensusType === 'pow') {
+    return <MoneroTxInformation chain={chain} hash={hash} />;
+  }
+
   if (chain?.name === 'cosmoshub') {
     return <CosmosTxInformation chain={chain} hash={hash} />;
+  }
+
+  if (chain?.name === 'miden-testnet') {
+    return <MidenTxInformation chain={chain} hash={hash} />;
   }
 
   if (chain?.name === 'atomone') {

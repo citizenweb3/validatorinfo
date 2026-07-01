@@ -19,37 +19,30 @@ const ValidatorsVotesItem: FC<OwnProps> = ({ item, chainName }) => {
 
   return (
     <BaseTableRow>
-      <BaseTableCell className="w-1/4 py-2 pl-2 font-sfpro text-base hover:text-highlight">
+      <BaseTableCell className="w-1/3 py-2 pl-2 font-sfpro text-base hover:text-highlight">
         <TableAvatar
           icon={item.validator.iconUrl ?? icons.AvatarIcon}
           name={item.validator.moniker}
           href={validatorLink} />
       </BaseTableCell>
-      <BaseTableCell className="w-1/4 py-2 font-handjet text-lg hover:text-highlight">
+      <BaseTableCell className="w-1/3 py-2 font-handjet text-lg hover:text-highlight">
         <div className="flex items-center justify-center">
-          <Link href={item.validator.moniker === 'Validator Name'
-            ? `/networks/${chainName}/tx/D3DD629470947D318DFCC1D66F8FA8534B0A14164761852D782BB33BEA495660`
-            : '#'} className="flex items-center justify-center">
-            {item.validator.moniker === 'Validator Name'
-              ? cutHash({ value: 'D3DD629470947D318DFCC1D66F8FA8534B0A14164761852D782BB33BEA495660' })
-              : '-'}
-          </Link>
-          {item.validator.moniker === 'Validator Name' &&
-            <CopyButton value={'D3DD629470947D318DFCC1D66F8FA8534B0A14164761852D782BB33BEA495660'} />
-          }
+          {item.txHash ? (
+            <>
+              <Link href={`/networks/${chainName}/tx/${item.txHash}`} className="flex items-center justify-center">
+                {cutHash({ value: item.txHash })}
+              </Link>
+              <CopyButton value={item.txHash} />
+            </>
+          ) : (
+            '-'
+          )}
         </div>
       </BaseTableCell>
-      <BaseTableCell className="w-1/4 py-2 font-sfpro text-base">
+      <BaseTableCell className="w-1/3 py-2 font-sfpro text-base">
         <div className="flex items-center justify-center">
           {item.vote ?? 'DID NOT VOTE'}
         </div>
-      </BaseTableCell>
-      <BaseTableCell className="w-1/4 py-2 font-handjet text-lg hover:text-highlight">
-        <Link href={''} className="flex items-center justify-center">
-          {item.validator.moniker === 'Validator Name'
-            ? <div className='flex items-center justify-center'>Dec 20th, 2024 01:46:06 (14 days)<CopyButton value={'Dec 20th, 2024 01:46:06 (14 days)'} /></div>
-            : '-'}
-        </Link>
       </BaseTableCell>
     </BaseTableRow>
   );

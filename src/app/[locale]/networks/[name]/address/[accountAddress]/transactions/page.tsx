@@ -1,5 +1,4 @@
 import { Locale, NextPageWithLocale } from '@/i18n';
-import { SortDirection } from '@/server/types';
 import { getTranslations } from 'next-intl/server';
 import SubDescription from '@/components/sub-description';
 import PageTitle from '@/components/common/page-title';
@@ -22,8 +21,6 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const defaultPerPage = 1;
-
 const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
   {
     params: { locale, name, accountAddress },
@@ -31,10 +28,9 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
   }) => {
   const t = await getTranslations({ locale, namespace: 'AccountPage.Transactions' });
 
-  const currentPage = parseInt((q.p as string) || '1');
-  const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'name') ?? 'name';
-  const order = (q.order as SortDirection) ?? 'asc';
+  // Cursor-in-URL pagination: ?c=<cursor token>&w=<window>. Cold load lands exactly on that window.
+  const cursorToken = typeof q.c === 'string' ? q.c : undefined;
+  const windowIndex = q.w ? parseInt(q.w as string, 10) : 0;
 
   return (
     <div className="mb-14">
@@ -42,9 +38,9 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <AccountTransactions chainName={name}
                            page={'TxSummaryPage'}
-                           perPage={perPage}
-                           currentPage={currentPage}
-                           sort={{ sortBy, order }} />
+                           accountAddress={accountAddress}
+                           cursorToken={cursorToken}
+                           windowIndex={Number.isFinite(windowIndex) ? windowIndex : 0} />
     </div>
   );
 };

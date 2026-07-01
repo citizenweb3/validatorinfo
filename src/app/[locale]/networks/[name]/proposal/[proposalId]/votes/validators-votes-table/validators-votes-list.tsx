@@ -33,7 +33,7 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
       return (
         <tbody>
           <tr>
-            <td colSpan={4} className="pt-8 pb-4 text-center text-lg">
+            <td colSpan={3} className="pt-8 pb-4 text-center text-lg">
               <p className="mb-2">This is a payload in signaling phase.</p>
               <Link
                 href={`/networks/${chainName}/proposal/${proposalId}/signals`}
@@ -52,7 +52,7 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
     return (
       <tbody>
         <tr>
-          <td colSpan={4} className="pt-8 pb-4 text-center text-lg">
+          <td colSpan={3} className="pt-8 pb-4 text-center text-lg">
             <p className="mb-2">Token votes are aggregated by the GSE contract.</p>
             <p className="text-sm text-gray-500">
               Individual validator votes cannot be tracked during the proposal voting stage.
@@ -69,7 +69,12 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
         </tr>
       </tbody>
     );
-  } else if (chainName === 'namada' || chainName === 'namada-testnet') {
+  } else if (
+    chainName === 'namada' ||
+    chainName === 'namada-testnet' ||
+    chainName === 'cosmoshub' ||
+    chainName === 'atomone'
+  ) {
     const result = await voteService.getProposalValidatorsVotes(
       chainName,
       proposalId,
@@ -94,7 +99,7 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
           <ValidatorsVotesItem key={item.validator.id} item={item} chainName={chainName} />
         ))}
         <tr>
-          <td colSpan={4} className="pt-4">
+          <td colSpan={3} className="pt-4">
             <TablePagination pageLength={pages} isScroll={false} />
           </td>
         </tr>
@@ -102,7 +107,7 @@ const ValidatorsVotesList: FC<OwnProps> = async ({ sort, perPage, currentPage = 
       ) : (
         <tbody>
         <tr>
-          <td colSpan={4} className="pt-8 pb-4 text-center text-lg">
+          <td colSpan={3} className="pt-8 pb-4 text-center text-lg">
             No votes yet
           </td>
         </tr>

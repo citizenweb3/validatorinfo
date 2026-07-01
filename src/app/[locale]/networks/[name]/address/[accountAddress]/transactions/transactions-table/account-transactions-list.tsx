@@ -1,29 +1,52 @@
 import { FC } from 'react';
+
 import TablePagination from '@/components/common/table/table-pagination';
-import { SortDirection } from '@/server/types';
+import TxService from '@/services/tx-service';
+import TxListClient from '@/components/txs/tx-list-client';
+import { decodeCursorToken } from '@/components/txs/tx-cursor-token';
 import { accountTxsExample } from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/accountTxsExample';
 import AccountTransactionsItem from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/account-transactions-item';
 
+const PER_PAGE = 20;
+
 interface OwnProps {
-  currentPage?: number;
-  perPage: number;
-  sort: { sortBy: string; order: SortDirection };
   chainName: string;
+  accountAddress: string;
+  cursorToken?: string;
+  windowIndex: number;
 }
 
-const AccountTransactionsList: FC<OwnProps> = async ({ chainName, sort, perPage, currentPage = 1 }) => {
-  const pages = 1;
+const AccountTransactionsList: FC<OwnProps> = async ({ chainName, accountAddress, cursorToken, windowIndex }) => {
+  // CosmosHub and AtomOne carry REAL indexer data via cursor pagination. Other networks keep the
+  // static mock placeholder (no per-address tx indexer yet) — same fallback the global /tx table uses.
+  const normalizedChainName = chainName.toLowerCase();
+  if ((normalizedChainName === 'cosmoshub' || normalizedChainName === 'atomone') && accountAddress) {
+    const cursor = decodeCursorToken(cursorToken);
+    const initial = await TxService.getTxsByAddressBatch(chainName, [accountAddress], cursor);
+    const windows = Math.max(1, Math.ceil(initial.rows.length / PER_PAGE));
+    const clampedWindow = Math.min(Math.max(0, windowIndex), windows - 1);
+
+    return (
+      <TxListClient
+        addresses={[accountAddress]}
+        chainName={chainName}
+        initialCursor={cursor ?? null}
+        initialWindow={clampedWindow}
+        initial={initial}
+      />
+    );
+  }
 
   return (
     <tbody>
-    {accountTxsExample.map((item) => (
-      <AccountTransactionsItem key={item.txHash} item={item} chainName={chainName} />
-    ))}
-    <tr>
-      <td colSpan={5} className="pt-4">
-        <TablePagination pageLength={pages} />
-      </td>
-    </tr>
+      {accountTxsExample.map((item, index) => (
+        <AccountTransactionsItem key={`${item.txHash}-${index}`} item={item} chainName={chainName} />
+      ))}
+      <tr>
+        <td colSpan={4} className="pt-4">
+          <TablePagination pageLength={1} />
+        </td>
+      </tr>
     </tbody>
   );
 };

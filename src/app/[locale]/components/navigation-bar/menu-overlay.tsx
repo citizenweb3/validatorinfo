@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import React, { FC, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
-import { homeTabs, networkTabs, toolsTabs } from '@/components/navigation-bar/navigation-bar';
+import { homeTabs, networkTabs, toolsTabs } from '@/components/common/tabs/tabs-data';
 
 interface OwnProps {
   visible: boolean;

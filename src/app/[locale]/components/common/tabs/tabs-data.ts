@@ -8,6 +8,9 @@ export interface TabOptions {
   icon?: StaticImageData;
   iconHovered?: StaticImageData;
   isScroll?: boolean;
+  // When true the tab renders blurred + non-clickable (a section that has no data for this entity,
+  // e.g. governance/revenue for a mining pool). Kept visible for layout parity with siblings.
+  disabled?: boolean;
 }
 
 export const mainTabs: TabOptions[] = [
@@ -28,6 +31,53 @@ export const mainTabs: TabOptions[] = [
   { name: 'Global', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
 ];
 
+// Navigation groups — the single source of truth shared by the left vertical menu
+// (NavigationBar) and the horizontal TabList on the matching pages, so the two
+// menus always stay in sync. homeTabs/toolsTabs back the home and tools pages;
+// networkTabs backs the left menu's Networks group (and the mobile/game overlays).
+export const homeTabs: TabOptions[] = [
+  { name: 'Home', href: '/', icon: icons.HomeIcon, iconHovered: icons.HomeIconHovered },
+  { name: 'You', href: '/profile', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered },
+  { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
+  { name: 'About Us', href: '/about', icon: icons.LogoIcon, iconHovered: icons.LogoIconHovered },
+  { name: 'Play', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },
+];
+
+export const networkTabs: TabOptions[] = [
+  { name: 'Networks', href: '/networks', icon: icons.NetworksIcon, iconHovered: icons.NetworksIconHovered },
+  { name: 'Validators', href: '/validators', icon: icons.ValidatorsIcon, iconHovered: icons.ValidatorsIconHovered },
+  { name: 'Nodes', href: '/nodes', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
+  { name: 'Mining Pools', href: '/mining-pools', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
+  { name: 'Ecosystems', href: '/ecosystems', icon: icons.EcosystemsIcon, iconHovered: icons.EcosystemsIconHovered },
+];
+
+export const toolsTabs: TabOptions[] = [
+  { name: 'Rumor', href: '/p2pchat', icon: icons.RumorsIcon, iconHovered: icons.RumorsIconHovered },
+  { name: 'Analyze', href: '/web3stats', icon: icons.GlobalIcon, iconHovered: icons.GlobalIconHovered },
+  {
+    name: 'Calculate',
+    href: '/stakingcalculator',
+    icon: icons.CalculatorIcon,
+    iconHovered: icons.CalculatorIconHovered,
+  },
+  {
+    name: 'Compare',
+    href: '/comparevalidators',
+    icon: icons.ComparisonIcon,
+    iconHovered: icons.ComparisonIconHovered,
+  },
+  { name: 'Explain', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
+];
+
+// Horizontal tab bars centre the section's primary tab — the one that sits first in the vertical
+// NavigationBar (Home for the home menu, Rumor for the tools menu) — to match the original
+// main-menu layout. The vertical NavigationBar keeps the primary-first order.
+const centrePrimary = (tabs: TabOptions[]): TabOptions[] =>
+  tabs.length === 5 ? [tabs[1], tabs[2], tabs[0], tabs[3], tabs[4]] : tabs;
+
+export const homeTabsHorizontal: TabOptions[] = centrePrimary(homeTabs);
+export const toolsTabsHorizontal: TabOptions[] = centrePrimary(toolsTabs);
+
 export const validatorsTabs: TabOptions[] = [
   {
     name: 'Validators',
@@ -42,8 +92,8 @@ export const validatorsTabs: TabOptions[] = [
     icon: icons.NetworksIcon,
     iconHovered: icons.NetworksIconHovered,
   },
+  { name: 'Mining Pools', href: '/mining-pools', icon: icons.NodesIcon, iconHovered: icons.NodesIconHovered },
   { name: 'Ecosystems', href: '/ecosystems', icon: icons.EcosystemsIcon, iconHovered: icons.EcosystemsIconHovered },
-  { name: 'Metrics', href: '/metrics', icon: icons.MetricsIcon, iconHovered: icons.MetricsIconHovered },
 ];
 
 export const aboutTabs: TabOptions[] = [
@@ -93,6 +143,47 @@ export const getValidatorProfileTabs = (id: number): TabOptions[] => {
       href: `/validators/${id}/governance`,
       icon: icons.GovernanceIcon,
       iconHovered: icons.GovernanceIconHovered,
+    },
+  ];
+};
+
+// Mining-pool profile tabs — same positions as the validator profile, with one difference: Governance
+// is replaced by Blocks. The centre tab "Network Table" (= /networks) is the default landing tab and
+// is real, like the validator. Revenue/Metrics/Public Goods have no pool equivalent → blurred + disabled.
+export const getMiningPoolProfileTabs = (slug: string): TabOptions[] => {
+  return [
+    {
+      name: 'Revenue',
+      href: `/mining-pools/${slug}/revenue`,
+      icon: icons.RevenueIcon,
+      iconHovered: icons.RevenueIconHovered,
+      disabled: true,
+    },
+    {
+      name: 'Metrics',
+      href: `/mining-pools/${slug}/metrics`,
+      icon: icons.MetricsIcon,
+      iconHovered: icons.MetricsIconHovered,
+      disabled: true,
+    },
+    {
+      name: 'Network Table',
+      href: `/mining-pools/${slug}/networks`,
+      icon: icons.NetworkTableIcon,
+      iconHovered: icons.NetworkTableIconHovered,
+    },
+    {
+      name: 'Public Goods',
+      href: `/mining-pools/${slug}/public_goods`,
+      icon: icons.PublicGoodsIcon,
+      iconHovered: icons.PublicGoodsIconHovered,
+      disabled: true,
+    },
+    {
+      name: 'Blocks',
+      href: `/mining-pools/${slug}/blocks`,
+      icon: icons.NetworkBlocks,
+      iconHovered: icons.NetworkBlocksHovered,
     },
   ];
 };
@@ -183,7 +274,7 @@ export const getPassportAuthzTabs = (id: number, operatorAddress: string): TabOp
 };
 
 export const getNetworkProfileTabs = (networkName: string): TabOptions[] => {
-  return [
+  const tabs: TabOptions[] = [
     {
       name: 'Governance',
       href: `/networks/${networkName}/governance`,
@@ -215,6 +306,8 @@ export const getNetworkProfileTabs = (networkName: string): TabOptions[] => {
       iconHovered: icons.TokenomicsIconHovered,
     },
   ];
+
+  return tabs;
 };
 
 export const getTxInformationTabs = (networkName: string, txHash: string): TabOptions[] => {

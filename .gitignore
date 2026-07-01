@@ -45,3 +45,13 @@ next-env.d.ts
 
 # Vertex AI service account (second layer of defense — primary is secrets/.gitignore)
 /secrets/*.json
+/.agent-reviews
+
+# agent tooling / local artifacts
+/graphify-out
+/.playwright-mcp
+/.tasks
+.claude/settings.json
+
+# design-iteration screenshots (root-level scratch)
+/*.png

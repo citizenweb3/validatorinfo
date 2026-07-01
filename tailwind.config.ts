@@ -1,9 +1,9 @@
 // @ts-ignore
 import tailwindScrollbar from 'tailwind-scrollbar';
 import type { Config } from 'tailwindcss';
-import colors from 'tailwindcss/colors';
-import defaultConfig from 'tailwindcss/defaultConfig';
-import plugin from 'tailwindcss/plugin';
+import colors from 'tailwindcss/colors.js';
+import defaultConfig from 'tailwindcss/defaultConfig.js';
+import plugin from 'tailwindcss/plugin.js';
 
 const config: Config = {
   content: [

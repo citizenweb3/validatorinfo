@@ -71,6 +71,8 @@ export interface AddChainProps {
   tags?: string[];
   telegramUrl?: string;
   discordInviteCode?: string;
+  consensusType?: string;
+  hashrateUnit?: string;
 }
 
 export type ResultProposalItem = Omit<ProposalCreateInput, 'chain'>;
@@ -86,6 +88,7 @@ export interface NodeVote {
   address: string;
   proposalId: string;
   vote: string;
+  txHash?: string | null;
 }
 
 export interface AztecGovernanceConfigAdditional {

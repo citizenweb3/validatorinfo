@@ -172,6 +172,7 @@ server/tools/chains/aztec/
 │   │       └── aztec-testnent/      # Testnet ABIs (note: directory name has typo)
 │   │           └── ... (same structure)
 │   │
+│   ├── classify-sequencer.ts        # Pure classifier: delegated / provider self-stake / anonymous
 │   ├── get-providers.ts             # Fetch all providers from StakingRegistry
 │   ├── get-provider-attesters.ts    # Map attesters to providers (reads from DB only)
 │   ├── get-active-sequencers.ts     # Get active sequencers from ValidatorQueued - Withdrawals
@@ -329,43 +330,50 @@ export const syncXxxEvents = async (
 };
 ```
 
-### 4. Validator Identification (Self-Staked vs Delegated)
+### 4. Validator Identification (Delegated vs Provider Self-Stake vs Anonymous)
 
-Aztec has two types of sequencers:
+Aztec has three categories of sequencers:
 
-- **Delegated sequencers**: Stake through a provider (infrastructure operator)
-- **Self-staked sequencers**: Stake directly without a provider
+- **Delegated sequencers**: Stake through a provider (infrastructure operator) —
+  identified by on-chain `AttestersAddedToProvider` events
+- **Provider self-stake sequencers** (mainnet only): Stake directly, but claimed by a
+  provider via the `providerSelfStake` field of the external providers API
+  (`https://d10cun7h2qqnvc.cloudfront.net/api/providers`)
+- **Anonymous self-staked sequencers**: Stake directly, no provider association
 
 **How it works:**
 
 1. `ValidatorQueued` event = sequencer registered (from Rollup contract)
 2. `WithdrawFinalized` event = sequencer exited (from Rollup contract)
 3. `AttestersAddedToProvider` event = attester delegated to provider (from StakingRegistry)
+4. `providerSelfStake` API field = off-chain claim of a self-staked attester by a provider
 
-**Identification logic in `get-nodes.ts`:**
+**Classification (pure helper `utils/classify-sequencer.ts`, used by `get-nodes.ts`):**
 
-```typescript
-// 1. Get ALL active sequencers from ValidatorQueued - WithdrawFinalized
-const activeSequencers = await getActiveSequencers(dbChain.id);
+- **Events win**: an attester present in the event mapping is always DELEGATED, even if
+  also claimed in `providerSelfStake` (logged as a conflict warning).
+- A `providerSelfStake` claim is honored only when ALL hold (mainnet only):
+  - the API provider address matches an on-chain `providerAdmin` (from `getProviders`),
+  - provider metadata exists with a non-empty name.
+- Duplicate attesters claimed by multiple providers are quarantined in
+  `buildProviderSelfStakeMap` (anonymous + warning).
+- Everything else → anonymous (`moniker = Sequencer 0x...`, details
+  `Self-staked sequencer`).
 
-// 2. Get attester->provider mapping from AttestersAddedToProvider events
-const attesterToProvider = await getProviderAttesters(l1RpcUrls, chainName);
+**Node shape for provider self-stake** (`createProviderSelfStakedNode`):
+`identity = providerAdmin` (drives `findOrCreateAztecValidator` linking in
+`server/jobs/get-nodes.ts`), moniker/website = provider brand,
+`details = "Self-staked sequencer of <name>"`, `account/reward = withdrawer`,
+commission 0 (provider take rate does not apply to self-stake).
 
-// 3. For each active sequencer:
-for (const attesterAddress of activeSequencers.keys()) {
-  const providerId = attesterToProvider.get(attesterAddress);
+**Persistence**: `upsertNode` (node-service) relinks existing nodes via
+`buildNodeValidatorLinkUpdate` — connect scoped to `chain.name === 'aztec'` only;
+undefined validatorId never unlinks (API outage safe).
 
-  if (providerId) {
-    // Has provider = DELEGATED
-    delegatedCount++;
-    node.moniker = provider.name;
-  } else {
-    // No provider = SELF-STAKED
-    selfStakedCount++;
-    node.moniker = `Sequencer ${shortAddress}`;
-  }
-}
-```
+**Fixture assertions**: `scripts/test-aztec-selfstake.ts`
+(`./node_modules/.bin/tsx scripts/test-aztec-selfstake.ts`).
+
+Design doc: `docs/plans/2026-06-11-aztec-selfstake-provider-linking-design.md`.
 
 **Data flow:**
 
@@ -381,10 +389,16 @@ for (const attesterAddress of activeSequencers.keys()) {
 │             │                            │                  │
 │             ▼                            ▼                  │
 │  ┌──────────────────────────────────────────────────────┐  │
-│  │         Merge: active sequencers + provider mapping   │  │
+│  │   classifyAztecSequencer (utils/classify-sequencer)   │  │
+│  │   inputs: event mapping, selfStakeMap (mainnet API),   │  │
+│  │           on-chain providerAdmins, provider metadata   │  │
 │  │                                                        │  │
-│  │  IF attester IN providerMapping → DELEGATED           │  │
-│  │  IF attester NOT IN providerMapping → SELF-STAKED     │  │
+│  │  IF attester IN event mapping → DELEGATED             │  │
+│  │     (+ warn if also claimed in providerSelfStake)     │  │
+│  │  ELSE IF valid providerSelfStake claim                │  │
+│  │     (on-chain admin + non-empty name, mainnet only)   │  │
+│  │     → PROVIDER SELF-STAKE                              │  │
+│  │  ELSE → ANONYMOUS SELF-STAKED                          │  │
 │  └──────────────────────────────────────────────────────┘  │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘

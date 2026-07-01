@@ -3,7 +3,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import UnderDevelopment from '@/components/common/under-development';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { mainTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
 
@@ -16,7 +16,7 @@ const RumorsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const underDevelopment = await getTranslations({ locale, namespace: 'UnderDevelopment' });
   return (
     <div className="flex flex-col gap-4">
-      <TabList page="HomePage" tabs={mainTabs} />
+      <TabList page="HomePage" tabs={homeTabsHorizontal} />
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <UnderDevelopment

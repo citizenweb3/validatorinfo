@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
 import NetworkBlocks from '@/app/networks/[name]/blocks/blocks-table/network-blocks';
+import PowBlocks from '@/app/networks/[name]/blocks/pow-blocks';
 import PageTitle from '@/components/common/page-title';
 import SubDescription from '@/components/sub-description';
 import { Locale, NextPageWithLocale } from '@/i18n';
@@ -29,8 +30,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 const TotalBlocksPage: NextPageWithLocale<PageProps> = async ({ params: { name, locale }, searchParams: q }) => {
   const t = await getTranslations({ locale, namespace: 'TotalBlocksPage' });
   const currentPage = parseInt((q.p as string) || '1');
-  const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
+  const ppNum = q.pp ? parseInt(q.pp as string, 10) : defaultPerPage;
+  const perPage = Number.isFinite(ppNum) && ppNum > 0 ? Math.min(ppNum, 100) : defaultPerPage;
   const chain = await chainService.getByName(name);
+  const isPow = chain?.consensusType === 'pow';
 
   return (
     <div className="mb-24">
@@ -46,7 +49,11 @@ const TotalBlocksPage: NextPageWithLocale<PageProps> = async ({ params: { name, 
         }
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <NetworkBlocks name={name} page={'TotalBlocksPage'} perPage={perPage} currentPage={currentPage} />
+      {isPow && chain ? (
+        <PowBlocks chain={chain} locale={locale} currentPage={currentPage} limit={perPage} />
+      ) : (
+        <NetworkBlocks name={name} page={'TotalBlocksPage'} perPage={perPage} currentPage={currentPage} />
+      )}
     </div>
   );
 };

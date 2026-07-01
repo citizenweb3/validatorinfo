@@ -15,10 +15,11 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
   const t = await getTranslations('TotalTxsPage');
 
   const isLogos = chainName.toLowerCase() === 'logos-testnet';
+  const isMiden = chainName.toLowerCase() === 'miden-testnet';
   const isCosmoshub = chainName.toLowerCase() === 'cosmoshub';
   const isAtomone = chainName.toLowerCase() === 'atomone';
 
-  if (isAztecChainName(chainName) || isLogos || isCosmoshub || isAtomone) {
+  if (isAztecChainName(chainName) || isLogos || isMiden || isCosmoshub || isAtomone) {
     const chain = await chainService.getByName(chainName);
 
     if (!chain) {
@@ -27,11 +28,13 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
 
     const metrics = isLogos
       ? await TxService.getLogosTxMetrics(chain.id, chain.name)
-      : isCosmoshub
-        ? await TxService.getCosmosTxMetrics(chain.id, chain.name)
-        : isAtomone
-          ? await TxService.getAtomoneTxMetrics(chain.id, chain.name)
-          : await TxService.getAztecTxMetrics(chain.id, chain.name);
+      : isMiden
+        ? await TxService.getMidenTxMetrics(chain.id, chain.name)
+        : isCosmoshub
+          ? await TxService.getCosmosTxMetrics(chain.id, chain.name)
+          : isAtomone
+            ? await TxService.getAtomoneTxMetrics(chain.id, chain.name)
+            : await TxService.getAztecTxMetrics(chain.id, chain.name);
 
     const feeUnit = isAtomone ? 'PHOTON' : isCosmoshub ? (chain.params?.denom ?? 'ATOM') : 'AZTEC';
 
@@ -54,8 +57,9 @@ const TotalTxsMetrics: FC<OwnProps> = async ({ chainName }) => {
           ? `${metrics.tps.toLocaleString('en-US', { maximumFractionDigits: 2 })} txs/s`
           : 'N/A',
       },
-      // Logos testnet has all gas prices = 0; avg fee is meaningless. Hide the card.
-      ...(isLogos
+      // Logos has all gas prices = 0; Miden v1 indexer has no per-tx fee.
+      // For both, avgFee is meaningless — hide the card.
+      ...(isLogos || isMiden
         ? []
         : [
             {

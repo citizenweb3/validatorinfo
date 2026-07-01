@@ -3,8 +3,10 @@ import {
   getBlockByHeight,
   getBlocksList,
   getBlocksStats,
+  getGovVotes,
   getTxByHash,
   getTxRaw,
+  getTxsByAddress,
   getTxsList,
   getTxsStats,
 } from './endpoints';
@@ -19,6 +21,8 @@ export const atomoneIndexer = {
   getTxByHash,
   getTxRaw,
   getTxsStats,
+  getGovVotes,
+  getTxsByAddress,
   healthCheck,
   getBaseUrl,
 };

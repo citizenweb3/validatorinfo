@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import Description from '@/components/common/description';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { mainTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import AiChatInline from '@/components/home/ai-chat-inline';
 import InfrastructureBanner from '@/components/home/infrastructure-banner';
 import LinksGrid from '@/components/home/links-grid';
@@ -19,7 +19,7 @@ const Home: NextPageWithLocale = async ({ params: { locale } }) => {
 
   return (
     <div className="flex min-w-0 flex-col">
-      <TabList page="HomePage" tabs={mainTabs} />
+      <TabList page="HomePage" tabs={homeTabsHorizontal} />
 
       <div className="flex w-full min-w-0 flex-col">
         <PageTitle text={t('heroTitle')} />

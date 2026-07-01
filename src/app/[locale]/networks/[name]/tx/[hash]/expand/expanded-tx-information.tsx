@@ -4,11 +4,13 @@ import { FC } from 'react';
 import { txExample } from '@/app/networks/[name]/tx/txExample';
 import ExpandedCosmosTxInformation from '@/app/networks/[name]/tx/[hash]/expand/expanded-cosmos-tx-information';
 import ExpandedAtomoneTxInformation from '@/app/networks/[name]/tx/[hash]/expand/expanded-atomone-tx-information';
+import MidenExpandedTxInformation from '@/app/networks/[name]/tx/[hash]/expand/miden-expanded-tx-information';
 import CopyButton from '@/components/common/copy-button';
 import { isAztecChainName } from '@/server/tools/chains/aztec/utils/contracts/contracts-config';
 import { AztecTxEffect } from '@/services/aztec-indexer-api/types';
 import TxService from '@/services/tx-service';
 import { ChainWithParams } from '@/services/chain-service';
+import { getMoneroTransaction } from '@/server/tools/chains/monero/indexer-client';
 import Link from 'next/link';
 
 interface OwnProps {
@@ -19,8 +21,48 @@ interface OwnProps {
 const ExpandedTxInformation: FC<OwnProps> = async ({ chain, hash }) => {
   const t = await getTranslations('TxInformationPage');
 
+  if (chain?.consensusType === 'pow') {
+    const tx = await getMoneroTransaction(hash).catch(() => null);
+    if (!tx) {
+      return (
+        <div className="flex flex-col items-center gap-4 py-12">
+          <div className="font-sfpro text-lg">{t('tx not found')}</div>
+          <div className="font-sfpro text-base text-gray-400">{t('tx not found hint')}</div>
+        </div>
+      );
+    }
+
+    const expandedData: Array<{ title: string; data: string | number }> = [
+      { title: 'extra size', data: tx.extraSize },
+      { title: 'unlock time', data: tx.unlockTime },
+      { title: 'in pool', data: tx.inPool ? t('yes') : t('no') },
+      { title: 'is canonical', data: tx.isCanonical ? t('yes') : t('no') },
+      { title: 'is settled', data: tx.isSettled ? t('yes') : t('no') },
+      { title: 'indexed at', data: tx.indexedAt },
+    ];
+
+    return (
+      <div className="mb-5 mt-5">
+        {expandedData.map((item) => (
+          <div key={item.title} className="mt-2 flex w-full hover:bg-bgHover">
+            <div className="w-3/12 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
+              {t(item.title as 'chain')}
+            </div>
+            <div className="flex w-9/12 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-sfpro text-base hover:text-highlight">
+              <div className="font-handjet text-lg">{item.data}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   if (chain?.name === 'cosmoshub') {
     return <ExpandedCosmosTxInformation chain={chain} hash={hash} />;
+  }
+
+  if (chain?.name === 'miden-testnet') {
+    return <MidenExpandedTxInformation chain={chain} hash={hash} />;
   }
 
   if (chain?.name === 'atomone') {

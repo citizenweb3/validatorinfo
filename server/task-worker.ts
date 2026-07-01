@@ -37,6 +37,9 @@ import updateDelegatorsAmount from '@/server/jobs/update-delegators-amount';
 import updateFdv from '@/server/jobs/update-fdv';
 import updateGithubRepositories from '@/server/jobs/update-github-repositories';
 import updateInflationRate from '@/server/jobs/update-inflation-rate';
+import updateMoneroNetworkInfo from '@/server/jobs/monero-network-info';
+import updateMoneroPoolAttribution from '@/server/jobs/monero-pool-attribution';
+import updateMoneroPoolStats from '@/server/jobs/monero-pool-stats';
 import updateNodesCommissions from '@/server/jobs/update-nodes-commissions';
 import updateNodesRewards from '@/server/jobs/update-nodes-rewards';
 import updateNodesVotes from '@/server/jobs/update-nodes-votes';
@@ -212,6 +215,15 @@ async function runTask() {
         break;
       case 'update-proposal-texts':
         await updateProposalTexts();
+        break;
+      case 'monero-network-info':
+        await updateMoneroNetworkInfo();
+        break;
+      case 'monero-pool-attribution':
+        await updateMoneroPoolAttribution();
+        break;
+      case 'monero-pool-stats':
+        await updateMoneroPoolStats();
         break;
       default:
         throw new Error(`Unknown task: ${taskName}`);

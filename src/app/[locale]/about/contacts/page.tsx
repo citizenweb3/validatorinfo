@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { aboutTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
 
@@ -18,7 +18,7 @@ const ContactsPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const size = 'h-24 w-24 min-w-24 min-h-24';
   return (
     <div>
-      <TabList page="AboutPage" tabs={aboutTabs} />
+      <TabList page="HomePage" tabs={homeTabsHorizontal} />
       <PageTitle text={t('Contacts.title')} />
       <SubDescription text={t('Contacts.description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div>

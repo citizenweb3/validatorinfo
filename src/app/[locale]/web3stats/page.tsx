@@ -9,7 +9,7 @@ import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibil
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { mainTabs } from '@/components/common/tabs/tabs-data';
+import { toolsTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import TextLink from '@/components/common/text-link';
 import { Locale } from '@/i18n';
 
@@ -39,7 +39,7 @@ export default async function GlobalPosPage({ params: { locale } }: { params: { 
   return (
     <div className="flex flex-col">
       <PageHeaderVisibilityWrapper>
-        <TabList page="HomePage" tabs={mainTabs} />
+        <TabList page="HomePage" tabs={toolsTabsHorizontal} />
       </PageHeaderVisibilityWrapper>
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle

@@ -1,31 +1,42 @@
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 
 import NodeTxsList from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/node-txs-list';
 import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
-import { SortDirection } from '@/server/types';
+import TxRowsSkeleton from '@/components/txs/tx-rows-skeleton';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {
-  perPage: number;
-  currentPage?: number;
-  sort: { sortBy: string; order: SortDirection };
   chainName: string;
+  accountAddress: string | null;
+  operatorAddress: string;
+  cursorToken?: string;
+  windowIndex: number;
 }
 
-const NodeTxs: FC<OwnProps> = async ({ chainName, page, perPage, sort, currentPage }) => {
+const NodeTxs: FC<OwnProps> = ({ chainName, page, accountAddress, operatorAddress, cursorToken, windowIndex }) => {
+  // key on the address set so the streaming boundary resets only when the addresses change
+  const addressKey = `${accountAddress ?? ''}-${operatorAddress}`;
   return (
     <div className="pt-8">
       <BaseTable>
         <thead>
-        <tr className="bg-table_header">
-          <TableHeaderItem page={page} name="Type of Tx" sortField="type" />
-          <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
-          <TableHeaderItem page={page} name="Timestamp" sortField="timestamp" defaultSelected />
-          <TableHeaderItem page={page} name="Block Height" sortField="block height" />
-        </tr>
+          <tr className="bg-table_header">
+            <TableHeaderItem page={page} name="Type of Tx" sortField="type" />
+            <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
+            <TableHeaderItem page={page} name="Timestamp" sortField="timestamp" defaultSelected />
+            <TableHeaderItem page={page} name="Block Height" sortField="block height" />
+          </tr>
         </thead>
-        <NodeTxsList chainName={chainName} perPage={perPage} sort={sort} currentPage={currentPage} />
+        <Suspense key={addressKey} fallback={<TxRowsSkeleton rows={20} />}>
+          <NodeTxsList
+            chainName={chainName}
+            accountAddress={accountAddress}
+            operatorAddress={operatorAddress}
+            cursorToken={cursorToken}
+            windowIndex={windowIndex}
+          />
+        </Suspense>
       </BaseTable>
     </div>
   );

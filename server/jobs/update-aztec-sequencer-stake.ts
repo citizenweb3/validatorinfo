@@ -25,6 +25,7 @@ const updateStakesInDB = async (stakes: NodeStake[], batchNumber: number): Promi
         data: {
           tokens: stake.tokens,
           delegatorShares: stake.delegatorShares,
+          minSelfDelegation: stake.minSelfDelegation,
           jailed: !stake.tokens || stake.tokens === '0',
         },
       });

@@ -8,7 +8,7 @@ import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibil
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { mainTabs } from '@/components/common/tabs/tabs-data';
+import { toolsTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: Locale } }) {
@@ -29,7 +29,7 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
   return (
     <div className="flex flex-col">
       <PageHeaderVisibilityWrapper>
-        <TabList page="HomePage" tabs={mainTabs} />
+        <TabList page="HomePage" tabs={toolsTabsHorizontal} />
       </PageHeaderVisibilityWrapper>
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle text={t('title')} />

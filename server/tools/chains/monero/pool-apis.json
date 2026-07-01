@@ -1,0 +1,93 @@
+[
+  {
+    "key": "supportxmr",
+    "name": "SupportXMR",
+    "type": "cryptonote",
+    "website": "https://www.supportxmr.com",
+    "logoUrl": null,
+    "github": null,
+    "twitter": "https://x.com/SupportXMR",
+    "paymentScheme": "PPLNS",
+    "feePercent": 0.6,
+    "blocksUrl": "https://www.supportxmr.com/api/pool/blocks",
+    "statsUrl": "https://www.supportxmr.com/api/pool/stats"
+  },
+  {
+    "key": "moneroocean",
+    "name": "MoneroOcean",
+    "type": "cryptonote",
+    "website": "https://moneroocean.stream",
+    "logoUrl": "https://github.com/MoneroOcean.png?size=128",
+    "github": "https://github.com/MoneroOcean",
+    "twitter": "https://x.com/moneroocean",
+    "paymentScheme": "PPLNS",
+    "feePercent": 0,
+    "blocksUrl": "https://api.moneroocean.stream/pool/blocks",
+    "statsUrl": "https://api.moneroocean.stream/pool/stats"
+  },
+  {
+    "key": "hashvault",
+    "name": "HashVault",
+    "type": "cryptonote",
+    "website": "https://monero.hashvault.pro",
+    "logoUrl": "https://github.com/HashVault.png?size=128",
+    "github": "https://github.com/HashVault",
+    "twitter": "https://x.com/HashVaultPro",
+    "paymentScheme": "PPLNS",
+    "feePercent": 0.9,
+    "blocksUrl": "https://api.hashvault.pro/v3/monero/pool/blocks?page=0&limit=100",
+    "statsUrl": "https://api.hashvault.pro/v3/monero/pool/stats"
+  },
+  {
+    "key": "herominers",
+    "name": "HeroMiners",
+    "type": "cryptonote_flat",
+    "website": "https://monero.herominers.com",
+    "logoUrl": null,
+    "github": null,
+    "twitter": null,
+    "paymentScheme": "PROP",
+    "feePercent": 0.9,
+    "blocksUrl": "https://monero.herominers.com/api/get_blocks?height=99999999",
+    "statsUrl": "https://monero.herominers.com/api/stats"
+  },
+  {
+    "key": "c3pool",
+    "name": "C3Pool",
+    "type": "cryptonote",
+    "website": "https://www.c3pool.com",
+    "logoUrl": "https://github.com/C3Pool.png?size=128",
+    "github": "https://github.com/C3Pool",
+    "twitter": "https://x.com/C3Pool",
+    "paymentScheme": "PROP",
+    "feePercent": 0,
+    "blocksUrl": "https://api.c3pool.com/pool/blocks",
+    "statsUrl": "https://api.c3pool.com/pool/stats"
+  },
+  {
+    "key": "nanopool",
+    "name": "Nanopool",
+    "type": "nanopool",
+    "website": "https://xmr.nanopool.org",
+    "logoUrl": "https://github.com/nanopool.png?size=128",
+    "github": "https://github.com/nanopool",
+    "twitter": "https://x.com/nanopool",
+    "paymentScheme": "PROP",
+    "feePercent": 1,
+    "blocksUrl": "https://xmr.nanopool.org/api/v1/pool/blocks/0/100",
+    "statsUrl": null
+  },
+  {
+    "key": "p2pool",
+    "name": "P2Pool",
+    "type": "p2pool_observer",
+    "website": "https://p2pool.io",
+    "logoUrl": "https://github.com/SChernykh.png?size=128",
+    "github": "https://github.com/SChernykh/p2pool",
+    "twitter": null,
+    "paymentScheme": "PPLNS",
+    "feePercent": 0,
+    "blocksUrl": "https://p2pool.observer/api/found_blocks?limit=100",
+    "statsUrl": "https://p2pool.observer/api/pool_info"
+  }
+]

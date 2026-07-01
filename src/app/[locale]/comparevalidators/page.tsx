@@ -6,7 +6,7 @@ import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibil
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { mainTabs } from '@/components/common/tabs/tabs-data';
+import { toolsTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 import nodeService from '@/services/node-service';
 
@@ -31,7 +31,7 @@ const ValidatorComparisonPage: NextPageWithLocale<PageProps> = async ({ params: 
   return (
     <div className="flex flex-grow flex-col">
       <PageHeaderVisibilityWrapper>
-        <TabList page="HomePage" tabs={mainTabs} />
+        <TabList page="HomePage" tabs={toolsTabsHorizontal} />
       </PageHeaderVisibilityWrapper>
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle text={t('title')} />

@@ -81,6 +81,9 @@ model ChainParams {
   // Aztec-specific governance configuration (JSON)
   aztecGovernanceConfigAdditional Json? @map("aztec_governance_config_additional")
 
+  // PoW-specific: cached hard fork timeline (height ↔ version pairs)
+  hardForkTimelineJson Json? @map("hard_fork_timeline_json")
+
   chain Chain @relation("chain_params", fields: [chainId], references: [id])
 
   @@map("chain_params")
@@ -109,10 +112,13 @@ model Chain {
   tags             String[] @default([])
   supported        Boolean  @default(true) @map("supported")
 
+  consensusType String? @map("consensus_type") @db.VarChar(32)
+  hashrateUnit  String? @map("hashrate_unit") @db.VarChar(16)
+
   chainEcosystem Ecosystem @relation("chain_ecosystem", fields: [ecosystem], references: [name])
 
-  chainNodes ChainNode[] @relation("chain_node")
-  aprs       Apr[]       @relation("chain_apr")
+  chainNodes   ChainNode[]    @relation("chain_node")
+  aprs         Apr[]          @relation("chain_apr")
   prices       Price[]        @relation("chain_price")
   priceHistory PriceHistory[] @relation("chain_price_history")
   nodes        Node[]         @relation("chain_validator_node")
@@ -120,18 +126,23 @@ model Chain {
   tokenomics Tokenomics?  @relation("chain_tokenomics")
   params     ChainParams? @relation("chain_params")
 
-  validators         Validator[]        @relation("chain_validators")
-  addresses          Address[]          @relation("chain_addresses")
-  nodeVotes          NodeVote[]         @relation("node_vote_chain")
-  proposals          Proposal[]         @relation("chain_proposals")
-  githubRepositories GithubRepository[] @relation("chain_github_repositories")
-  tvsHistory         ChainTvsHistory[]  @relation("chain_tvs_history")
-  aprHistory         ChainAprHistory[]  @relation("chain_apr_history")
-  validatorsHistory  ChainValidatorsHistory[] @relation("chain_validators_history")
+  validators                   Validator[]                    @relation("chain_validators")
+  addresses                    Address[]                      @relation("chain_addresses")
+  nodeVotes                    NodeVote[]                     @relation("node_vote_chain")
+  proposals                    Proposal[]                     @relation("chain_proposals")
+  githubRepositories           GithubRepository[]             @relation("chain_github_repositories")
+  tvsHistory                   ChainTvsHistory[]              @relation("chain_tvs_history")
+  aprHistory                   ChainAprHistory[]              @relation("chain_apr_history")
+  validatorsHistory            ChainValidatorsHistory[]       @relation("chain_validators_history")
   aztecNodeDistributionHistory AztecNodeDistributionHistory[] @relation("chain_aztec_node_distribution_history")
-  txMetrics  ChainTxMetrics?  @relation("chain_tx_metrics")
-  txDailySnapshots ChainTxDailySnapshot[] @relation("chain_tx_daily_snapshots")
-  podcastEpisodes PodcastEpisode[] @relation("PodcastChain")
+  txMetrics                    ChainTxMetrics?                @relation("chain_tx_metrics")
+  txDailySnapshots             ChainTxDailySnapshot[]         @relation("chain_tx_daily_snapshots")
+  podcastEpisodes              PodcastEpisode[]               @relation("PodcastChain")
+
+  miningPools             MiningPool[]             @relation("chain_mining_pools")
+  miningPoolStats         MiningPoolStats[]        @relation("chain_mining_pool_stats")
+  hashrateSnapshots       ChainHashrateSnapshot[]  @relation("chain_hashrate_snapshots")
+  moneroBlockAttributions MoneroBlockAttribution[] @relation("chain_monero_block_attributions")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
   proposalsLive   Int @default(0) @map("proposals_live")
@@ -205,7 +216,7 @@ model Node {
   minSelfDelegation      String   @map("min_self_delegation") @db.VarChar(256)
   missedBlocks           Int?     @map("missed_blocks")
   outstandingRewards     String?  @map("outstanding_rewards")
-  totalEarnedRewards    String?  @map("total_earned_rewards")
+  totalEarnedRewards     String?  @map("total_earned_rewards")
   outstandingCommissions String?  @map("outstanding_commissions")
   delegatorsAmount       Int?     @map("delegators_amount")
 
@@ -310,10 +321,10 @@ model Proposal {
   content          Json
   title            String
   description      String
-  fullText         String?   @map("full_text")
-  metadataUrl      String?   @map("metadata_url")
-  fullTextAttempts Int       @default(0) @map("full_text_attempts")
-  aiSummary        Json?     @map("ai_summary")
+  fullText         String?        @map("full_text")
+  metadataUrl      String?        @map("metadata_url")
+  fullTextAttempts Int            @default(0) @map("full_text_attempts")
+  aiSummary        Json?          @map("ai_summary")
 
   createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
 
@@ -340,6 +351,7 @@ model Validator {
   wrongKey          Boolean @default(false) @map("wrong_key")
   chainId           Int?    @map("chain_id")
   providerAddresses Json?   @map("provider_addresses")
+  providerRates     Json?   @map("provider_rates")
 
   chain Chain? @relation("chain_validators", fields: [chainId], references: [id])
   nodes Node[] @relation("validator_node")
@@ -524,29 +536,29 @@ model ChainTxDailySnapshot {
 }
 
 model PodcastEpisode {
-  id               Int       @id @default(autoincrement())
-  slug             String    @unique
-  title            String
-  description      String?   @db.Text
-  publicationDate  String?   @map("publication_date")
-  duration         String?
-  episodeUrl       String    @map("episode_url")
-  playerUrl        String?   @map("player_url")
-  guestName        String    @map("guest_name")
-  speakerLabel     String?   @map("speaker_label")
-  summary          String?   @db.Text
-  chainName        String?   @map("chain_name")
-  identity         String?
-  moniker          String?
-  primaryProject   String?   @map("primary_project")
+  id                Int      @id @default(autoincrement())
+  slug              String   @unique
+  title             String
+  description       String?  @db.Text
+  publicationDate   String?  @map("publication_date")
+  duration          String?
+  episodeUrl        String   @map("episode_url")
+  playerUrl         String?  @map("player_url")
+  guestName         String   @map("guest_name")
+  speakerLabel      String?  @map("speaker_label")
+  summary           String?  @db.Text
+  chainName         String?  @map("chain_name")
+  identity          String?
+  moniker           String?
+  primaryProject    String?  @map("primary_project")
   mentionedEntities String[] @map("mentioned_entities")
 
-  chainId          Int?       @map("chain_id")
-  chain            Chain?     @relation("PodcastChain", fields: [chainId], references: [id], onDelete: SetNull)
+  chainId Int?   @map("chain_id")
+  chain   Chain? @relation("PodcastChain", fields: [chainId], references: [id], onDelete: SetNull)
 
   chunks    PodcastChunk[]
-  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  createdAt DateTime       @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt DateTime       @updatedAt @map("updated_at") @db.Timestamptz(6)
 
   @@index([chainId])
   @@index([identity])
@@ -557,20 +569,106 @@ model PodcastEpisode {
 }
 
 model PodcastChunk {
-  id             Int            @id @default(autoincrement())
-  episodeId      Int            @map("episode_id")
-  episode        PodcastEpisode @relation(fields: [episodeId], references: [id], onDelete: Cascade)
-  speakerRole    String         @map("speaker_role")
-  speakerName    String?        @map("speaker_name")
-  question       String?        @db.Text
-  content        String         @db.Text
-  contextPrefix  String?        @db.Text @map("context_prefix")
-  chunkIndex     Int            @map("chunk_index")
+  id             Int                        @id @default(autoincrement())
+  episodeId      Int                        @map("episode_id")
+  episode        PodcastEpisode             @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  speakerRole    String                     @map("speaker_role")
+  speakerName    String?                    @map("speaker_name")
+  question       String?                    @db.Text
+  content        String                     @db.Text
+  contextPrefix  String?                    @map("context_prefix") @db.Text
+  chunkIndex     Int                        @map("chunk_index")
   embedding      Unsupported("vector(768)")
-  embeddingModel String?        @map("embedding_model")
-  createdAt      DateTime       @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt      DateTime       @updatedAt @map("updated_at") @db.Timestamptz(6)
+  embeddingModel String?                    @map("embedding_model")
+  createdAt      DateTime                   @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime                   @updatedAt @map("updated_at") @db.Timestamptz(6)
 
   @@index([episodeId])
   @@map("podcast_chunks")
+}
+
+model MiningPool {
+  id                   Int      @id @default(autoincrement())
+  chainId              Int      @map("chain_id")
+  slug                 String   @db.VarChar(256)
+  name                 String   @db.VarChar(256)
+  logoUrl              String?  @map("logo_url")
+  website              String?
+  github               String?
+  twitter              String?
+  paymentScheme        String?  @map("payment_scheme") @db.VarChar(64)
+  feePercent           Float?   @map("fee_percent")
+  identificationMethod String   @map("identification_method") @db.VarChar(64)
+  detectorJson         Json?    @map("detector_json")
+  fingerprint          String?
+  isVerified           Boolean  @default(false) @map("is_verified")
+  createdAt            DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  chain        Chain                    @relation("chain_mining_pools", fields: [chainId], references: [id])
+  stats        MiningPoolStats[]        @relation("mining_pool_stats")
+  attributions MoneroBlockAttribution[] @relation("mining_pool_attributions")
+
+  @@unique([chainId, slug])
+  @@index([chainId, fingerprint])
+  @@map("mining_pools")
+}
+
+model MiningPoolStats {
+  id               Int      @id @default(autoincrement())
+  chainId          Int      @map("chain_id")
+  poolId           Int      @map("pool_id")
+  windowKind       String   @map("window_kind") @db.VarChar(16)
+  blocksFound      Int      @map("blocks_found")
+  sharePercent     Float    @map("share_percent")
+  hashrateEstimate String   @map("hashrate_estimate")
+  windowStart      DateTime @map("window_start") @db.Timestamptz(6)
+  windowEnd        DateTime @map("window_end") @db.Timestamptz(6)
+  updatedAt        DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  chain Chain      @relation("chain_mining_pool_stats", fields: [chainId], references: [id])
+  pool  MiningPool @relation("mining_pool_stats", fields: [poolId], references: [id])
+
+  @@unique([chainId, poolId, windowKind])
+  @@index([chainId, windowKind, sharePercent])
+  @@map("mining_pool_stats")
+}
+
+model ChainHashrateSnapshot {
+  id         Int      @id @default(autoincrement())
+  chainId    Int      @map("chain_id")
+  snapshotAt DateTime @map("snapshot_at") @db.Timestamptz(6)
+  height     Int
+  hashrate   String
+  difficulty String
+
+  chain Chain @relation("chain_hashrate_snapshots", fields: [chainId], references: [id])
+
+  @@unique([chainId, snapshotAt])
+  @@index([chainId, height])
+  @@map("chain_hashrate_snapshots")
+}
+
+model MoneroBlockAttribution {
+  id             Int       @id @default(autoincrement())
+  chainId        Int       @map("chain_id")
+  height         Int
+  blockHash      String    @map("block_hash")
+  poolId         Int       @map("pool_id")
+  source         String    @db.VarChar(32) // AttributionSource: pool_api | p2pool_observer
+  blockTimestamp DateTime  @map("block_timestamp") @db.Timestamptz(6)
+  poolReportedAt DateTime? @map("pool_reported_at") @db.Timestamptz(6)
+  isCanonical    Boolean   @default(true) @map("is_canonical")
+  isConflicted   Boolean   @default(false) @map("is_conflicted")
+  createdAt      DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  chain Chain      @relation("chain_monero_block_attributions", fields: [chainId], references: [id])
+  pool  MiningPool @relation("mining_pool_attributions", fields: [poolId], references: [id])
+
+  @@unique([chainId, blockHash])
+  @@index([chainId, blockTimestamp])
+  @@index([chainId, poolId, blockTimestamp])
+  @@index([chainId, isCanonical, isConflicted, blockTimestamp])
+  @@map("monero_block_attribution")
 }

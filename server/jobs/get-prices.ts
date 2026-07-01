@@ -1,5 +1,6 @@
 import db from '@/db';
 import logger from '@/logger';
+import chainNames from '@/server/tools/chains/chains';
 import { chainParamsArray } from '@/server/tools/chains/params';
 import priceService from '@/services/price-service';
 
@@ -7,7 +8,9 @@ const { logInfo, logError } = logger('get-prices');
 
 export const getPrices = async () => {
   try {
-    const chainsForPrices = chainParamsArray.filter((c) => c.coinGeckoId);
+    const chainsForPrices = chainParamsArray.filter(
+      (c) => c.coinGeckoId && chainNames.includes(c.name),
+    );
     const req =
       'https://api.coingecko.com/api/v3/simple/price?ids=' +
       chainsForPrices.map((chain) => chain.coinGeckoId).join(',') +

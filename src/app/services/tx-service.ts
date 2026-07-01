@@ -3,11 +3,14 @@ import atomoneIndexer from '@/services/atomone-indexer-api';
 import { AtomoneTxDetail } from '@/services/atomone-indexer-api';
 import aztecIndexer from '@/services/aztec-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
-import { CosmosTxDetail } from '@/services/cosmos-indexer-api';
+import { CosmosTxDetail, CosmosTxSummary } from '@/services/cosmos-indexer-api';
 import logosIndexer from '@/services/logos-indexer-api';
 import { LogosTxDetail } from '@/services/logos-indexer-api';
+import midenIndexer from '@/services/miden-indexer-api';
+import { MidenTxDetail } from '@/services/miden-indexer-api';
 import { refreshChainTxMetrics } from '@/server/jobs/update-tx-metrics';
 import { getAztecTimestampMs } from '@/utils/aztec';
+import { cacheGetOrFetch, CACHE_KEYS, CACHE_TTL } from '@/services/redis-cache';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
 
@@ -23,6 +26,8 @@ export interface TxItem {
   opCount?: number;
   slot?: number;
   blockId?: string;
+  // Miden-specific: bech32-encoded account that submitted the tx.
+  accountId?: string;
 }
 
 export interface TxsResponse {
@@ -301,6 +306,105 @@ const getLogosTxMetrics = (chainId: number, chainName: string): Promise<TxMetric
   readTxMetrics(chainId, chainName);
 
 /**
+ * Miden: list transactions sorted by block_num desc. Total page count comes from
+ * the response's `total` field (falling back to `stats.total_transactions` if absent).
+ */
+const getMidenTxs = async (currentPage: number, perPage: number): Promise<TxsResponse> => {
+  try {
+    const offset = (currentPage - 1) * perPage;
+    const [{ data, total }, stats] = await Promise.all([
+      midenIndexer.getTransactions(
+        { limit: perPage, offset, sort: 'block_num', order: 'desc' },
+        TX_LIST_CACHE,
+      ),
+      midenIndexer.getStats(TX_LIST_CACHE),
+    ]);
+
+    const isValidCount = (n: unknown): n is number =>
+      typeof n === 'number' && Number.isFinite(n) && n >= 0;
+    const totalCount = isValidCount(total)
+      ? total
+      : isValidCount(stats?.total_transactions)
+        ? stats.total_transactions
+        : 0;
+    // If the indexer's stats cache is stale (total === 0 while data has items),
+    // fall back to a data-length signal so the user isn't locked on page 1.
+    const totalFromData = data.length === perPage ? currentPage + 1 : currentPage;
+    const totalPages = Math.max(1, Math.ceil(totalCount / perPage), totalFromData);
+
+    // Prefer on-chain production time (block_timestamp, added upstream 2026-06-03);
+    // fall back to inserted_at for cached pre-fix rows that lack the field.
+    const txs: TxItem[] = data.map((tx) => ({
+      hash: tx.tx_id,
+      status: 'confirmed' as const,
+      blockHeight: tx.block_num,
+      timestamp: new Date(tx.block_timestamp ?? tx.inserted_at).getTime(),
+      accountId: tx.account_id_bech32,
+    }));
+
+    return { txs, totalPages };
+  } catch (error) {
+    console.error('Failed to fetch Miden transactions:', error);
+    return { txs: [], totalPages: 1, error: true };
+  }
+};
+
+const getMidenTxByHash = async (
+  txId: string,
+): Promise<{ status: TxStatus; data: MidenTxDetail } | null> => {
+  let tx;
+  try {
+    tx = await midenIndexer.getTransaction(txId, { cache: 'no-store' });
+  } catch (e) {
+    console.error('Failed to fetch Miden transaction by hash:', e);
+    return null;
+  }
+  if (!tx) {
+    return null;
+  }
+
+  return { status: 'confirmed', data: tx };
+};
+
+// Miden v1 indexer does not surface per-tx fees; avgFee stays null in the row.
+// Uses the shared stale-TTL refresh (1h + in-flight dedup), same as the other chains.
+const getMidenTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
+  readTxMetrics(chainId, chainName);
+
+export interface Cursor {
+  before_height: string;
+  before_index: number;
+}
+
+export interface TxBatch {
+  rows: TxItem[];
+  nextCursor: Cursor | null;
+  hasMore: boolean;
+  error?: true;
+}
+
+// Server-action result (defined here, not in the `'use server'` action file, which may only
+// export async functions). `code` lets the client map failures to a localized message + Retry.
+export type TxBatchResult =
+  | { ok: true; rows: TxItem[]; nextCursor: Cursor | null; hasMore: boolean }
+  | { ok: false; code: 'INVALID_REQUEST' | 'SERVICE_ERROR' };
+
+const EMPTY_BATCH: TxBatch = { rows: [], nextCursor: null, hasMore: false };
+const ERROR_BATCH: TxBatch = { rows: [], nextCursor: null, hasMore: false, error: true };
+
+// Shared mapper: indexer CosmosTxSummary -> UI TxItem.
+// `code !== 0` means the tx is in the block but execution failed; surfaced as 'dropped'
+// since TxStatus has no 'failed' member.
+const toCosmosTxItem = (t: CosmosTxSummary): TxItem => ({
+  hash: t.tx_hash,
+  status: t.code === 0 ? 'confirmed' : 'dropped',
+  blockHeight: Number(t.height),
+  timestamp: new Date(t.time).getTime(),
+  transactionFee: t.fee?.amount ?? undefined,
+  opType: t.first_msg_type ?? undefined,
+});
+
+/**
  * Cosmoshub: keyset cursor is forward-only (`before_height` + `before_index`).
  * For arbitrary `currentPage` we walk forward in chunks of `perPage` until reaching the offset,
  * then fetch the page. O(currentPage) — acceptable for typical UI usage; deep pages are slow.
@@ -332,22 +436,103 @@ const getCosmosTxs = async (currentPage: number, perPage: number): Promise<TxsRe
 
     const page = await cosmosIndexer.getTxsList({ limit: perPage, ...cursor }, TX_LIST_CACHE);
 
-    const txs: TxItem[] = page.data.map((t) => ({
-      hash: t.tx_hash,
-      // `code !== 0` in Cosmos means the tx is included in the block but execution failed.
-      // We surface that as 'dropped' since `TxStatus` has no 'failed' member.
-      status: t.code === 0 ? ('confirmed' as const) : ('dropped' as const),
-      blockHeight: Number(t.height),
-      timestamp: new Date(t.time).getTime(),
-      transactionFee: t.fee?.amount ?? undefined,
-      opType: t.first_msg_type ?? undefined,
-    }));
+    const txs: TxItem[] = page.data.map(toCosmosTxItem);
 
     return { txs, totalPages };
   } catch (error) {
     console.error('Failed to fetch Cosmos transactions:', error);
     return { txs: [], totalPages: 1, error: true };
   }
+};
+
+// ── by-address batched cursor pagination (read-through + Redis warm-cache + single-flight) ──
+
+// CosmosHub and AtomOne are separate deployments of the same citizenweb3 indexer API, so their
+// `getTxsByAddress` share an identical request/response shape (structurally interchangeable). One
+// client type lets the batch core serve either chain.
+type TxsByAddressClient = { getTxsByAddress: typeof cosmosIndexer.getTxsByAddress };
+
+const fetchTxsByAddressBatch = async (
+  indexer: TxsByAddressClient,
+  addresses: string[],
+  cursor?: Cursor,
+): Promise<TxBatch> => {
+  const page = await indexer.getTxsByAddress(
+    {
+      address: addresses.join(','),
+      limit: ITEMS_PER_BATCH,
+      before_height: cursor?.before_height,
+      before_index: cursor?.before_index,
+      // cursor model never uses `total` — skip the expensive COUNT(*) server-side
+      count: 'false',
+    },
+    { cache: 'no-store' },
+  );
+
+  // Remap the indexer cursor ({next_before_*}) to the request/URL shape ({before_*}).
+  // null-guard: never restart from head if the API returns has_more with a null cursor.
+  const hasMore = page.has_more && page.cursor != null;
+  const nextCursor: Cursor | null = hasMore
+    ? { before_height: page.cursor!.next_before_height, before_index: page.cursor!.next_before_index }
+    : null;
+
+  return { rows: page.data.map(toCosmosTxItem), nextCursor, hasMore };
+};
+
+const txsByAddressInflight = new Map<string, Promise<TxBatch>>();
+
+/**
+ * Shared by-address batch core. Picks the indexer client + cache namespace by chain. One batch of
+ * transactions involving an address set (account, or account+operator for a validator — server-side
+ * `signers &&` union). Keyset cursor, no COUNT. Read-through Redis warm-cache (head 15s — mutable;
+ * deep 300s — immutable) + in-process single-flight to collapse cold-key stampedes. Indexer failure
+ * is caught into ERROR_BATCH so neither the action nor the RSC cold-load caller ever receives a
+ * rejection (which would blank the Suspense subtree). The catch is outside cacheGetOrFetch, so
+ * errors are not cached — the next call retries.
+ */
+const runTxsByAddressBatch = (
+  indexer: TxsByAddressClient,
+  chainKey: string,
+  addresses: string[],
+  cursor?: Cursor,
+): Promise<TxBatch> => {
+  const list = addresses.filter(Boolean);
+  if (!list.length) return Promise.resolve(EMPTY_BATCH);
+
+  const address = list.join(',');
+  const cursorKey = cursor ? `c:${cursor.before_height}:${cursor.before_index}` : 'head';
+  const key = CACHE_KEYS.txs.byAddress(chainKey, address, cursorKey);
+  const ttl = cursor ? CACHE_TTL.TXS_DEEP : CACHE_TTL.TXS_HEAD;
+
+  const existing = txsByAddressInflight.get(key);
+  if (existing) return existing;
+
+  const promise = cacheGetOrFetch<TxBatch>(key, () => fetchTxsByAddressBatch(indexer, list, cursor), ttl)
+    .then((v) => v ?? EMPTY_BATCH)
+    .catch(() => ERROR_BATCH)
+    .finally(() => {
+      txsByAddressInflight.delete(key);
+    });
+
+  txsByAddressInflight.set(key, promise);
+  return promise;
+};
+
+// Routed by-address batch entry — the single path used by both the pages' SSR initial fetch and the
+// client action, so chain→client routing lives in one place. Each branch pairs the chain's indexer
+// client with its cache namespace. Unsupported chains short-circuit to an empty batch.
+const getTxsByAddressBatch = (chainName: string, addresses: string[], cursor?: Cursor): Promise<TxBatch> => {
+  const normalizedChainName = chainName.toLowerCase();
+
+  if (normalizedChainName === 'cosmoshub') {
+    return runTxsByAddressBatch(cosmosIndexer, 'cosmoshub', addresses, cursor);
+  }
+
+  if (normalizedChainName === 'atomone') {
+    return runTxsByAddressBatch(atomoneIndexer, 'atomone', addresses, cursor);
+  }
+
+  return Promise.resolve(EMPTY_BATCH);
 };
 
 const getCosmosTxByHash = async (
@@ -433,6 +618,9 @@ const getAtomoneTxByHash = async (
 const getAtomoneTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
   readTxMetrics(chainId, chainName);
 
+// The set of chains handled below is the source of truth for tx support.
+// Keep it in sync with TX_SUPPORTED_CHAINS in `@/utils/tx-supported-chains`,
+// which gates the tx icon (/networks) and tx links (/ecosystems) on the UI side.
 const getTxsByChainName = async (
   chainName: string,
   currentPage: number = 1,
@@ -447,6 +635,10 @@ const getTxsByChainName = async (
 
   if (normalizedChainName === 'logos-testnet') {
     return getLogosTxs(currentPage, perPage);
+  }
+
+  if (normalizedChainName === 'miden-testnet') {
+    return getMidenTxs(currentPage, perPage);
   }
 
   if (normalizedChainName === 'cosmoshub') {
@@ -471,12 +663,16 @@ const TxService = {
   getLogosTxs,
   getLogosTxByHash,
   getLogosTxMetrics,
+  getMidenTxs,
+  getMidenTxByHash,
+  getMidenTxMetrics,
   getCosmosTxs,
   getCosmosTxByHash,
   getCosmosTxMetrics,
   getAtomoneTxs,
   getAtomoneTxByHash,
   getAtomoneTxMetrics,
+  getTxsByAddressBatch,
 };
 
 export default TxService;

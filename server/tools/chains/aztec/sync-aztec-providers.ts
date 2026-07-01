@@ -53,6 +53,7 @@ export const syncAztecProviders = async (chainName: 'aztec' | 'aztec-testnet'): 
         securityContact: '',
         details: description,
         chainName,
+        providerRate: provider.providerTakeRate / 10000,
       });
 
       if (result.moniker === moniker) {

@@ -24,6 +24,7 @@ export interface ProposalValidatorsVotes {
     iconUrl: string | null;
   };
   vote: VoteOption | null;
+  txHash: string | null;
 }
 
 export interface ChainNodeVote {
@@ -107,12 +108,17 @@ export const getProposalValidatorsVotes = async (
     },
     select: {
       vote: true,
+      txHash: true,
       node: { select: { validatorId: true } },
     },
   });
 
   const voteMap = new Map<number, VoteOption>();
-  rowVotes.forEach((r) => voteMap.set(r.node.validatorId!, r.vote));
+  const txHashMap = new Map<number, string | null>();
+  rowVotes.forEach((r) => {
+    voteMap.set(r.node.validatorId!, r.vote);
+    txHashMap.set(r.node.validatorId!, r.txHash);
+  });
 
   const nodeValidators = await db.node.findMany({
     where: {
@@ -130,6 +136,7 @@ export const getProposalValidatorsVotes = async (
   let fullList: ProposalValidatorsVotes[] = allValidators.map((v) => ({
     validator: { id: v.id, moniker: v.moniker, iconUrl: v.url },
     vote: voteMap.get(v.id) ?? null,
+    txHash: txHashMap.get(v.id) ?? null,
   }));
 
   if (searchValidatorId) {
