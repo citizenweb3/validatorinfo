@@ -13,13 +13,15 @@ interface OwnProps {
 }
 
 const LogoutButton: FC<OwnProps> = ({ className, contentClassName, children }) => {
-  const { logout } = useWallet();
+  const { logout, walletData } = useWallet();
   const router = useRouter();
 
   const handleLogoutClick = () => {
     logout();
     router.push('/');
   };
+
+  if (!walletData) return null;
 
   return (
     <RoundedButton className={className} contentClassName={contentClassName} onClick={handleLogoutClick}>

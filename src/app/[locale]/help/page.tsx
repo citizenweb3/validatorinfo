@@ -4,7 +4,7 @@ import ConsolePanel from '@/app/main-validators/validator-list/console-panel';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import TabList from '@/components/common/tabs/tab-list';
-import { mainTabs } from '@/components/common/tabs/tabs-data';
+import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
 
@@ -18,7 +18,7 @@ const HelpPage: NextPageWithLocale = async ({ params: { locale } }) => {
   return (
     <div className="flex flex-col">
       <PageHeaderVisibilityWrapper>
-        <TabList page="HomePage" tabs={mainTabs} />
+        <TabList page="HomePage" tabs={homeTabsHorizontal} />
       </PageHeaderVisibilityWrapper>
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName="m-4" plusClassName="mt-2" />

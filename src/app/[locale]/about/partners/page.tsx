@@ -2,7 +2,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 import PartnerItem from '@/app/about/partners/partner-item';
 import TabList from '@/components/common/tabs/tab-list';
-import { homeTabsHorizontal } from '@/components/common/tabs/tabs-data';
+import { aboutTabs } from '@/components/common/tabs/tabs-data';
 import { NextPageWithLocale } from '@/i18n';
 import SubDescription from '@/components/sub-description';
 import TextLink from '@/components/common/text-link';
@@ -26,7 +26,7 @@ const Partners: NextPageWithLocale = async ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
   return (
     <div>
-      <TabList page="HomePage" tabs={homeTabsHorizontal} />
+      <TabList page="AboutPage" tabs={aboutTabs} />
       <RichPageTitle>
         <div className="m-4">
           {t.rich('Partners.title', {
