@@ -5,6 +5,8 @@ import TabList from '@/components/common/tabs/tab-list';
 import { profileTabs } from '@/components/common/tabs/tabs-data';
 import { Locale } from '@/i18n';
 
+import ProfileGuard from './profile-guard';
+
 export default async function AboutLayout({
   children,
   params: { locale },
@@ -14,9 +16,9 @@ export default async function AboutLayout({
 }>) {
   unstable_setRequestLocale(locale);
   return (
-    <div>
+    <ProfileGuard>
       <TabList page="ProfilePage" tabs={profileTabs} />
       {children}
-    </div>
+    </ProfileGuard>
   );
 }

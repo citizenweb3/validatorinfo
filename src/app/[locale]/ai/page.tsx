@@ -14,7 +14,7 @@ const AIPage: NextPageWithLocale = async ({ params: { locale } }) => {
   const t = await getTranslations({ locale, namespace: 'AIPage' });
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-grow flex-col gap-4">
       <TabList page="HomePage" tabs={homeTabsHorizontal} />
       <PageTitle text={t('title')} />
       <AiChatPage />
