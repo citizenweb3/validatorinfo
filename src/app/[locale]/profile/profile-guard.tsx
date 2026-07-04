@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { ReactNode, useState } from 'react';
 
+import LoadingDots from '@/components/common/loading-dots';
 import RoundedButton from '@/components/common/rounded-button';
 import WalletModal from '@/components/wallet-connect/wallet-modal';
 import { useWallet } from '@/context/WalletContext';
@@ -24,7 +25,19 @@ const ProfileGuard = ({ children }: OwnProps) => {
     setIsWalletModalOpened(false);
   };
 
-  if (isInitializing) return null;
+  // Wallet verification is in flight (initial load or right after Connect while the JWT is
+  // confirmed). Show a spinner instead of flashing the prompt/content.
+  if (isInitializing) {
+    return (
+      <div
+        className="flex min-h-[30rem] flex-grow items-center justify-center"
+        role="status"
+        aria-label={t('Verifying')}
+      >
+        <LoadingDots className="gap-1.5" dotClassName="h-3 w-3 bg-highlight" />
+      </div>
+    );
+  }
 
   if (!walletData) {
     return (

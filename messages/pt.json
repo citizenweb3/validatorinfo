@@ -931,6 +931,7 @@
     "Logout": "Terminar sessão",
     "LoginRequired": "Conecte sua carteira para ver seu perfil",
     "Connect": "Conectar carteira",
+    "Verifying": "Verificando carteira…",
     "description": "Bem-vindo ao seu hub pessoal! Confira o resumo das suas atividades, gerencie a sua sala do trono e personalize o seu avatar e informações. Este é o seu centro de comando web3 — acompanhe a sua jornada, mostre as suas conquistas e mantenha tudo organizado em um só lugar.",
     "nick": "Nick",
     "additionalInfo": "Informações adicionais",

@@ -931,6 +931,7 @@
     "Logout": "Logout",
     "LoginRequired": "Connect your wallet to view your profile",
     "Connect": "Connect wallet",
+    "Verifying": "Verifying wallet…",
     "description": "Welcome to your personal hub! Check out your activity summary, manage your throne room, and customize your avatar and info. This is your web3 command center—track your journey, showcase your achievements, and keep everything organized in one spot.",
     "nick": "Nick",
     "additionalInfo": "Additional Info",
