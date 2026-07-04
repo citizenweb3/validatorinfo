@@ -26,10 +26,12 @@ const formatRelativeTime = (date: Date | null | undefined, suffix: string): stri
 
 const MoneroNetworkRows: FC<OwnProps> = async ({ chainName, blockTimeTarget }) => {
   const t = await getTranslations('NetworkPassport');
-  const [snapshot, activePools] = await Promise.all([
+  const [snapshot, activePools, poolStats] = await Promise.all([
     moneroService.getMoneroNetworkSnapshot(),
     moneroService.getMoneroActivePoolsCount('24h'),
+    moneroService.getMoneroPoolStats('24h'),
   ]);
+  const totalPools = poolStats.filter((stat) => stat.pool.slug !== 'unknown').length;
 
   if (!snapshot) {
     return (
@@ -94,7 +96,9 @@ const MoneroNetworkRows: FC<OwnProps> = async ({ chainName, blockTimeTarget }) =
           {t('active pools')}
         </div>
         <div className="flex w-2/3 items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
-          {activePools.toLocaleString()}
+          {totalPools > 0
+            ? t('active pools count', { active: activePools.toLocaleString(), total: totalPools.toLocaleString() })
+            : activePools.toLocaleString()}
         </div>
       </div>
       <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">

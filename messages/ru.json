@@ -419,6 +419,7 @@
     "ago": "назад",
     "no snapshot": "Снапшот ещё не готов — индексер прогревается",
     "active pools": "Активные распознанные пулы",
+    "active pools count": "{active} из {total}",
     "block time target": "Целевое время блока"
   },
   "NetworkStatistics": {
@@ -1991,7 +1992,25 @@
     "window30d": "30д",
     "windowAll": "Всё время",
     "noHashrateData": "Снимков хешрейта пока нет — идёт наполнение",
-    "noPoolData": "Статистики пулов пока нет — идёт наполнение"
+    "noPoolData": "Статистики пулов пока нет — идёт наполнение",
+    "networkHealth": "Здоровье сети",
+    "nakamoto": "Коэффициент Накамото",
+    "nakamotoLowerBound": "≥ {count}",
+    "hhi": "Концентрация хешрейта (HHI)",
+    "hhiValue": "{value} · {status}",
+    "concentrationCompetitive": "конкурентная",
+    "concentrationModerate": "умеренная",
+    "concentrationConcentrated": "концентрированная",
+    "activeOfTotal": "Активные пулы",
+    "activeOfTotalValue": "{active} активных из {total}",
+    "avgBlockTime": "Среднее время блока",
+    "blockTimeValue": "{seconds}с · вариативность {variability}",
+    "difficultyStability": "Стабильность сложности",
+    "difficultyValue": "{variability} · {status}",
+    "difficultyStable": "стабильная",
+    "difficultyModerate": "умеренная",
+    "difficultyVolatile": "волатильная",
+    "notEnoughData": "—"
   },
   "OffchainGovernanceInfo": {
     "title": "Управление",

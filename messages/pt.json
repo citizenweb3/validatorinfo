@@ -419,6 +419,7 @@
     "ago": "atrás",
     "no snapshot": "Sem snapshot ainda — indexador aquecendo",
     "active pools": "Pools Identificados Ativos",
+    "active pools count": "{active} de {total}",
     "block time target": "Meta de Tempo de Bloco"
   },
   "NetworkStatistics": {
@@ -1991,7 +1992,25 @@
     "window30d": "30d",
     "windowAll": "Todo o período",
     "noHashrateData": "Sem snapshots de hashrate ainda — reabastecimento em andamento",
-    "noPoolData": "Sem estatísticas de pools ainda — reabastecimento em andamento"
+    "noPoolData": "Sem estatísticas de pools ainda — reabastecimento em andamento",
+    "networkHealth": "Saúde da Rede",
+    "nakamoto": "Coeficiente de Nakamoto",
+    "nakamotoLowerBound": "≥ {count}",
+    "hhi": "Concentração de Hashrate (HHI)",
+    "hhiValue": "{value} · {status}",
+    "concentrationCompetitive": "competitiva",
+    "concentrationModerate": "moderada",
+    "concentrationConcentrated": "concentrada",
+    "activeOfTotal": "Pools Ativos",
+    "activeOfTotalValue": "{active} ativos de {total}",
+    "avgBlockTime": "Tempo Médio de Bloco",
+    "blockTimeValue": "{seconds}s · variabilidade {variability}",
+    "difficultyStability": "Estabilidade da Dificuldade",
+    "difficultyValue": "{variability} · {status}",
+    "difficultyStable": "estável",
+    "difficultyModerate": "moderada",
+    "difficultyVolatile": "volátil",
+    "notEnoughData": "—"
   },
   "OffchainGovernanceInfo": {
     "title": "Governança",
