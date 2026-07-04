@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import Button from '@/components/common/button';
 import BaseModal from '@/components/common/modal/base-modal';
@@ -16,37 +16,48 @@ interface OwnProps {
 const WalletModal: FC<OwnProps> = ({ isOpened, onClose }) => {
   const router = useRouter();
   const { refreshWallet } = useWallet();
+  const [isConnecting, setIsConnecting] = useState(false);
 
   const handleClick = async (provider: WalletProvider, extension: string) => {
-    await provider.enable('cosmoshub-4');
-    const { wallet, walletName } = await provider.connect('cosmoshub-4');
-    const { signature, key } = await provider.signProof('cosmoshub-4');
+    if (isConnecting) return;
+    setIsConnecting(true);
 
-    const body = {
-      key,
-      signature,
-      address: wallet.address,
-      walletName,
-      chainId: 'cosmoshub-4',
-      extension,
-    };
+    try {
+      await provider.enable('cosmoshub-4');
+      const { wallet, walletName } = await provider.connect('cosmoshub-4');
+      const { signature, key } = await provider.signProof('cosmoshub-4');
 
-    const response = await fetch('/api/auth/wallet/', {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: { 'Content-Type': 'application/json' },
-    }).then((res) => res.json());
+      const body = {
+        key,
+        signature,
+        address: wallet.address,
+        walletName,
+        chainId: 'cosmoshub-4',
+        extension,
+      };
 
-    localStorage.setItem('validatorinfo.com', JSON.stringify(response.jwt));
+      const response = await fetch('/api/auth/wallet/', {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: { 'Content-Type': 'application/json' },
+      }).then((res) => res.json());
 
-    refreshWallet();
-    onClose();
-    router.push('/profile');
+      localStorage.setItem('validatorinfo.com', JSON.stringify(response.jwt));
+
+      refreshWallet();
+      onClose();
+      router.push('/profile');
+    } catch (error) {
+      // Wallet popup rejected / signing failed / network error — reset so the user can retry.
+      console.error('[wallet] connect failed:', error);
+      setIsConnecting(false);
+    }
   };
   return (
     <BaseModal
       title="Connect Wallet"
       isRelative={false}
+      withOverlay
       opened={isOpened}
       onClose={onClose}
       className="left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"

@@ -11,6 +11,7 @@ export interface TabOptions {
   // When true the tab renders blurred + non-clickable (a section that has no data for this entity,
   // e.g. governance/revenue for a mining pool). Kept visible for layout parity with siblings.
   disabled?: boolean;
+  isWalletLogin?: boolean;
 }
 
 export const mainTabs: TabOptions[] = [
@@ -37,7 +38,7 @@ export const mainTabs: TabOptions[] = [
 // networkTabs backs the left menu's Networks group (and the mobile/game overlays).
 export const homeTabs: TabOptions[] = [
   { name: 'Home', href: '/', icon: icons.HomeIcon, iconHovered: icons.HomeIconHovered },
-  { name: 'You', href: '/profile', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered },
+  { name: 'You', href: '/profile', icon: icons.ContactsIcon, iconHovered: icons.ContactsIconHovered, isWalletLogin: true },
   { name: 'AI', href: '/ai', icon: icons.RabbitIcon, iconHovered: icons.RabbitIconHovered },
   { name: 'About Us', href: '/about', icon: icons.LogoIcon, iconHovered: icons.LogoIconHovered },
   { name: 'Play', href: '/library', icon: icons.LibraryIcon, iconHovered: icons.LibraryIconHovered },

@@ -14,6 +14,7 @@ interface WalletContextType {
     chainId: string;
     providerName: string;
   } | null;
+  isInitializing: boolean;
   refreshWallet: () => void;
   logout: () => void;
 }
@@ -21,35 +22,58 @@ interface WalletContextType {
 const WalletContext = createContext<WalletContextType | undefined>(undefined);
 
 export const WalletProviderComponent: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [verification, setVerification] = useState<WalletVerificationResponse | null>(null);
   const [walletData, setWalletData] = useState<WalletContextType['walletData']>(null);
+  const [isInitializing, setIsInitializing] = useState(true);
 
   const logout = () => {
     localStorage.removeItem('validatorinfo.com');
     setWalletData(null);
+    setIsInitializing(false);
   };
 
   const refreshWallet = () => {
     const currentJwt = localStorage.getItem('validatorinfo.com');
 
     const verifyWallet = async () => {
-      if (currentJwt) {
-        try {
-          const resp = await fetch('/api/auth/wallet/verify/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ jwt: currentJwt }),
-          });
-          if (resp.ok) {
-            const data = await resp.json();
-            setVerification(data);
+      if (!currentJwt) {
+        setWalletData(null);
+        setIsInitializing(false);
+        return;
+      }
+
+      setIsInitializing(true);
+
+      try {
+        const resp = await fetch('/api/auth/wallet/verify/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ jwt: currentJwt }),
+        });
+        if (resp.ok) {
+          const data = (await resp.json()) as WalletVerificationResponse;
+          const { walletName, address, extension } = data;
+          const providerEntry = WALLETS.find(({ label }) => label === extension);
+
+          if (providerEntry) {
+            setWalletData({
+              provider: providerEntry.provider,
+              providerName: extension,
+              name: walletName,
+              address: address,
+              chainId: 'cosmoshub-4',
+            });
           } else {
-            console.error('Failed to verify JWT:', resp.status);
-            setVerification(null);
+            setWalletData(null);
           }
-        } catch (error) {
-          console.error('Error verifying JWT:', error);
+        } else {
+          console.error('Failed to verify JWT:', resp.status);
+          setWalletData(null);
         }
+      } catch (error) {
+        console.error('Error verifying JWT:', error);
+        setWalletData(null);
+      } finally {
+        setIsInitializing(false);
       }
     };
 
@@ -60,25 +84,7 @@ export const WalletProviderComponent: React.FC<{ children: React.ReactNode }> = 
     refreshWallet(); // Проверка JWT при загрузке
   }, []);
 
-  useEffect(() => {
-    if (verification) {
-      const { walletName, address, extension } = verification;
-
-      const providerEntry = WALLETS.find(({ label }) => label === extension);
-
-      if (providerEntry) {
-        setWalletData({
-          provider: providerEntry.provider,
-          providerName: extension,
-          name: walletName,
-          address: address,
-          chainId: 'cosmoshub-4',
-        });
-      }
-    }
-  }, [verification]);
-
-  const value = useMemo(() => ({ walletData, refreshWallet, logout }), [walletData]);
+  const value = useMemo(() => ({ walletData, isInitializing, refreshWallet, logout }), [walletData, isInitializing]);
 
   return <WalletContext.Provider value={value}>{children}</WalletContext.Provider>;
 };

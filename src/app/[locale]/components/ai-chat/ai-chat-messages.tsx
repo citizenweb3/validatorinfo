@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 
 import { cn } from '@/utils/cn';
 import parseMarkdown from '@/utils/parse-ai-markdown';
+import LoadingDots from '@/components/common/loading-dots';
 import { ChatMessage } from '@/hooks/use-ai-chat';
 import { PageContext } from '@/hooks/use-ai-context';
 
@@ -79,11 +80,7 @@ const AiChatMessages: FC<OwnProps> = ({ messages, isLoading, context, onLinkClic
           <div className="border border-bgSt bg-bgHover px-6 py-5 text-5xl leading-snug text-gray-400 sm:px-4 sm:py-3 sm:text-3xl md:px-3 md:py-2 md:text-sm">
             <span className="inline-flex items-center gap-1">
               {t('AI is thinking')}
-              <span className="inline-flex gap-0.5">
-                <span className="h-4 w-4 animate-bounce rounded-full bg-gray-400 sm:h-3 sm:w-3 md:h-1 md:w-1" />
-                <span className="h-4 w-4 animate-bounce rounded-full bg-gray-400 sm:h-3 sm:w-3 md:h-1 md:w-1" />
-                <span className="h-4 w-4 animate-bounce rounded-full bg-gray-400 sm:h-3 sm:w-3 md:h-1 md:w-1" />
-              </span>
+              <LoadingDots />
             </span>
           </div>
         </div>

@@ -4,9 +4,11 @@ import { NamespaceKeys, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC } from 'react';
+import { FC, MouseEvent, useState } from 'react';
 
 import { TabOptions } from '@/components/common/tabs/tabs-data';
+import WalletModal from '@/components/wallet-connect/wallet-modal';
+import { useWallet } from '@/context/WalletContext';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {
@@ -20,10 +22,21 @@ const menuButtonPressedShadow = 'active:shadow-menu-button-pressed';
 
 const TabListItem: FC<OwnProps> = ({
   page,
-  item: { name, href, icon, iconHovered, isScroll = true, disabled = false },
+  item: { name, href, icon, iconHovered, isScroll = true, disabled = false, isWalletLogin = false },
 }) => {
   const isActive = usePathname() === href;
   const t = useTranslations(`${page}.Tabs` as NamespaceKeys<IntlMessages, 'HomePage.Tabs'>);
+  const { walletData } = useWallet();
+  const [isWalletModalOpened, setIsWalletModalOpened] = useState(false);
+
+  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (!isWalletLogin || walletData) {
+      return;
+    }
+
+    event.preventDefault();
+    setIsWalletModalOpened(true);
+  };
 
   const content = (
     <div className="flex h-full w-full flex-row flex-nowrap items-center justify-center text-base font-semibold group-hover:text-highlight">
@@ -69,18 +82,22 @@ const TabListItem: FC<OwnProps> = ({
   }
 
   return (
-    <Link
-      href={href}
-      aria-current={isActive ? 'page' : undefined}
-      className={`${
-        isActive
-          ? `border border-bgSt bg-card text-highlight ${menuButtonSelectedShadow}`
-          : `border-r border-t border-bgSt bg-table_row ${menuButtonRaisedShadow}`
-      } ${menuButtonHoverShadow} ${menuButtonPressedShadow} group relative mt-12 flex min-h-36 min-w-0 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-0.5 text-sm transition-width duration-300 hover:bg-card hover:text-highlight active:border-transparent active:bg-card sm:mt-12 sm:min-h-20 md:mt-0 md:min-h-10`}
-      scroll={isScroll}
-    >
-      {content}
-    </Link>
+    <>
+      <Link
+        href={href}
+        aria-current={isActive ? 'page' : undefined}
+        onClick={handleClick}
+        className={`${
+          isActive
+            ? `border border-bgSt bg-card text-highlight ${menuButtonSelectedShadow}`
+            : `border-r border-t border-bgSt bg-table_row ${menuButtonRaisedShadow}`
+        } ${menuButtonHoverShadow} ${menuButtonPressedShadow} group relative mt-12 flex min-h-36 min-w-0 w-full flex-grow cursor-pointer flex-row items-center justify-center overflow-hidden p-0.5 text-sm transition-width duration-300 hover:bg-card hover:text-highlight active:border-transparent active:bg-card sm:mt-12 sm:min-h-20 md:mt-0 md:min-h-10`}
+        scroll={isScroll}
+      >
+        {content}
+      </Link>
+      {isWalletLogin && <WalletModal isOpened={isWalletModalOpened} onClose={() => setIsWalletModalOpened(false)} />}
+    </>
   );
 };
 
