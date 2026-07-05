@@ -117,8 +117,8 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
       ? (stockToFlow(supplyAtomic, annualAtomic)?.toFixed(1) ?? noData)
       : noData;
   const isTailEmission = blockRewardAtomic === TAIL_EMISSION_ATOMIC && tailEmissionAmount !== null;
-  const emissionPhaseValue = isTailEmission ? t('tail emission') : noData;
   const emissionPhaseLine = isTailEmission ? t('per block value', { amount: tailEmissionAmount }) : '';
+  const emissionPhaseValue = isTailEmission ? withTooltip(emissionPhaseLine, t('tail emission')) : noData;
 
   return (
     <div className={cardGridClassName}>
@@ -157,8 +157,6 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
         data={emissionPhaseValue}
         className={cardClassName}
         dataClassName={dataClassName}
-        addLineData={emissionPhaseLine}
-        addLineClassName="px-2 text-center font-handjet text-base leading-5 text-highlight"
       />
     </div>
   );

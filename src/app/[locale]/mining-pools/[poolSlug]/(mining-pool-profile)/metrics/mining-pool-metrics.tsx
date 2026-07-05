@@ -4,6 +4,7 @@ import { FC } from 'react';
 import HashrateWindowSelector from '@/app/networks/[name]/(network-profile)/stats/hashrate-window-selector';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
+import Tooltip from '@/components/common/tooltip';
 import { Locale } from '@/i18n';
 import { HashrateWindow, MoneroPoolBlock } from '@/services/monero-service';
 import cutHash from '@/utils/cut-hash';
@@ -51,7 +52,6 @@ const cardClassName = `
       xl:min-h-[80px]
       2xl:min-h-[94px]`;
 const cardValueClassName = 'mt-3 px-2 text-center leading-5';
-const cardAddLineClassName = 'px-2 text-center font-sfpro text-sm leading-4 opacity-70';
 
 const formatRelativeTime = (date: Date, locale: Locale): string => {
   const diffMs = Date.now() - date.getTime();
@@ -91,20 +91,18 @@ const MiningPoolMetrics: FC<OwnProps> = ({
   const shareValue = stat?.sharePercent != null ? stat.sharePercent.toFixed(2) : labels.noData;
 
   const lastBlockValue = lastBlock ? (
-    <div className="flex flex-col items-center gap-1">
-      <Link
-        href={`/networks/${chainName}/blocks/${lastBlock.blockHash}`}
-        aria-label={`${labels.lastBlockFound} ${formatCount(lastBlock.height, locale)}`}
-        className="underline underline-offset-3 hover:text-highlight"
-      >
-        #{formatCount(lastBlock.height, locale)}
-      </Link>
-      <span className="font-sfpro text-sm opacity-70">{cutHash({ value: lastBlock.blockHash })}</span>
-    </div>
+    <Link
+      href={`/networks/${chainName}/blocks/${lastBlock.blockHash}`}
+      aria-label={`${labels.lastBlockFound} ${formatCount(lastBlock.height, locale)}`}
+      className="underline underline-offset-3 hover:text-highlight"
+    >
+      #{formatCount(lastBlock.height, locale)}
+    </Link>
   ) : (
     labels.noData
   );
   const lastBlockRelativeTime = lastBlock ? formatRelativeTime(lastBlock.blockTimestamp, locale) : '';
+  const lastBlockTooltip = lastBlock ? `${cutHash({ value: lastBlock.blockHash })} · ${lastBlockRelativeTime}` : '';
 
   return (
     <section>
@@ -127,14 +125,14 @@ const MiningPoolMetrics: FC<OwnProps> = ({
           className={cardClassName}
           dataClassName={cardValueClassName}
         />
-        <MetricsCardItem
-          title={labels.blocksFound}
-          data={blocksValue}
-          className={cardClassName}
-          dataClassName={cardValueClassName}
-          addLineData={allTimeBlocksValue}
-          addLineClassName={cardAddLineClassName}
-        />
+        <Tooltip tooltip={allTimeBlocksValue}>
+          <MetricsCardItem
+            title={labels.blocksFound}
+            data={blocksValue}
+            className={cardClassName}
+            dataClassName={cardValueClassName}
+          />
+        </Tooltip>
         <MetricsCardItem
           title={labels.marketShare}
           data={shareValue}
@@ -142,14 +140,14 @@ const MiningPoolMetrics: FC<OwnProps> = ({
           className={cardClassName}
           dataClassName={cardValueClassName}
         />
-        <MetricsCardItem
-          title={labels.lastBlockFound}
-          data={lastBlockValue}
-          className={cardClassName}
-          dataClassName={cardValueClassName}
-          addLineData={lastBlockRelativeTime}
-          addLineClassName={cardAddLineClassName}
-        />
+        <Tooltip tooltip={lastBlockTooltip}>
+          <MetricsCardItem
+            title={labels.lastBlockFound}
+            data={lastBlockValue}
+            className={cardClassName}
+            dataClassName={cardValueClassName}
+          />
+        </Tooltip>
       </div>
     </section>
   );
