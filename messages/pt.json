@@ -2019,6 +2019,16 @@
     "difficultyStable": "estável",
     "difficultyModerate": "moderada",
     "difficultyVolatile": "volátil",
+    "emissionTitle": "Emissão / Oferta",
+    "circulatingSupply": "Oferta circulante",
+    "blockReward": "Recompensa por bloco",
+    "annualIssuance": "Emissão anual",
+    "annualInflation": "Inflação anual",
+    "stockToFlow": "Stock-to-flow",
+    "emissionPhase": "Fase de emissão",
+    "tailEmission": "Emissão caudal — {reward}/bloco",
+    "perBlockValue": "{amount}/bloco",
+    "perYearValue": "{amount}/ano",
     "notEnoughData": "—"
   },
   "OffchainGovernanceInfo": {

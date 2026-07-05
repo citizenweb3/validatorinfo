@@ -2019,6 +2019,16 @@
     "difficultyStable": "стабильная",
     "difficultyModerate": "умеренная",
     "difficultyVolatile": "волатильная",
+    "emissionTitle": "Эмиссия / предложение",
+    "circulatingSupply": "Циркулирующее предложение",
+    "blockReward": "Награда за блок",
+    "annualIssuance": "Годовая эмиссия",
+    "annualInflation": "Годовая инфляция",
+    "stockToFlow": "Stock-to-flow",
+    "emissionPhase": "Фаза эмиссии",
+    "tailEmission": "Хвостовая эмиссия — {reward}/блок",
+    "perBlockValue": "{amount}/блок",
+    "perYearValue": "{amount}/год",
     "notEnoughData": "—"
   },
   "OffchainGovernanceInfo": {

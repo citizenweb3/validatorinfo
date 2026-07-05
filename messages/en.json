@@ -2018,6 +2018,16 @@
     "difficultyStable": "stable",
     "difficultyModerate": "moderate",
     "difficultyVolatile": "volatile",
+    "emissionTitle": "Emission / Supply",
+    "circulatingSupply": "Circulating Supply",
+    "blockReward": "Block Reward",
+    "annualIssuance": "Annual Issuance",
+    "annualInflation": "Annual Inflation",
+    "stockToFlow": "Stock-to-Flow",
+    "emissionPhase": "Emission Phase",
+    "tailEmission": "Tail emission — {reward}/block",
+    "perBlockValue": "{amount}/block",
+    "perYearValue": "{amount}/yr",
     "notEnoughData": "—"
   },
   "OffchainGovernanceInfo": {
