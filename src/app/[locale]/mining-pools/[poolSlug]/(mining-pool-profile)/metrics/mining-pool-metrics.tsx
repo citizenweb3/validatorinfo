@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import HashrateWindowSelector from '@/app/networks/[name]/(network-profile)/stats/hashrate-window-selector';
-import PassportRow, { signalColors } from '@/components/common/passport-row';
+import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
 import { Locale } from '@/i18n';
 import { HashrateWindow, MoneroPoolBlock } from '@/services/monero-service';
@@ -42,6 +42,17 @@ interface OwnProps {
 
 const formatCount = (value: number, locale: Locale): string => value.toLocaleString(locale);
 
+const cardClassName = `
+      pt-2.5
+      sm:min-h-[45px]
+      sm:min-h-[55px]
+      md:min-h-[63px]
+      lg:min-h-[75px]
+      xl:min-h-[80px]
+      2xl:min-h-[94px]`;
+const cardValueClassName = 'mt-3 px-2 text-center leading-5';
+const cardAddLineClassName = 'px-2 text-center font-sfpro text-sm leading-4 opacity-70';
+
 const formatRelativeTime = (date: Date, locale: Locale): string => {
   const diffMs = Date.now() - date.getTime();
   if (diffMs < 0) return '-';
@@ -61,13 +72,6 @@ const formatRelativeTime = (date: Date, locale: Locale): string => {
   return formatter.format(-days, 'day');
 };
 
-const getShareColor = (sharePercent: number | null | undefined): string | undefined => {
-  if (sharePercent === null || sharePercent === undefined) return undefined;
-  if (sharePercent > 33) return signalColors.red;
-  if (sharePercent >= 10) return signalColors.yellow;
-  return signalColors.green;
-};
-
 const MiningPoolMetrics: FC<OwnProps> = ({
   allTimeBlocks,
   chainName,
@@ -81,16 +85,13 @@ const MiningPoolMetrics: FC<OwnProps> = ({
   windowOptions,
 }) => {
   const hashrateValue = stat ? formatHashrate(stat.hashrateEstimate) : labels.noData;
-  const feeValue = feePercent != null ? `${feePercent.toFixed(2)}%` : labels.noData;
-  const blocksValue = stat
-    ? `${formatCount(stat.blocksFound, locale)} (${currentWindowLabel}) / ${formatCount(allTimeBlocks, locale)} ${
-        labels.allTime
-      }`
-    : labels.noData;
-  const shareValue = stat?.sharePercent != null ? `${stat.sharePercent.toFixed(2)}%` : labels.noData;
+  const feeValue = feePercent != null ? feePercent.toFixed(2) : labels.noData;
+  const blocksValue = stat ? formatCount(stat.blocksFound, locale) : labels.noData;
+  const allTimeBlocksValue = `${currentWindowLabel} · ${formatCount(allTimeBlocks, locale)} ${labels.allTime}`;
+  const shareValue = stat?.sharePercent != null ? stat.sharePercent.toFixed(2) : labels.noData;
 
   const lastBlockValue = lastBlock ? (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+    <div className="flex flex-col items-center gap-1">
       <Link
         href={`/networks/${chainName}/blocks/${lastBlock.blockHash}`}
         aria-label={`${labels.lastBlockFound} ${formatCount(lastBlock.height, locale)}`}
@@ -98,12 +99,12 @@ const MiningPoolMetrics: FC<OwnProps> = ({
       >
         #{formatCount(lastBlock.height, locale)}
       </Link>
-      <span className="font-sfpro text-sm opacity-80">{formatRelativeTime(lastBlock.blockTimestamp, locale)}</span>
       <span className="font-sfpro text-sm opacity-70">{cutHash({ value: lastBlock.blockHash })}</span>
     </div>
   ) : (
     labels.noData
   );
+  const lastBlockRelativeTime = lastBlock ? formatRelativeTime(lastBlock.blockTimestamp, locale) : '';
 
   return (
     <section>
@@ -112,12 +113,43 @@ const MiningPoolMetrics: FC<OwnProps> = ({
         {windowOptions.length > 1 && <HashrateWindowSelector current={currentWindow} options={windowOptions} />}
       </div>
 
-      <div className="mt-4">
-        <PassportRow label={labels.hashrate} value={hashrateValue} />
-        <PassportRow label={labels.poolFee} value={feeValue} />
-        <PassportRow label={labels.blocksFound} value={blocksValue} />
-        <PassportRow label={labels.marketShare} value={shareValue} color={getShareColor(stat?.sharePercent)} />
-        <PassportRow label={labels.lastBlockFound} value={lastBlockValue} />
+      <div className="mt-12 flex w-full flex-wrap justify-center gap-8">
+        <MetricsCardItem
+          title={labels.hashrate}
+          data={hashrateValue}
+          className={cardClassName}
+          dataClassName={cardValueClassName}
+        />
+        <MetricsCardItem
+          title={labels.poolFee}
+          data={feeValue}
+          isPercents={feePercent != null}
+          className={cardClassName}
+          dataClassName={cardValueClassName}
+        />
+        <MetricsCardItem
+          title={labels.blocksFound}
+          data={blocksValue}
+          className={cardClassName}
+          dataClassName={cardValueClassName}
+          addLineData={allTimeBlocksValue}
+          addLineClassName={cardAddLineClassName}
+        />
+        <MetricsCardItem
+          title={labels.marketShare}
+          data={shareValue}
+          isPercents={stat?.sharePercent != null}
+          className={cardClassName}
+          dataClassName={cardValueClassName}
+        />
+        <MetricsCardItem
+          title={labels.lastBlockFound}
+          data={lastBlockValue}
+          className={cardClassName}
+          dataClassName={cardValueClassName}
+          addLineData={lastBlockRelativeTime}
+          addLineClassName={cardAddLineClassName}
+        />
       </div>
     </section>
   );
