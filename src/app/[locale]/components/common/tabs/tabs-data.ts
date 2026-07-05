@@ -150,7 +150,7 @@ export const getValidatorProfileTabs = (id: number): TabOptions[] => {
 
 // Mining-pool profile tabs — same positions as the validator profile, with one difference: Governance
 // is replaced by Blocks. The centre tab "Network Table" (= /networks) is the default landing tab and
-// is real, like the validator. Revenue/Metrics/Public Goods have no pool equivalent → blurred + disabled.
+// is real, like the validator. Revenue/Public Goods have no pool equivalent → blurred + disabled.
 export const getMiningPoolProfileTabs = (slug: string): TabOptions[] => {
   return [
     {
@@ -165,7 +165,6 @@ export const getMiningPoolProfileTabs = (slug: string): TabOptions[] => {
       href: `/mining-pools/${slug}/metrics`,
       icon: icons.MetricsIcon,
       iconHovered: icons.MetricsIconHovered,
-      disabled: true,
     },
     {
       name: 'Network Table',
