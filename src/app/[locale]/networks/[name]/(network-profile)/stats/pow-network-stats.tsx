@@ -6,7 +6,6 @@ import SubTitle from '@/components/common/sub-title';
 import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-service';
 
 import HashrateWindowSelector from './hashrate-window-selector';
-import MoneroEmission from './monero-emission';
 import NetworkHealth from './network-health';
 
 interface OwnProps {
@@ -86,7 +85,6 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
         )}
       </section>
       <NetworkHealth poolStats={poolStats} window={safeWindow} />
-      <MoneroEmission />
     </div>
   );
 };
