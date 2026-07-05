@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
+import PassportRow, { signalColors } from '@/components/common/passport-row';
 import SubTitle from '@/components/common/sub-title';
 import { MONERO_BLOCK_TIME_SECONDS } from '@/server/tools/chains/monero/constants';
 import moneroService, { HashrateWindow, MoneroPoolStatsRow } from '@/services/monero-service';
@@ -17,18 +18,6 @@ interface OwnProps {
   window: HashrateWindow;
 }
 
-interface HealthRowProps {
-  label: string;
-  value: string;
-  color?: string;
-}
-
-const signalColors = {
-  red: '#EB1616',
-  yellow: '#E5C46B',
-  green: '#4FB848',
-};
-
 const concentrationLabelKeys = {
   competitive: 'concentrationCompetitive',
   moderate: 'concentrationModerate',
@@ -40,18 +29,6 @@ const difficultyLabelKeys = {
   moderate: 'difficultyModerate',
   volatile: 'difficultyVolatile',
 } as const;
-
-const HealthRow: FC<HealthRowProps> = ({ label, value, color }) => (
-  <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
-    <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">{label}</div>
-    <div
-      className="flex w-2/3 items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg"
-      style={color ? { color } : undefined}
-    >
-      {value}
-    </div>
-  </div>
-);
 
 const formatPercent = (value: number, digits = 1): string => `${(value * 100).toFixed(digits)}%`;
 
@@ -155,23 +132,23 @@ const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
     <section>
       <SubTitle text={t('networkHealth')} />
       <div className="mt-4">
-        <HealthRow
+        <PassportRow
           label={t('nakamoto')}
           value={nakamotoValue}
           color={nakamotoColor(nakamoto.count, nakamoto.isLowerBound)}
         />
-        <HealthRow label={t('hhi')} value={hhiValue} color={hhiColor(concentration)} />
-        <HealthRow
+        <PassportRow label={t('hhi')} value={hhiValue} color={hhiColor(concentration)} />
+        <PassportRow
           label={t('activeOfTotal')}
           value={activeValue}
           color={poolCount > 0 ? signalColors.green : undefined}
         />
-        <HealthRow
+        <PassportRow
           label={t('avgBlockTime')}
           value={blockTimeValue}
           color={blockTimeColor(blockTime.averageSeconds, blockTime.coefficientOfVariation)}
         />
-        <HealthRow
+        <PassportRow
           label={t('difficultyStability')}
           value={difficultyValue}
           color={difficultyColor(difficultyStatus)}

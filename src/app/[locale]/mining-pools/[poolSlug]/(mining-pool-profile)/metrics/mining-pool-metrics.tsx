@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 
 import HashrateWindowSelector from '@/app/networks/[name]/(network-profile)/stats/hashrate-window-selector';
+import PassportRow, { signalColors } from '@/components/common/passport-row';
 import SubTitle from '@/components/common/sub-title';
 import { Locale } from '@/i18n';
 import { HashrateWindow, MoneroPoolBlock } from '@/services/monero-service';
-import { cn } from '@/utils/cn';
 import cutHash from '@/utils/cut-hash';
 import { formatHashrate } from '@/utils/format-hashrate';
 
@@ -40,28 +40,6 @@ interface OwnProps {
   windowOptions: WindowOption[];
 }
 
-interface MetricRowProps {
-  label: string;
-  value: ReactNode;
-  valueClassName?: string;
-}
-
-const MetricRow: FC<MetricRowProps> = ({ label, value, valueClassName }) => (
-  <div className="mt-2 grid min-h-[72px] w-full grid-cols-1 bg-table_row hover:bg-bgHover md:grid-cols-3">
-    <div className="flex items-center border-b border-bgSt px-4 py-3 font-sfpro text-base md:border-r md:pl-8 md:text-lg">
-      {label}
-    </div>
-    <div
-      className={cn(
-        'flex items-center gap-2 border-b border-bgSt px-4 py-3 font-handjet text-lg md:col-span-2 md:pl-6',
-        valueClassName,
-      )}
-    >
-      {value}
-    </div>
-  </div>
-);
-
 const formatCount = (value: number, locale: Locale): string => value.toLocaleString(locale);
 
 const formatRelativeTime = (date: Date, locale: Locale): string => {
@@ -83,11 +61,11 @@ const formatRelativeTime = (date: Date, locale: Locale): string => {
   return formatter.format(-days, 'day');
 };
 
-const getShareClassName = (sharePercent: number | null | undefined): string | undefined => {
+const getShareColor = (sharePercent: number | null | undefined): string | undefined => {
   if (sharePercent === null || sharePercent === undefined) return undefined;
-  if (sharePercent > 33) return 'text-[#EB1616]';
-  if (sharePercent >= 10) return 'text-[#E5C46B]';
-  return 'text-[#4FB848]';
+  if (sharePercent > 33) return signalColors.red;
+  if (sharePercent >= 10) return signalColors.yellow;
+  return signalColors.green;
 };
 
 const MiningPoolMetrics: FC<OwnProps> = ({
@@ -135,11 +113,11 @@ const MiningPoolMetrics: FC<OwnProps> = ({
       </div>
 
       <div className="mt-4">
-        <MetricRow label={labels.hashrate} value={hashrateValue} />
-        <MetricRow label={labels.poolFee} value={feeValue} />
-        <MetricRow label={labels.blocksFound} value={blocksValue} />
-        <MetricRow label={labels.marketShare} value={shareValue} valueClassName={getShareClassName(stat?.sharePercent)} />
-        <MetricRow label={labels.lastBlockFound} value={lastBlockValue} />
+        <PassportRow label={labels.hashrate} value={hashrateValue} />
+        <PassportRow label={labels.poolFee} value={feeValue} />
+        <PassportRow label={labels.blocksFound} value={blocksValue} />
+        <PassportRow label={labels.marketShare} value={shareValue} color={getShareColor(stat?.sharePercent)} />
+        <PassportRow label={labels.lastBlockFound} value={lastBlockValue} />
       </div>
     </section>
   );
