@@ -37,8 +37,7 @@ const formatPercent = (value: number | null): string | null => {
 const MoneroEmission: FC = async () => {
   const t = await getTranslations('PowNetworkStats');
 
-  const [snapshot, supplyRaw, params] = await Promise.all([
-    moneroService.getMoneroNetworkSnapshot(),
+  const [supplyRaw, params] = await Promise.all([
     moneroService.getMoneroSupply(),
     moneroService.getMoneroChainParams(),
   ]);
@@ -76,7 +75,7 @@ const MoneroEmission: FC = async () => {
       : t('notEnoughData');
   const tailEmissionAmount = formatAtomicTokenAmount(TAIL_EMISSION_ATOMIC, coinDecimals, denom, 2);
   const emissionPhaseValue =
-    snapshot && blockRewardAtomic === TAIL_EMISSION_ATOMIC && tailEmissionAmount !== null
+    blockRewardAtomic === TAIL_EMISSION_ATOMIC && tailEmissionAmount !== null
       ? t('tailEmission', { reward: tailEmissionAmount })
       : t('notEnoughData');
 
