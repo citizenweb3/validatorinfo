@@ -142,6 +142,7 @@ model Chain {
   miningPools             MiningPool[]             @relation("chain_mining_pools")
   miningPoolStats         MiningPoolStats[]        @relation("chain_mining_pool_stats")
   hashrateSnapshots       ChainHashrateSnapshot[]  @relation("chain_hashrate_snapshots")
+  moneroBlocks            MoneroBlock[]            @relation("chain_monero_blocks")
   moneroBlockAttributions MoneroBlockAttribution[] @relation("chain_monero_block_attributions")
 
   proposalsTotal  Int @default(0) @map("proposals_total")
@@ -647,6 +648,32 @@ model ChainHashrateSnapshot {
   @@unique([chainId, snapshotAt])
   @@index([chainId, height])
   @@map("chain_hashrate_snapshots")
+}
+
+model MoneroBlock {
+  id             Int      @id @default(autoincrement())
+  chainId        Int      @map("chain_id")
+  height         Int
+  blockHash      String   @map("block_hash")
+  blockTimestamp DateTime @map("block_timestamp") @db.Timestamptz(6)
+  majorVersion   Int      @map("major_version")
+  minorVersion   Int      @map("minor_version")
+  size           Int
+  weight         Int      @map("block_weight")
+  longTermWeight Int      @map("long_term_weight")
+  txCount        Int      @map("tx_count")
+  rewardAtomic   String   @map("reward_atomic")
+  isCanonical    Boolean  @default(true) @map("is_canonical")
+  createdAt      DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_monero_blocks", fields: [chainId], references: [id])
+
+  @@unique([chainId, blockHash])
+  @@index([chainId, blockTimestamp])
+  @@index([chainId, isCanonical, blockTimestamp])
+  @@index([chainId, height])
+  @@map("monero_block")
 }
 
 model MoneroBlockAttribution {

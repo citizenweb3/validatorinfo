@@ -16,6 +16,8 @@ export type MoneroPoolStatsRow = MiningPoolStats & {
 };
 
 const MONERO_NAME = 'monero';
+const MONERO_BLOCK_METRICS_WINDOW_HOURS = 24;
+const MONERO_TX_METRICS_WINDOW_HOURS = 24;
 
 const windowToCutoff = (window: HashrateWindow): Date | null => {
   const now = Date.now();
@@ -153,6 +155,115 @@ export interface MoneroPoolBlock {
   blockTimestamp: Date;
 }
 
+export interface MoneroBlockVersionCount {
+  majorVersion: number;
+  count: number;
+}
+
+export interface MoneroBlockMetrics24h {
+  windowHours: typeof MONERO_BLOCK_METRICS_WINDOW_HOURS;
+  totalBlocks: number;
+  canonicalBlocks: number;
+  nonCanonicalBlocks: number;
+  averageRewardAtomic: string | null;
+  averageWeight: number | null;
+  versionCounts: MoneroBlockVersionCount[];
+}
+
+const getMoneroBlockMetrics24h = async (): Promise<MoneroBlockMetrics24h | null> => {
+  const chain = await getMoneroChain();
+  if (!chain) return null;
+
+  const cutoff = new Date(Date.now() - MONERO_BLOCK_METRICS_WINDOW_HOURS * 60 * 60 * 1000);
+  const rows = await db.moneroBlock.findMany({
+    where: { chainId: chain.id, blockTimestamp: { gte: cutoff } },
+    select: { isCanonical: true, rewardAtomic: true, weight: true, majorVersion: true },
+  });
+
+  let canonicalBlocks = 0;
+  let nonCanonicalBlocks = 0;
+  let rewardTotal = BigInt(0);
+  let rewardCount = 0;
+  let weightTotal = 0;
+  const versionCounts = new Map<number, number>();
+
+  for (const row of rows) {
+    if (!row.isCanonical) {
+      nonCanonicalBlocks += 1;
+      continue;
+    }
+
+    canonicalBlocks += 1;
+    weightTotal += row.weight;
+    versionCounts.set(row.majorVersion, (versionCounts.get(row.majorVersion) ?? 0) + 1);
+
+    try {
+      rewardTotal += BigInt(row.rewardAtomic);
+      rewardCount += 1;
+    } catch {
+      // Ignore malformed upstream reward strings instead of breaking the page.
+    }
+  }
+
+  return {
+    windowHours: MONERO_BLOCK_METRICS_WINDOW_HOURS,
+    totalBlocks: rows.length,
+    canonicalBlocks,
+    nonCanonicalBlocks,
+    averageRewardAtomic: rewardCount > 0 ? (rewardTotal / BigInt(rewardCount)).toString() : null,
+    averageWeight: canonicalBlocks > 0 ? weightTotal / canonicalBlocks : null,
+    versionCounts: Array.from(versionCounts.entries())
+      .map(([majorVersion, count]) => ({ majorVersion, count }))
+      .sort((a, b) => b.count - a.count || b.majorVersion - a.majorVersion),
+  };
+};
+
+export interface MoneroTxMetrics24h {
+  windowHours: typeof MONERO_TX_METRICS_WINDOW_HOURS;
+  totalTx: number;
+  blockCount: number;
+  feeTxCount: number;
+  feeBlockCount: number;
+  sumRewardAtomic: string;
+}
+
+const getMoneroTxMetrics24h = async (): Promise<MoneroTxMetrics24h | null> => {
+  const chain = await getMoneroChain();
+  if (!chain) return null;
+
+  const cutoff = new Date(Date.now() - MONERO_TX_METRICS_WINDOW_HOURS * 60 * 60 * 1000);
+  const rows = await db.moneroBlock.findMany({
+    where: { chainId: chain.id, blockTimestamp: { gte: cutoff }, isCanonical: true },
+    select: { txCount: true, rewardAtomic: true },
+  });
+
+  let totalTx = 0;
+  let feeTxCount = 0;
+  let feeBlockCount = 0;
+  let rewardTotal = BigInt(0);
+
+  for (const row of rows) {
+    totalTx += row.txCount;
+
+    try {
+      rewardTotal += BigInt(row.rewardAtomic);
+      feeTxCount += row.txCount;
+      feeBlockCount += 1;
+    } catch {
+      // Ignore malformed upstream reward strings for fee math instead of breaking the page.
+    }
+  }
+
+  return {
+    windowHours: MONERO_TX_METRICS_WINDOW_HOURS,
+    totalTx,
+    blockCount: rows.length,
+    feeTxCount,
+    feeBlockCount,
+    sumRewardAtomic: rewardTotal.toString(),
+  };
+};
+
 // A pool's recently-attributed canonical blocks (from MoneroBlockAttribution —
 // replaces the dead coinbase-fingerprint lookup; design §5/§7).
 const getMoneroPoolRecentBlocks = async (
@@ -250,6 +361,8 @@ const moneroService = {
   getMoneroActivePoolsCount,
   getMoneroChartData,
   getMoneroPoolsCount,
+  getMoneroBlockMetrics24h,
+  getMoneroTxMetrics24h,
   getMoneroPoolRecentBlocks,
   getMoneroPoolBlocksCount,
   getPoolByBlockHashes,
@@ -268,6 +381,8 @@ export {
   getMoneroActivePoolsCount,
   getMoneroChartData,
   getMoneroPoolsCount,
+  getMoneroBlockMetrics24h,
+  getMoneroTxMetrics24h,
   getMoneroPoolRecentBlocks,
   getMoneroPoolBlocksCount,
   getPoolByBlockHashes,

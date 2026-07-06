@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
 import NetworkBlocks from '@/app/networks/[name]/blocks/blocks-table/network-blocks';
+import MoneroBlockMetrics from '@/app/networks/[name]/blocks/monero-block-metrics';
 import PowBlocks from '@/app/networks/[name]/blocks/pow-blocks';
 import PageTitle from '@/components/common/page-title';
 import SubDescription from '@/components/sub-description';
@@ -50,7 +51,10 @@ const TotalBlocksPage: NextPageWithLocale<PageProps> = async ({ params: { name, 
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       {isPow && chain ? (
-        <PowBlocks chain={chain} locale={locale} currentPage={currentPage} limit={perPage} />
+        <>
+          <MoneroBlockMetrics chainName={chain.name} locale={locale} />
+          <PowBlocks chain={chain} locale={locale} currentPage={currentPage} limit={perPage} />
+        </>
       ) : (
         <NetworkBlocks name={name} page={'TotalBlocksPage'} perPage={perPage} currentPage={currentPage} />
       )}
