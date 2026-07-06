@@ -16,7 +16,6 @@ interface OwnProps {
 const cardClassName = 'pb-8 pt-2.5';
 const dataClassName = 'mt-6 px-2 text-center leading-5';
 const mutedDataClassName = `${dataClassName} blur-sm`;
-const addLineClassName = 'mt-1 font-sfpro text-sm leading-4 opacity-80';
 const cardGridClassName =
   'mt-10 grid w-full grid-cols-[repeat(2,auto)] justify-center gap-6 md:grid-cols-[repeat(4,auto)]';
 
@@ -85,8 +84,6 @@ const MoneroBlockMetrics: FC<OwnProps> = async ({ chainName, locale }) => {
         data={versionLabel ? withTooltip(versionLabel, versionTooltip) : noData}
         className={cardClassName}
         dataClassName={versionLabel ? dataClassName : mutedDataClassName}
-        addLineData={versionShare ?? ''}
-        addLineClassName={addLineClassName}
       />
       <MetricsCardItem
         title={t('reorgRate')}
