@@ -2064,6 +2064,15 @@
     "regular": "Обычная",
     "older": "Старее"
   },
+  "MoneroBlockMetrics": {
+    "avgBlockReward": "Средняя награда блока",
+    "avgBlockWeight": "Средний вес блока",
+    "consensusVersion": "Версия консенсуса",
+    "reorgRate": "Доля реорганизаций",
+    "versionLabel": "v{version}",
+    "versionShare": "{version} занимает {share} канонических блоков за последние 24 ч",
+    "notEnoughData": "—"
+  },
   "PowBlocks": {
     "hash": "Хеш блока",
     "title": "Последние блоки",

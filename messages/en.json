@@ -2063,6 +2063,15 @@
     "regular": "Regular",
     "older": "Older"
   },
+  "MoneroBlockMetrics": {
+    "avgBlockReward": "Avg Block Reward",
+    "avgBlockWeight": "Avg Block Weight",
+    "consensusVersion": "Consensus Version",
+    "reorgRate": "Reorg Rate",
+    "versionLabel": "v{version}",
+    "versionShare": "{version} is {share} of canonical blocks in the last 24h",
+    "notEnoughData": "—"
+  },
   "PowBlocks": {
     "hash": "Block Hash",
     "title": "Recent Blocks",

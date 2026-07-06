@@ -2064,6 +2064,15 @@
     "regular": "Regular",
     "older": "Mais antigas"
   },
+  "MoneroBlockMetrics": {
+    "avgBlockReward": "Recompensa Média do Bloco",
+    "avgBlockWeight": "Peso Médio do Bloco",
+    "consensusVersion": "Versão de Consenso",
+    "reorgRate": "Taxa de Reorg",
+    "versionLabel": "v{version}",
+    "versionShare": "{version} representa {share} dos blocos canônicos nas últimas 24h",
+    "notEnoughData": "—"
+  },
   "PowBlocks": {
     "hash": "Hash do Bloco",
     "title": "Blocos Recentes",
