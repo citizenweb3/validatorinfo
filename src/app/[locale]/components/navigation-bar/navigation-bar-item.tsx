@@ -7,9 +7,7 @@ import { FC, MouseEvent, useState } from 'react';
 
 import { TabOptions } from '@/components/common/tabs/tabs-data';
 import WalletModal from '@/components/wallet-connect/wallet-modal';
-import { AI_CHAT_OPEN_EVENT, AiChatOpenEventDetail } from '@/components/ai-chat/ai-explain-button';
 import { useWallet } from '@/context/WalletContext';
-import { emitWindowEvent } from '@/hooks/useWindowEvent';
 import { usePathname } from '@/i18n';
 
 interface OwnProps {
@@ -34,15 +32,8 @@ const NavigationBarItem: FC<OwnProps> = ({ item: { name, href, icon, iconHovered
 
   const isHighlighted = isActive || highlighted;
   const isWalletLogin = href === '/profile';
-  const isAiLink = href === '/ai';
 
   const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (isAiLink) {
-      event.preventDefault();
-      emitWindowEvent<AiChatOpenEventDetail>(AI_CHAT_OPEN_EVENT, { message: '' });
-      return;
-    }
-
     if (!isWalletLogin || walletData) {
       return;
     }

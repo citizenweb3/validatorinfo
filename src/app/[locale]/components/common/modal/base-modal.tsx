@@ -10,6 +10,9 @@ interface OwnProps {
   onClose: () => void;
   className?: string;
   isRelative?: boolean;
+  // When true, dim + blur the page behind the modal (full-screen overlay that also closes on
+  // click). Opt-in — defaults to false so every existing BaseModal consumer is unchanged.
+  withOverlay?: boolean;
   hideClose?: boolean;
   closeClassName?: string;
   contentClassName?: string;
@@ -25,6 +28,7 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
   onClose,
   className = '',
   isRelative = false,
+  withOverlay = false,
   title = '',
   style,
   hideClose = false,
@@ -38,7 +42,13 @@ const BaseModal: FC<PropsWithChildren<OwnProps>> = ({
   useOnClickOutside(modalRef, () => onClose());
   return (
     <div ref={modalRef} className={`${opened ? 'block' : 'hidden'} ${isRelative ? 'relative' : ''}`}>
-      <div className={`${className} ${isRelative ? 'absolute' : 'fixed'} z-40 bg-background shadow-3xl`} style={style}>
+      {withOverlay && (
+        <div className="fixed inset-0 z-overlay bg-black/50 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
+      )}
+      <div
+        className={`${className} ${isRelative ? 'absolute' : 'fixed'} ${withOverlay ? 'z-overlay' : 'z-40'} bg-background shadow-3xl`}
+        style={style}
+      >
         <div className={`${!hideClose && 'pt-6'} relative p-3`}>
           {!hideClose && (
             <div
