@@ -2020,8 +2020,6 @@
     "concentrationCompetitive": "конкурентная",
     "concentrationModerate": "умеренная",
     "concentrationConcentrated": "концентрированная",
-    "activeOfTotal": "Активные пулы",
-    "activeOfTotalValue": "{active} активных из {total}",
     "avgBlockTime": "Среднее время блока",
     "blockTimeValue": "{seconds}с · вариативность {variability}",
     "difficultyStability": "Стабильность сложности",

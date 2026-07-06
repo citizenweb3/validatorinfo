@@ -5,13 +5,7 @@ import PassportRow, { signalColors } from '@/components/common/passport-row';
 import SubTitle from '@/components/common/sub-title';
 import { MONERO_BLOCK_TIME_SECONDS } from '@/server/tools/chains/monero/constants';
 import moneroService, { HashrateWindow, MoneroPoolStatsRow } from '@/services/monero-service';
-import {
-  blockTimeStats,
-  difficultyStability,
-  hhi,
-  nakamotoCoefficient,
-  realPoolCount,
-} from '@/utils/pow-decentralization';
+import { blockTimeStats, difficultyStability, hhi, nakamotoCoefficient } from '@/utils/pow-decentralization';
 
 interface OwnProps {
   poolStats: MoneroPoolStatsRow[];
@@ -79,12 +73,8 @@ const difficultyColor = (band: ReturnType<typeof difficultyBand>): string | unde
 
 const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
   const t = await getTranslations('PowNetworkStats');
-  const [activePools, hashrateHistory] = await Promise.all([
-    moneroService.getMoneroActivePoolsCount(window),
-    moneroService.getMoneroHashrateHistory(window),
-  ]);
+  const hashrateHistory = await moneroService.getMoneroHashrateHistory(window);
 
-  const poolCount = realPoolCount(poolStats);
   const nakamoto = nakamotoCoefficient(poolStats);
   const hhiResult = hhi(poolStats);
   const concentration = hhiBand(hhiResult.value);
@@ -106,11 +96,6 @@ const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
           value: Math.round(hhiResult.value).toLocaleString(),
           status: t(concentrationLabelKeys[concentration]),
         });
-
-  const activeValue =
-    poolCount > 0
-      ? t('activeOfTotalValue', { active: activePools.toLocaleString(), total: poolCount.toLocaleString() })
-      : t('notEnoughData');
 
   const blockTimeValue =
     blockTime.averageSeconds === null || blockTime.coefficientOfVariation === null
@@ -138,11 +123,6 @@ const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
           color={nakamotoColor(nakamoto.count, nakamoto.isLowerBound)}
         />
         <PassportRow label={t('hhi')} value={hhiValue} color={hhiColor(concentration)} />
-        <PassportRow
-          label={t('activeOfTotal')}
-          value={activeValue}
-          color={poolCount > 0 ? signalColors.green : undefined}
-        />
         <PassportRow
           label={t('avgBlockTime')}
           value={blockTimeValue}

@@ -95,11 +95,14 @@ const MoneroNetworkRows: FC<OwnProps> = async ({ chainName, blockTimeTarget }) =
         <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">
           {t('active pools')}
         </div>
-        <div className="flex w-2/3 items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight">
+        <Link
+          href={`/networks/${chainName}/mining-pools`}
+          className="flex w-2/3 cursor-pointer items-center gap-2 border-b border-bgSt py-4 pl-6 pr-4 font-handjet text-lg hover:text-highlight hover:underline"
+        >
           {totalPools > 0
             ? t('active pools count', { active: activePools.toLocaleString(), total: totalPools.toLocaleString() })
             : activePools.toLocaleString()}
-        </div>
+        </Link>
       </div>
       <div className="mt-2 flex w-full bg-table_row hover:bg-bgHover">
         <div className="w-1/3 items-center border-b border-r border-bgSt py-4 pl-8 font-sfpro text-lg">

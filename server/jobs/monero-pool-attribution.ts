@@ -82,7 +82,14 @@ const buildCanonicalMap = async (
     offset = page.nextOffset;
   }
   if (moneroBlocks.length) {
-    await db.moneroBlock.createMany({ data: moneroBlocks, skipDuplicates: true });
+    // Telemetry persistence is best-effort and MUST NOT abort pool attribution: a single malformed
+    // block (e.g. a missing indexer field -> NaN Int) would otherwise throw out of this shared code
+    // path and skip the attribution + reorg writes. Isolate it — log and continue.
+    try {
+      await db.moneroBlock.createMany({ data: moneroBlocks, skipDuplicates: true });
+    } catch (e: any) {
+      logError(`monero-block telemetry persist failed (isolated): ${e?.message ?? String(e)}`, e);
+    }
   }
   return { map, lowestHeight: lowestHeight === Number.POSITIVE_INFINITY ? 0 : lowestHeight };
 };

@@ -2020,8 +2020,6 @@
     "concentrationCompetitive": "competitiva",
     "concentrationModerate": "moderada",
     "concentrationConcentrated": "concentrada",
-    "activeOfTotal": "Pools Ativos",
-    "activeOfTotalValue": "{active} ativos de {total}",
     "avgBlockTime": "Tempo Médio de Bloco",
     "blockTimeValue": "{seconds}s · variabilidade {variability}",
     "difficultyStability": "Estabilidade da Dificuldade",
