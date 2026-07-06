@@ -55,7 +55,7 @@ const MoneroTxMetrics: FC<OwnProps> = async ({ chainName, locale }) => {
   const tpsValue = hasData && metrics ? formatTps(tps(metrics.totalTx, windowSeconds)) : null;
   const feeAtomic =
     hasData && metrics && sumRewardAtomic !== null
-      ? avgFeeAtomic(sumRewardAtomic, TAIL_EMISSION_ATOMIC, metrics.blockCount, metrics.totalTx)
+      ? avgFeeAtomic(sumRewardAtomic, TAIL_EMISSION_ATOMIC, metrics.feeBlockCount, metrics.feeTxCount)
       : null;
   const fee = formatFee(feeAtomic, coinDecimals, denom);
 

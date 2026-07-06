@@ -222,6 +222,8 @@ export interface MoneroTxMetrics24h {
   windowHours: typeof MONERO_TX_METRICS_WINDOW_HOURS;
   totalTx: number;
   blockCount: number;
+  feeTxCount: number;
+  feeBlockCount: number;
   sumRewardAtomic: string;
 }
 
@@ -236,6 +238,8 @@ const getMoneroTxMetrics24h = async (): Promise<MoneroTxMetrics24h | null> => {
   });
 
   let totalTx = 0;
+  let feeTxCount = 0;
+  let feeBlockCount = 0;
   let rewardTotal = BigInt(0);
 
   for (const row of rows) {
@@ -243,8 +247,10 @@ const getMoneroTxMetrics24h = async (): Promise<MoneroTxMetrics24h | null> => {
 
     try {
       rewardTotal += BigInt(row.rewardAtomic);
+      feeTxCount += row.txCount;
+      feeBlockCount += 1;
     } catch {
-      // Ignore malformed upstream reward strings instead of breaking the page.
+      // Ignore malformed upstream reward strings for fee math instead of breaking the page.
     }
   }
 
@@ -252,6 +258,8 @@ const getMoneroTxMetrics24h = async (): Promise<MoneroTxMetrics24h | null> => {
     windowHours: MONERO_TX_METRICS_WINDOW_HOURS,
     totalTx,
     blockCount: rows.length,
+    feeTxCount,
+    feeBlockCount,
     sumRewardAtomic: rewardTotal.toString(),
   };
 };
