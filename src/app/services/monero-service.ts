@@ -17,6 +17,7 @@ export type MoneroPoolStatsRow = MiningPoolStats & {
 
 const MONERO_NAME = 'monero';
 const MONERO_BLOCK_METRICS_WINDOW_HOURS = 24;
+const MONERO_TX_METRICS_WINDOW_HOURS = 24;
 
 const windowToCutoff = (window: HashrateWindow): Date | null => {
   const now = Date.now();
@@ -217,6 +218,44 @@ const getMoneroBlockMetrics24h = async (): Promise<MoneroBlockMetrics24h | null>
   };
 };
 
+export interface MoneroTxMetrics24h {
+  windowHours: typeof MONERO_TX_METRICS_WINDOW_HOURS;
+  totalTx: number;
+  blockCount: number;
+  sumRewardAtomic: string;
+}
+
+const getMoneroTxMetrics24h = async (): Promise<MoneroTxMetrics24h | null> => {
+  const chain = await getMoneroChain();
+  if (!chain) return null;
+
+  const cutoff = new Date(Date.now() - MONERO_TX_METRICS_WINDOW_HOURS * 60 * 60 * 1000);
+  const rows = await db.moneroBlock.findMany({
+    where: { chainId: chain.id, blockTimestamp: { gte: cutoff }, isCanonical: true },
+    select: { txCount: true, rewardAtomic: true },
+  });
+
+  let totalTx = 0;
+  let rewardTotal = BigInt(0);
+
+  for (const row of rows) {
+    totalTx += row.txCount;
+
+    try {
+      rewardTotal += BigInt(row.rewardAtomic);
+    } catch {
+      // Ignore malformed upstream reward strings instead of breaking the page.
+    }
+  }
+
+  return {
+    windowHours: MONERO_TX_METRICS_WINDOW_HOURS,
+    totalTx,
+    blockCount: rows.length,
+    sumRewardAtomic: rewardTotal.toString(),
+  };
+};
+
 // A pool's recently-attributed canonical blocks (from MoneroBlockAttribution —
 // replaces the dead coinbase-fingerprint lookup; design §5/§7).
 const getMoneroPoolRecentBlocks = async (
@@ -315,6 +354,7 @@ const moneroService = {
   getMoneroChartData,
   getMoneroPoolsCount,
   getMoneroBlockMetrics24h,
+  getMoneroTxMetrics24h,
   getMoneroPoolRecentBlocks,
   getMoneroPoolBlocksCount,
   getPoolByBlockHashes,
@@ -334,6 +374,7 @@ export {
   getMoneroChartData,
   getMoneroPoolsCount,
   getMoneroBlockMetrics24h,
+  getMoneroTxMetrics24h,
   getMoneroPoolRecentBlocks,
   getMoneroPoolBlocksCount,
   getPoolByBlockHashes,

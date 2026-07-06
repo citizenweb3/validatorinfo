@@ -2064,6 +2064,12 @@
     "regular": "Обычная",
     "older": "Старее"
   },
+  "MoneroTxMetrics": {
+    "totalTransactions": "Всего транзакций",
+    "tps": "TPS",
+    "avgTxFee": "Средняя комиссия tx",
+    "notEnoughData": "—"
+  },
   "MoneroBlockMetrics": {
     "avgBlockReward": "Средняя награда блока",
     "avgBlockWeight": "Средний вес блока",

@@ -2064,6 +2064,12 @@
     "regular": "Regular",
     "older": "Mais antigas"
   },
+  "MoneroTxMetrics": {
+    "totalTransactions": "Total de Transações",
+    "tps": "TPS",
+    "avgTxFee": "Taxa Média por Tx",
+    "notEnoughData": "—"
+  },
   "MoneroBlockMetrics": {
     "avgBlockReward": "Recompensa Média do Bloco",
     "avgBlockWeight": "Peso Médio do Bloco",

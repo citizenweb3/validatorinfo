@@ -6,6 +6,7 @@ import TotalTxsMetrics from '@/app/networks/[name]/tx/total-txs-metrics';
 import NetworkTxs from '@/app/networks/[name]/tx/txs-table/network-txs';
 import TxStatusToggle from '@/app/networks/[name]/tx/tx-status-toggle';
 import MoneroTxs from '@/app/networks/[name]/tx/monero-txs';
+import MoneroTxMetrics from '@/app/networks/[name]/tx/monero-tx-metrics';
 import Link from 'next/link';
 import SubDescription from '@/components/sub-description';
 
@@ -54,6 +55,7 @@ const TotalTxsPage: NextPageWithLocale<PageProps> = async ({
       <div className="mb-24">
         <PageTitle text={t('title')} prefix={titlePrefix} />
         <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
+        <MoneroTxMetrics chainName={chain.name} locale={locale} />
         <MoneroTxs chain={chain} locale={locale} currentPage={currentPage} limit={perPage} />
       </div>
     );
