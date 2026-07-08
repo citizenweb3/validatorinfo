@@ -99,6 +99,23 @@ export interface AtomoneTxsCursor {
   next_before_index: number;
 }
 
+export interface AtomoneDelegationEvent {
+  delegator_address: string;
+  amount: string;
+  denom: string;
+  height: string;
+  tx_index: number;
+  msg_index: number;
+  tx_hash: string;
+  time: string;
+}
+
+export interface AtomoneDelegationsCursor {
+  next_before_height: string;
+  next_before_index: number;
+  next_before_msg_index: number;
+}
+
 export interface AtomoneListResponse<T, C = AtomoneBlocksCursor | AtomoneTxsCursor> {
   data: T[];
   cursor: C | null;
@@ -108,6 +125,7 @@ export interface AtomoneListResponse<T, C = AtomoneBlocksCursor | AtomoneTxsCurs
 
 export type AtomoneBlocksListResponse = AtomoneListResponse<AtomoneBlockSummary, AtomoneBlocksCursor>;
 export type AtomoneTxsListResponse = AtomoneListResponse<AtomoneTxSummary, AtomoneTxsCursor>;
+export type AtomoneDelegationsResponse = AtomoneListResponse<AtomoneDelegationEvent, AtomoneDelegationsCursor>;
 
 export interface AtomoneBlockDetailResponse {
   data: AtomoneBlockDetail;

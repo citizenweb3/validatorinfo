@@ -1,10 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 
 import DelegatedTable from '@/app/validators/[id]/[operatorAddress]/rich_list/delegated-table/delegated-table';
-import SwitchClient from '@/components/common/switch-client';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
-import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
 
 export const dynamic = 'force-dynamic';
@@ -15,8 +13,6 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-const defaultPerPage = 1;
-
 const RichListPage: NextPageWithLocale<PageProps> = async ({
   params: { locale, id, operatorAddress },
   searchParams: q,
@@ -24,10 +20,9 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
   const t = await getTranslations({ locale, namespace: 'RichListPage' });
 
   const validatorId = parseInt(id);
-  const currentPage = parseInt((q.p as string) || '1');
-  const perPage = q.pp ? parseInt(q.pp as string) : defaultPerPage;
-  const sortBy = (q.sortBy as 'name') ?? 'name';
-  const order = (q.order as SortDirection) ?? 'asc';
+  const cursorToken = typeof q.c === 'string' ? q.c : undefined;
+  const parsedWindowIndex = typeof q.w === 'string' ? parseInt(q.w, 10) : 0;
+  const windowIndex = Number.isFinite(parsedWindowIndex) ? parsedWindowIndex : 0;
 
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
   const node = list.find((item) => item.operatorAddress === operatorAddress);
@@ -35,18 +30,12 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
   return (
     <div className="mb-14">
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <div className="mb-4 flex h-5 flex-row items-center justify-end space-x-2 text-lg uppercase">
-        <div className="border-b border-bgSt px-2 font-handjet">USD</div>
-        <SwitchClient value={true} />
-        <div className="border-b border-bgSt px-2 font-handjet">{t('token')}</div>
-      </div>
       <DelegatedTable
         chainName={node?.chain.name ?? 'cosmoshub'}
         page={'RichListPage'}
-        perPage={perPage}
-        currentPage={currentPage}
-        sort={{ sortBy, order }}
         operatorAddress={operatorAddress}
+        cursorToken={cursorToken}
+        windowIndex={windowIndex}
       />
     </div>
   );

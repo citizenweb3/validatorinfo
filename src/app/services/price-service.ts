@@ -49,10 +49,31 @@ const getPricesByChainName = async (chainName: string, startDate?: Date, endDate
   return getPricesByChainId(chain.id, startDate, endDate);
 };
 
+const getLatestPriceByChainName = async (chainName: string): Promise<number | null> => {
+  const chain = await db.chain.findUnique({
+    where: { name: chainName },
+    select: { id: true },
+  });
+
+  if (!chain) {
+    logDebug(`Chain ${chainName} not found`);
+    return null;
+  }
+
+  const price = await db.price.findFirst({
+    where: { chainId: chain.id },
+    orderBy: { createdAt: 'desc' },
+    select: { value: true },
+  });
+
+  return price?.value ?? null;
+};
+
 const priceService = {
   addPrice,
   getPricesByChainId,
   getPricesByChainName,
+  getLatestPriceByChainName,
 };
 
 export default priceService;
