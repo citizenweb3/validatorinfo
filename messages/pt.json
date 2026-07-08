@@ -1344,6 +1344,12 @@
   "RichListPage": {
     "description": "Esta aba exibe eventos de poder e delegadores do node. Ela destaca momentos significativos, como grandes delegações ou mudanças na composição do conjunto de validadores. Isso oferece uma visão privilegiada da influência do node e seu potencial impacto no equilíbrio de poder da rede. Ver a posição do node ajuda a julgar sua estabilidade e potencial de crescimento, o que é extremamente útil para o planejamento de longo prazo.",
     "token": "TOKEN",
+    "noDelegations": "Ainda não há eventos de delegação",
+    "delegationsLoadError": "Não foi possível carregar os eventos de delegação. Tente recarregar a página.",
+    "noStakingTransaction": "Nenhuma transação de staking encontrada",
+    "retry": "Tentar novamente",
+    "prevPage": "Página anterior",
+    "nextPage": "Próxima página",
     "Table": {
       "Address": {
         "name": "Endereço",

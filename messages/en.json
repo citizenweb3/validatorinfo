@@ -1344,6 +1344,12 @@
   "RichListPage": {
     "description": "This tab shows power events and node delegators. It highlight significant moments like major delegations or shifts in the validator set. This gives you an insider peek at the node's clout and potential impact on the network's balance of power. Seeing the node's position helps you judge its stability and growth potential, which is super handy for long-term planning.",
     "token": "TOKEN",
+    "noDelegations": "No delegation events yet",
+    "delegationsLoadError": "Could not load delegation events. Please try reloading the page.",
+    "noStakingTransaction": "No staking transaction found",
+    "retry": "Retry",
+    "prevPage": "Previous page",
+    "nextPage": "Next page",
     "Table": {
       "Address": {
         "name": "Address",

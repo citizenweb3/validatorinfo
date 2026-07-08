@@ -3,6 +3,7 @@ import {
   CosmosBlockDetailResponse,
   CosmosBlocksListResponse,
   CosmosBlocksStatsResponse,
+  CosmosDelegationsResponse,
   CosmosGovVotesResponse,
   CosmosIndexerRequestOptions,
   CosmosTxDetailResponse,
@@ -137,6 +138,30 @@ export const getTxsByAddress = (
       before_height: params.before_height,
       before_index: params.before_index,
       count: params.count,
+    },
+    options,
+  );
+
+export interface GetDelegationsParams {
+  validator: string;
+  limit?: number;
+  before_height?: string;
+  before_index?: number;
+  before_msg_index?: number;
+}
+
+export const getDelegations = (
+  params: GetDelegationsParams,
+  options?: CosmosIndexerRequestOptions,
+): Promise<CosmosDelegationsResponse> =>
+  client.get<CosmosDelegationsResponse>(
+    '/api/v1/staking/delegations',
+    {
+      validator: params.validator,
+      limit: params.limit,
+      before_height: params.before_height,
+      before_index: params.before_index,
+      before_msg_index: params.before_msg_index,
     },
     options,
   );
