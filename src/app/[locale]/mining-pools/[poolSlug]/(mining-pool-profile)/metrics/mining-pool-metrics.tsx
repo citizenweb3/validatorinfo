@@ -101,7 +101,7 @@ const MiningPoolMetrics: FC<OwnProps> = ({
   const shareValue = stat?.sharePercent != null ? stat.sharePercent.toFixed(2) : labels.noData;
   const freshMinersCount = getFreshMinersCount(minersCount, minersUpdatedAt);
   const minersValue = freshMinersCount !== null ? formatCount(freshMinersCount, locale) : labels.noData;
-  const minersUpdatedLabel = minersUpdatedAt
+  const minersUpdatedLabel = freshMinersCount !== null && minersUpdatedAt
     ? `${labels.minersUpdated} ${formatRelativeTime(minersUpdatedAt, locale)}`
     : '';
   const minersTooltip = [isP2pool ? labels.p2poolMiners : '', minersUpdatedLabel].filter(Boolean).join('\n');
