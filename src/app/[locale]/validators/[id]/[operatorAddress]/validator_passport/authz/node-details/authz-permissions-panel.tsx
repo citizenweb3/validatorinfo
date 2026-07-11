@@ -28,7 +28,7 @@ const AuthzPermissionsPanel: FC<OwnProps> = async ({ chainName, grants, isLive, 
   }
 
   if (grants.length === 0) {
-    return <div className="px-2 py-8 text-center text-highlight">{t('authz no permissions')}</div>;
+    return <div className="px-2 py-10 text-center text-lg">{t('authz no permissions')}</div>;
   }
 
   return (
