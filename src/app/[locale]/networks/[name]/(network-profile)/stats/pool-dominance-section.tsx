@@ -43,13 +43,13 @@ const PoolDominanceSection: FC<OwnProps> = ({
   return (
     <section className="mt-10">
       <SubTitle text={title} />
-      <div className="mt-6">
+      <div className="mt-4">
         {historyDays === 0 ? (
-          <div className="flex h-24 items-center justify-center rounded bg-table_row font-sfpro text-base text-white/60">
+          <div className="bg-table_row p-6 font-sfpro text-base opacity-70">
             {emptyMessage}
           </div>
         ) : historyDays < MIN_HISTORY_DAYS ? (
-          <div className="flex h-24 items-center justify-center rounded bg-table_row font-sfpro text-base text-white/60">
+          <div className="bg-table_row p-6 font-sfpro text-base opacity-70">
             {notEnoughDataMessage}
           </div>
         ) : (

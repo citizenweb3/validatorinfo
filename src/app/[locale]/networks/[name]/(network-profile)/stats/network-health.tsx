@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import PassportRow, { signalColors } from '@/components/common/passport-row';
 import SubTitle from '@/components/common/sub-title';
+import Tooltip from '@/components/common/tooltip';
 import { MONERO_BLOCK_TIME_SECONDS } from '@/server/tools/chains/monero/constants';
 import moneroService, { HashrateWindow, MoneroPoolStatsRow } from '@/services/monero-service';
 import { TAIL_EMISSION_ATOMIC, parseAtomicAmount } from '@/utils/monero-emission';
@@ -12,6 +13,8 @@ import { blockTimeStats, difficultyStability, hhi, nakamotoCoefficient } from '@
 interface OwnProps {
   poolStats: MoneroPoolStatsRow[];
   window: HashrateWindow;
+  connectedMiners: number | null;
+  locale: string;
 }
 
 const concentrationLabelKeys = {
@@ -73,7 +76,7 @@ const difficultyColor = (band: ReturnType<typeof difficultyBand>): string | unde
   return undefined;
 };
 
-const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
+const NetworkHealth: FC<OwnProps> = async ({ poolStats, window, connectedMiners, locale }) => {
   const [t, hashrateHistory, txMetrics] = await Promise.all([
     getTranslations('PowNetworkStats'),
     moneroService.getMoneroHashrateHistory(window),
@@ -148,6 +151,16 @@ const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
           label={t('difficultyStability')}
           value={difficultyValue}
           color={difficultyColor(difficultyStatus)}
+        />
+        <PassportRow
+          label={t('connectedMiners')}
+          value={
+            <Tooltip tooltip={t('minersCaptionNote')} direction="top">
+              <span className="cursor-help border-b border-dotted border-current">
+                {connectedMiners === null ? t('notEnoughData') : connectedMiners.toLocaleString(locale)}
+              </span>
+            </Tooltip>
+          }
         />
         <PassportRow label={t('feeShare')} value={feeShareValue} />
       </div>

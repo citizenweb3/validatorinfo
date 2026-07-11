@@ -77,6 +77,7 @@ const formatTooltipDate = (dateString: string, locale: string): string =>
     timeZone: 'UTC',
   });
 
+// Historical pool distribution belongs to the network statistics surface.
 const PoolDominanceChart: FC<OwnProps> = ({ initialSeries, locale, emptyMessage, periodOptions }) => {
   const [period, setPeriod] = useState<PoolSharePeriod>('day');
   const chartRef = useRef<ChartJS<'line'>>(null);
