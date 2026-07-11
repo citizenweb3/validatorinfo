@@ -589,22 +589,24 @@ model PodcastChunk {
 }
 
 model MiningPool {
-  id                   Int      @id @default(autoincrement())
-  chainId              Int      @map("chain_id")
-  slug                 String   @db.VarChar(256)
-  name                 String   @db.VarChar(256)
-  logoUrl              String?  @map("logo_url")
+  id                   Int       @id @default(autoincrement())
+  chainId              Int       @map("chain_id")
+  slug                 String    @db.VarChar(256)
+  name                 String    @db.VarChar(256)
+  logoUrl              String?   @map("logo_url")
   website              String?
   github               String?
   twitter              String?
-  paymentScheme        String?  @map("payment_scheme") @db.VarChar(64)
-  feePercent           Float?   @map("fee_percent")
-  identificationMethod String   @map("identification_method") @db.VarChar(64)
-  detectorJson         Json?    @map("detector_json")
+  paymentScheme        String?   @map("payment_scheme") @db.VarChar(64)
+  feePercent           Float?    @map("fee_percent")
+  minersCount          Int?      @map("miners_count")
+  minersUpdatedAt      DateTime? @map("miners_updated_at") @db.Timestamptz(6)
+  identificationMethod String    @map("identification_method") @db.VarChar(64)
+  detectorJson         Json?     @map("detector_json")
   fingerprint          String?
-  isVerified           Boolean  @default(false) @map("is_verified")
-  createdAt            DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt            DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+  isVerified           Boolean   @default(false) @map("is_verified")
+  createdAt            DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
 
   chain        Chain                    @relation("chain_mining_pools", fields: [chainId], references: [id])
   stats        MiningPoolStats[]        @relation("mining_pool_stats")
