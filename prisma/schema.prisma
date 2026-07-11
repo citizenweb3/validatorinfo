@@ -141,6 +141,7 @@ model Chain {
 
   miningPools             MiningPool[]             @relation("chain_mining_pools")
   miningPoolStats         MiningPoolStats[]        @relation("chain_mining_pool_stats")
+  moneroPoolDailyShares   MoneroPoolDailyShare[]   @relation("chain_monero_pool_daily_shares")
   hashrateSnapshots       ChainHashrateSnapshot[]  @relation("chain_hashrate_snapshots")
   moneroBlocks            MoneroBlock[]            @relation("chain_monero_blocks")
   moneroBlockAttributions MoneroBlockAttribution[] @relation("chain_monero_block_attributions")
@@ -610,6 +611,7 @@ model MiningPool {
 
   chain        Chain                    @relation("chain_mining_pools", fields: [chainId], references: [id])
   stats        MiningPoolStats[]        @relation("mining_pool_stats")
+  dailyShares  MoneroPoolDailyShare[]   @relation("mining_pool_daily_shares")
   attributions MoneroBlockAttribution[] @relation("mining_pool_attributions")
 
   @@unique([chainId, slug])
@@ -635,6 +637,24 @@ model MiningPoolStats {
   @@unique([chainId, poolId, windowKind])
   @@index([chainId, windowKind, sharePercent])
   @@map("mining_pool_stats")
+}
+
+model MoneroPoolDailyShare {
+  id            Int      @id @default(autoincrement())
+  chainId       Int      @map("chain_id")
+  poolId        Int      @map("pool_id")
+  date          DateTime @db.Date
+  blocksFound   Int      @map("blocks_found")
+  sharePercent  Float    @map("share_percent")
+  networkBlocks Int      @map("network_blocks")
+  updatedAt     DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  chain Chain      @relation("chain_monero_pool_daily_shares", fields: [chainId], references: [id])
+  pool  MiningPool @relation("mining_pool_daily_shares", fields: [poolId], references: [id])
+
+  @@unique([chainId, poolId, date])
+  @@index([chainId, date])
+  @@map("monero_pool_daily_shares")
 }
 
 model ChainHashrateSnapshot {

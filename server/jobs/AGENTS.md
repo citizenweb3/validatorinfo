@@ -50,6 +50,7 @@
 | `update-github-repositories.ts` | Syncs GitHub repository data and commit activity |
 | `check-nodes-health.ts` | Health checks for nodes |
 | `match-chain-nodes.ts` | Matches nodes to validators |
+| `monero-pool-daily-share.ts` | Materializes completed UTC-day Monero pool dominance history from persisted blocks and attributions |
 
 ## Dependencies
 

@@ -163,6 +163,7 @@ const runServer = async () => {
     { name: 'monero-network-info', schedule: timers.every5mins },
     { name: 'monero-pool-attribution', schedule: timers.every10mins },
     { name: 'monero-pool-stats', schedule: timers.everyHour },
+    { name: 'monero-pool-daily-share', schedule: dailyAt(22, 23) },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {
