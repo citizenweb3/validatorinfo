@@ -16,6 +16,7 @@ const PassportTransactPage: NextPageWithLocale<PageProps> = async ({ params: { l
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
   const validatorId = parseInt(id);
   const node = await nodeService.getNodeByAddressAndId(operatorAddress, validatorId);
+  const authzTab = 'transact' as const;
 
   return (
     <>
@@ -25,7 +26,13 @@ const PassportTransactPage: NextPageWithLocale<PageProps> = async ({ params: { l
         <Medals locale={locale} />
         <VanityChart />
       </div>
-      <NodeDetails locale={locale} validatorId={validatorId} operatorAddress={operatorAddress} node={node} />
+      <NodeDetails
+        authzTab={authzTab}
+        locale={locale}
+        validatorId={validatorId}
+        operatorAddress={operatorAddress}
+        node={node}
+      />
     </>
   );
 };

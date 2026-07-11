@@ -1,23 +1,34 @@
 import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
-import AuthzPermissionsDetails from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/node-details/authz-permissions-details';
+import AuthzPermissionsPanel from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/node-details/authz-permissions-panel';
 import CurrencyRewards from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/node-details/currency-rewards';
 import NodeDetailsItem from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/node-details/node-details-item';
-import { permissions } from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/node-details/permissionsExample';
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { getPassportAuthzTabs } from '@/components/common/tabs/tabs-data';
 import { NodeWithValidatorAndChain } from '@/services/node-service';
+import authzService, { AuthzTabSlug } from '@/services/authz-service';
+import priceService from '@/services/price-service';
 
 interface OwnProps {
   locale: string;
   validatorId: number;
   operatorAddress: string;
   node: NodeWithValidatorAndChain | null;
+  authzTab: AuthzTabSlug;
 }
 
-const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress, node }) => {
+const normalizeAmount = (value: string | null, coinDecimals: number | null | undefined): number | null => {
+  if (value === null || coinDecimals === null || coinDecimals === undefined) {
+    return null;
+  }
+
+  const amount = Number(value) / 10 ** coinDecimals;
+  return Number.isFinite(amount) ? amount : null;
+};
+
+const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operatorAddress, node }) => {
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
 
   if (!node) {
@@ -25,6 +36,15 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
   }
 
   const nodeAuthzTabs = getPassportAuthzTabs(validatorId, operatorAddress);
+  const isLive = node.chain.ecosystem === 'cosmos' && Boolean(node.accountAddress);
+  const [grants, price] = await Promise.all([
+    isLive ? authzService.getNodeAuthzGrants(node.id, authzTab) : Promise.resolve([]),
+    priceService.getLatestPriceByChainName(node.chain.name),
+  ]);
+  const coinDecimals = node.chain.params?.coinDecimals;
+  const rewardsAmount = normalizeAmount(node.outstandingRewards, coinDecimals);
+  const commissionsAmount = normalizeAmount(node.outstandingCommissions, coinDecimals);
+  const denom = node.chain.params?.denom ?? '';
 
   return (
     <div className="mt-16">
@@ -78,7 +98,12 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
         <div className="ml-5 w-[70%] items-center justify-center">
           <div className="my-2 w-full">
             <TabList page="ValidatorPassportPage" tabs={nodeAuthzTabs} />
-            <AuthzPermissionsDetails permissions={permissions} node={node} />
+            <AuthzPermissionsPanel
+              chainName={node.chain.name}
+              grants={grants}
+              isLive={isLive}
+              locale={locale}
+            />
           </div>
         </div>
       </div>
@@ -88,7 +113,12 @@ const NodeDetails: FC<OwnProps> = async ({ locale, validatorId, operatorAddress,
           <NodeDetailsItem label={t('voting')} isCheckmark={!node.jailed} />
           <NodeDetailsItem label={t('send tx')} isCheckmark={!node.jailed} />
         </div>
-        <CurrencyRewards />
+        <CurrencyRewards
+          commissionsAmount={commissionsAmount}
+          denom={denom}
+          price={price}
+          rewardsAmount={rewardsAmount}
+        />
       </div>
     </div>
   );

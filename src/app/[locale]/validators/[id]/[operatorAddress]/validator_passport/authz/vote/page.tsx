@@ -4,7 +4,6 @@ import PassportMetricsBlocks
   from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/passport-metrics-blocks';
 import VanityChart from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/vanity-chart';
 import { NextPageWithLocale } from '@/i18n';
-import validatorService from '@/services/validator-service';
 import SubDescription from '@/components/sub-description';
 import { getTranslations } from 'next-intl/server';
 import nodeService from '@/services/node-service';
@@ -19,6 +18,7 @@ const PassportVotePage: NextPageWithLocale<PageProps> = async ({
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
   const validatorId = parseInt(id);
   const node = await nodeService.getNodeByAddressAndId(operatorAddress, validatorId);
+  const authzTab = 'vote' as const;
 
   return (
     <>
@@ -28,7 +28,13 @@ const PassportVotePage: NextPageWithLocale<PageProps> = async ({
         <Medals locale={locale} />
         <VanityChart />
       </div>
-      <NodeDetails locale={locale} validatorId={validatorId} operatorAddress={operatorAddress} node={node} />
+      <NodeDetails
+        authzTab={authzTab}
+        locale={locale}
+        validatorId={validatorId}
+        operatorAddress={operatorAddress}
+        node={node}
+      />
     </>
   );
 };
