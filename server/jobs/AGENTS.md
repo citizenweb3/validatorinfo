@@ -47,7 +47,7 @@
 | `update-average-delegation.ts` | Calculates average delegation amount across validators |
 | `update-unbonding-tokens.ts` | Updates tokens currently in unbonding period |
 | `update-staking-page-json.ts` | Fetches networks.json from GitHub for staking page |
-| `update-github-repositories.ts` | Syncs GitHub repository data and commit activity |
+| `update-github-repositories.ts` | Syncs GitHub repository data, owner-level issue/PR health, commit activity, and bounded author coverage |
 | `check-nodes-health.ts` | Health checks for nodes |
 | `match-chain-nodes.ts` | Matches nodes to validators |
 | `monero-pool-daily-share.ts` | Materializes completed UTC-day Monero pool dominance history from persisted blocks and attributions |

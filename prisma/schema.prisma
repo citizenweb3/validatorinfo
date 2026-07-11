@@ -131,6 +131,7 @@ model Chain {
   nodeVotes                    NodeVote[]                     @relation("node_vote_chain")
   proposals                    Proposal[]                     @relation("chain_proposals")
   githubRepositories           GithubRepository[]             @relation("chain_github_repositories")
+  githubDevHealth              GithubDevHealth?
   tvsHistory                   ChainTvsHistory[]              @relation("chain_tvs_history")
   aprHistory                   ChainAprHistory[]              @relation("chain_apr_history")
   validatorsHistory            ChainValidatorsHistory[]       @relation("chain_validators_history")
@@ -388,27 +389,40 @@ model NodeVote {
 }
 
 model GithubRepository {
-  id              Int      @id @default(autoincrement())
-  chainId         Int      @map("chain_id")
-  name            String
-  fullName        String   @map("full_name")
-  description     String?
-  url             String
-  homepage        String?
-  language        String?
-  starsCount      Int      @default(0) @map("stars_count")
-  forksCount      Int      @default(0) @map("forks_count")
-  watchersCount   Int      @default(0) @map("watchers_count")
-  openIssuesCount Int      @default(0) @map("open_issues_count")
-  createdAt       DateTime @map("created_at") @db.Timestamptz(6)
-  updatedAt       DateTime @map("updated_at") @db.Timestamptz(6)
-  pushedAt        DateTime @map("pushed_at") @db.Timestamptz(6)
+  id                     Int       @id @default(autoincrement())
+  chainId                Int       @map("chain_id")
+  name                   String
+  fullName               String    @map("full_name")
+  description            String?
+  url                    String
+  homepage               String?
+  language               String?
+  starsCount             Int       @default(0) @map("stars_count")
+  forksCount             Int       @default(0) @map("forks_count")
+  watchersCount          Int       @default(0) @map("watchers_count")
+  openIssuesCount        Int       @default(0) @map("open_issues_count")
+  createdAt              DateTime  @map("created_at") @db.Timestamptz(6)
+  updatedAt              DateTime  @map("updated_at") @db.Timestamptz(6)
+  pushedAt               DateTime  @map("pushed_at") @db.Timestamptz(6)
+  authorCoverageFrom     DateTime? @map("author_coverage_from") @db.Date
+  activityFetchedThrough DateTime? @map("activity_fetched_through") @db.Date
 
   chain      Chain            @relation("chain_github_repositories", fields: [chainId], references: [id])
   activities GithubActivity[] @relation("repository_activities")
 
   @@unique([chainId, fullName])
   @@map("github_repositories")
+}
+
+model GithubDevHealth {
+  chainId         Int      @id @map("chain_id")
+  openPrsCount    Int      @map("open_prs_count")
+  openIssuesCount Int      @map("open_issues_count")
+  issuesUpdatedAt DateTime @map("issues_updated_at") @db.Timestamptz(6)
+
+  chain Chain @relation(fields: [chainId], references: [id], onDelete: Cascade)
+
+  @@map("github_dev_health")
 }
 
 model ChainTvsHistory {
@@ -485,6 +499,7 @@ model GithubActivity {
   commitCount  Int      @default(0) @map("commit_count")
   additions    Int      @default(0)
   deletions    Int      @default(0)
+  authorLogins Json?    @map("author_logins")
 
   repository GithubRepository @relation("repository_activities", fields: [repositoryId], references: [id], onDelete: Cascade)
 
