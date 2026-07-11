@@ -15,6 +15,18 @@ export type MoneroPoolStatsRow = MiningPoolStats & {
   pool: MiningPool;
 };
 
+export interface MoneroPoolSharePoint {
+  date: string;
+  sharePercent: number;
+  blocksFound: number;
+  networkBlocks: number;
+}
+
+export interface MoneroPoolShareSeries {
+  pool: { slug: string; name: string; isVerified: boolean };
+  points: MoneroPoolSharePoint[];
+}
+
 const MONERO_NAME = 'monero';
 const MONERO_BLOCK_METRICS_WINDOW_HOURS = 24;
 const MONERO_TX_METRICS_WINDOW_HOURS = 24;
@@ -71,6 +83,44 @@ const getMoneroPoolBySlug = async (poolSlug: string) => {
   return db.miningPool.findFirst({
     where: { slug: poolSlug, chain: { name: MONERO_NAME } },
     include: { chain: true, stats: true },
+  });
+};
+
+const getMoneroPoolShareHistory = async (): Promise<MoneroPoolShareSeries[]> => {
+  const chain = await getMoneroChain();
+  if (!chain) return [];
+
+  const rows = await db.moneroPoolDailyShare.findMany({
+    where: { chainId: chain.id },
+    orderBy: [{ date: 'asc' }, { poolId: 'asc' }],
+    select: {
+      date: true,
+      blocksFound: true,
+      sharePercent: true,
+      networkBlocks: true,
+      pool: { select: { slug: true, name: true, isVerified: true } },
+    },
+  });
+
+  const seriesBySlug = new Map<string, MoneroPoolShareSeries>();
+  for (const row of rows) {
+    const series = seriesBySlug.get(row.pool.slug) ?? { pool: row.pool, points: [] };
+    series.points.push({
+      date: row.date.toISOString().slice(0, 10),
+      blocksFound: row.blocksFound,
+      sharePercent: row.sharePercent,
+      networkBlocks: row.networkBlocks,
+    });
+    seriesBySlug.set(row.pool.slug, series);
+  }
+
+  return Array.from(seriesBySlug.values()).sort((a, b) => {
+    const isAUnknown = a.pool.slug === 'unknown';
+    const isBUnknown = b.pool.slug === 'unknown';
+    if (isAUnknown !== isBUnknown) return isAUnknown ? 1 : -1;
+
+    const nameComparison = a.pool.name.localeCompare(b.pool.name);
+    return nameComparison || a.pool.slug.localeCompare(b.pool.slug);
   });
 };
 
@@ -364,6 +414,7 @@ const moneroService = {
   getMoneroHashrateHistory,
   getMoneroPoolStats,
   getMoneroPoolBySlug,
+  getMoneroPoolShareHistory,
   getMoneroSupply,
   getMoneroChainParams,
   getMoneroActivePoolsCount,
@@ -385,6 +436,7 @@ export {
   getMoneroHashrateHistory,
   getMoneroPoolStats,
   getMoneroPoolBySlug,
+  getMoneroPoolShareHistory,
   getMoneroSupply,
   getMoneroChainParams,
   getMoneroActivePoolsCount,

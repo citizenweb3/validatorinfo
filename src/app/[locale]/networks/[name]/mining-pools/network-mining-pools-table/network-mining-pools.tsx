@@ -3,6 +3,9 @@ import { FC } from 'react';
 
 import HashrateWindowSelector from '@/app/networks/[name]/(network-profile)/stats/hashrate-window-selector';
 import NetworkMiningPoolsItem from '@/app/networks/[name]/mining-pools/network-mining-pools-table/network-mining-pools-item';
+import PoolDominanceSection, {
+  type PoolDominancePeriodOption,
+} from '@/app/networks/[name]/mining-pools/network-mining-pools-table/pool-dominance-section';
 import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import moneroService, { HashrateWindow, MoneroPoolStatsRow, isValidWindow } from '@/services/monero-service';
@@ -34,11 +37,15 @@ const NetworkMiningPools: FC<OwnProps> = async ({ chainName, window, sort }) => 
     return <div className="mt-6 bg-table_row p-6 font-sfpro text-base opacity-70">{t('empty')}</div>;
   }
 
+  const shareHistoryPromise = moneroService.getMoneroPoolShareHistory();
   const availableWindows = await moneroService.getMoneroAvailableWindows();
   const requested: HashrateWindow = isValidWindow(window) ? window : '24h';
   const safeWindow: HashrateWindow = availableWindows.includes(requested) ? requested : '24h';
 
-  const rawStats = await moneroService.getMoneroPoolStats(safeWindow);
+  const [rawStats, shareHistory] = await Promise.all([
+    moneroService.getMoneroPoolStats(safeWindow),
+    shareHistoryPromise,
+  ]);
   const referenceTime = Date.now();
 
   // Single comparator: the synthetic "unknown/solo" bucket is always pinned last (design §7),
@@ -68,6 +75,12 @@ const NetworkMiningPools: FC<OwnProps> = async ({ chainName, window, sort }) => 
     all: t('windowAll'),
   };
   const windowOptions = availableWindows.map((value) => ({ value, label: windowLabels[value] }));
+  const periodOptions: PoolDominancePeriodOption[] = [
+    { value: 'day', label: t('periodDaily'), ariaLabel: t('switchPeriod', { period: t('periodDaily') }) },
+    { value: 'week', label: t('periodWeekly'), ariaLabel: t('switchPeriod', { period: t('periodWeekly') }) },
+    { value: 'month', label: t('periodMonthly'), ariaLabel: t('switchPeriod', { period: t('periodMonthly') }) },
+    { value: 'year', label: t('periodYearly'), ariaLabel: t('switchPeriod', { period: t('periodYearly') }) },
+  ];
 
   return (
     <div>
@@ -86,6 +99,14 @@ const NetworkMiningPools: FC<OwnProps> = async ({ chainName, window, sort }) => 
           </div>
         )}
       </div>
+      <PoolDominanceSection
+        series={shareHistory}
+        locale={locale}
+        title={t('dominanceTitle')}
+        emptyMessage={t('dominanceEmpty')}
+        notEnoughDataMessage={t('dominanceNotEnoughData')}
+        periodOptions={periodOptions}
+      />
       <BaseTable className="my-4">
         <thead>
           <tr className="bg-table_header">
