@@ -91,6 +91,17 @@ export interface NodeVote {
   txHash?: string | null;
 }
 
+export type AuthzJsonValue = string | number | boolean | null | AuthzJsonValue[] | { [key: string]: AuthzJsonValue };
+
+export interface NodeAuthzGrantResult {
+  granter: string;
+  grantee: string;
+  authorizationType: string;
+  msgTypeUrl: string | null;
+  authorizationData: { [key: string]: AuthzJsonValue } | null;
+  expiration: string | null;
+}
+
 export interface AztecGovernanceConfigAdditional {
   votingDelay: string;
   executionDelay: string;
@@ -146,6 +157,10 @@ export type GetNodeParamsFunction = (chain: AddChainProps) => Promise<NodeParams
 export type GetGovParamsFunction = (chain: AddChainProps) => Promise<GovParams>;
 export type GetMissedBlocks = (chain: AddChainProps, dbChain: ChainWithParams) => Promise<SlashingSigningInfos[]>;
 export type GetNodesVotes = (chain: AddChainProps, address: string) => Promise<NodeVote[]>;
+export type GetNodeAuthzGrants = (
+  chain: AddChainProps,
+  granterAddress: string,
+) => Promise<NodeAuthzGrantResult[] | null>;
 export type GetCommTaxFunction = (chain: AddChainProps) => Promise<number | null>;
 export type GetWalletsAmount = (chain: AddChainProps) => Promise<number | null>;
 export type GetProposalParams = (chain: AddChainProps) => Promise<ProposalParams>;
@@ -179,6 +194,7 @@ export interface ChainMethods {
   getSlashingParams: GetSlashingParamsFunction;
   getMissedBlocks: GetMissedBlocks;
   getNodesVotes: GetNodesVotes;
+  getNodeAuthzGrants: GetNodeAuthzGrants;
   getCommTax: GetCommTaxFunction;
   getWalletsAmount: GetWalletsAmount;
   getProposalParams: GetProposalParams;

@@ -29,6 +29,7 @@ const chainMethods: ChainMethods = {
   getSlashingParams: async () => ({ blocksWindow: null, jailedDuration: null }),
   getMissedBlocks: async () => [],
   getNodesVotes: async () => [],
+  getNodeAuthzGrants: async () => null,
   getCommTax: async () => null,
   getWalletsAmount: async () => null,
   getProposalParams: async () => ({
