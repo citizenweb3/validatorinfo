@@ -101,7 +101,7 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
                     <div className="font-handjet text-base text-highlight">{pct.toFixed(2)}%</div>
                     {minersCount !== null ? (
                       <Tooltip tooltip={stat.pool.slug === 'p2pool' ? t('p2poolMiners') : ''} direction="top">
-                        <div className="font-sfpro text-xs text-white/60">
+                        <div className="font-handjet text-lg text-white">
                           {t('minersValue', { count: minersCount.toLocaleString(locale) })}
                         </div>
                       </Tooltip>

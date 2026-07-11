@@ -65,7 +65,7 @@ const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
           );
         })}
       </div>
-      <div className="mx-12 mb-10">
+      <div className="mx-4 mb-10 mt-12 md:mx-12">
         <DeveloperActivityChart activityData={activityData} />
       </div>
     </div>
