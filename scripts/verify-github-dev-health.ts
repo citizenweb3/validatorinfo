@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 
 import { selectAuthorBackfillFullNames } from '@/server/jobs/update-github-repositories';
 import { getDailyCommits, getOpenPullRequestsCountByOwner } from '@/server/tools/github-api';
+import { getActiveMaintainersCount, type GithubMaintainerRepository } from '@/services/github-service';
 import { getGithubAuthorWindow, toUtcDateString } from '@/utils/github-dev-health';
 
 const originalFetch = global.fetch;
@@ -95,12 +96,50 @@ const verifyBackfillSelection = () => {
   assert.equal(toUtcDateString(window.cutoff), '2026-04-12');
 };
 
+const verifyActiveMaintainerUnion = () => {
+  const coverageFrom = new Date('2026-04-12T00:00:00.000Z');
+  const fetchedThrough = new Date('2026-07-10T00:00:00.000Z');
+  const repositories: GithubMaintainerRepository[] = [
+    {
+      pushedAt: new Date('2026-07-09T00:00:00.000Z'),
+      authorCoverageFrom: coverageFrom,
+      activityFetchedThrough: fetchedThrough,
+      activities: [
+        { date: new Date('2026-07-09T00:00:00.000Z'), authorLogins: ['alice', 'bob', 'release[bot]'] },
+      ],
+    },
+    {
+      pushedAt: new Date('2026-07-08T00:00:00.000Z'),
+      authorCoverageFrom: coverageFrom,
+      activityFetchedThrough: fetchedThrough,
+      activities: [
+        { date: new Date('2026-07-08T00:00:00.000Z'), authorLogins: ['bob', 'carol', 42] },
+      ],
+    },
+    {
+      pushedAt: new Date('2026-01-01T00:00:00.000Z'),
+      authorCoverageFrom: null,
+      activityFetchedThrough: null,
+      activities: [],
+    },
+  ];
+
+  const now = new Date('2026-07-11T12:00:00.000Z');
+  assert.equal(getActiveMaintainersCount(repositories, now), 3);
+
+  const incompleteRepositories = repositories.map((repository, index) =>
+    index === 0 ? { ...repository, authorCoverageFrom: null } : repository,
+  );
+  assert.equal(getActiveMaintainersCount(incompleteRepositories, now), null);
+};
+
 const run = async () => {
   try {
     await verifyPullRequestCounts();
     await verifyCommitExtraction();
     await verifyPartialCommitResult();
     verifyBackfillSelection();
+    verifyActiveMaintainerUnion();
     console.log('GitHub dev-health verification passed');
   } finally {
     global.fetch = originalFetch;

@@ -574,6 +574,11 @@
       "forked": "Forked",
       "repositories": "Repositories",
       "most active repo": "Most Active Repo",
+      "open prs": "Open PRs",
+      "open issues": "Open Issues",
+      "open issues tooltip": "Open issues excluding pull requests",
+      "active maintainers": "Active Maintainers",
+      "active maintainers tooltip": "Unique linked GitHub commit authors across tracked repositories over the last 90 days, excluding bots",
       "Table": {
         "Repository Name": {
           "name": "Repository Name",

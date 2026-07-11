@@ -13,7 +13,7 @@
 | `vote-service.ts` | Voting data: votes by proposal, votes by validator |
 | `price-service.ts` | Token prices: current and historical |
 | `slashing-event-service.ts` | Slashing events for validators |
-| `github-service.ts` | GitHub repository data for chains |
+| `github-service.ts` | GitHub repository activity plus DB-backed PR, issue, and complete author-union health metrics for chains |
 | `infrastructure-service.ts` | Infrastructure providers data |
 | `search-service.ts` | Search functionality across chains and validators |
 | `ecosystem-service.ts` | Ecosystem groupings and filtering |
