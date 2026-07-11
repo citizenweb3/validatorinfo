@@ -14,6 +14,7 @@ import {
   parseAtomicAmount,
   stockToFlow,
 } from '@/utils/monero-emission';
+import { rewardComposition } from '@/utils/monero-tx-metrics';
 
 interface OwnProps {
   chainName: string | null;
@@ -68,6 +69,7 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
           t('annual inflation'),
           t('stock-to-flow'),
           t('emission phase'),
+          t('tail emission security'),
         ].map((title) => (
           <MetricsCardItem
             key={title}
@@ -81,12 +83,17 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
     );
   }
 
-  const [supplyRaw, params] = await Promise.all([
+  const [supplyRaw, params, txMetrics] = await Promise.all([
     moneroService.getMoneroSupply(),
     moneroService.getMoneroChainParams(),
+    moneroService.getMoneroTxMetrics24h(),
   ]);
 
   const supplyAtomic = parseAtomicAmount(supplyRaw);
+  const sumRewardAtomic = txMetrics ? parseAtomicAmount(txMetrics.sumRewardAtomic) : null;
+  const composition = txMetrics && sumRewardAtomic !== null
+    ? rewardComposition(sumRewardAtomic, TAIL_EMISSION_ATOMIC, txMetrics.feeBlockCount)
+    : null;
   const coinDecimals = params?.coinDecimals ?? null;
   const denom = params?.denom ?? 'XMR';
 
@@ -119,6 +126,10 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
   const isTailEmission = blockRewardAtomic === TAIL_EMISSION_ATOMIC && tailEmissionAmount !== null;
   const emissionPhaseLine = isTailEmission ? t('per block value', { amount: tailEmissionAmount }) : '';
   const emissionPhaseValue = isTailEmission ? withTooltip(emissionPhaseLine, t('tail emission')) : noData;
+  const subsidyShare = composition ? formatPercent(composition.subsidyShare) : null;
+  const tailSecurityValue = subsidyShare
+    ? withTooltip(t('subsidy funded', { share: subsidyShare }), t('tail security tooltip'))
+    : noData;
 
   return (
     <div className={cardGridClassName}>
@@ -157,6 +168,12 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
         data={emissionPhaseValue}
         className={cardClassName}
         dataClassName={dataClassName}
+      />
+      <MetricsCardItem
+        title={t('tail emission security')}
+        data={tailSecurityValue}
+        className={cardClassName}
+        dataClassName={subsidyShare ? dataClassName : mutedDataClassName}
       />
     </div>
   );
