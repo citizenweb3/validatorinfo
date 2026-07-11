@@ -173,7 +173,7 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
         title={t('tail emission security')}
         data={tailSecurityValue}
         className={cardClassName}
-        dataClassName={subsidyShare ? dataClassName : mutedDataClassName}
+        dataClassName={dataClassName}
       />
     </div>
   );
