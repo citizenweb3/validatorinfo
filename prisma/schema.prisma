@@ -129,6 +129,7 @@ model Chain {
   validators                   Validator[]                    @relation("chain_validators")
   addresses                    Address[]                      @relation("chain_addresses")
   nodeVotes                    NodeVote[]                     @relation("node_vote_chain")
+  nodeAuthzGrants              NodeAuthzGrant[]               @relation("node_authz_grant_chain")
   proposals                    Proposal[]                     @relation("chain_proposals")
   githubRepositories           GithubRepository[]             @relation("chain_github_repositories")
   tvsHistory                   ChainTvsHistory[]              @relation("chain_tvs_history")
@@ -224,6 +225,7 @@ model Node {
   chain         Chain               @relation("chain_validator_node", fields: [chainId], references: [id])
   validator     Validator?          @relation("validator_node", fields: [validatorId], references: [id])
   votes         NodeVote[]          @relation("node_vote_node")
+  authzGrants   NodeAuthzGrant[]    @relation("node_authz_grant_node")
   chainNodes    ChainNode[]         @relation("chain_node_infrastructure")
   consensusData NodesConsensusData? @relation("node_consensus_data")
 
@@ -384,6 +386,26 @@ model NodeVote {
 
   @@unique([nodeId, proposalId], map: "node_id_proposal_id")
   @@map("node_votes")
+}
+
+model NodeAuthzGrant {
+  id      Int @id @default(autoincrement())
+  nodeId  Int @map("node_id")
+  chainId Int @map("chain_id")
+
+  granter           String    @db.VarChar(256)
+  grantee           String    @db.VarChar(256)
+  authorizationType String    @map("authorization_type") @db.VarChar(256)
+  msgTypeUrl        String?   @map("msg_type_url") @db.VarChar(256)
+  authorizationData Json?     @map("authorization_data")
+  expiration        DateTime? @db.Timestamptz(6)
+  updatedAt         DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  node  Node  @relation("node_authz_grant_node", fields: [nodeId], references: [id])
+  chain Chain @relation("node_authz_grant_chain", fields: [chainId], references: [id])
+
+  @@index([nodeId])
+  @@map("node_authz_grants")
 }
 
 model GithubRepository {
