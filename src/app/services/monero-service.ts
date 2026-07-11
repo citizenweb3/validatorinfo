@@ -67,6 +67,13 @@ const getMoneroPoolStats = async (window: HashrateWindow): Promise<MoneroPoolSta
   });
 };
 
+const getMoneroPoolBySlug = async (poolSlug: string) => {
+  return db.miningPool.findFirst({
+    where: { slug: poolSlug, chain: { name: MONERO_NAME } },
+    include: { chain: true, stats: true },
+  });
+};
+
 // Returns RAW ATOMIC piconero (emission-only). The caller MUST divide by
 // 10^coinDecimals (=12) at render — never pre-divide here (design §6).
 const getMoneroSupply = async (): Promise<string | null> => {
@@ -356,6 +363,7 @@ const moneroService = {
   getMoneroNetworkSnapshot,
   getMoneroHashrateHistory,
   getMoneroPoolStats,
+  getMoneroPoolBySlug,
   getMoneroSupply,
   getMoneroChainParams,
   getMoneroActivePoolsCount,
@@ -376,6 +384,7 @@ export {
   getMoneroNetworkSnapshot,
   getMoneroHashrateHistory,
   getMoneroPoolStats,
+  getMoneroPoolBySlug,
   getMoneroSupply,
   getMoneroChainParams,
   getMoneroActivePoolsCount,

@@ -1961,6 +1961,9 @@
     "blocksFoundMetric": "Blocks found",
     "marketShareMetric": "Market share",
     "lastBlockFoundMetric": "Last block found",
+    "minersMetric": "Miners",
+    "minersUpdated": "Updated",
+    "p2poolMiners": "P2Pool reports sidechain participants, not stratum workers.",
     "allTimeLabel": "all-time",
     "notEnoughData": "Not enough data",
     "recentBlocksTitle": "Recent Blocks",
@@ -2003,10 +2006,15 @@
     "window7d": "7d",
     "window30d": "30d",
     "windowAll": "All-time",
+    "minersCaption": "Connected miners (tracked pools): {total}",
+    "minersCaptionNote": "Excludes P2Pool sidechain participants and solo miners.",
+    "p2poolMiners": "P2Pool reports sidechain participants, not stratum workers.",
+    "notEnoughData": "—",
     "Table": {
       "Pool": { "name": "Pool", "hint": "Mining pool identified from on-chain block attribution" },
       "Blocks": { "name": "Blocks", "hint": "Blocks attributed to this pool in the selected window" },
       "Share": { "name": "Dominance", "hint": "Percentage of network blocks found in the selected window" },
+      "Miners": { "name": "Miners", "hint": "Connected miners reported by the pool API within the last 24 hours" },
       "Hashrate": { "name": "Hashrate", "hint": "Estimated hashrate from the pool's block share" },
       "Fee": { "name": "Fee", "hint": "Pool fee as declared by the pool" }
     }

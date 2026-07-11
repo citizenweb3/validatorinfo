@@ -9,6 +9,7 @@ import { Locale } from '@/i18n';
 import { HashrateWindow, MoneroPoolBlock } from '@/services/monero-service';
 import cutHash from '@/utils/cut-hash';
 import { formatHashrate } from '@/utils/format-hashrate';
+import { getFreshMinersCount } from '@/utils/monero-pool-miners';
 
 import type { MiningPoolStats } from '@prisma/client';
 
@@ -24,6 +25,9 @@ interface MiningPoolMetricLabels {
   blocksFound: string;
   marketShare: string;
   lastBlockFound: string;
+  miners: string;
+  minersUpdated: string;
+  p2poolMiners: string;
   allTime: string;
   noData: string;
 }
@@ -34,9 +38,12 @@ interface OwnProps {
   currentWindow: HashrateWindow;
   currentWindowLabel: string;
   feePercent: number | null;
+  isP2pool: boolean;
   labels: MiningPoolMetricLabels;
   lastBlock: MoneroPoolBlock | null;
   locale: Locale;
+  minersCount: number | null;
+  minersUpdatedAt: Date | null;
   stat: Pick<MiningPoolStats, 'blocksFound' | 'hashrateEstimate' | 'sharePercent'> | null;
   windowOptions: WindowOption[];
 }
@@ -78,9 +85,12 @@ const MiningPoolMetrics: FC<OwnProps> = ({
   currentWindow,
   currentWindowLabel,
   feePercent,
+  isP2pool,
   labels,
   lastBlock,
   locale,
+  minersCount,
+  minersUpdatedAt,
   stat,
   windowOptions,
 }) => {
@@ -89,6 +99,12 @@ const MiningPoolMetrics: FC<OwnProps> = ({
   const blocksValue = stat ? formatCount(stat.blocksFound, locale) : labels.noData;
   const allTimeBlocksValue = `${currentWindowLabel} · ${formatCount(allTimeBlocks, locale)} ${labels.allTime}`;
   const shareValue = stat?.sharePercent != null ? stat.sharePercent.toFixed(2) : labels.noData;
+  const freshMinersCount = getFreshMinersCount(minersCount, minersUpdatedAt);
+  const minersValue = freshMinersCount !== null ? formatCount(freshMinersCount, locale) : labels.noData;
+  const minersUpdatedLabel = minersUpdatedAt
+    ? `${labels.minersUpdated} ${formatRelativeTime(minersUpdatedAt, locale)}`
+    : '';
+  const minersTooltip = [isP2pool ? labels.p2poolMiners : '', minersUpdatedLabel].filter(Boolean).join('\n');
 
   const lastBlockValue = lastBlock ? (
     <Link
@@ -144,6 +160,14 @@ const MiningPoolMetrics: FC<OwnProps> = ({
           <MetricsCardItem
             title={labels.lastBlockFound}
             data={lastBlockValue}
+            className={cardClassName}
+            dataClassName={cardValueClassName}
+          />
+        </Tooltip>
+        <Tooltip tooltip={minersTooltip}>
+          <MetricsCardItem
+            title={labels.miners}
+            data={minersValue}
             className={cardClassName}
             dataClassName={cardValueClassName}
           />

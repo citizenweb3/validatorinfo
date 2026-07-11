@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 
 import MiningPoolMetrics from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/metrics/mining-pool-metrics';
 import PageTitle from '@/components/common/page-title';
-import db from '@/db';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-service';
 
@@ -16,8 +15,10 @@ interface PageProps {
 }
 
 export async function generateMetadata({ params: { locale, poolSlug } }: { params: { locale: Locale; poolSlug: string } }) {
-  const t = await getTranslations({ locale, namespace: 'MiningPoolDetail' });
-  const pool = await db.miningPool.findFirst({ where: { slug: poolSlug }, select: { name: true } });
+  const [t, pool] = await Promise.all([
+    getTranslations({ locale, namespace: 'MiningPoolDetail' }),
+    moneroService.getMoneroPoolBySlug(poolSlug),
+  ]);
 
   return { title: pool ? `${pool.name} — ${t('metaTitle')}` : t('metaTitle') };
 }
@@ -29,10 +30,7 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { 
 
   const [t, pool, availableWindows] = await Promise.all([
     getTranslations({ locale, namespace: 'MiningPoolDetail' }),
-    db.miningPool.findFirst({
-      where: { slug: poolSlug },
-      include: { chain: true, stats: true },
-    }),
+    moneroService.getMoneroPoolBySlug(poolSlug),
     moneroService.getMoneroAvailableWindows(),
   ]);
 
@@ -67,6 +65,7 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { 
         currentWindow={safeWindow}
         currentWindowLabel={windowLabels[safeWindow]}
         feePercent={pool.feePercent}
+        isP2pool={pool.slug === 'p2pool'}
         labels={{
           metricsTitle: t('metricsTitle'),
           hashrate: t('hashrateMetric'),
@@ -74,11 +73,16 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { 
           blocksFound: t('blocksFoundMetric'),
           marketShare: t('marketShareMetric'),
           lastBlockFound: t('lastBlockFoundMetric'),
+          miners: t('minersMetric'),
+          minersUpdated: t('minersUpdated'),
+          p2poolMiners: t('p2poolMiners'),
           allTime: t('allTimeLabel'),
           noData: t('notEnoughData'),
         }}
         lastBlock={recentBlocks[0] ?? null}
         locale={locale}
+        minersCount={pool.minersCount}
+        minersUpdatedAt={pool.minersUpdatedAt}
         stat={stat}
         windowOptions={windowOptions}
       />
