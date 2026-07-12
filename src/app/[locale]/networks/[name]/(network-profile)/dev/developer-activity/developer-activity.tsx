@@ -50,9 +50,8 @@ const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
             <MetricsCardItem
               title={metric.label}
               data={metric.value === null ? '—' : metric.value.toLocaleString(locale)}
-              className="!mx-0 !w-full min-h-28 px-4 py-4"
-              titleClassName="min-h-12"
-              dataClassName="mt-3 text-2xl"
+              className="!mx-0 !w-full pb-4 pt-2.5"
+              dataClassName="mt-5"
             />
           );
 
