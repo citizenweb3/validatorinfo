@@ -65,7 +65,6 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { 
         currentWindow={safeWindow}
         currentWindowLabel={windowLabels[safeWindow]}
         feePercent={pool.feePercent}
-        isP2pool={pool.slug === 'p2pool'}
         labels={{
           metricsTitle: t('metricsTitle'),
           hashrate: t('hashrateMetric'),
@@ -73,16 +72,11 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { 
           blocksFound: t('blocksFoundMetric'),
           marketShare: t('marketShareMetric'),
           lastBlockFound: t('lastBlockFoundMetric'),
-          miners: t('minersMetric'),
-          minersUpdated: t('minersUpdated'),
-          p2poolMiners: t('p2poolMiners'),
           allTime: t('allTimeLabel'),
           noData: t('notEnoughData'),
         }}
         lastBlock={recentBlocks[0] ?? null}
         locale={locale}
-        minersCount={pool.minersCount}
-        minersUpdatedAt={pool.minersUpdatedAt}
         stat={stat}
         windowOptions={windowOptions}
       />

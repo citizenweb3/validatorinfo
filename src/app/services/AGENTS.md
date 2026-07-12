@@ -22,6 +22,7 @@
 | `headerInfo-service.ts` | Header and navigation info data |
 | `blocks-service.ts` | Block data |
 | `node-consensus-service.ts` | Consensus-specific node data |
+| `mining-pool-service.ts` | Mining-pool profile networks and per-network stored gauges |
 | `aztec-db-service.ts` | Aztec database operations |
 | `aztec-contracts-service.ts` | Aztec L1 contracts data |
 | `aztec-vote-event-service.ts` | Aztec vote events |

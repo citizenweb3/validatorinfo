@@ -3,9 +3,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
-import Tooltip from '@/components/common/tooltip';
 import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-service';
-import { getFreshMinersCount } from '@/utils/monero-pool-miners';
 
 import HashrateWindowSelector from './hashrate-window-selector';
 import NetworkHealth from './network-health';
@@ -35,19 +33,10 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
   const safeWindow: HashrateWindow = availableWindows.includes(requested) ? requested : '24h';
 
   const rawStats = await moneroService.getMoneroPoolStats(safeWindow);
-  const referenceTime = Date.now();
   // Pin the unknown/solo bucket last; keep the rest share-desc (design §7).
   const poolStats = [...rawStats].sort(
     (a, b) => (a.pool.slug === 'unknown' ? 1 : 0) - (b.pool.slug === 'unknown' ? 1 : 0),
   );
-  const trackedMinerCounts = rawStats.flatMap((stat) => {
-    if (stat.pool.slug === 'unknown' || stat.pool.slug === 'p2pool') return [];
-    const minersCount = getFreshMinersCount(stat.pool.minersCount, stat.pool.minersUpdatedAt, referenceTime);
-    return minersCount === null ? [] : [minersCount];
-  });
-  const connectedMiners = trackedMinerCounts.length > 0
-    ? trackedMinerCounts.reduce((total, minersCount) => total + minersCount, 0)
-    : null;
 
   const windowLabels: Record<HashrateWindow, string> = {
     '24h': t('window24h'),
@@ -74,9 +63,6 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
           <div className="mt-4 flex flex-col gap-2">
             {poolStats.map((stat) => {
               const pct = stat.sharePercent ?? 0;
-              const minersCount = stat.pool.slug === 'unknown'
-                ? null
-                : getFreshMinersCount(stat.pool.minersCount, stat.pool.minersUpdatedAt, referenceTime);
               // Unknown/solo is a mix of many miners, not one pool — neutral grey, not a centralisation colour.
               const fillColor = stat.pool.slug === 'unknown' ? '#6B7280B2' : barColor(pct);
               return (
@@ -97,16 +83,9 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
                       style={{ width: `${Math.min(pct, 100)}%`, backgroundColor: fillColor }}
                     />
                   </div>
-                  <div className="w-24 shrink-0 text-right">
-                    <div className="font-handjet text-base text-highlight">{pct.toFixed(2)}%</div>
-                    {minersCount !== null ? (
-                      <Tooltip tooltip={stat.pool.slug === 'p2pool' ? t('p2poolMiners') : ''} direction="top">
-                        <div className="font-handjet text-lg text-white">
-                          {t('minersValue', { count: minersCount.toLocaleString(locale) })}
-                        </div>
-                      </Tooltip>
-                    ) : null}
-                  </div>
+                  <span className="w-16 shrink-0 text-right font-handjet text-base text-highlight">
+                    {pct.toFixed(2)}%
+                  </span>
                 </div>
               );
             })}
@@ -123,12 +102,7 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
         notEnoughDataMessage={t('dominanceNotEnoughData')}
         periodOptions={periodOptions}
       />
-      <NetworkHealth
-        poolStats={poolStats}
-        window={safeWindow}
-        connectedMiners={connectedMiners}
-        locale={locale}
-      />
+      <NetworkHealth poolStats={poolStats} window={safeWindow} />
     </div>
   );
 };
