@@ -11,7 +11,7 @@ import {
   getOrganizationRepos,
 } from '@/server/tools/github-api';
 import { getGithubOrganization, isValidGithubUrl } from '@/server/utils/parse-github-url';
-import { addUtcDays, getGithubAuthorWindow, toUtcDateString } from '@/utils/github-dev-health';
+import { addUtcDays, getGithubContributorWindow, toUtcDateString } from '@/utils/github-dev-health';
 
 const { logInfo, logError, logWarn } = logger('update-github-repositories');
 
@@ -268,7 +268,7 @@ const processRepository = async (
 };
 
 const updateGithubRepositories = async (chainNames: string[]) => {
-  const { cutoff: authorCutoff, completedThrough } = getGithubAuthorWindow();
+  const { cutoff: authorCutoff, completedThrough } = getGithubContributorWindow();
   const authorBackfillFullNames = await getAuthorBackfillFullNames(authorCutoff);
   const context: RepositoryProcessingContext = {
     authorBackfillFullNames,

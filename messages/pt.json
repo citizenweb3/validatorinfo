@@ -577,8 +577,8 @@
       "open prs": "PRs Abertas",
       "open issues": "Issues Abertas",
       "open issues tooltip": "Issues abertas, excluindo pull requests",
-      "active maintainers": "Mantenedores Ativos",
-      "active maintainers tooltip": "Autores de commits vinculados ao GitHub e únicos nos repositórios monitorados nos últimos 90 dias, excluindo bots",
+      "active contributors": "Colaboradores Ativos",
+      "active contributors tooltip": "Autores únicos de commits vinculados ao GitHub nos repositórios monitorados nos últimos 30 dias UTC totalmente indexados, excluindo bots",
       "Table": {
         "Repository Name": {
           "name": "Nome do Repositório",

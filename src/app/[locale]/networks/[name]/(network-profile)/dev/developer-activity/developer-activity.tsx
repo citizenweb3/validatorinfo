@@ -35,10 +35,10 @@ const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
       tooltip: t('open issues tooltip'),
     },
     {
-      key: 'active-maintainers',
-      label: t('active maintainers'),
-      value: stats.activeMaintainers,
-      tooltip: t('active maintainers tooltip'),
+      key: 'active-contributors',
+      label: t('active contributors'),
+      value: stats.activeContributors,
+      tooltip: t('active contributors tooltip'),
     },
   ];
 

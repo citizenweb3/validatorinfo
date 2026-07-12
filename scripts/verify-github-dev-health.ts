@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 
 import { selectAuthorBackfillFullNames } from '@/server/jobs/update-github-repositories';
 import { getDailyCommits, getOpenPullRequestsCountByOwner } from '@/server/tools/github-api';
-import { getActiveMaintainersCount, type GithubMaintainerRepository } from '@/services/github-service';
-import { getGithubAuthorWindow, toUtcDateString } from '@/utils/github-dev-health';
+import { getActiveContributorsCount, type GithubContributorRepository } from '@/services/github-service';
+import { getGithubContributorWindow, toUtcDateString } from '@/utils/github-dev-health';
 
 const originalFetch = global.fetch;
 
@@ -81,30 +81,31 @@ const verifyPartialCommitResult = async () => {
 };
 
 const verifyBackfillSelection = () => {
-  const cutoff = new Date('2026-04-12T00:00:00.000Z');
+  const cutoff = new Date('2026-06-11T00:00:00.000Z');
   const candidates = [
     { fullName: 'org/a', pushedAt: new Date('2026-07-10'), authorCoverageFrom: null },
     { fullName: 'org/a', pushedAt: new Date('2026-07-09'), authorCoverageFrom: null },
-    { fullName: 'org/b', pushedAt: new Date('2026-07-08'), authorCoverageFrom: new Date('2026-05-01') },
+    { fullName: 'org/b', pushedAt: new Date('2026-07-08'), authorCoverageFrom: new Date('2026-07-01') },
     { fullName: 'org/c', pushedAt: new Date('2026-01-01'), authorCoverageFrom: null },
   ];
 
   assert.deepEqual(selectAuthorBackfillFullNames(candidates, cutoff, 2), ['org/a', 'org/b']);
 
-  const window = getGithubAuthorWindow(new Date('2026-07-11T12:00:00.000Z'));
+  const window = getGithubContributorWindow(new Date('2026-07-11T12:00:00.000Z'));
   assert.equal(toUtcDateString(window.completedThrough), '2026-07-10');
-  assert.equal(toUtcDateString(window.cutoff), '2026-04-12');
+  assert.equal(toUtcDateString(window.cutoff), '2026-06-11');
 };
 
-const verifyActiveMaintainerUnion = () => {
-  const coverageFrom = new Date('2026-04-12T00:00:00.000Z');
+const verifyActiveContributorUnion = () => {
+  const coverageFrom = new Date('2026-06-11T00:00:00.000Z');
   const fetchedThrough = new Date('2026-07-10T00:00:00.000Z');
-  const repositories: GithubMaintainerRepository[] = [
+  const repositories: GithubContributorRepository[] = [
     {
       pushedAt: new Date('2026-07-09T00:00:00.000Z'),
       authorCoverageFrom: coverageFrom,
       activityFetchedThrough: fetchedThrough,
       activities: [
+        { date: new Date('2026-06-10T00:00:00.000Z'), authorLogins: ['outside-window'] },
         { date: new Date('2026-07-09T00:00:00.000Z'), authorLogins: ['alice', 'bob', 'release[bot]'] },
       ],
     },
@@ -124,13 +125,18 @@ const verifyActiveMaintainerUnion = () => {
     },
   ];
 
-  const now = new Date('2026-07-11T12:00:00.000Z');
-  assert.equal(getActiveMaintainersCount(repositories, now), 3);
+  const now = new Date('2026-07-12T12:00:00.000Z');
+  assert.equal(getActiveContributorsCount(repositories, now), 3);
 
   const incompleteRepositories = repositories.map((repository, index) =>
     index === 0 ? { ...repository, authorCoverageFrom: null } : repository,
   );
-  assert.equal(getActiveMaintainersCount(incompleteRepositories, now), null);
+  assert.equal(getActiveContributorsCount(incompleteRepositories, now), null);
+
+  const staleRepositories = repositories.map((repository, index) =>
+    index < 2 ? { ...repository, activityFetchedThrough: new Date('2026-07-09T00:00:00.000Z') } : repository,
+  );
+  assert.equal(getActiveContributorsCount(staleRepositories, now), null);
 };
 
 const run = async () => {
@@ -139,7 +145,7 @@ const run = async () => {
     await verifyCommitExtraction();
     await verifyPartialCommitResult();
     verifyBackfillSelection();
-    verifyActiveMaintainerUnion();
+    verifyActiveContributorUnion();
     console.log('GitHub dev-health verification passed');
   } finally {
     global.fetch = originalFetch;

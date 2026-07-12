@@ -577,8 +577,8 @@
       "open prs": "Открытые PR",
       "open issues": "Открытые issues",
       "open issues tooltip": "Открытые issues без учёта pull requests",
-      "active maintainers": "Активные мейнтейнеры",
-      "active maintainers tooltip": "Уникальные авторы коммитов с привязанным GitHub-аккаунтом во всех отслеживаемых репозиториях за последние 90 дней, без ботов",
+      "active contributors": "Активные контрибьюторы",
+      "active contributors tooltip": "Уникальные авторы коммитов с привязанным GitHub-аккаунтом во всех отслеживаемых репозиториях за последние 30 полностью проиндексированных UTC-дней, без ботов",
       "Table": {
         "Repository Name": {
           "name": "Название репозитория",

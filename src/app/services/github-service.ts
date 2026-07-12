@@ -1,7 +1,11 @@
 import { type GithubDevHealth, Prisma } from '@prisma/client';
 
 import db from '@/db';
-import { getGithubAuthorWindow } from '@/utils/github-dev-health';
+import {
+  addUtcDays,
+  GITHUB_CONTRIBUTOR_WINDOW_DAYS,
+  getGithubContributorWindow,
+} from '@/utils/github-dev-health';
 
 export type GithubRepositoryWithActivity = Prisma.GithubRepositoryGetPayload<{
   include: { activities: true };
@@ -20,7 +24,7 @@ export interface GithubStats {
   mostActiveRepoCommits: number;
   openPrs: number | null;
   openIssues: number | null;
-  activeMaintainers: number | null;
+  activeContributors: number | null;
 }
 
 export interface DailyActivity {
@@ -29,7 +33,7 @@ export interface DailyActivity {
   level: number;
 }
 
-export interface GithubMaintainerRepository {
+export interface GithubContributorRepository {
   pushedAt: Date;
   authorCoverageFrom: Date | null;
   activityFetchedThrough: Date | null;
@@ -62,11 +66,30 @@ const getRepositoriesWithCommits = async (chainId: number): Promise<GithubReposi
   });
 };
 
-export const getActiveMaintainersCount = (
-  repositories: GithubMaintainerRepository[],
+const MAX_CONTRIBUTOR_LAG_DAYS = 1;
+
+export const getActiveContributorsCount = (
+  repositories: GithubContributorRepository[],
   now: Date = new Date(),
 ): number | null => {
-  const { cutoff, completedThrough } = getGithubAuthorWindow(now);
+  const targetWindow = getGithubContributorWindow(now);
+  const candidateCutoff = addUtcDays(targetWindow.cutoff, -MAX_CONTRIBUTOR_LAG_DAYS);
+  const candidateRepositories = repositories.filter((repository) => repository.pushedAt >= candidateCutoff);
+
+  if (candidateRepositories.length === 0) return 0;
+
+  let completedThrough = targetWindow.completedThrough;
+  for (const repository of candidateRepositories) {
+    if (repository.activityFetchedThrough === null) return null;
+    if (repository.activityFetchedThrough < completedThrough) {
+      completedThrough = repository.activityFetchedThrough;
+    }
+  }
+
+  const minimumFreshDate = addUtcDays(targetWindow.completedThrough, -MAX_CONTRIBUTOR_LAG_DAYS);
+  if (completedThrough < minimumFreshDate) return null;
+
+  const cutoff = addUtcDays(completedThrough, -(GITHUB_CONTRIBUTOR_WINDOW_DAYS - 1));
   const activeRepositories = repositories.filter((repository) => repository.pushedAt >= cutoff);
 
   const hasCompleteCoverage = activeRepositories.every(
@@ -105,7 +128,7 @@ const getStatsFromRepositories = (
       mostActiveRepoCommits: 0,
       openPrs: null,
       openIssues: null,
-      activeMaintainers: null,
+      activeContributors: null,
     };
   }
 
@@ -125,7 +148,7 @@ const getStatsFromRepositories = (
     mostActiveRepoCommits,
     openPrs: devHealth?.openPrsCount ?? null,
     openIssues: devHealth?.openIssuesCount ?? null,
-    activeMaintainers: getActiveMaintainersCount(repositories, now),
+    activeContributors: getActiveContributorsCount(repositories, now),
   };
 };
 
