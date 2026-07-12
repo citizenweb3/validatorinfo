@@ -49,9 +49,39 @@ const updateMoneroPoolDailyShare = async (): Promise<void> => {
       orderBy: { date: 'desc' },
       select: { date: true },
     });
-    const candidateStart = lastStored ? addUtcDays(startOfUtcDay(lastStored.date), -1) : historyStart;
+
+    // Resume from the earliest day that still needs computing, not merely from the
+    // latest stored day. If an interior day's transaction threw on an earlier run,
+    // MAX(date) would advance past it and that day would never be revisited — a
+    // permanent hole in the series. Walk forward and stop at the first day that has
+    // canonical blocks but no stored rows.
+    const storedRows = await db.moneroPoolDailyShare.findMany({
+      where: { chainId: chain.id },
+      distinct: ['date'],
+      select: { date: true },
+    });
+    const storedDays = new Set(storedRows.map((row) => dateKey(startOfUtcDay(row.date))));
+
+    let firstGap: Date | null = null;
+    for (let day = historyStart; day <= yesterday; day = addUtcDays(day, 1)) {
+      if (storedDays.has(dateKey(day))) continue;
+      // A day with no canonical blocks legitimately has no rows — skip it, don't chase it forever.
+      const dayBlocks = await db.moneroBlock.count({
+        where: { chainId: chain.id, isCanonical: true, blockTimestamp: { gte: day, lt: addUtcDays(day, 1) } },
+      });
+      if (dayBlocks > 0) {
+        firstGap = day;
+        break;
+      }
+    }
+
+    // Keep a two-day overlap on the tail for reorg-driven recomputes of recent days.
+    const overlapStart = lastStored ? addUtcDays(startOfUtcDay(lastStored.date), -1) : historyStart;
+    const resumeCandidate = firstGap
+      ? new Date(Math.min(firstGap.getTime(), overlapStart.getTime()))
+      : overlapStart;
     const recomputeStart = new Date(
-      Math.max(historyStart.getTime(), Math.min(candidateStart.getTime(), yesterday.getTime())),
+      Math.max(historyStart.getTime(), Math.min(resumeCandidate.getTime(), yesterday.getTime())),
     );
 
     const existingPools = await db.miningPool.findMany({
