@@ -26,7 +26,12 @@ const DeveloperActivity: FC<OwnProps> = async ({ chain }) => {
     { key: 'stars', label: t('star'), value: stats.totalStars },
     { key: 'forks', label: t('forked'), value: stats.totalForks },
     { key: 'repositories', label: t('repositories'), value: stats.repositoryCount },
-    { key: 'most-active', label: t('most active repo'), value: stats.mostActiveRepoCommits },
+    {
+      key: 'most-active',
+      label: t('most active repo'),
+      value: stats.mostActiveRepoCommits,
+      tooltip: t('most active repo tooltip'),
+    },
     { key: 'open-prs', label: t('open prs'), value: stats.openPrs },
     {
       key: 'open-issues',

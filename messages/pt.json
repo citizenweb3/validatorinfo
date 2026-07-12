@@ -574,6 +574,7 @@
       "forked": "Bifurcado",
       "repositories": "Repositórios",
       "most active repo": "Repositório Mais Ativo",
+      "most active repo tooltip": "A maior contagem total de commits em um único repositório monitorado em todo o histórico de atividade armazenado no índice",
       "open prs": "PRs Abertas",
       "open issues": "Issues Abertas",
       "open issues tooltip": "Issues abertas, excluindo pull requests",

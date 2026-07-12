@@ -574,6 +574,7 @@
       "forked": "Forked",
       "repositories": "Repositories",
       "most active repo": "Most Active Repo",
+      "most active repo tooltip": "The highest total commit count in a single tracked repository across all of its activity history stored in the index",
       "open prs": "Open PRs",
       "open issues": "Open Issues",
       "open issues tooltip": "Open issues excluding pull requests",

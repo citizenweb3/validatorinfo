@@ -574,6 +574,7 @@
       "forked": "Форки",
       "repositories": "Репозитории",
       "most active repo": "Самый активный репозиторий",
+      "most active repo tooltip": "Максимальное число коммитов в одном отслеживаемом репозитории за всю сохранённую в индексе историю активности",
       "open prs": "Открытые PR",
       "open issues": "Открытые issues",
       "open issues tooltip": "Открытые issues без учёта pull requests",
