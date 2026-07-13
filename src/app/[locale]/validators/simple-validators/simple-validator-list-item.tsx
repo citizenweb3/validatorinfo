@@ -33,7 +33,7 @@ const SimpleValidatorListItem: FC<OwnProps> = ({ validator, chains }) => {
         <ValidatorListItemLinks validator={validator} />
       </BaseTableCell>
       <BaseTableCell className="px-3">
-        <ValidatorListItemChains chains={validatorChains} validator={validator} />
+        <ValidatorListItemChains chains={validatorChains} />
       </BaseTableCell>
     </BaseTableRow>
   );

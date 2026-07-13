@@ -14,7 +14,9 @@ interface OwnProps {
 }
 
 const SimpleValidatorsList: FC<OwnProps> = async ({ sort, perPage, currentPage = 1, ecosystems }) => {
-  const chains = await ChainService.getAll([], 0, 1000);
+  // showAll=true so closed (unsupported) networks are in the lookup too — a validator's
+  // nodes on them would otherwise resolve to undefined and drop out of Supported Assets.
+  const chains = await ChainService.getAll([], 0, 1000, 'name', 'asc', true);
   const { validators: list, pages } = await validatorService.getAll(
     ecosystems,
     perPage * (currentPage - 1),
