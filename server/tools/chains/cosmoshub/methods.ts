@@ -14,6 +14,7 @@ import getNodeParams from '@/server/tools/chains/cosmoshub/get-node-params';
 import getNodeRewards from '@/server/tools/chains/cosmoshub/get-node-rewards';
 import getNodes from '@/server/tools/chains/cosmoshub/get-nodes';
 import getNodesVotes from '@/server/tools/chains/cosmoshub/get-nodes-votes';
+import getNodeAuthzGrants from '@/server/tools/chains/cosmoshub/get-node-authz-grants';
 import getProposalParams from '@/server/tools/chains/cosmoshub/get-proposal-params';
 import getProposals from '@/server/tools/chains/cosmoshub/get-proposals';
 import getSlashingParams from '@/server/tools/chains/cosmoshub/get-slashing-params';
@@ -39,6 +40,7 @@ const chainMethods: ChainMethods = {
   getSlashingParams,
   getMissedBlocks,
   getNodesVotes,
+  getNodeAuthzGrants,
   getCommTax,
   getWalletsAmount,
   getProposalParams,

@@ -28,6 +28,7 @@ const chainMethods: ChainMethods = {
   getNodeParams,
   getProposals,
   getNodesVotes: () => Promise.resolve([]),
+  getNodeAuthzGrants: async () => null,
   getCommTax: async () => null,
   getWalletsAmount: async () => null,
   getProposalParams,
