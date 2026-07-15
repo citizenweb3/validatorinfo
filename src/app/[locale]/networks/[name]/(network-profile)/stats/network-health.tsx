@@ -5,6 +5,8 @@ import PassportRow, { signalColors } from '@/components/common/passport-row';
 import SubTitle from '@/components/common/sub-title';
 import { MONERO_BLOCK_TIME_SECONDS } from '@/server/tools/chains/monero/constants';
 import moneroService, { HashrateWindow, MoneroPoolStatsRow } from '@/services/monero-service';
+import { TAIL_EMISSION_ATOMIC, parseAtomicAmount } from '@/utils/monero-emission';
+import { rewardComposition } from '@/utils/monero-tx-metrics';
 import { blockTimeStats, difficultyStability, hhi, nakamotoCoefficient } from '@/utils/pow-decentralization';
 
 interface OwnProps {
@@ -72,8 +74,11 @@ const difficultyColor = (band: ReturnType<typeof difficultyBand>): string | unde
 };
 
 const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
-  const t = await getTranslations('PowNetworkStats');
-  const hashrateHistory = await moneroService.getMoneroHashrateHistory(window);
+  const [t, hashrateHistory, txMetrics] = await Promise.all([
+    getTranslations('PowNetworkStats'),
+    moneroService.getMoneroHashrateHistory(window),
+    moneroService.getMoneroTxMetrics24h(),
+  ]);
 
   const nakamoto = nakamotoCoefficient(poolStats);
   const hhiResult = hhi(poolStats);
@@ -81,6 +86,10 @@ const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
   const blockTime = blockTimeStats(hashrateHistory);
   const difficulty = difficultyStability(hashrateHistory);
   const difficultyStatus = difficultyBand(difficulty.coefficientOfVariation);
+  const sumRewardAtomic = txMetrics ? parseAtomicAmount(txMetrics.sumRewardAtomic) : null;
+  const composition = txMetrics && sumRewardAtomic !== null
+    ? rewardComposition(sumRewardAtomic, TAIL_EMISSION_ATOMIC, txMetrics.feeBlockCount)
+    : null;
 
   const nakamotoValue =
     nakamoto.count === null
@@ -113,6 +122,13 @@ const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
           status: t(difficultyLabelKeys[difficultyStatus]),
         });
 
+  const feeShareValue = composition
+    ? t('feeShareValue', {
+        fees: formatPercent(composition.feeShare),
+        subsidy: formatPercent(composition.subsidyShare),
+      })
+    : t('notEnoughData');
+
   return (
     <section>
       <SubTitle text={t('networkHealth')} />
@@ -133,6 +149,7 @@ const NetworkHealth: FC<OwnProps> = async ({ poolStats, window }) => {
           value={difficultyValue}
           color={difficultyColor(difficultyStatus)}
         />
+        <PassportRow label={t('feeShare')} value={feeShareValue} />
       </div>
     </section>
   );

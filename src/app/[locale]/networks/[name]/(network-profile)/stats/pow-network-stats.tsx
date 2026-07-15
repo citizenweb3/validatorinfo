@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -7,6 +7,7 @@ import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-
 
 import HashrateWindowSelector from './hashrate-window-selector';
 import NetworkHealth from './network-health';
+import PoolDominanceSection, { type PoolDominancePeriodOption } from './pool-dominance-section';
 
 interface OwnProps {
   window: HashrateWindow;
@@ -22,9 +23,12 @@ const barColor = (pct: number): string => {
 // PoW network stats — the centralisation "Pool Distribution" bars. The per-pool technical table lives on
 // /networks/[name]/mining-pools (reachable from the network header), so it is not duplicated here.
 const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
-  const t = await getTranslations('PowNetworkStats');
-
-  const availableWindows = await moneroService.getMoneroAvailableWindows();
+  const [t, locale, availableWindows, shareHistory] = await Promise.all([
+    getTranslations('PowNetworkStats'),
+    getLocale(),
+    moneroService.getMoneroAvailableWindows(),
+    moneroService.getMoneroPoolShareHistory(),
+  ]);
   const requested: HashrateWindow = isValidWindow(window) ? window : '24h';
   const safeWindow: HashrateWindow = availableWindows.includes(requested) ? requested : '24h';
 
@@ -41,6 +45,12 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
     all: t('windowAll'),
   };
   const windowOptions = availableWindows.map((value) => ({ value, label: windowLabels[value] }));
+  const periodOptions: PoolDominancePeriodOption[] = [
+    { value: 'day', label: t('periodDaily'), ariaLabel: t('switchPeriod', { period: t('periodDaily') }) },
+    { value: 'week', label: t('periodWeekly'), ariaLabel: t('switchPeriod', { period: t('periodWeekly') }) },
+    { value: 'month', label: t('periodMonthly'), ariaLabel: t('switchPeriod', { period: t('periodMonthly') }) },
+    { value: 'year', label: t('periodYearly'), ariaLabel: t('switchPeriod', { period: t('periodYearly') }) },
+  ];
 
   return (
     <div className="mt-5 flex flex-col gap-8">
@@ -84,6 +94,14 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
           <div className="mt-4 bg-table_row p-6 font-sfpro text-base opacity-70">{t('noPoolData')}</div>
         )}
       </section>
+      <PoolDominanceSection
+        series={shareHistory}
+        locale={locale}
+        title={t('dominanceTitle')}
+        emptyMessage={t('dominanceEmpty')}
+        notEnoughDataMessage={t('dominanceNotEnoughData')}
+        periodOptions={periodOptions}
+      />
       <NetworkHealth poolStats={poolStats} window={safeWindow} />
     </div>
   );

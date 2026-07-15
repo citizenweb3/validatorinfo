@@ -132,6 +132,7 @@ model Chain {
   nodeAuthzGrants              NodeAuthzGrant[]               @relation("node_authz_grant_chain")
   proposals                    Proposal[]                     @relation("chain_proposals")
   githubRepositories           GithubRepository[]             @relation("chain_github_repositories")
+  githubDevHealth              GithubDevHealth?
   tvsHistory                   ChainTvsHistory[]              @relation("chain_tvs_history")
   aprHistory                   ChainAprHistory[]              @relation("chain_apr_history")
   validatorsHistory            ChainValidatorsHistory[]       @relation("chain_validators_history")
@@ -142,6 +143,7 @@ model Chain {
 
   miningPools             MiningPool[]             @relation("chain_mining_pools")
   miningPoolStats         MiningPoolStats[]        @relation("chain_mining_pool_stats")
+  moneroPoolDailyShares   MoneroPoolDailyShare[]   @relation("chain_monero_pool_daily_shares")
   hashrateSnapshots       ChainHashrateSnapshot[]  @relation("chain_hashrate_snapshots")
   moneroBlocks            MoneroBlock[]            @relation("chain_monero_blocks")
   moneroBlockAttributions MoneroBlockAttribution[] @relation("chain_monero_block_attributions")
@@ -409,27 +411,40 @@ model NodeAuthzGrant {
 }
 
 model GithubRepository {
-  id              Int      @id @default(autoincrement())
-  chainId         Int      @map("chain_id")
-  name            String
-  fullName        String   @map("full_name")
-  description     String?
-  url             String
-  homepage        String?
-  language        String?
-  starsCount      Int      @default(0) @map("stars_count")
-  forksCount      Int      @default(0) @map("forks_count")
-  watchersCount   Int      @default(0) @map("watchers_count")
-  openIssuesCount Int      @default(0) @map("open_issues_count")
-  createdAt       DateTime @map("created_at") @db.Timestamptz(6)
-  updatedAt       DateTime @map("updated_at") @db.Timestamptz(6)
-  pushedAt        DateTime @map("pushed_at") @db.Timestamptz(6)
+  id                     Int       @id @default(autoincrement())
+  chainId                Int       @map("chain_id")
+  name                   String
+  fullName               String    @map("full_name")
+  description            String?
+  url                    String
+  homepage               String?
+  language               String?
+  starsCount             Int       @default(0) @map("stars_count")
+  forksCount             Int       @default(0) @map("forks_count")
+  watchersCount          Int       @default(0) @map("watchers_count")
+  openIssuesCount        Int       @default(0) @map("open_issues_count")
+  createdAt              DateTime  @map("created_at") @db.Timestamptz(6)
+  updatedAt              DateTime  @map("updated_at") @db.Timestamptz(6)
+  pushedAt               DateTime  @map("pushed_at") @db.Timestamptz(6)
+  authorCoverageFrom     DateTime? @map("author_coverage_from") @db.Date
+  activityFetchedThrough DateTime? @map("activity_fetched_through") @db.Date
 
   chain      Chain            @relation("chain_github_repositories", fields: [chainId], references: [id])
   activities GithubActivity[] @relation("repository_activities")
 
   @@unique([chainId, fullName])
   @@map("github_repositories")
+}
+
+model GithubDevHealth {
+  chainId         Int      @id @map("chain_id")
+  openPrsCount    Int      @map("open_prs_count")
+  openIssuesCount Int      @map("open_issues_count")
+  issuesUpdatedAt DateTime @map("issues_updated_at") @db.Timestamptz(6)
+
+  chain Chain @relation(fields: [chainId], references: [id], onDelete: Cascade)
+
+  @@map("github_dev_health")
 }
 
 model ChainTvsHistory {
@@ -506,6 +521,7 @@ model GithubActivity {
   commitCount  Int      @default(0) @map("commit_count")
   additions    Int      @default(0)
   deletions    Int      @default(0)
+  authorLogins Json?    @map("author_logins")
 
   repository GithubRepository @relation("repository_activities", fields: [repositoryId], references: [id], onDelete: Cascade)
 
@@ -611,25 +627,28 @@ model PodcastChunk {
 }
 
 model MiningPool {
-  id                   Int      @id @default(autoincrement())
-  chainId              Int      @map("chain_id")
-  slug                 String   @db.VarChar(256)
-  name                 String   @db.VarChar(256)
-  logoUrl              String?  @map("logo_url")
+  id                   Int       @id @default(autoincrement())
+  chainId              Int       @map("chain_id")
+  slug                 String    @db.VarChar(256)
+  name                 String    @db.VarChar(256)
+  logoUrl              String?   @map("logo_url")
   website              String?
   github               String?
   twitter              String?
-  paymentScheme        String?  @map("payment_scheme") @db.VarChar(64)
-  feePercent           Float?   @map("fee_percent")
-  identificationMethod String   @map("identification_method") @db.VarChar(64)
-  detectorJson         Json?    @map("detector_json")
+  paymentScheme        String?   @map("payment_scheme") @db.VarChar(64)
+  feePercent           Float?    @map("fee_percent")
+  minersCount          Int?      @map("miners_count")
+  minersUpdatedAt      DateTime? @map("miners_updated_at") @db.Timestamptz(6)
+  identificationMethod String    @map("identification_method") @db.VarChar(64)
+  detectorJson         Json?     @map("detector_json")
   fingerprint          String?
-  isVerified           Boolean  @default(false) @map("is_verified")
-  createdAt            DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt            DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+  isVerified           Boolean   @default(false) @map("is_verified")
+  createdAt            DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt            DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
 
   chain        Chain                    @relation("chain_mining_pools", fields: [chainId], references: [id])
   stats        MiningPoolStats[]        @relation("mining_pool_stats")
+  dailyShares  MoneroPoolDailyShare[]   @relation("mining_pool_daily_shares")
   attributions MoneroBlockAttribution[] @relation("mining_pool_attributions")
 
   @@unique([chainId, slug])
@@ -655,6 +674,24 @@ model MiningPoolStats {
   @@unique([chainId, poolId, windowKind])
   @@index([chainId, windowKind, sharePercent])
   @@map("mining_pool_stats")
+}
+
+model MoneroPoolDailyShare {
+  id            Int      @id @default(autoincrement())
+  chainId       Int      @map("chain_id")
+  poolId        Int      @map("pool_id")
+  date          DateTime @db.Date
+  blocksFound   Int      @map("blocks_found")
+  sharePercent  Float    @map("share_percent")
+  networkBlocks Int      @map("network_blocks")
+  updatedAt     DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  chain Chain      @relation("chain_monero_pool_daily_shares", fields: [chainId], references: [id])
+  pool  MiningPool @relation("mining_pool_daily_shares", fields: [poolId], references: [id])
+
+  @@unique([chainId, poolId, date])
+  @@index([chainId, date])
+  @@map("monero_pool_daily_shares")
 }
 
 model ChainHashrateSnapshot {

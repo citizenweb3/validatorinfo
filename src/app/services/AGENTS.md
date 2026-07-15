@@ -13,7 +13,7 @@
 | `vote-service.ts` | Voting data: votes by proposal, votes by validator |
 | `price-service.ts` | Token prices: current and historical |
 | `slashing-event-service.ts` | Slashing events for validators |
-| `github-service.ts` | GitHub repository data for chains |
+| `github-service.ts` | GitHub repository activity plus DB-backed PR, issue, and complete author-union health metrics for chains |
 | `infrastructure-service.ts` | Infrastructure providers data |
 | `search-service.ts` | Search functionality across chains and validators |
 | `ecosystem-service.ts` | Ecosystem groupings and filtering |
@@ -22,6 +22,7 @@
 | `headerInfo-service.ts` | Header and navigation info data |
 | `blocks-service.ts` | Block data |
 | `node-consensus-service.ts` | Consensus-specific node data |
+| `mining-pool-service.ts` | Mining-pool profile networks and per-network stored gauges |
 | `aztec-db-service.ts` | Aztec database operations |
 | `aztec-contracts-service.ts` | Aztec L1 contracts data |
 | `aztec-vote-event-service.ts` | Aztec vote events |

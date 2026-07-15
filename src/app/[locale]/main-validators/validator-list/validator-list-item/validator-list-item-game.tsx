@@ -47,7 +47,7 @@ const ValidatorListItemGame: FC<OwnProps> = ({ chains, validator }) => {
         <ValidatorListItemLinks validator={validator} />
       </BaseTableCell>
       <BaseTableCell className={rowStyle}>
-        <ValidatorListItemChains chains={validatorChains} validator={validator} />
+        <ValidatorListItemChains chains={validatorChains} />
       </BaseTableCell>
     </BaseTableRow>
   );

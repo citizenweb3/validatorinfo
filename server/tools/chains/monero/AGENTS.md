@@ -43,6 +43,7 @@ by hash against the indexer's canonical set, and count per-pool share. VI does
 | `monero-network-info` | hourly | Tip-block `difficulty/120n` (BigInt) → `ChainHashrateSnapshot`; latest `/supply` `cumulative_emission_atomic` (RAW ATOMIC, **emission-only**, no `/1e12`, no `+fee`) → `Tokenomics.totalSupply`. Guards: skip on null difficulty, height floor (`< 1M` = ordering artifact), `abs(tip − node_height)` band, supply monotonic |
 | `monero-pool-attribution` | every 10 min | Poll each registry pool + p2pool.observer (isolated) → batch-confirm hashes against the indexer canonical set → upsert `MoneroBlockAttribution`. Conflicting claims on one hash → `isConflicted=true` (kept, excluded from named counts). Bounded two-way reorg re-verify. Batched DB writes |
 | `monero-pool-stats` | hourly | Per window {24h,7d,30d,all}: `networkBlocks = tipHeight − lowerHeight + 1` (EXACT — heights contiguous), `poolBlocks` = canonical, non-conflicted attributions in the same height range; `share`, window-avg `hashrateEstimate` (`'0'` for all). Unknown/solo = clamped residual. Upserts every named pool each run |
+| `monero-pool-daily-share` | daily at 22:23 | Idempotent completed-UTC-day catch-up over persisted `MoneroBlock`/`MoneroBlockAttribution`; transactional per-day pool rows, zero rows for named pools, residual unknown, and a 2-day recompute overlap |
 
 Deleted (do NOT re-add): `monero-pool-discover`, `monero-pool-cluster`,
 `monero-pool-identify`, `rpc-client.ts`, `identify-pool.ts` — all coinbase-
@@ -52,7 +53,7 @@ fingerprint machinery, proven non-viable.
 
 `ChainHashrateSnapshot` (hashrate/difficulty time series), `Tokenomics.totalSupply`
 (raw atomic, emission-only — UI divides by `10^coinDecimals`=12), `MiningPool`,
-`MiningPoolStats` (windowed share), `MoneroBlockAttribution` (per-block
+`MiningPoolStats` (windowed share), `MoneroPoolDailyShare` (materialized completed-day share history), `MoneroBlockAttribution` (per-block
 hash→pool, `isCanonical`/`isConflicted`). UI reads these via `monero-service.ts`.
 
 ## Constraints
