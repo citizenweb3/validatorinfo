@@ -1879,6 +1879,11 @@
       "token": "Token",
       "Merits": "Méritos",
       "Delegations": "Delegações",
+      "delegationsEmpty": "Esta conta não tem delegações ativas.",
+      "delegationsError": "Não foi possível carregar as delegações atuais. Recarregue a página e tente novamente.",
+      "delegationsUnsupported": "As delegações atuais ainda não estão disponíveis para esta rede.",
+      "delegationsPreviousPage": "Página anterior de delegações",
+      "delegationsNextPage": "Próxima página de delegações",
       "Table": {
         "Validator": {
           "name": "Validador",

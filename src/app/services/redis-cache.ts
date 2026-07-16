@@ -131,6 +131,11 @@ export const CACHE_KEYS = {
   delegations: {
     byValidator: (chainName: string, validator: string, cursorKey: string) =>
       `deleg:byval:${chainName}:${validator}:${cursorKey}`,
+    byDelegator: (chainName: string, delegator: string) => `deleg:bydelegator:${chainName}:${delegator}`,
+  },
+  lcd: {
+    endpoints: (chainName: string) => `lcd:endpoints:${chainName}`,
+    response: (chainName: string, pathHash: string) => `lcd:response:${chainName}:${pathHash}`,
   },
 };
 

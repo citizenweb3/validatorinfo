@@ -1878,6 +1878,11 @@
       "token": "Token",
       "Merits": "Merits",
       "Delegations": "Delegations",
+      "delegationsEmpty": "This account has no active delegations.",
+      "delegationsError": "Current delegations could not be loaded. Please reload the page and try again.",
+      "delegationsUnsupported": "Current delegations are not available for this network yet.",
+      "delegationsPreviousPage": "Previous delegations page",
+      "delegationsNextPage": "Next delegations page",
       "Table": {
         "Validator": {
           "name": "Validator",

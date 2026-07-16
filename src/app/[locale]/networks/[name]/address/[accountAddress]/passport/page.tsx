@@ -49,7 +49,7 @@ const AccountPassportPage: NextPageWithLocale<PageProps> = async ({ params: { na
         <Merits />
       </div>
       <SubTitle text={t('Delegations')} />
-      <Delegations chainName={name} page={'AccountPage.Passport'} />
+      <Delegations chainName={name} accountAddress={accountAddress} page="AccountPage.Passport" />
     </div>
   );
 };
