@@ -2,6 +2,7 @@ import { bech32 } from 'bech32';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
+import { composeStoredAccountValue } from '@/utils/account-value';
 import { accountViewedKey } from '@/utils/redis-keys';
 
 const integrationDatabaseUrl = process.env.ACCOUNT_BALANCE_TEST_DATABASE_URL;
@@ -11,7 +12,7 @@ const encodeAddress = (prefix: string, byte: number): string =>
   bech32.encode(prefix, bech32.toWords(Uint8Array.from({ length: 20 }, () => byte)));
 
 test(
-  'the account balance job drains visits, refreshes exact values, retries failures, preserves recency, and prunes',
+  'the account balance job keeps first failures pending, refreshes exact values, retries safely, and prunes',
   { skip: !integrationDatabaseUrl || !integrationRedisUrl },
   async () => {
     assert.ok(integrationDatabaseUrl);
@@ -28,6 +29,7 @@ test(
     const cosmosAddress = encodeAddress('cosmos', 1);
     const atomoneAddress = encodeAddress('atone', 2);
     const prunedAddress = encodeAddress('atone', 3);
+    const firstRefreshFailureAddress = encodeAddress('cosmos', 4);
     const chainNames = ['cosmoshub', 'atomone'];
     const deleteFixtureChains = async () => {
       const chainWhere = { chain: { name: { in: chainNames } } };
@@ -38,6 +40,9 @@ test(
     };
     const loadJson = async (chainName: string, path: string): Promise<unknown> => {
       const denom = chainName === 'cosmoshub' ? 'uatom' : 'uatone';
+      if (path.includes(firstRefreshFailureAddress) && path.includes('/spendable_balances/')) {
+        throw new Error('fixture first-refresh LCD outage');
+      }
       if (path.includes('/spendable_balances/')) {
         return { balance: { denom, amount: chainName === 'cosmoshub' ? '100' : '200' } };
       }
@@ -97,13 +102,17 @@ test(
       const atomoneChain = await createChain('atomone', 'atomone-1', 'ATONE', 'uatone', 'atone');
       await Promise.all([
         redis.zadd(accountViewedKey('cosmoshub'), now.getTime(), cosmosAddress),
+        redis.zadd(accountViewedKey('cosmoshub'), now.getTime(), firstRefreshFailureAddress),
         redis.zadd(accountViewedKey('cosmoshub'), now.getTime(), 'invalid-route-param'),
         redis.zadd(accountViewedKey('atomone'), now.getTime(), atomoneAddress),
       ]);
 
       await updateAccountBalances({ redis, loadJsonOverride: loadJson, now: () => new Date(now) });
 
-      const rows = await db.accountBalance.findMany({ orderBy: [{ chainId: 'asc' }, { address: 'asc' }] });
+      const rows = await db.accountBalance.findMany({
+        where: { updatedAt: { not: null } },
+        orderBy: [{ chainId: 'asc' }, { address: 'asc' }],
+      });
       assert.equal(rows.length, 2);
       assert.deepEqual(
         rows.map((row) => ({
@@ -136,10 +145,37 @@ test(
           },
         ],
       );
+      const firstRefreshFailure = await db.accountBalance.findUniqueOrThrow({
+        where: { chainId_address: { chainId: cosmosChain.id, address: firstRefreshFailureAddress } },
+      });
+      assert.equal(firstRefreshFailure.updatedAt, null);
+      assert.deepEqual(
+        composeStoredAccountValue(
+          {
+            denom: firstRefreshFailure.denom,
+            liquid: firstRefreshFailure.liquid.toFixed(0),
+            staked: firstRefreshFailure.staked.toFixed(0),
+            unbonding: firstRefreshFailure.unbonding.toFixed(0),
+            rewards: firstRefreshFailure.rewards.toFixed(0),
+            updatedAt: firstRefreshFailure.updatedAt,
+          },
+          {
+            coinDecimals: 6,
+            denom: 'ATOM',
+            minimalDenom: 'uatom',
+          },
+          null,
+        ),
+        { status: 'pending' },
+      );
       assert.equal(await redis.zcard(accountViewedKey('cosmoshub')), 0);
       assert.equal(await redis.zcard(accountViewedKey('atomone')), 0);
 
       const later = new Date(now.getTime() + 11 * 60 * 1000);
+      await db.accountBalance.update({
+        where: { chainId_address: { chainId: cosmosChain.id, address: cosmosAddress } },
+        data: { denom: 'legacy-uatom' },
+      });
       await redis.zadd(accountViewedKey('cosmoshub'), later.getTime(), cosmosAddress);
       await updateAccountBalances({
         redis,
@@ -156,6 +192,7 @@ test(
       });
       assert.equal(failedRefresh.updatedAt?.toISOString(), now.toISOString());
       assert.equal(failedRefresh.lastViewedAt.toISOString(), later.toISOString());
+      assert.equal(failedRefresh.denom, 'legacy-uatom');
 
       await db.accountBalance.create({
         data: {

@@ -57,7 +57,7 @@ const AccountValueClient: FC<OwnProps> = ({
       </div>
       <Tooltip tooltip={tooltip} direction="top">
         <div
-          className="mt-2.5 flex items-center justify-between px-4 py-1 shadow-button"
+          className="mt-2.5 flex items-center justify-between rounded-md px-4 py-1 shadow-button focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-highlight"
           tabIndex={0}
           aria-label={`${accountValueLabel}: ${displayedValue ?? '—'}. ${tooltip}`}
           aria-live="polite"

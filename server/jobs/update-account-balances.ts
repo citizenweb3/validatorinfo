@@ -80,7 +80,6 @@ const upsertAccountVisits = async (
     INSERT INTO "account_balances" ("chain_id", "address", "denom", "last_viewed_at")
     VALUES ${rows}
     ON CONFLICT ("chain_id", "address") DO UPDATE SET
-      "denom" = EXCLUDED."denom",
       "last_viewed_at" = GREATEST("account_balances"."last_viewed_at", EXCLUDED."last_viewed_at")
   `;
   return validVisits.length;
