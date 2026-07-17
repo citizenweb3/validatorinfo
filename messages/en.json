@@ -1883,6 +1883,11 @@
       "delegationsUnsupported": "Current delegations are not available for this network yet.",
       "delegationsPreviousPage": "Previous delegations page",
       "delegationsNextPage": "Next delegations page",
+      "joinDate": "Join date",
+      "firstSeenAtOrBefore": "On or before {date}",
+      "firstSeenAtGenesis": "At genesis · {date}",
+      "firstSeenIndexed": "{date} · block {height}",
+      "delegatedStakeApproximation": "Historical delegated stake is approximate: bonded-state changes, slashing, validator exchange-rate drift, and ambiguous multi-message transactions may not be reconstructed.",
       "Table": {
         "Validator": {
           "name": "Validator",

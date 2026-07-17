@@ -1884,6 +1884,11 @@
       "delegationsUnsupported": "As delegações atuais ainda não estão disponíveis para esta rede.",
       "delegationsPreviousPage": "Página anterior de delegações",
       "delegationsNextPage": "Próxima página de delegações",
+      "joinDate": "Data de entrada",
+      "firstSeenAtOrBefore": "Em ou antes de {date}",
+      "firstSeenAtGenesis": "Na génese · {date}",
+      "firstSeenIndexed": "{date} · bloco {height}",
+      "delegatedStakeApproximation": "A delegação histórica é aproximada: alterações do estado bonded, slashing, variações da taxa de câmbio do validador e transações ambíguas com várias mensagens podem não ser reconstruídas.",
       "Table": {
         "Validator": {
           "name": "Validador",

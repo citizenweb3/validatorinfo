@@ -106,6 +106,10 @@ export const checkRateLimit = async (key: string, limit: number, windowSeconds: 
 };
 
 export const CACHE_KEYS = {
+  account: {
+    firstSeen: (chainName: string, address: string) => `acct:firstseen:${chainName}:${address}`,
+    delegatedStake: (chainName: string, address: string) => `acct:delstake:${chainName}:${address}`,
+  },
   ai: {
     rateLimit: (ip: string) => `ai:rate:${ip}`,
     summaryRateLimit: (ip: string) => `ai:summary:rate:${ip}`,

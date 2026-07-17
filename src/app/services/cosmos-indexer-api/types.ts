@@ -164,3 +164,65 @@ export interface CosmosGovVotesCursor {
 }
 
 export type CosmosGovVotesResponse = CosmosListResponse<CosmosGovVote, CosmosGovVotesCursor>;
+
+export interface CosmosCoverage {
+  earliest_height: string;
+  earliest_time: string;
+}
+
+export interface CosmosCoverageResponse {
+  data: CosmosCoverage;
+}
+
+export type CosmosEarliestActivitySource = 'actor' | 'transfer_out' | 'transfer_in';
+
+export interface CosmosEarliestActivity {
+  height: string;
+  tx_index: number;
+  tx_hash: string;
+  time: string;
+  source: CosmosEarliestActivitySource;
+}
+
+export interface CosmosEarliestActivityResponse {
+  data: {
+    earliest: CosmosEarliestActivity | null;
+    coverage: CosmosCoverage;
+  };
+}
+
+export type CosmosStakingDeltaEventType =
+  | 'delegate'
+  | 'redelegate'
+  | 'unbond'
+  | 'create_validator'
+  | 'cancel_unbonding_delegation';
+
+export interface CosmosStakingDelta {
+  height: string;
+  tx_index: number;
+  msg_index: number;
+  tx_hash: string;
+  time: string;
+  event_type: CosmosStakingDeltaEventType;
+  validator_src: string | null;
+  validator_dst: string | null;
+  denom: string;
+  amount: string;
+  sign: 1 | -1 | 0;
+  source: 'event' | 'message';
+}
+
+export interface CosmosStakingDeltasCursor {
+  next_before_height: string;
+  next_before_index: number;
+  next_before_msg_index: number;
+}
+
+export interface CosmosStakingDeltasResponse {
+  data: CosmosStakingDelta[];
+  cursor: CosmosStakingDeltasCursor | null;
+  has_more: boolean;
+  total: string;
+  meta: { skipped_ambiguous_msgexec: string };
+}

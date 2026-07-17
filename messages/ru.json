@@ -1884,6 +1884,11 @@
       "delegationsUnsupported": "Текущие делегации для этой сети пока недоступны.",
       "delegationsPreviousPage": "Предыдущая страница делегаций",
       "delegationsNextPage": "Следующая страница делегаций",
+      "joinDate": "Дата появления",
+      "firstSeenAtOrBefore": "Не позднее {date}",
+      "firstSeenAtGenesis": "В генезисе · {date}",
+      "firstSeenIndexed": "{date} · блок {height}",
+      "delegatedStakeApproximation": "Историческая делегация приблизительна: изменения bonded-статуса, слэшинг, колебания обменного курса валидатора и неоднозначные транзакции с несколькими сообщениями могут быть восстановлены не полностью.",
       "Table": {
         "Validator": {
           "name": "Валидатор",

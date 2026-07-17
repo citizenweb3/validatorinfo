@@ -3,9 +3,12 @@ import {
   CosmosBlockDetailResponse,
   CosmosBlocksListResponse,
   CosmosBlocksStatsResponse,
+  CosmosCoverageResponse,
   CosmosDelegationsResponse,
+  CosmosEarliestActivityResponse,
   CosmosGovVotesResponse,
   CosmosIndexerRequestOptions,
+  CosmosStakingDeltasResponse,
   CosmosTxDetailResponse,
   CosmosTxRawResponse,
   CosmosTxsListResponse,
@@ -158,6 +161,51 @@ export const getDelegations = (
     '/api/v1/staking/delegations',
     {
       validator: params.validator,
+      limit: params.limit,
+      before_height: params.before_height,
+      before_index: params.before_index,
+      before_msg_index: params.before_msg_index,
+    },
+    options,
+  );
+
+export const getCoverage = async (options?: CosmosIndexerRequestOptions): Promise<CosmosCoverageResponse | null> => {
+  try {
+    return await client.get<CosmosCoverageResponse>('/api/v1/coverage', null, options);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('HTTP 404')) return null;
+    throw error;
+  }
+};
+
+export const getEarliestActivity = async (
+  address: string,
+  options?: CosmosIndexerRequestOptions,
+): Promise<CosmosEarliestActivityResponse | null> => {
+  try {
+    return await client.get<CosmosEarliestActivityResponse>('/api/v1/address/earliest-activity', { address }, options);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('HTTP 404')) return null;
+    throw error;
+  }
+};
+
+export interface GetStakingDeltasParams {
+  delegator: string;
+  limit?: number;
+  before_height?: string;
+  before_index?: number;
+  before_msg_index?: number;
+}
+
+export const getStakingDeltas = (
+  params: GetStakingDeltasParams,
+  options?: CosmosIndexerRequestOptions,
+): Promise<CosmosStakingDeltasResponse> =>
+  client.get<CosmosStakingDeltasResponse>(
+    '/api/v1/staking/deltas',
+    {
+      delegator: params.delegator,
       limit: params.limit,
       before_height: params.before_height,
       before_index: params.before_index,

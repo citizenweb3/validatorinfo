@@ -164,3 +164,65 @@ export interface AtomoneGovVotesCursor {
 }
 
 export type AtomoneGovVotesResponse = AtomoneListResponse<AtomoneGovVote, AtomoneGovVotesCursor>;
+
+export interface AtomoneCoverage {
+  earliest_height: string;
+  earliest_time: string;
+}
+
+export interface AtomoneCoverageResponse {
+  data: AtomoneCoverage;
+}
+
+export type AtomoneEarliestActivitySource = 'actor' | 'transfer_out' | 'transfer_in';
+
+export interface AtomoneEarliestActivity {
+  height: string;
+  tx_index: number;
+  tx_hash: string;
+  time: string;
+  source: AtomoneEarliestActivitySource;
+}
+
+export interface AtomoneEarliestActivityResponse {
+  data: {
+    earliest: AtomoneEarliestActivity | null;
+    coverage: AtomoneCoverage;
+  };
+}
+
+export type AtomoneStakingDeltaEventType =
+  | 'delegate'
+  | 'redelegate'
+  | 'unbond'
+  | 'create_validator'
+  | 'cancel_unbonding_delegation';
+
+export interface AtomoneStakingDelta {
+  height: string;
+  tx_index: number;
+  msg_index: number;
+  tx_hash: string;
+  time: string;
+  event_type: AtomoneStakingDeltaEventType;
+  validator_src: string | null;
+  validator_dst: string | null;
+  denom: string;
+  amount: string;
+  sign: 1 | -1 | 0;
+  source: 'event' | 'message';
+}
+
+export interface AtomoneStakingDeltasCursor {
+  next_before_height: string;
+  next_before_index: number;
+  next_before_msg_index: number;
+}
+
+export interface AtomoneStakingDeltasResponse {
+  data: AtomoneStakingDelta[];
+  cursor: AtomoneStakingDeltasCursor | null;
+  has_more: boolean;
+  total: string;
+  meta: { skipped_ambiguous_msgexec: string };
+}
