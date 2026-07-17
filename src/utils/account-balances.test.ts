@@ -2,10 +2,12 @@ import { bech32 } from 'bech32';
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
+import { composeReadyAccountValue, composeStoredAccountValue } from '@/utils/account-value';
 import { normalizeBech32Address } from '@/utils/bech32-address';
 import {
   fetchAllLcdUnbonding,
   fetchCosmosAccountBalanceParts,
+  isAccountBalanceChainSupported,
   parseLcdSpendableBalance,
   parseLcdUnbondingPage,
 } from '@/utils/cosmos-account-balances';
@@ -21,6 +23,56 @@ test('bech32 addresses are checksum-validated, HRP-gated, and canonicalized', ()
   assert.equal(normalizeBech32Address(cosmosAddress, 'atone'), null);
   assert.equal(normalizeBech32Address(`${cosmosAddress.slice(0, -1)}x`, 'cosmos'), null);
   assert.equal(normalizeBech32Address('not-an-address', 'cosmos'), null);
+});
+
+test('account values are feature-gated to Cosmos Hub and AtomOne', () => {
+  assert.equal(isAccountBalanceChainSupported('cosmoshub'), true);
+  assert.equal(isAccountBalanceChainSupported('ATOMONE'), true);
+  assert.equal(isAccountBalanceChainSupported('osmosis'), false);
+});
+
+test('ready account values preserve exact base units and apply only finite positive USD prices', () => {
+  const updatedAt = new Date('2026-07-17T10:00:00.000Z');
+  assert.deepEqual(
+    composeReadyAccountValue({ liquid: '100', staked: '200', unbonding: '300', rewards: '4' }, 'ATOM', 6, 2, updatedAt),
+    {
+      status: 'ready',
+      denom: 'ATOM',
+      coinDecimals: 6,
+      liquid: '100',
+      staked: '200',
+      unbonding: '300',
+      rewards: '4',
+      totalBase: '604',
+      totalUsd: 0.001208,
+      price: 2,
+      updatedAt,
+    },
+  );
+  assert.equal(
+    composeReadyAccountValue({ liquid: '1', staked: '0', unbonding: '0', rewards: '0' }, 'ATOM', 6, 0, updatedAt)
+      .totalUsd,
+    null,
+  );
+});
+
+test('stored account values stay pending until a matching-denom refresh succeeds', () => {
+  const context = { denom: 'ATOM', minimalDenom: 'uatom', coinDecimals: 6 };
+  const parts = { liquid: '1', staked: '2', unbonding: '3', rewards: '4' };
+  assert.deepEqual(composeStoredAccountValue(null, context, 2), { status: 'pending' });
+  assert.deepEqual(composeStoredAccountValue({ ...parts, denom: 'uatom', updatedAt: null }, context, 2), {
+    status: 'pending',
+  });
+  assert.deepEqual(composeStoredAccountValue({ ...parts, denom: 'old-denom', updatedAt: new Date() }, context, 2), {
+    status: 'pending',
+  });
+  const readyWithoutPrice = composeStoredAccountValue(
+    { ...parts, denom: 'uatom', updatedAt: new Date() },
+    context,
+    null,
+  );
+  assert.equal(readyWithoutPrice.status, 'ready');
+  if (readyWithoutPrice.status === 'ready') assert.equal(readyWithoutPrice.totalUsd, null);
 });
 
 test('integer helpers preserve exact values and floor only DecCoin rewards', () => {

@@ -7,6 +7,29 @@ import ChainWhereInput = Prisma.ChainWhereInput;
 export type ChainWithParams = Prisma.ChainGetPayload<{ include: { params: true } }>;
 export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { params: true; tokenomics: true } }>;
 
+export type ChainLcdContext = {
+  id: number;
+  coinDecimals: number;
+  denom: string;
+  minimalDenom: string;
+  bech32Prefix: string;
+};
+
+export const getChainLcdContext = async (chainName: string): Promise<ChainLcdContext | null> => {
+  const chain = await db.chain.findUnique({
+    where: { name: chainName.toLowerCase() },
+    select: {
+      id: true,
+      params: {
+        select: { coinDecimals: true, denom: true, minimalDenom: true, bech32Prefix: true },
+      },
+    },
+  });
+  if (!chain?.params) return null;
+
+  return { id: chain.id, ...chain.params };
+};
+
 export type NetworkValidatorsWithNodes = Node & {
   validator: {
     url: string | null;

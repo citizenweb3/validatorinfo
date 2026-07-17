@@ -1,7 +1,7 @@
 import 'server-only';
 
-import db from '@/db';
 import logger from '@/logger';
+import { getChainLcdContext } from '@/services/chain-service';
 import { createLcdJsonLoader } from '@/services/lcd-fetch-service';
 import nodeService from '@/services/node-service';
 import priceService from '@/services/price-service';
@@ -29,37 +29,12 @@ export type AccountDelegationsResult =
   | { status: 'unsupported'; rows: [] }
   | { status: 'error'; rows: [] };
 
-type ChainContext = {
-  id: number;
-  coinDecimals: number;
-  denom: string;
-  minimalDenom: string;
-};
-
-const getChainContext = async (chainName: string): Promise<ChainContext | null> => {
-  const chain = await db.chain.findUnique({
-    where: { name: chainName },
-    select: {
-      id: true,
-      params: { select: { coinDecimals: true, denom: true, minimalDenom: true } },
-    },
-  });
-  if (!chain?.params) return null;
-
-  return {
-    id: chain.id,
-    coinDecimals: chain.params.coinDecimals,
-    denom: chain.params.denom,
-    minimalDenom: chain.params.minimalDenom,
-  };
-};
-
 const loadAccountDelegations = async (
   chainName: string,
   delegatorAddress: string,
 ): Promise<LoadedAccountDelegations> => {
   const [context, lcdLoader, tokenPrice] = await Promise.all([
-    getChainContext(chainName),
+    getChainLcdContext(chainName),
     createLcdJsonLoader(chainName),
     priceService.getLatestPriceByChainName(chainName),
   ]);

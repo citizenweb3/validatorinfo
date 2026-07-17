@@ -52,7 +52,6 @@ const AccountPassportPage: NextPageWithLocale<PageProps> = async ({ params: { na
         labels={{
           multichainPortfolio: t('Multichain Portfolio'),
           claimAddress: t('Claim Address'),
-          token: t('token'),
           accountValue: t('account value'),
           joinDate: t('joinDate'),
         }}
