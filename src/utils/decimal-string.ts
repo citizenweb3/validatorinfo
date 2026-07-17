@@ -21,6 +21,16 @@ export const normalizeUnsignedDecimal = (value: string): string => {
   return trimmedFraction ? `${whole}.${trimmedFraction}` : whole;
 };
 
+export const normalizeUnsignedInteger = (value: string): string => {
+  const { whole, fraction } = parseUnsignedDecimalParts(value);
+  if (fraction && !/^0+$/.test(fraction)) {
+    throw new Error(`unsigned integer cannot contain fractional units: ${value}`);
+  }
+  return whole;
+};
+
+export const floorUnsignedDecimal = (value: string): string => parseUnsignedDecimalParts(value).whole;
+
 export const addUnsignedDecimalStrings = (left: string, right: string): string => {
   const leftParts = parseUnsignedDecimalParts(left);
   const rightParts = parseUnsignedDecimalParts(right);

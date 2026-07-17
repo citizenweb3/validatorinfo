@@ -141,6 +141,7 @@ model Chain {
   txDailySnapshots             ChainTxDailySnapshot[]         @relation("chain_tx_daily_snapshots")
   podcastEpisodes              PodcastEpisode[]               @relation("PodcastChain")
   genesisSnapshot              GenesisSnapshot?               @relation("chain_genesis_snapshot")
+  accountBalances              AccountBalance[]                @relation("chain_account_balance")
 
   miningPools             MiningPool[]             @relation("chain_mining_pools")
   miningPoolStats         MiningPoolStats[]        @relation("chain_mining_pool_stats")
@@ -208,6 +209,26 @@ model GenesisDelegation {
   @@unique([snapshotId, delegatorAddress, validatorAddress, denom], map: "genesis_delegations_snapshot_validator_denom_key")
   @@index([snapshotId, delegatorAddress], map: "genesis_delegations_snapshot_delegator_idx")
   @@map("genesis_delegations")
+}
+
+model AccountBalance {
+  id           Int       @id @default(autoincrement())
+  chainId      Int       @map("chain_id")
+  address      String    @db.VarChar(128)
+  denom        String    @db.VarChar(128)
+  liquid       Decimal   @default(0) @db.Decimal(80, 0)
+  staked       Decimal   @default(0) @db.Decimal(80, 0)
+  unbonding    Decimal   @default(0) @db.Decimal(80, 0)
+  rewards      Decimal   @default(0) @db.Decimal(80, 0)
+  lastViewedAt DateTime  @map("last_viewed_at") @db.Timestamptz(6)
+  updatedAt    DateTime? @map("updated_at") @db.Timestamptz(6)
+  createdAt    DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  chain Chain @relation("chain_account_balance", fields: [chainId], references: [id], onDelete: Cascade, map: "account_balances_chain_id_fkey")
+
+  @@unique([chainId, address], map: "account_balances_chain_id_address_key")
+  @@index([chainId, lastViewedAt, updatedAt], map: "account_balances_chain_id_last_viewed_at_updated_at_idx")
+  @@map("account_balances")
 }
 
 model ChainNode {
