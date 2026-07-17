@@ -3,6 +3,8 @@ import 'server-only';
 import db from '@/db';
 import logger from '@/logger';
 import { createLcdJsonLoader } from '@/services/lcd-fetch-service';
+import nodeService from '@/services/node-service';
+import priceService from '@/services/price-service';
 import { CACHE_KEYS, CACHE_TTL, cacheGetOrFetch } from '@/services/redis-cache';
 import {
   type AccountDelegationNodeIdentity,
@@ -32,7 +34,6 @@ type ChainContext = {
   coinDecimals: number;
   denom: string;
   minimalDenom: string;
-  tokenPrice: number | null;
 };
 
 const getChainContext = async (chainName: string): Promise<ChainContext | null> => {
@@ -41,7 +42,6 @@ const getChainContext = async (chainName: string): Promise<ChainContext | null> 
     select: {
       id: true,
       params: { select: { coinDecimals: true, denom: true, minimalDenom: true } },
-      prices: { select: { value: true }, orderBy: { createdAt: 'desc' }, take: 1 },
     },
   });
   if (!chain?.params) return null;
@@ -51,37 +51,18 @@ const getChainContext = async (chainName: string): Promise<ChainContext | null> 
     coinDecimals: chain.params.coinDecimals,
     denom: chain.params.denom,
     minimalDenom: chain.params.minimalDenom,
-    tokenPrice: chain.prices[0]?.value ?? null,
   };
-};
-
-const getNodeIdentities = async (
-  chainId: number,
-  operatorAddresses: readonly string[],
-): Promise<AccountDelegationNodeIdentity[]> => {
-  if (operatorAddresses.length === 0) return [];
-
-  const nodes = await db.node.findMany({
-    where: { chainId, operatorAddress: { in: [...operatorAddresses] } },
-    select: {
-      operatorAddress: true,
-      moniker: true,
-      validator: { select: { id: true, moniker: true, url: true } },
-    },
-  });
-  return nodes.map((node) => ({
-    operatorAddress: node.operatorAddress,
-    validatorId: node.validator?.id ?? null,
-    moniker: node.validator?.moniker || node.moniker || node.operatorAddress,
-    icon: node.validator?.url ?? null,
-  }));
 };
 
 const loadAccountDelegations = async (
   chainName: string,
   delegatorAddress: string,
 ): Promise<LoadedAccountDelegations> => {
-  const [context, lcdLoader] = await Promise.all([getChainContext(chainName), createLcdJsonLoader(chainName)]);
+  const [context, lcdLoader, tokenPrice] = await Promise.all([
+    getChainContext(chainName),
+    createLcdJsonLoader(chainName),
+    priceService.getLatestPriceByChainName(chainName),
+  ]);
   if (!context) throw new Error(`chain parameters are missing for ${chainName}`);
 
   const loadJson = (path: string) => lcdLoader<unknown>(path);
@@ -90,14 +71,20 @@ const loadAccountDelegations = async (
     fetchLcdRewardsByValidator(delegatorAddress, context.minimalDenom, loadJson),
   ]);
   const operatorAddresses = Array.from(new Set(positions.map((position) => position.validatorAddress)));
-  const identities = await getNodeIdentities(context.id, operatorAddresses);
+  const nodes = await nodeService.getNodesByOperatorAddresses(context.id, operatorAddresses);
+  const identities: AccountDelegationNodeIdentity[] = nodes.map((node) => ({
+    operatorAddress: node.operatorAddress,
+    validatorId: node.validator?.id ?? null,
+    moniker: node.validator?.moniker || node.moniker || node.operatorAddress,
+    icon: node.validator?.url ?? null,
+  }));
   const rows = composeAccountDelegationRows(positions, rewardsByValidator, identities, context.coinDecimals);
 
   return {
     status: rows.length > 0 ? 'success' : 'empty',
     rows,
     denom: context.denom,
-    tokenPrice: context.tokenPrice,
+    tokenPrice,
   };
 };
 

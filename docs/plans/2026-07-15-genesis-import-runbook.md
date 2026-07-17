@@ -29,6 +29,18 @@ Select exactly one chain argument: `cosmoshub` or `atomone`.
 
 Prefer a read-only mounted local source. Do not put credentials or signed secrets in the source URL because the source identifier is persisted with a ready snapshot.
 
+## Verification and expected runtime
+
+Run the focused feature suites before operating the importer:
+
+```bash
+yarn test
+```
+
+Semantic validation deliberately opens the JSON five times: metadata, auth accounts, staking validators, staking delegations, and gentxs are each fail-closed sections with independent pinned counts and shape checks. `apply` opens the account array once more only after all validation and preflight checks pass, so no database mutation overlaps unverified parsing. The importer also hashes the private temporary source before validation and re-hashes it immediately before dry-run/apply; do not cache or remove the second hash because it proves the verified file did not change before persistence.
+
+For the 121–510 MB pinned sources, expect runtime and temporary I/O to scale with five semantic passes (six in `apply`) plus the integrity passes. Keep the mounted source and system temporary directory on reliable local storage. Reducing these passes would require retaining large unverified sections in memory or weakening the pre-mutation integrity boundary and is not part of this one-off importer.
+
 ## 1. Verify the pinned source without a database
 
 Cosmos Hub:

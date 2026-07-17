@@ -1892,19 +1892,19 @@
       "Table": {
         "Validator": {
           "name": "Validador",
-          "hint": ""
+          "hint": "Validador que recebe esta delegação"
         },
         "Staked Amount": {
           "name": "Montante Apostado",
-          "hint": ""
+          "hint": "Montante atual delegado a este validador"
         },
         "Reward Amount": {
           "name": "Montante do Prémio",
-          "hint": ""
+          "hint": "Recompensas de staking atuais ainda não reclamadas no token da rede"
         },
         "Reward Value": {
           "name": "Valor da Recompensa",
-          "hint": ""
+          "hint": "Valor aproximado em USD das recompensas atuais ainda não reclamadas"
         }
       }
     },

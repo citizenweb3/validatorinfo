@@ -1891,19 +1891,19 @@
       "Table": {
         "Validator": {
           "name": "Validator",
-          "hint": ""
+          "hint": "Validator receiving this delegation"
         },
         "Staked Amount": {
           "name": "Staked Amount",
-          "hint": ""
+          "hint": "Current amount delegated to this validator"
         },
         "Reward Amount": {
           "name": "Reward Amount",
-          "hint": ""
+          "hint": "Current unclaimed staking rewards in the network token"
         },
         "Reward Value": {
           "name": "Reward Value",
-          "hint": ""
+          "hint": "Approximate USD value of the current unclaimed rewards"
         }
       }
     },
