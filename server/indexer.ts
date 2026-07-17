@@ -160,6 +160,7 @@ const runServer = async () => {
     { name: 'update-aztec-total-earned-rewards', schedule: timers.every6hours },
     { name: 'update-tx-metrics', schedule: dailyAt(21, 7) },
     { name: 'update-proposal-texts', schedule: timers.every10mins },
+    { name: 'update-account-balances', schedule: timers.every10mins },
     { name: 'update-validator-ranks', schedule: timers.every6hours },
     { name: 'monero-network-info', schedule: timers.every5mins },
     { name: 'monero-pool-attribution', schedule: timers.every10mins },

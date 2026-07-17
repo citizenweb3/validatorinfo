@@ -3,6 +3,8 @@ import 'server-only';
 import Redis from 'ioredis';
 
 import logger from '@/logger';
+import { normalizeBech32Address } from '@/utils/bech32-address';
+import { accountViewedKey } from '@/utils/redis-keys';
 
 const { logInfo, logWarn, logError } = logger('redis-cache');
 
@@ -64,6 +66,23 @@ export const cacheSet = async <T>(key: string, value: T, ttlSeconds: number = DE
   }
 };
 
+export const markAccountViewed = async (
+  chainName: string,
+  address: string,
+  expectedPrefix: string,
+): Promise<boolean> => {
+  const normalizedAddress = normalizeBech32Address(address, expectedPrefix);
+  if (!normalizedAddress) return false;
+
+  try {
+    await getRedis().zadd(accountViewedKey(chainName), Date.now(), normalizedAddress);
+    return true;
+  } catch (e) {
+    logWarn(`Redis account view write failed for ${chainName}: ${e}`);
+    return false;
+  }
+};
+
 export const cacheGetOrFetch = async <T>(
   key: string,
   fetchFn: () => Promise<T | null>,
@@ -109,6 +128,7 @@ export const CACHE_KEYS = {
   account: {
     firstSeen: (chainName: string, address: string) => `acct:firstseen:${chainName}:${address}`,
     delegatedStake: (chainName: string, address: string) => `acct:delstake:${chainName}:${address}`,
+    viewed: accountViewedKey,
   },
   ai: {
     rateLimit: (ip: string) => `ai:rate:${ip}`,

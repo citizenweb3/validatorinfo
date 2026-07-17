@@ -6,6 +6,10 @@ const MAX_PAGES = 50;
 const MAX_ENTRIES = PAGE_SIZE * MAX_PAGES;
 const MAX_STORED_DIGITS = 80;
 
+export const ACCOUNT_BALANCE_CHAIN_NAMES = ['cosmoshub', 'atomone'] as const;
+
+export type AccountBalanceChainName = (typeof ACCOUNT_BALANCE_CHAIN_NAMES)[number];
+
 type JsonRecord = Record<string, unknown>;
 type JsonLoader = (path: string) => Promise<unknown>;
 
@@ -21,6 +25,9 @@ type ParsedUnbondingPage = {
   entryCount: number;
   nextKey: string | null;
 };
+
+export const isAccountBalanceChainSupported = (chainName: string): chainName is AccountBalanceChainName =>
+  ACCOUNT_BALANCE_CHAIN_NAMES.includes(chainName.toLowerCase() as AccountBalanceChainName);
 
 const asRecord = (value: unknown, label: string): JsonRecord => {
   if (!value || typeof value !== 'object' || Array.isArray(value)) {

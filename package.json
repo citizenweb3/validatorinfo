@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build": "next build",
-    "test": "tsx --test server/tools/genesis/genesis.test.ts src/utils/account-balances.test.ts src/utils/account-delegations.test.ts src/utils/account-history.test.ts",
+    "test": "tsx --test server/jobs/update-account-balances.test.ts server/tools/genesis/genesis.test.ts src/utils/account-balances.test.ts src/utils/account-delegations.test.ts src/utils/account-history.test.ts src/utils/account-visit-buffer.test.ts",
     "start": "NODE_ENV=production tsx server.ts",
     "lint": "next lint"
   },
