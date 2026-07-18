@@ -35,6 +35,7 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async ({
   ]);
   const amountContext: TxAmountContext | null = chainContext
     ? {
+        accountAddress,
         coinDecimals: chainContext.coinDecimals,
         denom: chainContext.denom,
         minimalDenom: chainContext.minimalDenom,
@@ -60,6 +61,7 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async ({
         filters={filters}
         filterKey={filterKey}
         amountContext={amountContext}
+        amountLabel={t('amountColumn')}
       />
     </div>
   );

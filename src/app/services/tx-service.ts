@@ -40,6 +40,7 @@ export interface TxTransferItem {
 }
 
 export interface TxAmountContext {
+  accountAddress: string;
   coinDecimals: number;
   denom: string;
   minimalDenom: string;
@@ -415,7 +416,9 @@ const toCosmosTxByAddressItem = (tx: CosmosTxByAddressSummary): TxByAddressItem 
     denom: transfer.denom,
     amount: transfer.amount,
   })),
-  msgTypes: tx.msg_types,
+  // Keep VI safe during a rolling API deployment and while short-lived pre-upgrade cache entries
+  // still exist. The public UI contract remains a required array.
+  msgTypes: Array.isArray(tx.msg_types) ? tx.msg_types : [],
 });
 
 /**

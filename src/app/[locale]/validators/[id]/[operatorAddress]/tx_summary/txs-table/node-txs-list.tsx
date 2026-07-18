@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
-import TablePagination from '@/components/common/table/table-pagination';
-import TxService from '@/services/tx-service';
-import TxListClient from '@/components/txs/tx-list-client';
-import { decodeCursorToken } from '@/components/txs/tx-cursor-token';
-import { nodeTxsExample } from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/nodeTxsExample';
 import NodeTxsItem from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/node-txs-items';
+import { nodeTxsExample } from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/nodeTxsExample';
+import TablePagination from '@/components/common/table/table-pagination';
+import { decodeCursorToken } from '@/components/txs/tx-cursor-token';
+import TxListClient from '@/components/txs/tx-list-client';
+import TxService from '@/services/tx-service';
 import { EMPTY_TX_FILTERS } from '@/utils/tx-filters';
 import { isTxByAddressChainSupported } from '@/utils/tx-supported-chains';
 
@@ -41,6 +41,7 @@ const NodeTxsList: FC<OwnProps> = async ({ chainName, accountAddress, operatorAd
           initialWindow={clampedWindow}
           initial={initial}
           filters={EMPTY_TX_FILTERS}
+          amountContext={null}
         />
       );
     }

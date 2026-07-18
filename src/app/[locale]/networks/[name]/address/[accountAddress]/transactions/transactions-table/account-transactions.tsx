@@ -17,6 +17,7 @@ interface OwnProps extends PagesProps {
   filters: TxFilters;
   filterKey: string;
   amountContext: TxAmountContext | null;
+  amountLabel: string;
 }
 
 const AccountTransactions: FC<OwnProps> = ({
@@ -28,6 +29,7 @@ const AccountTransactions: FC<OwnProps> = ({
   filters,
   filterKey,
   amountContext,
+  amountLabel,
 }) => {
   return (
     <div className="pt-8">
@@ -41,15 +43,26 @@ const AccountTransactions: FC<OwnProps> = ({
             <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
             <TableHeaderItem page={page} name="Timestamp" sortField="timestamp" defaultSelected />
             <TableHeaderItem page={page} name="Block Height" sortField="block height" />
+            {amountContext ? (
+              <TableHeaderItem page={page}>
+                <div className="flex items-center justify-center py-3">
+                  <div className="text-nowrap text-6xl font-normal sm:text-4xl md:text-sm">{amountLabel}</div>
+                </div>
+              </TableHeaderItem>
+            ) : null}
           </tr>
         </thead>
-        <Suspense key={`${accountAddress}:${filterKey}`} fallback={<TxRowsSkeleton rows={20} />}>
+        <Suspense
+          key={`${accountAddress}:${filterKey}`}
+          fallback={<TxRowsSkeleton rows={20} columns={amountContext ? 5 : 4} />}
+        >
           <AccountTransactionsList
             chainName={chainName}
             accountAddress={accountAddress}
             cursorToken={cursorToken}
             windowIndex={windowIndex}
             filters={filters}
+            amountContext={amountContext}
           />
         </Suspense>
       </BaseTable>

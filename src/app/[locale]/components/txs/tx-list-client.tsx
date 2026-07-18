@@ -4,11 +4,11 @@ import { useTranslations } from 'next-intl';
 import { FC, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { getTxsBatch } from '@/actions/get-txs-batch';
-import type { Cursor, TxByAddressBatch, TxByAddressItem } from '@/services/tx-service';
+import TxCursorPagination from '@/components/txs/tx-cursor-pagination';
 import TxRow from '@/components/txs/tx-row';
 import TxRowsSkeleton from '@/components/txs/tx-rows-skeleton';
-import TxCursorPagination from '@/components/txs/tx-cursor-pagination';
-import { txFiltersToInput, type TxFilters } from '@/utils/tx-filters';
+import type { Cursor, TxAmountContext, TxByAddressBatch, TxByAddressItem } from '@/services/tx-service';
+import { type TxFilters, txFiltersToInput } from '@/utils/tx-filters';
 
 const PER_PAGE = 20;
 const PREFETCH_RUNWAY = PER_PAGE * 2; // start the next-batch fetch when fewer than 2 windows remain ahead
@@ -27,15 +27,21 @@ interface OwnProps {
   initialWindow: number; // window within `initial` (from the URL `w`, clamped server-side)
   initial: TxByAddressBatch;
   filters: TxFilters;
+  amountContext: TxAmountContext | null;
 }
 
 const cursorKey = (cursor: Cursor | null): string =>
   cursor ? `${cursor.before_height}-${cursor.before_index}` : 'head';
 
-const MessageRow: FC<{ message: string; hint?: string; action?: ReactNode }> = ({ message, hint, action }) => (
+const MessageRow: FC<{ message: string; columns: 4 | 5; hint?: string; action?: ReactNode }> = ({
+  message,
+  columns,
+  hint,
+  action,
+}) => (
   <tbody>
     <tr>
-      <td colSpan={4} className="py-8 text-center">
+      <td colSpan={columns} className="py-8 text-center">
         <div className="flex flex-col items-center gap-2">
           <div className="font-sfpro text-lg text-white/60">{message}</div>
           {hint && <div className="font-sfpro text-sm text-white/40">{hint}</div>}
@@ -46,8 +52,17 @@ const MessageRow: FC<{ message: string; hint?: string; action?: ReactNode }> = (
   </tbody>
 );
 
-const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initialWindow, initial, filters }) => {
+const TxListClient: FC<OwnProps> = ({
+  addresses,
+  chainName,
+  initialCursor,
+  initialWindow,
+  initial,
+  filters,
+  amountContext,
+}) => {
   const t = useTranslations('TotalTxsPage');
+  const columns: 4 | 5 = amountContext ? 5 : 4;
 
   const [loaded, setLoaded] = useState<LoadedBatch[]>([
     { cursor: initialCursor, rows: initial.rows, nextCursor: initial.nextCursor, hasMore: initial.hasMore },
@@ -180,20 +195,24 @@ const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initi
   let body: ReactNode;
   if (loadedRows.length === 0) {
     if (errored) {
-      body = <MessageRow message={t('txListLoadError')} action={retryAction} />;
+      body = <MessageRow message={t('txListLoadError')} columns={columns} action={retryAction} />;
     } else if (loading) {
-      body = <TxRowsSkeleton rows={PER_PAGE} />;
+      body = <TxRowsSkeleton rows={PER_PAGE} columns={columns} />;
     } else {
-      body = <MessageRow message={t('noTransactionsYet')} hint={t('transactionsWillAppear')} />;
+      body = <MessageRow message={t('noTransactionsYet')} columns={columns} hint={t('transactionsWillAppear')} />;
     }
   } else if (windowRows.length === 0) {
     // advanced into a window that is still loading (or whose fetch failed)
-    body = errored ? <MessageRow message={t('txListLoadError')} action={retryAction} /> : <TxRowsSkeleton rows={PER_PAGE} />;
+    body = errored ? (
+      <MessageRow message={t('txListLoadError')} columns={columns} action={retryAction} />
+    ) : (
+      <TxRowsSkeleton rows={PER_PAGE} columns={columns} />
+    );
   } else {
     body = (
       <tbody>
         {windowRows.map((item) => (
-          <TxRow key={item.hash} item={item} chainName={chainName} />
+          <TxRow key={item.hash} item={item} chainName={chainName} amountContext={amountContext} />
         ))}
       </tbody>
     );
@@ -204,7 +223,7 @@ const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initi
       {body}
       <tbody>
         <tr>
-          <td colSpan={4} className="pt-4">
+          <td colSpan={columns} className="pt-4">
             <TxCursorPagination
               current={windowIdx + 1}
               loadedWindows={totalLoadedWindows}
