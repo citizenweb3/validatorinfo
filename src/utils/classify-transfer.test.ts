@@ -68,6 +68,18 @@ test('IBC message facts classify dynamic escrow transfers without a channel addr
   );
 });
 
+test('distribution reward messages stay staking-related without a distribution-module counterparty', () => {
+  for (const typeUrl of [
+    '/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward',
+    '/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission',
+  ]) {
+    assert.deepEqual(
+      classifyTransfer({ fromAddr: cosmosAccount, toAddr: cosmosPeer }, [typeUrl], cosmosAccount, 'cosmoshub'),
+      { kind: 'staking_related', direction: 'out' },
+    );
+  }
+});
+
 test('classification fails honestly on invalid participants and handles self direction', () => {
   assert.deepEqual(
     classifyTransfer(

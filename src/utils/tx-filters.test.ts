@@ -53,6 +53,28 @@ test('invalid URL filter pairs are dropped and canonical action input fails clos
   );
 });
 
+test('message filters cap resolved curated type URLs at the API limit', () => {
+  const allCuratedTypes = resolveTxMessageTypes('cosmoshub', [
+    'send',
+    'delegate',
+    'undelegate',
+    'redelegate',
+    'withdrawRewards',
+    'vote',
+    'ibcTransfer',
+  ]);
+  const expected = [...allCuratedTypes].sort().slice(0, 5);
+  const filters = parseTxFiltersFromSearchParams({ mt: [...allCuratedTypes].reverse() }, 'cosmoshub');
+
+  assert.equal(allCuratedTypes.length, 7);
+  assert.deepEqual(filters.msgTypes, expected);
+  assert.equal(txFiltersToInput(filters).mt.length, 5);
+  assert.equal(
+    parseCanonicalTxFiltersInput({ mt: allCuratedTypes, from: null, to: null, min: null, max: null }, 'cosmoshub'),
+    null,
+  );
+});
+
 test('display amounts convert exactly to bounded base-unit integers', () => {
   assert.equal(displayAmountToBaseUnits('12.5', 6), '12500000');
   assert.equal(displayAmountToBaseUnits('0.000001', 6), '1');

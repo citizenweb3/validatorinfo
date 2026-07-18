@@ -58,6 +58,11 @@ const DISTRIBUTION_ADDRESS_BY_CHAIN: Record<TxByAddressChain, string> = {
   atomone: 'atone1jv65s3grqf6v6jl3dp4t6c9t9rk99cd8flcml8',
 };
 
+const STAKING_RELATED_DISTRIBUTION_MESSAGE_TYPES = new Set([
+  '/cosmos.distribution.v1beta1.MsgWithdrawDelegatorReward',
+  '/cosmos.distribution.v1beta1.MsgWithdrawValidatorCommission',
+]);
+
 const getDirection = (fromAddr: string, toAddr: string, accountAddress: string): TransferDirection => {
   const isSender = fromAddr === accountAddress;
   const isReceiver = toAddr === accountAddress;
@@ -86,7 +91,11 @@ export const classifyTransfer = (
     return { kind: 'fee_or_reward', direction };
   }
 
-  if (msgTypes.some((typeUrl) => typeUrl.startsWith('/cosmos.staking.'))) {
+  if (
+    msgTypes.some(
+      (typeUrl) => typeUrl.startsWith('/cosmos.staking.') || STAKING_RELATED_DISTRIBUTION_MESSAGE_TYPES.has(typeUrl),
+    )
+  ) {
     return { kind: 'staking_related', direction };
   }
 

@@ -181,7 +181,12 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
 
           <label className="flex flex-col gap-1 font-sfpro text-sm text-white/60">
             {t('amountMin')}
-            <span className="flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight">
+            <span
+              className={cn(
+                'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
+                (hasInvalidMin || hasInvalidRange) && 'border-red-400 focus-within:border-red-400',
+              )}
+            >
               <input
                 value={minAmount}
                 onChange={(event) => setMinAmount(event.target.value)}
@@ -199,7 +204,12 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
 
           <label className="flex flex-col gap-1 font-sfpro text-sm text-white/60">
             {t('amountMax')}
-            <span className="flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight">
+            <span
+              className={cn(
+                'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
+                (hasInvalidMax || hasInvalidRange) && 'border-red-400 focus-within:border-red-400',
+              )}
+            >
               <input
                 value={maxAmount}
                 onChange={(event) => setMaxAmount(event.target.value)}
