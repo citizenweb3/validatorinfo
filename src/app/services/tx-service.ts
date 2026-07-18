@@ -39,13 +39,6 @@ export interface TxTransferItem {
   amount: string;
 }
 
-export interface TxAmountContext {
-  accountAddress: string;
-  coinDecimals: number;
-  denom: string;
-  minimalDenom: string;
-}
-
 export interface TxByAddressItem extends TxItem {
   transfers: TxTransferItem[];
   msgTypes: string[];

@@ -5,7 +5,6 @@ import AccountTxFilters from '@/app/networks/[name]/address/[accountAddress]/tra
 import BaseTable from '@/components/common/table/base-table';
 import TableHeaderItem from '@/components/common/table/table-header-item';
 import TxRowsSkeleton from '@/components/txs/tx-rows-skeleton';
-import type { TxAmountContext } from '@/services/tx-service';
 import { PagesProps } from '@/types';
 import type { TxFilters } from '@/utils/tx-filters';
 
@@ -16,7 +15,7 @@ interface OwnProps extends PagesProps {
   windowIndex: number;
   filters: TxFilters;
   filterKey: string;
-  amountContext: TxAmountContext | null;
+  showFilters: boolean;
 }
 
 const AccountTransactions: FC<OwnProps> = ({
@@ -27,20 +26,18 @@ const AccountTransactions: FC<OwnProps> = ({
   windowIndex,
   filters,
   filterKey,
-  amountContext,
+  showFilters,
 }) => {
   return (
     <div className="pt-8">
-      {amountContext ? (
-        <AccountTxFilters chainName={chainName} filters={filters} amountContext={amountContext} />
-      ) : null}
+      {showFilters ? <AccountTxFilters chainName={chainName} filters={filters} /> : null}
       <BaseTable>
         <thead>
           <tr className="bg-table_header">
-            <TableHeaderItem page={page} name="Type of Tx" sortField="type" />
-            <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
-            <TableHeaderItem page={page} name="Timestamp" sortField="timestamp" defaultSelected />
-            <TableHeaderItem page={page} name="Block Height" sortField="block height" />
+            <TableHeaderItem page={page} name="Type of Tx" />
+            <TableHeaderItem page={page} name="Tx Hash" />
+            <TableHeaderItem page={page} name="Timestamp" />
+            <TableHeaderItem page={page} name="Block Height" />
           </tr>
         </thead>
         <Suspense

@@ -1936,8 +1936,6 @@
       },
       "dateFrom": "Data inicial",
       "dateTo": "Data final",
-      "amountMin": "Valor mín.",
-      "amountMax": "Valor máx.",
       "selectAll": "Selecionar tudo",
       "clearAll": "Limpar tudo"
     },

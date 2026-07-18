@@ -2,23 +2,15 @@
 
 import { useTranslations } from 'next-intl';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { FC, KeyboardEvent, useEffect, useMemo, useState, useTransition } from 'react';
+import { FC, useEffect, useMemo, useState, useTransition } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import Button from '@/components/common/button';
 import Dropdown from '@/components/common/list-filters/multiDropdown';
 import PlusButton from '@/components/common/plus-button';
-import type { TxAmountContext } from '@/services/tx-service';
 import { cn } from '@/utils/cn';
-import { formatBaseUnits } from '@/utils/decimal-string';
-import {
-  type TxFilters,
-  displayAmountToBaseUnits,
-  formatLocalDateOnly,
-  hasActiveTxFilters,
-  isTxAmountRangeValid,
-} from '@/utils/tx-filters';
+import { type TxFilters, formatLocalDateOnly, hasActiveTxFilters } from '@/utils/tx-filters';
 import {
   type TxMessageFilterId,
   getTxMessageFilterOptions,
@@ -32,7 +24,6 @@ const OWNED_PARAMS = ['mt', 'from', 'to', 'min', 'max', 'c', 'w'] as const;
 interface OwnProps {
   chainName: string;
   filters: TxFilters;
-  amountContext: TxAmountContext;
 }
 
 const dateFromIso = (value: string | null): Date | null => {
@@ -43,10 +34,9 @@ const dateFromIso = (value: string | null): Date | null => {
 
 const menuControl = 'border-r border-t border-bgSt bg-table_row shadow-menu-button-hover';
 
-// Filters commit instantly on change like every ListFilters consumer; the amount inputs are the
-// one free-typing control, so they commit on blur/Enter instead of per keystroke. Reset follows
-// the site-wide gesture: three quick clicks on Customize clear every owned param.
-const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) => {
+// Filters commit instantly on change like every ListFilters consumer. Reset follows the
+// site-wide gesture: three quick clicks on Customize clear every owned param.
+const AccountTxFilters: FC<OwnProps> = ({ chainName, filters }) => {
   const t = useTranslations('AccountPage.Transactions');
   const tTable = useTranslations('HomePage.Table');
   const router = useRouter();
@@ -56,12 +46,6 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
   const [resetClicks, setResetClicks] = useState(0);
   const [, startTransition] = useTransition();
   const [today] = useState(() => new Date());
-  const [minAmount, setMinAmount] = useState(() =>
-    filters.minAmount ? formatBaseUnits(filters.minAmount, amountContext.coinDecimals) : '',
-  );
-  const [maxAmount, setMaxAmount] = useState(() =>
-    filters.maxAmount ? formatBaseUnits(filters.maxAmount, amountContext.coinDecimals) : '',
-  );
 
   const selectedMessageTypes = useMemo(
     () => resolveTxMessageFilterIds(chainName, filters.msgTypes),
@@ -78,21 +62,12 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
     [chainName, t],
   );
 
-  const minHasValue = minAmount.trim().length > 0;
-  const maxHasValue = maxAmount.trim().length > 0;
-  const minBaseUnits = minHasValue ? displayAmountToBaseUnits(minAmount, amountContext.coinDecimals) : null;
-  const maxBaseUnits = maxHasValue ? displayAmountToBaseUnits(maxAmount, amountContext.coinDecimals) : null;
-  const hasInvalidMin = minHasValue && minBaseUnits === null;
-  const hasInvalidMax = maxHasValue && maxBaseUnits === null;
-  const hasInvalidRange = !isTxAmountRangeValid(minBaseUnits, maxBaseUnits);
   const fromMaxDate = toDate && toDate < today ? toDate : today;
 
   useEffect(() => {
     if (resetClicks >= 3) {
       const params = new URLSearchParams(searchParams.toString());
       OWNED_PARAMS.forEach((param) => params.delete(param));
-      setMinAmount('');
-      setMaxAmount('');
       const query = params.toString();
       startTransition(() => router.push(`${pathname}${query ? `?${query}` : ''}`));
       setIsOpened(false);
@@ -106,8 +81,6 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
     messageTypeIds?: TxMessageFilterId[];
     from?: Date | null;
     to?: Date | null;
-    min?: string | null;
-    max?: string | null;
   }) => {
     const params = new URLSearchParams(searchParams.toString());
     OWNED_PARAMS.forEach((param) => params.delete(param));
@@ -120,10 +93,6 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
     if (from) params.set('from', formatLocalDateOnly(from));
     if (to) params.set('to', formatLocalDateOnly(to));
 
-    const min = next.min !== undefined ? next.min : minBaseUnits;
-    const max = next.max !== undefined ? next.max : maxBaseUnits;
-    if (min !== null && min !== undefined) params.set('min', min);
-    if (max !== null && max !== undefined) params.set('max', max);
 
     const query = params.toString();
     startTransition(() => router.push(`${pathname}${query ? `?${query}` : ''}`));
@@ -137,21 +106,7 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
     pushFilters({ messageTypeIds: ids });
   };
 
-  const commitAmounts = () => {
-    if (hasInvalidMin || hasInvalidMax || hasInvalidRange) return;
-    if (
-      (minBaseUnits ?? null) === (filters.minAmount ?? null) &&
-      (maxBaseUnits ?? null) === (filters.maxAmount ?? null)
-    )
-      return;
-    pushFilters({ min: minBaseUnits, max: maxBaseUnits });
-  };
 
-  const handleAmountKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    if (event.key !== 'Enter') return;
-    event.preventDefault();
-    commitAmounts();
-  };
 
   const handleCustomizeClick = () => {
     setIsOpened((opened) => !opened);
@@ -217,55 +172,7 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
             )}
           />
 
-          <span
-            className={cn(
-              menuControl,
-              'flex h-8 items-center focus-within:text-highlight',
-              (hasInvalidMin || hasInvalidRange) && 'border border-red',
-            )}
-          >
-            <input
-              value={minAmount}
-              onChange={(event) => setMinAmount(event.target.value)}
-              onBlur={commitAmounts}
-              onKeyDown={handleAmountKeyDown}
-              inputMode="decimal"
-              autoComplete="off"
-              placeholder={t('amountMin')}
-              aria-label={t('amountMin')}
-              aria-invalid={hasInvalidMin || hasInvalidRange}
-              className={cn(
-                'h-full w-32 bg-transparent px-2 font-sfpro text-base text-white outline-none placeholder:text-white/40',
-                (hasInvalidMin || hasInvalidRange) && 'text-red',
-              )}
-            />
-            <span className="pr-2 font-sfpro text-xs text-white/50">{amountContext.denom}</span>
-          </span>
 
-          <span
-            className={cn(
-              menuControl,
-              'flex h-8 items-center focus-within:text-highlight',
-              (hasInvalidMax || hasInvalidRange) && 'border border-red',
-            )}
-          >
-            <input
-              value={maxAmount}
-              onChange={(event) => setMaxAmount(event.target.value)}
-              onBlur={commitAmounts}
-              onKeyDown={handleAmountKeyDown}
-              inputMode="decimal"
-              autoComplete="off"
-              placeholder={t('amountMax')}
-              aria-label={t('amountMax')}
-              aria-invalid={hasInvalidMax || hasInvalidRange}
-              className={cn(
-                'h-full w-32 bg-transparent px-2 font-sfpro text-base text-white outline-none placeholder:text-white/40',
-                (hasInvalidMax || hasInvalidRange) && 'text-red',
-              )}
-            />
-            <span className="pr-2 font-sfpro text-xs text-white/50">{amountContext.denom}</span>
-          </span>
         </div>
       ) : null}
     </div>

@@ -1935,8 +1935,6 @@
       },
       "dateFrom": "From date",
       "dateTo": "To date",
-      "amountMin": "Min amount",
-      "amountMax": "Max amount",
       "selectAll": "Select all",
       "clearAll": "Clear all"
     },
