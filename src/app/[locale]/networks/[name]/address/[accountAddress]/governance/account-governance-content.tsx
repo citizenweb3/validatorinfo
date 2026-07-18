@@ -40,10 +40,6 @@ const AccountGovernanceContent = async ({ chainName, accountAddress, locale, pag
 
   return (
     <div className="pt-8">
-      <h2 className="mb-8 w-fit border-b border-bgSt pb-2 font-handjet text-2xl text-highlight">
-        {t('voting-history-title')}
-      </h2>
-
       <div className="overflow-x-auto">
         <BaseTable className="min-w-[760px]">
           <thead>

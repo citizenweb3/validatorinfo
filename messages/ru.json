@@ -1941,7 +1941,6 @@
     },
     "Governance": {
       "title": "Участие в управлении: Голоса и влияние на сеть",
-      "voting-history-title": "История голосования",
       "no-governance-activity": "Активность управления не найдена для этого адреса",
       "proposal-id-column": "Предложение",
       "vote-column": "Голос",
