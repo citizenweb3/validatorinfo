@@ -32,7 +32,7 @@ const AccountTransactions: FC<OwnProps> = ({
   return (
     <div className="pt-8">
       {amountContext ? (
-        <AccountTxFilters key={filterKey} chainName={chainName} filters={filters} amountContext={amountContext} />
+        <AccountTxFilters chainName={chainName} filters={filters} amountContext={amountContext} />
       ) : null}
       <BaseTable>
         <thead>

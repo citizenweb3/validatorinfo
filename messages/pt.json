@@ -1938,10 +1938,6 @@
       "dateTo": "Data final",
       "amountMin": "Valor mín.",
       "amountMax": "Valor máx.",
-      "apply": "Aplicar",
-      "applying": "A aplicar…",
-      "applyBudgetHint": "Escolha menos tipos de mensagem: a API aceita até cinco URLs de tipo resolvidos.",
-      "resetFilters": "Limpar filtros",
       "selectAll": "Selecionar tudo",
       "clearAll": "Limpar tudo"
     },

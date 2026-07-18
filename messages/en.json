@@ -1937,10 +1937,6 @@
       "dateTo": "To date",
       "amountMin": "Min amount",
       "amountMax": "Max amount",
-      "apply": "Apply",
-      "applying": "Applying…",
-      "applyBudgetHint": "Choose fewer message types: the API accepts up to five resolved type URLs.",
-      "resetFilters": "Reset filters",
       "selectAll": "Select all",
       "clearAll": "Clear all"
     },
