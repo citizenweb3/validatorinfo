@@ -43,6 +43,18 @@ export interface CosmosTxSummary {
   fee: CosmosTxFeeSummary | null;
 }
 
+export interface CosmosTxTransfer {
+  from_addr: string;
+  to_addr: string;
+  denom: string;
+  amount: string;
+}
+
+export interface CosmosTxByAddressSummary extends CosmosTxSummary {
+  transfers: CosmosTxTransfer[];
+  msg_types: string[];
+}
+
 export interface CosmosTxFeeAmount {
   amount: string;
   denom: string;
@@ -125,6 +137,7 @@ export interface CosmosListResponse<T, C = CosmosBlocksCursor | CosmosTxsCursor>
 
 export type CosmosBlocksListResponse = CosmosListResponse<CosmosBlockSummary, CosmosBlocksCursor>;
 export type CosmosTxsListResponse = CosmosListResponse<CosmosTxSummary, CosmosTxsCursor>;
+export type CosmosTxsByAddressListResponse = CosmosListResponse<CosmosTxByAddressSummary, CosmosTxsCursor>;
 export type CosmosDelegationsResponse = CosmosListResponse<CosmosDelegationEvent, CosmosDelegationsCursor>;
 
 export interface CosmosBlockDetailResponse {

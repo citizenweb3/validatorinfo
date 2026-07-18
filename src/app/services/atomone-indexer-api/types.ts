@@ -43,6 +43,18 @@ export interface AtomoneTxSummary {
   fee: AtomoneTxFeeSummary | null;
 }
 
+export interface AtomoneTxTransfer {
+  from_addr: string;
+  to_addr: string;
+  denom: string;
+  amount: string;
+}
+
+export interface AtomoneTxByAddressSummary extends AtomoneTxSummary {
+  transfers: AtomoneTxTransfer[];
+  msg_types: string[];
+}
+
 export interface AtomoneTxFeeAmount {
   amount: string;
   denom: string;
@@ -125,6 +137,7 @@ export interface AtomoneListResponse<T, C = AtomoneBlocksCursor | AtomoneTxsCurs
 
 export type AtomoneBlocksListResponse = AtomoneListResponse<AtomoneBlockSummary, AtomoneBlocksCursor>;
 export type AtomoneTxsListResponse = AtomoneListResponse<AtomoneTxSummary, AtomoneTxsCursor>;
+export type AtomoneTxsByAddressListResponse = AtomoneListResponse<AtomoneTxByAddressSummary, AtomoneTxsCursor>;
 export type AtomoneDelegationsResponse = AtomoneListResponse<AtomoneDelegationEvent, AtomoneDelegationsCursor>;
 
 export interface AtomoneBlockDetailResponse {

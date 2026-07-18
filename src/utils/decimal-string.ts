@@ -5,7 +5,7 @@ type DecimalParts = {
   fraction: string;
 };
 
-const parseUnsignedDecimalParts = (value: string): DecimalParts => {
+export const parseUnsignedDecimalParts = (value: string): DecimalParts => {
   if (!UNSIGNED_DECIMAL_PATTERN.test(value)) {
     throw new Error(`invalid unsigned decimal string: ${value}`);
   }

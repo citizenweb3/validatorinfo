@@ -3,7 +3,8 @@ import atomoneIndexer from '@/services/atomone-indexer-api';
 import { AtomoneTxDetail } from '@/services/atomone-indexer-api';
 import aztecIndexer from '@/services/aztec-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
-import { CosmosTxDetail, CosmosTxSummary } from '@/services/cosmos-indexer-api';
+import { CosmosTxByAddressSummary, CosmosTxDetail, CosmosTxSummary } from '@/services/cosmos-indexer-api';
+import { getChainLcdContext } from '@/services/chain-service';
 import logosIndexer from '@/services/logos-indexer-api';
 import { LogosTxDetail } from '@/services/logos-indexer-api';
 import midenIndexer from '@/services/miden-indexer-api';
@@ -11,6 +12,12 @@ import { MidenTxDetail } from '@/services/miden-indexer-api';
 import { refreshChainTxMetrics } from '@/server/jobs/update-tx-metrics';
 import { getAztecTimestampMs } from '@/utils/aztec';
 import { cacheGetOrFetch, CACHE_KEYS, CACHE_TTL } from '@/services/redis-cache';
+import {
+  canonicalTxFilterKey,
+  hasAmountTxFilters,
+  txFiltersToApiParams,
+  type TxFilters,
+} from '@/utils/tx-filters';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
 
@@ -28,6 +35,18 @@ export interface TxItem {
   blockId?: string;
   // Miden-specific: bech32-encoded account that submitted the tx.
   accountId?: string;
+}
+
+export interface TxTransferItem {
+  fromAddr: string;
+  toAddr: string;
+  denom: string;
+  amount: string;
+}
+
+export interface TxByAddressItem extends TxItem {
+  transfers: TxTransferItem[];
+  msgTypes: string[];
 }
 
 export interface TxsResponse {
@@ -376,8 +395,8 @@ export interface Cursor {
   before_index: number;
 }
 
-export interface TxBatch {
-  rows: TxItem[];
+export interface TxByAddressBatch {
+  rows: TxByAddressItem[];
   nextCursor: Cursor | null;
   hasMore: boolean;
   error?: true;
@@ -385,12 +404,12 @@ export interface TxBatch {
 
 // Server-action result (defined here, not in the `'use server'` action file, which may only
 // export async functions). `code` lets the client map failures to a localized message + Retry.
-export type TxBatchResult =
-  | { ok: true; rows: TxItem[]; nextCursor: Cursor | null; hasMore: boolean }
+export type TxByAddressBatchResult =
+  | { ok: true; rows: TxByAddressItem[]; nextCursor: Cursor | null; hasMore: boolean }
   | { ok: false; code: 'INVALID_REQUEST' | 'SERVICE_ERROR' };
 
-const EMPTY_BATCH: TxBatch = { rows: [], nextCursor: null, hasMore: false };
-const ERROR_BATCH: TxBatch = { rows: [], nextCursor: null, hasMore: false, error: true };
+const EMPTY_BY_ADDRESS_BATCH: TxByAddressBatch = { rows: [], nextCursor: null, hasMore: false };
+const ERROR_BY_ADDRESS_BATCH: TxByAddressBatch = { rows: [], nextCursor: null, hasMore: false, error: true };
 
 // Shared mapper: indexer CosmosTxSummary -> UI TxItem.
 // `code !== 0` means the tx is in the block but execution failed; surfaced as 'dropped'
@@ -402,6 +421,17 @@ const toCosmosTxItem = (t: CosmosTxSummary): TxItem => ({
   timestamp: new Date(t.time).getTime(),
   transactionFee: t.fee?.amount ?? undefined,
   opType: t.first_msg_type ?? undefined,
+});
+
+const toCosmosTxByAddressItem = (tx: CosmosTxByAddressSummary): TxByAddressItem => ({
+  ...toCosmosTxItem(tx),
+  transfers: tx.transfers.map((transfer) => ({
+    fromAddr: transfer.from_addr,
+    toAddr: transfer.to_addr,
+    denom: transfer.denom,
+    amount: transfer.amount,
+  })),
+  msgTypes: tx.msg_types,
 });
 
 /**
@@ -454,15 +484,25 @@ type TxsByAddressClient = { getTxsByAddress: typeof cosmosIndexer.getTxsByAddres
 
 const fetchTxsByAddressBatch = async (
   indexer: TxsByAddressClient,
+  chainKey: string,
   addresses: string[],
+  filters: TxFilters,
   cursor?: Cursor,
-): Promise<TxBatch> => {
+): Promise<TxByAddressBatch> => {
+  let minimalDenom: string | undefined;
+  if (hasAmountTxFilters(filters)) {
+    const context = await getChainLcdContext(chainKey);
+    if (!context) throw new Error(`chain params are unavailable for ${chainKey}`);
+    minimalDenom = context.minimalDenom;
+  }
+
   const page = await indexer.getTxsByAddress(
     {
       address: addresses.join(','),
       limit: ITEMS_PER_BATCH,
       before_height: cursor?.before_height,
       before_index: cursor?.before_index,
+      ...txFiltersToApiParams(filters, minimalDenom),
       // cursor model never uses `total` — skip the expensive COUNT(*) server-side
       count: 'false',
     },
@@ -471,22 +511,22 @@ const fetchTxsByAddressBatch = async (
 
   // Remap the indexer cursor ({next_before_*}) to the request/URL shape ({before_*}).
   // null-guard: never restart from head if the API returns has_more with a null cursor.
-  const hasMore = page.has_more && page.cursor != null;
-  const nextCursor: Cursor | null = hasMore
-    ? { before_height: page.cursor!.next_before_height, before_index: page.cursor!.next_before_index }
+  const nextCursor: Cursor | null = page.has_more && page.cursor
+    ? { before_height: page.cursor.next_before_height, before_index: page.cursor.next_before_index }
     : null;
+  const hasMore = nextCursor !== null;
 
-  return { rows: page.data.map(toCosmosTxItem), nextCursor, hasMore };
+  return { rows: page.data.map(toCosmosTxByAddressItem), nextCursor, hasMore };
 };
 
-const txsByAddressInflight = new Map<string, Promise<TxBatch>>();
+const txsByAddressInflight = new Map<string, Promise<TxByAddressBatch>>();
 
 /**
  * Shared by-address batch core. Picks the indexer client + cache namespace by chain. One batch of
  * transactions involving an address set (account, or account+operator for a validator — server-side
  * `signers &&` union). Keyset cursor, no COUNT. Read-through Redis warm-cache (head 15s — mutable;
  * deep 300s — immutable) + in-process single-flight to collapse cold-key stampedes. Indexer failure
- * is caught into ERROR_BATCH so neither the action nor the RSC cold-load caller ever receives a
+ * is caught into an error batch so neither the action nor the RSC cold-load caller ever receives a
  * rejection (which would blank the Suspense subtree). The catch is outside cacheGetOrFetch, so
  * errors are not cached — the next call retries.
  */
@@ -494,22 +534,28 @@ const runTxsByAddressBatch = (
   indexer: TxsByAddressClient,
   chainKey: string,
   addresses: string[],
+  filters: TxFilters,
   cursor?: Cursor,
-): Promise<TxBatch> => {
+): Promise<TxByAddressBatch> => {
   const list = addresses.filter(Boolean);
-  if (!list.length) return Promise.resolve(EMPTY_BATCH);
+  if (!list.length) return Promise.resolve(EMPTY_BY_ADDRESS_BATCH);
 
   const address = list.join(',');
+  const filterKey = canonicalTxFilterKey(filters);
   const cursorKey = cursor ? `c:${cursor.before_height}:${cursor.before_index}` : 'head';
-  const key = CACHE_KEYS.txs.byAddress(chainKey, address, cursorKey);
+  const key = CACHE_KEYS.txs.byAddress(chainKey, address, filterKey, cursorKey);
   const ttl = cursor ? CACHE_TTL.TXS_DEEP : CACHE_TTL.TXS_HEAD;
 
   const existing = txsByAddressInflight.get(key);
   if (existing) return existing;
 
-  const promise = cacheGetOrFetch<TxBatch>(key, () => fetchTxsByAddressBatch(indexer, list, cursor), ttl)
-    .then((v) => v ?? EMPTY_BATCH)
-    .catch(() => ERROR_BATCH)
+  const promise = cacheGetOrFetch<TxByAddressBatch>(
+    key,
+    () => fetchTxsByAddressBatch(indexer, chainKey, list, filters, cursor),
+    ttl,
+  )
+    .then((v) => v ?? EMPTY_BY_ADDRESS_BATCH)
+    .catch(() => ERROR_BY_ADDRESS_BATCH)
     .finally(() => {
       txsByAddressInflight.delete(key);
     });
@@ -521,18 +567,23 @@ const runTxsByAddressBatch = (
 // Routed by-address batch entry — the single path used by both the pages' SSR initial fetch and the
 // client action, so chain→client routing lives in one place. Each branch pairs the chain's indexer
 // client with its cache namespace. Unsupported chains short-circuit to an empty batch.
-const getTxsByAddressBatch = (chainName: string, addresses: string[], cursor?: Cursor): Promise<TxBatch> => {
+const getTxsByAddressBatch = (
+  chainName: string,
+  addresses: string[],
+  filters: TxFilters,
+  cursor?: Cursor,
+): Promise<TxByAddressBatch> => {
   const normalizedChainName = chainName.toLowerCase();
 
   if (normalizedChainName === 'cosmoshub') {
-    return runTxsByAddressBatch(cosmosIndexer, 'cosmoshub', addresses, cursor);
+    return runTxsByAddressBatch(cosmosIndexer, 'cosmoshub', addresses, filters, cursor);
   }
 
   if (normalizedChainName === 'atomone') {
-    return runTxsByAddressBatch(atomoneIndexer, 'atomone', addresses, cursor);
+    return runTxsByAddressBatch(atomoneIndexer, 'atomone', addresses, filters, cursor);
   }
 
-  return Promise.resolve(EMPTY_BATCH);
+  return Promise.resolve(EMPTY_BY_ADDRESS_BATCH);
 };
 
 const getCosmosTxByHash = async (

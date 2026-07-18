@@ -5,6 +5,7 @@ import Redis from 'ioredis';
 import logger from '@/logger';
 import { normalizeBech32Address } from '@/utils/bech32-address';
 import { accountViewedKey } from '@/utils/redis-keys';
+import { buildTxByAddressCacheKey } from '@/utils/tx-cache-key';
 
 const { logInfo, logWarn, logError } = logger('redis-cache');
 
@@ -149,8 +150,8 @@ export const CACHE_KEYS = {
     // dedups), so [acc,op] and [op,acc] return identical rows. Do NOT sort if it ever becomes positional.
     // `chainName` namespaces the key: cosmoshub and atomone are separate indexer deployments, so the
     // same-shaped cursorKey must never collide across chains.
-    byAddress: (chainName: string, addresses: string, cursorKey: string) =>
-      `txs:byaddr:${chainName}:${addresses.split(',').sort().join(',')}:${cursorKey}`,
+    byAddress: (chainName: string, addresses: string, filterKey: string, cursorKey: string) =>
+      buildTxByAddressCacheKey({ chainName, addresses, filterKey, cursorKey }),
   },
   delegations: {
     byValidator: (chainName: string, validator: string, cursorKey: string) =>

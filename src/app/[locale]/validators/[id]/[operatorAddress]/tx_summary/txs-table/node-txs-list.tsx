@@ -6,6 +6,8 @@ import TxListClient from '@/components/txs/tx-list-client';
 import { decodeCursorToken } from '@/components/txs/tx-cursor-token';
 import { nodeTxsExample } from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/nodeTxsExample';
 import NodeTxsItem from '@/app/validators/[id]/[operatorAddress]/tx_summary/txs-table/node-txs-items';
+import { EMPTY_TX_FILTERS } from '@/utils/tx-filters';
+import { isTxByAddressChainSupported } from '@/utils/tx-supported-chains';
 
 const PER_PAGE = 20;
 
@@ -20,15 +22,14 @@ interface OwnProps {
 const NodeTxsList: FC<OwnProps> = async ({ chainName, accountAddress, operatorAddress, cursorToken, windowIndex }) => {
   // CosmosHub and AtomOne carry REAL indexer data via cursor pagination. Other networks keep the
   // static mock placeholder (no per-address tx indexer yet) — same fallback the global /tx table uses.
-  const normalizedChainName = chainName.toLowerCase();
-  if (normalizedChainName === 'cosmoshub' || normalizedChainName === 'atomone') {
+  if (isTxByAddressChainSupported(chainName)) {
     // Query the node's account AND operator address (server-side `signers &&` union). A null
     // accountAddress yields an operator-only feed (account-signed ops omitted) — known gap.
     const addresses = [accountAddress, operatorAddress].filter((address): address is string => !!address);
 
     if (addresses.length > 0) {
       const cursor = decodeCursorToken(cursorToken);
-      const initial = await TxService.getTxsByAddressBatch(chainName, addresses, cursor);
+      const initial = await TxService.getTxsByAddressBatch(chainName, addresses, EMPTY_TX_FILTERS, cursor);
       const windows = Math.max(1, Math.ceil(initial.rows.length / PER_PAGE));
       const clampedWindow = Math.min(Math.max(0, windowIndex), windows - 1);
 
@@ -39,6 +40,7 @@ const NodeTxsList: FC<OwnProps> = async ({ chainName, accountAddress, operatorAd
           initialCursor={cursor ?? null}
           initialWindow={clampedWindow}
           initial={initial}
+          filters={EMPTY_TX_FILTERS}
         />
       );
     }

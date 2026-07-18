@@ -4,6 +4,7 @@ import SubDescription from '@/components/sub-description';
 import PageTitle from '@/components/common/page-title';
 import AccountTransactions
   from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/account-transactions';
+import { canonicalTxFilterKey, parseTxFiltersFromSearchParams } from '@/utils/tx-filters';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -31,6 +32,8 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
   // Cursor-in-URL pagination: ?c=<cursor token>&w=<window>. Cold load lands exactly on that window.
   const cursorToken = typeof q.c === 'string' ? q.c : undefined;
   const windowIndex = q.w ? parseInt(q.w as string, 10) : 0;
+  const filters = parseTxFiltersFromSearchParams(q, name);
+  const filterKey = canonicalTxFilterKey(filters);
 
   return (
     <div className="mb-14">
@@ -40,7 +43,9 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
                            page={'TxSummaryPage'}
                            accountAddress={accountAddress}
                            cursorToken={cursorToken}
-                           windowIndex={Number.isFinite(windowIndex) ? windowIndex : 0} />
+                           windowIndex={Number.isFinite(windowIndex) ? windowIndex : 0}
+                           filters={filters}
+                           filterKey={filterKey} />
     </div>
   );
 };

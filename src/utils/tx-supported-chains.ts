@@ -21,3 +21,17 @@ export type TxSupportedChain = (typeof TX_SUPPORTED_CHAINS)[number];
 
 export const hasTxPage = (chainName: string): boolean =>
   (TX_SUPPORTED_CHAINS as readonly string[]).includes(chainName.toLowerCase());
+
+export const TX_BY_ADDRESS_CHAINS = ['cosmoshub', 'atomone'] as const;
+
+export type TxByAddressChain = (typeof TX_BY_ADDRESS_CHAINS)[number];
+
+export const toTxByAddressChain = (chainName: string): TxByAddressChain | null => {
+  const normalizedChainName = chainName.toLowerCase();
+  if (normalizedChainName === 'cosmoshub' || normalizedChainName === 'atomone') {
+    return normalizedChainName;
+  }
+  return null;
+};
+
+export const isTxByAddressChainSupported = (chainName: string): boolean => toTxByAddressChain(chainName) !== null;

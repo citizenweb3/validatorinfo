@@ -11,6 +11,7 @@ import {
   CosmosStakingDeltasResponse,
   CosmosTxDetailResponse,
   CosmosTxRawResponse,
+  CosmosTxsByAddressListResponse,
   CosmosTxsListResponse,
   CosmosTxsStatsResponse,
 } from './types';
@@ -123,6 +124,12 @@ export interface GetTxsByAddressParams {
   limit?: number;
   before_height?: string;
   before_index?: number;
+  msg_type?: string;
+  from_time?: string;
+  to_time?: string;
+  min_amount?: string;
+  max_amount?: string;
+  amount_denom?: string;
   // 'false' skips the exact COUNT(*) `total` server-side (10–20s on a top validator). Cursor
   // clients that don't read `total` should pass 'false'. Ignored by older deployments (unknown
   // params are stripped), so it's safe to send before the indexer ships support.
@@ -132,14 +139,20 @@ export interface GetTxsByAddressParams {
 export const getTxsByAddress = (
   params: GetTxsByAddressParams,
   options?: CosmosIndexerRequestOptions,
-): Promise<CosmosTxsListResponse> =>
-  client.get<CosmosTxsListResponse>(
+): Promise<CosmosTxsByAddressListResponse> =>
+  client.get<CosmosTxsByAddressListResponse>(
     '/api/v1/txs/by-address',
     {
       address: params.address,
       limit: params.limit,
       before_height: params.before_height,
       before_index: params.before_index,
+      msg_type: params.msg_type,
+      from_time: params.from_time,
+      to_time: params.to_time,
+      min_amount: params.min_amount,
+      max_amount: params.max_amount,
+      amount_denom: params.amount_denom,
       count: params.count,
     },
     options,

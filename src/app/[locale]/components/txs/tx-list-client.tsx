@@ -4,17 +4,18 @@ import { useTranslations } from 'next-intl';
 import { FC, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { getTxsBatch } from '@/actions/get-txs-batch';
-import type { Cursor, TxBatch, TxItem } from '@/services/tx-service';
+import type { Cursor, TxByAddressBatch, TxByAddressItem } from '@/services/tx-service';
 import TxRow from '@/components/txs/tx-row';
 import TxRowsSkeleton from '@/components/txs/tx-rows-skeleton';
 import TxCursorPagination from '@/components/txs/tx-cursor-pagination';
+import { txFiltersToInput, type TxFilters } from '@/utils/tx-filters';
 
 const PER_PAGE = 20;
 const PREFETCH_RUNWAY = PER_PAGE * 2; // start the next-batch fetch when fewer than 2 windows remain ahead
 
 interface LoadedBatch {
   cursor: Cursor | null; // the cursor that produced this batch (null = head)
-  rows: TxItem[];
+  rows: TxByAddressItem[];
   nextCursor: Cursor | null;
   hasMore: boolean;
 }
@@ -24,7 +25,8 @@ interface OwnProps {
   chainName: string;
   initialCursor: Cursor | null; // cursor that produced `initial` (from the URL `c`)
   initialWindow: number; // window within `initial` (from the URL `w`, clamped server-side)
-  initial: TxBatch;
+  initial: TxByAddressBatch;
+  filters: TxFilters;
 }
 
 const cursorKey = (cursor: Cursor | null): string =>
@@ -44,7 +46,7 @@ const MessageRow: FC<{ message: string; hint?: string; action?: ReactNode }> = (
   </tbody>
 );
 
-const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initialWindow, initial }) => {
+const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initialWindow, initial, filters }) => {
   const t = useTranslations('TotalTxsPage');
 
   const [loaded, setLoaded] = useState<LoadedBatch[]>([
@@ -72,7 +74,7 @@ const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initi
     if (inFlight.current.has(key)) return;
     inFlight.current.add(key);
     setLoading(true);
-    const res = await getTxsBatch(addresses, chainName, last.nextCursor);
+    const res = await getTxsBatch(addresses, chainName, txFiltersToInput(filters), last.nextCursor);
     inFlight.current.delete(key);
     setLoading(false);
     if (!res.ok) {
@@ -84,7 +86,7 @@ const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initi
       if (prev.some((batch) => cursorKey(batch.cursor) === key)) return prev; // race guard
       return [...prev, { cursor: last.nextCursor, rows: res.rows, nextCursor: res.nextCursor, hasMore: res.hasMore }];
     });
-  }, [addresses, chainName, loaded]);
+  }, [addresses, chainName, filters, loaded]);
 
   // Re-fetch the head batch by its own cursor and replace it (recovers a failed cold-load).
   const reloadHead = useCallback(async () => {
@@ -93,7 +95,7 @@ const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initi
     if (inFlight.current.has(key)) return;
     inFlight.current.add(key);
     setLoading(true);
-    const res = await getTxsBatch(addresses, chainName, head.cursor ?? undefined);
+    const res = await getTxsBatch(addresses, chainName, txFiltersToInput(filters), head.cursor ?? undefined);
     inFlight.current.delete(key);
     setLoading(false);
     if (!res.ok) {
@@ -103,7 +105,7 @@ const TxListClient: FC<OwnProps> = ({ addresses, chainName, initialCursor, initi
     setErrored(false);
     setLoaded([{ cursor: head.cursor, rows: res.rows, nextCursor: res.nextCursor, hasMore: res.hasMore }]);
     setWindowIdx((i) => Math.min(i, Math.max(0, Math.ceil(res.rows.length / PER_PAGE) - 1)));
-  }, [addresses, chainName, loaded]);
+  }, [addresses, chainName, filters, loaded]);
 
   // Load-ahead: prefetch the next batch when ≤2 windows remain ahead of the current one. On a
   // 5-window batch this fires at window 3 (`batchStart+2`, e.g. pages 3/8/13), leaving pages 4–5 as
