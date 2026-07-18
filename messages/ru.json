@@ -1944,7 +1944,6 @@
       "no-governance-activity": "Активность управления не найдена для этого адреса",
       "proposal-id-column": "Предложение",
       "vote-column": "Голос",
-      "vote-height-column": "Высота голоса",
       "network-impact-column": "Влияние на сеть ≈%",
       "proposal-title-unavailable": "Данные предложения ещё не проиндексированы",
       "weighted-vote-badge": "С весом",
@@ -1966,7 +1965,8 @@
         "veto": "Против с вето",
         "unspecified": "Не указано"
       },
-      "votes-truncated-caption": "Показаны 500 последних голосов."
+      "votes-truncated-caption": "Показаны 500 последних голосов.",
+      "vote-tx-column": "Хэш транзакции"
     },
     "Analytics": {
       "title": "Панель аналитики учетной записи: Обзор активности в блокчейне",

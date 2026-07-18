@@ -1943,7 +1943,6 @@
       "no-governance-activity": "No governance activity found for this address",
       "proposal-id-column": "Proposal",
       "vote-column": "Vote",
-      "vote-height-column": "Vote Height",
       "network-impact-column": "Network Impact ≈%",
       "proposal-title-unavailable": "Proposal details are not indexed yet",
       "weighted-vote-badge": "Weighted",
@@ -1965,7 +1964,8 @@
         "veto": "No with veto",
         "unspecified": "Unspecified"
       },
-      "votes-truncated-caption": "Showing the 500 most recent votes."
+      "votes-truncated-caption": "Showing the 500 most recent votes.",
+      "vote-tx-column": "Tx Hash"
     },
     "Analytics": {
       "title": "Account Analytics Dashboard: Insights into Blockchain Activity",

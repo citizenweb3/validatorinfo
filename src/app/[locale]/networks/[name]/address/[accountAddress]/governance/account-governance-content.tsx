@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 
 import BaseTable from '@/components/common/table/base-table';
+import TableHeaderItem from '@/components/common/table/table-header-item';
 import TablePagination from '@/components/common/table/table-pagination';
 import Tooltip from '@/components/common/tooltip';
 import AccountGovernanceService, { type AccountVotingHistoryReady } from '@/services/account-governance-service';
@@ -43,21 +44,31 @@ const AccountGovernanceContent = async ({ chainName, accountAddress, locale, pag
       <div className="overflow-x-auto">
         <BaseTable className="min-w-[760px]">
           <thead>
-            <tr>
-              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-                {t('proposal-id-column')}
-              </th>
-              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-                {t('vote-column')}
-              </th>
-              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-                {t('vote-height-column')}
-              </th>
-              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
-                <Tooltip tooltip={t('impact-methodology-tooltip')} direction="top">
-                  <span className="cursor-help">{t('network-impact-column')}</span>
-                </Tooltip>
-              </th>
+            <tr className="bg-table_header">
+              <TableHeaderItem page="TxSummaryPage">
+                <div className="flex items-center justify-center py-3">
+                  <div className="text-nowrap text-6xl font-normal sm:text-4xl md:text-sm">{t('proposal-id-column')}</div>
+                </div>
+              </TableHeaderItem>
+              <TableHeaderItem page="TxSummaryPage">
+                <div className="flex items-center justify-center py-3">
+                  <div className="text-nowrap text-6xl font-normal sm:text-4xl md:text-sm">{t('vote-column')}</div>
+                </div>
+              </TableHeaderItem>
+              <TableHeaderItem page="TxSummaryPage">
+                <div className="flex items-center justify-center py-3">
+                  <div className="text-nowrap text-6xl font-normal sm:text-4xl md:text-sm">{t('vote-tx-column')}</div>
+                </div>
+              </TableHeaderItem>
+              <TableHeaderItem page="TxSummaryPage">
+                <div className="flex items-center justify-center py-3">
+                  <Tooltip tooltip={t('impact-methodology-tooltip')} direction="top">
+                    <div className="cursor-help text-nowrap text-6xl font-normal sm:text-4xl md:text-sm">
+                      {t('network-impact-column')}
+                    </div>
+                  </Tooltip>
+                </div>
+              </TableHeaderItem>
             </tr>
           </thead>
           <tbody>

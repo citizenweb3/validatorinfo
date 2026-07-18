@@ -1944,7 +1944,6 @@
       "no-governance-activity": "Nenhuma atividade de governança encontrada para este endereço",
       "proposal-id-column": "Proposta",
       "vote-column": "Voto",
-      "vote-height-column": "Altura do Voto",
       "network-impact-column": "Impacto na Rede ≈%",
       "proposal-title-unavailable": "Os detalhes da proposta ainda não foram indexados",
       "weighted-vote-badge": "Ponderado",
@@ -1966,7 +1965,8 @@
         "veto": "Não com veto",
         "unspecified": "Não especificado"
       },
-      "votes-truncated-caption": "Mostrando os 500 votos mais recentes."
+      "votes-truncated-caption": "Mostrando os 500 votos mais recentes.",
+      "vote-tx-column": "Hash da Tx"
     },
     "Analytics": {
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",
