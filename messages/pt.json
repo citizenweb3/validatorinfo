@@ -1923,7 +1923,30 @@
     },
     "Transactions": {
       "title": "Histórico de Transações da Conta Blockchain",
-      "description": "O registo completo das transações está aqui. Detalhei todas as transações que este endereço assinou ou nas quais participou, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!"
+      "description": "O registo completo das transações está aqui. Detalhei todas as transações que este endereço assinou ou nas quais participou, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!",
+      "customize": "Personalizar",
+      "msgTypeLabel": "Tipo de mensagem",
+      "messageTypes": {
+        "send": "Enviar",
+        "delegate": "Delegar",
+        "undelegate": "Cancelar delegação",
+        "redelegate": "Redelegar",
+        "withdrawRewards": "Levantar recompensas",
+        "vote": "Votar",
+        "ibcTransfer": "Transferência IBC"
+      },
+      "dateFrom": "Data inicial",
+      "dateTo": "Data final",
+      "amountMin": "Montante mínimo",
+      "amountMax": "Montante máximo",
+      "apply": "Aplicar",
+      "applying": "A aplicar…",
+      "applyBudgetHint": "Escolha menos tipos de mensagem: a API aceita até cinco URLs de tipo resolvidos.",
+      "resetFilters": "Limpar filtros",
+      "selectAll": "Selecionar tudo",
+      "clearAll": "Limpar tudo",
+      "amountColumn": "Montante",
+      "transfersTooltipCap": "A mostrar até às primeiras 5 transferências indexadas"
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",
@@ -2031,8 +2054,14 @@
       "Network": { "name": "Rede", "hint": "Rede em que a pool minera" },
       "Blocks": { "name": "Blocos encontrados", "hint": "Blocos atribuídos a esta pool na janela selecionada" },
       "Share": { "name": "Dominância", "hint": "Participação nos blocos da rede encontrados na janela selecionada" },
-      "Miners": { "name": "Mineradores", "hint": "Contagem recente de mineradores conectados informada para esta pool nesta rede" },
-      "Hashrate": { "name": "Hashrate estimado", "hint": "Hashrate estimado a partir da participação de blocos da pool" },
+      "Miners": {
+        "name": "Mineradores",
+        "hint": "Contagem recente de mineradores conectados informada para esta pool nesta rede"
+      },
+      "Hashrate": {
+        "name": "Hashrate estimado",
+        "hint": "Hashrate estimado a partir da participação de blocos da pool"
+      },
       "Fee": { "name": "Taxa", "hint": "Taxa da pool conforme declarada pela pool" },
       "Height": { "name": "Altura", "hint": "Altura do bloco" },
       "Block Hash": { "name": "Hash do Bloco", "hint": "Hash do bloco" },

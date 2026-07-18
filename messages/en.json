@@ -1922,7 +1922,30 @@
     },
     "Transactions": {
       "title": "Blockchain Account Transaction History",
-      "description": "The complete transaction log is here. I’ve detailed every transaction this address signed or took part in, with filters to help you navigate. It’s your transparent record of blockchain activity. Need to dig deeper? Use our Transaction Explorer for advanced insights!"
+      "description": "The complete transaction log is here. I’ve detailed every transaction this address signed or took part in, with filters to help you navigate. It’s your transparent record of blockchain activity. Need to dig deeper? Use our Transaction Explorer for advanced insights!",
+      "customize": "Customize",
+      "msgTypeLabel": "Message type",
+      "messageTypes": {
+        "send": "Send",
+        "delegate": "Delegate",
+        "undelegate": "Undelegate",
+        "redelegate": "Redelegate",
+        "withdrawRewards": "Withdraw rewards",
+        "vote": "Vote",
+        "ibcTransfer": "IBC transfer"
+      },
+      "dateFrom": "From date",
+      "dateTo": "To date",
+      "amountMin": "Minimum amount",
+      "amountMax": "Maximum amount",
+      "apply": "Apply",
+      "applying": "Applying…",
+      "applyBudgetHint": "Choose fewer message types: the API accepts up to five resolved type URLs.",
+      "resetFilters": "Reset filters",
+      "selectAll": "Select all",
+      "clearAll": "Clear all",
+      "amountColumn": "Amount",
+      "transfersTooltipCap": "Showing up to the first 5 indexed transfers"
     },
     "Governance": {
       "title": "Governance Participation: Votes and Network Impact",

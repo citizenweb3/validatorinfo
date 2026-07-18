@@ -23,7 +23,9 @@ export type TxFiltersInput = Readonly<{
   max: string | null;
 }>;
 
-export type TxFilterSearchParams = Record<string, string | string[] | undefined> | Pick<URLSearchParams, 'get' | 'getAll'>;
+export type TxFilterSearchParams =
+  | Record<string, string | string[] | undefined>
+  | Pick<URLSearchParams, 'get' | 'getAll'>;
 
 export type TxApiFilterParams = {
   msg_type?: string;
@@ -49,9 +51,8 @@ const makeTxFilters = (filters: Omit<TxFilters, 'msgTypes'> & { msgTypes: string
   return hasActiveTxFilters(normalized) ? normalized : EMPTY_TX_FILTERS;
 };
 
-const isUrlSearchParams = (
-  params: TxFilterSearchParams,
-): params is Pick<URLSearchParams, 'get' | 'getAll'> => 'getAll' in params && typeof params.getAll === 'function';
+const isUrlSearchParams = (params: TxFilterSearchParams): params is Pick<URLSearchParams, 'get' | 'getAll'> =>
+  'getAll' in params && typeof params.getAll === 'function';
 
 const getRepeatedParam = (params: TxFilterSearchParams, key: string): string[] => {
   if (isUrlSearchParams(params)) return params.getAll(key);
@@ -90,6 +91,16 @@ const compareUnsignedIntegers = (left: string, right: string): number => {
   if (left.length !== right.length) return left.length - right.length;
   return left.localeCompare(right);
 };
+
+export const formatLocalDateOnly = (date: Date): string => {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
+export const isTxAmountRangeValid = (minAmount: string | null, maxAmount: string | null): boolean =>
+  !minAmount || !maxAmount || compareUnsignedIntegers(minAmount, maxAmount) <= 0;
 
 export const parseTxFiltersFromSearchParams = (params: TxFilterSearchParams, chainName: string): TxFilters => {
   const allowedMessageTypes = getAllowedTxMessageTypes(chainName);

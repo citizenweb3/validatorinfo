@@ -1,4 +1,4 @@
-import { toTxByAddressChain, type TxByAddressChain } from '@/utils/tx-supported-chains';
+import { type TxByAddressChain, toTxByAddressChain } from '@/utils/tx-supported-chains';
 
 export const TX_MESSAGE_FILTER_IDS = [
   'send',
@@ -11,6 +11,10 @@ export const TX_MESSAGE_FILTER_IDS = [
 ] as const;
 
 export type TxMessageFilterId = (typeof TX_MESSAGE_FILTER_IDS)[number];
+
+const TX_MESSAGE_FILTER_ID_SET = new Set<string>(TX_MESSAGE_FILTER_IDS);
+
+export const isTxMessageFilterId = (value: string): value is TxMessageFilterId => TX_MESSAGE_FILTER_ID_SET.has(value);
 
 export type TxMessageFilterOption = {
   id: TxMessageFilterId;
@@ -26,10 +30,7 @@ const SHARED_MESSAGE_TYPES = {
   ibcTransfer: ['/ibc.applications.transfer.v1.MsgTransfer'],
 } as const;
 
-const MESSAGE_TYPES_BY_CHAIN: Record<
-  TxByAddressChain,
-  Record<TxMessageFilterId, readonly string[]>
-> = {
+const MESSAGE_TYPES_BY_CHAIN: Record<TxByAddressChain, Record<TxMessageFilterId, readonly string[]>> = {
   cosmoshub: {
     ...SHARED_MESSAGE_TYPES,
     vote: ['/cosmos.gov.v1.MsgVote'],

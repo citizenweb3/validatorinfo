@@ -1,23 +1,18 @@
 import db from '@/db';
+import { refreshChainTxMetrics } from '@/server/jobs/update-tx-metrics';
 import atomoneIndexer from '@/services/atomone-indexer-api';
 import { AtomoneTxDetail } from '@/services/atomone-indexer-api';
 import aztecIndexer from '@/services/aztec-indexer-api';
+import { getChainLcdContext } from '@/services/chain-service';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
 import { CosmosTxByAddressSummary, CosmosTxDetail, CosmosTxSummary } from '@/services/cosmos-indexer-api';
-import { getChainLcdContext } from '@/services/chain-service';
 import logosIndexer from '@/services/logos-indexer-api';
 import { LogosTxDetail } from '@/services/logos-indexer-api';
 import midenIndexer from '@/services/miden-indexer-api';
 import { MidenTxDetail } from '@/services/miden-indexer-api';
-import { refreshChainTxMetrics } from '@/server/jobs/update-tx-metrics';
+import { CACHE_KEYS, CACHE_TTL, cacheGetOrFetch } from '@/services/redis-cache';
 import { getAztecTimestampMs } from '@/utils/aztec';
-import { cacheGetOrFetch, CACHE_KEYS, CACHE_TTL } from '@/services/redis-cache';
-import {
-  canonicalTxFilterKey,
-  hasAmountTxFilters,
-  txFiltersToApiParams,
-  type TxFilters,
-} from '@/utils/tx-filters';
+import { type TxFilters, canonicalTxFilterKey, hasAmountTxFilters, txFiltersToApiParams } from '@/utils/tx-filters';
 
 export type TxStatus = 'pending' | 'confirmed' | 'dropped';
 
@@ -42,6 +37,12 @@ export interface TxTransferItem {
   toAddr: string;
   denom: string;
   amount: string;
+}
+
+export interface TxAmountContext {
+  coinDecimals: number;
+  denom: string;
+  minimalDenom: string;
 }
 
 export interface TxByAddressItem extends TxItem {
@@ -165,11 +166,7 @@ const getAztecConfirmedTxs = async (currentPage: number, perPage: number): Promi
   }
 };
 
-const getAztecTxs = async (
-  currentPage: number,
-  perPage: number,
-  showPending = false,
-): Promise<TxsResponse> => {
+const getAztecTxs = async (currentPage: number, perPage: number, showPending = false): Promise<TxsResponse> => {
   return showPending ? getAztecPendingTxs(currentPage, perPage) : getAztecConfirmedTxs(currentPage, perPage);
 };
 
@@ -231,9 +228,7 @@ const getLogosTxs = async (currentPage: number, perPage: number): Promise<TxsRes
       logosIndexer.getStats(TX_LIST_CACHE),
     ]);
 
-    const totalFromStats = stats?.total_transactions
-      ? Math.max(1, Math.ceil(stats.total_transactions / perPage))
-      : 0;
+    const totalFromStats = stats?.total_transactions ? Math.max(1, Math.ceil(stats.total_transactions / perPage)) : 0;
     const totalFromHasMore = pagination.has_more ? currentPage + 1 : currentPage;
     const totalPages = Math.max(1, totalFromStats, totalFromHasMore);
 
@@ -255,9 +250,7 @@ const getLogosTxs = async (currentPage: number, perPage: number): Promise<TxsRes
   }
 };
 
-const getLogosTxByHash = async (
-  id: string,
-): Promise<{ status: TxStatus; data: LogosTxDetail } | null> => {
+const getLogosTxByHash = async (id: string): Promise<{ status: TxStatus; data: LogosTxDetail } | null> => {
   const tx = await logosIndexer.getTransaction(id, { cache: 'no-store' }).catch(() => null);
   if (!tx) {
     return null;
@@ -306,8 +299,7 @@ const projectTxMetricsRow = (row: {
 const readTxMetrics = async (chainId: number, chainName: string): Promise<TxMetrics> => {
   let cached = await db.chainTxMetrics.findUnique({ where: { chainId } });
 
-  const isStale =
-    !cached || Date.now() - cached.updatedAt.getTime() > TX_METRICS_TTL_MS;
+  const isStale = !cached || Date.now() - cached.updatedAt.getTime() > TX_METRICS_TTL_MS;
 
   if (isStale) {
     try {
@@ -321,8 +313,7 @@ const readTxMetrics = async (chainId: number, chainName: string): Promise<TxMetr
   return cached ? projectTxMetricsRow(cached) : EMPTY_TX_METRICS;
 };
 
-const getLogosTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
-  readTxMetrics(chainId, chainName);
+const getLogosTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> => readTxMetrics(chainId, chainName);
 
 /**
  * Miden: list transactions sorted by block_num desc. Total page count comes from
@@ -332,15 +323,11 @@ const getMidenTxs = async (currentPage: number, perPage: number): Promise<TxsRes
   try {
     const offset = (currentPage - 1) * perPage;
     const [{ data, total }, stats] = await Promise.all([
-      midenIndexer.getTransactions(
-        { limit: perPage, offset, sort: 'block_num', order: 'desc' },
-        TX_LIST_CACHE,
-      ),
+      midenIndexer.getTransactions({ limit: perPage, offset, sort: 'block_num', order: 'desc' }, TX_LIST_CACHE),
       midenIndexer.getStats(TX_LIST_CACHE),
     ]);
 
-    const isValidCount = (n: unknown): n is number =>
-      typeof n === 'number' && Number.isFinite(n) && n >= 0;
+    const isValidCount = (n: unknown): n is number => typeof n === 'number' && Number.isFinite(n) && n >= 0;
     const totalCount = isValidCount(total)
       ? total
       : isValidCount(stats?.total_transactions)
@@ -368,9 +355,7 @@ const getMidenTxs = async (currentPage: number, perPage: number): Promise<TxsRes
   }
 };
 
-const getMidenTxByHash = async (
-  txId: string,
-): Promise<{ status: TxStatus; data: MidenTxDetail } | null> => {
+const getMidenTxByHash = async (txId: string): Promise<{ status: TxStatus; data: MidenTxDetail } | null> => {
   let tx;
   try {
     tx = await midenIndexer.getTransaction(txId, { cache: 'no-store' });
@@ -387,8 +372,7 @@ const getMidenTxByHash = async (
 
 // Miden v1 indexer does not surface per-tx fees; avgFee stays null in the row.
 // Uses the shared stale-TTL refresh (1h + in-flight dedup), same as the other chains.
-const getMidenTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
-  readTxMetrics(chainId, chainName);
+const getMidenTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> => readTxMetrics(chainId, chainName);
 
 export interface Cursor {
   before_height: string;
@@ -511,9 +495,10 @@ const fetchTxsByAddressBatch = async (
 
   // Remap the indexer cursor ({next_before_*}) to the request/URL shape ({before_*}).
   // null-guard: never restart from head if the API returns has_more with a null cursor.
-  const nextCursor: Cursor | null = page.has_more && page.cursor
-    ? { before_height: page.cursor.next_before_height, before_index: page.cursor.next_before_index }
-    : null;
+  const nextCursor: Cursor | null =
+    page.has_more && page.cursor
+      ? { before_height: page.cursor.next_before_height, before_index: page.cursor.next_before_index }
+      : null;
   const hasMore = nextCursor !== null;
 
   return { rows: page.data.map(toCosmosTxByAddressItem), nextCursor, hasMore };
@@ -586,9 +571,7 @@ const getTxsByAddressBatch = (
   return Promise.resolve(EMPTY_BY_ADDRESS_BATCH);
 };
 
-const getCosmosTxByHash = async (
-  hash: string,
-): Promise<{ status: TxStatus; data: CosmosTxDetail } | null> => {
+const getCosmosTxByHash = async (hash: string): Promise<{ status: TxStatus; data: CosmosTxDetail } | null> => {
   const tx = await cosmosIndexer.getTxByHash(hash, { cache: 'no-store' }).catch(() => null);
 
   if (!tx) {
@@ -651,9 +634,7 @@ const getAtomoneTxs = async (currentPage: number, perPage: number): Promise<TxsR
   }
 };
 
-const getAtomoneTxByHash = async (
-  hash: string,
-): Promise<{ status: TxStatus; data: AtomoneTxDetail } | null> => {
+const getAtomoneTxByHash = async (hash: string): Promise<{ status: TxStatus; data: AtomoneTxDetail } | null> => {
   const tx = await atomoneIndexer.getTxByHash(hash, { cache: 'no-store' }).catch(() => null);
 
   if (!tx) {
@@ -703,8 +684,7 @@ const getTxsByChainName = async (
   return { txs: [], totalPages: 1 };
 };
 
-const getAztecTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> =>
-  readTxMetrics(chainId, chainName);
+const getAztecTxMetrics = (chainId: number, chainName: string): Promise<TxMetrics> => readTxMetrics(chainId, chainName);
 
 const TxService = {
   getTxsByChainName,

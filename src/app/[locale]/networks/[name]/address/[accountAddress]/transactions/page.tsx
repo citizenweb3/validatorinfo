@@ -1,10 +1,13 @@
-import { Locale, NextPageWithLocale } from '@/i18n';
 import { getTranslations } from 'next-intl/server';
-import SubDescription from '@/components/sub-description';
+
+import AccountTransactions from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/account-transactions';
 import PageTitle from '@/components/common/page-title';
-import AccountTransactions
-  from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/account-transactions';
+import SubDescription from '@/components/sub-description';
+import { Locale, NextPageWithLocale } from '@/i18n';
+import { getChainLcdContext } from '@/services/chain-service';
+import type { TxAmountContext } from '@/services/tx-service';
 import { canonicalTxFilterKey, parseTxFiltersFromSearchParams } from '@/utils/tx-filters';
+import { isTxByAddressChainSupported } from '@/utils/tx-supported-chains';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -22,12 +25,21 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
-  {
-    params: { locale, name, accountAddress },
-    searchParams: q,
-  }) => {
-  const t = await getTranslations({ locale, namespace: 'AccountPage.Transactions' });
+const AccountTransactionsPage: NextPageWithLocale<PageProps> = async ({
+  params: { locale, name, accountAddress },
+  searchParams: q,
+}) => {
+  const [t, chainContext] = await Promise.all([
+    getTranslations({ locale, namespace: 'AccountPage.Transactions' }),
+    isTxByAddressChainSupported(name) ? getChainLcdContext(name) : Promise.resolve(null),
+  ]);
+  const amountContext: TxAmountContext | null = chainContext
+    ? {
+        coinDecimals: chainContext.coinDecimals,
+        denom: chainContext.denom,
+        minimalDenom: chainContext.minimalDenom,
+      }
+    : null;
 
   // Cursor-in-URL pagination: ?c=<cursor token>&w=<window>. Cold load lands exactly on that window.
   const cursorToken = typeof q.c === 'string' ? q.c : undefined;
@@ -39,13 +51,16 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
     <div className="mb-14">
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <AccountTransactions chainName={name}
-                           page={'TxSummaryPage'}
-                           accountAddress={accountAddress}
-                           cursorToken={cursorToken}
-                           windowIndex={Number.isFinite(windowIndex) ? windowIndex : 0}
-                           filters={filters}
-                           filterKey={filterKey} />
+      <AccountTransactions
+        chainName={name}
+        page={'TxSummaryPage'}
+        accountAddress={accountAddress}
+        cursorToken={cursorToken}
+        windowIndex={Number.isFinite(windowIndex) ? windowIndex : 0}
+        filters={filters}
+        filterKey={filterKey}
+        amountContext={amountContext}
+      />
     </div>
   );
 };

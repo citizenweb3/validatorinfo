@@ -13,9 +13,19 @@ interface OwnProps {
     title: string;
   }[];
   maxSelectionLimit?: number; // Optional max selection limit
+  selectAllLabel?: string;
+  clearAllLabel?: string;
 }
 
-const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged, maxSelectionLimit = Infinity }) => {
+const Dropdown: FC<OwnProps> = ({
+  filterValues,
+  title,
+  selectedValue,
+  onChanged,
+  maxSelectionLimit = Infinity,
+  selectAllLabel = 'Select All',
+  clearAllLabel = 'Clear All',
+}) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const ref = useRef(null);
   useOnClickOutside(ref, () => setIsOpened(false));
@@ -23,7 +33,7 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
   const handleToggle = (value: string) => {
     if (selectedValue.includes(value)) {
       // Remove the ecosystem if it's already selected
-      onChanged(selectedValue.filter(item => item !== value));
+      onChanged(selectedValue.filter((item) => item !== value));
     } else {
       // Only allow adding if below max selection limit
       if (selectedValue.length < maxSelectionLimit) {
@@ -33,7 +43,7 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
   };
 
   const handleSelectAll = () => {
-    const allValues = filterValues.map(item => item.value);
+    const allValues = filterValues.map((item) => item.value);
     onChanged(allValues.slice(0, maxSelectionLimit)); // Limit to maxSelectionLimit
   };
 
@@ -65,7 +75,7 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
                 contentClassName="max-h-7 w-40 min-w-40"
                 activeType="switcher"
               >
-                Select All
+                {selectAllLabel}
               </Button>
               <Button
                 onClick={handleClearAll}
@@ -73,7 +83,7 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
                 contentClassName="max-h-7 w-40 min-w-40"
                 activeType="switcher"
               >
-                Clear All
+                {clearAllLabel}
               </Button>
             </>
           )}

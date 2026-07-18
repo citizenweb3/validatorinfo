@@ -1,16 +1,18 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
+import { buildTxByAddressCacheKey } from '@/utils/tx-cache-key';
 import {
   EMPTY_TX_FILTERS,
   canonicalTxFilterKey,
   displayAmountToBaseUnits,
+  formatLocalDateOnly,
+  isTxAmountRangeValid,
   parseCanonicalTxFiltersInput,
   parseTxFiltersFromSearchParams,
   txFiltersToApiParams,
   txFiltersToInput,
 } from '@/utils/tx-filters';
-import { buildTxByAddressCacheKey } from '@/utils/tx-cache-key';
 import { resolveTxMessageTypes } from '@/utils/tx-message-types';
 
 test('transaction filters parse, normalize, and serialize deterministically', () => {
@@ -57,6 +59,9 @@ test('display amounts convert exactly to bounded base-unit integers', () => {
   assert.equal(displayAmountToBaseUnits('0.0000001', 6), null);
   assert.equal(displayAmountToBaseUnits('-1', 6), null);
   assert.equal(displayAmountToBaseUnits('1e6', 6), null);
+  assert.equal(isTxAmountRangeValid('10', '10'), true);
+  assert.equal(isTxAmountRangeValid('11', '10'), false);
+  assert.equal(formatLocalDateOnly(new Date(2026, 6, 18, 23, 30)), '2026-07-18');
 });
 
 test('API mapping couples amount bounds to the trusted minimal denom', () => {
