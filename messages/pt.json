@@ -1960,9 +1960,6 @@
       "participation-voted": "Votou",
       "participation-not-voted": "Não votou",
       "votes-load-error": "Não foi possível carregar o histórico de votação.",
-      "retry": "Tentar novamente",
-      "load-more": "Carregar mais",
-      "loading-votes": "A carregar…",
       "mock-data-caption": "São apresentados dados de pré-visualização porque a indexação de governança por conta ainda não está disponível nesta rede.",
       "vote-options": {
         "yes": "Sim",
@@ -1970,7 +1967,8 @@
         "abstain": "Abstenção",
         "veto": "Não com veto",
         "unspecified": "Não especificado"
-      }
+      },
+      "votes-truncated-caption": "Mostrando os 500 votos mais recentes."
     },
     "Analytics": {
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",

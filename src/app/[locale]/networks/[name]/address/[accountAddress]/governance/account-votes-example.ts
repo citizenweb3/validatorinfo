@@ -37,8 +37,7 @@ export const accountVotesExample: AccountVotingHistoryReady = {
       impactUnavailableReason: 'voting-in-progress',
     },
   ],
-  hasMore: false,
-  nextBeforeProposalId: null,
+  truncated: false,
   totalVotes: '3',
   totalClosedProposals: 24,
 };

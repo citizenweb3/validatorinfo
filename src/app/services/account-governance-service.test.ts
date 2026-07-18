@@ -180,14 +180,14 @@ test('account governance service batches enrichment, deduplicates in-flight load
   assert.equal(proposalCalls, 1);
   assert.equal(countCalls, 1);
   assert.equal(stakeCalls, 1);
-  assert.deepEqual(cacheKeys, ['acct:govvotes:cosmoshub:cosmos1address:head']);
+  assert.deepEqual(cacheKeys, ['acct:govvotes:cosmoshub:cosmos1address:all']);
 
   shouldFail = true;
-  assert.deepEqual(await getAccountVotingHistory('cosmoshub', 'COSMOS1FAIL', '6'), { status: 'error' });
-  assert.deepEqual(await getAccountVotingHistory('cosmoshub', 'COSMOS1FAIL', '6'), { status: 'error' });
+  assert.deepEqual(await getAccountVotingHistory('cosmoshub', 'COSMOS1FAIL'), { status: 'error' });
+  assert.deepEqual(await getAccountVotingHistory('cosmoshub', 'COSMOS1FAIL'), { status: 'error' });
   assert.equal(indexerCalls, 3);
   assert.deepEqual(cacheKeys.slice(-2), [
-    'acct:govvotes:cosmoshub:cosmos1fail:6',
-    'acct:govvotes:cosmoshub:cosmos1fail:6',
+    'acct:govvotes:cosmoshub:cosmos1fail:all',
+    'acct:govvotes:cosmoshub:cosmos1fail:all',
   ]);
 });

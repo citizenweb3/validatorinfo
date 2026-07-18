@@ -12,12 +12,13 @@ import {
   parseFinalTally,
 } from '@/utils/account-governance';
 import { normalizeBech32Address } from '@/utils/bech32-address';
-import { normalizeUnsignedInteger } from '@/utils/decimal-string';
 import { isGovVotesChainSupported } from '@/utils/governance-supported-chains';
 
 const { logError, logWarn } = logger('account-governance-service');
 
-export const ACCOUNT_GOVERNANCE_PAGE_SIZE = 50;
+// The indexer API caps a page at 100 final votes; five pages cover any realistic account.
+const DRAIN_PAGE_LIMIT = 100;
+const MAX_DRAIN_PAGES = 5;
 
 export type AccountVoteImpactUnavailableReason =
   | 'proposal-unavailable'
@@ -40,38 +41,39 @@ export type AccountVoteRow = {
 export type AccountVotingHistoryReady = {
   status: 'ready';
   rows: AccountVoteRow[];
-  hasMore: boolean;
-  nextBeforeProposalId: string | null;
   totalVotes: string;
   totalClosedProposals: number;
+  truncated: boolean;
 };
 
 export type AccountVotingHistoryResult = AccountVotingHistoryReady | { status: 'unsupported' } | { status: 'error' };
-
-export type AccountVotingHistoryActionResult =
-  | { ok: true; batch: AccountVotingHistoryReady }
-  | { ok: false; code: 'INVALID_REQUEST' | 'SERVICE_ERROR' };
 
 const loadVotingHistory = async (
   chainName: string,
   address: string,
   chainId: number,
   minimalDenom: string,
-  beforeProposalId?: string,
 ): Promise<AccountVotingHistoryReady> => {
   const client = getAccountIndexerFactsClient(chainName);
   if (!client) throw new Error(`account indexer client is unavailable for ${chainName}`);
 
-  const page = await client.getGovVotes(
-    {
-      voter: address,
-      limit: ACCOUNT_GOVERNANCE_PAGE_SIZE,
-      before_proposal_id: beforeProposalId,
-    },
-    { cache: 'no-store', timeout: 30_000 },
-  );
-  const proposalIds = Array.from(new Set(page.data.map((vote) => vote.proposal_id)));
-  const heights = Array.from(new Set(page.data.map((vote) => vote.height))).slice(0, ACCOUNT_GOVERNANCE_PAGE_SIZE);
+  const votes: Awaited<ReturnType<typeof client.getGovVotes>>['data'] = [];
+  let totalVotes = '0';
+  let truncated = false;
+  let beforeProposalId: string | undefined;
+  for (let drained = 0; drained < MAX_DRAIN_PAGES; drained++) {
+    const page = await client.getGovVotes(
+      { voter: address, limit: DRAIN_PAGE_LIMIT, before_proposal_id: beforeProposalId },
+      { cache: 'no-store', timeout: 30_000 },
+    );
+    votes.push(...page.data);
+    totalVotes = page.total;
+    if (!page.has_more || !page.cursor) break;
+    beforeProposalId = page.cursor.next_before_proposal_id;
+    if (drained === MAX_DRAIN_PAGES - 1) truncated = true;
+  }
+  const proposalIds = Array.from(new Set(votes.map((vote) => vote.proposal_id)));
+  const heights = Array.from(new Set(votes.map((vote) => vote.height)));
 
   const [proposals, totalClosedProposals, delegatedStake] = await Promise.all([
     proposalIds.length
@@ -94,7 +96,7 @@ const loadVotingHistory = async (
   const proposalsById = new Map(proposals.map((proposal) => [proposal.proposalId, proposal]));
   const stakeByHeight = new Map(delegatedStake?.values.map((point) => [point.height, point.amounts]));
 
-  const rows = page.data.map<AccountVoteRow>((vote) => {
+  const rows = votes.map<AccountVoteRow>((vote) => {
     const proposal = proposalsById.get(vote.proposal_id);
     if (!proposal) {
       return {
@@ -176,14 +178,12 @@ const loadVotingHistory = async (
     };
   });
 
-  const hasMore = page.has_more && page.cursor !== null;
   return {
     status: 'ready',
     rows,
-    hasMore,
-    nextBeforeProposalId: hasMore ? page.cursor?.next_before_proposal_id ?? null : null,
-    totalVotes: page.total,
+    totalVotes,
     totalClosedProposals,
+    truncated,
   };
 };
 
@@ -194,15 +194,14 @@ const getCachedVotingHistory = (
   address: string,
   chainId: number,
   minimalDenom: string,
-  beforeProposalId?: string,
 ): Promise<AccountVotingHistoryReady | null> => {
-  const key = CACHE_KEYS.account.govVotes(chainName, address, beforeProposalId ?? 'head');
+  const key = CACHE_KEYS.account.govVotes(chainName, address, 'all');
   const existing = votingHistoryInflight.get(key);
   if (existing) return existing;
 
   const promise = cacheGetOrFetch<AccountVotingHistoryReady>(
     key,
-    () => loadVotingHistory(chainName, address, chainId, minimalDenom, beforeProposalId),
+    () => loadVotingHistory(chainName, address, chainId, minimalDenom),
     CACHE_TTL.MEDIUM,
   ).finally(() => votingHistoryInflight.delete(key));
 
@@ -213,7 +212,6 @@ const getCachedVotingHistory = (
 export const getAccountVotingHistory = async (
   chainName: string,
   address: string,
-  beforeProposalId?: string,
 ): Promise<AccountVotingHistoryResult> => {
   const normalizedChainName = chainName.toLowerCase();
   if (!isGovVotesChainSupported(normalizedChainName)) return { status: 'unsupported' };
@@ -225,14 +223,7 @@ export const getAccountVotingHistory = async (
     const normalizedAddress = normalizeBech32Address(address, context.bech32Prefix);
     if (!normalizedAddress) return { status: 'unsupported' };
 
-    const normalizedCursor = beforeProposalId ? normalizeUnsignedInteger(beforeProposalId) : undefined;
-    const ready = await getCachedVotingHistory(
-      normalizedChainName,
-      normalizedAddress,
-      context.id,
-      context.minimalDenom,
-      normalizedCursor,
-    );
+    const ready = await getCachedVotingHistory(normalizedChainName, normalizedAddress, context.id, context.minimalDenom);
     return ready ?? { status: 'error' };
   } catch (error) {
     logError(
