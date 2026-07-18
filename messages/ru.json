@@ -1930,7 +1930,7 @@
         "delegate": "Делегирование",
         "undelegate": "Отмена делегирования",
         "redelegate": "Ределегирование",
-        "withdrawRewards": "Получение наград",
+        "withdrawRewards": "Награды",
         "vote": "Голосование",
         "ibcTransfer": "IBC-перевод"
       },

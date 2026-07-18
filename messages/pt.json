@@ -1930,7 +1930,7 @@
         "delegate": "Delegar",
         "undelegate": "Cancelar delegação",
         "redelegate": "Redelegar",
-        "withdrawRewards": "Levantar recompensas",
+        "withdrawRewards": "Recompensas",
         "vote": "Votar",
         "ibcTransfer": "Transferência IBC"
       },

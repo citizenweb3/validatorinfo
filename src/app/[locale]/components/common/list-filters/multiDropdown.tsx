@@ -65,22 +65,22 @@ const Dropdown: FC<OwnProps> = ({
       </Button>
 
       {isOpened && (
-        <div className="absolute top-8 z-40 flex-col">
+        <div className="absolute top-8 z-40 flex w-max min-w-40 flex-col">
           {/* Select All and Clear All Buttons */}
           {maxSelectionLimit < Infinity && (
             <>
               <Button
                 onClick={handleSelectAll}
-                className="text-base"
-                contentClassName="max-h-7 w-40 min-w-40"
+                className="w-full text-base"
+                contentClassName="max-h-7 w-full min-w-40 whitespace-nowrap px-3"
                 activeType="switcher"
               >
                 {selectAllLabel}
               </Button>
               <Button
                 onClick={handleClearAll}
-                className="text-base"
-                contentClassName="max-h-7 w-40 min-w-40"
+                className="w-full text-base"
+                contentClassName="max-h-7 w-full min-w-40 whitespace-nowrap px-3"
                 activeType="switcher"
               >
                 {clearAllLabel}
@@ -95,11 +95,11 @@ const Dropdown: FC<OwnProps> = ({
               component="button"
               onClick={() => handleToggle(item.value)}
               isActive={selectedValue.includes(item.value)}
-              className="text-base"
-              contentClassName="max-h-7 w-40 min-w-40"
+              className="w-full text-base"
+              contentClassName="max-h-7 w-full min-w-40 whitespace-nowrap px-3"
               activeType="switcher"
             >
-              <div className="z-20 -my-1 flex flex-row items-center justify-center text-base font-medium">
+              <div className="z-20 -my-1 flex flex-row items-center justify-center whitespace-nowrap text-base font-medium">
                 {item.title}
               </div>
             </Button>

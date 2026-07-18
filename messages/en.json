@@ -1929,7 +1929,7 @@
         "delegate": "Delegate",
         "undelegate": "Undelegate",
         "redelegate": "Redelegate",
-        "withdrawRewards": "Withdraw rewards",
+        "withdrawRewards": "Rewards",
         "vote": "Vote",
         "ibcTransfer": "IBC transfer"
       },
