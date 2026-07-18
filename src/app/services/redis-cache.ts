@@ -129,6 +129,7 @@ export const CACHE_KEYS = {
   account: {
     firstSeen: (chainName: string, address: string) => `acct:firstseen:${chainName}:${address}`,
     delegatedStake: (chainName: string, address: string) => `acct:delstake:${chainName}:${address}`,
+    govVotes: (chainName: string, address: string, cursor: string) => `acct:govvotes:${chainName}:${address}:${cursor}`,
     viewed: accountViewedKey,
   },
   ai: {

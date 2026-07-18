@@ -2,6 +2,7 @@ import 'server-only';
 
 import atomoneIndexer from '@/services/atomone-indexer-api';
 import cosmosIndexer from '@/services/cosmos-indexer-api';
+import type { AccountGovVotesPage } from '@/utils/account-governance';
 import type {
   AccountCoverage,
   AccountEarliestActivity,
@@ -32,6 +33,14 @@ export type AccountIndexerFactsClient = {
     },
     options?: AccountIndexerRequestOptions,
   ) => Promise<AccountStakingDeltasPage>;
+  getGovVotes: (
+    params: {
+      voter: string;
+      limit?: number;
+      before_proposal_id?: string;
+    },
+    options?: AccountIndexerRequestOptions,
+  ) => Promise<AccountGovVotesPage>;
 };
 
 const ACCOUNT_INDEXER_CLIENTS: Record<string, AccountIndexerFactsClient> = {
