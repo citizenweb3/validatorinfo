@@ -1713,7 +1713,6 @@
     "verification base fee": "Taxa Base de Verificação",
     "note count": "Contagem de Notas",
     "nullifier count": "Contagem de Anuladores",
-    "version": "Versão",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"
@@ -1937,16 +1936,14 @@
       },
       "dateFrom": "Data inicial",
       "dateTo": "Data final",
-      "amountMin": "Montante mínimo",
-      "amountMax": "Montante máximo",
+      "amountMin": "Valor mín.",
+      "amountMax": "Valor máx.",
       "apply": "Aplicar",
       "applying": "A aplicar…",
       "applyBudgetHint": "Escolha menos tipos de mensagem: a API aceita até cinco URLs de tipo resolvidos.",
       "resetFilters": "Limpar filtros",
       "selectAll": "Selecionar tudo",
-      "clearAll": "Limpar tudo",
-      "amountColumn": "Montante",
-      "transfersTooltipCap": "A mostrar até às primeiras 5 transferências indexadas"
+      "clearAll": "Limpar tudo"
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",
@@ -1966,15 +1963,6 @@
       "impact-voting-in-progress": "O impacto é calculado apenas depois de a votação terminar e o resultado final ser fechado.",
       "impact-tally-unavailable": "O resultado final da proposta está indisponível ou não pode ser verificado.",
       "impact-stake-unavailable": "Não foi possível reconstruir com segurança o stake delegado nesta altura.",
-      "vote-options-chart-title": "Distribuição das Opções de Voto",
-      "participation-chart-title": "Participação em Propostas Encerradas",
-      "votes-dataset-label": "Votos",
-      "closed-proposals-dataset-label": "Propostas encerradas",
-      "vote-options-chart-aria": "Distribuição dos votos carregados por opção",
-      "participation-chart-aria": "Participação carregada da conta entre propostas encerradas",
-      "loaded-votes-caption": "Distribuição dos votos carregados. Carregue todas as páginas para ver o total completo.",
-      "participation-caption": "Votou em {voted} de {total} propostas encerradas.",
-      "participation-loaded-caption": "Pelo menos {voted} de {total} propostas encerradas constam nos votos carregados.",
       "participation-voted": "Votou",
       "participation-not-voted": "Não votou",
       "votes-load-error": "Não foi possível carregar o histórico de votação.",
@@ -2043,9 +2031,18 @@
     "title": "Pools de Mineração",
     "description": "Diretório multi-chain de pools de mineração. Cada pool é identificada a partir da atribuição on-chain de blocos; o desempenho por rede fica nas páginas de estatísticas da rede.",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "" },
-      "Links": { "name": "Links", "hint": "" },
-      "Networks": { "name": "Redes", "hint": "" }
+      "Pool": {
+        "name": "Pool",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Networks": {
+        "name": "Redes",
+        "hint": ""
+      }
     }
   },
   "MiningPoolDetail": {
@@ -2081,9 +2078,18 @@
     "story": "{name} é uma pool de mineração verificada na rede {chain}. As estatísticas abaixo derivam da atribuição on-chain de blocos.",
     "p2poolMiners": "O P2Pool informa participantes da sidechain, não workers Stratum.",
     "Table": {
-      "Network": { "name": "Rede", "hint": "Rede em que a pool minera" },
-      "Blocks": { "name": "Blocos encontrados", "hint": "Blocos atribuídos a esta pool na janela selecionada" },
-      "Share": { "name": "Dominância", "hint": "Participação nos blocos da rede encontrados na janela selecionada" },
+      "Network": {
+        "name": "Rede",
+        "hint": "Rede em que a pool minera"
+      },
+      "Blocks": {
+        "name": "Blocos encontrados",
+        "hint": "Blocos atribuídos a esta pool na janela selecionada"
+      },
+      "Share": {
+        "name": "Dominância",
+        "hint": "Participação nos blocos da rede encontrados na janela selecionada"
+      },
       "Miners": {
         "name": "Mineradores",
         "hint": "Contagem recente de mineradores conectados informada para esta pool nesta rede"
@@ -2092,10 +2098,22 @@
         "name": "Hashrate estimado",
         "hint": "Hashrate estimado a partir da participação de blocos da pool"
       },
-      "Fee": { "name": "Taxa", "hint": "Taxa da pool conforme declarada pela pool" },
-      "Height": { "name": "Altura", "hint": "Altura do bloco" },
-      "Block Hash": { "name": "Hash do Bloco", "hint": "Hash do bloco" },
-      "Timestamp": { "name": "Timestamp", "hint": "Carimbo de data/hora do bloco" }
+      "Fee": {
+        "name": "Taxa",
+        "hint": "Taxa da pool conforme declarada pela pool"
+      },
+      "Height": {
+        "name": "Altura",
+        "hint": "Altura do bloco"
+      },
+      "Block Hash": {
+        "name": "Hash do Bloco",
+        "hint": "Hash do bloco"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Carimbo de data/hora do bloco"
+      }
     }
   },
   "MiningPoolsBadges": {
@@ -2115,11 +2133,26 @@
     "window30d": "30d",
     "windowAll": "Todo o tempo",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "Pool de mineração identificada pela atribuição on-chain de blocos" },
-      "Blocks": { "name": "Blocos", "hint": "Blocos atribuídos a esta pool na janela selecionada" },
-      "Share": { "name": "Dominância", "hint": "Percentual de blocos da rede encontrados na janela selecionada" },
-      "Hashrate": { "name": "Hashrate", "hint": "Hashrate estimada a partir da participação de blocos da pool" },
-      "Fee": { "name": "Taxa", "hint": "Taxa da pool conforme declarada pela pool" }
+      "Pool": {
+        "name": "Pool",
+        "hint": "Pool de mineração identificada pela atribuição on-chain de blocos"
+      },
+      "Blocks": {
+        "name": "Blocos",
+        "hint": "Blocos atribuídos a esta pool na janela selecionada"
+      },
+      "Share": {
+        "name": "Dominância",
+        "hint": "Percentual de blocos da rede encontrados na janela selecionada"
+      },
+      "Hashrate": {
+        "name": "Hashrate",
+        "hint": "Hashrate estimada a partir da participação de blocos da pool"
+      },
+      "Fee": {
+        "name": "Taxa",
+        "hint": "Taxa da pool conforme declarada pela pool"
+      }
     }
   },
   "PowNetworkStats": {

@@ -39,21 +39,6 @@ export type FinalTally = {
   total: bigint;
 };
 
-export type GovernanceChartRow = {
-  proposalId: string;
-  option: AccountGovVoteOption;
-  isClosed: boolean;
-};
-
-export type GovernanceCharts = {
-  options: Record<'YES' | 'NO' | 'ABSTAIN' | 'VETO', number>;
-  participation: {
-    voted: number;
-    notVoted: number;
-    totalClosedProposals: number;
-  };
-};
-
 const parseTallyRecord = (value: unknown): Record<string, unknown> | null => {
   let parsed = value;
 
@@ -122,30 +107,3 @@ export const isWeightedGovernanceVote = (weight: string | null): boolean => {
 export const isClosedGovernanceProposalStatus = (status: string): status is ClosedGovernanceProposalStatus =>
   CLOSED_GOVERNANCE_PROPOSAL_STATUSES.some((closedStatus) => closedStatus === status);
 
-export const deriveGovernanceCharts = (
-  rows: readonly GovernanceChartRow[],
-  totalClosedProposals: number,
-): GovernanceCharts => {
-  const options: GovernanceCharts['options'] = { YES: 0, NO: 0, ABSTAIN: 0, VETO: 0 };
-  const seenProposals = new Set<string>();
-  const votedClosedProposals = new Set<string>();
-
-  for (const row of rows) {
-    if (seenProposals.has(row.proposalId)) continue;
-    seenProposals.add(row.proposalId);
-
-    if (row.option !== 'UNSPECIFIED') options[row.option] += 1;
-    if (row.isClosed) votedClosedProposals.add(row.proposalId);
-  }
-
-  const safeClosedTotal = Math.max(0, totalClosedProposals);
-  const voted = Math.min(votedClosedProposals.size, safeClosedTotal);
-  return {
-    options,
-    participation: {
-      voted,
-      notVoted: Math.max(0, safeClosedTotal - voted),
-      totalClosedProposals: safeClosedTotal,
-    },
-  };
-};

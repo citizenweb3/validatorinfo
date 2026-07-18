@@ -5,7 +5,7 @@ import { accountTxsExample } from '@/app/networks/[name]/address/[accountAddress
 import TablePagination from '@/components/common/table/table-pagination';
 import { decodeCursorToken } from '@/components/txs/tx-cursor-token';
 import TxListClient from '@/components/txs/tx-list-client';
-import TxService, { type TxAmountContext } from '@/services/tx-service';
+import TxService from '@/services/tx-service';
 import { type TxFilters, canonicalTxFilterKey } from '@/utils/tx-filters';
 import { isTxByAddressChainSupported } from '@/utils/tx-supported-chains';
 
@@ -17,7 +17,6 @@ interface OwnProps {
   cursorToken?: string;
   windowIndex: number;
   filters: TxFilters;
-  amountContext: TxAmountContext | null;
 }
 
 const AccountTransactionsList: FC<OwnProps> = async ({
@@ -26,7 +25,6 @@ const AccountTransactionsList: FC<OwnProps> = async ({
   cursorToken,
   windowIndex,
   filters,
-  amountContext,
 }) => {
   // CosmosHub and AtomOne carry REAL indexer data via cursor pagination. Other networks keep the
   // static mock placeholder (no per-address tx indexer yet) — same fallback the global /tx table uses.
@@ -45,7 +43,6 @@ const AccountTransactionsList: FC<OwnProps> = async ({
         initialWindow={clampedWindow}
         initial={initial}
         filters={filters}
-        amountContext={amountContext}
       />
     );
   }

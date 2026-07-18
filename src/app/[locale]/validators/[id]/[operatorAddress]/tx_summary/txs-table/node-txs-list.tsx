@@ -41,8 +41,7 @@ const NodeTxsList: FC<OwnProps> = async ({ chainName, accountAddress, operatorAd
           initialWindow={clampedWindow}
           initial={initial}
           filters={EMPTY_TX_FILTERS}
-          amountContext={null}
-        />
+          />
       );
     }
   }

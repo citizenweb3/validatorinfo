@@ -106,6 +106,7 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
   };
 
   const handleReset = () => {
+    if (isPending) return;
     setSelectedMessageTypes([]);
     setFromDate(null);
     setToDate(null);
@@ -134,116 +135,114 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
       </Button>
 
       {isOpened ? (
-        <div className="flex w-full flex-wrap items-end justify-end gap-3 rounded-sm border border-bgSt bg-table_row p-4">
-          <div className="flex flex-col gap-1">
-            <span className="font-sfpro text-sm text-white/60">{t('msgTypeLabel')}</span>
-            <Dropdown
-              filterValues={messageOptions}
-              title={t('msgTypeLabel')}
-              selectedValue={selectedMessageTypes}
-              onChanged={handleMessageTypesChanged}
-              maxSelectionLimit={5}
-              selectAllLabel={t('selectAll')}
-              clearAllLabel={t('clearAll')}
-            />
-          </div>
+        <div className="flex w-full flex-wrap items-center justify-end gap-3">
+          <Dropdown
+            filterValues={messageOptions}
+            title={t('msgTypeLabel')}
+            selectedValue={selectedMessageTypes}
+            onChanged={handleMessageTypesChanged}
+            maxSelectionLimit={5}
+            selectAllLabel={t('selectAll')}
+            clearAllLabel={t('clearAll')}
+          />
 
-          <label className="flex flex-col gap-1 font-sfpro text-sm text-white/60">
-            {t('dateFrom')}
-            <DatePicker
-              selected={fromDate}
-              onChange={(date: Date | null) => setFromDate(date)}
-              maxDate={fromMaxDate}
-              dateFormat="dd/MM/yyyy"
-              isClearable
-              placeholderText={t('dateFrom')}
-              aria-label={t('dateFrom')}
-              popperClassName="custom-popper"
-              className="h-8 w-36 border border-bgSt bg-background px-2 font-handjet text-base text-white outline-none focus:border-highlight"
-            />
-          </label>
+          <DatePicker
+            selected={fromDate}
+            onChange={(date: Date | null) => setFromDate(date)}
+            maxDate={fromMaxDate}
+            dateFormat="dd/MM/yyyy"
+            isClearable
+            placeholderText={t('dateFrom')}
+            aria-label={t('dateFrom')}
+            popperClassName="custom-popper"
+            className="h-8 w-36 border border-bgSt bg-background px-2 text-center font-sfpro text-base text-white outline-none focus:border-highlight"
+          />
 
-          <label className="flex flex-col gap-1 font-sfpro text-sm text-white/60">
-            {t('dateTo')}
-            <DatePicker
-              selected={toDate}
-              onChange={(date: Date | null) => setToDate(date)}
-              minDate={fromDate ?? undefined}
-              maxDate={today}
-              dateFormat="dd/MM/yyyy"
-              isClearable
-              placeholderText={t('dateTo')}
-              aria-label={t('dateTo')}
-              popperClassName="custom-popper"
-              className="h-8 w-36 border border-bgSt bg-background px-2 font-handjet text-base text-white outline-none focus:border-highlight"
-            />
-          </label>
+          <DatePicker
+            selected={toDate}
+            onChange={(date: Date | null) => setToDate(date)}
+            minDate={fromDate ?? undefined}
+            maxDate={today}
+            dateFormat="dd/MM/yyyy"
+            isClearable
+            placeholderText={t('dateTo')}
+            aria-label={t('dateTo')}
+            popperClassName="custom-popper"
+            className="h-8 w-36 border border-bgSt bg-background px-2 text-center font-sfpro text-base text-white outline-none focus:border-highlight"
+          />
 
-          <label className="flex flex-col gap-1 font-sfpro text-sm text-white/60">
-            {t('amountMin')}
-            <span
+          <span
+            className={cn(
+              'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
+              (hasInvalidMin || hasInvalidRange) && 'border-red focus-within:border-red',
+            )}
+          >
+            <input
+              value={minAmount}
+              onChange={(event) => setMinAmount(event.target.value)}
+              inputMode="decimal"
+              autoComplete="off"
+              placeholder={t('amountMin')}
+              aria-label={t('amountMin')}
+              aria-invalid={hasInvalidMin || hasInvalidRange}
               className={cn(
-                'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
-                (hasInvalidMin || hasInvalidRange) && 'border-red-400 focus-within:border-red-400',
+                'h-full w-32 bg-transparent px-2 font-sfpro text-base text-white outline-none placeholder:text-white/40',
+                (hasInvalidMin || hasInvalidRange) && 'text-red',
               )}
-            >
-              <input
-                value={minAmount}
-                onChange={(event) => setMinAmount(event.target.value)}
-                inputMode="decimal"
-                autoComplete="off"
-                aria-invalid={hasInvalidMin || hasInvalidRange}
-                className={cn(
-                  'h-full w-28 bg-transparent px-2 font-handjet text-base text-white outline-none',
-                  (hasInvalidMin || hasInvalidRange) && 'text-red-400',
-                )}
-              />
-              <span className="pr-2 text-xs text-white/50">{amountContext.denom}</span>
-            </span>
-          </label>
+            />
+            <span className="pr-2 font-sfpro text-xs text-white/50">{amountContext.denom}</span>
+          </span>
 
-          <label className="flex flex-col gap-1 font-sfpro text-sm text-white/60">
-            {t('amountMax')}
-            <span
+          <span
+            className={cn(
+              'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
+              (hasInvalidMax || hasInvalidRange) && 'border-red focus-within:border-red',
+            )}
+          >
+            <input
+              value={maxAmount}
+              onChange={(event) => setMaxAmount(event.target.value)}
+              inputMode="decimal"
+              autoComplete="off"
+              placeholder={t('amountMax')}
+              aria-label={t('amountMax')}
+              aria-invalid={hasInvalidMax || hasInvalidRange}
               className={cn(
-                'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
-                (hasInvalidMax || hasInvalidRange) && 'border-red-400 focus-within:border-red-400',
+                'h-full w-32 bg-transparent px-2 font-sfpro text-base text-white outline-none placeholder:text-white/40',
+                (hasInvalidMax || hasInvalidRange) && 'text-red',
               )}
-            >
-              <input
-                value={maxAmount}
-                onChange={(event) => setMaxAmount(event.target.value)}
-                inputMode="decimal"
-                autoComplete="off"
-                aria-invalid={hasInvalidMax || hasInvalidRange}
-                className={cn(
-                  'h-full w-28 bg-transparent px-2 font-handjet text-base text-white outline-none',
-                  (hasInvalidMax || hasInvalidRange) && 'text-red-400',
-                )}
-              />
-              <span className="pr-2 text-xs text-white/50">{amountContext.denom}</span>
-            </span>
-          </label>
+            />
+            <span className="pr-2 font-sfpro text-xs text-white/50">{amountContext.denom}</span>
+          </span>
 
-          <button
-            type="button"
+          <Button
+            component="button"
             onClick={handleReset}
-            disabled={isPending}
-            className="h-8 border border-bgSt bg-background px-4 font-handjet text-base hover:text-highlight disabled:cursor-not-allowed disabled:opacity-40"
+            className={cn('h-8 max-h-8 text-base', isPending && 'pointer-events-none opacity-40')}
+            contentClassName="max-h-7 whitespace-nowrap px-3"
+            variant="menu"
+            activeType="switcher"
           >
-            {t('resetFilters')}
-          </button>
-          <button
-            type="button"
+            <div className="z-20 -my-1 flex flex-row items-center justify-center whitespace-nowrap text-base font-medium">
+              {t('resetFilters')}
+            </div>
+          </Button>
+          <Button
+            component="button"
             onClick={handleApply}
-            disabled={applyDisabled}
-            className="h-8 border border-highlight bg-background px-4 font-handjet text-base text-highlight hover:bg-bgHover disabled:cursor-not-allowed disabled:border-bgSt disabled:text-white/30"
+            className={cn('h-8 max-h-8 text-base', applyDisabled && 'pointer-events-none opacity-40')}
+            contentClassName="max-h-7 whitespace-nowrap px-3"
+            variant="menu"
+            activeType="switcher"
+            isActive
           >
-            {isPending ? t('applying') : t('apply')}
-          </button>
+            <div className="z-20 -my-1 flex flex-row items-center justify-center whitespace-nowrap text-base font-medium">
+              {isPending ? t('applying') : t('apply')}
+            </div>
+          </Button>
 
           {exceedsWireBudget ? (
-            <p className="text-red-400 w-full text-right font-sfpro text-xs" aria-live="polite">
+            <p className="w-full text-right font-sfpro text-xs text-red" aria-live="polite">
               {t('applyBudgetHint')}
             </p>
           ) : null}

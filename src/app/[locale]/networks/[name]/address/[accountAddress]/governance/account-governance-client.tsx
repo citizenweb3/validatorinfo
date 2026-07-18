@@ -1,14 +1,12 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 
 import { getAccountVotesBatch } from '@/actions/get-account-votes-batch';
-import Doughnut, { doughnutChartColors } from '@/components/charts/doughnut/doughnut-chart';
 import BaseTable from '@/components/common/table/base-table';
 import Tooltip from '@/components/common/tooltip';
 import type { AccountVoteRow, AccountVotingHistoryReady } from '@/services/account-governance-service';
-import { deriveGovernanceCharts } from '@/utils/account-governance';
 
 import AccountVoteTableRow from './account-vote-row';
 
@@ -25,20 +23,9 @@ const AccountGovernanceClient = ({ chainName, accountAddress, initial, isMock }:
   const [hasMore, setHasMore] = useState(initial?.hasMore ?? false);
   const [nextBeforeProposalId, setNextBeforeProposalId] = useState(initial?.nextBeforeProposalId ?? null);
   const [totalVotes, setTotalVotes] = useState(initial?.totalVotes ?? '0');
-  const [totalClosedProposals, setTotalClosedProposals] = useState(initial?.totalClosedProposals ?? 0);
   const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(initial === null);
   const inFlight = useRef(false);
-
-  const charts = useMemo(() => deriveGovernanceCharts(rows, totalClosedProposals), [rows, totalClosedProposals]);
-  const optionLabels = [t('vote-options.yes'), t('vote-options.no'), t('vote-options.abstain'), t('vote-options.veto')];
-  const optionValues = [charts.options.YES, charts.options.NO, charts.options.ABSTAIN, charts.options.VETO];
-  const optionColors = [
-    doughnutChartColors.green,
-    doughnutChartColors.red,
-    doughnutChartColors.yellow,
-    doughnutChartColors.muted,
-  ];
 
   const handleLoad = useCallback(async () => {
     if (isMock || inFlight.current) return;
@@ -64,10 +51,8 @@ const AccountGovernanceClient = ({ chainName, accountAddress, initial, isMock }:
     setHasMore(result.batch.hasMore);
     setNextBeforeProposalId(result.batch.nextBeforeProposalId);
     setTotalVotes(result.batch.totalVotes);
-    setTotalClosedProposals(result.batch.totalClosedProposals);
   }, [accountAddress, chainName, isMock, nextBeforeProposalId, rows.length]);
 
-  const showCharts = rows.length > 0;
   const showLoadMore = !isMock && hasMore && !hasError;
 
   return (
@@ -79,49 +64,6 @@ const AccountGovernanceClient = ({ chainName, accountAddress, initial, isMock }:
           <span className="font-handjet text-2xl text-highlight">{totalVotes}</span>
         </div>
       </div>
-
-      {showCharts ? (
-        <div className="mb-10 grid gap-10 lg:grid-cols-2">
-          <section className="flex flex-col">
-            <h3 className="mb-6 w-fit border-b border-bgSt pb-1 font-handjet text-xl text-highlight">
-              {t('vote-options-chart-title')}
-            </h3>
-            <Doughnut
-              labels={optionLabels}
-              values={optionValues}
-              colors={optionColors}
-              datasetLabel={t('votes-dataset-label')}
-              ariaLabel={t('vote-options-chart-aria')}
-              className="w-full max-w-96"
-            />
-            {hasMore ? <p className="mt-4 font-sfpro text-sm text-white/50">{t('loaded-votes-caption')}</p> : null}
-          </section>
-          <section className="flex flex-col">
-            <h3 className="mb-6 w-fit border-b border-bgSt pb-1 font-handjet text-xl text-highlight">
-              {t('participation-chart-title')}
-            </h3>
-            <Doughnut
-              labels={[t('participation-voted'), t('participation-not-voted')]}
-              values={[charts.participation.voted, charts.participation.notVoted]}
-              colors={[doughnutChartColors.green, doughnutChartColors.muted]}
-              datasetLabel={t('closed-proposals-dataset-label')}
-              ariaLabel={t('participation-chart-aria')}
-              className="w-full max-w-96"
-            />
-            <p className="mt-4 font-sfpro text-sm text-white/50">
-              {hasMore
-                ? t('participation-loaded-caption', {
-                    voted: charts.participation.voted,
-                    total: charts.participation.totalClosedProposals,
-                  })
-                : t('participation-caption', {
-                    voted: charts.participation.voted,
-                    total: charts.participation.totalClosedProposals,
-                  })}
-            </p>
-          </section>
-        </div>
-      ) : null}
 
       <div className="overflow-x-auto">
         <BaseTable className="min-w-[760px]">

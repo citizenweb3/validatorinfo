@@ -61,7 +61,6 @@ const AccountTransactionsPage: NextPageWithLocale<PageProps> = async ({
         filters={filters}
         filterKey={filterKey}
         amountContext={amountContext}
-        amountLabel={t('amountColumn')}
       />
     </div>
   );

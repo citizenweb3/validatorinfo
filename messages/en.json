@@ -1684,7 +1684,6 @@
     "verification base fee": "Verification Base Fee",
     "note count": "Note Count",
     "nullifier count": "Nullifier Count",
-    "version": "Version",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"
@@ -1936,16 +1935,14 @@
       },
       "dateFrom": "From date",
       "dateTo": "To date",
-      "amountMin": "Minimum amount",
-      "amountMax": "Maximum amount",
+      "amountMin": "Min amount",
+      "amountMax": "Max amount",
       "apply": "Apply",
       "applying": "Applying…",
       "applyBudgetHint": "Choose fewer message types: the API accepts up to five resolved type URLs.",
       "resetFilters": "Reset filters",
       "selectAll": "Select all",
-      "clearAll": "Clear all",
-      "amountColumn": "Amount",
-      "transfersTooltipCap": "Showing up to the first 5 indexed transfers"
+      "clearAll": "Clear all"
     },
     "Governance": {
       "title": "Governance Participation: Votes and Network Impact",
@@ -1965,15 +1962,6 @@
       "impact-voting-in-progress": "Impact is calculated only after voting closes and the final tally is settled.",
       "impact-tally-unavailable": "The proposal's settled tally is unavailable or cannot be verified.",
       "impact-stake-unavailable": "Delegated stake at this vote height could not be reconstructed safely.",
-      "vote-options-chart-title": "Vote Option Distribution",
-      "participation-chart-title": "Closed Proposal Participation",
-      "votes-dataset-label": "Votes",
-      "closed-proposals-dataset-label": "Closed proposals",
-      "vote-options-chart-aria": "Distribution of loaded votes by option",
-      "participation-chart-aria": "Loaded account participation among closed proposals",
-      "loaded-votes-caption": "Distribution of loaded votes. Load all pages for the complete breakdown.",
-      "participation-caption": "Voted on {voted} of {total} closed proposals.",
-      "participation-loaded-caption": "At least {voted} of {total} closed proposals are present in the loaded votes.",
       "participation-voted": "Voted",
       "participation-not-voted": "Not voted",
       "votes-load-error": "Voting history could not be loaded.",
@@ -2042,9 +2030,18 @@
     "title": "Mining Pools",
     "description": "Multi-chain directory of mining pools. Each pool is identified from on-chain block attribution; per-network performance lives on the network stats pages.",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "" },
-      "Links": { "name": "Links", "hint": "" },
-      "Networks": { "name": "Networks", "hint": "" }
+      "Pool": {
+        "name": "Pool",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Networks": {
+        "name": "Networks",
+        "hint": ""
+      }
     }
   },
   "MiningPoolDetail": {
@@ -2080,15 +2077,42 @@
     "story": "{name} is a verified mining pool on the {chain} network. The stats below are derived from on-chain block attribution.",
     "p2poolMiners": "P2Pool reports sidechain participants, not stratum workers.",
     "Table": {
-      "Network": { "name": "Network", "hint": "Network the pool mines on" },
-      "Blocks": { "name": "Blocks Found", "hint": "Blocks attributed to this pool in the selected window" },
-      "Share": { "name": "Dominance", "hint": "Share of network blocks found in the selected window" },
-      "Miners": { "name": "Miners", "hint": "Fresh connected-miner count reported for this pool on this network" },
-      "Hashrate": { "name": "Estimated Hashrate", "hint": "Estimated hashrate from the pool's block share" },
-      "Fee": { "name": "Fee", "hint": "Pool fee as declared by the pool" },
-      "Height": { "name": "Height", "hint": "Block height" },
-      "Block Hash": { "name": "Block Hash", "hint": "Block hash" },
-      "Timestamp": { "name": "Timestamp", "hint": "Block timestamp" }
+      "Network": {
+        "name": "Network",
+        "hint": "Network the pool mines on"
+      },
+      "Blocks": {
+        "name": "Blocks Found",
+        "hint": "Blocks attributed to this pool in the selected window"
+      },
+      "Share": {
+        "name": "Dominance",
+        "hint": "Share of network blocks found in the selected window"
+      },
+      "Miners": {
+        "name": "Miners",
+        "hint": "Fresh connected-miner count reported for this pool on this network"
+      },
+      "Hashrate": {
+        "name": "Estimated Hashrate",
+        "hint": "Estimated hashrate from the pool's block share"
+      },
+      "Fee": {
+        "name": "Fee",
+        "hint": "Pool fee as declared by the pool"
+      },
+      "Height": {
+        "name": "Height",
+        "hint": "Block height"
+      },
+      "Block Hash": {
+        "name": "Block Hash",
+        "hint": "Block hash"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Block timestamp"
+      }
     }
   },
   "MiningPoolsBadges": {
@@ -2108,11 +2132,26 @@
     "window30d": "30d",
     "windowAll": "All-time",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "Mining pool identified from on-chain block attribution" },
-      "Blocks": { "name": "Blocks", "hint": "Blocks attributed to this pool in the selected window" },
-      "Share": { "name": "Dominance", "hint": "Percentage of network blocks found in the selected window" },
-      "Hashrate": { "name": "Hashrate", "hint": "Estimated hashrate from the pool's block share" },
-      "Fee": { "name": "Fee", "hint": "Pool fee as declared by the pool" }
+      "Pool": {
+        "name": "Pool",
+        "hint": "Mining pool identified from on-chain block attribution"
+      },
+      "Blocks": {
+        "name": "Blocks",
+        "hint": "Blocks attributed to this pool in the selected window"
+      },
+      "Share": {
+        "name": "Dominance",
+        "hint": "Percentage of network blocks found in the selected window"
+      },
+      "Hashrate": {
+        "name": "Hashrate",
+        "hint": "Estimated hashrate from the pool's block share"
+      },
+      "Fee": {
+        "name": "Fee",
+        "hint": "Pool fee as declared by the pool"
+      }
     }
   },
   "PowNetworkStats": {

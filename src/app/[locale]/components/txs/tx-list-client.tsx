@@ -7,7 +7,7 @@ import { getTxsBatch } from '@/actions/get-txs-batch';
 import TxCursorPagination from '@/components/txs/tx-cursor-pagination';
 import TxRow from '@/components/txs/tx-row';
 import TxRowsSkeleton from '@/components/txs/tx-rows-skeleton';
-import type { Cursor, TxAmountContext, TxByAddressBatch, TxByAddressItem } from '@/services/tx-service';
+import type { Cursor, TxByAddressBatch, TxByAddressItem } from '@/services/tx-service';
 import { type TxFilters, txFiltersToInput } from '@/utils/tx-filters';
 
 const PER_PAGE = 20;
@@ -27,13 +27,12 @@ interface OwnProps {
   initialWindow: number; // window within `initial` (from the URL `w`, clamped server-side)
   initial: TxByAddressBatch;
   filters: TxFilters;
-  amountContext: TxAmountContext | null;
 }
 
 const cursorKey = (cursor: Cursor | null): string =>
   cursor ? `${cursor.before_height}-${cursor.before_index}` : 'head';
 
-const MessageRow: FC<{ message: string; columns: 4 | 5; hint?: string; action?: ReactNode }> = ({
+const MessageRow: FC<{ message: string; columns: number; hint?: string; action?: ReactNode }> = ({
   message,
   columns,
   hint,
@@ -59,10 +58,9 @@ const TxListClient: FC<OwnProps> = ({
   initialWindow,
   initial,
   filters,
-  amountContext,
 }) => {
   const t = useTranslations('TotalTxsPage');
-  const columns: 4 | 5 = amountContext ? 5 : 4;
+  const columns = 4;
 
   const [loaded, setLoaded] = useState<LoadedBatch[]>([
     { cursor: initialCursor, rows: initial.rows, nextCursor: initial.nextCursor, hasMore: initial.hasMore },
@@ -212,7 +210,7 @@ const TxListClient: FC<OwnProps> = ({
     body = (
       <tbody>
         {windowRows.map((item) => (
-          <TxRow key={item.hash} item={item} chainName={chainName} amountContext={amountContext} />
+          <TxRow key={item.hash} item={item} chainName={chainName} />
         ))}
       </tbody>
     );

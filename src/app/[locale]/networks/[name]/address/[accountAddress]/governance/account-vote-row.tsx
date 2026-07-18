@@ -72,7 +72,11 @@ const AccountVoteTableRow = ({ row, chainName }: AccountVoteRowProps) => {
           ) : null}
         </div>
       </BaseTableCell>
-      <BaseTableCell className="min-w-36 px-4 py-4 text-center font-handjet text-lg">{row.height}</BaseTableCell>
+      <BaseTableCell className="min-w-36 px-4 py-4 hover:text-highlight">
+        <Link href={`/networks/${chainName}/blocks/${row.height}`} className="flex justify-center">
+          <span className="text-center font-handjet text-lg underline underline-offset-2">{row.height}</span>
+        </Link>
+      </BaseTableCell>
       <BaseTableCell className="min-w-44 px-4 py-4 text-center font-handjet text-lg">
         <Tooltip tooltip={impactTooltip} direction="top">
           <span className={cn('cursor-help', impact && 'text-highlight')}>

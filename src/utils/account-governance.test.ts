@@ -3,7 +3,6 @@ import test from 'node:test';
 
 import {
   calculateImpactBasisPoints,
-  deriveGovernanceCharts,
   formatBasisPoints,
   isClosedGovernanceProposalStatus,
   isWeightedGovernanceVote,
@@ -64,20 +63,9 @@ test('fixed Cosmos decimals only badge genuinely weighted votes', () => {
   assert.equal(isWeightedGovernanceVote('invalid'), false);
 });
 
-test('chart derivation deduplicates pages and counts only joined closed proposals', () => {
-  const charts = deriveGovernanceCharts(
-    [
-      { proposalId: '4', option: 'YES', isClosed: true },
-      { proposalId: '4', option: 'YES', isClosed: true },
-      { proposalId: '3', option: 'NO', isClosed: false },
-      { proposalId: '2', option: 'ABSTAIN', isClosed: true },
-      { proposalId: '1', option: 'UNSPECIFIED', isClosed: true },
-    ],
-    3,
-  );
 
-  assert.deepEqual(charts.options, { YES: 1, NO: 1, ABSTAIN: 1, VETO: 0 });
-  assert.deepEqual(charts.participation, { voted: 3, notVoted: 0, totalClosedProposals: 3 });
+test('closed proposal statuses classify settled results only', () => {
   assert.equal(isClosedGovernanceProposalStatus('PROPOSAL_STATUS_PASSED'), true);
+  assert.equal(isClosedGovernanceProposalStatus('PROPOSAL_STATUS_REJECTED'), true);
   assert.equal(isClosedGovernanceProposalStatus('PROPOSAL_STATUS_VOTING_PERIOD'), false);
 });
