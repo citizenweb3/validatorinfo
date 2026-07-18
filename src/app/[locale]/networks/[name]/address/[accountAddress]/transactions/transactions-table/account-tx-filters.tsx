@@ -155,7 +155,7 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
             placeholderText={t('dateFrom')}
             aria-label={t('dateFrom')}
             popperClassName="custom-popper"
-            className="h-8 w-36 border border-bgSt bg-background px-2 text-center font-sfpro text-base text-white outline-none focus:border-highlight"
+            className="h-8 w-36 border-r border-t border-bgSt bg-table_row shadow-menu-button-hover px-2 text-center font-sfpro text-base text-white outline-none hover:text-highlight focus:text-highlight"
           />
 
           <DatePicker
@@ -168,13 +168,13 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
             placeholderText={t('dateTo')}
             aria-label={t('dateTo')}
             popperClassName="custom-popper"
-            className="h-8 w-36 border border-bgSt bg-background px-2 text-center font-sfpro text-base text-white outline-none focus:border-highlight"
+            className="h-8 w-36 border-r border-t border-bgSt bg-table_row shadow-menu-button-hover px-2 text-center font-sfpro text-base text-white outline-none hover:text-highlight focus:text-highlight"
           />
 
           <span
             className={cn(
-              'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
-              (hasInvalidMin || hasInvalidRange) && 'border-red focus-within:border-red',
+              'flex h-8 items-center border-r border-t border-bgSt bg-table_row shadow-menu-button-hover focus-within:text-highlight',
+              (hasInvalidMin || hasInvalidRange) && 'border-red',
             )}
           >
             <input
@@ -195,8 +195,8 @@ const AccountTxFilters: FC<OwnProps> = ({ chainName, filters, amountContext }) =
 
           <span
             className={cn(
-              'flex h-8 items-center border border-bgSt bg-background focus-within:border-highlight',
-              (hasInvalidMax || hasInvalidRange) && 'border-red focus-within:border-red',
+              'flex h-8 items-center border-r border-t border-bgSt bg-table_row shadow-menu-button-hover focus-within:text-highlight',
+              (hasInvalidMax || hasInvalidRange) && 'border-red',
             )}
           >
             <input
