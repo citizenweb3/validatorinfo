@@ -38,10 +38,31 @@ test('account governance service batches enrichment, deduplicates in-flight load
             height: '10',
             tx_hash: 'ABC',
           },
+          {
+            proposal_id: '8',
+            option: 'NO' as const,
+            weight: '1.000000000000000000',
+            height: '11',
+            tx_hash: 'DEF',
+          },
+          {
+            proposal_id: '9',
+            option: 'ABSTAIN' as const,
+            weight: '1.000000000000000000',
+            height: '12',
+            tx_hash: 'GHI',
+          },
+          {
+            proposal_id: '10',
+            option: 'VETO' as const,
+            weight: '1.000000000000000000',
+            height: '13',
+            tx_hash: 'JKL',
+          },
         ],
         cursor: null,
         has_more: false,
-        total: '1',
+        total: '4',
       };
     },
   };
@@ -60,6 +81,22 @@ test('account governance service batches enrichment, deduplicates in-flight load
               abstain_count: '0',
             }),
           },
+          {
+            proposalId: '9',
+            title: 'Open parameter change',
+            status: 'PROPOSAL_STATUS_VOTING_PERIOD',
+            finalTallyResult: null,
+          },
+          {
+            proposalId: '10',
+            title: 'Closed denom fixture',
+            status: 'PROPOSAL_STATUS_REJECTED',
+            finalTallyResult: JSON.stringify({
+              yes_count: '5000',
+              no_count: '5000',
+              abstain_count: '0',
+            }),
+          },
         ];
       },
       count: async () => {
@@ -72,7 +109,12 @@ test('account governance service batches enrichment, deduplicates in-flight load
     getDelegatedStakeAtHeights: async () => {
       stakeCalls += 1;
       return {
-        values: [{ height: '10', amounts: { uatom: '5' } }],
+        values: [
+          { height: '10', amounts: { uatom: '5' } },
+          { height: '11', amounts: { uatom: '5' } },
+          { height: '12', amounts: { uatom: '5' } },
+          { height: '13', amounts: { wrongDenom: '5' } },
+        ],
         meta: {},
       };
     },
@@ -128,7 +170,11 @@ test('account governance service batches enrichment, deduplicates in-flight load
   assert.deepEqual(firstResult, duplicateResult);
   assert.equal(firstResult.status, 'ready');
   if (firstResult.status === 'ready') {
-    assert.equal(firstResult.rows[0]?.impactBasisPoints, '5');
+    const rowsByProposalId = new Map(firstResult.rows.map((row) => [row.proposalId, row]));
+    assert.equal(rowsByProposalId.get('7')?.impactBasisPoints, '5');
+    assert.equal(rowsByProposalId.get('8')?.impactUnavailableReason, 'proposal-unavailable');
+    assert.equal(rowsByProposalId.get('9')?.impactUnavailableReason, 'voting-in-progress');
+    assert.equal(rowsByProposalId.get('10')?.impactUnavailableReason, 'stake-unavailable');
     assert.equal(firstResult.totalClosedProposals, 8);
   }
   assert.equal(proposalCalls, 1);
