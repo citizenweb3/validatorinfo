@@ -1942,7 +1942,6 @@
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",
       "voting-history-title": "Histórico de Votação",
-      "total-votes-stat": "Total de Votos",
       "no-governance-activity": "Nenhuma atividade de governança encontrada para este endereço",
       "proposal-id-column": "Proposta",
       "vote-column": "Voto",

@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
 
-import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import BaseTable from '@/components/common/table/base-table';
 import TablePagination from '@/components/common/table/table-pagination';
 import Tooltip from '@/components/common/tooltip';
@@ -41,10 +40,9 @@ const AccountGovernanceContent = async ({ chainName, accountAddress, locale, pag
 
   return (
     <div className="pt-8">
-      <div className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-bgSt pb-2">
-        <h2 className="font-handjet text-2xl text-highlight">{t('voting-history-title')}</h2>
-        <MetricsCardItem title={t('total-votes-stat')} data={result.totalVotes} className="mb-1 py-2" />
-      </div>
+      <h2 className="mb-8 w-fit border-b border-bgSt pb-2 font-handjet text-2xl text-highlight">
+        {t('voting-history-title')}
+      </h2>
 
       <div className="overflow-x-auto">
         <BaseTable className="min-w-[760px]">

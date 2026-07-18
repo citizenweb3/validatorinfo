@@ -1941,7 +1941,6 @@
     "Governance": {
       "title": "Governance Participation: Votes and Network Impact",
       "voting-history-title": "Voting History",
-      "total-votes-stat": "Total Votes",
       "no-governance-activity": "No governance activity found for this address",
       "proposal-id-column": "Proposal",
       "vote-column": "Vote",
