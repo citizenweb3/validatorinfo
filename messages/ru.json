@@ -1918,7 +1918,15 @@
     },
     "Tokens": {
       "title": "Портфель токенов и владение активами",
-      "description": ""
+      "description": "Все переводы токенов этого аккаунта: входящие, исходящие, контрагенты и суммы.",
+      "directionColumn": "Направление",
+      "counterpartyColumn": "Контрагент",
+      "amountColumn": "Сумма",
+      "txColumn": "Хэш транзакции",
+      "timeColumn": "Время",
+      "directionIn": "Входящий",
+      "directionOut": "Исходящий",
+      "directionSelf": "Себе"
     },
     "Transactions": {
       "title": "История транзакций учетной записи в блокчейне",

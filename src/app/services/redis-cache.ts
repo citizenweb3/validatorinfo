@@ -146,6 +146,10 @@ export const CACHE_KEYS = {
     latestEpoch: (chainName: string) => `aztec:${chainName}:latest-epoch`,
     payloadUri: (chainName: string, address: string) => `aztec:${chainName}:payload-uri:${address}`,
   },
+  transfers: {
+    byAddress: (chainName: string, address: string, cursorKey: string) =>
+      `transfers:byaddr:${chainName}:${address}:${cursorKey}`,
+  },
   txs: {
     // order-independent: the indexer predicate is `signers && ARRAY[...]` (array-overlap, commutative,
     // dedups), so [acc,op] and [op,acc] return identical rows. Do NOT sort if it ever becomes positional.

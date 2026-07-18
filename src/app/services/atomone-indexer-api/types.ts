@@ -239,3 +239,29 @@ export interface AtomoneStakingDeltasResponse {
   total: string;
   meta: { skipped_ambiguous_msgexec: string };
 }
+
+export interface AtomoneTransferEntry {
+  height: string;
+  tx_hash: string;
+  msg_index: number;
+  from_addr: string;
+  to_addr: string;
+  denom: string;
+  amount: string;
+  time: string;
+}
+
+export interface AtomoneTransfersCursor {
+  next_before_height: string;
+  next_before_tx_hash: string;
+  next_before_msg_index: number;
+  next_before_from: string;
+  next_before_to: string;
+  next_before_denom: string;
+}
+
+export interface AtomoneTransfersResponse {
+  data: AtomoneTransferEntry[];
+  cursor: AtomoneTransfersCursor | null;
+  has_more: boolean;
+}

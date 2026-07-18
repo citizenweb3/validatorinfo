@@ -14,6 +14,7 @@ import {
   CosmosTxsByAddressListResponse,
   CosmosTxsListResponse,
   CosmosTxsStatsResponse,
+  CosmosTransfersResponse,
 } from './types';
 
 export interface GetBlocksListParams {
@@ -223,6 +224,37 @@ export const getStakingDeltas = (
       before_height: params.before_height,
       before_index: params.before_index,
       before_msg_index: params.before_msg_index,
+    },
+    options,
+  );
+
+export interface GetTransfersByAddressParams {
+  // comma-separated list of 1-5 bech32 addresses
+  address: string;
+  limit?: number;
+  before_height?: string;
+  before_tx_hash?: string;
+  before_msg_index?: number;
+  before_from?: string;
+  before_to?: string;
+  before_denom?: string;
+}
+
+export const getTransfersByAddress = (
+  params: GetTransfersByAddressParams,
+  options?: CosmosIndexerRequestOptions,
+): Promise<CosmosTransfersResponse> =>
+  client.get<CosmosTransfersResponse>(
+    '/api/v1/bank/transfers',
+    {
+      address: params.address,
+      limit: params.limit,
+      before_height: params.before_height,
+      before_tx_hash: params.before_tx_hash,
+      before_msg_index: params.before_msg_index,
+      before_from: params.before_from,
+      before_to: params.before_to,
+      before_denom: params.before_denom,
     },
     options,
   );

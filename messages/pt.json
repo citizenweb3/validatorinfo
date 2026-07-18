@@ -1918,7 +1918,15 @@
     },
     "Tokens": {
       "title": "Portfólio de Tokens e Posse de Ativos",
-      "description": ""
+      "description": "Todas as transferências de tokens desta conta: entradas, saídas, contrapartes e valores.",
+      "directionColumn": "Direção",
+      "counterpartyColumn": "Contraparte",
+      "amountColumn": "Valor",
+      "txColumn": "Hash da Tx",
+      "timeColumn": "Data",
+      "directionIn": "Entrada",
+      "directionOut": "Saída",
+      "directionSelf": "Própria"
     },
     "Transactions": {
       "title": "Histórico de Transações da Conta Blockchain",

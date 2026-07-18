@@ -1917,7 +1917,15 @@
     },
     "Tokens": {
       "title": "Token Portfolio and Assets Holdings",
-      "description": ""
+      "description": "All token transfers involving this account: incoming, outgoing, counterparties and amounts.",
+      "directionColumn": "Direction",
+      "counterpartyColumn": "Counterparty",
+      "amountColumn": "Amount",
+      "txColumn": "Tx Hash",
+      "timeColumn": "Timestamp",
+      "directionIn": "In",
+      "directionOut": "Out",
+      "directionSelf": "Self"
     },
     "Transactions": {
       "title": "Blockchain Account Transaction History",
