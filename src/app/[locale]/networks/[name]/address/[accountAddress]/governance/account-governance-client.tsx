@@ -72,37 +72,41 @@ const AccountGovernanceClient = ({ chainName, accountAddress, initial, isMock }:
 
   return (
     <div className="pt-8">
-      <div className="mb-8 flex flex-wrap items-center justify-between gap-4 bg-table_row px-6 py-5 shadow-md">
-        <h2 className="font-handjet text-3xl text-highlight">{t('voting-history-title')}</h2>
+      <div className="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-bgSt pb-2">
+        <h2 className="font-handjet text-2xl text-highlight">{t('voting-history-title')}</h2>
         <div className="flex items-baseline gap-3">
           <span className="font-sfpro text-sm text-white/60">{t('total-votes-stat')}</span>
-          <span className="font-handjet text-3xl text-highlight">{totalVotes}</span>
+          <span className="font-handjet text-2xl text-highlight">{totalVotes}</span>
         </div>
       </div>
 
       {showCharts ? (
-        <div className="mb-10 grid gap-6 lg:grid-cols-2">
-          <section className="flex min-h-80 flex-col items-center bg-table_row p-6 shadow-md">
-            <h3 className="mb-4 font-handjet text-2xl text-highlight">{t('vote-options-chart-title')}</h3>
+        <div className="mb-10 grid gap-10 lg:grid-cols-2">
+          <section className="flex flex-col">
+            <h3 className="mb-6 w-fit border-b border-bgSt pb-1 font-handjet text-xl text-highlight">
+              {t('vote-options-chart-title')}
+            </h3>
             <Doughnut
               labels={optionLabels}
               values={optionValues}
               colors={optionColors}
               datasetLabel={t('votes-dataset-label')}
               ariaLabel={t('vote-options-chart-aria')}
-              className="w-full max-w-80"
+              className="w-full max-w-96"
             />
             {hasMore ? <p className="mt-4 font-sfpro text-sm text-white/50">{t('loaded-votes-caption')}</p> : null}
           </section>
-          <section className="flex min-h-80 flex-col items-center bg-table_row p-6 shadow-md">
-            <h3 className="mb-4 font-handjet text-2xl text-highlight">{t('participation-chart-title')}</h3>
+          <section className="flex flex-col">
+            <h3 className="mb-6 w-fit border-b border-bgSt pb-1 font-handjet text-xl text-highlight">
+              {t('participation-chart-title')}
+            </h3>
             <Doughnut
               labels={[t('participation-voted'), t('participation-not-voted')]}
               values={[charts.participation.voted, charts.participation.notVoted]}
               colors={[doughnutChartColors.green, doughnutChartColors.muted]}
               datasetLabel={t('closed-proposals-dataset-label')}
               ariaLabel={t('participation-chart-aria')}
-              className="w-full max-w-80"
+              className="w-full max-w-96"
             />
             <p className="mt-4 font-sfpro text-sm text-white/50">
               {hasMore
@@ -122,15 +126,17 @@ const AccountGovernanceClient = ({ chainName, accountAddress, initial, isMock }:
       <div className="overflow-x-auto">
         <BaseTable className="min-w-[760px]">
           <thead>
-            <tr className="bg-table_header">
-              <th className="bg-table_row px-4 py-3 text-center font-handjet text-lg shadow-md">
+            <tr>
+              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
                 {t('proposal-id-column')}
               </th>
-              <th className="bg-table_row px-4 py-3 text-center font-handjet text-lg shadow-md">{t('vote-column')}</th>
-              <th className="bg-table_row px-4 py-3 text-center font-handjet text-lg shadow-md">
+              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
+                {t('vote-column')}
+              </th>
+              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
                 {t('vote-height-column')}
               </th>
-              <th className="bg-table_row px-4 py-3 text-center font-handjet text-lg shadow-md">
+              <th className="border-x-2 border-transparent bg-table_row bg-clip-padding px-4 py-3 text-center font-sfpro text-base shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
                 <Tooltip tooltip={t('impact-methodology-tooltip')} direction="top">
                   <span className="cursor-help">{t('network-impact-column')}</span>
                 </Tooltip>

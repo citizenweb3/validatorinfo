@@ -1,8 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Link from 'next/link';
 
+import icons from '@/components/icons';
 import BaseTableCell from '@/components/common/table/base-table-cell';
 import BaseTableRow from '@/components/common/table/base-table-row';
 import Tooltip from '@/components/common/tooltip';
@@ -10,12 +12,12 @@ import type { AccountVoteRow } from '@/services/account-governance-service';
 import { formatBasisPoints, isWeightedGovernanceVote } from '@/utils/account-governance';
 import { cn } from '@/utils/cn';
 
-const OPTION_CLASSES: Record<AccountVoteRow['option'], string> = {
-  YES: 'bg-secondary',
-  NO: 'bg-red',
-  ABSTAIN: 'bg-oldPalette-yellow',
-  VETO: 'bg-gameboyBody',
-  UNSPECIFIED: 'bg-primary',
+const OPTION_ICONS: Record<AccountVoteRow['option'], typeof icons.GreenSquareIcon> = {
+  YES: icons.GreenSquareIcon,
+  NO: icons.RedSquareIcon,
+  ABSTAIN: icons.YellowSquareIcon,
+  VETO: icons.GraySquareIcon,
+  UNSPECIFIED: icons.GraySquareIcon,
 };
 
 const OPTION_KEYS = {
@@ -58,9 +60,9 @@ const AccountVoteTableRow = ({ row, chainName }: AccountVoteRowProps) => {
         </Link>
       </BaseTableCell>
       <BaseTableCell className="min-w-44 px-4 py-4">
-        <div className="flex items-center justify-center gap-3">
-          <span className={cn('h-4 w-4 shrink-0', OPTION_CLASSES[row.option])} aria-hidden="true" />
-          <span className="font-handjet text-lg">{t(OPTION_KEYS[row.option])}</span>
+        <div className="flex items-center justify-center gap-1">
+          <Image src={OPTION_ICONS[row.option]} alt={row.option} width={20} height={20} />
+          <span className="font-handjet text-lg uppercase">{t(OPTION_KEYS[row.option])}</span>
           {isWeighted ? (
             <Tooltip tooltip={t('weighted-vote-tooltip')} direction="top">
               <span className="cursor-help border border-highlight px-2 py-0.5 font-sfpro text-xs text-highlight">
