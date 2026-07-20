@@ -3,6 +3,9 @@ import 'server-only';
 import Redis from 'ioredis';
 
 import logger from '@/logger';
+import { normalizeBech32Address } from '@/utils/bech32-address';
+import { accountViewedKey } from '@/utils/redis-keys';
+import { buildTxByAddressCacheKey } from '@/utils/tx-cache-key';
 
 const { logInfo, logWarn, logError } = logger('redis-cache');
 
@@ -64,6 +67,23 @@ export const cacheSet = async <T>(key: string, value: T, ttlSeconds: number = DE
   }
 };
 
+export const markAccountViewed = async (
+  chainName: string,
+  address: string,
+  expectedPrefix: string,
+): Promise<boolean> => {
+  const normalizedAddress = normalizeBech32Address(address, expectedPrefix);
+  if (!normalizedAddress) return false;
+
+  try {
+    await getRedis().zadd(accountViewedKey(chainName), Date.now(), normalizedAddress);
+    return true;
+  } catch (e) {
+    logWarn(`Redis account view write failed for ${chainName}: ${e}`);
+    return false;
+  }
+};
+
 export const cacheGetOrFetch = async <T>(
   key: string,
   fetchFn: () => Promise<T | null>,
@@ -106,6 +126,12 @@ export const checkRateLimit = async (key: string, limit: number, windowSeconds: 
 };
 
 export const CACHE_KEYS = {
+  account: {
+    firstSeen: (chainName: string, address: string) => `acct:firstseen:${chainName}:${address}`,
+    delegatedStake: (chainName: string, address: string) => `acct:delstake:${chainName}:${address}`,
+    govVotes: (chainName: string, address: string, cursor: string) => `acct:govvotes:${chainName}:${address}:${cursor}`,
+    viewed: accountViewedKey,
+  },
   ai: {
     rateLimit: (ip: string) => `ai:rate:${ip}`,
     summaryRateLimit: (ip: string) => `ai:summary:rate:${ip}`,
@@ -120,17 +146,26 @@ export const CACHE_KEYS = {
     latestEpoch: (chainName: string) => `aztec:${chainName}:latest-epoch`,
     payloadUri: (chainName: string, address: string) => `aztec:${chainName}:payload-uri:${address}`,
   },
+  transfers: {
+    byAddress: (chainName: string, address: string, cursorKey: string) =>
+      `transfers:byaddr:${chainName}:${address}:${cursorKey}`,
+  },
   txs: {
     // order-independent: the indexer predicate is `signers && ARRAY[...]` (array-overlap, commutative,
     // dedups), so [acc,op] and [op,acc] return identical rows. Do NOT sort if it ever becomes positional.
     // `chainName` namespaces the key: cosmoshub and atomone are separate indexer deployments, so the
     // same-shaped cursorKey must never collide across chains.
-    byAddress: (chainName: string, addresses: string, cursorKey: string) =>
-      `txs:byaddr:${chainName}:${addresses.split(',').sort().join(',')}:${cursorKey}`,
+    byAddress: (chainName: string, addresses: string, filterKey: string, cursorKey: string) =>
+      buildTxByAddressCacheKey({ chainName, addresses, filterKey, cursorKey }),
   },
   delegations: {
     byValidator: (chainName: string, validator: string, cursorKey: string) =>
       `deleg:byval:${chainName}:${validator}:${cursorKey}`,
+    byDelegator: (chainName: string, delegator: string) => `deleg:bydelegator:${chainName}:${delegator}`,
+  },
+  lcd: {
+    endpoints: (chainName: string) => `lcd:endpoints:${chainName}`,
+    response: (chainName: string, pathHash: string) => `lcd:response:${chainName}:${pathHash}`,
   },
 };
 

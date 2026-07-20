@@ -43,6 +43,18 @@ export interface AtomoneTxSummary {
   fee: AtomoneTxFeeSummary | null;
 }
 
+export interface AtomoneTxTransfer {
+  from_addr: string;
+  to_addr: string;
+  denom: string;
+  amount: string;
+}
+
+export interface AtomoneTxByAddressSummary extends AtomoneTxSummary {
+  transfers: AtomoneTxTransfer[];
+  msg_types: string[];
+}
+
 export interface AtomoneTxFeeAmount {
   amount: string;
   denom: string;
@@ -125,6 +137,7 @@ export interface AtomoneListResponse<T, C = AtomoneBlocksCursor | AtomoneTxsCurs
 
 export type AtomoneBlocksListResponse = AtomoneListResponse<AtomoneBlockSummary, AtomoneBlocksCursor>;
 export type AtomoneTxsListResponse = AtomoneListResponse<AtomoneTxSummary, AtomoneTxsCursor>;
+export type AtomoneTxsByAddressListResponse = AtomoneListResponse<AtomoneTxByAddressSummary, AtomoneTxsCursor>;
 export type AtomoneDelegationsResponse = AtomoneListResponse<AtomoneDelegationEvent, AtomoneDelegationsCursor>;
 
 export interface AtomoneBlockDetailResponse {
@@ -164,3 +177,91 @@ export interface AtomoneGovVotesCursor {
 }
 
 export type AtomoneGovVotesResponse = AtomoneListResponse<AtomoneGovVote, AtomoneGovVotesCursor>;
+
+export interface AtomoneCoverage {
+  earliest_height: string;
+  earliest_time: string;
+}
+
+export interface AtomoneCoverageResponse {
+  data: AtomoneCoverage;
+}
+
+export type AtomoneEarliestActivitySource = 'actor' | 'transfer_out' | 'transfer_in';
+
+export interface AtomoneEarliestActivity {
+  height: string;
+  tx_index: number;
+  tx_hash: string;
+  time: string;
+  source: AtomoneEarliestActivitySource;
+}
+
+export interface AtomoneEarliestActivityResponse {
+  data: {
+    earliest: AtomoneEarliestActivity | null;
+    coverage: AtomoneCoverage;
+  };
+}
+
+export type AtomoneStakingDeltaEventType =
+  | 'delegate'
+  | 'redelegate'
+  | 'unbond'
+  | 'create_validator'
+  | 'cancel_unbonding_delegation';
+
+export interface AtomoneStakingDelta {
+  height: string;
+  tx_index: number;
+  msg_index: number;
+  tx_hash: string;
+  time: string;
+  event_type: AtomoneStakingDeltaEventType;
+  validator_src: string | null;
+  validator_dst: string | null;
+  denom: string;
+  amount: string;
+  sign: 1 | -1 | 0;
+  source: 'event' | 'message';
+}
+
+export interface AtomoneStakingDeltasCursor {
+  next_before_height: string;
+  next_before_index: number;
+  next_before_msg_index: number;
+}
+
+export interface AtomoneStakingDeltasResponse {
+  data: AtomoneStakingDelta[];
+  cursor: AtomoneStakingDeltasCursor | null;
+  has_more: boolean;
+  total: string;
+  meta: { skipped_ambiguous_msgexec: string };
+}
+
+export interface AtomoneTransferEntry {
+  height: string;
+  tx_hash: string;
+  msg_index: number;
+  from_addr: string;
+  to_addr: string;
+  denom: string;
+  amount: string;
+  time: string;
+}
+
+export interface AtomoneTransfersCursor {
+  next_before_height: string;
+  next_before_tx_hash: string;
+  next_before_msg_index: number;
+  next_before_from: string;
+  next_before_to: string;
+  next_before_denom: string;
+}
+
+export interface AtomoneTransfersResponse {
+  data: AtomoneTransferEntry[];
+  cursor: AtomoneTransfersCursor | null;
+  has_more: boolean;
+}

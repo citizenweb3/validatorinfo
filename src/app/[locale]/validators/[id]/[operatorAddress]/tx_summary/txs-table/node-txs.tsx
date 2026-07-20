@@ -22,10 +22,10 @@ const NodeTxs: FC<OwnProps> = ({ chainName, page, accountAddress, operatorAddres
       <BaseTable>
         <thead>
           <tr className="bg-table_header">
-            <TableHeaderItem page={page} name="Type of Tx" sortField="type" />
-            <TableHeaderItem page={page} name="Tx Hash" sortField="tx" />
-            <TableHeaderItem page={page} name="Timestamp" sortField="timestamp" defaultSelected />
-            <TableHeaderItem page={page} name="Block Height" sortField="block height" />
+            <TableHeaderItem page={page} name="Type of Tx" />
+            <TableHeaderItem page={page} name="Tx Hash" />
+            <TableHeaderItem page={page} name="Timestamp" />
+            <TableHeaderItem page={page} name="Block Height" />
           </tr>
         </thead>
         <Suspense key={addressKey} fallback={<TxRowsSkeleton rows={20} />}>

@@ -13,9 +13,19 @@ interface OwnProps {
     title: string;
   }[];
   maxSelectionLimit?: number; // Optional max selection limit
+  selectAllLabel?: string;
+  clearAllLabel?: string;
 }
 
-const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged, maxSelectionLimit = Infinity }) => {
+const Dropdown: FC<OwnProps> = ({
+  filterValues,
+  title,
+  selectedValue,
+  onChanged,
+  maxSelectionLimit = Infinity,
+  selectAllLabel = 'Select All',
+  clearAllLabel = 'Clear All',
+}) => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const ref = useRef(null);
   useOnClickOutside(ref, () => setIsOpened(false));
@@ -23,7 +33,7 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
   const handleToggle = (value: string) => {
     if (selectedValue.includes(value)) {
       // Remove the ecosystem if it's already selected
-      onChanged(selectedValue.filter(item => item !== value));
+      onChanged(selectedValue.filter((item) => item !== value));
     } else {
       // Only allow adding if below max selection limit
       if (selectedValue.length < maxSelectionLimit) {
@@ -33,7 +43,7 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
   };
 
   const handleSelectAll = () => {
-    const allValues = filterValues.map(item => item.value);
+    const allValues = filterValues.map((item) => item.value);
     onChanged(allValues.slice(0, maxSelectionLimit)); // Limit to maxSelectionLimit
   };
 
@@ -55,25 +65,25 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
       </Button>
 
       {isOpened && (
-        <div className="absolute top-8 z-40 flex-col">
+        <div className="absolute top-8 z-40 flex w-max min-w-40 flex-col">
           {/* Select All and Clear All Buttons */}
           {maxSelectionLimit < Infinity && (
             <>
               <Button
                 onClick={handleSelectAll}
-                className="text-base"
-                contentClassName="max-h-7 w-40 min-w-40"
+                className="w-full text-base"
+                contentClassName="max-h-7 w-full min-w-40 whitespace-nowrap px-3"
                 activeType="switcher"
               >
-                Select All
+                {selectAllLabel}
               </Button>
               <Button
                 onClick={handleClearAll}
-                className="text-base"
-                contentClassName="max-h-7 w-40 min-w-40"
+                className="w-full text-base"
+                contentClassName="max-h-7 w-full min-w-40 whitespace-nowrap px-3"
                 activeType="switcher"
               >
-                Clear All
+                {clearAllLabel}
               </Button>
             </>
           )}
@@ -85,11 +95,11 @@ const Dropdown: FC<OwnProps> = ({ filterValues, title, selectedValue, onChanged,
               component="button"
               onClick={() => handleToggle(item.value)}
               isActive={selectedValue.includes(item.value)}
-              className="text-base"
-              contentClassName="max-h-7 w-40 min-w-40"
+              className="w-full text-base"
+              contentClassName="max-h-7 w-full min-w-40 whitespace-nowrap px-3"
               activeType="switcher"
             >
-              <div className="z-20 -my-1 flex flex-row items-center justify-center text-base font-medium">
+              <div className="z-20 -my-1 flex flex-row items-center justify-center whitespace-nowrap text-base font-medium">
                 {item.title}
               </div>
             </Button>

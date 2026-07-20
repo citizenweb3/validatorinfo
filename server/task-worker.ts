@@ -10,6 +10,7 @@ import { getPrices } from '@/server/jobs/get-prices';
 import matchChainNodes from '@/server/jobs/match-chain-nodes';
 import syncAztecCommittee from '@/server/jobs/sync-aztec-committee';
 import syncAztecEvents from '@/server/jobs/sync-aztec-events';
+import updateAccountBalances from '@/server/jobs/update-account-balances';
 import updateActiveSetMinAmount from '@/server/jobs/update-active-set-min-amount';
 import updateAverageDelegation from '@/server/jobs/update-average-delegation';
 import updateAztecCoinbaseAddress from '@/server/jobs/update-aztec-coinbase-address';
@@ -220,6 +221,9 @@ async function runTask() {
         break;
       case 'update-proposal-texts':
         await updateProposalTexts();
+        break;
+      case 'update-account-balances':
+        await updateAccountBalances();
         break;
       case 'monero-network-info':
         await updateMoneroNetworkInfo();

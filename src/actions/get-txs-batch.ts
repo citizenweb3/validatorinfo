@@ -2,12 +2,11 @@
 
 import logger from '@/logger';
 import TxService from '@/services/tx-service';
-import type { Cursor, TxBatchResult } from '@/services/tx-service';
+import type { Cursor, TxByAddressBatchResult } from '@/services/tx-service';
+import { parseCanonicalTxFiltersInput, type TxFiltersInput } from '@/utils/tx-filters';
+import { isTxByAddressChainSupported } from '@/utils/tx-supported-chains';
 
 const { logError } = logger('get-txs-batch');
-
-// Chains with a per-address tx indexer (separate citizenweb3 deployments, same API shape).
-const TX_BY_ADDRESS_CHAINS = new Set(['cosmoshub', 'atomone']);
 
 // Loose bech32 shape: <hrp>1<data>. Accepts account + operator forms for any hrp (`cosmos1…`,
 // `cosmosvaloper1…`, `atone1…`, `atonevaloper1…` — the validator feed sends both). The indexer
@@ -25,10 +24,11 @@ const BECH32 = /^[a-z]+1[02-9ac-hj-np-z]{6,}$/;
 export const getTxsBatch = async (
   addresses: string[],
   chainName: string,
+  filterInput: TxFiltersInput,
   cursor?: Cursor,
-): Promise<TxBatchResult> => {
+): Promise<TxByAddressBatchResult> => {
   try {
-    if (!TX_BY_ADDRESS_CHAINS.has(chainName.toLowerCase())) {
+    if (!isTxByAddressChainSupported(chainName)) {
       return { ok: true, rows: [], nextCursor: null, hasMore: false };
     }
 
@@ -40,7 +40,10 @@ export const getTxsBatch = async (
       return { ok: false, code: 'INVALID_REQUEST' };
     }
 
-    const batch = await TxService.getTxsByAddressBatch(chainName, list, cursor);
+    const filters = parseCanonicalTxFiltersInput(filterInput, chainName);
+    if (!filters) return { ok: false, code: 'INVALID_REQUEST' };
+
+    const batch = await TxService.getTxsByAddressBatch(chainName, list, filters, cursor);
     if (batch.error) {
       return { ok: false, code: 'SERVICE_ERROR' };
     }

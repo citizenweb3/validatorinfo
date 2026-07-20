@@ -3,13 +3,18 @@ import {
   AtomoneBlockDetailResponse,
   AtomoneBlocksListResponse,
   AtomoneBlocksStatsResponse,
+  AtomoneCoverageResponse,
   AtomoneDelegationsResponse,
+  AtomoneEarliestActivityResponse,
   AtomoneGovVotesResponse,
   AtomoneIndexerRequestOptions,
+  AtomoneStakingDeltasResponse,
   AtomoneTxDetailResponse,
   AtomoneTxRawResponse,
+  AtomoneTxsByAddressListResponse,
   AtomoneTxsListResponse,
   AtomoneTxsStatsResponse,
+  AtomoneTransfersResponse,
 } from './types';
 
 export interface GetBlocksListParams {
@@ -120,6 +125,12 @@ export interface GetTxsByAddressParams {
   limit?: number;
   before_height?: string;
   before_index?: number;
+  msg_type?: string;
+  from_time?: string;
+  to_time?: string;
+  min_amount?: string;
+  max_amount?: string;
+  amount_denom?: string;
   // 'false' skips the exact COUNT(*) `total` server-side. Cursor clients that don't read `total`
   // should pass 'false'. Ignored by older deployments (unknown params are stripped).
   count?: 'true' | 'false';
@@ -128,14 +139,20 @@ export interface GetTxsByAddressParams {
 export const getTxsByAddress = (
   params: GetTxsByAddressParams,
   options?: AtomoneIndexerRequestOptions,
-): Promise<AtomoneTxsListResponse> =>
-  client.get<AtomoneTxsListResponse>(
+): Promise<AtomoneTxsByAddressListResponse> =>
+  client.get<AtomoneTxsByAddressListResponse>(
     '/api/v1/txs/by-address',
     {
       address: params.address,
       limit: params.limit,
       before_height: params.before_height,
       before_index: params.before_index,
+      msg_type: params.msg_type,
+      from_time: params.from_time,
+      to_time: params.to_time,
+      min_amount: params.min_amount,
+      max_amount: params.max_amount,
+      amount_denom: params.amount_denom,
       count: params.count,
     },
     options,
@@ -161,6 +178,82 @@ export const getDelegations = (
       before_height: params.before_height,
       before_index: params.before_index,
       before_msg_index: params.before_msg_index,
+    },
+    options,
+  );
+
+export const getCoverage = async (options?: AtomoneIndexerRequestOptions): Promise<AtomoneCoverageResponse | null> => {
+  try {
+    return await client.get<AtomoneCoverageResponse>('/api/v1/coverage', null, options);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('HTTP 404')) return null;
+    throw error;
+  }
+};
+
+export const getEarliestActivity = async (
+  address: string,
+  options?: AtomoneIndexerRequestOptions,
+): Promise<AtomoneEarliestActivityResponse | null> => {
+  try {
+    return await client.get<AtomoneEarliestActivityResponse>('/api/v1/address/earliest-activity', { address }, options);
+  } catch (error) {
+    if (error instanceof Error && error.message.includes('HTTP 404')) return null;
+    throw error;
+  }
+};
+
+export interface GetStakingDeltasParams {
+  delegator: string;
+  limit?: number;
+  before_height?: string;
+  before_index?: number;
+  before_msg_index?: number;
+}
+
+export const getStakingDeltas = (
+  params: GetStakingDeltasParams,
+  options?: AtomoneIndexerRequestOptions,
+): Promise<AtomoneStakingDeltasResponse> =>
+  client.get<AtomoneStakingDeltasResponse>(
+    '/api/v1/staking/deltas',
+    {
+      delegator: params.delegator,
+      limit: params.limit,
+      before_height: params.before_height,
+      before_index: params.before_index,
+      before_msg_index: params.before_msg_index,
+    },
+    options,
+  );
+
+export interface GetTransfersByAddressParams {
+  // comma-separated list of 1-5 bech32 addresses
+  address: string;
+  limit?: number;
+  before_height?: string;
+  before_tx_hash?: string;
+  before_msg_index?: number;
+  before_from?: string;
+  before_to?: string;
+  before_denom?: string;
+}
+
+export const getTransfersByAddress = (
+  params: GetTransfersByAddressParams,
+  options?: AtomoneIndexerRequestOptions,
+): Promise<AtomoneTransfersResponse> =>
+  client.get<AtomoneTransfersResponse>(
+    '/api/v1/bank/transfers',
+    {
+      address: params.address,
+      limit: params.limit,
+      before_height: params.before_height,
+      before_tx_hash: params.before_tx_hash,
+      before_msg_index: params.before_msg_index,
+      before_from: params.before_from,
+      before_to: params.before_to,
+      before_denom: params.before_denom,
     },
     options,
   );

@@ -1713,7 +1713,6 @@
     "verification base fee": "Taxa Base de Verificação",
     "note count": "Contagem de Notas",
     "nullifier count": "Contagem de Anuladores",
-    "version": "Versão",
     "Tabs": {
       "Expand": "Expandir",
       "JSON": "JSON"
@@ -1877,46 +1876,105 @@
       "Claim Address": "Endereço do Pedido",
       "account value": "Valor da Conta",
       "token": "Token",
+      "usd": "USD",
+      "accountValueToggle": "Mostrar o valor da conta em USD ou no token da rede",
+      "accountValuePending": "Esta conta está na fila para atualização de saldo em segundo plano. Verifique novamente após a próxima atualização.",
+      "accountValueUnsupported": "O valor da conta não está disponível para esta rede ou endereço.",
+      "accountValueLiquid": "Disponível: {value}",
+      "accountValueStaked": "Em staking: {value}",
+      "accountValueUnbonding": "Em desbloqueio: {value}",
+      "accountValueRewards": "Recompensas não reclamadas: {value}",
+      "accountValueUpdated": "Atualizado {ago}",
       "Merits": "Méritos",
       "Delegations": "Delegações",
+      "delegationsEmpty": "Esta conta não tem delegações ativas.",
+      "delegationsError": "Não foi possível carregar as delegações atuais. Recarregue a página e tente novamente.",
+      "delegationsUnsupported": "As delegações atuais ainda não estão disponíveis para esta rede.",
+      "delegationsPreviousPage": "Página anterior de delegações",
+      "delegationsNextPage": "Próxima página de delegações",
+      "joinDate": "Data de entrada",
+      "firstSeenAtOrBefore": "Em ou antes de {date}",
+      "firstSeenAtGenesis": "Na génese · {date}",
+      "firstSeenIndexed": "{date} · bloco {height}",
+      "delegatedStakeApproximation": "A delegação histórica é aproximada: alterações do estado bonded, slashing, variações da taxa de câmbio do validador e transações ambíguas com várias mensagens podem não ser reconstruídas.",
       "Table": {
         "Validator": {
           "name": "Validador",
-          "hint": ""
+          "hint": "Validador que recebe esta delegação"
         },
         "Staked Amount": {
           "name": "Montante Apostado",
-          "hint": ""
+          "hint": "Montante atual delegado a este validador"
         },
         "Reward Amount": {
           "name": "Montante do Prémio",
-          "hint": ""
+          "hint": "Recompensas de staking atuais ainda não reclamadas no token da rede"
         },
         "Reward Value": {
           "name": "Valor da Recompensa",
-          "hint": ""
+          "hint": "Valor aproximado em USD das recompensas atuais ainda não reclamadas"
         }
       }
     },
     "Tokens": {
       "title": "Portfólio de Tokens e Posse de Ativos",
-      "description": ""
+      "description": "Todas as transferências de tokens desta conta: entradas, saídas, contrapartes e valores.",
+      "directionColumn": "Direção",
+      "counterpartyColumn": "Contraparte",
+      "amountColumn": "Valor",
+      "txColumn": "Hash da Tx",
+      "timeColumn": "Data",
+      "directionIn": "Entrada",
+      "directionOut": "Saída",
+      "directionSelf": "Própria"
     },
     "Transactions": {
       "title": "Histórico de Transações da Conta Blockchain",
-      "description": "O registo completo das transações está aqui. Detalhei todas as transações que este endereço assinou ou nas quais participou, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!"
+      "description": "O registo completo das transações está aqui. Detalhei todas as transações que este endereço assinou ou nas quais participou, com filtros para ajudar na navegação. É o seu registo transparente da atividade da blockchain. Precisa aprofundar mais? Use o nosso Explorador de Transações para obter informações avançadas!",
+      "customize": "Personalizar",
+      "msgTypeLabel": "Tipo de mensagem",
+      "messageTypes": {
+        "send": "Enviar",
+        "delegate": "Delegar",
+        "undelegate": "Cancelar delegação",
+        "redelegate": "Redelegar",
+        "withdrawRewards": "Recompensas",
+        "vote": "Votar",
+        "ibcTransfer": "Transferência IBC"
+      },
+      "dateFrom": "Data inicial",
+      "dateTo": "Data final",
+      "selectAll": "Selecionar tudo",
+      "clearAll": "Limpar tudo"
     },
     "Governance": {
       "title": "Participação em Governança: Votos e Impacto na Rede",
-      "description": "",
-      "not-available-for-chain": "As informações de governança estão disponíveis apenas para a rede Aztec",
-      "slashing-history-title": "Histórico de Cortes",
-      "voting-history-title": "Histórico de Votação",
-      "slashing-events-stat": "Eventos de Corte",
-      "total-votes-stat": "Total de Votos",
-      "total-slashed-stat": "Total Cortado",
       "no-governance-activity": "Nenhuma atividade de governança encontrada para este endereço",
-      "proposal-id-column": "ID da Proposta"
+      "proposal-id-column": "Proposta",
+      "vote-column": "Voto",
+      "network-impact-column": "Impacto na Rede ≈%",
+      "proposal-title-unavailable": "Os detalhes da proposta ainda não foram indexados",
+      "weighted-vote-badge": "Ponderado",
+      "weighted-vote-tooltip": "Voto ponderado. O indexador atualmente preserva apenas a primeira opção de votos divididos; o impacto usa todo o stake reconstruído da conta.",
+      "approximate-impact-value": "≈{value}",
+      "impact-methodology-tooltip": "Aproximado: stake delegado reconstruído na altura do voto dividido pelo poder de voto final da proposta. O estado de vinculação e desvios de slashing podem afetar o resultado.",
+      "impact-proposal-unavailable": "O impacto fica indisponível até esta proposta ser indexada pelo ValidatorInfo.",
+      "impact-voting-in-progress": "O impacto é calculado apenas depois de a votação terminar e o resultado final ser fechado.",
+      "impact-tally-unavailable": "O resultado final da proposta está indisponível ou não pode ser verificado.",
+      "impact-stake-unavailable": "Não foi possível reconstruir com segurança o stake delegado nesta altura.",
+      "participation-voted": "Votou",
+      "participation-not-voted": "Não votou",
+      "votes-load-error": "Não foi possível carregar o histórico de votação.",
+      "mock-data-caption": "São apresentados dados de pré-visualização porque a indexação de governança por conta ainda não está disponível nesta rede.",
+      "vote-options": {
+        "yes": "Sim",
+        "no": "Não",
+        "abstain": "Abstenção",
+        "veto": "Não com veto",
+        "unspecified": "Não especificado"
+      },
+      "votes-truncated-caption": "Mostrando os 500 votos mais recentes.",
+      "vote-tx-column": "Hash da Tx"
     },
     "Analytics": {
       "title": "Painel de Análise da Conta: Insights sobre a Atividade do Blockchain",
@@ -1971,9 +2029,18 @@
     "title": "Pools de Mineração",
     "description": "Diretório multi-chain de pools de mineração. Cada pool é identificada a partir da atribuição on-chain de blocos; o desempenho por rede fica nas páginas de estatísticas da rede.",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "" },
-      "Links": { "name": "Links", "hint": "" },
-      "Networks": { "name": "Redes", "hint": "" }
+      "Pool": {
+        "name": "Pool",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Networks": {
+        "name": "Redes",
+        "hint": ""
+      }
     }
   },
   "MiningPoolDetail": {
@@ -2009,15 +2076,42 @@
     "story": "{name} é uma pool de mineração verificada na rede {chain}. As estatísticas abaixo derivam da atribuição on-chain de blocos.",
     "p2poolMiners": "O P2Pool informa participantes da sidechain, não workers Stratum.",
     "Table": {
-      "Network": { "name": "Rede", "hint": "Rede em que a pool minera" },
-      "Blocks": { "name": "Blocos encontrados", "hint": "Blocos atribuídos a esta pool na janela selecionada" },
-      "Share": { "name": "Dominância", "hint": "Participação nos blocos da rede encontrados na janela selecionada" },
-      "Miners": { "name": "Mineradores", "hint": "Contagem recente de mineradores conectados informada para esta pool nesta rede" },
-      "Hashrate": { "name": "Hashrate estimado", "hint": "Hashrate estimado a partir da participação de blocos da pool" },
-      "Fee": { "name": "Taxa", "hint": "Taxa da pool conforme declarada pela pool" },
-      "Height": { "name": "Altura", "hint": "Altura do bloco" },
-      "Block Hash": { "name": "Hash do Bloco", "hint": "Hash do bloco" },
-      "Timestamp": { "name": "Timestamp", "hint": "Carimbo de data/hora do bloco" }
+      "Network": {
+        "name": "Rede",
+        "hint": "Rede em que a pool minera"
+      },
+      "Blocks": {
+        "name": "Blocos encontrados",
+        "hint": "Blocos atribuídos a esta pool na janela selecionada"
+      },
+      "Share": {
+        "name": "Dominância",
+        "hint": "Participação nos blocos da rede encontrados na janela selecionada"
+      },
+      "Miners": {
+        "name": "Mineradores",
+        "hint": "Contagem recente de mineradores conectados informada para esta pool nesta rede"
+      },
+      "Hashrate": {
+        "name": "Hashrate estimado",
+        "hint": "Hashrate estimado a partir da participação de blocos da pool"
+      },
+      "Fee": {
+        "name": "Taxa",
+        "hint": "Taxa da pool conforme declarada pela pool"
+      },
+      "Height": {
+        "name": "Altura",
+        "hint": "Altura do bloco"
+      },
+      "Block Hash": {
+        "name": "Hash do Bloco",
+        "hint": "Hash do bloco"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Carimbo de data/hora do bloco"
+      }
     }
   },
   "MiningPoolsBadges": {
@@ -2037,11 +2131,26 @@
     "window30d": "30d",
     "windowAll": "Todo o tempo",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "Pool de mineração identificada pela atribuição on-chain de blocos" },
-      "Blocks": { "name": "Blocos", "hint": "Blocos atribuídos a esta pool na janela selecionada" },
-      "Share": { "name": "Dominância", "hint": "Percentual de blocos da rede encontrados na janela selecionada" },
-      "Hashrate": { "name": "Hashrate", "hint": "Hashrate estimada a partir da participação de blocos da pool" },
-      "Fee": { "name": "Taxa", "hint": "Taxa da pool conforme declarada pela pool" }
+      "Pool": {
+        "name": "Pool",
+        "hint": "Pool de mineração identificada pela atribuição on-chain de blocos"
+      },
+      "Blocks": {
+        "name": "Blocos",
+        "hint": "Blocos atribuídos a esta pool na janela selecionada"
+      },
+      "Share": {
+        "name": "Dominância",
+        "hint": "Percentual de blocos da rede encontrados na janela selecionada"
+      },
+      "Hashrate": {
+        "name": "Hashrate",
+        "hint": "Hashrate estimada a partir da participação de blocos da pool"
+      },
+      "Fee": {
+        "name": "Taxa",
+        "hint": "Taxa da pool conforme declarada pela pool"
+      }
     }
   },
   "PowNetworkStats": {

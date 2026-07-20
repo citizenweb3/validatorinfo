@@ -1684,7 +1684,6 @@
     "verification base fee": "Verification Base Fee",
     "note count": "Note Count",
     "nullifier count": "Nullifier Count",
-    "version": "Version",
     "Tabs": {
       "Expand": "Expand",
       "JSON": "JSON"
@@ -1876,46 +1875,105 @@
       "Claim Address": "Claim Address",
       "account value": "Account Value",
       "token": "Token",
+      "usd": "USD",
+      "accountValueToggle": "Show account value in USD or the network token",
+      "accountValuePending": "This account is queued for a background balance refresh. Check again after the next update.",
+      "accountValueUnsupported": "Account value is not available for this network or address.",
+      "accountValueLiquid": "Liquid: {value}",
+      "accountValueStaked": "Staked: {value}",
+      "accountValueUnbonding": "Unbonding: {value}",
+      "accountValueRewards": "Unclaimed rewards: {value}",
+      "accountValueUpdated": "As of {ago}",
       "Merits": "Merits",
       "Delegations": "Delegations",
+      "delegationsEmpty": "This account has no active delegations.",
+      "delegationsError": "Current delegations could not be loaded. Please reload the page and try again.",
+      "delegationsUnsupported": "Current delegations are not available for this network yet.",
+      "delegationsPreviousPage": "Previous delegations page",
+      "delegationsNextPage": "Next delegations page",
+      "joinDate": "Join date",
+      "firstSeenAtOrBefore": "On or before {date}",
+      "firstSeenAtGenesis": "At genesis · {date}",
+      "firstSeenIndexed": "{date} · block {height}",
+      "delegatedStakeApproximation": "Historical delegated stake is approximate: bonded-state changes, slashing, validator exchange-rate drift, and ambiguous multi-message transactions may not be reconstructed.",
       "Table": {
         "Validator": {
           "name": "Validator",
-          "hint": ""
+          "hint": "Validator receiving this delegation"
         },
         "Staked Amount": {
           "name": "Staked Amount",
-          "hint": ""
+          "hint": "Current amount delegated to this validator"
         },
         "Reward Amount": {
           "name": "Reward Amount",
-          "hint": ""
+          "hint": "Current unclaimed staking rewards in the network token"
         },
         "Reward Value": {
           "name": "Reward Value",
-          "hint": ""
+          "hint": "Approximate USD value of the current unclaimed rewards"
         }
       }
     },
     "Tokens": {
       "title": "Token Portfolio and Assets Holdings",
-      "description": ""
+      "description": "All token transfers involving this account: incoming, outgoing, counterparties and amounts.",
+      "directionColumn": "Direction",
+      "counterpartyColumn": "Counterparty",
+      "amountColumn": "Amount",
+      "txColumn": "Tx Hash",
+      "timeColumn": "Timestamp",
+      "directionIn": "In",
+      "directionOut": "Out",
+      "directionSelf": "Self"
     },
     "Transactions": {
       "title": "Blockchain Account Transaction History",
-      "description": "The complete transaction log is here. I’ve detailed every transaction this address signed or took part in, with filters to help you navigate. It’s your transparent record of blockchain activity. Need to dig deeper? Use our Transaction Explorer for advanced insights!"
+      "description": "The complete transaction log is here. I’ve detailed every transaction this address signed or took part in, with filters to help you navigate. It’s your transparent record of blockchain activity. Need to dig deeper? Use our Transaction Explorer for advanced insights!",
+      "customize": "Customize",
+      "msgTypeLabel": "Message type",
+      "messageTypes": {
+        "send": "Send",
+        "delegate": "Delegate",
+        "undelegate": "Undelegate",
+        "redelegate": "Redelegate",
+        "withdrawRewards": "Rewards",
+        "vote": "Vote",
+        "ibcTransfer": "IBC transfer"
+      },
+      "dateFrom": "From date",
+      "dateTo": "To date",
+      "selectAll": "Select all",
+      "clearAll": "Clear all"
     },
     "Governance": {
       "title": "Governance Participation: Votes and Network Impact",
-      "description": "",
-      "not-available-for-chain": "Governance information is only available for Aztec network",
-      "slashing-history-title": "Slashing History",
-      "voting-history-title": "Voting History",
-      "slashing-events-stat": "Slashing Events",
-      "total-votes-stat": "Total Votes",
-      "total-slashed-stat": "Total Slashed",
       "no-governance-activity": "No governance activity found for this address",
-      "proposal-id-column": "Proposal ID"
+      "proposal-id-column": "Proposal",
+      "vote-column": "Vote",
+      "network-impact-column": "Network Impact ≈%",
+      "proposal-title-unavailable": "Proposal details are not indexed yet",
+      "weighted-vote-badge": "Weighted",
+      "weighted-vote-tooltip": "Weighted vote. The indexer currently preserves only the first option of split votes; impact uses the account's full reconstructed stake.",
+      "approximate-impact-value": "≈{value}",
+      "impact-methodology-tooltip": "Approximate: reconstructed delegated stake at the vote height divided by the proposal's settled voting power. Bonding status and slashing drift may affect the result.",
+      "impact-proposal-unavailable": "Impact is unavailable until this proposal is indexed by ValidatorInfo.",
+      "impact-voting-in-progress": "Impact is calculated only after voting closes and the final tally is settled.",
+      "impact-tally-unavailable": "The proposal's settled tally is unavailable or cannot be verified.",
+      "impact-stake-unavailable": "Delegated stake at this vote height could not be reconstructed safely.",
+      "participation-voted": "Voted",
+      "participation-not-voted": "Not voted",
+      "votes-load-error": "Voting history could not be loaded.",
+      "mock-data-caption": "Preview data is shown because per-account governance indexing is not available for this network yet.",
+      "vote-options": {
+        "yes": "Yes",
+        "no": "No",
+        "abstain": "Abstain",
+        "veto": "No with veto",
+        "unspecified": "Unspecified"
+      },
+      "votes-truncated-caption": "Showing the 500 most recent votes.",
+      "vote-tx-column": "Tx Hash"
     },
     "Analytics": {
       "title": "Account Analytics Dashboard: Insights into Blockchain Activity",
@@ -1970,9 +2028,18 @@
     "title": "Mining Pools",
     "description": "Multi-chain directory of mining pools. Each pool is identified from on-chain block attribution; per-network performance lives on the network stats pages.",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "" },
-      "Links": { "name": "Links", "hint": "" },
-      "Networks": { "name": "Networks", "hint": "" }
+      "Pool": {
+        "name": "Pool",
+        "hint": ""
+      },
+      "Links": {
+        "name": "Links",
+        "hint": ""
+      },
+      "Networks": {
+        "name": "Networks",
+        "hint": ""
+      }
     }
   },
   "MiningPoolDetail": {
@@ -2008,15 +2075,42 @@
     "story": "{name} is a verified mining pool on the {chain} network. The stats below are derived from on-chain block attribution.",
     "p2poolMiners": "P2Pool reports sidechain participants, not stratum workers.",
     "Table": {
-      "Network": { "name": "Network", "hint": "Network the pool mines on" },
-      "Blocks": { "name": "Blocks Found", "hint": "Blocks attributed to this pool in the selected window" },
-      "Share": { "name": "Dominance", "hint": "Share of network blocks found in the selected window" },
-      "Miners": { "name": "Miners", "hint": "Fresh connected-miner count reported for this pool on this network" },
-      "Hashrate": { "name": "Estimated Hashrate", "hint": "Estimated hashrate from the pool's block share" },
-      "Fee": { "name": "Fee", "hint": "Pool fee as declared by the pool" },
-      "Height": { "name": "Height", "hint": "Block height" },
-      "Block Hash": { "name": "Block Hash", "hint": "Block hash" },
-      "Timestamp": { "name": "Timestamp", "hint": "Block timestamp" }
+      "Network": {
+        "name": "Network",
+        "hint": "Network the pool mines on"
+      },
+      "Blocks": {
+        "name": "Blocks Found",
+        "hint": "Blocks attributed to this pool in the selected window"
+      },
+      "Share": {
+        "name": "Dominance",
+        "hint": "Share of network blocks found in the selected window"
+      },
+      "Miners": {
+        "name": "Miners",
+        "hint": "Fresh connected-miner count reported for this pool on this network"
+      },
+      "Hashrate": {
+        "name": "Estimated Hashrate",
+        "hint": "Estimated hashrate from the pool's block share"
+      },
+      "Fee": {
+        "name": "Fee",
+        "hint": "Pool fee as declared by the pool"
+      },
+      "Height": {
+        "name": "Height",
+        "hint": "Block height"
+      },
+      "Block Hash": {
+        "name": "Block Hash",
+        "hint": "Block hash"
+      },
+      "Timestamp": {
+        "name": "Timestamp",
+        "hint": "Block timestamp"
+      }
     }
   },
   "MiningPoolsBadges": {
@@ -2036,11 +2130,26 @@
     "window30d": "30d",
     "windowAll": "All-time",
     "Table": {
-      "Pool": { "name": "Pool", "hint": "Mining pool identified from on-chain block attribution" },
-      "Blocks": { "name": "Blocks", "hint": "Blocks attributed to this pool in the selected window" },
-      "Share": { "name": "Dominance", "hint": "Percentage of network blocks found in the selected window" },
-      "Hashrate": { "name": "Hashrate", "hint": "Estimated hashrate from the pool's block share" },
-      "Fee": { "name": "Fee", "hint": "Pool fee as declared by the pool" }
+      "Pool": {
+        "name": "Pool",
+        "hint": "Mining pool identified from on-chain block attribution"
+      },
+      "Blocks": {
+        "name": "Blocks",
+        "hint": "Blocks attributed to this pool in the selected window"
+      },
+      "Share": {
+        "name": "Dominance",
+        "hint": "Percentage of network blocks found in the selected window"
+      },
+      "Hashrate": {
+        "name": "Hashrate",
+        "hint": "Estimated hashrate from the pool's block share"
+      },
+      "Fee": {
+        "name": "Fee",
+        "hint": "Pool fee as declared by the pool"
+      }
     }
   },
   "PowNetworkStats": {

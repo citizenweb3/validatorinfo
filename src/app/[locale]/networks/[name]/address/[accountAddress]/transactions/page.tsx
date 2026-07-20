@@ -1,9 +1,11 @@
-import { Locale, NextPageWithLocale } from '@/i18n';
 import { getTranslations } from 'next-intl/server';
-import SubDescription from '@/components/sub-description';
+
+import AccountTransactions from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/account-transactions';
 import PageTitle from '@/components/common/page-title';
-import AccountTransactions
-  from '@/app/networks/[name]/address/[accountAddress]/transactions/transactions-table/account-transactions';
+import SubDescription from '@/components/sub-description';
+import { Locale, NextPageWithLocale } from '@/i18n';
+import { canonicalTxFilterKey, parseTxFiltersFromSearchParams } from '@/utils/tx-filters';
+import { isTxByAddressChainSupported } from '@/utils/tx-supported-chains';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -21,26 +23,32 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const AccountTransactionsPage: NextPageWithLocale<PageProps> = async (
-  {
-    params: { locale, name, accountAddress },
-    searchParams: q,
-  }) => {
+const AccountTransactionsPage: NextPageWithLocale<PageProps> = async ({
+  params: { locale, name, accountAddress },
+  searchParams: q,
+}) => {
   const t = await getTranslations({ locale, namespace: 'AccountPage.Transactions' });
 
   // Cursor-in-URL pagination: ?c=<cursor token>&w=<window>. Cold load lands exactly on that window.
   const cursorToken = typeof q.c === 'string' ? q.c : undefined;
   const windowIndex = q.w ? parseInt(q.w as string, 10) : 0;
+  const filters = parseTxFiltersFromSearchParams(q, name);
+  const filterKey = canonicalTxFilterKey(filters);
 
   return (
     <div className="mb-14">
       <PageTitle text={t('title')} />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <AccountTransactions chainName={name}
-                           page={'TxSummaryPage'}
-                           accountAddress={accountAddress}
-                           cursorToken={cursorToken}
-                           windowIndex={Number.isFinite(windowIndex) ? windowIndex : 0} />
+      <AccountTransactions
+        chainName={name}
+        page={'TxSummaryPage'}
+        accountAddress={accountAddress}
+        cursorToken={cursorToken}
+        windowIndex={Number.isFinite(windowIndex) ? windowIndex : 0}
+        filters={filters}
+        filterKey={filterKey}
+        showFilters={isTxByAddressChainSupported(name)}
+      />
     </div>
   );
 };
