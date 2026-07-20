@@ -128,6 +128,10 @@ export const CACHE_KEYS = {
     byAddress: (chainName: string, addresses: string, cursorKey: string) =>
       `txs:byaddr:${chainName}:${addresses.split(',').sort().join(',')}:${cursorKey}`,
   },
+  delegations: {
+    byValidator: (chainName: string, validator: string, cursorKey: string) =>
+      `deleg:byval:${chainName}:${validator}:${cursorKey}`,
+  },
 };
 
 export const CACHE_TTL = {

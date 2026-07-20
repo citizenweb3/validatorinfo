@@ -8,10 +8,12 @@ import BaseTableCell from '@/components/common/table/base-table-cell';
 import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import TableHeaderItem from '@/components/common/table/table-header-item';
-import db from '@/db';
+import Tooltip from '@/components/common/tooltip';
 import { Locale, NextPageWithLocale } from '@/i18n';
-import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-service';
+import miningPoolService from '@/services/mining-pool-service';
+import { HashrateWindow, isValidWindow } from '@/services/monero-service';
 import { formatHashrate } from '@/utils/format-hashrate';
+import { getFreshMinersCount } from '@/utils/monero-pool-miners';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -21,9 +23,14 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
+const WINDOW_ORDER: HashrateWindow[] = ['24h', '7d', '30d', 'all'];
+
 export async function generateMetadata({ params: { locale, poolSlug } }: { params: { locale: Locale; poolSlug: string } }) {
-  const t = await getTranslations({ locale, namespace: 'MiningPoolDetail' });
-  const pool = await db.miningPool.findFirst({ where: { slug: poolSlug }, select: { name: true } });
+  const [t, pools] = await Promise.all([
+    getTranslations({ locale, namespace: 'MiningPoolDetail' }),
+    miningPoolService.getNetworksBySlug(poolSlug),
+  ]);
+  const pool = pools[0];
 
   return { title: pool ? `${pool.name} — ${t('metaTitle')}` : t('metaTitle') };
 }
@@ -32,23 +39,23 @@ export async function generateMetadata({ params: { locale, poolSlug } }: { param
 // networks tab (first column = Network, then the metrics) via BaseTable + TableHeaderItem.
 const MiningPoolNetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale, poolSlug }, searchParams: q }) => {
   unstable_setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: 'MiningPoolDetail' });
+  const [t, tProfile, pools] = await Promise.all([
+    getTranslations({ locale, namespace: 'MiningPoolDetail' }),
+    getTranslations({ locale, namespace: 'MiningPoolProfileHeader' }),
+    miningPoolService.getNetworksBySlug(poolSlug),
+  ]);
 
-  const pool = await db.miningPool.findFirst({
-    where: { slug: poolSlug },
-    include: { chain: true, stats: true },
-  });
+  if (pools.length === 0) notFound();
 
-  if (!pool) notFound();
-  if (!pool.isVerified) notFound();
-
-  const availableWindows = await moneroService.getMoneroAvailableWindows();
+  const availableWindows = WINDOW_ORDER.filter((window) =>
+    pools.some((pool) => pool.stats.some((stat) => stat.windowKind === window)),
+  );
   const windowRaw = Array.isArray(q.window) ? q.window[0] : q.window;
   const requested: HashrateWindow = isValidWindow(windowRaw) ? windowRaw : '24h';
-  const safeWindow: HashrateWindow = availableWindows.includes(requested) ? requested : '24h';
-
-  const stat = pool.stats.find((s) => s.windowKind === safeWindow) ?? null;
-  const feeText = pool.feePercent != null ? `${pool.feePercent.toFixed(2)}%` : '-';
+  const safeWindow: HashrateWindow = availableWindows.includes(requested)
+    ? requested
+    : (availableWindows[0] ?? '24h');
+  const referenceTime = Date.now();
 
   const windowLabels: Record<HashrateWindow, string> = {
     '24h': t('window24h'),
@@ -60,7 +67,7 @@ const MiningPoolNetworksPage: NextPageWithLocale<PageProps> = async ({ params: {
 
   return (
     <div className="mb-24 flex flex-col gap-8">
-      <PageTitle prefix={pool.name} text={t('networksTitle')} />
+      <PageTitle prefix={pools[0].name} text={t('networksTitle')} />
       <section>
         {windowOptions.length > 1 && (
           <div className="flex flex-row flex-wrap items-end justify-end gap-4">
@@ -73,32 +80,48 @@ const MiningPoolNetworksPage: NextPageWithLocale<PageProps> = async ({ params: {
               <TableHeaderItem page="MiningPoolProfileHeader" name="Network" />
               <TableHeaderItem page="MiningPoolProfileHeader" name="Blocks" />
               <TableHeaderItem page="MiningPoolProfileHeader" name="Share" />
+              <TableHeaderItem page="MiningPoolProfileHeader" name="Miners" />
               <TableHeaderItem page="MiningPoolProfileHeader" name="Hashrate" />
               <TableHeaderItem page="MiningPoolProfileHeader" name="Fee" />
             </tr>
           </thead>
           <tbody>
-            <BaseTableRow>
-              <BaseTableCell className="group/avatar flex items-center px-2 py-2 font-sfpro hover:text-highlight">
-                <TableAvatar
-                  icon={pool.chain.logoUrl}
-                  name={pool.chain.prettyName ?? pool.chain.name}
-                  href={`/networks/${pool.chain.name}/overview`}
-                />
-              </BaseTableCell>
-              <BaseTableCell className="px-2 py-2 font-sfpro text-base">
-                <div className="text-center">{stat ? stat.blocksFound.toLocaleString() : '-'}</div>
-              </BaseTableCell>
-              <BaseTableCell className="px-2 py-2 font-sfpro text-base">
-                <div className="text-center">{stat ? `${(stat.sharePercent ?? 0).toFixed(2)}%` : '-'}</div>
-              </BaseTableCell>
-              <BaseTableCell className="px-2 py-2 font-sfpro text-base">
-                <div className="text-center">{stat ? formatHashrate(stat.hashrateEstimate) : '-'}</div>
-              </BaseTableCell>
-              <BaseTableCell className="px-2 py-2 font-sfpro text-base">
-                <div className="text-center">{feeText}</div>
-              </BaseTableCell>
-            </BaseTableRow>
+            {pools.map((pool) => {
+              const stat = pool.stats.find((item) => item.windowKind === safeWindow) ?? null;
+              const minersCount = getFreshMinersCount(pool.minersCount, pool.minersUpdatedAt, referenceTime);
+              const feeText = pool.feePercent != null ? `${pool.feePercent.toFixed(2)}%` : '-';
+
+              return (
+                <BaseTableRow key={pool.id}>
+                  <BaseTableCell className="group/avatar flex items-center px-2 py-2 font-sfpro hover:text-highlight">
+                    <TableAvatar
+                      icon={pool.chain.logoUrl}
+                      name={pool.chain.prettyName ?? pool.chain.name}
+                      href={`/networks/${pool.chain.name}/overview`}
+                    />
+                  </BaseTableCell>
+                  <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+                    <div className="text-center">{stat ? stat.blocksFound.toLocaleString(locale) : '-'}</div>
+                  </BaseTableCell>
+                  <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+                    <div className="text-center">{stat ? `${(stat.sharePercent ?? 0).toFixed(2)}%` : '-'}</div>
+                  </BaseTableCell>
+                  <BaseTableCell className="px-2 py-2">
+                    <Tooltip tooltip={pool.slug === 'p2pool' ? tProfile('p2poolMiners') : ''} direction="top">
+                      <div className="text-center font-handjet text-lg">
+                        {minersCount === null ? '-' : minersCount.toLocaleString(locale)}
+                      </div>
+                    </Tooltip>
+                  </BaseTableCell>
+                  <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+                    <div className="text-center">{stat ? formatHashrate(stat.hashrateEstimate) : '-'}</div>
+                  </BaseTableCell>
+                  <BaseTableCell className="px-2 py-2 font-sfpro text-base">
+                    <div className="text-center">{feeText}</div>
+                  </BaseTableCell>
+                </BaseTableRow>
+              );
+            })}
           </tbody>
         </BaseTable>
       </section>

@@ -2,24 +2,18 @@ import { getTranslations } from 'next-intl/server';
 import { FC } from 'react';
 
 import SubTitle from '@/components/common/sub-title';
-import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
-import validatorService from '@/services/validator-service';
 import TokenomicsParams from '@/app/networks/[name]/(network-profile)/tokenomics/tokenomics-params';
+import PowTokenomicsParams from '@/app/networks/[name]/(network-profile)/tokenomics/pow-tokenomics-params';
+import { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
+  tokenPriceValue: number | null;
 }
 
-const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
+const DistributionGiniParameters: FC<OwnProps> = async ({ chain, tokenPriceValue }) => {
   const t = await getTranslations('NetworkTokenomics');
-
-  const isAztec = chain?.name === 'aztec' || chain?.name === 'aztec-testnet';
-  const totalValidators = chain
-    ? isAztec
-      ? await validatorService.getAztecValidators(chain.name as 'aztec' | 'aztec-testnet', chain.id)
-      : await validatorService.getValidatorsByChainId(chain.id)
-    : null;
-  const tokenPrice = chain ? await chainService.getTokenPriceByChainId(chain.id) : null;
+  const isPow = chain?.consensusType === 'pow';
   const fdv = chain?.name === 'ethereum-sepolia' || chain?.name === 'warden-testnet' ? 0 : chain?.tokenomics?.fdv;
 
   const communityPool =
@@ -65,33 +59,37 @@ const DistributionGiniParameters: FC<OwnProps> = async ({ chain }) => {
         <div className="mt-2 flex flex-col items-start gap-2 font-sfpro text-base">
           <div>{t('number of validators')}</div>
           <div className="font-handjet text-lg text-highlight">
-            {totalValidators?.length ?? 'N/A'}
+            N/A
           </div>
         </div>
       </div>
 
       <SubTitle className={"mt-20 mb-8"} text={t('Params')} />
-      <TokenomicsParams
-        communityPool={communityPool}
-        rewardsInTokens={rewardsInTokens}
-        pendingUndelegations={pendingUndelegations}
-        fdv={fdv}
-        tvs={Number(chain?.tokenomics?.tvs)}
-        inflation={Number(chain?.tokenomics?.inflation)}
-        circulatingTokensPercent={circulatingTokensPercent}
-        tokenPriceValue={tokenPrice ? tokenPrice.value : null}
-        denom={chain?.params?.denom ?? ''}
-        translations={{
-          communityPoolTvl: t('community pool tvl'),
-          tokensStaked: t('% of tokens staked'),
-          rewardToPayout: t('reward to payout'),
-          inflationRate: t('inflation rate'),
-          circulatingTokens: t('circulating tokens %'),
-          pendingUndelegations: t('pending undelegations'),
-          fdv: t('fdv'),
-          token: t('Token'),
-        }}
-      />
+      {isPow ? (
+        <PowTokenomicsParams chainName={chain?.name ?? null} />
+      ) : (
+        <TokenomicsParams
+          communityPool={communityPool}
+          rewardsInTokens={rewardsInTokens}
+          pendingUndelegations={pendingUndelegations}
+          fdv={fdv}
+          tvs={Number(chain?.tokenomics?.tvs)}
+          inflation={Number(chain?.tokenomics?.inflation)}
+          circulatingTokensPercent={circulatingTokensPercent}
+          tokenPriceValue={tokenPriceValue}
+          denom={chain?.params?.denom ?? ''}
+          translations={{
+            communityPoolTvl: t('community pool tvl'),
+            tokensStaked: t('% of tokens staked'),
+            rewardToPayout: t('reward to payout'),
+            inflationRate: t('inflation rate'),
+            circulatingTokens: t('circulating tokens %'),
+            pendingUndelegations: t('pending undelegations'),
+            fdv: t('fdv'),
+            token: t('Token'),
+          }}
+        />
+      )}
     </div>
   );
 };

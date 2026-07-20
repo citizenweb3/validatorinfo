@@ -4,7 +4,6 @@ import PassportMetricsBlocks
   from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/passport-metrics-blocks';
 import VanityChart from '@/app/validators/[id]/[operatorAddress]/validator_passport/authz/vanity-chart';
 import { NextPageWithLocale } from '@/i18n';
-import validatorService from '@/services/validator-service';
 import SubDescription from '@/components/sub-description';
 import { getTranslations } from 'next-intl/server';
 import nodeService from '@/services/node-service';
@@ -19,16 +18,23 @@ const PassportWithdrawRewardsPage: NextPageWithLocale<PageProps> = async ({
   const t = await getTranslations({ locale, namespace: 'ValidatorPassportPage' });
   const validatorId = parseInt(id);
   const node = await nodeService.getNodeByAddressAndId(operatorAddress, validatorId);
+  const authzTab = 'withdraw_rewards' as const;
 
   return (
     <>
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <PassportMetricsBlocks node={node} />
-      <div className="mt-20 flex justify-between gap-24">
+      <div className="mt-16 flex justify-between gap-6">
         <Medals locale={locale} />
         <VanityChart />
       </div>
-      <NodeDetails locale={locale} validatorId={validatorId} operatorAddress={operatorAddress} node={node} />
+      <NodeDetails
+        authzTab={authzTab}
+        locale={locale}
+        validatorId={validatorId}
+        operatorAddress={operatorAddress}
+        node={node}
+      />
     </>
   );
 };

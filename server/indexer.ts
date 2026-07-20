@@ -136,6 +136,7 @@ const runServer = async () => {
     { name: 'update-nodes-commissions', schedule: timers.everyHour },
     { name: 'circulating-tokens-onchain', schedule: dailyAt(3, 37) },
     { name: 'circulating-tokens-public', schedule: dailyAt(4, 53) },
+    { name: 'update-nodes-authz-grants', schedule: dailyAt(5, 17) },
     { name: 'coingecko-data', schedule: timers.in30MinEveryHour },
     { name: 'price-history', schedule: dailyAt(6, 13) },
     { name: 'update-fdv', schedule: timers.everyHour },
@@ -163,6 +164,7 @@ const runServer = async () => {
     { name: 'monero-network-info', schedule: timers.every5mins },
     { name: 'monero-pool-attribution', schedule: timers.every10mins },
     { name: 'monero-pool-stats', schedule: timers.everyHour },
+    { name: 'monero-pool-daily-share', schedule: dailyAt(22, 23) },
   ];
 
   specialTasks.forEach(({ name, schedule }) => {

@@ -99,6 +99,23 @@ export interface CosmosTxsCursor {
   next_before_index: number;
 }
 
+export interface CosmosDelegationEvent {
+  delegator_address: string;
+  amount: string;
+  denom: string;
+  height: string;
+  tx_index: number;
+  msg_index: number;
+  tx_hash: string;
+  time: string;
+}
+
+export interface CosmosDelegationsCursor {
+  next_before_height: string;
+  next_before_index: number;
+  next_before_msg_index: number;
+}
+
 export interface CosmosListResponse<T, C = CosmosBlocksCursor | CosmosTxsCursor> {
   data: T[];
   cursor: C | null;
@@ -108,6 +125,7 @@ export interface CosmosListResponse<T, C = CosmosBlocksCursor | CosmosTxsCursor>
 
 export type CosmosBlocksListResponse = CosmosListResponse<CosmosBlockSummary, CosmosBlocksCursor>;
 export type CosmosTxsListResponse = CosmosListResponse<CosmosTxSummary, CosmosTxsCursor>;
+export type CosmosDelegationsResponse = CosmosListResponse<CosmosDelegationEvent, CosmosDelegationsCursor>;
 
 export interface CosmosBlockDetailResponse {
   data: CosmosBlockDetail;

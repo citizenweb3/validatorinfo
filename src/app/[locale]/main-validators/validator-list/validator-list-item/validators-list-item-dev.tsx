@@ -92,7 +92,7 @@ const ValidatorListItemDev: FC<OwnProps> = ({ chains, validator }) => {
         <ValidatorListItemTVS id={validator.id} activeId={activeId} setActiveId={setActiveId} />
       </BaseTableCell>
       <BaseTableCell className={rowStyle}>
-        <ValidatorListItemChains chains={validatorChains} validator={validator} />
+        <ValidatorListItemChains chains={validatorChains} />
       </BaseTableCell>
     </BaseTableRow>
   );

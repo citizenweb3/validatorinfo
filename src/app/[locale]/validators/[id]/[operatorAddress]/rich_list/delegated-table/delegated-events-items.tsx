@@ -26,8 +26,10 @@ const getEtherscanTxLink = (txHash: string): string => {
 
 const DelegatedEventsItem: FC<OwnProps> = ({ chainName, item }) => {
   const isAztec = isAztecChain(chainName);
-  const txLink = isAztec ? getEtherscanTxLink(item.txHash) : `/networks/${chainName}/tx`;
-  const blockLink = isAztec ? `/networks/${chainName}/blocks/${item.blockHeight}` : `/networks/${chainName}/blocks`;
+  const txLink = isAztec
+    ? getEtherscanTxLink(item.txHash)
+    : `/networks/${chainName}/tx/${encodeURIComponent(item.txHash)}`;
+  const blockLink = `/networks/${chainName}/blocks/${item.blockHeight}`;
   const accountLink = `/networks/${chainName}/address/${item.address}/passport`;
 
   return (

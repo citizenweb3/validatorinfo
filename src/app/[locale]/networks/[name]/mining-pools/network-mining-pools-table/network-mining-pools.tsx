@@ -60,8 +60,10 @@ const NetworkMiningPools: FC<OwnProps> = async ({ chainName, window, sort }) => 
 
   return (
     <div>
-      <div className="mt-6 flex flex-row items-end justify-end">
-        {windowOptions.length > 1 && <HashrateWindowSelector current={safeWindow} options={windowOptions} />}
+      <div className="mt-6 flex justify-end">
+        {windowOptions.length > 1 && (
+          <HashrateWindowSelector current={safeWindow} options={windowOptions} />
+        )}
       </div>
       <BaseTable className="my-4">
         <thead>

@@ -6,6 +6,7 @@ import {
   UNKNOWN_POOL_SLUG,
 } from '@/server/tools/chains/monero/attribution-source';
 import { getTipBlock } from '@/server/tools/chains/monero/indexer-client';
+import { fetchPoolStats, getPoolRegistry } from '@/server/tools/chains/monero/pool-client';
 
 const { logInfo, logError, logWarn } = logger('monero-pool-stats');
 
@@ -42,13 +43,6 @@ const updateMoneroPoolStats = async (): Promise<void> => {
     }
     const chainId = dbChain.id;
 
-    const tip = await getTipBlock();
-    if (!tip || tip.height <= 0) {
-      logWarn('No usable tip block, skipping');
-      return;
-    }
-    const tipHeight = tip.height;
-
     const pools = await db.miningPool.findMany({ where: { chainId }, select: { id: true, slug: true } });
     let unknownId = pools.find((p) => p.slug === UNKNOWN_POOL_SLUG)?.id;
     if (unknownId === undefined) {
@@ -63,6 +57,46 @@ const updateMoneroPoolStats = async (): Promise<void> => {
     const namedPools = pools.filter((p) => p.slug !== UNKNOWN_POOL_SLUG);
 
     const now = new Date();
+    const registryBySlug = new Map(getPoolRegistry().map((pool) => [pool.key, pool]));
+
+    const minerUpdateResults = await Promise.all(
+      namedPools.map(async (pool) => {
+        const registryPool = registryBySlug.get(pool.slug);
+        if (!registryPool) {
+          logWarn(`pool=${pool.slug} missing from registry, skipping live miners`);
+          return false;
+        }
+        if (!registryPool.statsUrl) return false;
+
+        try {
+          const stats = await fetchPoolStats(registryPool);
+          const miners = stats?.miners;
+          if (miners == null || !Number.isSafeInteger(miners) || miners <= 0) {
+            logWarn(`pool=${pool.slug} live miners unavailable, keeping previous value`);
+            return false;
+          }
+
+          await db.miningPool.update({
+            where: { id: pool.id },
+            data: { minersCount: miners, minersUpdatedAt: now },
+          });
+          return true;
+        } catch (e) {
+          logWarn(`pool=${pool.slug} live miners update failed: ${e instanceof Error ? e.message : String(e)}`);
+          return false;
+        }
+      }),
+    );
+    const configuredPoolCount = namedPools.filter((pool) => registryBySlug.get(pool.slug)?.statsUrl).length;
+    const updatedMinerPools = minerUpdateResults.filter(Boolean).length;
+    logInfo(`monero-pool-stats miners: updated=${updatedMinerPools}/${configuredPoolCount}`);
+
+    const tip = await getTipBlock();
+    if (!tip || tip.height <= 0) {
+      logWarn('No usable tip block, skipping window stats after processing live miners');
+      return;
+    }
+    const tipHeight = tip.height;
 
     for (const window of WINDOWS) {
       // Height-based window bound + timestamps for the stored row.

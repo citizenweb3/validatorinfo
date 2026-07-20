@@ -6,26 +6,36 @@ import { FC, useState } from 'react';
 import BaseModal from '@/components/common/modal/base-modal';
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
-import { ValidatorWithNodes } from '@/services/validator-service';
 
 interface OwnProps {
   chains: (Chain & { valoper: string })[];
-  validator: ValidatorWithNodes;
 }
 
-const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw, validator }) => {
+// One entry per NODE arrives here; collapse to unique networks so a validator running
+// several nodes on the same chain shows that chain once, linked to the network — not to
+// each duplicated node.
+const dedupeByChain = (raw: (Chain & { valoper: string })[]): Chain[] => {
+  const seen = new Set<number>();
+  const unique: Chain[] = [];
+  for (const chain of raw) {
+    if (chain == null || typeof chain.id !== 'number' || !chain.name) continue;
+    if (seen.has(chain.id)) continue;
+    seen.add(chain.id);
+    unique.push(chain);
+  }
+  return unique;
+};
+
+const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw }) => {
   const [isModalOpened, setIsModalOpened] = useState<boolean>(false);
 
-  const chains = raw.filter((c) => typeof c !== 'undefined');
+  const chains = dedupeByChain(raw);
 
   return (
     <div className="flex items-center justify-center space-x-0.5">
       {chains.length > 4 && <div className="mr-2 font-handjet text-sm">{chains.length}:</div>}
       {chains.slice(0, 4).map((chain) => (
-        <Link
-          key={chain.valoper}
-          href={`/validators/${validator.id}/${chain.valoper}/validator_passport/authz/withdraw_rewards`}
-        >
+        <Link key={chain.id} href={`/networks/${chain.name}/overview`}>
           <Tooltip direction="top" tooltip={chain.prettyName} className="text-sm font-bold">
             <Image
               src={chain.logoUrl}
@@ -57,11 +67,7 @@ const ValidatorListItemChains: FC<OwnProps> = ({ chains: raw, validator }) => {
             >
               <div className="flex max-h-96 w-40 flex-row flex-wrap items-center justify-center">
                 {chains.map((chain) => (
-                  <Link
-                    key={chain.valoper}
-                    href={`/validators/${validator.id}/${chain.valoper}/validator_passport/authz/withdraw_rewards`}
-                    className="h-7 w-7"
-                  >
+                  <Link key={chain.id} href={`/networks/${chain.name}/overview`} className="h-7 w-7">
                     <Tooltip direction="top" tooltip={chain.prettyName} className="text-sm font-bold">
                       <Image
                         src={chain.logoUrl}

@@ -1,7 +1,10 @@
 import db from '@/db';
 import logger from '@/logger';
 import { MONERO_INDEXER_PAGE_SIZE } from '@/server/tools/chains/monero/constants';
-import { listMoneroBlocks } from '@/server/tools/chains/monero/indexer-client';
+import {
+  listMoneroBlocks,
+  MoneroBlock as IndexerMoneroBlock,
+} from '@/server/tools/chains/monero/indexer-client';
 import {
   UNKNOWN_POOL_NAME,
   UNKNOWN_POOL_SLUG,
@@ -23,6 +26,36 @@ interface IndexerBlockInfo {
   isCanonical: boolean;
 }
 
+interface MoneroBlockCreateInput {
+  chainId: number;
+  height: number;
+  blockHash: string;
+  blockTimestamp: Date;
+  majorVersion: number;
+  minorVersion: number;
+  size: number;
+  weight: number;
+  longTermWeight: number;
+  txCount: number;
+  rewardAtomic: string;
+  isCanonical: boolean;
+}
+
+const toMoneroBlockCreateInput = (chainId: number, blk: IndexerMoneroBlock): MoneroBlockCreateInput => ({
+  chainId,
+  height: blk.height,
+  blockHash: blk.hash,
+  blockTimestamp: new Date(blk.timestamp * 1000),
+  majorVersion: blk.majorVersion,
+  minorVersion: blk.minorVersion,
+  size: blk.size,
+  weight: blk.weight,
+  longTermWeight: blk.longTermWeight,
+  txCount: blk.txCount,
+  rewardAtomic: blk.reward,
+  isCanonical: blk.isCanonical,
+});
+
 // Page the indexer block list (desc) from tip down to `floorHeight`, into a
 // hash -> {height, timestamp, isCanonical} map. Bounded by MAX_PAGES. The list
 // is canonical-filtered by the indexer (canonical=true default), so an orphaned
@@ -30,20 +63,33 @@ interface IndexerBlockInfo {
 // caller tell "absent because orphaned (within span)" from "absent because below
 // the scanned depth". Returns the lowest height actually covered.
 const buildCanonicalMap = async (
+  chainId: number,
   floorHeight: number,
 ): Promise<{ map: Map<string, IndexerBlockInfo>; lowestHeight: number }> => {
   const map = new Map<string, IndexerBlockInfo>();
+  const moneroBlocks: MoneroBlockCreateInput[] = [];
   let offset = 0;
   let lowestHeight = Number.POSITIVE_INFINITY;
   for (let pages = 0; pages < MAX_PAGES; pages++) {
     const page = await listMoneroBlocks({ limit: MONERO_INDEXER_PAGE_SIZE, offset, order: 'desc' });
     for (const blk of page.items) {
       map.set(blk.hash, { height: blk.height, timestamp: blk.timestamp, isCanonical: blk.isCanonical });
+      moneroBlocks.push(toMoneroBlockCreateInput(chainId, blk));
       if (blk.height < lowestHeight) lowestHeight = blk.height;
     }
     const lowest = page.items.length ? page.items[page.items.length - 1].height : 0;
     if (!page.hasMore || lowest <= floorHeight) break;
     offset = page.nextOffset;
+  }
+  if (moneroBlocks.length) {
+    // Telemetry persistence is best-effort and MUST NOT abort pool attribution: a single malformed
+    // block (e.g. a missing indexer field -> NaN Int) would otherwise throw out of this shared code
+    // path and skip the attribution + reorg writes. Isolate it — log and continue.
+    try {
+      await db.moneroBlock.createMany({ data: moneroBlocks, skipDuplicates: true });
+    } catch (e: any) {
+      logError(`monero-block telemetry persist failed (isolated): ${e?.message ?? String(e)}`, e);
+    }
   }
   return { map, lowestHeight: lowestHeight === Number.POSITIVE_INFINITY ? 0 : lowestHeight };
 };
@@ -109,7 +155,7 @@ const updateMoneroPoolAttribution = async (): Promise<void> => {
     }
 
     // 2. Confirm against canonical indexer set (batched map).
-    const { map: confirmMap } = await buildCanonicalMap(minHeight);
+    const { map: confirmMap } = await buildCanonicalMap(chainId, minHeight);
 
     const pools = await db.miningPool.findMany({ where: { chainId }, select: { id: true, slug: true } });
     const slugToId = new Map(pools.map((p) => [p.slug, p.id]));
@@ -205,6 +251,7 @@ const updateMoneroPoolAttribution = async (): Promise<void> => {
     // 5. Bounded reorg re-verify (two-way), depth fixed at REORG_RECHECK rows —
     //    independent of what pools reported. Uses its own canonical map.
     let reorged = 0;
+    let blockReorged = 0;
     const recent = await db.moneroBlockAttribution.findMany({
       where: { chainId },
       orderBy: { blockTimestamp: 'desc' },
@@ -213,7 +260,7 @@ const updateMoneroPoolAttribution = async (): Promise<void> => {
     });
     if (recent.length) {
       const minRecent = recent.reduce((m, r) => Math.min(m, r.height), Number.POSITIVE_INFINITY);
-      const { map: reorgMap, lowestHeight: reorgLowest } = await buildCanonicalMap(minRecent);
+      const { map: reorgMap, lowestHeight: reorgLowest } = await buildCanonicalMap(chainId, minRecent);
       const setFalse: string[] = [];
       const setTrue: string[] = [];
       for (const r of recent) {
@@ -227,17 +274,40 @@ const updateMoneroPoolAttribution = async (): Promise<void> => {
           setFalse.push(r.blockHash);
         }
       }
+      const recentBlocks =
+        reorgLowest > 0
+          ? await db.moneroBlock.findMany({
+              where: { chainId, height: { gte: reorgLowest } },
+              select: { blockHash: true, height: true, isCanonical: true },
+            })
+          : [];
+      const blockSetFalse: string[] = [];
+      const blockSetTrue: string[] = [];
+      for (const r of recentBlocks) {
+        if (reorgMap.has(r.blockHash)) {
+          if (!r.isCanonical) blockSetTrue.push(r.blockHash);
+        } else if (r.height >= reorgLowest && r.isCanonical) {
+          blockSetFalse.push(r.blockHash);
+        }
+      }
       if (setFalse.length) {
         await db.moneroBlockAttribution.updateMany({ where: { chainId, blockHash: { in: setFalse } }, data: { isCanonical: false } });
       }
       if (setTrue.length) {
         await db.moneroBlockAttribution.updateMany({ where: { chainId, blockHash: { in: setTrue } }, data: { isCanonical: true } });
       }
+      if (blockSetFalse.length) {
+        await db.moneroBlock.updateMany({ where: { chainId, blockHash: { in: blockSetFalse } }, data: { isCanonical: false } });
+      }
+      if (blockSetTrue.length) {
+        await db.moneroBlock.updateMany({ where: { chainId, blockHash: { in: blockSetTrue } }, data: { isCanonical: true } });
+      }
       reorged = setFalse.length + setTrue.length;
+      blockReorged = blockSetFalse.length + blockSetTrue.length;
     }
 
     logInfo(
-      `monero-pool-attribution: pools=${collected.length} created=${creates.length} conflicts=${conflictHashes.length} refreshed=${refreshHashes.length} reorged=${reorged}`,
+      `monero-pool-attribution: pools=${collected.length} created=${creates.length} conflicts=${conflictHashes.length} refreshed=${refreshHashes.length} reorged=${reorged} blockReorged=${blockReorged}`,
     );
   } catch (e: any) {
     logError(`Monero pool-attribution failed: ${e?.message ?? String(e)}`, e);
