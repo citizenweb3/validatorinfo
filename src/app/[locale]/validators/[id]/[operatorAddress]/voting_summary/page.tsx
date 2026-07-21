@@ -30,7 +30,10 @@ const VotingSummaryPage: NextPageWithLocale<PageProps> = async ({
     <div className="mb-14">
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
       <div className="mb-4 flex justify-end">
-        <RoundedButton href={''} className="font-handjet text-lg">
+        <RoundedButton
+          href={`/validators/${id}/${operatorAddress}/voting_summary/same_opinions`}
+          className="font-handjet text-lg"
+        >
           {t('show same opinion')}
         </RoundedButton>
       </div>

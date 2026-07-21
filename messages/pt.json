@@ -1295,8 +1295,10 @@
     "reward address": "Endereço do Prémio",
     "authz permissions": "Authz Permissões",
     "jail status": "Estado da Jail",
+    "jailed": "Jailed",
+    "not jailed": "Not Jailed",
     "voting": "Votar",
-    "send tx": "Enviar Tx",
+    "send tx": "Envia TXs",
     "withdraw commission": "Retirada da Comissão",
     "withdraw rewards": "Levantar Prémios",
     "token": "TOKEN",
@@ -1329,6 +1331,30 @@
       "Unjail": "Unjail",
       "Transact": "Transacionar",
       "Vote": "Votar"
+    }
+  },
+  "SameOpinionsPage": {
+    "title": "Validadores Com as Mesmas Opiniões",
+    "description": "Validadores da mesma rede classificados pela proximidade entre o seu voto de governança e o deste node. Votos Coincidentes é a percentagem de propostas votadas por ambos em que as escolhas coincidem; Propostas em Comum é o número de propostas votadas por ambos.",
+    "no matches": "Ainda não há validadores com propostas em comum suficientes",
+    "no voting data": "Ainda não há votos de governança indexados para este validador",
+    "Table": {
+      "Validator": {
+        "name": "Validador",
+        "hint": ""
+      },
+      "Wilson Score": {
+        "name": "Wilson Score",
+        "hint": "Confiança estatística da coincidência de opiniões (limite inferior de Wilson a 95%): uma percentagem alta com muitas propostas em comum pontua mais do que a mesma percentagem com poucas"
+      },
+      "Matched Votes": {
+        "name": "Votos Coincidentes",
+        "hint": "Percentagem de propostas em comum em que ambos os validadores votaram da mesma forma"
+      },
+      "Common Proposals": {
+        "name": "Propostas em Comum",
+        "hint": "Número de propostas em que ambos os validadores votaram"
+      }
     }
   },
   "VotingSummaryPage": {

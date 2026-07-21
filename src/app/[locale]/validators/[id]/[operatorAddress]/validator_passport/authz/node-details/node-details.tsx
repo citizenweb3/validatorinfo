@@ -10,6 +10,8 @@ import { getPassportAuthzTabs } from '@/components/common/tabs/tabs-data';
 import { NodeWithValidatorAndChain } from '@/services/node-service';
 import authzService, { AuthzTabSlug } from '@/services/authz-service';
 import priceService from '@/services/price-service';
+import TxService from '@/services/tx-service';
+import voteService from '@/services/vote-service';
 
 interface OwnProps {
   locale: string;
@@ -37,10 +39,20 @@ const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operat
 
   const nodeAuthzTabs = getPassportAuthzTabs(validatorId, operatorAddress);
   const isLive = node.chain.ecosystem === 'cosmos' && Boolean(node.accountAddress);
-  const [grants, price] = await Promise.all([
+  const normalizedChainName = node.chain.name.toLowerCase();
+  const isTxLive = normalizedChainName === 'cosmoshub' || normalizedChainName === 'atomone';
+  const txAddresses = [node.accountAddress, node.operatorAddress].filter((address): address is string => !!address);
+  const [grants, price, votingStatus, txsBatch] = await Promise.all([
     isLive ? authzService.getNodeAuthzGrants(node.id, authzTab) : Promise.resolve([]),
     priceService.getLatestPriceByChainName(node.chain.name),
+    voteService.getNodeVotingStatus(node.id, node.chainId),
+    isTxLive && txAddresses.length > 0
+      ? TxService.getTxsByAddressBatch(node.chain.name, txAddresses)
+      : Promise.resolve(null),
   ]);
+  // Chains without indexed votes/txs keep the legacy jailed-proxy instead of a definitive negative.
+  const hasVoted = votingStatus === 'unknown' ? !node.jailed : votingStatus === 'voted';
+  const sendsTxs = !txsBatch || txsBatch.error ? !node.jailed : txsBatch.rows.length > 1;
   const coinDecimals = node.chain.params?.coinDecimals;
   const rewardsAmount = normalizeAmount(node.outstandingRewards, coinDecimals);
   const commissionsAmount = normalizeAmount(node.outstandingCommissions, coinDecimals);
@@ -109,9 +121,9 @@ const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operat
       </div>
       <div className="mb-6 grid grid-cols-2 gap-x-10">
         <div>
-          <NodeDetailsItem label={t('jail status')} value={node.jailed ? 'Jail' : 'Unjail'} />
-          <NodeDetailsItem label={t('voting')} isCheckmark={!node.jailed} />
-          <NodeDetailsItem label={t('send tx')} isCheckmark={!node.jailed} />
+          <NodeDetailsItem label={t('jail status')} value={node.jailed ? t('jailed') : t('not jailed')} />
+          <NodeDetailsItem label={t('voting')} status={hasVoted} />
+          <NodeDetailsItem label={t('send tx')} status={sendsTxs} />
         </div>
         <CurrencyRewards
           commissionsAmount={commissionsAmount}

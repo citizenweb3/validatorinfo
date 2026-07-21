@@ -13,9 +13,10 @@ interface OwnProps extends PagesProps {
   name: string;
   field?: string;
   defaultSelected?: boolean;
+  defaultOrder?: SortDirection;
 }
 
-const TableSortItems: FC<OwnProps> = ({ page, name, field, defaultSelected = false }) => {
+const TableSortItems: FC<OwnProps> = ({ page, name, field, defaultSelected = false, defaultOrder = 'asc' }) => {
   const t = useTranslations(`${page}.Table` as NamespaceKeys<IntlMessages, 'HomePage.Table'>);
 
   const router = useRouter();
@@ -25,13 +26,19 @@ const TableSortItems: FC<OwnProps> = ({ page, name, field, defaultSelected = fal
   const currentSortBy = sp.get('sortBy');
   const currentOrder = sp.get('order') ?? 'asc';
 
+  // The order the user currently sees for this column: explicit URL state, or the page default
+  // when nothing is selected yet and this column is the default one. Clicking flips it.
+  const effectiveOrder: SortDirection | null =
+    currentSortBy === field
+      ? (currentOrder as SortDirection)
+      : !currentSortBy && defaultSelected
+        ? defaultOrder
+        : null;
+
   const onSort = () => {
     const newSp = new URL(location.href).searchParams;
     newSp.set('sortBy', field!);
-    newSp.set(
-      'order',
-      (currentSortBy === field && currentOrder === 'asc') || (!currentSortBy && defaultSelected) ? 'desc' : 'asc',
-    );
+    newSp.set('order', effectiveOrder === 'asc' ? 'desc' : 'asc');
     router.push(`${pathname}?${newSp.toString()}`, { scroll: false });
   };
 
@@ -44,7 +51,7 @@ const TableSortItems: FC<OwnProps> = ({ page, name, field, defaultSelected = fal
         <div className="flex flex-col items-center justify-center">
           <SortButton
             isActive={currentSortBy === field || (!currentSortBy && defaultSelected)}
-            direction={currentSortBy === field ? (currentOrder as SortDirection) : 'asc'}
+            direction={effectiveOrder ?? 'asc'}
           />
         </div>
       )}

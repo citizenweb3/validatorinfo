@@ -1295,8 +1295,10 @@
     "reward address": "Reward Address",
     "authz permissions": "Authz Permissions",
     "jail status": "Jail Status",
+    "jailed": "Jailed",
+    "not jailed": "Not Jailed",
     "voting": "Voting",
-    "send tx": "Send Tx",
+    "send tx": "Sends TXs",
     "withdraw commission": "Withdraw Commission",
     "withdraw rewards": "Withdraw Rewards",
     "token": "TOKEN",
@@ -1329,6 +1331,30 @@
       "Unjail": "Unjail",
       "Transact": "Transact",
       "Vote": "Vote"
+    }
+  },
+  "SameOpinionsPage": {
+    "title": "Validators With Same Opinions",
+    "description": "Validators from the same network ranked by how closely their governance voting matches this node. Matched Votes is the share of proposals both voted on where their choices coincide; Common Proposals is how many proposals both voted on.",
+    "no matches": "No validators with enough common proposals yet",
+    "no voting data": "No indexed governance votes for this validator yet",
+    "Table": {
+      "Validator": {
+        "name": "Validator",
+        "hint": ""
+      },
+      "Wilson Score": {
+        "name": "Wilson Score",
+        "hint": "Statistical confidence of the opinion match (95% Wilson lower bound): a high match percent over many common proposals scores higher than the same percent over a few"
+      },
+      "Matched Votes": {
+        "name": "Matched Votes",
+        "hint": "Share of common proposals where both validators voted the same way"
+      },
+      "Common Proposals": {
+        "name": "Common Proposals",
+        "hint": "Number of proposals both validators voted on"
+      }
     }
   },
   "VotingSummaryPage": {
