@@ -126,6 +126,7 @@ export interface CosmosDelegationsCursor {
   next_before_height: string;
   next_before_index: number;
   next_before_msg_index: number;
+  next_before_amount?: string;
 }
 
 export interface CosmosListResponse<T, C = CosmosBlocksCursor | CosmosTxsCursor> {

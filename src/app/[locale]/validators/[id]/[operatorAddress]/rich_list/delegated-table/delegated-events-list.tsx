@@ -10,6 +10,7 @@ import { decodeDelegationCursorToken } from '@/components/delegations/delegation
 import TablePagination from '@/components/common/table/table-pagination';
 import aztecDbService from '@/services/aztec-db-service';
 import DelegationService from '@/services/delegation-service';
+import type { DelegationSort } from '@/services/delegation-service';
 import priceService from '@/services/price-service';
 import { PagesProps } from '@/types';
 
@@ -18,6 +19,7 @@ const PER_PAGE = 20;
 interface OwnProps extends PagesProps {
   chainName: string;
   operatorAddress: string;
+  sort: DelegationSort;
   cursorToken?: string;
   windowIndex: number;
 }
@@ -26,14 +28,22 @@ const isAztecChain = (chainName: string): boolean => {
   return chainName === 'aztec' || chainName === 'aztec-testnet';
 };
 
-const DelegatedEventsList: FC<OwnProps> = async ({ page, chainName, operatorAddress, cursorToken, windowIndex }) => {
+const DelegatedEventsList: FC<OwnProps> = async ({
+  page,
+  chainName,
+  operatorAddress,
+  sort,
+  cursorToken,
+  windowIndex,
+}) => {
   const pages = 1;
   const normalizedChainName = chainName.toLowerCase();
 
   if (normalizedChainName === 'cosmoshub' || normalizedChainName === 'atomone') {
-    const cursor = decodeDelegationCursorToken(cursorToken);
+    // A ?c= minted under another sort mode decodes to undefined → head load; ?w= then clamps below.
+    const cursor = decodeDelegationCursorToken(cursorToken, sort);
     const [initial, price] = await Promise.all([
-      DelegationService.getDelegationsBatch(chainName, operatorAddress, cursor),
+      DelegationService.getDelegationsBatch(chainName, operatorAddress, sort, cursor),
       priceService.getLatestPriceByChainName(normalizedChainName),
     ]);
     const windows = Math.max(1, Math.ceil(initial.rows.length / PER_PAGE));
@@ -44,11 +54,12 @@ const DelegatedEventsList: FC<OwnProps> = async ({ page, chainName, operatorAddr
         validator={operatorAddress}
         chainName={chainName}
         price={price}
+        sort={sort}
         initialCursor={cursor ?? null}
         initialWindow={clampedWindow}
         initial={initial}
       >
-        <DelegateTableHead page={page} />
+        <DelegateTableHead page={page} sortable />
       </DelegateTableClient>
     );
   }

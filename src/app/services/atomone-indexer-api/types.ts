@@ -126,6 +126,7 @@ export interface AtomoneDelegationsCursor {
   next_before_height: string;
   next_before_index: number;
   next_before_msg_index: number;
+  next_before_amount?: string;
 }
 
 export interface AtomoneListResponse<T, C = AtomoneBlocksCursor | AtomoneTxsCursor> {

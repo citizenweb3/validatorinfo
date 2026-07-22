@@ -6,7 +6,7 @@ import { FC, ReactNode, useCallback, useState } from 'react';
 import BaseTable from '@/components/common/table/base-table';
 import Switch from '@/components/common/switch';
 import DelegateListClient from '@/components/delegations/delegate-list-client';
-import type { DelegationBatch, DelegationCursor } from '@/services/delegation-service';
+import type { DelegationBatch, DelegationCursor, DelegationSort } from '@/services/delegation-service';
 
 type AmountUnit = 'token' | 'usd';
 
@@ -14,6 +14,7 @@ interface OwnProps {
   chainName: string;
   validator: string;
   price: number | null;
+  sort: DelegationSort;
   initialCursor: DelegationCursor | null;
   initialWindow: number;
   initial: DelegationBatch;
@@ -24,6 +25,7 @@ const DelegateTableClient: FC<OwnProps> = ({
   chainName,
   validator,
   price,
+  sort,
   initialCursor,
   initialWindow,
   initial,
@@ -52,6 +54,7 @@ const DelegateTableClient: FC<OwnProps> = ({
         <DelegateListClient
           validator={validator}
           chainName={chainName}
+          sort={sort}
           initialCursor={initialCursor}
           initialWindow={initialWindow}
           initial={initial}

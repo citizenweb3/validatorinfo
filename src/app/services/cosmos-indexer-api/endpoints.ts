@@ -162,6 +162,9 @@ export const getTxsByAddress = (
 export interface GetDelegationsParams {
   validator: string;
   limit?: number;
+  sort?: 'time' | 'amount';
+  order?: 'asc' | 'desc';
+  before_amount?: string;
   before_height?: string;
   before_index?: number;
   before_msg_index?: number;
@@ -176,6 +179,9 @@ export const getDelegations = (
     {
       validator: params.validator,
       limit: params.limit,
+      sort: params.sort,
+      order: params.order,
+      before_amount: params.before_amount,
       before_height: params.before_height,
       before_index: params.before_index,
       before_msg_index: params.before_msg_index,
