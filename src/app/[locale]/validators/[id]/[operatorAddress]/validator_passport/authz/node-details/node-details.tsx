@@ -12,6 +12,7 @@ import authzService, { AuthzTabSlug } from '@/services/authz-service';
 import priceService from '@/services/price-service';
 import TxService from '@/services/tx-service';
 import voteService from '@/services/vote-service';
+import { EMPTY_TX_FILTERS } from '@/utils/tx-filters';
 
 interface OwnProps {
   locale: string;
@@ -47,7 +48,7 @@ const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operat
     priceService.getLatestPriceByChainName(node.chain.name),
     voteService.getNodeVotingStatus(node.id, node.chainId),
     isTxLive && txAddresses.length > 0
-      ? TxService.getTxsByAddressBatch(node.chain.name, txAddresses)
+      ? TxService.getTxsByAddressBatch(node.chain.name, txAddresses, EMPTY_TX_FILTERS)
       : Promise.resolve(null),
   ]);
   // Chains without indexed votes/txs keep the legacy jailed-proxy instead of a definitive negative.
