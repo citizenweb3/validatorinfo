@@ -2289,7 +2289,17 @@
     "tailEmission": "Tail emission — {reward}/block",
     "perBlockValue": "{amount}/block",
     "perYearValue": "{amount}/yr",
-    "notEnoughData": "—"
+    "notEnoughData": "—",
+    "privacyParameters": "Privacy Parameters",
+    "privacyParametersDisclaimer": "Current Monero protocol properties. These are consensus rules and cryptographic mechanisms, not measured activity or a claim that every transaction achieves the same effective anonymity.",
+    "privacyRequired": "Required",
+    "ringSize": "Ring size",
+    "ringSizeValue": "16 members",
+    "ringSizeDescription": "Each non-coinbase input is signed with the spent output and 15 decoys. This is the protocol's baseline ring, not an observed anonymity score.",
+    "ringCtDescription": "Ring Confidential Transactions hide transferred amounts while allowing the network to verify that a transaction balances.",
+    "clsagDescription": "The required linkable ring-signature scheme conceals which ring member is spent and prevents double-spending, with smaller and faster signatures than MLSAG.",
+    "bulletproofsPlusDescription": "The required zero-knowledge range proof verifies that hidden output amounts are valid without revealing them or requiring a trusted setup.",
+    "officialMoneroSource": "Official Monero source"
   },
   "OffchainGovernanceInfo": {
     "title": "Governance",

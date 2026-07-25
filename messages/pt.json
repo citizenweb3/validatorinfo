@@ -2290,7 +2290,17 @@
     "tailEmission": "Emissão caudal — {reward}/bloco",
     "perBlockValue": "{amount}/bloco",
     "perYearValue": "{amount}/ano",
-    "notEnoughData": "—"
+    "notEnoughData": "—",
+    "privacyParameters": "Parâmetros de privacidade",
+    "privacyParametersDisclaimer": "Propriedades atuais do protocolo Monero. São regras de consenso e mecanismos criptográficos, não atividade medida nem uma afirmação de que toda transação alcança o mesmo anonimato efetivo.",
+    "privacyRequired": "Obrigatório",
+    "ringSize": "Tamanho do anel",
+    "ringSizeValue": "16 membros",
+    "ringSizeDescription": "Cada entrada que não é coinbase é assinada com a saída gasta e 15 decoys. Este é o anel-base do protocolo, não uma pontuação de anonimato observada.",
+    "ringCtDescription": "As Ring Confidential Transactions ocultam os valores transferidos enquanto permitem que a rede verifique o equilíbrio da transação.",
+    "clsagDescription": "O esquema obrigatório de assinatura em anel vinculável oculta qual membro do anel foi gasto e impede gasto duplo, com assinaturas menores e mais rápidas que MLSAG.",
+    "bulletproofsPlusDescription": "A prova de intervalo de conhecimento zero obrigatória verifica que os valores ocultos das saídas são válidos sem revelá-los nem exigir uma configuração confiável.",
+    "officialMoneroSource": "Fonte oficial do Monero"
   },
   "OffchainGovernanceInfo": {
     "title": "Governança",
