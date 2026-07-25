@@ -367,6 +367,8 @@
     "tvl": "TVL",
     "revenue": "Receitas",
     "validator cost": "Custo do Validador",
+    "minimum miner profit": "Lucro mín. do minerador",
+    "minimum miner profit tooltip": "Retorno diário estimado por 1 kH/s após uma taxa de pool de {fee}% ponderada pelo hashrate. Baseado na recompensa média dos blocos em 24h, no hashrate atual da rede e no preço XMR/USD mais recente. Eletricidade, hardware, refrigeração, impostos e tempo de inatividade não estão incluídos.",
     "mau": "MAU",
     "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
     "revenue tooltip": "O montante das taxas geradas pela rede ontem",
