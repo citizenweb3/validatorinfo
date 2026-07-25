@@ -83,3 +83,27 @@ export const estimateMiningReturn = ({
     poolFeeUsdPerDay,
   };
 };
+
+export const estimateElectricityCostPerDay = (
+  powerWatts: number,
+  electricityPriceUsdPerKwh: number,
+  uptimeRatio = 1,
+): number | null => {
+  if (
+    !isFinitePositive(powerWatts) ||
+    !Number.isFinite(electricityPriceUsdPerKwh) ||
+    electricityPriceUsdPerKwh < 0 ||
+    !Number.isFinite(uptimeRatio) ||
+    uptimeRatio <= 0 ||
+    uptimeRatio > 1
+  ) {
+    return null;
+  }
+
+  return (powerWatts / 1_000) * 24 * electricityPriceUsdPerKwh * uptimeRatio;
+};
+
+export const estimateHardwarePaybackDays = (hardwareCostUsd: number, netProfitUsdPerDay: number): number | null => {
+  if (!isFinitePositive(hardwareCostUsd) || !isFinitePositive(netProfitUsdPerDay)) return null;
+  return hardwareCostUsd / netProfitUsdPerDay;
+};

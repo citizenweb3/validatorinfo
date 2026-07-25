@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { getChains } from '@/actions/chains';
 import Calculator from '@/app/stakingcalculator/calculator';
 import CollapsiblePageHeader from '@/app/validators/collapsible-page-header';
+import CalculatorModeTabs from '@/components/calculator-mode-tabs';
 import PageHeaderVisibilityWrapper from '@/components/common/page-header-visibility-wrapper';
 import PageTitle from '@/components/common/page-title';
 import SubTitle from '@/components/common/sub-title';
@@ -34,6 +35,12 @@ export default async function StakingCalculatorPage({ params: { locale } }: Read
       <CollapsiblePageHeader description={t('description')}>
         <PageTitle text={t('title')} />
       </CollapsiblePageHeader>
+      <CalculatorModeTabs
+        activeMode="staking"
+        ariaLabel={t('modeNavigation')}
+        miningLabel={t('miningMode')}
+        stakingLabel={t('stakingMode')}
+      />
       <SubTitle text={t('UnderConstruction')} className={'my-4'} />
       <div className="blur-sm">
         <Suspense fallback={<div>Loading...</div>}>

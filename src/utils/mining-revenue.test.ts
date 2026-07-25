@@ -1,7 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { estimateMiningReturn, weightedAverageFeePercent } from '@/utils/mining-revenue';
+import {
+  estimateElectricityCostPerDay,
+  estimateHardwarePaybackDays,
+  estimateMiningReturn,
+  weightedAverageFeePercent,
+} from '@/utils/mining-revenue';
 
 const assertClose = (actual: number, expected: number): void => {
   assert.ok(Math.abs(actual - expected) < Number.EPSILON);
@@ -71,4 +76,21 @@ test('weights known pool fees by active hashrate', () => {
   ]);
 
   assert.equal(average, 0.75);
+});
+
+test('estimates electricity cost only from complete valid user inputs', () => {
+  const fullTime = estimateElectricityCostPerDay(100, 0.2);
+  const halfTime = estimateElectricityCostPerDay(100, 0.2, 0.5);
+  assert.ok(fullTime !== null);
+  assert.ok(halfTime !== null);
+  assertClose(fullTime, 0.48);
+  assertClose(halfTime, 0.24);
+  assert.equal(estimateElectricityCostPerDay(0, 0.2), null);
+  assert.equal(estimateElectricityCostPerDay(100, -1), null);
+});
+
+test('estimates hardware payback only for positive daily profit', () => {
+  assert.equal(estimateHardwarePaybackDays(1_000, 5), 200);
+  assert.equal(estimateHardwarePaybackDays(1_000, 0), null);
+  assert.equal(estimateHardwarePaybackDays(1_000, -5), null);
 });

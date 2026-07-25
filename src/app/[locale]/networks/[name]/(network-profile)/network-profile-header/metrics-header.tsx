@@ -1,15 +1,14 @@
 import { getTranslations } from 'next-intl/server';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[name]/(network-profile)/networkProfileExample';
 import PlusButton from '@/components/common/plus-button';
 import Tooltip from '@/components/common/tooltip';
-import { MONERO_BLOCK_TIME_SECONDS } from '@/server/tools/chains/monero/constants';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
-import moneroService from '@/services/monero-service';
+import miningProfitabilityService from '@/services/mining-profitability-service';
 import formatCash from '@/utils/format-cash';
-import { estimateMiningReturn, weightedAverageFeePercent } from '@/utils/mining-revenue';
-import { atomicToDecimal } from '@/utils/monero-emission';
+import { estimateMiningReturn } from '@/utils/mining-revenue';
 
 interface OwnProps {
   chain: ChainWithParamsAndTokenomics | null;
@@ -21,6 +20,8 @@ interface MetricRow {
   data: string;
   tooltip?: string;
   blur?: boolean;
+  actionHref?: string;
+  actionLabel?: string;
 }
 
 const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
@@ -31,11 +32,9 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
 
   const rows: MetricRow[] = [];
 
-  const [price, moneroSnapshot, moneroBlockMetrics, moneroPoolStats] = await Promise.all([
-    chain ? chainService.getTokenPriceByChainId(chain.id) : null,
-    isMonero ? moneroService.getMoneroNetworkSnapshot() : null,
-    isMonero ? moneroService.getMoneroBlockMetrics24h() : null,
-    isMonero ? moneroService.getMoneroPoolStats('24h') : [],
+  const [price, miningEconomics] = await Promise.all([
+    chain && !isMonero ? chainService.getTokenPriceByChainId(chain.id) : null,
+    isMonero ? miningProfitabilityService.getMoneroMiningEconomics(chain) : null,
   ]);
 
   const validatorCost =
@@ -43,25 +42,16 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
       ? (Number(chain.tokenomics.activeSetMinAmount) / 10 ** Number(chain.params.coinDecimals)) * Number(price.value)
       : 0;
 
-  const networkHashrateHps = Number(moneroSnapshot?.hashrate ?? 0);
-  const averageRewardAtomic = moneroBlockMetrics?.averageRewardAtomic ?? null;
-  const coinDecimals = chain?.params?.coinDecimals ?? null;
-  const weightedPoolFee = weightedAverageFeePercent(
-    moneroPoolStats
-      .filter((stat) => stat.pool.isVerified && stat.pool.slug !== 'unknown')
-      .map((stat) => ({ feePercent: stat.pool.feePercent, hashrateHps: Number(stat.hashrateEstimate) })),
-  );
-  const minerReturn =
-    averageRewardAtomic !== null && coinDecimals !== null && price && weightedPoolFee !== null
-      ? estimateMiningReturn({
-          averageReward: atomicToDecimal(BigInt(averageRewardAtomic), coinDecimals),
-          blockTimeSeconds: MONERO_BLOCK_TIME_SECONDS,
-          minerHashrateHps: 1_000,
-          networkHashrateHps,
-          poolFeePercent: weightedPoolFee,
-          tokenPriceUsd: price.value,
-        })
-      : null;
+  const minerReturn = miningEconomics
+    ? estimateMiningReturn({
+        averageReward: miningEconomics.averageReward,
+        blockTimeSeconds: miningEconomics.blockTimeSeconds,
+        minerHashrateHps: 1_000,
+        networkHashrateHps: miningEconomics.networkHashrateHps,
+        poolFeePercent: miningEconomics.weightedPoolFeePercent,
+        tokenPriceUsd: miningEconomics.tokenPriceUsd,
+      })
+    : null;
 
   if (isMonero) {
     rows.push({
@@ -69,10 +59,12 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
       title: t('minimum miner profit'),
       data: minerReturn ? `$${formatCash(minerReturn.netUsdPerDay, 4)}/day` : '—',
       tooltip:
-        minerReturn && weightedPoolFee !== null
-          ? t('minimum miner profit tooltip', { fee: weightedPoolFee.toFixed(2) })
+        minerReturn && miningEconomics
+          ? t('minimum miner profit tooltip', { fee: miningEconomics.weightedPoolFeePercent.toFixed(2) })
           : undefined,
       blur: !minerReturn,
+      actionHref: '/miningcalculator?network=monero',
+      actionLabel: t('open mining calculator'),
     });
   } else {
     rows.push({
@@ -107,7 +99,13 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
             <span className="mr-8 font-handjet text-lg">
               {row.tooltip ? <Tooltip tooltip={row.tooltip}>{row.data}</Tooltip> : row.data}
             </span>
-            <PlusButton size="xs" isOpened={false} />
+            {row.actionHref ? (
+              <Link href={row.actionHref} aria-label={row.actionLabel}>
+                <PlusButton size="xs" isOpened={false} />
+              </Link>
+            ) : (
+              <PlusButton size="xs" isOpened={false} />
+            )}
           </div>
         </div>
       ))}
