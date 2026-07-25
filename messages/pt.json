@@ -626,6 +626,7 @@
     "annual issuance": "Emissão Anual",
     "annual inflation": "Inflação Anual",
     "stock-to-flow": "Stock-to-Flow",
+    "stock-to-flow tooltip": "Stock-to-flow é a oferta em circulação dividida pela emissão anual estimada. Um valor de {ratio} significa que a oferta existente equivale a aproximadamente {ratio} anos de nova emissão ao ritmo atual. Mede escassez, não o preço futuro.",
     "emission phase": "Fase de Emissão",
     "tail emission": "Emissão de Cauda",
     "tail emission security": "Segurança da Emissão de Cauda",

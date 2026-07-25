@@ -623,6 +623,7 @@
     "annual issuance": "Annual Issuance",
     "annual inflation": "Annual Inflation",
     "stock-to-flow": "Stock-to-Flow",
+    "stock-to-flow tooltip": "Stock-to-flow is circulating supply divided by estimated annual issuance. A value of {ratio} means the existing supply is approximately {ratio} times one year of new issuance at the current emission rate. It measures scarcity, not future price.",
     "emission phase": "Emission Phase",
     "tail emission": "Tail emission",
     "tail emission security": "Tail Emission Security",
