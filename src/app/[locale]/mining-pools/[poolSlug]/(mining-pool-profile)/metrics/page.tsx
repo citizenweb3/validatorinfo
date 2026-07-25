@@ -2,8 +2,10 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 import MiningPoolMetrics from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/metrics/mining-pool-metrics';
+import PoolConfigurationSection from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/metrics/pool-configuration';
 import MiningPoolPageTitle from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/mining-pool-page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
+import miningPoolConfigurationService from '@/services/mining-pool-configuration-service';
 import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-service';
 
 export const dynamic = 'force-dynamic';
@@ -58,9 +60,10 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({
   const windowOptions = availableWindows.map((value) => ({ value, label: windowLabels[value] }));
   const stat = pool.stats.find((item) => item.windowKind === safeWindow) ?? null;
 
-  const [allTimeBlocks, recentBlocks] = await Promise.all([
+  const [allTimeBlocks, recentBlocks, configuration] = await Promise.all([
     moneroService.getMoneroPoolBlocksCount(pool.chainId, pool.id),
     moneroService.getMoneroPoolRecentBlocks(pool.chainId, pool.id, 1, 0, 'timestamp', 'desc'),
+    miningPoolConfigurationService.getBySlug(pool.slug),
   ]);
 
   return (
@@ -94,6 +97,7 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({
         stat={stat}
         windowOptions={windowOptions}
       />
+      {configuration && <PoolConfigurationSection configuration={configuration} locale={locale} />}
     </div>
   );
 };

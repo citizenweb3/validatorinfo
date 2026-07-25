@@ -2137,7 +2137,26 @@
     "notEnoughData": "Недостаточно данных",
     "recentBlocksTitle": "Последние блоки",
     "recentBlocksDescription": "Последние блоки, привязанные к этому пулу, сопоставленные on-chain по хешу.",
-    "recentBlocksEmpty": "Пока нет блоков, привязанных к этому пулу."
+    "recentBlocksEmpty": "Пока нет блоков, привязанных к этому пулу.",
+    "poolConfigurationTitle": "Параметры пула",
+    "poolSoftware": "ПО пула",
+    "stratumEndpoints": "Stratum-эндпоинты",
+    "serverRegions": "Регионы серверов",
+    "minimumPayout": "Минимальная выплата",
+    "payoutSchedule": "Периодичность выплат",
+    "payoutFee": "Комиссия за выплату / вывод",
+    "verifiedAt": "Дата проверки данных",
+    "officialSources": "Официальные источники",
+    "officialSourceNumber": "Источник {number}",
+    "notPublished": "Не опубликовано",
+    "plainConnection": "без TLS",
+    "payoutScheduleThreshold": "Автоматически при достижении заданного порога",
+    "payoutScheduleHourly": "Каждый час",
+    "payoutScheduleEveryTenMinutes": "Каждые 10 минут",
+    "payoutScheduleBlockFound": "Когда P2Pool находит блок Monero, пока доля майнера находится в окне PPLNS",
+    "instantPayoutFee": "{amount} за мгновенную выплату",
+    "maximumPayoutFee": "До {amount}; не взимается при пороге {threshold} или выше",
+    "poolConfigurationDisclaimer": "Данные вручную собраны с сайтов, API и репозиториев самих пулов. Если значение отсутствует, пул не опубликовал параметр, который удалось подтвердить; это не оценка."
   },
   "MiningPoolProfileHeader": {
     "Tabs": {

@@ -2136,7 +2136,26 @@
     "notEnoughData": "Not enough data",
     "recentBlocksTitle": "Recent Blocks",
     "recentBlocksDescription": "Recent blocks attributed to this pool, matched on-chain by hash.",
-    "recentBlocksEmpty": "No recent blocks attributed to this pool yet."
+    "recentBlocksEmpty": "No recent blocks attributed to this pool yet.",
+    "poolConfigurationTitle": "Pool Configuration",
+    "poolSoftware": "Pool software",
+    "stratumEndpoints": "Stratum endpoints",
+    "serverRegions": "Server regions",
+    "minimumPayout": "Minimum payout",
+    "payoutSchedule": "Payout schedule",
+    "payoutFee": "Payout / withdrawal fee",
+    "verifiedAt": "Information verified",
+    "officialSources": "Official sources",
+    "officialSourceNumber": "Source {number}",
+    "notPublished": "Not published",
+    "plainConnection": "plain",
+    "payoutScheduleThreshold": "Automatically when the configured threshold is reached",
+    "payoutScheduleHourly": "Hourly",
+    "payoutScheduleEveryTenMinutes": "Every 10 minutes",
+    "payoutScheduleBlockFound": "When P2Pool finds a Monero block while the miner has a share in the PPLNS window",
+    "instantPayoutFee": "{amount} for an instant payout",
+    "maximumPayoutFee": "Up to {amount}; waived at a threshold of {threshold} or more",
+    "poolConfigurationDisclaimer": "Curated from pool-owned websites, APIs, or repositories. Missing values mean the pool did not publish a value we could verify; they are not estimates."
   },
   "MiningPoolProfileHeader": {
     "Tabs": {

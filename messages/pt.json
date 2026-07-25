@@ -2137,7 +2137,26 @@
     "notEnoughData": "Dados insuficientes",
     "recentBlocksTitle": "Blocos recentes",
     "recentBlocksDescription": "Blocos recentes atribuídos a esta pool, casados on-chain por hash.",
-    "recentBlocksEmpty": "Nenhum bloco recente atribuído a esta pool ainda."
+    "recentBlocksEmpty": "Nenhum bloco recente atribuído a esta pool ainda.",
+    "poolConfigurationTitle": "Configuração da pool",
+    "poolSoftware": "Software da pool",
+    "stratumEndpoints": "Endpoints Stratum",
+    "serverRegions": "Regiões dos servidores",
+    "minimumPayout": "Pagamento mínimo",
+    "payoutSchedule": "Frequência de pagamento",
+    "payoutFee": "Taxa de pagamento / retirada",
+    "verifiedAt": "Informação verificada",
+    "officialSources": "Fontes oficiais",
+    "officialSourceNumber": "Fonte {number}",
+    "notPublished": "Não publicado",
+    "plainConnection": "sem TLS",
+    "payoutScheduleThreshold": "Automaticamente ao atingir o limite configurado",
+    "payoutScheduleHourly": "A cada hora",
+    "payoutScheduleEveryTenMinutes": "A cada 10 minutos",
+    "payoutScheduleBlockFound": "Quando o P2Pool encontra um bloco Monero enquanto o minerador tem um share na janela PPLNS",
+    "instantPayoutFee": "{amount} para um pagamento imediato",
+    "maximumPayoutFee": "Até {amount}; isenta com um limite de {threshold} ou mais",
+    "poolConfigurationDisclaimer": "Dados curados a partir de sites, APIs ou repositórios da própria pool. Valores ausentes não foram publicados de forma verificável pela pool e não são estimativas."
   },
   "MiningPoolProfileHeader": {
     "Tabs": {
