@@ -2071,6 +2071,7 @@
   "MiningPoolDetail": {
     "statsNoData": "No stats for this window",
     "metaTitle": "Mining Pool",
+    "pretextInPrefix": "on",
     "networksTitle": "Mining Pool Profile: Networks",
     "metricsProfileTitle": "Mining Pool Profile: Metrics",
     "metricsTitle": "Pool Metrics",

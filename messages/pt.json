@@ -2072,6 +2072,7 @@
   "MiningPoolDetail": {
     "statsNoData": "Sem estatísticas para esta janela",
     "metaTitle": "Pool de Mineração",
+    "pretextInPrefix": "em",
     "networksTitle": "Perfil da Pool de Mineração: Redes",
     "metricsProfileTitle": "Perfil da Pool de Mineração: Métricas",
     "metricsTitle": "Métricas da pool",

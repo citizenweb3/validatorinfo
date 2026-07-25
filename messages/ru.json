@@ -2072,6 +2072,7 @@
   "MiningPoolDetail": {
     "statsNoData": "Нет статистики для выбранного окна",
     "metaTitle": "Майнинг-пул",
+    "pretextInPrefix": "в",
     "networksTitle": "Профиль майнинг-пула: Сети",
     "metricsProfileTitle": "Профиль майнинг-пула: Метрики",
     "metricsTitle": "Метрики пула",

@@ -1,8 +1,8 @@
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
+import MiningPoolPageTitle from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/mining-pool-page-title';
 import HashrateWindowSelector from '@/app/networks/[name]/(network-profile)/stats/hashrate-window-selector';
-import PageTitle from '@/components/common/page-title';
 import BaseTable from '@/components/common/table/base-table';
 import BaseTableCell from '@/components/common/table/base-table-cell';
 import BaseTableRow from '@/components/common/table/base-table-row';
@@ -25,7 +25,11 @@ interface PageProps {
 
 const WINDOW_ORDER: HashrateWindow[] = ['24h', '7d', '30d', 'all'];
 
-export async function generateMetadata({ params: { locale, poolSlug } }: { params: { locale: Locale; poolSlug: string } }) {
+export async function generateMetadata({
+  params: { locale, poolSlug },
+}: {
+  params: { locale: Locale; poolSlug: string };
+}) {
   const [t, pools] = await Promise.all([
     getTranslations({ locale, namespace: 'MiningPoolDetail' }),
     miningPoolService.getNetworksBySlug(poolSlug),
@@ -37,7 +41,10 @@ export async function generateMetadata({ params: { locale, poolSlug } }: { param
 
 // Default (centre) tab — the pool's technical stats per NETWORK it mines, mirroring the validator-profile
 // networks tab (first column = Network, then the metrics) via BaseTable + TableHeaderItem.
-const MiningPoolNetworksPage: NextPageWithLocale<PageProps> = async ({ params: { locale, poolSlug }, searchParams: q }) => {
+const MiningPoolNetworksPage: NextPageWithLocale<PageProps> = async ({
+  params: { locale, poolSlug },
+  searchParams: q,
+}) => {
   unstable_setRequestLocale(locale);
   const [t, tProfile, pools] = await Promise.all([
     getTranslations({ locale, namespace: 'MiningPoolDetail' }),
@@ -52,9 +59,7 @@ const MiningPoolNetworksPage: NextPageWithLocale<PageProps> = async ({ params: {
   );
   const windowRaw = Array.isArray(q.window) ? q.window[0] : q.window;
   const requested: HashrateWindow = isValidWindow(windowRaw) ? windowRaw : '24h';
-  const safeWindow: HashrateWindow = availableWindows.includes(requested)
-    ? requested
-    : (availableWindows[0] ?? '24h');
+  const safeWindow: HashrateWindow = availableWindows.includes(requested) ? requested : availableWindows[0] ?? '24h';
   const referenceTime = Date.now();
 
   const windowLabels: Record<HashrateWindow, string> = {
@@ -67,7 +72,14 @@ const MiningPoolNetworksPage: NextPageWithLocale<PageProps> = async ({ params: {
 
   return (
     <div className="mb-24 flex flex-col gap-8">
-      <PageTitle prefix={pools[0].name} text={t('networksTitle')} />
+      <MiningPoolPageTitle
+        chainName={pools[0].chain.name}
+        chainPrettyName={pools[0].chain.prettyName ?? pools[0].chain.name}
+        poolName={pools[0].name}
+        poolSlug={pools[0].slug}
+        preposition={t('pretextInPrefix')}
+        text={t('networksTitle')}
+      />
       <section>
         {windowOptions.length > 1 && (
           <div className="flex flex-row flex-wrap items-end justify-end gap-4">
