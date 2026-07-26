@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 import SubTitle from '@/components/common/sub-title';
 import BaseTable from '@/components/common/table/base-table';
 import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableHeaderCell from '@/components/common/table/base-table-header-cell';
 import BaseTableRow from '@/components/common/table/base-table-row';
 import { Locale } from '@/i18n';
 import type { PoolConfiguration, PoolPayoutFee, PoolPayoutSchedule } from '@/server/tools/chains/monero/pool-client';
@@ -21,11 +22,11 @@ interface ConfigurationItemProps {
 
 const ConfigurationItem = ({ children, label }: ConfigurationItemProps) => (
   <BaseTableRow>
-    <th scope="row" className="w-1/3 px-4 py-3 text-left font-sfpro text-base font-normal text-highlight">
-      {label}
-    </th>
-    <BaseTableCell className="px-4 py-3">
-      <div className="font-handjet text-lg">{children}</div>
+    <BaseTableCell className="w-1/3 py-4 hover:text-highlight">
+      <div className="flex items-center justify-center text-center font-sfpro text-base">{label}</div>
+    </BaseTableCell>
+    <BaseTableCell className="w-2/3 px-2 py-2 hover:text-highlight">
+      <div className="flex items-center justify-center text-center font-handjet text-lg">{children}</div>
     </BaseTableCell>
   </BaseTableRow>
 );
@@ -62,8 +63,18 @@ const PoolConfigurationSection = async ({ configuration, locale }: OwnProps) => 
   return (
     <section aria-label={t('poolConfigurationTitle')}>
       <SubTitle text={t('poolConfigurationTitle')} />
-      <div className="mt-6 overflow-x-auto">
-        <BaseTable className="min-w-[640px]">
+      <div className="overflow-x-auto">
+        <BaseTable className="my-12 min-w-[640px]">
+          <thead>
+            <tr className="bg-table_header">
+              <BaseTableHeaderCell className="w-1/3 py-3">
+                <div className="flex items-center justify-center text-sm">{t('configurationParameter')}</div>
+              </BaseTableHeaderCell>
+              <BaseTableHeaderCell className="w-2/3 py-3">
+                <div className="flex items-center justify-center text-sm">{t('configurationValue')}</div>
+              </BaseTableHeaderCell>
+            </tr>
+          </thead>
           <tbody>
             <ConfigurationItem label={t('poolSoftware')}>
               {configuration.software ? (
@@ -103,7 +114,7 @@ const PoolConfigurationSection = async ({ configuration, locale }: OwnProps) => 
                 {configuration.stratumEndpoints.map((endpoint) => (
                   <li
                     key={endpoint.host}
-                    className="flex flex-col gap-2 lg:flex-row lg:items-center lg:justify-between"
+                    className="flex flex-col items-center justify-center gap-2 lg:flex-row lg:gap-4"
                   >
                     <code className="break-all font-handjet text-lg">{endpoint.host}</code>
                     <span className="flex flex-wrap gap-2">
@@ -119,7 +130,7 @@ const PoolConfigurationSection = async ({ configuration, locale }: OwnProps) => 
             </ConfigurationItem>
 
             <ConfigurationItem label={t('officialSources')}>
-              <span className="flex flex-wrap gap-3">
+              <span className="flex flex-wrap justify-center gap-3">
                 {configuration.sourceUrls.map((sourceUrl, index) => (
                   <Link
                     key={sourceUrl}
