@@ -38,7 +38,7 @@ const CalculatorModeTabs: FC<OwnProps> = ({ activeMode, ariaLabel, miningLabel, 
   };
 
   return (
-    <nav aria-label={ariaLabel} className={cn('my-6 flex items-center justify-start', isPending && 'opacity-70')}>
+    <nav aria-label={ariaLabel} className={cn('my-6 flex items-center justify-end', isPending && 'opacity-70')}>
       <span className={cn('font-handjet text-lg', isMiningMode ? 'text-primary' : 'text-highlight')}>
         {stakingLabel}
       </span>
