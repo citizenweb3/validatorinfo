@@ -45,11 +45,11 @@ const formatPercent = (value: number | null): string | null => {
 
 const cardGridClassName = 'grid w-full grid-cols-[repeat(2,auto)] justify-center gap-6 md:grid-cols-[repeat(4,auto)]';
 
-const withTooltip = (value: string, tooltip: string | null): ReactNode => {
+const withTooltip = (value: string, tooltip: string | null, tooltipClassName?: string): ReactNode => {
   if (!tooltip) return value;
 
   return (
-    <Tooltip tooltip={tooltip}>
+    <Tooltip tooltip={tooltip} className={tooltipClassName}>
       <div className="text-center">{value}</div>
     </Tooltip>
   );
@@ -122,7 +122,11 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
   const stockToFlowValue = stockToFlowRatio?.toFixed(1) ?? noData;
   const stockToFlowDisplay =
     stockToFlowRatio !== null
-      ? withTooltip(stockToFlowValue, t('stock-to-flow tooltip', { ratio: stockToFlowValue }))
+      ? withTooltip(
+          stockToFlowValue,
+          t('stock-to-flow tooltip', { ratio: stockToFlowValue }),
+          'w-72 max-w-[calc(100vw-2rem)]',
+        )
       : noData;
   const isTailEmission = blockRewardAtomic === TAIL_EMISSION_ATOMIC && tailEmissionAmount !== null;
   const emissionPhaseLine = isTailEmission ? t('per block value', { amount: tailEmissionAmount }) : '';
