@@ -2138,8 +2138,6 @@
     "recentBlocksDescription": "Последние блоки, привязанные к этому пулу, сопоставленные on-chain по хешу.",
     "recentBlocksEmpty": "Пока нет блоков, привязанных к этому пулу.",
     "poolConfigurationTitle": "Параметры пула",
-    "configurationParameter": "Параметр",
-    "configurationValue": "Значение",
     "poolSoftware": "ПО пула",
     "stratumEndpoints": "Stratum-эндпоинты",
     "serverRegions": "Регионы серверов",

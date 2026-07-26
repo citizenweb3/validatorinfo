@@ -2137,8 +2137,6 @@
     "recentBlocksDescription": "Recent blocks attributed to this pool, matched on-chain by hash.",
     "recentBlocksEmpty": "No recent blocks attributed to this pool yet.",
     "poolConfigurationTitle": "Pool Configuration",
-    "configurationParameter": "Parameter",
-    "configurationValue": "Value",
     "poolSoftware": "Pool software",
     "stratumEndpoints": "Stratum endpoints",
     "serverRegions": "Server regions",
