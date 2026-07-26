@@ -91,13 +91,13 @@ const PoolConfigurationSection = async ({ configuration, locale }: OwnProps) => 
       <ConfigurationItem label={t('verifiedAt')}>{verifiedDate}</ConfigurationItem>
 
       <ConfigurationItem label={t('stratumEndpoints')}>
-        <ul className="flex flex-col gap-3">
+        <ul className="flex min-w-0 flex-col gap-3 overflow-x-auto">
           {configuration.stratumEndpoints.map((endpoint) => (
-            <li key={endpoint.host} className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-4">
-              <code className="break-all font-handjet text-lg">{endpoint.host}</code>
-              <span className="flex flex-wrap gap-2">
+            <li key={endpoint.host} className="flex w-max flex-row items-center gap-4">
+              <code className="whitespace-nowrap font-handjet text-lg">{endpoint.host}</code>
+              <span className="flex flex-nowrap gap-2">
                 {endpoint.ports.map(({ port, tls }) => (
-                  <code key={`${endpoint.host}-${port}`} className="bg-background px-2 py-1 text-sm">
+                  <code key={`${endpoint.host}-${port}`} className="whitespace-nowrap bg-background px-2 py-1 text-sm">
                     {port} · {tls ? 'TLS' : t('plainConnection')}
                   </code>
                 ))}
