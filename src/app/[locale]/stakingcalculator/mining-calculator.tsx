@@ -96,12 +96,12 @@ const NumericField: FC<NumericFieldProps> = ({ id, label, min = 0, onChange, pla
 const ResultRow: FC<ResultRowProps> = ({ day, label, month, year }) => {
   return (
     <BaseTableRow>
-      <th scope="row" className="px-2 py-2 text-left font-sfpro font-normal">
+      <th scope="row" className="px-2 py-2 text-left font-sfpro text-base font-normal">
         {label}
       </th>
-      <BaseTableCell className="px-2 py-2 text-right">{day}</BaseTableCell>
-      <BaseTableCell className="px-2 py-2 text-right">{month}</BaseTableCell>
-      <BaseTableCell className="px-2 py-2 text-right">{year}</BaseTableCell>
+      <BaseTableCell className="px-2 py-2 text-right text-lg">{day}</BaseTableCell>
+      <BaseTableCell className="px-2 py-2 text-right text-lg">{month}</BaseTableCell>
+      <BaseTableCell className="px-2 py-2 text-right text-lg">{year}</BaseTableCell>
     </BaseTableRow>
   );
 };
@@ -320,10 +320,10 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
             <BaseTable className="min-w-[640px]">
               <thead>
                 <tr>
-                  <BaseTableHeaderCell className="px-2 py-2">{t('result')}</BaseTableHeaderCell>
-                  <BaseTableHeaderCell className="px-2 py-2">{t('perDay')}</BaseTableHeaderCell>
-                  <BaseTableHeaderCell className="px-2 py-2">{t('perMonth')}</BaseTableHeaderCell>
-                  <BaseTableHeaderCell className="px-2 py-2">{t('perYear')}</BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2 text-sm">{t('result')}</BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2 text-sm">{t('perDay')}</BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2 text-sm">{t('perMonth')}</BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2 text-sm">{t('perYear')}</BaseTableHeaderCell>
                 </tr>
               </thead>
               <tbody>
