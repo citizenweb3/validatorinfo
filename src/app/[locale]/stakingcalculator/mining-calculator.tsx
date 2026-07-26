@@ -51,10 +51,10 @@ const HASHRATE_MULTIPLIERS: Record<HashrateUnit, number> = {
 };
 
 const inputClassName =
-  'min-w-0 flex-1 bg-transparent px-3 py-2 font-handjet text-lg text-highlight outline-none placeholder:text-oldPalette-white/40';
+  'min-w-0 flex-1 bg-transparent px-3 py-2 font-handjet text-lg outline-none placeholder:text-oldPalette-white/40';
 const cardClassName = 'border-r border-t border-bgSt bg-table_row p-4 shadow-menu-button-rest';
-const metricCardClassName = 'mx-0 w-full py-4 xs:w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full';
-const metricDataClassName = 'mt-4 px-2 text-center text-highlight';
+const metricCardClassName = 'mx-0 w-full pb-8 pt-2.5 xs:w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full';
+const metricDataClassName = 'mt-6 px-2 text-center leading-5';
 
 const parsePositive = (value: string): number | null => {
   const parsed = Number(value);
@@ -73,7 +73,7 @@ const NumericField: FC<NumericFieldProps> = ({ id, label, min = 0, onChange, pla
   };
 
   return (
-    <label htmlFor={id} className={`${cardClassName} flex flex-col gap-2 font-sfpro text-base`}>
+    <label htmlFor={id} className={`${cardClassName} flex flex-col gap-2 font-sfpro text-lg`}>
       <span>{label}</span>
       <span className="flex items-center border-b border-bgSt bg-background">
         <input
@@ -96,18 +96,12 @@ const NumericField: FC<NumericFieldProps> = ({ id, label, min = 0, onChange, pla
 const ResultRow: FC<ResultRowProps> = ({ day, label, month, year }) => {
   return (
     <BaseTableRow>
-      <th scope="row" className="px-3 py-3 text-left font-sfpro font-normal">
+      <th scope="row" className="px-2 py-2 text-left font-sfpro font-normal">
         {label}
       </th>
-      <BaseTableCell hoverable={false} className="px-3 py-3 text-right text-lg">
-        {day}
-      </BaseTableCell>
-      <BaseTableCell hoverable={false} className="px-3 py-3 text-right text-lg">
-        {month}
-      </BaseTableCell>
-      <BaseTableCell hoverable={false} className="px-3 py-3 text-right text-lg">
-        {year}
-      </BaseTableCell>
+      <BaseTableCell className="px-2 py-2 text-right">{day}</BaseTableCell>
+      <BaseTableCell className="px-2 py-2 text-right">{month}</BaseTableCell>
+      <BaseTableCell className="px-2 py-2 text-right">{year}</BaseTableCell>
     </BaseTableRow>
   );
 };
@@ -197,7 +191,7 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
       <section aria-label={t('inputsTitle')} className="mx-auto w-full max-w-3xl">
         <SubTitle text={t('inputsTitle')} />
         <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-          <div className={`${cardClassName} flex flex-col gap-2 font-sfpro text-base`}>
+          <div className={`${cardClassName} flex flex-col gap-2 font-sfpro text-lg`}>
             <label htmlFor="miner-hashrate">{t('hashrate')}</label>
             <div className="flex border-b border-bgSt bg-background">
               <input
@@ -227,11 +221,11 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
             </div>
           </div>
 
-          <div className={`${cardClassName} flex flex-col gap-2 font-sfpro text-base`}>
+          <div className={`${cardClassName} flex flex-col gap-2 font-sfpro text-lg`}>
             <label htmlFor="mining-pool">{t('pool')}</label>
             <select
               id="mining-pool"
-              className="border-b border-bgSt bg-background px-3 py-2 font-handjet text-lg text-highlight outline-none"
+              className="border-b border-bgSt bg-background px-3 py-2 font-handjet text-lg outline-none"
               onChange={handlePoolChange}
               value={selectedPool}
             >
@@ -326,18 +320,10 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
             <BaseTable className="min-w-[640px]">
               <thead>
                 <tr>
-                  <BaseTableHeaderCell className="px-3 py-2 text-left font-sfpro font-normal">
-                    {t('result')}
-                  </BaseTableHeaderCell>
-                  <BaseTableHeaderCell className="px-3 py-2 text-right font-sfpro font-normal">
-                    {t('perDay')}
-                  </BaseTableHeaderCell>
-                  <BaseTableHeaderCell className="px-3 py-2 text-right font-sfpro font-normal">
-                    {t('perMonth')}
-                  </BaseTableHeaderCell>
-                  <BaseTableHeaderCell className="px-3 py-2 text-right font-sfpro font-normal">
-                    {t('perYear')}
-                  </BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2">{t('result')}</BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2">{t('perDay')}</BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2">{t('perMonth')}</BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-2 py-2">{t('perYear')}</BaseTableHeaderCell>
                 </tr>
               </thead>
               <tbody>
