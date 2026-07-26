@@ -15,7 +15,7 @@ const CalculatorModeTabs: FC<OwnProps> = ({ activeMode, ariaLabel, miningLabel, 
       <Button component="link" href="/stakingcalculator" isActive={activeMode === 'staking'}>
         {stakingLabel}
       </Button>
-      <Button component="link" href="/miningcalculator?network=monero" isActive={activeMode === 'mining'}>
+      <Button component="link" href="/stakingcalculator?mode=mining&network=monero" isActive={activeMode === 'mining'}>
         {miningLabel}
       </Button>
     </nav>

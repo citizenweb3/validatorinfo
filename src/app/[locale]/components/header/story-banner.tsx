@@ -35,7 +35,6 @@ const storyMap: Record<string, StoryEntry> = {
   '/web3stats': { src: 'global', alt: 'Web3 stats story' },
   '/networks': { src: 'networks', alt: 'Networks page story' },
   '/stakingcalculator': { src: 'calculator', alt: 'Staking calculator story' },
-  '/miningcalculator': { src: 'calculator', alt: 'Mining calculator story' },
   '/comparevalidators': { src: 'compare', alt: 'Compare validators story' },
   '/nodes': { src: 'nodes', alt: 'Nodes page story' },
   '/mining-pools': { src: 'nodes', alt: 'Mining pools story' },

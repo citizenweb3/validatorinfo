@@ -1,5 +1,4 @@
 import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
 import { FC } from 'react';
 
 import { networkProfileExample } from '@/app/networks/[name]/(network-profile)/networkProfileExample';
@@ -20,8 +19,6 @@ interface MetricRow {
   data: string;
   tooltip?: string;
   blur?: boolean;
-  actionHref?: string;
-  actionLabel?: string;
 }
 
 const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
@@ -63,8 +60,6 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
           ? t('minimum miner profit tooltip', { fee: miningEconomics.weightedPoolFeePercent.toFixed(2) })
           : undefined,
       blur: !minerReturn,
-      actionHref: '/miningcalculator?network=monero',
-      actionLabel: t('open mining calculator'),
     });
   } else {
     rows.push({
@@ -99,13 +94,7 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
             <span className="mr-8 font-handjet text-lg">
               {row.tooltip ? <Tooltip tooltip={row.tooltip}>{row.data}</Tooltip> : row.data}
             </span>
-            {row.actionHref ? (
-              <Link href={row.actionHref} aria-label={row.actionLabel}>
-                <PlusButton size="xs" isOpened={false} />
-              </Link>
-            ) : (
-              <PlusButton size="xs" isOpened={false} />
-            )}
+            <PlusButton size="xs" isOpened={false} />
           </div>
         </div>
       ))}

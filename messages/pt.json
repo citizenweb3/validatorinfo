@@ -299,7 +299,7 @@
       "title": "Calculadora de Recompensas de Estaca e Mineração"
     },
     "title": "Calculadora de Recompensas de Estaca e Mineração",
-    "description": "Я создал этот инструмент, чтобы помочь вам оценить потенциальное вознаграждение за ставки для токенов proof of stake (PoS) и proof of work (PoW). Просто выберите сеть блокчейна, выберите валидатор и введите сумму ставки, чтобы увидеть предполагаемое ежедневное, еженедельное, ежемесячное или ежегодное вознаграждение. Мой калькулятор вознаграждений уникален и отличается от других. Помимо APR, APY и комиссий, в мои расчеты включены такие параметры, как: слэшеры, тюремное заключение, дополнительный доход провайдера и так далее.",
+    "description": "Calcule recompensas de staking ou a rentabilidade da mineração de Monero em um só lugar. Escolha o tipo de calculadora e informe os dados relevantes, como validador, stake, hashrate, pool, consumo de energia e preço da eletricidade. Os resultados são estimativas e mudam com as condições da rede.",
     "Choose a Network": "Escolha uma rede",
     "Choose a Validator": "Escolha um validador",
     "Please select": "Por favor selecione validador e cadeia!",
@@ -412,7 +412,6 @@
     "validator cost": "Custo do Validador",
     "minimum miner profit": "Lucro mín. do minerador",
     "minimum miner profit tooltip": "Retorno diário estimado por 1 kH/s após uma taxa de pool de {fee}% ponderada pelo hashrate. Baseado na recompensa média dos blocos em 24h, no hashrate atual da rede e no preço XMR/USD mais recente. Eletricidade, hardware, refrigeração, impostos e tempo de inatividade não estão incluídos.",
-    "open mining calculator": "Abrir calculadora de rentabilidade da mineração",
     "mau": "MAU",
     "tvl tooltip": "Valor total dos activos bloqueados na cadeia, não incluindo a inflação / activos domésticos",
     "revenue tooltip": "O montante das taxas geradas pela rede ontem",
