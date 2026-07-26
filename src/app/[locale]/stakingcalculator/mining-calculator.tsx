@@ -3,7 +3,12 @@
 import { useTranslations } from 'next-intl';
 import { ChangeEvent, FC, useMemo, useState } from 'react';
 
+import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
+import BaseTable from '@/components/common/table/base-table';
+import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableHeaderCell from '@/components/common/table/base-table-header-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import { Locale } from '@/i18n';
 import type { MoneroMiningEconomics } from '@/services/mining-profitability-service';
 import { formatHashrate } from '@/utils/format-hashrate';
@@ -48,6 +53,8 @@ const HASHRATE_MULTIPLIERS: Record<HashrateUnit, number> = {
 const inputClassName =
   'min-w-0 flex-1 bg-transparent px-3 py-2 font-handjet text-lg text-highlight outline-none placeholder:text-oldPalette-white/40';
 const cardClassName = 'border-r border-t border-bgSt bg-table_row p-4 shadow-menu-button-rest';
+const metricCardClassName = 'mx-0 w-full py-4 xs:w-full sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full';
+const metricDataClassName = 'mt-4 px-2 text-center text-highlight';
 
 const parsePositive = (value: string): number | null => {
   const parsed = Number(value);
@@ -68,7 +75,7 @@ const NumericField: FC<NumericFieldProps> = ({ id, label, min = 0, onChange, pla
   return (
     <label htmlFor={id} className={`${cardClassName} flex flex-col gap-2 font-sfpro text-base`}>
       <span>{label}</span>
-      <span className="flex items-center border border-bgSt bg-background">
+      <span className="flex items-center border-b border-bgSt bg-background">
         <input
           id={id}
           className={inputClassName}
@@ -88,14 +95,20 @@ const NumericField: FC<NumericFieldProps> = ({ id, label, min = 0, onChange, pla
 
 const ResultRow: FC<ResultRowProps> = ({ day, label, month, year }) => {
   return (
-    <tr className="border-t border-bgSt bg-table_row">
+    <BaseTableRow>
       <th scope="row" className="px-3 py-3 text-left font-sfpro font-normal">
         {label}
       </th>
-      <td className="px-3 py-3 text-right font-handjet text-lg">{day}</td>
-      <td className="px-3 py-3 text-right font-handjet text-lg">{month}</td>
-      <td className="px-3 py-3 text-right font-handjet text-lg">{year}</td>
-    </tr>
+      <BaseTableCell hoverable={false} className="px-3 py-3 text-right text-lg">
+        {day}
+      </BaseTableCell>
+      <BaseTableCell hoverable={false} className="px-3 py-3 text-right text-lg">
+        {month}
+      </BaseTableCell>
+      <BaseTableCell hoverable={false} className="px-3 py-3 text-right text-lg">
+        {year}
+      </BaseTableCell>
+    </BaseTableRow>
   );
 };
 
@@ -180,13 +193,13 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
   };
 
   return (
-    <div className="mx-auto mb-24 mt-4 flex w-full max-w-5xl flex-col gap-10">
-      <section aria-label={t('inputsTitle')}>
+    <div className="mx-auto mb-24 mt-4 flex w-full max-w-5xl flex-col gap-8">
+      <section aria-label={t('inputsTitle')} className="mx-auto w-full max-w-3xl">
         <SubTitle text={t('inputsTitle')} />
-        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
           <div className={`${cardClassName} flex flex-col gap-2 font-sfpro text-base`}>
             <label htmlFor="miner-hashrate">{t('hashrate')}</label>
-            <div className="flex border border-bgSt bg-background">
+            <div className="flex border-b border-bgSt bg-background">
               <input
                 id="miner-hashrate"
                 className={inputClassName}
@@ -218,7 +231,7 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
             <label htmlFor="mining-pool">{t('pool')}</label>
             <select
               id="mining-pool"
-              className="border border-bgSt bg-background px-3 py-2 font-handjet text-lg text-highlight outline-none"
+              className="border-b border-bgSt bg-background px-3 py-2 font-handjet text-lg text-highlight outline-none"
               onChange={handlePoolChange}
               value={selectedPool}
             >
@@ -276,26 +289,32 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
 
       <section aria-label={t('networkDataTitle')}>
         <SubTitle text={t('networkDataTitle')} />
-        <dl className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
-          <div className={cardClassName}>
-            <dt className="font-sfpro text-sm opacity-75">{t('networkHashrate')}</dt>
-            <dd className="mt-2 font-handjet text-lg text-highlight">{formatHashrate(economics.networkHashrateHps)}</dd>
-          </div>
-          <div className={cardClassName}>
-            <dt className="font-sfpro text-sm opacity-75">{t('averageReward')}</dt>
-            <dd className="mt-2 font-handjet text-lg text-highlight">{formatToken(economics.averageReward)}</dd>
-          </div>
-          <div className={cardClassName}>
-            <dt className="font-sfpro text-sm opacity-75">{t('xmrPrice')}</dt>
-            <dd className="mt-2 font-handjet text-lg text-highlight">{formatUsd(economics.tokenPriceUsd)}</dd>
-          </div>
-          <div className={cardClassName}>
-            <dt className="font-sfpro text-sm opacity-75">{t('selectedPoolFee')}</dt>
-            <dd className="mt-2 font-handjet text-lg text-highlight">
-              {selectedPoolFee === null ? '—' : `${selectedPoolFee.toFixed(2)}%`}
-            </dd>
-          </div>
-        </dl>
+        <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">
+          <MetricsCardItem
+            title={t('networkHashrate')}
+            data={formatHashrate(economics.networkHashrateHps)}
+            className={metricCardClassName}
+            dataClassName={metricDataClassName}
+          />
+          <MetricsCardItem
+            title={t('averageReward')}
+            data={formatToken(economics.averageReward)}
+            className={metricCardClassName}
+            dataClassName={metricDataClassName}
+          />
+          <MetricsCardItem
+            title={t('xmrPrice')}
+            data={formatUsd(economics.tokenPriceUsd)}
+            className={metricCardClassName}
+            dataClassName={metricDataClassName}
+          />
+          <MetricsCardItem
+            title={t('selectedPoolFee')}
+            data={selectedPoolFee === null ? '—' : `${selectedPoolFee.toFixed(2)}%`}
+            className={metricCardClassName}
+            dataClassName={metricDataClassName}
+          />
+        </div>
       </section>
 
       <section aria-label={t('resultsTitle')} aria-live="polite">
@@ -304,21 +323,21 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
           <p className={`${cardClassName} mt-6 font-sfpro text-base`}>{t('invalidInputs')}</p>
         ) : (
           <div className="mt-6 overflow-x-auto">
-            <table className="w-full min-w-[640px] border-collapse">
+            <BaseTable className="min-w-[640px]">
               <thead>
-                <tr className="bg-table_header font-sfpro">
-                  <th scope="col" className="px-3 py-3 text-left font-normal">
+                <tr>
+                  <BaseTableHeaderCell className="px-3 py-2 text-left font-sfpro font-normal">
                     {t('result')}
-                  </th>
-                  <th scope="col" className="px-3 py-3 text-right font-normal">
+                  </BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-3 py-2 text-right font-sfpro font-normal">
                     {t('perDay')}
-                  </th>
-                  <th scope="col" className="px-3 py-3 text-right font-normal">
+                  </BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-3 py-2 text-right font-sfpro font-normal">
                     {t('perMonth')}
-                  </th>
-                  <th scope="col" className="px-3 py-3 text-right font-normal">
+                  </BaseTableHeaderCell>
+                  <BaseTableHeaderCell className="px-3 py-2 text-right font-sfpro font-normal">
                     {t('perYear')}
-                  </th>
+                  </BaseTableHeaderCell>
                 </tr>
               </thead>
               <tbody>
@@ -355,7 +374,7 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
                   year={netProfitPerDay === null ? unavailable : formatUsd(netProfitPerDay * DAYS_PER_YEAR)}
                 />
               </tbody>
-            </table>
+            </BaseTable>
           </div>
         )}
 
