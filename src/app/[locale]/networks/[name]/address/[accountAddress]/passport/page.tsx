@@ -26,8 +26,10 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 const AccountPassportPage: NextPageWithLocale<PageProps> = async ({ params: { name, accountAddress, locale } }) => {
-  const t = await getTranslations({ locale, namespace: 'AccountPage.Passport' });
-  const chain = await chainService.getByName(name);
+  const [t, chain] = await Promise.all([
+    getTranslations({ locale, namespace: 'AccountPage.Passport' }),
+    chainService.getByName(name),
+  ]);
   const cursor =
     'h-7 min-h-7 w-7 min-w-7 bg-contain bg-no-repeat bg-cursor group-hover:bg-cursor_h group-active:bg-cursor_a';
 
@@ -43,13 +45,23 @@ const AccountPassportPage: NextPageWithLocale<PageProps> = async ({ params: { na
         }
       />
       <SubDescription text={t('description')} contentClassName={'m-4'} plusClassName={'mt-2'} />
-      <PassportInformation accountAddress={accountAddress} />
+      <PassportInformation
+        accountAddress={accountAddress}
+        chainName={name}
+        locale={locale}
+        labels={{
+          multichainPortfolio: t('Multichain Portfolio'),
+          claimAddress: t('Claim Address'),
+          accountValue: t('account value'),
+          joinDate: t('joinDate'),
+        }}
+      />
       <div className="my-12">
         <SubTitle text={t('Merits')} />
         <Merits />
       </div>
       <SubTitle text={t('Delegations')} />
-      <Delegations chainName={name} page={'AccountPage.Passport'} />
+      <Delegations chainName={name} accountAddress={accountAddress} page="AccountPage.Passport" />
     </div>
   );
 };

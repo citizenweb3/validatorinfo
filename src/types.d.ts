@@ -43,6 +43,7 @@ export interface PagesProps {
     | 'NodeProfileHeader'
     | 'ValidatorPassportPage'
     | 'VotingSummaryPage'
+    | 'SameOpinionsPage'
     | 'TxSummaryPage'
     | 'RichListPage'
     | 'NodeRevenuePage'

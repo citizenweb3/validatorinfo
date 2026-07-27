@@ -3,6 +3,8 @@ import { getTranslations } from 'next-intl/server';
 import DelegatedTable from '@/app/validators/[id]/[operatorAddress]/rich_list/delegated-table/delegated-table';
 import SubDescription from '@/components/sub-description';
 import { NextPageWithLocale } from '@/i18n';
+import { SortDirection } from '@/server/types';
+import type { DelegationSortBy } from '@/services/delegation-service';
 import validatorService from '@/services/validator-service';
 
 export const dynamic = 'force-dynamic';
@@ -23,6 +25,9 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
   const cursorToken = typeof q.c === 'string' ? q.c : undefined;
   const parsedWindowIndex = typeof q.w === 'string' ? parseInt(q.w, 10) : 0;
   const windowIndex = Number.isFinite(parsedWindowIndex) ? parsedWindowIndex : 0;
+  // Product default: the largest delegation first ("always sorted by the highest").
+  const sortBy: DelegationSortBy = q.sortBy === 'happened' ? 'happened' : 'amount';
+  const order: SortDirection = q.order === 'asc' ? 'asc' : 'desc';
 
   const { validatorNodesWithChainData: list } = await validatorService.getValidatorNodesWithChains(validatorId);
   const node = list.find((item) => item.operatorAddress === operatorAddress);
@@ -34,6 +39,7 @@ const RichListPage: NextPageWithLocale<PageProps> = async ({
         chainName={node?.chain.name ?? 'cosmoshub'}
         page={'RichListPage'}
         operatorAddress={operatorAddress}
+        sort={{ sortBy, order }}
         cursorToken={cursorToken}
         windowIndex={windowIndex}
       />

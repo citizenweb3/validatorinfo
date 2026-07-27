@@ -3,6 +3,7 @@
 import { FC } from 'react';
 import Tooltip from '@/components/common/tooltip';
 import TableSortItems from '@/components/common/table/table-sort-items';
+import { SortDirection } from '@/server/types';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {
@@ -10,6 +11,7 @@ interface OwnProps extends PagesProps {
   sortField?: string;
   colspan?: number;
   defaultSelected?: boolean;
+  defaultOrder?: SortDirection;
   className?: string;
   tooltip?: string;
   children?: React.ReactNode;
@@ -22,6 +24,7 @@ const TableHeaderItem: FC<OwnProps> = ({
     className,
     colspan = 1,
     defaultSelected = false,
+    defaultOrder,
     tooltip,
     children,
   }) => {
@@ -39,6 +42,7 @@ const TableHeaderItem: FC<OwnProps> = ({
               name={name!}
               field={sortField}
               defaultSelected={defaultSelected}
+              defaultOrder={defaultOrder}
             />
           </span>
         </Tooltip>
@@ -48,6 +52,7 @@ const TableHeaderItem: FC<OwnProps> = ({
           name={name!}
           field={sortField}
           defaultSelected={defaultSelected}
+          defaultOrder={defaultOrder}
         />
       )}
     </th>

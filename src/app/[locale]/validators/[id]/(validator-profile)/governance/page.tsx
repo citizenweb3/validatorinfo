@@ -9,6 +9,7 @@ import ToolTip from '@/components/common/tooltip';
 import { Locale, NextPageWithLocale } from '@/i18n';
 import { SortDirection } from '@/server/types';
 import validatorService from '@/services/validator-service';
+import voteService from '@/services/vote-service';
 import SubDescription from '@/components/sub-description';
 
 interface PageProps {
@@ -35,7 +36,10 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
   const sortBy = (q.sortBy as 'chain') ?? 'chain';
   const order = (q.order as SortDirection) ?? 'asc';
 
-  const validator = await validatorService.getById(validatorId);
+  const [validator, voteChains] = await Promise.all([
+    validatorService.getById(validatorId),
+    voteService.getValidatorVoteChains(validatorId),
+  ]);
   const validatorMoniker = validator ? validator.moniker : 'Validator';
 
   return (
@@ -54,11 +58,13 @@ const ValidatorGovernancePage: NextPageWithLocale<PageProps> = async ({ params: 
         <ToolTip tooltip={t('tooltip news feed')} direction={'top'}>
           <SubTitle text={t('news feed')} size="h2" />
         </ToolTip>
-        <div className="mb-4 mt-2 flex justify-end">
-          <RoundedButton href={''} className="font-handjet text-lg">
-            {t('similar opinions')}
-          </RoundedButton>
-        </div>
+        {voteChains.length > 0 && (
+          <div className="mb-4 mt-2 flex justify-end">
+            <RoundedButton href={`/validators/${id}/governance/same_opinions`} className="font-handjet text-lg">
+              {t('similar opinions')}
+            </RoundedButton>
+          </div>
+        )}
         <ValidatorVotes
           page={'ValidatorGovernancePage'}
           perPage={perPage}

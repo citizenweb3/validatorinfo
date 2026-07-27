@@ -5,16 +5,18 @@ import DelegatedEventsList
 import BaseTable from '@/components/common/table/base-table';
 import DelegateTableHead from '@/components/delegations/delegate-table-head';
 import DelegateRowsSkeleton from '@/components/delegations/delegate-rows-skeleton';
+import type { DelegationSort } from '@/services/delegation-service';
 import { PagesProps } from '@/types';
 
 interface OwnProps extends PagesProps {
   chainName: string;
   operatorAddress: string;
+  sort: DelegationSort;
   cursorToken?: string;
   windowIndex: number;
 }
 
-const DelegatedTable: FC<OwnProps> = async ({ chainName, page, operatorAddress, cursorToken, windowIndex }) => {
+const DelegatedTable: FC<OwnProps> = async ({ chainName, page, operatorAddress, sort, cursorToken, windowIndex }) => {
   const fallback = (
     <BaseTable>
       <DelegateTableHead page={page} />
@@ -24,11 +26,12 @@ const DelegatedTable: FC<OwnProps> = async ({ chainName, page, operatorAddress, 
 
   return (
     <div>
-      <Suspense key={operatorAddress} fallback={fallback}>
+      <Suspense key={`${operatorAddress}-${sort.sortBy}-${sort.order}`} fallback={fallback}>
         <DelegatedEventsList
           page={page}
           chainName={chainName}
           operatorAddress={operatorAddress}
+          sort={sort}
           cursorToken={cursorToken}
           windowIndex={windowIndex}
         />

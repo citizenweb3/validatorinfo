@@ -18,6 +18,14 @@ export type NodeWithValidatorAndChain = Prisma.NodeGetPayload<{
   include: { validator: true; chain: { include: { params: true; tokenomics: true } } };
 }>;
 
+export type NodeWithValidatorIdentity = Prisma.NodeGetPayload<{
+  select: {
+    operatorAddress: true;
+    moniker: true;
+    validator: { select: { id: true; moniker: true; url: true } };
+  };
+}>;
+
 // Aztec mainnet only: existing self-stake sequencer nodes (validatorId = null) must be
 // relinked when the providers API starts claiming them. For other chains validatorId can
 // come from a nondeterministic fuzzy match, so re-asserting it on every update is unsafe.
@@ -110,6 +118,22 @@ const getNodesByChainId = async (chainId: number): Promise<Node[] | null> => {
   });
 };
 
+const getNodesByOperatorAddresses = async (
+  chainId: number,
+  operatorAddresses: readonly string[],
+): Promise<NodeWithValidatorIdentity[]> => {
+  if (operatorAddresses.length === 0) return [];
+
+  return db.node.findMany({
+    where: { chainId, operatorAddress: { in: [...operatorAddresses] } },
+    select: {
+      operatorAddress: true,
+      moniker: true,
+      validator: { select: { id: true, moniker: true, url: true } },
+    },
+  });
+};
+
 const getAll = async (
   ecosystems: string[],
   networks: string[],
@@ -191,6 +215,7 @@ const getNodeByAddressAndId = async (
 const nodeService = {
   upsertNode,
   getNodesByChainId,
+  getNodesByOperatorAddresses,
   getAll,
   getValidatorByNodeId,
   getNodeByAddressAndId,

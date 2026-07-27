@@ -10,7 +10,7 @@ import {
   encodeDelegationCursorToken,
 } from '@/components/delegations/delegation-cursor-token';
 import TxCursorPagination from '@/components/txs/tx-cursor-pagination';
-import type { DelegationBatch, DelegationCursor, DelegationItem } from '@/services/delegation-service';
+import type { DelegationBatch, DelegationCursor, DelegationItem, DelegationSort } from '@/services/delegation-service';
 
 const PER_PAGE = 20;
 const PREFETCH_RUNWAY = PER_PAGE * 2;
@@ -25,15 +25,13 @@ interface LoadedBatch {
 interface OwnProps {
   validator: string;
   chainName: string;
+  sort: DelegationSort;
   initialCursor: DelegationCursor | null;
   initialWindow: number;
   initial: DelegationBatch;
   unit: 'token' | 'usd';
   price: number;
 }
-
-const cursorKey = (cursor: DelegationCursor | null): string =>
-  cursor ? encodeDelegationCursorToken(cursor) : 'head';
 
 const MessageRow: FC<{ message: string; action?: ReactNode }> = ({ message, action }) => (
   <tbody>
@@ -51,6 +49,7 @@ const MessageRow: FC<{ message: string; action?: ReactNode }> = ({ message, acti
 const DelegateListClient: FC<OwnProps> = ({
   validator,
   chainName,
+  sort,
   initialCursor,
   initialWindow,
   initial,
@@ -58,6 +57,11 @@ const DelegateListClient: FC<OwnProps> = ({
   price,
 }) => {
   const t = useTranslations('RichListPage');
+
+  const cursorKey = useCallback(
+    (cursor: DelegationCursor | null): string => (cursor ? encodeDelegationCursorToken(cursor, sort) : 'head'),
+    [sort],
+  );
 
   const [loaded, setLoaded] = useState<LoadedBatch[]>([
     { cursor: initialCursor, rows: initial.rows, nextCursor: initial.nextCursor, hasMore: initial.hasMore },
@@ -84,7 +88,7 @@ const DelegateListClient: FC<OwnProps> = ({
 
     inFlight.current.add(key);
     setLoading(true);
-    const result = await getDelegateEventsBatch(chainName, validator, last.nextCursor);
+    const result = await getDelegateEventsBatch(chainName, validator, sort, last.nextCursor);
     inFlight.current.delete(key);
     setLoading(false);
 
@@ -106,7 +110,7 @@ const DelegateListClient: FC<OwnProps> = ({
         },
       ];
     });
-  }, [chainName, loaded, validator]);
+  }, [chainName, cursorKey, loaded, sort, validator]);
 
   const reloadHead = useCallback(async () => {
     const head = loaded[0];
@@ -115,7 +119,7 @@ const DelegateListClient: FC<OwnProps> = ({
 
     inFlight.current.add(key);
     setLoading(true);
-    const result = await getDelegateEventsBatch(chainName, validator, head.cursor ?? undefined);
+    const result = await getDelegateEventsBatch(chainName, validator, sort, head.cursor ?? undefined);
     inFlight.current.delete(key);
     setLoading(false);
 
@@ -127,7 +131,7 @@ const DelegateListClient: FC<OwnProps> = ({
     setErrored(false);
     setLoaded([{ cursor: head.cursor, rows: result.rows, nextCursor: result.nextCursor, hasMore: result.hasMore }]);
     setWindowIdx((index) => Math.min(index, Math.max(0, Math.ceil(result.rows.length / PER_PAGE) - 1)));
-  }, [chainName, loaded, validator]);
+  }, [chainName, cursorKey, loaded, sort, validator]);
 
   useEffect(() => {
     const rowsAhead = loadedRows.length - (windowIdx + 1) * PER_PAGE;
@@ -153,7 +157,7 @@ const DelegateListClient: FC<OwnProps> = ({
 
     const { cursor, pageWindow } = locate(windowIdx);
     const searchParams = new URLSearchParams(window.location.search);
-    if (cursor) searchParams.set('c', encodeDelegationCursorToken(cursor));
+    if (cursor) searchParams.set('c', encodeDelegationCursorToken(cursor, sort));
     else searchParams.delete('c');
     if (pageWindow > 0) searchParams.set('w', String(pageWindow));
     else searchParams.delete('w');
@@ -168,7 +172,7 @@ const DelegateListClient: FC<OwnProps> = ({
     } else {
       window.history.pushState(state, '', url);
     }
-  }, [windowIdx, loaded, tail.cursor]);
+  }, [windowIdx, loaded, sort, tail.cursor]);
 
   useEffect(() => {
     const handlePopState = (event: PopStateEvent) => {

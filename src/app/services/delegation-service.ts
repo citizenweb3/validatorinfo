@@ -5,11 +5,22 @@ import cosmosIndexer from '@/services/cosmos-indexer-api';
 import type { CosmosDelegationEvent } from '@/services/cosmos-indexer-api';
 import { cacheGetOrFetch, CACHE_KEYS, CACHE_TTL } from '@/services/redis-cache';
 import { getChainParams } from '@/server/tools/chains/params';
+import { SortDirection } from '@/server/types';
+
+export type DelegationSortBy = 'amount' | 'happened';
+
+export interface DelegationSort {
+  sortBy: DelegationSortBy;
+  order: SortDirection;
+}
+
+export const DEFAULT_DELEGATION_SORT: DelegationSort = { sortBy: 'amount', order: 'desc' };
 
 export interface DelegationCursor {
   before_height: string;
   before_index: number;
   before_msg_index: number;
+  before_amount?: string;
 }
 
 export interface DelegationItem {
@@ -56,6 +67,7 @@ const fetchDelegationsBatch = async (
   indexer: DelegationsClient,
   chainName: string,
   validator: string,
+  sort: DelegationSort,
   cursor?: DelegationCursor,
 ): Promise<DelegationBatch> => {
   const { coinDecimals, denom } = getChainParams(chainName);
@@ -63,6 +75,9 @@ const fetchDelegationsBatch = async (
     {
       validator,
       limit: ITEMS_PER_BATCH,
+      sort: sort.sortBy === 'amount' ? 'amount' : 'time',
+      order: sort.order,
+      before_amount: cursor?.before_amount,
       before_height: cursor?.before_height,
       before_index: cursor?.before_index,
       before_msg_index: cursor?.before_msg_index,
@@ -76,6 +91,9 @@ const fetchDelegationsBatch = async (
         before_height: page.cursor!.next_before_height,
         before_index: page.cursor!.next_before_index,
         before_msg_index: page.cursor!.next_before_msg_index,
+        ...(page.cursor!.next_before_amount !== undefined
+          ? { before_amount: page.cursor!.next_before_amount }
+          : {}),
       }
     : null;
 
@@ -92,13 +110,20 @@ const runDelegationsBatch = (
   indexer: DelegationsClient,
   chainKey: string,
   validator: string,
+  sort: DelegationSort,
   cursor?: DelegationCursor,
 ): Promise<DelegationBatch> => {
   if (!validator) return Promise.resolve(EMPTY_BATCH);
 
-  const cursorKey = cursor
-    ? `c:${cursor.before_height}:${cursor.before_index}:${cursor.before_msg_index}`
-    : 'head';
+  // The sort mode prefixes the cache key: an amount-sorted head and a time-sorted head for the
+  // same validator must never serve each other's cached batches.
+  const cursorKey = [
+    sort.sortBy,
+    sort.order,
+    cursor
+      ? `c:${cursor.before_height}:${cursor.before_index}:${cursor.before_msg_index}${cursor.before_amount !== undefined ? `:${cursor.before_amount}` : ''}`
+      : 'head',
+  ].join(':');
   const key = CACHE_KEYS.delegations.byValidator(chainKey, validator, cursorKey);
   const ttl = cursor ? CACHE_TTL.TXS_DEEP : CACHE_TTL.TXS_HEAD;
 
@@ -107,7 +132,7 @@ const runDelegationsBatch = (
 
   const promise = cacheGetOrFetch<DelegationBatch>(
     key,
-    () => fetchDelegationsBatch(indexer, chainKey, validator, cursor),
+    () => fetchDelegationsBatch(indexer, chainKey, validator, sort, cursor),
     ttl,
   )
     .then((value) => value ?? EMPTY_BATCH)
@@ -123,16 +148,17 @@ const runDelegationsBatch = (
 const getDelegationsBatch = (
   chainName: string,
   validator: string,
+  sort: DelegationSort = DEFAULT_DELEGATION_SORT,
   cursor?: DelegationCursor,
 ): Promise<DelegationBatch> => {
   const normalizedChainName = chainName.toLowerCase();
 
   if (normalizedChainName === 'cosmoshub') {
-    return runDelegationsBatch(cosmosIndexer, 'cosmoshub', validator, cursor);
+    return runDelegationsBatch(cosmosIndexer, 'cosmoshub', validator, sort, cursor);
   }
 
   if (normalizedChainName === 'atomone') {
-    return runDelegationsBatch(atomoneIndexer, 'atomone', validator, cursor);
+    return runDelegationsBatch(atomoneIndexer, 'atomone', validator, sort, cursor);
   }
 
   return Promise.resolve(EMPTY_BATCH);

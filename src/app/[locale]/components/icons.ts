@@ -4,6 +4,7 @@ import BatteryIconActive from '@/public/img/icons/battery-a.svg';
 import BatterySmallIcon from '@/public/img/icons/battery-small.svg';
 import BatteryIcon from '@/public/img/icons/battery.svg';
 import CheckmarkIcon from '@/public/img/icons/checkmark.svg';
+import GraySquareIcon from '@/public/img/icons/gray-square.svg';
 import GreenSquareIcon from '@/public/img/icons/green-square.svg';
 import LuckyIconHovered from '@/public/img/icons/lucky-h.png';
 import LuckyIcon from '@/public/img/icons/lucky.png';
@@ -133,6 +134,7 @@ const icons = {
   LuckyIcon,
   LuckyIconHovered,
   CheckmarkIcon,
+  GraySquareIcon,
   GreenSquareIcon,
   RedSquareIcon,
   YellowSquareIcon,
