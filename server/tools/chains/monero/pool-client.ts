@@ -9,7 +9,6 @@
  * Pure response parsing lives in `pool-parse.ts` (unit-tested standalone). Every
  * call here is isolated — one pool's failure never breaks the others.
  */
-
 import logger from '@/logger';
 import { AttributionSource } from '@/server/tools/chains/monero/attribution-source';
 import poolRegistry from '@/server/tools/chains/monero/pool-apis.json';
@@ -27,6 +26,34 @@ const { logWarn } = logger('monero-pool-client');
 
 const FETCH_TIMEOUT_MS = 12_000;
 
+export type PoolPayoutSchedule = 'block-found' | 'every-10-minutes' | 'hourly' | 'threshold';
+
+export interface PoolStratumPort {
+  port: number;
+  tls: boolean;
+}
+
+export interface PoolStratumEndpoint {
+  host: string;
+  ports: PoolStratumPort[];
+}
+
+export type PoolPayoutFee =
+  | { kind: 'fixed'; amountXmr: number }
+  | { kind: 'instant'; amountXmr: number }
+  | { kind: 'maximum'; amountXmr: number; waivedAboveXmr: number };
+
+export interface PoolConfiguration {
+  software: { name: string; url: string } | null;
+  stratumEndpoints: PoolStratumEndpoint[];
+  regionCodes: string[] | null;
+  minimumPayoutXmr: number | null;
+  payoutSchedule: PoolPayoutSchedule | null;
+  payoutFee: PoolPayoutFee | null;
+  sourceUrls: string[];
+  verifiedAt: string;
+}
+
 export interface PoolRegistryEntry {
   key: string;
   name: string;
@@ -39,6 +66,7 @@ export interface PoolRegistryEntry {
   twitter: string | null;
   blocksUrl: string;
   statsUrl: string | null;
+  configuration: PoolConfiguration;
 }
 
 export interface PoolLiveStats {

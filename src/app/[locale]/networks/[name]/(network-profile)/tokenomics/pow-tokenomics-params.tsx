@@ -45,11 +45,11 @@ const formatPercent = (value: number | null): string | null => {
 
 const cardGridClassName = 'grid w-full grid-cols-[repeat(2,auto)] justify-center gap-6 md:grid-cols-[repeat(4,auto)]';
 
-const withTooltip = (value: string, tooltip: string | null): ReactNode => {
+const withTooltip = (value: string, tooltip: string | null, tooltipClassName?: string): ReactNode => {
   if (!tooltip) return value;
 
   return (
-    <Tooltip tooltip={tooltip}>
+    <Tooltip tooltip={tooltip} className={tooltipClassName}>
       <div className="text-center">{value}</div>
     </Tooltip>
   );
@@ -91,9 +91,10 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
 
   const supplyAtomic = parseAtomicAmount(supplyRaw);
   const sumRewardAtomic = txMetrics ? parseAtomicAmount(txMetrics.sumRewardAtomic) : null;
-  const composition = txMetrics && sumRewardAtomic !== null
-    ? rewardComposition(sumRewardAtomic, TAIL_EMISSION_ATOMIC, txMetrics.feeBlockCount)
-    : null;
+  const composition =
+    txMetrics && sumRewardAtomic !== null
+      ? rewardComposition(sumRewardAtomic, TAIL_EMISSION_ATOMIC, txMetrics.feeBlockCount)
+      : null;
   const coinDecimals = params?.coinDecimals ?? null;
   const denom = params?.denom ?? 'XMR';
 
@@ -108,20 +109,24 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
     supplyAtomic !== null && coinDecimals !== null
       ? `${atomicToDecimal(supplyAtomic, coinDecimals).toLocaleString()} ${denom}`
       : null;
-  const circulatingValue = circulatingAmount
-    ? withTooltip(circulatingAmount, exactCirculatingSupply)
-    : noData;
-  const blockRewardValue =
-    blockRewardAmount !== null ? t('per block value', { amount: blockRewardAmount }) : noData;
+  const circulatingValue = circulatingAmount ? withTooltip(circulatingAmount, exactCirculatingSupply) : noData;
+  const blockRewardValue = blockRewardAmount !== null ? t('per block value', { amount: blockRewardAmount }) : noData;
   const annualIssuanceValue =
     annualIssuanceAmount !== null ? t('per year value', { amount: annualIssuanceAmount }) : noData;
   const annualInflationValue =
     supplyAtomic !== null && annualAtomic !== null
       ? formatPercent(inflationRate(annualAtomic, supplyAtomic)) ?? noData
       : noData;
-  const stockToFlowValue =
-    supplyAtomic !== null && annualAtomic !== null
-      ? (stockToFlow(supplyAtomic, annualAtomic)?.toFixed(1) ?? noData)
+  const stockToFlowRatio =
+    supplyAtomic !== null && annualAtomic !== null ? stockToFlow(supplyAtomic, annualAtomic) : null;
+  const stockToFlowValue = stockToFlowRatio?.toFixed(1) ?? noData;
+  const stockToFlowDisplay =
+    stockToFlowRatio !== null
+      ? withTooltip(
+          stockToFlowValue,
+          t('stock-to-flow tooltip', { ratio: stockToFlowValue }),
+          'w-72 max-w-[calc(100vw-2rem)]',
+        )
       : noData;
   const isTailEmission = blockRewardAtomic === TAIL_EMISSION_ATOMIC && tailEmissionAmount !== null;
   const emissionPhaseLine = isTailEmission ? t('per block value', { amount: tailEmissionAmount }) : '';
@@ -159,7 +164,7 @@ const PowTokenomicsParams: FC<OwnProps> = async ({ chainName }) => {
       />
       <MetricsCardItem
         title={t('stock-to-flow')}
-        data={stockToFlowValue}
+        data={stockToFlowDisplay}
         className={cardClassName}
         dataClassName={dataClassName}
       />

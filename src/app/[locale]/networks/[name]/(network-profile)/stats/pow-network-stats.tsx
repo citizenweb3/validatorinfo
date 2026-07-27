@@ -8,8 +8,10 @@ import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-
 import HashrateWindowSelector from './hashrate-window-selector';
 import NetworkHealth from './network-health';
 import PoolDominanceSection, { type PoolDominancePeriodOption } from './pool-dominance-section';
+import PrivacyParameters from './privacy-parameters';
 
 interface OwnProps {
+  chainName: string;
   window: HashrateWindow;
 }
 
@@ -22,7 +24,7 @@ const barColor = (pct: number): string => {
 
 // PoW network stats — the centralisation "Pool Distribution" bars. The per-pool technical table lives on
 // /networks/[name]/mining-pools (reachable from the network header), so it is not duplicated here.
-const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
+const PowNetworkStats: FC<OwnProps> = async ({ chainName, window }) => {
   const [t, locale, availableWindows, shareHistory] = await Promise.all([
     getTranslations('PowNetworkStats'),
     getLocale(),
@@ -70,7 +72,7 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
                   {stat.pool.isVerified && stat.pool.slug !== 'unknown' ? (
                     <Link
                       href={`/mining-pools/${stat.pool.slug}/networks`}
-                      className="w-56 shrink-0 truncate font-sfpro text-base underline underline-offset-3 hover:text-highlight"
+                      className="underline-offset-3 w-56 shrink-0 truncate font-sfpro text-base underline hover:text-highlight"
                     >
                       {stat.pool.name}
                     </Link>
@@ -103,6 +105,7 @@ const PowNetworkStats: FC<OwnProps> = async ({ window }) => {
         periodOptions={periodOptions}
       />
       <NetworkHealth poolStats={poolStats} window={safeWindow} />
+      {chainName === 'monero' && <PrivacyParameters />}
     </div>
   );
 };
