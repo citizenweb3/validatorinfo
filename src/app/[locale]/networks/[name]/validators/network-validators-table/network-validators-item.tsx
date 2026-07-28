@@ -1,15 +1,17 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import BaseTableRow from '@/components/common/table/base-table-row';
 import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
 import { NetworkValidatorsWithNodes } from '@/services/chain-service';
 import colorStylization from '@/utils/color-stylization';
 import formatCash from '@/utils/format-cash';
+import { getMissedWindow } from '@/utils/missed-window';
 
 interface OwnProps {
   item: NetworkValidatorsWithNodes;
@@ -17,6 +19,7 @@ interface OwnProps {
 }
 
 const NetworkValidatorsItem: FC<OwnProps> = async ({ item, isAztec }) => {
+  const t = await getTranslations('Common');
   const tokenDelegatorShares =
     item.chain.params?.coinDecimals != null ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals : undefined;
 
@@ -34,11 +37,50 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item, isAztec }) => {
   const nodeLink = `/validators/${item.validatorId}/networks`;
 
   const totalSlots = item.totalSlots;
+  const missedWindow = getMissedWindow({
+    chainName: item.chain.name,
+    blocksWindow: item.chain.params?.blocksWindow ?? null,
+    totalSlots,
+    avgTxInterval: item.chain.avgTxInterval,
+  });
+  const windowTooltip = (() => {
+    if (missedWindow.count == null) return null;
 
-  const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
+    const count = missedWindow.count.toLocaleString();
+    if (missedWindow.usesSlots) {
+      return missedWindow.hours == null
+        ? t('missedWindowSlotsNoTime', { count })
+        : t('missedWindowSlots', { count, hours: missedWindow.hours.toFixed(1) });
+    }
+    return missedWindow.hours == null
+      ? t('missedWindowBlocksNoTime', { count })
+      : t('missedWindowBlocks', { count, hours: missedWindow.hours.toFixed(1) });
+  })();
 
   const hasTokens = BigInt(item.tokens) > BigInt(0);
   const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(item.chain.name);
+
+  const uptimeTooltip =
+    windowTooltip && isAztecNetwork
+      ? [
+          windowTooltip,
+          item.totalSlotsAttestations != null && item.totalSlotsAttestations > 0
+            ? `${t('attested')}: ${(((item.totalSlotsAttestations - (item.missedSlotsAttestations ?? 0)) / item.totalSlotsAttestations) * 100).toFixed(2)}%`
+            : `${t('attested')}: -`,
+          item.totalSlotsProposals != null && item.totalSlotsProposals > 0
+            ? `${t('proposed')}: ${(((item.totalSlotsProposals - (item.missedSlotsProposals ?? 0)) / item.totalSlotsProposals) * 100).toFixed(2)}%`
+            : `${t('proposed')}: -`,
+        ].join('\n')
+      : windowTooltip;
+
+  const missedBlocksTooltip =
+    windowTooltip && isAztecNetwork
+      ? [
+          windowTooltip,
+          `${t('attested')}: ${item.missedSlotsAttestations ?? '-'}`,
+          `${t('proposed')}: ${item.missedSlotsProposals ?? '-'}`,
+        ].join('\n')
+      : windowTooltip;
 
   const getStatusIcon = () => {
     if (isAztecNetwork) {
@@ -94,44 +136,30 @@ const NetworkValidatorsItem: FC<OwnProps> = async ({ item, isAztec }) => {
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.uptime !== undefined && item.uptime !== null ? (
-          <Tooltip
-            tooltip={
-              isAztecNetwork
-                ? [
-                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
-                    item.totalSlotsAttestations != null && item.totalSlotsAttestations > 0
-                      ? `Attested: ${(((item.totalSlotsAttestations - (item.missedSlotsAttestations ?? 0)) / item.totalSlotsAttestations) * 100).toFixed(2)}%`
-                      : 'Attested: -',
-                    item.totalSlotsProposals != null && item.totalSlotsProposals > 0
-                      ? `Proposed: ${(((item.totalSlotsProposals - (item.missedSlotsProposals ?? 0)) / item.totalSlotsProposals) * 100).toFixed(2)}%`
-                      : 'Proposed: -',
-                  ].join('\n')
-                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
-            }
-          >
+          uptimeTooltip ? (
+            <Tooltip tooltip={uptimeTooltip}>
+              <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
+                {item.uptime.toFixed(2)}%
+              </div>
+            </Tooltip>
+          ) : (
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}%
             </div>
-          </Tooltip>
+          )
         ) : (
           <div className="text-center">-</div>
         )}
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip
-            tooltip={
-              isAztecNetwork
-                ? [
-                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
-                    `Attested: ${item.missedSlotsAttestations != null ? item.missedSlotsAttestations : '-'}`,
-                    `Proposed: ${item.missedSlotsProposals != null ? item.missedSlotsProposals : '-'}`,
-                  ].join('\n')
-                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
-            }
-          >
+          missedBlocksTooltip ? (
+            <Tooltip tooltip={missedBlocksTooltip}>
+              <div className="text-center">{item.missedBlocks}</div>
+            </Tooltip>
+          ) : (
             <div className="text-center">{item.missedBlocks}</div>
-          </Tooltip>
+          )
         ) : (
           <div className="text-center">-</div>
         )}

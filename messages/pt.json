@@ -102,7 +102,13 @@
     "mobile description": "Anon, note que a minha versão móvel tem funcionalidades limitadas. Para usufruir de todas as minhas vantagens e iniciar sessão na sua conta, visite a minha versão para computador."
   },
   "Common": {
-    "Learn More": "Saber mais"
+    "Learn More": "Saber mais",
+    "missedWindowBlocks": "Por {count} blocos (~{hours} h)",
+    "missedWindowSlots": "Por {count} slots (~{hours} h)",
+    "missedWindowBlocksNoTime": "Por {count} blocos",
+    "missedWindowSlotsNoTime": "Por {count} slots",
+    "attested": "Atestado",
+    "proposed": "Proposto"
   },
   "HomePage": {
     "title": "Validador de Cadeia de Blocos Web3 e Explorador de Pools de Mineração",
@@ -719,7 +725,7 @@
       },
       "Missed Blocks": {
         "name": "Blocos Perdidos",
-        "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
+        "hint": "O número de blocos que este validador perdeu dentro da janela de assinaturas atual da rede — não desde o início do nó. Passe o cursor sobre um valor na coluna para ver o tamanho exato da janela e a sua duração. A cor indica a proporção em comparação com outros nós da rede"
       },
       "Att": "Att",
       "Prop": "Prop",
@@ -766,7 +772,8 @@
         "name": "Tempo de Atividade"
       },
       "Missed Blocks": {
-        "name": "Blocos Perdidos"
+        "name": "Blocos Perdidos",
+        "hint": "O número de blocos que este validador perdeu dentro da janela de assinaturas atual da rede — não desde o início do nó. Passe o cursor sobre um valor na coluna para ver o tamanho exato da janela e a sua duração. A cor indica a proporção em comparação com outros nós da rede"
       },
       "Att": "Att",
       "Prop": "Prop",
@@ -812,7 +819,7 @@
       },
       "Missed Blocks": {
         "name": "Blocos Perdidos",
-        "hint": "A quantidade total de blocos perdidos por este validador desde o início do nó. A cor indica a proporção em comparação com outros nós da rede"
+        "hint": "O número de blocos que este validador perdeu dentro da janela de assinaturas atual da rede — não desde o início do nó. Passe o cursor sobre um valor na coluna para ver o tamanho exato da janela e a sua duração. A cor indica a proporção em comparação com outros nós da rede"
       }
     }
   },
@@ -1155,7 +1162,7 @@
       },
       "Missed Blocks": {
         "name": "Bloqueios Falhados",
-        "hint": "A quantidade total de blocos falhados por este validador desde o início do nó. A cor indica o rácio em comparação com outros nós da rede"
+        "hint": "O número de blocos que este validador perdeu dentro da janela de assinaturas atual da rede — não desde o início do nó. Passe o cursor sobre um valor na coluna para ver o tamanho exato da janela e a sua duração. A cor indica a proporção em comparação com outros nós da rede"
       },
       "Infrastructure": {
         "name": "Infraestrutura",

@@ -1,22 +1,25 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
 import CopyButton from '@/components/common/copy-button';
-import BaseTableRow from '@/components/common/table/base-table-row';
 import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
 import { NodeWithChainAndConsensus } from '@/services/node-service';
 import colorStylization from '@/utils/color-stylization';
 import cutHash from '@/utils/cut-hash';
 import formatCash from '@/utils/format-cash';
+import { getMissedWindow } from '@/utils/missed-window';
 
 interface OwnProps {
   item: NodeWithChainAndConsensus;
 }
 
-const NetworkNodesListItem: FC<OwnProps> = ({ item }) => {
+const NetworkNodesListItem: FC<OwnProps> = async ({ item }) => {
+  const t = await getTranslations('Common');
   const tokenDelegatorShares =
     item.chain.params?.coinDecimals != null
       ? Number(item.delegatorShares) / 10 ** item.chain.params?.coinDecimals
@@ -27,8 +30,48 @@ const NetworkNodesListItem: FC<OwnProps> = ({ item }) => {
     : '';
 
   const totalSlots = item.consensusData?.totalSlots ?? null;
-  const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
   const isAztecNetwork = ['aztec', 'aztec-testnet'].includes(item.chain.name);
+  const missedWindow = getMissedWindow({
+    chainName: item.chain.name,
+    blocksWindow: item.chain.params?.blocksWindow ?? null,
+    totalSlots,
+    avgTxInterval: item.chain.avgTxInterval,
+  });
+  const windowTooltip = (() => {
+    if (missedWindow.count == null) return null;
+
+    const count = missedWindow.count.toLocaleString();
+    if (missedWindow.usesSlots) {
+      return missedWindow.hours == null
+        ? t('missedWindowSlotsNoTime', { count })
+        : t('missedWindowSlots', { count, hours: missedWindow.hours.toFixed(1) });
+    }
+    return missedWindow.hours == null
+      ? t('missedWindowBlocksNoTime', { count })
+      : t('missedWindowBlocks', { count, hours: missedWindow.hours.toFixed(1) });
+  })();
+
+  const uptimeTooltip =
+    windowTooltip && isAztecNetwork
+      ? [
+          windowTooltip,
+          item.consensusData?.totalSlotsAttestations != null && item.consensusData.totalSlotsAttestations > 0
+            ? `${t('attested')}: ${(((item.consensusData.totalSlotsAttestations - (item.consensusData.missedSlotsAttestations ?? 0)) / item.consensusData.totalSlotsAttestations) * 100).toFixed(2)}%`
+            : `${t('attested')}: -`,
+          item.consensusData?.totalSlotsProposals != null && item.consensusData.totalSlotsProposals > 0
+            ? `${t('proposed')}: ${(((item.consensusData.totalSlotsProposals - (item.consensusData.missedSlotsProposals ?? 0)) / item.consensusData.totalSlotsProposals) * 100).toFixed(2)}%`
+            : `${t('proposed')}: -`,
+        ].join('\n')
+      : windowTooltip;
+
+  const missedBlocksTooltip =
+    windowTooltip && isAztecNetwork
+      ? [
+          windowTooltip,
+          `${t('attested')}: ${item.consensusData?.missedSlotsAttestations ?? '-'}`,
+          `${t('proposed')}: ${item.consensusData?.missedSlotsProposals ?? '-'}`,
+        ].join('\n')
+      : windowTooltip;
 
   const AddressContent = (
     <div className="flex">
@@ -68,44 +111,30 @@ const NetworkNodesListItem: FC<OwnProps> = ({ item }) => {
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         {item.uptime !== undefined && item.uptime !== null ? (
-          <Tooltip
-            tooltip={
-              isAztecNetwork
-                ? [
-                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
-                    item.consensusData?.totalSlotsAttestations != null && item.consensusData.totalSlotsAttestations > 0
-                      ? `Attested: ${(((item.consensusData.totalSlotsAttestations - (item.consensusData.missedSlotsAttestations ?? 0)) / item.consensusData.totalSlotsAttestations) * 100).toFixed(2)}%`
-                      : 'Attested: -',
-                    item.consensusData?.totalSlotsProposals != null && item.consensusData.totalSlotsProposals > 0
-                      ? `Proposed: ${(((item.consensusData.totalSlotsProposals - (item.consensusData.missedSlotsProposals ?? 0)) / item.consensusData.totalSlotsProposals) * 100).toFixed(2)}%`
-                      : 'Proposed: -',
-                  ].join('\n')
-                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
-            }
-          >
+          uptimeTooltip ? (
+            <Tooltip tooltip={uptimeTooltip}>
+              <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
+                {item.uptime.toFixed(2)}%
+              </div>
+            </Tooltip>
+          ) : (
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}%
             </div>
-          </Tooltip>
+          )
         ) : (
           <div className="text-center">-</div>
         )}
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip
-            tooltip={
-              isAztecNetwork
-                ? [
-                    `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} slots`,
-                    `Attested: ${item.consensusData?.missedSlotsAttestations != null ? item.consensusData.missedSlotsAttestations : '-'}`,
-                    `Proposed: ${item.consensusData?.missedSlotsProposals != null ? item.consensusData.missedSlotsProposals : '-'}`,
-                  ].join('\n')
-                : `Per ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()} ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}`
-            }
-          >
+          missedBlocksTooltip ? (
+            <Tooltip tooltip={missedBlocksTooltip}>
+              <div className="text-center">{item.missedBlocks}</div>
+            </Tooltip>
+          ) : (
             <div className="text-center">{item.missedBlocks}</div>
-          </Tooltip>
+          )
         ) : (
           <div className="text-center">-</div>
         )}
