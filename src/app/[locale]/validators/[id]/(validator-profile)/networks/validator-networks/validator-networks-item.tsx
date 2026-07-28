@@ -11,7 +11,7 @@ import icons from '@/components/icons';
 import { validatorNodesWithChainData } from '@/services/validator-service';
 import colorStylization from '@/utils/color-stylization';
 import formatCash from '@/utils/format-cash';
-import { getMissedWindow } from '@/utils/missed-window';
+import { getMissedWindow, getMissedWindowMessage } from '@/utils/missed-window';
 
 interface OwnProps {
   item: validatorNodesWithChainData;
@@ -42,19 +42,8 @@ const ValidatorNetworksItem: FC<OwnProps> = async ({ item, aggregated }) => {
     totalSlots,
     avgTxInterval: item.chain.avgTxInterval,
   });
-  const windowTooltip = (() => {
-    if (missedWindow.count == null) return null;
-
-    const count = missedWindow.count.toLocaleString();
-    if (missedWindow.usesSlots) {
-      return missedWindow.hours == null
-        ? t('missedWindowSlotsNoTime', { count })
-        : t('missedWindowSlots', { count, hours: missedWindow.hours.toFixed(1) });
-    }
-    return missedWindow.hours == null
-      ? t('missedWindowBlocksNoTime', { count })
-      : t('missedWindowBlocks', { count, hours: missedWindow.hours.toFixed(1) });
-  })();
+  const windowMessage = getMissedWindowMessage(missedWindow);
+  const windowTooltip = windowMessage ? t(windowMessage.key, windowMessage.values) : null;
 
   return (
     <BaseTableRow>

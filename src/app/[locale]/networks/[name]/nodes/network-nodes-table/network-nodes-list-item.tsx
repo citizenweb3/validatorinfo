@@ -12,7 +12,7 @@ import { NodeWithChainAndConsensus } from '@/services/node-service';
 import colorStylization from '@/utils/color-stylization';
 import cutHash from '@/utils/cut-hash';
 import formatCash from '@/utils/format-cash';
-import { getMissedWindow } from '@/utils/missed-window';
+import { getMissedWindow, getMissedWindowMessage } from '@/utils/missed-window';
 
 interface OwnProps {
   item: NodeWithChainAndConsensus;
@@ -37,19 +37,8 @@ const NetworkNodesListItem: FC<OwnProps> = async ({ item }) => {
     totalSlots,
     avgTxInterval: item.chain.avgTxInterval,
   });
-  const windowTooltip = (() => {
-    if (missedWindow.count == null) return null;
-
-    const count = missedWindow.count.toLocaleString();
-    if (missedWindow.usesSlots) {
-      return missedWindow.hours == null
-        ? t('missedWindowSlotsNoTime', { count })
-        : t('missedWindowSlots', { count, hours: missedWindow.hours.toFixed(1) });
-    }
-    return missedWindow.hours == null
-      ? t('missedWindowBlocksNoTime', { count })
-      : t('missedWindowBlocks', { count, hours: missedWindow.hours.toFixed(1) });
-  })();
+  const windowMessage = getMissedWindowMessage(missedWindow);
+  const windowTooltip = windowMessage ? t(windowMessage.key, windowMessage.values) : null;
 
   const uptimeTooltip =
     windowTooltip && isAztecNetwork

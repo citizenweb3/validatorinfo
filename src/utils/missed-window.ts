@@ -17,6 +17,12 @@ export interface MissedWindow {
   hours: number | null;
 }
 
+export type MissedWindowMessage =
+  | { key: 'missedWindowBlocks'; values: { count: string; hours: string } }
+  | { key: 'missedWindowSlots'; values: { count: string; hours: string } }
+  | { key: 'missedWindowBlocksNoTime'; values: { count: string } }
+  | { key: 'missedWindowSlotsNoTime'; values: { count: string } };
+
 export const getMissedWindow = ({
   chainName,
   blocksWindow,
@@ -33,4 +39,18 @@ export const getMissedWindow = ({
     usesSlots: CHAINS_WITH_SLOTS_SET.has(chainName),
     hours: count != null && hasInterval ? (count * intervalSeconds) / 3600 : null,
   };
+};
+
+export const getMissedWindowMessage = ({ count, usesSlots, hours }: MissedWindow): MissedWindowMessage | null => {
+  if (count == null) return null;
+
+  const formattedCount = count.toLocaleString();
+  if (hours == null) {
+    return usesSlots
+      ? { key: 'missedWindowSlotsNoTime', values: { count: formattedCount } }
+      : { key: 'missedWindowBlocksNoTime', values: { count: formattedCount } };
+  }
+
+  const values = { count: formattedCount, hours: hours.toFixed(1) };
+  return usesSlots ? { key: 'missedWindowSlots', values } : { key: 'missedWindowBlocks', values };
 };

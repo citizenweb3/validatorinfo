@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { getMissedWindow } from '@/utils/missed-window';
+import { getMissedWindow, getMissedWindowMessage } from '@/utils/missed-window';
 
 test('calculates second-based Cosmos signing windows in hours', () => {
   const cosmosHub = getMissedWindow({
@@ -68,4 +68,16 @@ test('rejects missing or non-positive window sizes', () => {
     usesSlots: true,
     hours: null,
   });
+});
+
+test('maps window data to one typed translation descriptor', () => {
+  assert.deepEqual(getMissedWindowMessage({ count: 100, usesSlots: false, hours: 1.25 }), {
+    key: 'missedWindowBlocks',
+    values: { count: '100', hours: '1.3' },
+  });
+  assert.deepEqual(getMissedWindowMessage({ count: 100, usesSlots: true, hours: null }), {
+    key: 'missedWindowSlotsNoTime',
+    values: { count: '100' },
+  });
+  assert.equal(getMissedWindowMessage({ count: null, usesSlots: false, hours: null }), null);
 });
