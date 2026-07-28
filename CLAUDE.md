@@ -291,6 +291,7 @@ Required in `.env`:
 Optional:
 - `GOOGLE_GENERATIVE_AI_API_KEY`: For AI chat assistant (Gemini)
 - `GITHUB_API_TOKEN`: For fetching GitHub data
+- `ETHERSCAN_API_KEY`: For Ethereum total supply via Etherscan V2 (falls back to CoinGecko)
 - `SKIP_API_KEY`: For Skip Protocol integration
 - `RAG_API_TOKEN`: Shared secret for internal RAG search API (agent access)
 
