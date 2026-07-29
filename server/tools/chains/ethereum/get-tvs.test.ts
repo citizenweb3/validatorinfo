@@ -49,13 +49,22 @@ test('mainnet supply failure returns before the Beacon request', async () => {
   assert.equal(nodesRequested, false);
 });
 
-test('an empty mainnet Beacon result preserves the previous TVS snapshot', async () => {
+test('an empty mainnet Beacon result still publishes total supply', async () => {
   const getTvs = createEthereumTvsGetter({
     getTotalSupply: async () => '1000',
     getNodes: async () => [],
   });
 
-  assert.equal(await getTvs(getChainParams('ethereum')), null);
+  // FDV is supply * price and must not depend on the validator set. The Beacon
+  // endpoint fails for mainnet today, and dropping the snapshot on that failure is
+  // what kept Tokenomics.fdv at 0.
+  assert.deepEqual(await getTvs(getChainParams('ethereum')), {
+    totalSupply: '1000',
+    bondedTokens: '0',
+    unbondedTokens: '1000',
+    unbondedTokensRatio: 1,
+    tvs: 0,
+  });
 });
 
 test('mainnet TVS is derived from supply and bonded wei without negative complements', async () => {
@@ -73,13 +82,19 @@ test('mainnet TVS is derived from supply and bonded wei without negative complem
   });
 });
 
-test('an impossible mainnet bonded total cannot overwrite the previous snapshot', async () => {
+test('an impossible mainnet bonded total drops the staking figures but keeps supply', async () => {
   const getTvs = createEthereumTvsGetter({
     getTotalSupply: async () => '1000',
     getNodes: async () => [createNode('1001')],
   });
 
-  assert.equal(await getTvs(getChainParams('ethereum')), null);
+  assert.deepEqual(await getTvs(getChainParams('ethereum')), {
+    totalSupply: '1000',
+    bondedTokens: '0',
+    unbondedTokens: '1000',
+    unbondedTokensRatio: 1,
+    tvs: 0,
+  });
 });
 
 test('Sepolia keeps its existing bonded-token snapshot without using mainnet supply', async () => {

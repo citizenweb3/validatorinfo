@@ -23,31 +23,34 @@ export const createEthereumTvsGetter =
         return null;
       }
 
+      // Total supply does not depend on the validator set: FDV is supply * price.
+      // The Beacon endpoint currently fails for mainnet (its active-validator response
+      // exceeds the V8 string limit), and letting that failure abort the whole snapshot
+      // is what kept Tokenomics.total_supply empty and Tokenomics.fdv at 0. Staking
+      // figures degrade to zero when the validator set is unavailable; supply does not.
       const nodes = await getNodesForChain(chain);
-      if (nodes.length === 0) {
-        logError(`No validators returned for [${chain.name}]; preserving the previous TVS snapshot`);
-        return null;
-      }
-
-      logInfo(`Fetched ${nodes.length} validators for ${chain.name}`);
-
-      const bondedTokens = nodes
-        .filter((node) => node.status === 'BOND_STATUS_BONDED')
-        .reduce((acc, node) => acc + BigInt(node.tokens), BigInt(0));
       const totalSupplyWei = BigInt(totalSupply);
 
-      if (isMainnet && (bondedTokens <= BigInt(0) || bondedTokens > totalSupplyWei)) {
-        logError(`Invalid bonded token total for [${chain.name}]; preserving the previous TVS snapshot`);
-        return null;
+      if (nodes.length === 0) {
+        logError(`No validators returned for [${chain.name}]; reporting supply without staking figures`);
+      } else {
+        logInfo(`Fetched ${nodes.length} validators for ${chain.name}`);
       }
 
+      const rawBondedTokens = nodes
+        .filter((node) => node.status === 'BOND_STATUS_BONDED')
+        .reduce((acc, node) => acc + BigInt(node.tokens), BigInt(0));
+
+      // Bonded stake above total supply is impossible; treat it as missing rather than
+      // publishing a ratio greater than 1.
+      const bondedExceedsSupply = totalSupplyWei > BigInt(0) && rawBondedTokens > totalSupplyWei;
+      if (bondedExceedsSupply) {
+        logError(`Bonded tokens exceed total supply for [${chain.name}]; dropping the staking figures`);
+      }
+
+      const bondedTokens = bondedExceedsSupply ? BigInt(0) : rawBondedTokens;
       const unbondedTokens = totalSupplyWei > bondedTokens ? totalSupplyWei - bondedTokens : BigInt(0);
       const tvs = totalSupplyWei > BigInt(0) ? Number(bondedTokens) / Number(totalSupplyWei) : 0;
-
-      if (isMainnet && (!Number.isFinite(tvs) || tvs <= 0 || tvs > 1)) {
-        logError(`Invalid TVS ratio for [${chain.name}]; preserving the previous TVS snapshot`);
-        return null;
-      }
 
       const result = {
         totalSupply,
