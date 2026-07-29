@@ -1,41 +1,49 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FC } from 'react';
 
-import BaseTableRow from '@/components/common/table/base-table-row';
 import BaseTableCell from '@/components/common/table/base-table-cell';
+import BaseTableRow from '@/components/common/table/base-table-row';
 import TableAvatar from '@/components/common/table/table-avatar';
 import Tooltip from '@/components/common/tooltip';
 import icons from '@/components/icons';
 import { validatorNodesWithChainData } from '@/services/validator-service';
-import formatCash from '@/utils/format-cash';
 import colorStylization from '@/utils/color-stylization';
+import formatCash from '@/utils/format-cash';
+import { getMissedWindow, getMissedWindowMessage } from '@/utils/missed-window';
 
 interface OwnProps {
   item: validatorNodesWithChainData;
   aggregated: boolean;
 }
 
-const ValidatorNetworksItem: FC<OwnProps> = ({ item, aggregated }) => {
-  const selfDelegation = item.chain.params?.coinDecimals != null
-    ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
-    : undefined;
+const ValidatorNetworksItem: FC<OwnProps> = async ({ item, aggregated }) => {
+  const t = await getTranslations('Common');
+  const selfDelegation =
+    item.chain.params?.coinDecimals != null
+      ? +item.minSelfDelegation / 10 ** item.chain.params?.coinDecimals
+      : undefined;
 
-  const tokenDelegatorShares = item.chain.params?.coinDecimals != null
-    ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals
-    : undefined;
+  const tokenDelegatorShares =
+    item.chain.params?.coinDecimals != null ? +item.delegatorShares / 10 ** item.chain.params?.coinDecimals : undefined;
 
   const expectedApr = item?.chain?.tokenomics?.apr
-    ? (+item.chain?.tokenomics?.apr - (+item.chain.tokenomics.apr * +item.rate)) * 100
+    ? (+item.chain?.tokenomics?.apr - +item.chain.tokenomics.apr * +item.rate) * 100
     : undefined;
 
   const nodeLink = `/validators/${item.validatorId}/${item.operatorAddress}/validator_passport/authz/withdraw_rewards`;
   const chainFilterLink = `/validators/${item.validatorId}/networks?view=node&networks=${encodeURIComponent(item.chain.name)}`;
 
-  const totalSlots = item.consensusData?.totalSlots;
-
-  const chainsWithSlots = ['ethereum', 'ethereum-sepolia', 'aztec', 'aztec-testnet'];
-
+  const totalSlots = item.consensusData?.totalSlots ?? null;
+  const missedWindow = getMissedWindow({
+    chainName: item.chain.name,
+    blocksWindow: item.chain.params?.blocksWindow ?? null,
+    totalSlots,
+    avgTxInterval: item.chain.avgTxInterval,
+  });
+  const windowMessage = getMissedWindowMessage(missedWindow);
+  const windowTooltip = windowMessage ? t(windowMessage.key, windowMessage.values) : null;
 
   return (
     <BaseTableRow>
@@ -46,7 +54,11 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item, aggregated }) => {
           width={20}
           height={20}
         />
-        <TableAvatar icon={item.chain.logoUrl} name={item.chain.prettyName || 'No name'} href={aggregated ? chainFilterLink : nodeLink} />
+        <TableAvatar
+          icon={item.chain.logoUrl}
+          name={item.chain.prettyName || 'No name'}
+          href={aggregated ? chainFilterLink : nodeLink}
+        />
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
@@ -55,11 +67,12 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item, aggregated }) => {
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         {expectedApr ? (
-            <Link href={nodeLink}>
-              <div className="text-center">{expectedApr.toFixed(2)}%</div>
-            </Link>
-          )
-          : (<div className="text-center">-</div>)}
+          <Link href={nodeLink}>
+            <div className="text-center">{expectedApr.toFixed(2)}%</div>
+          </Link>
+        ) : (
+          <div className="text-center">-</div>
+        )}
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base hover:text-highlight">
         <Link href={nodeLink}>
@@ -92,36 +105,32 @@ const ValidatorNetworksItem: FC<OwnProps> = ({ item, aggregated }) => {
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.uptime !== undefined && item.uptime !== null ? (
-          <Tooltip
-            tooltip={`Per
-          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
-          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
-          `}
-          >
+          windowTooltip ? (
+            <Tooltip tooltip={windowTooltip}>
+              <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
+                {item.uptime.toFixed(2)}
+              </div>
+            </Tooltip>
+          ) : (
             <div className="text-center" style={{ color: colorStylization.uptime(item.uptime) }}>
               {item.uptime.toFixed(2)}
             </div>
-          </Tooltip>
+          )
         ) : (
-          <div className="text-center">
-            -
-          </div>
+          <div className="text-center">-</div>
         )}
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">
         {item.missedBlocks !== undefined && item.missedBlocks !== null ? (
-          <Tooltip
-            tooltip={`Per
-          ${totalSlots ? totalSlots.toLocaleString() : item.chain.params?.blocksWindow?.toLocaleString()}
-          ${chainsWithSlots.includes(item.chain.name) ? 'slots' : 'blocks'}
-          `}
-          >
+          windowTooltip ? (
+            <Tooltip tooltip={windowTooltip}>
+              <div className="text-center">{item.missedBlocks}</div>
+            </Tooltip>
+          ) : (
             <div className="text-center">{item.missedBlocks}</div>
-          </Tooltip>
+          )
         ) : (
-          <div className="text-center">
-            -
-          </div>
+          <div className="text-center">-</div>
         )}
       </BaseTableCell>
       <BaseTableCell className="px-2 py-2 font-sfpro text-base">

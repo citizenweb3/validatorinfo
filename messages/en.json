@@ -102,7 +102,13 @@
     "mobile description": "Anon, please note that my mobile version has limited features. To enjoy all of my perks, and to login into your account, please visit my desktop version."
   },
   "Common": {
-    "Learn More": "Learn More"
+    "Learn More": "Learn More",
+    "missedWindowBlocks": "Per {count} blocks (~{hours} h)",
+    "missedWindowSlots": "Per {count} slots (~{hours} h)",
+    "missedWindowBlocksNoTime": "Per {count} blocks",
+    "missedWindowSlotsNoTime": "Per {count} slots",
+    "attested": "Attested",
+    "proposed": "Proposed"
   },
   "HomePage": {
     "title": "Web3 Blockchain Validator and Mining Pool Explorer",
@@ -719,7 +725,7 @@
       },
       "Missed Blocks": {
         "name": "Missed Blocks",
-        "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
+        "hint": "The number of blocks this validator missed within the network's current signing window — not since the node started. Hover a value in the column to see the exact window size and its duration. The color indicates the ratio in comparison to other nodes on the network"
       },
       "Att": "Att",
       "Prop": "Prop",
@@ -766,7 +772,8 @@
         "name": "Uptime"
       },
       "Missed Blocks": {
-        "name": "Missed Blocks"
+        "name": "Missed Blocks",
+        "hint": "The number of blocks this validator missed within the network's current signing window — not since the node started. Hover a value in the column to see the exact window size and its duration. The color indicates the ratio in comparison to other nodes on the network"
       },
       "Att": "Att",
       "Prop": "Prop",
@@ -812,7 +819,7 @@
       },
       "Missed Blocks": {
         "name": "Missed Blocks",
-        "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
+        "hint": "The number of blocks this validator missed within the network's current signing window — not since the node started. Hover a value in the column to see the exact window size and its duration. The color indicates the ratio in comparison to other nodes on the network"
       }
     }
   },
@@ -1155,7 +1162,7 @@
       },
       "Missed Blocks": {
         "name": "Missed Blocks",
-        "hint": "The amount of total missed blocks by this validator since the start of the node. The color indicates the ratio in comparison to other nodes on the network"
+        "hint": "The number of blocks this validator missed within the network's current signing window — not since the node started. Hover a value in the column to see the exact window size and its duration. The color indicates the ratio in comparison to other nodes on the network"
       },
       "Infrastructure": {
         "name": "Infrastructure",
