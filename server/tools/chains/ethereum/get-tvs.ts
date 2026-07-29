@@ -2,6 +2,7 @@ import logger from '@/logger';
 import { type GetNodesFunction, type GetTvsFunction } from '@/server/tools/chains/chain-indexer';
 import getNodes from '@/server/tools/chains/ethereum/get-nodes';
 import { getEthereumTotalSupply } from '@/server/tools/chains/ethereum/get-total-supply';
+import streamBeaconValidators from '@/server/tools/chains/ethereum/stream-beacon-validators';
 
 const { logError, logInfo } = logger('get-tvs-ethereum');
 const ETHEREUM_MAINNET_NAME = 'ethereum';
@@ -9,10 +10,12 @@ const ETHEREUM_MAINNET_NAME = 'ethereum';
 interface EthereumTvsDependencies {
   getNodes: GetNodesFunction;
   getTotalSupply: () => Promise<string | null>;
+  /** Mainnet only: bonded wei folded from the streamed Beacon validator set. */
+  getBondedWei: (chain: Parameters<GetTvsFunction>[0]) => Promise<string | null>;
 }
 
 export const createEthereumTvsGetter =
-  ({ getNodes: getNodesForChain, getTotalSupply }: EthereumTvsDependencies): GetTvsFunction =>
+  ({ getNodes: getNodesForChain, getTotalSupply, getBondedWei }: EthereumTvsDependencies): GetTvsFunction =>
   async (chain) => {
     try {
       const isMainnet = chain.name === ETHEREUM_MAINNET_NAME;
@@ -24,22 +27,33 @@ export const createEthereumTvsGetter =
       }
 
       // Total supply does not depend on the validator set: FDV is supply * price.
-      // The Beacon endpoint currently fails for mainnet (its active-validator response
-      // exceeds the V8 string limit), and letting that failure abort the whole snapshot
-      // is what kept Tokenomics.total_supply empty and Tokenomics.fdv at 0. Staking
-      // figures degrade to zero when the validator set is unavailable; supply does not.
-      const nodes = await getNodesForChain(chain);
+      // Staking figures degrade to zero when the validator set is unavailable;
+      // supply does not.
+      //
+      // Mainnet folds bonded stake from the streamed Beacon set rather than from
+      // getNodes: the response is ~1 GB and per-node indexing of ~890k validators
+      // is not viable, so getNodes deliberately returns nothing for mainnet.
       const totalSupplyWei = BigInt(totalSupply);
 
-      if (nodes.length === 0) {
-        logError(`No validators returned for [${chain.name}]; reporting supply without staking figures`);
+      let rawBondedTokens = BigInt(0);
+      if (isMainnet) {
+        const bondedWei = await getBondedWei(chain);
+        if (bondedWei === null) {
+          logError(`Bonded stake for [${chain.name}] is unavailable; reporting supply without staking figures`);
+        } else {
+          rawBondedTokens = BigInt(bondedWei);
+        }
       } else {
-        logInfo(`Fetched ${nodes.length} validators for ${chain.name}`);
+        const nodes = await getNodesForChain(chain);
+        if (nodes.length === 0) {
+          logError(`No validators returned for [${chain.name}]; reporting supply without staking figures`);
+        } else {
+          logInfo(`Fetched ${nodes.length} validators for ${chain.name}`);
+        }
+        rawBondedTokens = nodes
+          .filter((node) => node.status === 'BOND_STATUS_BONDED')
+          .reduce((acc, node) => acc + BigInt(node.tokens), BigInt(0));
       }
-
-      const rawBondedTokens = nodes
-        .filter((node) => node.status === 'BOND_STATUS_BONDED')
-        .reduce((acc, node) => acc + BigInt(node.tokens), BigInt(0));
 
       // Bonded stake above total supply is impossible; treat it as missing rather than
       // publishing a ratio greater than 1.
@@ -68,9 +82,28 @@ export const createEthereumTvsGetter =
     }
   };
 
+const beaconValidatorsUrl = (chain: Parameters<GetTvsFunction>[0]): string | null => {
+  const restUrl = chain.nodes.find((node: { type: string }) => node.type === 'rest')?.url;
+  if (!restUrl) return null;
+  const base = restUrl.endsWith('/') ? restUrl : `${restUrl}/`;
+  return new URL('eth/v1/beacon/states/head/validators', base).toString();
+};
+
+const getBondedWeiFromBeacon = async (chain: Parameters<GetTvsFunction>[0]): Promise<string | null> => {
+  const url = beaconValidatorsUrl(chain);
+  if (!url) {
+    logError(`Chain ${chain.name}: REST (Beacon) URL not provided`);
+    return null;
+  }
+
+  const summary = await streamBeaconValidators(url);
+  return summary?.bondedWei ?? null;
+};
+
 const getTvs = createEthereumTvsGetter({
   getNodes,
   getTotalSupply: getEthereumTotalSupply,
+  getBondedWei: getBondedWeiFromBeacon,
 });
 
 export default getTvs;

@@ -36,16 +36,38 @@ const createNode = (tokens: string): NodeResult => ({
 });
 
 test('mainnet supply failure returns before the Beacon request', async () => {
-  let nodesRequested = false;
+  let bondedRequested = false;
   const getTvs = createEthereumTvsGetter({
     getTotalSupply: async () => null,
-    getNodes: async () => {
-      nodesRequested = true;
-      return [];
+    getNodes: async () => [],
+    getBondedWei: async () => {
+      bondedRequested = true;
+      return null;
     },
   });
 
   assert.equal(await getTvs(getChainParams('ethereum')), null);
+  assert.equal(bondedRequested, false);
+});
+
+test('mainnet folds bonded stake from the streamed Beacon set, not from getNodes', async () => {
+  let nodesRequested = false;
+  const getTvs = createEthereumTvsGetter({
+    getTotalSupply: async () => '1000',
+    getNodes: async () => {
+      nodesRequested = true;
+      return [createNode('999')];
+    },
+    getBondedWei: async () => '250',
+  });
+
+  assert.deepEqual(await getTvs(getChainParams('ethereum')), {
+    totalSupply: '1000',
+    bondedTokens: '250',
+    unbondedTokens: '750',
+    unbondedTokensRatio: 0.75,
+    tvs: 0.25,
+  });
   assert.equal(nodesRequested, false);
 });
 
@@ -53,6 +75,7 @@ test('an empty mainnet Beacon result still publishes total supply', async () => 
   const getTvs = createEthereumTvsGetter({
     getTotalSupply: async () => '1000',
     getNodes: async () => [],
+    getBondedWei: async () => null,
   });
 
   // FDV is supply * price and must not depend on the validator set. The Beacon
@@ -70,7 +93,8 @@ test('an empty mainnet Beacon result still publishes total supply', async () => 
 test('mainnet TVS is derived from supply and bonded wei without negative complements', async () => {
   const getTvs = createEthereumTvsGetter({
     getTotalSupply: async () => '1000',
-    getNodes: async () => [createNode('250')],
+    getNodes: async () => [],
+    getBondedWei: async () => '250',
   });
 
   assert.deepEqual(await getTvs(getChainParams('ethereum')), {
@@ -85,7 +109,8 @@ test('mainnet TVS is derived from supply and bonded wei without negative complem
 test('an impossible mainnet bonded total drops the staking figures but keeps supply', async () => {
   const getTvs = createEthereumTvsGetter({
     getTotalSupply: async () => '1000',
-    getNodes: async () => [createNode('1001')],
+    getNodes: async () => [],
+    getBondedWei: async () => '1001',
   });
 
   assert.deepEqual(await getTvs(getChainParams('ethereum')), {
@@ -103,6 +128,9 @@ test('Sepolia keeps its existing bonded-token snapshot without using mainnet sup
       throw new Error('mainnet supply must not be requested for Sepolia');
     },
     getNodes: async () => [createNode('250')],
+    getBondedWei: async () => {
+      throw new Error('the Beacon stream must not be used for Sepolia');
+    },
   });
 
   assert.deepEqual(await getTvs(getChainParams('ethereum-sepolia')), {
