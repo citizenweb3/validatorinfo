@@ -2,7 +2,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 import MiningPoolBlocksTable from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/mining-pool-blocks-table';
-import PageTitle from '@/components/common/page-title';
+import MiningPoolPageTitle from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/mining-pool-page-title';
 import SubTitle from '@/components/common/sub-title';
 import db from '@/db';
 import { Locale, NextPageWithLocale } from '@/i18n';
@@ -16,7 +16,11 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export async function generateMetadata({ params: { locale, poolSlug } }: { params: { locale: Locale; poolSlug: string } }) {
+export async function generateMetadata({
+  params: { locale, poolSlug },
+}: {
+  params: { locale: Locale; poolSlug: string };
+}) {
   const t = await getTranslations({ locale, namespace: 'MiningPoolDetail' });
   const pool = await db.miningPool.findFirst({ where: { slug: poolSlug }, select: { name: true } });
 
@@ -25,7 +29,10 @@ export async function generateMetadata({ params: { locale, poolSlug } }: { param
 
 const BLOCKS_PER_PAGE = 25;
 
-const MiningPoolBlocksPage: NextPageWithLocale<PageProps> = async ({ params: { locale, poolSlug }, searchParams: q }) => {
+const MiningPoolBlocksPage: NextPageWithLocale<PageProps> = async ({
+  params: { locale, poolSlug },
+  searchParams: q,
+}) => {
   unstable_setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'MiningPoolDetail' });
 
@@ -57,7 +64,14 @@ const MiningPoolBlocksPage: NextPageWithLocale<PageProps> = async ({ params: { l
 
   return (
     <div className="mb-24 flex flex-col gap-8">
-      <PageTitle prefix={pool.name} text={t('blocksTitle')} />
+      <MiningPoolPageTitle
+        chainName={pool.chain.name}
+        chainPrettyName={pool.chain.prettyName ?? pool.chain.name}
+        poolName={pool.name}
+        poolSlug={pool.slug}
+        preposition={t('pretextInPrefix')}
+        text={t('blocksTitle')}
+      />
       <section>
         <SubTitle text={t('recentBlocksTitle')} />
         <p className="mt-2 font-sfpro text-base opacity-80">{t('recentBlocksDescription')}</p>

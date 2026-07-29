@@ -2,8 +2,10 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 
 import MiningPoolMetrics from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/metrics/mining-pool-metrics';
-import PageTitle from '@/components/common/page-title';
+import PoolConfigurationSection from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/metrics/pool-configuration';
+import MiningPoolPageTitle from '@/app/mining-pools/[poolSlug]/(mining-pool-profile)/mining-pool-page-title';
 import { Locale, NextPageWithLocale } from '@/i18n';
+import miningPoolConfigurationService from '@/services/mining-pool-configuration-service';
 import moneroService, { HashrateWindow, isValidWindow } from '@/services/monero-service';
 
 export const dynamic = 'force-dynamic';
@@ -14,7 +16,11 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export async function generateMetadata({ params: { locale, poolSlug } }: { params: { locale: Locale; poolSlug: string } }) {
+export async function generateMetadata({
+  params: { locale, poolSlug },
+}: {
+  params: { locale: Locale; poolSlug: string };
+}) {
   const [t, pool] = await Promise.all([
     getTranslations({ locale, namespace: 'MiningPoolDetail' }),
     moneroService.getMoneroPoolBySlug(poolSlug),
@@ -25,7 +31,10 @@ export async function generateMetadata({ params: { locale, poolSlug } }: { param
 
 const DEFAULT_WINDOW: HashrateWindow = '24h';
 
-const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { locale, poolSlug }, searchParams: q }) => {
+const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({
+  params: { locale, poolSlug },
+  searchParams: q,
+}) => {
   unstable_setRequestLocale(locale);
 
   const [t, pool, availableWindows] = await Promise.all([
@@ -51,14 +60,22 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { 
   const windowOptions = availableWindows.map((value) => ({ value, label: windowLabels[value] }));
   const stat = pool.stats.find((item) => item.windowKind === safeWindow) ?? null;
 
-  const [allTimeBlocks, recentBlocks] = await Promise.all([
+  const [allTimeBlocks, recentBlocks, configuration] = await Promise.all([
     moneroService.getMoneroPoolBlocksCount(pool.chainId, pool.id),
     moneroService.getMoneroPoolRecentBlocks(pool.chainId, pool.id, 1, 0, 'timestamp', 'desc'),
+    miningPoolConfigurationService.getBySlug(pool.slug),
   ]);
 
   return (
     <div className="mb-24 flex flex-col gap-8">
-      <PageTitle prefix={pool.name} text={t('metricsProfileTitle')} />
+      <MiningPoolPageTitle
+        chainName={pool.chain.name}
+        chainPrettyName={pool.chain.prettyName ?? pool.chain.name}
+        poolName={pool.name}
+        poolSlug={pool.slug}
+        preposition={t('pretextInPrefix')}
+        text={t('metricsProfileTitle')}
+      />
       <MiningPoolMetrics
         allTimeBlocks={allTimeBlocks}
         chainName={pool.chain.name}
@@ -80,6 +97,7 @@ const MiningPoolMetricsPage: NextPageWithLocale<PageProps> = async ({ params: { 
         stat={stat}
         windowOptions={windowOptions}
       />
+      {configuration && <PoolConfigurationSection configuration={configuration} locale={locale} />}
     </div>
   );
 };

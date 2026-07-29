@@ -10,7 +10,33 @@
     "paymentScheme": "PPLNS",
     "feePercent": 0.6,
     "blocksUrl": "https://www.supportxmr.com/api/pool/blocks",
-    "statsUrl": "https://www.supportxmr.com/api/pool/stats"
+    "statsUrl": "https://www.supportxmr.com/api/pool/stats",
+    "configuration": {
+      "software": {
+        "name": "nodejs-pool",
+        "url": "https://github.com/Snipa22/nodejs-pool"
+      },
+      "stratumEndpoints": [
+        {
+          "host": "pool.supportxmr.com",
+          "ports": [
+            { "port": 3333, "tls": false },
+            { "port": 5555, "tls": false },
+            { "port": 7777, "tls": false },
+            { "port": 9000, "tls": true },
+            { "port": 8080, "tls": false },
+            { "port": 80, "tls": false },
+            { "port": 443, "tls": true }
+          ]
+        }
+      ],
+      "regionCodes": null,
+      "minimumPayoutXmr": 0.1,
+      "payoutSchedule": "threshold",
+      "payoutFee": { "kind": "instant", "amountXmr": 0.001 },
+      "sourceUrls": ["https://www.supportxmr.com", "https://www.supportxmr.com/script_min.js"],
+      "verifiedAt": "2026-07-25"
+    }
   },
   {
     "key": "moneroocean",
@@ -23,7 +49,34 @@
     "paymentScheme": "PPLNS",
     "feePercent": 0,
     "blocksUrl": "https://api.moneroocean.stream/pool/blocks",
-    "statsUrl": "https://api.moneroocean.stream/pool/stats"
+    "statsUrl": "https://api.moneroocean.stream/pool/stats",
+    "configuration": {
+      "software": {
+        "name": "MoneroOcean nodejs-pool",
+        "url": "https://github.com/MoneroOcean/nodejs-pool"
+      },
+      "stratumEndpoints": [
+        {
+          "host": "gulf.moneroocean.stream",
+          "ports": [
+            { "port": 80, "tls": false },
+            { "port": 443, "tls": true },
+            { "port": 10128, "tls": false },
+            { "port": 20128, "tls": true }
+          ]
+        }
+      ],
+      "regionCodes": ["DE", "SG", "US"],
+      "minimumPayoutXmr": 0.003,
+      "payoutSchedule": "threshold",
+      "payoutFee": { "kind": "maximum", "amountXmr": 0.0004, "waivedAboveXmr": 4 },
+      "sourceUrls": [
+        "https://api.moneroocean.stream/config",
+        "https://api.moneroocean.stream/pool/ports",
+        "https://github.com/MoneroOcean/nodejs-pool"
+      ],
+      "verifiedAt": "2026-07-25"
+    }
   },
   {
     "key": "hashvault",
@@ -36,7 +89,26 @@
     "paymentScheme": "PPLNS",
     "feePercent": 0.9,
     "blocksUrl": "https://api.hashvault.pro/v3/monero/pool/blocks?page=0&limit=100",
-    "statsUrl": "https://api.hashvault.pro/v3/monero/pool/stats"
+    "statsUrl": "https://api.hashvault.pro/v3/monero/pool/stats",
+    "configuration": {
+      "software": null,
+      "stratumEndpoints": [
+        {
+          "host": "pool.hashvault.pro",
+          "ports": [{ "port": 443, "tls": true }]
+        }
+      ],
+      "regionCodes": ["ASIA", "EU", "RU", "US"],
+      "minimumPayoutXmr": 0.001,
+      "payoutSchedule": "hourly",
+      "payoutFee": null,
+      "sourceUrls": [
+        "https://api.hashvault.pro/v3/monero/config",
+        "https://api.hashvault.pro/v3/monero/pool/ports",
+        "https://hashvault.pro/monero/"
+      ],
+      "verifiedAt": "2026-07-25"
+    }
   },
   {
     "key": "herominers",
@@ -49,7 +121,25 @@
     "paymentScheme": "PROP",
     "feePercent": 0.9,
     "blocksUrl": "https://monero.herominers.com/api/get_blocks?height=99999999",
-    "statsUrl": "https://monero.herominers.com/api/stats"
+    "statsUrl": "https://monero.herominers.com/api/stats",
+    "configuration": {
+      "software": null,
+      "stratumEndpoints": [
+        {
+          "host": "de.monero.herominers.com",
+          "ports": [
+            { "port": 1111, "tls": false },
+            { "port": 1112, "tls": false }
+          ]
+        }
+      ],
+      "regionCodes": ["DE", "FR", "ES", "FI", "RU", "CA", "US", "MX", "BR", "KZ", "HK", "KR", "IN", "SG", "TR", "AU"],
+      "minimumPayoutXmr": 0.01,
+      "payoutSchedule": "every-10-minutes",
+      "payoutFee": null,
+      "sourceUrls": ["https://monero.herominers.com/api/stats"],
+      "verifiedAt": "2026-07-25"
+    }
   },
   {
     "key": "c3pool",
@@ -62,7 +152,39 @@
     "paymentScheme": "PROP",
     "feePercent": 0,
     "blocksUrl": "https://api.c3pool.com/pool/blocks",
-    "statsUrl": "https://api.c3pool.com/pool/stats"
+    "statsUrl": "https://api.c3pool.com/pool/stats",
+    "configuration": {
+      "software": {
+        "name": "C3Pool monero-pool",
+        "url": "https://github.com/C3Pool/monero-pool"
+      },
+      "stratumEndpoints": [
+        {
+          "host": "mine.c3pool.com",
+          "ports": [
+            { "port": 80, "tls": false },
+            { "port": 443, "tls": false },
+            { "port": 13333, "tls": false },
+            { "port": 14444, "tls": false },
+            { "port": 15555, "tls": false },
+            { "port": 17777, "tls": false },
+            { "port": 19999, "tls": false },
+            { "port": 23333, "tls": false },
+            { "port": 33333, "tls": true }
+          ]
+        }
+      ],
+      "regionCodes": ["DE"],
+      "minimumPayoutXmr": 0.001,
+      "payoutSchedule": "threshold",
+      "payoutFee": { "kind": "maximum", "amountXmr": 0.0004, "waivedAboveXmr": 4 },
+      "sourceUrls": [
+        "https://api.c3pool.com/config",
+        "https://api.c3pool.com/pool/ports",
+        "https://github.com/C3Pool/monero-pool"
+      ],
+      "verifiedAt": "2026-07-25"
+    }
   },
   {
     "key": "nanopool",
@@ -75,7 +197,67 @@
     "paymentScheme": "PROP",
     "feePercent": 1,
     "blocksUrl": "https://xmr.nanopool.org/api/v1/pool/blocks/0/100",
-    "statsUrl": null
+    "statsUrl": null,
+    "configuration": {
+      "software": null,
+      "stratumEndpoints": [
+        {
+          "host": "xmr-eu1.nanopool.org",
+          "ports": [
+            { "port": 10300, "tls": false },
+            { "port": 10343, "tls": true }
+          ]
+        },
+        {
+          "host": "xmr-eu2.nanopool.org",
+          "ports": [
+            { "port": 10300, "tls": false },
+            { "port": 10343, "tls": true }
+          ]
+        },
+        {
+          "host": "xmr-us-east1.nanopool.org",
+          "ports": [
+            { "port": 10300, "tls": false },
+            { "port": 10343, "tls": true }
+          ]
+        },
+        {
+          "host": "xmr-us-west1.nanopool.org",
+          "ports": [
+            { "port": 10300, "tls": false },
+            { "port": 10343, "tls": true }
+          ]
+        },
+        {
+          "host": "xmr-asia1.nanopool.org",
+          "ports": [
+            { "port": 10300, "tls": false },
+            { "port": 10343, "tls": true }
+          ]
+        },
+        {
+          "host": "xmr-jp1.nanopool.org",
+          "ports": [
+            { "port": 10300, "tls": false },
+            { "port": 10343, "tls": true }
+          ]
+        },
+        {
+          "host": "xmr-au1.nanopool.org",
+          "ports": [
+            { "port": 10300, "tls": false },
+            { "port": 10343, "tls": true }
+          ]
+        }
+      ],
+      "regionCodes": ["EU", "US", "ASIA", "JP", "AU"],
+      "minimumPayoutXmr": 0.11,
+      "payoutSchedule": null,
+      "payoutFee": null,
+      "sourceUrls": ["https://xmr.nanopool.org"],
+      "verifiedAt": "2026-07-25"
+    }
   },
   {
     "key": "p2pool",
@@ -88,6 +270,24 @@
     "paymentScheme": "PPLNS",
     "feePercent": 0,
     "blocksUrl": "https://p2pool.observer/api/found_blocks?limit=100",
-    "statsUrl": "https://p2pool.observer/api/pool_info"
+    "statsUrl": "https://p2pool.observer/api/pool_info",
+    "configuration": {
+      "software": {
+        "name": "Monero P2Pool",
+        "url": "https://github.com/SChernykh/p2pool"
+      },
+      "stratumEndpoints": [
+        {
+          "host": "127.0.0.1",
+          "ports": [{ "port": 3333, "tls": false }]
+        }
+      ],
+      "regionCodes": ["P2P"],
+      "minimumPayoutXmr": 0.00027,
+      "payoutSchedule": "block-found",
+      "payoutFee": { "kind": "fixed", "amountXmr": 0 },
+      "sourceUrls": ["https://github.com/SChernykh/p2pool"],
+      "verifiedAt": "2026-07-25"
+    }
   }
 ]

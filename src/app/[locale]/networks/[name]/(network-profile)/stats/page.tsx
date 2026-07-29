@@ -30,10 +30,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({
-  params: { name },
-  searchParams,
-}) => {
+const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({ params: { name }, searchParams }) => {
   const t = await getTranslations('NetworkStatistics');
   const chain = await chainService.getByName(name);
 
@@ -49,7 +46,7 @@ const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({
       {!isPow && <SubTitle text={t('UnderConstruction')} className={'my-4'} />}
       {isPow && chain ? (
         <Suspense fallback={null}>
-          <PowNetworkStats window={windowParam} />
+          <PowNetworkStats chainName={chain.name} window={windowParam} />
         </Suspense>
       ) : (
         <>
@@ -60,7 +57,7 @@ const NetworkStatisticsPage: NextPageWithLocale<PageProps> = async ({
       )}
       <SocialStatistics chain={chain} />
       {/* Operator/validator distribution — N/A for PoW (no validators). Shown but blurred + disabled. */}
-      <div className={isPow ? 'blur-sm pointer-events-none' : ''}>
+      <div className={isPow ? 'pointer-events-none blur-sm' : ''}>
         <Suspense fallback={<OperatorDistributionSkeleton />}>
           <OperatorDistribution chain={chain} />
         </Suspense>
