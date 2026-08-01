@@ -353,7 +353,7 @@ export const getAccountTabs = (networkName: string, accountAddress: string): Tab
       iconHovered: icons.TxSummaryHovered,
     },
     {
-      name: 'Tokens',
+      name: 'Movements',
       href: `/networks/${networkName}/address/${accountAddress}/tokens`,
       icon: icons.WalletIcon,
       iconHovered: icons.WalletIconHovered,
