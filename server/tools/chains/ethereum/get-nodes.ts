@@ -22,10 +22,20 @@ const getNodes: GetNodesFunction = async (chain) => {
     return [];
   }
 
-  const ENDPOINT =
-    chain.name === 'ethereum'
-      ? '/eth/v1/beacon/states/head/validators?status=active'
-      : '/eth/v1/beacon/states/head/validators';
+  // Mainnet is deliberately not indexed per validator. The Beacon set is ~2.3M
+  // entries in a single ~1 GB response (server-side `status` filtering is ignored
+  // by the node — `?status=active` and `?status=active_ongoing` both return the
+  // full set), and jobs/get-nodes.ts issues per-node database queries, so even a
+  // successful parse would mean ~890k round trips and rows for one chain.
+  // Aggregate staking figures come from stream-beacon-validators instead, which
+  // folds the same response without materialising it. Testnets stay per-node:
+  // their validator sets are small enough to index.
+  if (chain.name === 'ethereum') {
+    logInfo(`Skipping per-validator indexing for ${chain.name}: aggregate stake is streamed instead`);
+    return [];
+  }
+
+  const ENDPOINT = '/eth/v1/beacon/states/head/validators';
   const RETRIES = 3;
   const RETRY_WAIT_MS = 1_000;
 

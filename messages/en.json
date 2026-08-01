@@ -1942,7 +1942,7 @@
   "AccountPage": {
     "Tabs": {
       "Passport": "Passport",
-      "Tokens": "Tokens",
+      "Movements": "Movements",
       "Transactions": "Transactions",
       "Governance": "Governance",
       "Analytics": "Analytics"
@@ -1995,7 +1995,7 @@
       }
     },
     "Tokens": {
-      "title": "Token Portfolio and Assets Holdings",
+      "title": "Token Movements",
       "description": "All token transfers involving this account: incoming, outgoing, counterparties and amounts.",
       "directionColumn": "Direction",
       "counterpartyColumn": "Counterparty",

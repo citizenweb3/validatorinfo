@@ -2,6 +2,7 @@ import logger from '@/logger';
 import { type GetNodesFunction, type GetTvsFunction } from '@/server/tools/chains/chain-indexer';
 import getNodes from '@/server/tools/chains/ethereum/get-nodes';
 import { getEthereumTotalSupply } from '@/server/tools/chains/ethereum/get-total-supply';
+import streamBeaconValidators from '@/server/tools/chains/ethereum/stream-beacon-validators';
 
 const { logError, logInfo } = logger('get-tvs-ethereum');
 const ETHEREUM_MAINNET_NAME = 'ethereum';
@@ -9,10 +10,12 @@ const ETHEREUM_MAINNET_NAME = 'ethereum';
 interface EthereumTvsDependencies {
   getNodes: GetNodesFunction;
   getTotalSupply: () => Promise<string | null>;
+  /** Mainnet only: bonded wei folded from the streamed Beacon validator set. */
+  getBondedWei: (chain: Parameters<GetTvsFunction>[0]) => Promise<string | null>;
 }
 
 export const createEthereumTvsGetter =
-  ({ getNodes: getNodesForChain, getTotalSupply }: EthereumTvsDependencies): GetTvsFunction =>
+  ({ getNodes: getNodesForChain, getTotalSupply, getBondedWei }: EthereumTvsDependencies): GetTvsFunction =>
   async (chain) => {
     try {
       const isMainnet = chain.name === ETHEREUM_MAINNET_NAME;
@@ -23,31 +26,45 @@ export const createEthereumTvsGetter =
         return null;
       }
 
-      const nodes = await getNodesForChain(chain);
-      if (nodes.length === 0) {
-        logError(`No validators returned for [${chain.name}]; preserving the previous TVS snapshot`);
-        return null;
-      }
-
-      logInfo(`Fetched ${nodes.length} validators for ${chain.name}`);
-
-      const bondedTokens = nodes
-        .filter((node) => node.status === 'BOND_STATUS_BONDED')
-        .reduce((acc, node) => acc + BigInt(node.tokens), BigInt(0));
+      // Total supply does not depend on the validator set: FDV is supply * price.
+      // Staking figures degrade to zero when the validator set is unavailable;
+      // supply does not.
+      //
+      // Mainnet folds bonded stake from the streamed Beacon set rather than from
+      // getNodes: the response is ~1 GB and per-node indexing of ~890k validators
+      // is not viable, so getNodes deliberately returns nothing for mainnet.
       const totalSupplyWei = BigInt(totalSupply);
 
-      if (isMainnet && (bondedTokens <= BigInt(0) || bondedTokens > totalSupplyWei)) {
-        logError(`Invalid bonded token total for [${chain.name}]; preserving the previous TVS snapshot`);
-        return null;
+      let rawBondedTokens = BigInt(0);
+      if (isMainnet) {
+        const bondedWei = await getBondedWei(chain);
+        if (bondedWei === null) {
+          logError(`Bonded stake for [${chain.name}] is unavailable; reporting supply without staking figures`);
+        } else {
+          rawBondedTokens = BigInt(bondedWei);
+        }
+      } else {
+        const nodes = await getNodesForChain(chain);
+        if (nodes.length === 0) {
+          logError(`No validators returned for [${chain.name}]; reporting supply without staking figures`);
+        } else {
+          logInfo(`Fetched ${nodes.length} validators for ${chain.name}`);
+        }
+        rawBondedTokens = nodes
+          .filter((node) => node.status === 'BOND_STATUS_BONDED')
+          .reduce((acc, node) => acc + BigInt(node.tokens), BigInt(0));
       }
 
+      // Bonded stake above total supply is impossible; treat it as missing rather than
+      // publishing a ratio greater than 1.
+      const bondedExceedsSupply = totalSupplyWei > BigInt(0) && rawBondedTokens > totalSupplyWei;
+      if (bondedExceedsSupply) {
+        logError(`Bonded tokens exceed total supply for [${chain.name}]; dropping the staking figures`);
+      }
+
+      const bondedTokens = bondedExceedsSupply ? BigInt(0) : rawBondedTokens;
       const unbondedTokens = totalSupplyWei > bondedTokens ? totalSupplyWei - bondedTokens : BigInt(0);
       const tvs = totalSupplyWei > BigInt(0) ? Number(bondedTokens) / Number(totalSupplyWei) : 0;
-
-      if (isMainnet && (!Number.isFinite(tvs) || tvs <= 0 || tvs > 1)) {
-        logError(`Invalid TVS ratio for [${chain.name}]; preserving the previous TVS snapshot`);
-        return null;
-      }
 
       const result = {
         totalSupply,
@@ -65,9 +82,28 @@ export const createEthereumTvsGetter =
     }
   };
 
+const beaconValidatorsUrl = (chain: Parameters<GetTvsFunction>[0]): string | null => {
+  const restUrl = chain.nodes.find((node: { type: string }) => node.type === 'rest')?.url;
+  if (!restUrl) return null;
+  const base = restUrl.endsWith('/') ? restUrl : `${restUrl}/`;
+  return new URL('eth/v1/beacon/states/head/validators', base).toString();
+};
+
+const getBondedWeiFromBeacon = async (chain: Parameters<GetTvsFunction>[0]): Promise<string | null> => {
+  const url = beaconValidatorsUrl(chain);
+  if (!url) {
+    logError(`Chain ${chain.name}: REST (Beacon) URL not provided`);
+    return null;
+  }
+
+  const summary = await streamBeaconValidators(url);
+  return summary?.bondedWei ?? null;
+};
+
 const getTvs = createEthereumTvsGetter({
   getNodes,
   getTotalSupply: getEthereumTotalSupply,
+  getBondedWei: getBondedWeiFromBeacon,
 });
 
 export default getTvs;
