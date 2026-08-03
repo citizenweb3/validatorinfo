@@ -68,6 +68,19 @@ const getMoneroHashrateHistory = async (window: HashrateWindow): Promise<ChainHa
   });
 };
 
+const getMoneroHashrateHistoryStart = async (): Promise<Date | null> => {
+  const chain = await getMoneroChain();
+  if (!chain) return null;
+
+  const firstSnapshot = await db.chainHashrateSnapshot.findFirst({
+    where: { chainId: chain.id },
+    orderBy: { snapshotAt: 'asc' },
+    select: { snapshotAt: true },
+  });
+
+  return firstSnapshot?.snapshotAt ?? null;
+};
+
 const getMoneroPoolStats = async (window: HashrateWindow): Promise<MoneroPoolStatsRow[]> => {
   const chain = await getMoneroChain();
   if (!chain) return [];
@@ -412,6 +425,7 @@ const moneroService = {
   getMoneroAvailableWindows,
   getMoneroNetworkSnapshot,
   getMoneroHashrateHistory,
+  getMoneroHashrateHistoryStart,
   getMoneroPoolStats,
   getMoneroPoolBySlug,
   getMoneroPoolShareHistory,
@@ -434,6 +448,7 @@ export {
   getMoneroAvailableWindows,
   getMoneroNetworkSnapshot,
   getMoneroHashrateHistory,
+  getMoneroHashrateHistoryStart,
   getMoneroPoolStats,
   getMoneroPoolBySlug,
   getMoneroPoolShareHistory,

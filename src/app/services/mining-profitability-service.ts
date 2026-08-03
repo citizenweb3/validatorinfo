@@ -1,10 +1,15 @@
 import 'server-only';
 
+import logger from '@/logger';
 import { MONERO_BLOCK_TIME_SECONDS } from '@/server/tools/chains/monero/constants';
 import chainService, { ChainWithParamsAndTokenomics } from '@/services/chain-service';
 import moneroService from '@/services/monero-service';
+import priceHistoryService from '@/services/price-history-service';
+import { MiningNetworkTrend, buildMiningNetworkTrend, selectMiningTrendWindow } from '@/utils/mining-network-trend';
 import { weightedAverageFeePercent } from '@/utils/mining-revenue';
 import { atomicToDecimal } from '@/utils/monero-emission';
+
+const { logError } = logger('mining-profitability-service');
 
 export interface MiningPoolFeeOption {
   feePercent: number;
@@ -16,11 +21,25 @@ export interface MoneroMiningEconomics {
   averageReward: number;
   blockTimeSeconds: number;
   networkHashrateHps: number;
+  networkTrend: MiningNetworkTrend | null;
   poolFees: MiningPoolFeeOption[];
   tokenPriceUsd: number;
   tokenSymbol: string;
   weightedPoolFeePercent: number;
 }
+
+const getMoneroNetworkTrend = async (chainId: number, referenceAt: Date): Promise<MiningNetworkTrend | null> => {
+  const [historyStart, snapshots, priceHistory] = await Promise.all([
+    moneroService.getMoneroHashrateHistoryStart(),
+    moneroService.getMoneroHashrateHistory('30d'),
+    priceHistoryService.getChartData(chainId),
+  ]);
+
+  const windowDays = selectMiningTrendWindow(historyStart, referenceAt);
+  if (windowDays === null) return null;
+
+  return buildMiningNetworkTrend({ priceHistory, referenceAt, snapshots, windowDays });
+};
 
 const getMoneroMiningEconomics = async (
   chain: ChainWithParamsAndTokenomics | null,
@@ -29,11 +48,17 @@ const getMoneroMiningEconomics = async (
     return null;
   }
 
-  const [price, snapshot, blockMetrics, poolStats] = await Promise.all([
+  const referenceAt = new Date();
+  const networkTrendPromise = getMoneroNetworkTrend(chain.id, referenceAt).catch((error: unknown) => {
+    logError('Unable to build Monero mining network trend; returning current economics without it', error);
+    return null;
+  });
+  const [price, snapshot, blockMetrics, poolStats, networkTrend] = await Promise.all([
     chainService.getTokenPriceByChainId(chain.id),
     moneroService.getMoneroNetworkSnapshot(),
     moneroService.getMoneroBlockMetrics24h(),
     moneroService.getMoneroPoolStats('24h'),
+    networkTrendPromise,
   ]);
 
   if (!price || price.value <= 0 || !snapshot || !blockMetrics?.averageRewardAtomic) return null;
@@ -72,6 +97,7 @@ const getMoneroMiningEconomics = async (
     averageReward,
     blockTimeSeconds: MONERO_BLOCK_TIME_SECONDS,
     networkHashrateHps,
+    networkTrend,
     poolFees,
     tokenPriceUsd: price.value,
     tokenSymbol: chain.params.denom ?? 'XMR',

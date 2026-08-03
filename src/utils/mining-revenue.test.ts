@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
+import { buildMiningNetworkTrend, selectMiningTrendWindow } from '@/utils/mining-network-trend';
 import {
   breakEvenDifficulty,
   breakEvenTokenPrice,
@@ -184,4 +185,89 @@ test('calculates break-even token price and difficulty', () => {
   assert.equal(difficulty, BigInt(2_400_000_000_000));
   assert.equal(breakEvenTokenPrice(0, 0.5), null);
   assert.equal(breakEvenDifficulty(BigInt(600_000_000_000), 2, 0), null);
+});
+
+test('selects the longest supported hashrate trend window', () => {
+  const referenceAt = new Date('2026-08-03T12:00:00.000Z');
+
+  assert.equal(selectMiningTrendWindow(new Date('2026-07-03T12:00:00.000Z'), referenceAt), 30);
+  assert.equal(selectMiningTrendWindow(new Date('2026-07-26T12:00:00.000Z'), referenceAt), 7);
+  assert.equal(selectMiningTrendWindow(new Date('2026-07-28T12:00:00.000Z'), referenceAt), null);
+  assert.equal(selectMiningTrendWindow(null, referenceAt), null);
+});
+
+test('builds a signed network trend from aligned history', () => {
+  const referenceAt = new Date('2026-08-03T12:00:00.000Z');
+  const trend = buildMiningNetworkTrend({
+    priceHistory: [
+      { date: '2026-07-04', value: 100 },
+      { date: '2026-08-03', value: 80 },
+    ],
+    referenceAt,
+    snapshots: [
+      {
+        difficulty: '100',
+        hashrate: '1000',
+        height: 1_000_000,
+        snapshotAt: new Date('2026-07-04T12:00:00.000Z'),
+      },
+      {
+        difficulty: '121',
+        hashrate: '1100',
+        height: 1_021_600,
+        snapshotAt: referenceAt,
+      },
+    ],
+    windowDays: 30,
+  });
+
+  assert.ok(trend);
+  assert.equal(trend.windowDays, 30);
+  assert.equal(trend.currentDifficulty, '121');
+  assert.equal(trend.currentHashrateHps, 1100);
+  assert.ok(Math.abs(trend.difficultyChange - 0.21) < 1e-12);
+  assert.ok(Math.abs(trend.hashrateChange - 0.1) < 1e-12);
+  assert.ok(Math.abs(trend.priceChange + 0.2) < 1e-12);
+  assert.ok(Math.abs(trend.blocksPerHour - 30) < 1e-12);
+});
+
+test('omits a network trend when history endpoints or prices are incomplete', () => {
+  const referenceAt = new Date('2026-08-03T12:00:00.000Z');
+  const staleSnapshots = [
+    {
+      difficulty: '100',
+      hashrate: '1000',
+      height: 1_000_000,
+      snapshotAt: new Date('2026-07-27T15:00:00.000Z'),
+    },
+    {
+      difficulty: '110',
+      hashrate: '1100',
+      height: 1_005_040,
+      snapshotAt: referenceAt,
+    },
+  ];
+
+  assert.equal(
+    buildMiningNetworkTrend({
+      priceHistory: [
+        { date: '2026-07-27', value: 100 },
+        { date: '2026-08-03', value: 110 },
+      ],
+      referenceAt,
+      snapshots: staleSnapshots,
+      windowDays: 7,
+    }),
+    null,
+  );
+
+  assert.equal(
+    buildMiningNetworkTrend({
+      priceHistory: [{ date: '2026-07-27', value: 100 }],
+      referenceAt,
+      snapshots: [{ ...staleSnapshots[0], snapshotAt: new Date('2026-07-27T12:00:00.000Z') }, staleSnapshots[1]],
+      windowDays: 7,
+    }),
+    null,
+  );
 });
