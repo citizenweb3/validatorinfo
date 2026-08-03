@@ -16,11 +16,11 @@ export interface MiningTrendPricePoint {
 }
 
 export interface MiningNetworkTrend {
-  blocksPerHour: number;
-  difficultyChange: number;
-  difficultyGrowthRatePerDay: number;
-  hashrateChange: number;
-  priceChange: number;
+  blocksPerHour: number | null;
+  difficultyChange: number | null;
+  difficultyGrowthRatePerDay: number | null;
+  hashrateChange: number | null;
+  priceChange: number | null;
   windowDays: MiningTrendWindowDays;
 }
 
@@ -58,16 +58,27 @@ export const selectMiningTrendWindow = (historyStart: Date | null, referenceAt: 
   return null;
 };
 
-export const buildMiningNetworkTrend = ({
-  priceHistory,
-  referenceAt,
-  snapshots,
-  windowDays,
-}: BuildMiningNetworkTrendInput): MiningNetworkTrend | null => {
-  const referenceMs = referenceAt.getTime();
-  if (!Number.isFinite(referenceMs)) return null;
+interface SnapshotDerivedTrend {
+  blocksPerHour: number | null;
+  difficultyChange: number | null;
+  difficultyGrowthRatePerDay: number | null;
+  hashrateChange: number | null;
+}
 
-  const cutoffMs = referenceMs - windowDays * DAY_MS;
+const EMPTY_SNAPSHOT_TREND: SnapshotDerivedTrend = {
+  blocksPerHour: null,
+  difficultyChange: null,
+  difficultyGrowthRatePerDay: null,
+  hashrateChange: null,
+};
+
+// Each metric is derived independently: a gap in one series must not blank the others,
+// and the difficulty growth rate in particular feeds the trend-adjusted payback.
+const buildSnapshotTrend = (
+  snapshots: MiningTrendSnapshot[],
+  cutoffMs: number,
+  referenceMs: number,
+): SnapshotDerivedTrend => {
   const windowSnapshots = snapshots
     .filter((snapshot) => {
       const snapshotMs = snapshot.snapshotAt.getTime();
@@ -75,7 +86,7 @@ export const buildMiningNetworkTrend = ({
     })
     .toSorted((first, second) => first.snapshotAt.getTime() - second.snapshotAt.getTime());
 
-  if (windowSnapshots.length < 2) return null;
+  if (windowSnapshots.length < 2) return EMPTY_SNAPSHOT_TREND;
 
   const firstSnapshot = windowSnapshots[0];
   const lastSnapshot = windowSnapshots[windowSnapshots.length - 1];
@@ -85,7 +96,7 @@ export const buildMiningNetworkTrend = ({
     firstSnapshotMs - cutoffMs > MAX_SNAPSHOT_ENDPOINT_GAP_MS ||
     referenceMs - lastSnapshotMs > MAX_SNAPSHOT_ENDPOINT_GAP_MS
   ) {
-    return null;
+    return EMPTY_SNAPSHOT_TREND;
   }
 
   const elapsedDays = (lastSnapshotMs - firstSnapshotMs) / DAY_MS;
@@ -93,14 +104,25 @@ export const buildMiningNetworkTrend = ({
   const lastDifficulty = parsePositiveBigInt(lastSnapshot.difficulty);
   const firstHashrate = parsePositiveBigInt(firstSnapshot.hashrate);
   const lastHashrate = parsePositiveBigInt(lastSnapshot.hashrate);
-  if (firstDifficulty === null || lastDifficulty === null || firstHashrate === null || lastHashrate === null)
-    return null;
 
-  const difficultyGrowthRatePerDay = growthRatePerDay(firstDifficulty, lastDifficulty, elapsedDays);
-  const difficultyChange = growthRatePerDay(firstDifficulty, lastDifficulty, 1);
-  const hashrateChange = growthRatePerDay(firstHashrate, lastHashrate, 1);
-  if (difficultyGrowthRatePerDay === null || difficultyChange === null || hashrateChange === null) return null;
+  const hasDifficulty = firstDifficulty !== null && lastDifficulty !== null;
+  const hasHashrate = firstHashrate !== null && lastHashrate !== null;
+  const averageBlockSeconds = blockTimeStats(windowSnapshots).averageSeconds;
+  const blocksPerHour = averageBlockSeconds !== null && averageBlockSeconds > 0 ? 3_600 / averageBlockSeconds : null;
 
+  return {
+    blocksPerHour: blocksPerHour !== null && Number.isFinite(blocksPerHour) && blocksPerHour > 0 ? blocksPerHour : null,
+    difficultyChange: hasDifficulty ? growthRatePerDay(firstDifficulty, lastDifficulty, 1) : null,
+    difficultyGrowthRatePerDay: hasDifficulty ? growthRatePerDay(firstDifficulty, lastDifficulty, elapsedDays) : null,
+    hashrateChange: hasHashrate ? growthRatePerDay(firstHashrate, lastHashrate, 1) : null,
+  };
+};
+
+const buildPriceChange = (
+  priceHistory: MiningTrendPricePoint[],
+  cutoffMs: number,
+  referenceMs: number,
+): number | null => {
   const cutoffDate = toDateKey(cutoffMs);
   const referenceDate = toDateKey(referenceMs);
   const latestAcceptedPriceDate = toDateKey(referenceMs - DAY_MS);
@@ -117,19 +139,29 @@ export const buildMiningNetworkTrend = ({
   const lastPrice = windowPrices[windowPrices.length - 1];
   if (firstPrice.date !== cutoffDate || lastPrice.date < latestAcceptedPriceDate) return null;
 
-  const priceChange = growthRatePerDay(firstPrice.value, lastPrice.value, 1);
-  const averageBlockSeconds = blockTimeStats(windowSnapshots).averageSeconds;
-  if (priceChange === null || averageBlockSeconds === null || averageBlockSeconds <= 0) return null;
+  return growthRatePerDay(firstPrice.value, lastPrice.value, 1);
+};
 
-  const blocksPerHour = 3_600 / averageBlockSeconds;
-  if (!Number.isFinite(blocksPerHour) || blocksPerHour <= 0) return null;
+export const buildMiningNetworkTrend = ({
+  priceHistory,
+  referenceAt,
+  snapshots,
+  windowDays,
+}: BuildMiningNetworkTrendInput): MiningNetworkTrend | null => {
+  const referenceMs = referenceAt.getTime();
+  if (!Number.isFinite(referenceMs)) return null;
 
-  return {
-    blocksPerHour,
-    difficultyChange,
-    difficultyGrowthRatePerDay,
-    hashrateChange,
-    priceChange,
-    windowDays,
-  };
+  const cutoffMs = referenceMs - windowDays * DAY_MS;
+  const snapshotTrend = buildSnapshotTrend(snapshots, cutoffMs, referenceMs);
+  const priceChange = buildPriceChange(priceHistory, cutoffMs, referenceMs);
+
+  const trend: MiningNetworkTrend = { ...snapshotTrend, priceChange, windowDays };
+  const hasAnyMetric =
+    trend.blocksPerHour !== null ||
+    trend.difficultyChange !== null ||
+    trend.difficultyGrowthRatePerDay !== null ||
+    trend.hashrateChange !== null ||
+    trend.priceChange !== null;
+
+  return hasAnyMetric ? trend : null;
 };

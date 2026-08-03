@@ -20,7 +20,7 @@ export interface MiningPoolFeeOption {
 export interface MoneroMiningEconomics {
   averageReward: number;
   blockTimeSeconds: number;
-  networkDifficulty: string;
+  networkDifficulty: string | null;
   networkHashrateHps: number;
   networkTrend: MiningNetworkTrend | null;
   poolFees: MiningPoolFeeOption[];
@@ -67,13 +67,14 @@ const getMoneroMiningEconomics = async (
   const networkHashrateHps = Number(snapshot.hashrate);
   if (!Number.isFinite(networkHashrateHps) || networkHashrateHps <= 0) return null;
 
-  let networkDifficulty: string;
+  // Difficulty only backs the break-even-difficulty row, so a malformed value drops that
+  // row rather than the whole calculator.
+  let networkDifficulty: string | null = null;
   try {
     const parsedDifficulty = BigInt(snapshot.difficulty);
-    if (parsedDifficulty <= BigInt(0)) return null;
-    networkDifficulty = parsedDifficulty.toString();
+    if (parsedDifficulty > BigInt(0)) networkDifficulty = parsedDifficulty.toString();
   } catch {
-    return null;
+    networkDifficulty = null;
   }
 
   let averageReward: number;

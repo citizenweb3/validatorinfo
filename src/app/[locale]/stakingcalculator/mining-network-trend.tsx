@@ -36,7 +36,11 @@ const TrendRow: FC<TrendRowProps> = ({ change, current, label }) => {
   );
 };
 
-const formatSignedPercent = (value: number, locale: Locale): string => {
+const NOT_APPLICABLE = '—';
+
+const formatOptionalPercent = (value: number | null, locale: Locale): string => {
+  if (value === null) return NOT_APPLICABLE;
+
   return new Intl.NumberFormat(locale, {
     maximumFractionDigits: 1,
     minimumFractionDigits: 1,
@@ -45,10 +49,21 @@ const formatSignedPercent = (value: number, locale: Locale): string => {
   }).format(value);
 };
 
+const formatDifficulty = (difficulty: string | null, locale: Locale): string | null => {
+  if (difficulty === null) return null;
+  try {
+    return BigInt(difficulty).toLocaleString(locale);
+  } catch {
+    return null;
+  }
+};
+
 const MiningNetworkTrend: FC<OwnProps> = ({ economics, locale }) => {
   const t = useTranslations('MiningCalculatorPage');
   const trend = economics.networkTrend;
   if (!trend) return null;
+
+  const difficultyLabel = formatDifficulty(economics.networkDifficulty, locale);
 
   return (
     <section aria-label={t('networkTrendTitle')}>
@@ -63,22 +78,30 @@ const MiningNetworkTrend: FC<OwnProps> = ({ economics, locale }) => {
             </tr>
           </thead>
           <tbody>
-            <TrendRow
-              label={t('difficulty')}
-              current={BigInt(economics.networkDifficulty).toLocaleString(locale)}
-              change={formatSignedPercent(trend.difficultyChange, locale)}
-            />
+            {difficultyLabel !== null && (
+              <TrendRow
+                label={t('difficulty')}
+                current={difficultyLabel}
+                change={formatOptionalPercent(trend.difficultyChange, locale)}
+              />
+            )}
             <TrendRow
               label={t('networkHashrate')}
               current={formatHashrate(economics.networkHashrateHps)}
-              change={formatSignedPercent(trend.hashrateChange, locale)}
+              change={formatOptionalPercent(trend.hashrateChange, locale)}
             />
             <TrendRow
               label={t('xmrPrice')}
               current={formatCurrencyDecimal(economics.tokenPriceUsd, locale)}
-              change={formatSignedPercent(trend.priceChange, locale)}
+              change={formatOptionalPercent(trend.priceChange, locale)}
             />
-            <TrendRow label={t('blocksPerHour')} current={formatDecimal(trend.blocksPerHour, locale)} change="—" />
+            {trend.blocksPerHour !== null && (
+              <TrendRow
+                label={t('blocksPerHour')}
+                current={formatDecimal(trend.blocksPerHour, locale)}
+                change={NOT_APPLICABLE}
+              />
+            )}
           </tbody>
         </BaseTable>
       </div>

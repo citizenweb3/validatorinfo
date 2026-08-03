@@ -65,7 +65,9 @@ const MiningPersonalEconomics: FC<OwnProps> = ({ economics, locale, tokenSymbol 
               <EconomicsRow label={t('paybackAtCurrentTrend')} value={trendPaybackValue} />
             ) : null}
             <EconomicsRow label={t('breakEvenTokenPrice', { symbol: tokenSymbol })} value={breakEvenPriceValue} />
-            <EconomicsRow label={t('breakEvenDifficulty')} value={breakEvenDifficultyValue} />
+            {economics.difficultyAvailable && (
+              <EconomicsRow label={t('breakEvenDifficulty')} value={breakEvenDifficultyValue} />
+            )}
           </tbody>
         </BaseTable>
       </div>
