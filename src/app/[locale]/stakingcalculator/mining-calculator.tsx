@@ -11,7 +11,7 @@ import BaseTableHeaderCell from '@/components/common/table/base-table-header-cel
 import BaseTableRow from '@/components/common/table/base-table-row';
 import { Locale } from '@/i18n';
 import type { MoneroMiningEconomics } from '@/services/mining-profitability-service';
-import { formatDecimal } from '@/utils/format-decimal';
+import { formatCurrencyDecimal, formatDecimal } from '@/utils/format-decimal';
 import { formatHashrate } from '@/utils/format-hashrate';
 import {
   estimateElectricityCostPerDay,
@@ -161,18 +161,7 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
       ? estimateHardwarePaybackDays(hardwareCostValue, netProfitPerDay)
       : null;
 
-  const usdFormatter = useMemo(
-    () =>
-      new Intl.NumberFormat(locale, {
-        style: 'currency',
-        currency: 'USD',
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      }),
-    [locale],
-  );
-
-  const formatUsd = (value: number): string => usdFormatter.format(value);
+  const formatUsd = (value: number): string => formatCurrencyDecimal(value, locale);
   const formatToken = (value: number): string => `${formatDecimal(value, locale)} ${economics.tokenSymbol}`;
   const unavailable = t('notIncluded');
 

@@ -9,7 +9,7 @@ import BaseTableCell from '@/components/common/table/base-table-cell';
 import BaseTableRow from '@/components/common/table/base-table-row';
 import type { DelegationItem } from '@/services/delegation-service';
 import cutHash from '@/utils/cut-hash';
-import { formatDecimal } from '@/utils/format-decimal';
+import { formatCurrencyDecimal, formatDecimal } from '@/utils/format-decimal';
 
 interface OwnProps {
   item: DelegationItem;
@@ -19,12 +19,7 @@ interface OwnProps {
 }
 
 const formatUsdAmount = (amount: number, price: number, locale: string): string =>
-  new Intl.NumberFormat(locale, {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(amount * price);
+  formatCurrencyDecimal(amount * price, locale);
 
 const DelegateRow: FC<OwnProps> = ({ item, chainName, unit, price }) => {
   const locale = useLocale();
