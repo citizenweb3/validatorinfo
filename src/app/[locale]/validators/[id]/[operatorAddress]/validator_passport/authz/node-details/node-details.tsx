@@ -7,12 +7,13 @@ import NodeDetailsItem from '@/app/validators/[id]/[operatorAddress]/validator_p
 import SubTitle from '@/components/common/sub-title';
 import TabList from '@/components/common/tabs/tab-list';
 import { getPassportAuthzTabs } from '@/components/common/tabs/tabs-data';
-import { NodeWithValidatorAndChain } from '@/services/node-service';
 import authzService, { AuthzTabSlug } from '@/services/authz-service';
+import { NodeWithValidatorAndChain } from '@/services/node-service';
 import priceService from '@/services/price-service';
 import TxService from '@/services/tx-service';
 import voteService from '@/services/vote-service';
 import { EMPTY_TX_FILTERS } from '@/utils/tx-filters';
+import { resolveTxMessageTypes } from '@/utils/tx-message-types';
 
 interface OwnProps {
   locale: string;
@@ -29,6 +30,17 @@ const normalizeAmount = (value: string | null, coinDecimals: number | null | und
 
   const amount = Number(value) / 10 ** coinDecimals;
   return Number.isFinite(amount) ? amount : null;
+};
+
+const getSendTransactionsLink = (chainName: string, accountAddress: string | null): string => {
+  if (!accountAddress) return '';
+
+  const searchParams = new URLSearchParams();
+  resolveTxMessageTypes(chainName, ['send']).forEach((typeUrl) => searchParams.append('mt', typeUrl));
+  const query = searchParams.toString();
+  if (!query) return '';
+
+  return `/networks/${chainName}/address/${accountAddress}/transactions?${query}`;
 };
 
 const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operatorAddress, node }) => {
@@ -54,6 +66,8 @@ const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operat
   // Chains without indexed votes/txs keep the legacy jailed-proxy instead of a definitive negative.
   const hasVoted = votingStatus === 'unknown' ? !node.jailed : votingStatus === 'voted';
   const sendsTxs = !txsBatch || txsBatch.error ? !node.jailed : txsBatch.rows.length > 1;
+  const votingLink = votingStatus === 'unknown' ? '' : `/validators/${validatorId}/${operatorAddress}/voting_summary`;
+  const sendTransactionsLink = isTxLive ? getSendTransactionsLink(node.chain.name, node.accountAddress) : '';
   const coinDecimals = node.chain.params?.coinDecimals;
   const rewardsAmount = normalizeAmount(node.outstandingRewards, coinDecimals);
   const commissionsAmount = normalizeAmount(node.outstandingCommissions, coinDecimals);
@@ -89,7 +103,7 @@ const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operat
         />
         <NodeDetailsItem
           label={t('validator address')}
-          value={node.chain.ecosystem === 'cosmos' ? node.operatorAddress : (node.accountAddress ?? 'N/A')}
+          value={node.chain.ecosystem === 'cosmos' ? node.operatorAddress : node.accountAddress ?? 'N/A'}
           link={
             node.chain.ecosystem === 'cosmos'
               ? `/networks/${node.chain.name}/address/${node.operatorAddress}/passport`
@@ -111,20 +125,15 @@ const NodeDetails: FC<OwnProps> = async ({ authzTab, locale, validatorId, operat
         <div className="ml-5 w-[70%] items-center justify-center">
           <div className="my-2 w-full">
             <TabList page="ValidatorPassportPage" tabs={nodeAuthzTabs} />
-            <AuthzPermissionsPanel
-              chainName={node.chain.name}
-              grants={grants}
-              isLive={isLive}
-              locale={locale}
-            />
+            <AuthzPermissionsPanel chainName={node.chain.name} grants={grants} isLive={isLive} locale={locale} />
           </div>
         </div>
       </div>
       <div className="mb-6 grid grid-cols-2 gap-x-10">
         <div>
           <NodeDetailsItem label={t('jail status')} value={node.jailed ? t('jailed') : t('not jailed')} />
-          <NodeDetailsItem label={t('voting')} status={hasVoted} />
-          <NodeDetailsItem label={t('send tx')} status={sendsTxs} />
+          <NodeDetailsItem label={t('voting')} status={hasVoted} link={votingLink} />
+          <NodeDetailsItem label={t('send tx')} status={sendsTxs} link={sendTransactionsLink} />
         </div>
         <CurrencyRewards
           commissionsAmount={commissionsAmount}

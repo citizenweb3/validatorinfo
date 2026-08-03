@@ -13,7 +13,7 @@ import {
   txFiltersToApiParams,
   txFiltersToInput,
 } from '@/utils/tx-filters';
-import { resolveTxMessageTypes } from '@/utils/tx-message-types';
+import { resolveTxMessageFilterIds, resolveTxMessageTypes } from '@/utils/tx-message-types';
 
 test('transaction filters parse, normalize, and serialize deterministically', () => {
   const voteTypes = resolveTxMessageTypes('atomone', ['vote']);
@@ -35,6 +35,18 @@ test('transaction filters parse, normalize, and serialize deterministically', ()
   assert.equal(filters.maxAmount, '200');
   assert.deepEqual(parseCanonicalTxFiltersInput(txFiltersToInput(filters), 'atomone'), filters);
   assert.match(canonicalTxFilterKey(filters), /^mt:/);
+});
+
+test('a Send link query preserves its curated message type through parsing', () => {
+  const messageTypes = resolveTxMessageTypes('cosmoshub', ['send']);
+  const searchParams = new URLSearchParams();
+  messageTypes.forEach((typeUrl) => searchParams.append('mt', typeUrl));
+
+  assert.equal(searchParams.toString(), 'mt=%2Fcosmos.bank.v1beta1.MsgSend');
+
+  const filters = parseTxFiltersFromSearchParams(searchParams, 'cosmoshub');
+  assert.deepEqual(filters.msgTypes, messageTypes);
+  assert.deepEqual(resolveTxMessageFilterIds('cosmoshub', filters.msgTypes), ['send']);
 });
 
 test('invalid URL filter pairs are dropped and canonical action input fails closed', () => {
