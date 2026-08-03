@@ -17,9 +17,6 @@ export interface MiningTrendPricePoint {
 
 export interface MiningNetworkTrend {
   blocksPerHour: number;
-  currentDifficulty: string;
-  currentHashrateHps: number;
-  currentPriceUsd: number;
   difficultyChange: number;
   difficultyGrowthRatePerDay: number;
   hashrateChange: number;
@@ -99,9 +96,6 @@ export const buildMiningNetworkTrend = ({
   if (firstDifficulty === null || lastDifficulty === null || firstHashrate === null || lastHashrate === null)
     return null;
 
-  const currentHashrateHps = Number(lastHashrate);
-  if (!Number.isSafeInteger(currentHashrateHps) || currentHashrateHps <= 0) return null;
-
   const difficultyGrowthRatePerDay = growthRatePerDay(firstDifficulty, lastDifficulty, elapsedDays);
   const difficultyChange = growthRatePerDay(firstDifficulty, lastDifficulty, 1);
   const hashrateChange = growthRatePerDay(firstHashrate, lastHashrate, 1);
@@ -132,9 +126,6 @@ export const buildMiningNetworkTrend = ({
 
   return {
     blocksPerHour,
-    currentDifficulty: lastDifficulty.toString(),
-    currentHashrateHps,
-    currentPriceUsd: lastPrice.value,
     difficultyChange,
     difficultyGrowthRatePerDay,
     hashrateChange,

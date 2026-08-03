@@ -12,6 +12,7 @@ import {
   growthRatePerDay,
   weightedAverageFeePercent,
 } from '@/utils/mining-revenue';
+import { estimatePersonalMiningEconomics } from '@/utils/personal-mining-economics';
 
 const assertClose = (actual: number, expected: number): void => {
   assert.ok(Math.abs(actual - expected) < Number.EPSILON);
@@ -223,8 +224,6 @@ test('builds a signed network trend from aligned history', () => {
 
   assert.ok(trend);
   assert.equal(trend.windowDays, 30);
-  assert.equal(trend.currentDifficulty, '121');
-  assert.equal(trend.currentHashrateHps, 1100);
   assert.ok(Math.abs(trend.difficultyChange - 0.21) < 1e-12);
   assert.ok(Math.abs(trend.hashrateChange - 0.1) < 1e-12);
   assert.ok(Math.abs(trend.priceChange + 0.2) < 1e-12);
@@ -270,4 +269,29 @@ test('omits a network trend when history endpoints or prices are incomplete', ()
     }),
     null,
   );
+});
+
+test('keeps current payback and break-even values when network trend is unavailable', () => {
+  const economics = estimatePersonalMiningEconomics({
+    electricityCostUsdPerDay: 5,
+    hardwareCostUsd: 100,
+    miningReturn: {
+      grossTokenPerDay: 1,
+      grossUsdPerDay: 10,
+      netTokenPerDay: 1,
+      netUsdPerDay: 10,
+      poolFeeTokenPerDay: 0,
+      poolFeeUsdPerDay: 0,
+    },
+    networkDifficulty: '1000',
+    networkTrend: null,
+  });
+
+  assert.deepEqual(economics, {
+    breakEvenDifficulty: BigInt(2000),
+    breakEvenTokenPriceUsd: 5,
+    currentPaybackDays: 20,
+    trendPayback: null,
+    trendWindowDays: null,
+  });
 });
