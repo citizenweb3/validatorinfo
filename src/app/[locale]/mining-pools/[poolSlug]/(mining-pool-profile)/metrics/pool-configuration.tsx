@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 import SubTitle from '@/components/common/sub-title';
 import { Locale } from '@/i18n';
 import type { PoolConfiguration, PoolPayoutFee, PoolPayoutSchedule } from '@/server/tools/chains/monero/pool-client';
+import { formatDecimal } from '@/utils/format-decimal';
 
 interface OwnProps {
   configuration: PoolConfiguration;
@@ -25,8 +26,7 @@ const ConfigurationItem = ({ children, label }: ConfigurationItemProps) => (
   </div>
 );
 
-const formatXmr = (value: number, locale: Locale): string =>
-  `${value.toLocaleString(locale, { maximumFractionDigits: 8 })} XMR`;
+const formatXmr = (value: number, locale: Locale): string => `${formatDecimal(value, locale)} XMR`;
 
 const PoolConfigurationSection = async ({ configuration, locale }: OwnProps) => {
   const t = await getTranslations({ locale, namespace: 'MiningPoolDetail' });

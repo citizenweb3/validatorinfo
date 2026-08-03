@@ -4,6 +4,7 @@ import { FC } from 'react';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import type { Locale } from '@/i18n';
 import { getMoneroChainParams, getMoneroTxMetrics24h } from '@/services/monero-service';
+import { formatDecimal } from '@/utils/format-decimal';
 import { TAIL_EMISSION_ATOMIC, atomicToDecimal } from '@/utils/monero-emission';
 import { avgFeeAtomic, tps } from '@/utils/monero-tx-metrics';
 
@@ -31,11 +32,11 @@ const formatTps = (value: number | null): string | null => {
   return `${value.toFixed(3)} tx/s`;
 };
 
-const formatFee = (value: bigint | null, coinDecimals: number | null, denom: string): string | null => {
+const formatFee = (value: bigint | null, coinDecimals: number | null, denom: string, locale: Locale): string | null => {
   if (value === null || coinDecimals === null) return null;
 
   const amount = atomicToDecimal(value, coinDecimals);
-  return `${amount.toLocaleString('en-US', { maximumFractionDigits: 6, minimumFractionDigits: 6 })} ${denom}`;
+  return `${formatDecimal(amount, locale)} ${denom}`;
 };
 
 const MoneroTxMetrics: FC<OwnProps> = async ({ chainName, locale }) => {
@@ -57,7 +58,7 @@ const MoneroTxMetrics: FC<OwnProps> = async ({ chainName, locale }) => {
     hasData && metrics && sumRewardAtomic !== null
       ? avgFeeAtomic(sumRewardAtomic, TAIL_EMISSION_ATOMIC, metrics.feeBlockCount, metrics.feeTxCount)
       : null;
-  const fee = formatFee(feeAtomic, coinDecimals, denom);
+  const fee = formatFee(feeAtomic, coinDecimals, denom, locale);
 
   return (
     <div className={cardGridClassName}>
