@@ -1,5 +1,7 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { FC } from 'react';
+
+import { formatDecimal } from '@/utils/format-decimal';
 
 interface OwnProps {
   title: string;
@@ -12,7 +14,12 @@ interface OwnProps {
 }
 
 const StakingResultsItem: FC<OwnProps> = ({ title, value, asset }) => {
+  const locale = useLocale();
   const t = useTranslations('CalculatorPage');
+  const formattedValue = asset.isSymbolFirst
+    ? value.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+    : formatDecimal(value, locale);
+
   return (
     <div>
       <div className="text-nowrap text-base font-bold">
@@ -21,7 +28,7 @@ const StakingResultsItem: FC<OwnProps> = ({ title, value, asset }) => {
       </div>
       <div className="font-handjet text-lg text-highlight">
         {asset.isSymbolFirst && asset.symbol}
-        {value.toFixed(asset.isSymbolFirst ? 2 : 6)}
+        {formattedValue}
         {!asset.isSymbolFirst && ' ' + asset.symbol}
       </div>
     </div>

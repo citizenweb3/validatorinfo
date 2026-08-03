@@ -11,6 +11,7 @@ import BaseTableHeaderCell from '@/components/common/table/base-table-header-cel
 import BaseTableRow from '@/components/common/table/base-table-row';
 import { Locale } from '@/i18n';
 import type { MoneroMiningEconomics } from '@/services/mining-profitability-service';
+import { formatDecimal } from '@/utils/format-decimal';
 import { formatHashrate } from '@/utils/format-hashrate';
 import {
   estimateElectricityCostPerDay,
@@ -166,17 +167,13 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
         style: 'currency',
         currency: 'USD',
         minimumFractionDigits: 2,
-        maximumFractionDigits: 4,
+        maximumFractionDigits: 2,
       }),
-    [locale],
-  );
-  const tokenFormatter = useMemo(
-    () => new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 8 }),
     [locale],
   );
 
   const formatUsd = (value: number): string => usdFormatter.format(value);
-  const formatToken = (value: number): string => `${tokenFormatter.format(value)} ${economics.tokenSymbol}`;
+  const formatToken = (value: number): string => `${formatDecimal(value, locale)} ${economics.tokenSymbol}`;
   const unavailable = t('notIncluded');
 
   const handleHashrateUnitChange = (event: ChangeEvent<HTMLSelectElement>) => {
