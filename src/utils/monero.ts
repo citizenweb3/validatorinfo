@@ -1,14 +1,12 @@
+import { formatDecimal } from '@/utils/format-decimal';
+
 export const MONERO_DECIMALS = 12;
 
-export const formatXmrReward = (piconero: string | undefined | null): string => {
-  if (!piconero) return '-';
+export const formatXmrReward = (piconero: string | undefined | null, locale: string = 'en-US'): string => {
+  if (piconero === null || piconero === undefined || piconero === '') return '-';
   try {
-    const big = BigInt(piconero);
-    const divisor = BigInt(10 ** MONERO_DECIMALS);
-    const whole = big / divisor;
-    const fraction = big % divisor;
-    const fractionStr = fraction.toString().padStart(MONERO_DECIMALS, '0').slice(0, 4);
-    return `${whole.toString()}.${fractionStr} XMR`;
+    const atomic = BigInt(piconero);
+    return `${formatDecimal(Number(atomic) / 10 ** MONERO_DECIMALS, locale)} XMR`;
   } catch {
     return '-';
   }

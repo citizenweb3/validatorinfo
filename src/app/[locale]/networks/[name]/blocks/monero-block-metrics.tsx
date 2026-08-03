@@ -5,6 +5,7 @@ import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item
 import Tooltip from '@/components/common/tooltip';
 import type { Locale } from '@/i18n';
 import { getMoneroBlockMetrics24h, getMoneroChainParams } from '@/services/monero-service';
+import { formatDecimal } from '@/utils/format-decimal';
 import { avgRewardXmr, dominantVersion, reorgRate } from '@/utils/monero-block-metrics';
 import { formatBytes } from '@/utils/monero';
 
@@ -21,7 +22,7 @@ const cardGridClassName =
 
 const formatReward = (value: number | null, denom: string): string | null => {
   if (value === null) return null;
-  return `${value.toLocaleString('en-US', { maximumFractionDigits: 4, minimumFractionDigits: 2 })} ${denom}`;
+  return `${formatDecimal(value)} ${denom}`;
 };
 
 const formatRate = (value: number): string => `${(value * 100).toFixed(2)}%`;
