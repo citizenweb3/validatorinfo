@@ -2,9 +2,13 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 
 import {
+  breakEvenDifficulty,
+  breakEvenTokenPrice,
   estimateElectricityCostPerDay,
   estimateHardwarePaybackDays,
   estimateMiningReturn,
+  estimateTrendAdjustedPayback,
+  growthRatePerDay,
   weightedAverageFeePercent,
 } from '@/utils/mining-revenue';
 
@@ -93,4 +97,91 @@ test('estimates hardware payback only for positive daily profit', () => {
   assert.equal(estimateHardwarePaybackDays(1_000, 5), 200);
   assert.equal(estimateHardwarePaybackDays(1_000, 0), null);
   assert.equal(estimateHardwarePaybackDays(1_000, -5), null);
+});
+
+test('calculates signed daily growth from numeric and bigint series', () => {
+  const numericGrowth = growthRatePerDay(100, 121, 2);
+  const bigintGrowth = growthRatePerDay(BigInt(100), BigInt(121), 2);
+
+  assert.ok(numericGrowth !== null);
+  assert.ok(bigintGrowth !== null);
+  assert.ok(Math.abs(numericGrowth - 0.1) < 1e-12);
+  assert.ok(Math.abs(bigintGrowth - 0.1) < 1e-12);
+  assert.ok((growthRatePerDay(121, 100, 2) ?? 0) < 0);
+  assert.equal(growthRatePerDay(0, 100, 2), null);
+  assert.equal(growthRatePerDay(BigInt(-1), BigInt(100), 2), null);
+  assert.equal(growthRatePerDay(100, 121, 0), null);
+});
+
+test('makes trend-adjusted payback longer when difficulty grows', () => {
+  const naivePaybackDays = estimateHardwarePaybackDays(100, 10);
+  const trendPayback = estimateTrendAdjustedPayback({
+    difficultyGrowthRatePerDay: 0.01,
+    electricityCostUsdPerDay: 10,
+    hardwareCostUsd: 100,
+    revenueUsdPerDay: 20,
+  });
+
+  assert.ok(naivePaybackDays !== null);
+  assert.deepEqual(trendPayback?.status, 'paid-back');
+  assert.ok(trendPayback?.status === 'paid-back' && trendPayback.days > naivePaybackDays);
+});
+
+test('matches naive payback when difficulty is flat', () => {
+  const trendPayback = estimateTrendAdjustedPayback({
+    difficultyGrowthRatePerDay: 0,
+    electricityCostUsdPerDay: 10,
+    hardwareCostUsd: 100,
+    revenueUsdPerDay: 20,
+  });
+
+  assert.deepEqual(trendPayback, { days: 10, status: 'paid-back' });
+});
+
+test('reports when decaying revenue never repays the hardware', () => {
+  const trendPayback = estimateTrendAdjustedPayback({
+    difficultyGrowthRatePerDay: 0.01,
+    electricityCostUsdPerDay: 6,
+    hardwareCostUsd: 100,
+    revenueUsdPerDay: 5,
+  });
+
+  assert.deepEqual(trendPayback, { status: 'never' });
+});
+
+test('allows falling difficulty to shorten payback', () => {
+  const naivePaybackDays = estimateHardwarePaybackDays(105, 10);
+  const trendPayback = estimateTrendAdjustedPayback({
+    difficultyGrowthRatePerDay: -0.01,
+    electricityCostUsdPerDay: 10,
+    hardwareCostUsd: 105,
+    revenueUsdPerDay: 20,
+  });
+
+  assert.ok(naivePaybackDays !== null);
+  assert.ok(trendPayback?.status === 'paid-back');
+  assert.ok(trendPayback.days < Math.ceil(naivePaybackDays));
+});
+
+test('rejects invalid trend-adjusted payback inputs', () => {
+  assert.equal(
+    estimateTrendAdjustedPayback({
+      difficultyGrowthRatePerDay: -1,
+      electricityCostUsdPerDay: 1,
+      hardwareCostUsd: 100,
+      revenueUsdPerDay: 10,
+    }),
+    null,
+  );
+});
+
+test('calculates break-even token price and difficulty', () => {
+  const tokenPrice = breakEvenTokenPrice(0.01, 0.5);
+  const difficulty = breakEvenDifficulty(BigInt(600_000_000_000), 2, 0.5);
+
+  assert.equal(tokenPrice, 50);
+  assert.equal((tokenPrice ?? 0) * 0.01 - 0.5, 0);
+  assert.equal(difficulty, BigInt(2_400_000_000_000));
+  assert.equal(breakEvenTokenPrice(0, 0.5), null);
+  assert.equal(breakEvenDifficulty(BigInt(600_000_000_000), 2, 0), null);
 });

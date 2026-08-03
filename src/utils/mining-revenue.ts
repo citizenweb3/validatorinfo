@@ -22,9 +22,45 @@ export interface PoolFeeWeight {
   hashrateHps: number;
 }
 
+export interface TrendAdjustedPaybackInput {
+  difficultyGrowthRatePerDay: number;
+  electricityCostUsdPerDay: number;
+  hardwareCostUsd: number;
+  horizonDays?: number;
+  revenueUsdPerDay: number;
+}
+
+export type TrendAdjustedPaybackResult = { days: number; status: 'paid-back' } | { status: 'never' };
+
 const SECONDS_PER_DAY = 86_400;
+const DEFAULT_PAYBACK_HORIZON_DAYS = 10 * 365;
+const DECIMAL_SCALE = 1_000_000_000;
+const BIGINT_RATIO_SCALE = BigInt(1_000_000_000_000);
 
 const isFinitePositive = (value: number): boolean => Number.isFinite(value) && value > 0;
+
+const ratioAsNumber = (firstValue: number | bigint, lastValue: number | bigint): number | null => {
+  if (typeof firstValue === 'bigint' && typeof lastValue === 'bigint') {
+    if (firstValue <= BigInt(0) || lastValue <= BigInt(0)) return null;
+
+    const scaledRatio = (lastValue * BIGINT_RATIO_SCALE) / firstValue;
+    const ratio = Number(scaledRatio) / Number(BIGINT_RATIO_SCALE);
+    return isFinitePositive(ratio) ? ratio : null;
+  }
+
+  if (typeof firstValue !== 'number' || typeof lastValue !== 'number') return null;
+  if (!isFinitePositive(firstValue) || !isFinitePositive(lastValue)) return null;
+
+  const ratio = lastValue / firstValue;
+  return isFinitePositive(ratio) ? ratio : null;
+};
+
+const toPositiveScaledBigInt = (value: number): bigint | null => {
+  if (!isFinitePositive(value)) return null;
+
+  const scaledValue = Math.round(value * DECIMAL_SCALE);
+  return Number.isSafeInteger(scaledValue) && scaledValue > 0 ? BigInt(scaledValue) : null;
+};
 
 export const weightedAverageFeePercent = (pools: PoolFeeWeight[]): number | null => {
   let weightedFeeTotal = 0;
@@ -106,4 +142,75 @@ export const estimateElectricityCostPerDay = (
 export const estimateHardwarePaybackDays = (hardwareCostUsd: number, netProfitUsdPerDay: number): number | null => {
   if (!isFinitePositive(hardwareCostUsd) || !isFinitePositive(netProfitUsdPerDay)) return null;
   return hardwareCostUsd / netProfitUsdPerDay;
+};
+
+export const growthRatePerDay = (
+  firstValue: number | bigint,
+  lastValue: number | bigint,
+  elapsedDays: number,
+): number | null => {
+  if (!isFinitePositive(elapsedDays)) return null;
+
+  const ratio = ratioAsNumber(firstValue, lastValue);
+  if (ratio === null) return null;
+
+  const growthRate = Math.expm1(Math.log(ratio) / elapsedDays);
+  return Number.isFinite(growthRate) && growthRate > -1 ? growthRate : null;
+};
+
+export const estimateTrendAdjustedPayback = ({
+  difficultyGrowthRatePerDay,
+  electricityCostUsdPerDay,
+  hardwareCostUsd,
+  horizonDays = DEFAULT_PAYBACK_HORIZON_DAYS,
+  revenueUsdPerDay,
+}: TrendAdjustedPaybackInput): TrendAdjustedPaybackResult | null => {
+  if (
+    !isFinitePositive(hardwareCostUsd) ||
+    !isFinitePositive(revenueUsdPerDay) ||
+    !Number.isFinite(electricityCostUsdPerDay) ||
+    electricityCostUsdPerDay < 0 ||
+    !Number.isFinite(difficultyGrowthRatePerDay) ||
+    difficultyGrowthRatePerDay <= -1 ||
+    !Number.isSafeInteger(horizonDays) ||
+    horizonDays <= 0
+  ) {
+    return null;
+  }
+
+  let cumulativeProfitUsd = 0;
+  const dailyDifficultyMultiplier = 1 + difficultyGrowthRatePerDay;
+
+  for (let day = 1; day <= horizonDays; day += 1) {
+    const difficultyMultiplier = dailyDifficultyMultiplier ** (day - 1);
+    const projectedRevenueUsd =
+      difficultyMultiplier === 0 ? Number.POSITIVE_INFINITY : revenueUsdPerDay / difficultyMultiplier;
+    cumulativeProfitUsd += projectedRevenueUsd - electricityCostUsdPerDay;
+
+    if (cumulativeProfitUsd >= hardwareCostUsd) return { days: day, status: 'paid-back' };
+  }
+
+  return { status: 'never' };
+};
+
+export const breakEvenTokenPrice = (netTokenPerDay: number, electricityCostUsdPerDay: number): number | null => {
+  if (!isFinitePositive(netTokenPerDay)) return null;
+  if (!Number.isFinite(electricityCostUsdPerDay) || electricityCostUsdPerDay < 0) return null;
+
+  return electricityCostUsdPerDay / netTokenPerDay;
+};
+
+export const breakEvenDifficulty = (
+  currentDifficulty: bigint,
+  revenueUsdPerDay: number,
+  electricityCostUsdPerDay: number,
+): bigint | null => {
+  if (currentDifficulty <= BigInt(0)) return null;
+
+  const scaledRevenue = toPositiveScaledBigInt(revenueUsdPerDay);
+  const scaledElectricityCost = toPositiveScaledBigInt(electricityCostUsdPerDay);
+  if (scaledRevenue === null || scaledElectricityCost === null) return null;
+
+  const difficulty = (currentDifficulty * scaledRevenue) / scaledElectricityCost;
+  return difficulty > BigInt(0) ? difficulty : null;
 };
