@@ -2,7 +2,7 @@
 # Stage 1: Dependencies - install all dependencies once
 # Using Debian for compatibility with native modules
 # ==============================================
-FROM node:20 AS deps
+FROM node:24.18 AS deps
 
 WORKDIR /app
 
@@ -22,7 +22,7 @@ RUN npx prisma generate && \
 # ==============================================
 # Stage 2: Base - base image with code and Prisma clients
 # ==============================================
-FROM node:20-alpine AS base
+FROM node:24.18-alpine AS base
 
 # Install redis-cli and other necessary tools
 # openssl - for Prisma
