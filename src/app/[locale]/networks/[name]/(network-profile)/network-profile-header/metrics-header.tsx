@@ -39,16 +39,17 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
       ? (Number(chain.tokenomics.activeSetMinAmount) / 10 ** Number(chain.params.coinDecimals)) * Number(price.value)
       : 0;
 
-  const minerReturn = miningEconomics
-    ? estimateMiningReturn({
-        averageReward: miningEconomics.averageReward,
-        blockTimeSeconds: miningEconomics.blockTimeSeconds,
-        minerHashrateHps: 1_000,
-        networkHashrateHps: miningEconomics.networkHashrateHps,
-        poolFeePercent: miningEconomics.weightedPoolFeePercent,
-        tokenPriceUsd: miningEconomics.tokenPriceUsd,
-      })
-    : null;
+  const minerReturn =
+    miningEconomics && miningEconomics.weightedPoolFeePercent !== null
+      ? estimateMiningReturn({
+          averageReward: miningEconomics.averageReward,
+          blockTimeSeconds: miningEconomics.blockTimeSeconds,
+          minerHashrateHps: 1_000,
+          networkHashrateHps: miningEconomics.networkHashrateHps,
+          poolFeePercent: miningEconomics.weightedPoolFeePercent,
+          tokenPriceUsd: miningEconomics.tokenPriceUsd,
+        })
+      : null;
 
   if (isMonero) {
     rows.push({
@@ -56,7 +57,7 @@ const MetricsHeader: FC<OwnProps> = async ({ chain }) => {
       title: t('minimum miner profit'),
       data: minerReturn ? `$${formatCash(minerReturn.netUsdPerDay, 4)}/day` : '—',
       tooltip:
-        minerReturn && miningEconomics
+        minerReturn && miningEconomics && miningEconomics.weightedPoolFeePercent !== null
           ? t('minimum miner profit tooltip', { fee: miningEconomics.weightedPoolFeePercent.toFixed(2) })
           : undefined,
       blur: !minerReturn,

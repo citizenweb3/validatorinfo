@@ -110,7 +110,9 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
   const t = useTranslations('MiningCalculatorPage');
   const [hashrate, setHashrate] = useState('1');
   const [hashrateUnit, setHashrateUnit] = useState<HashrateUnit>('kh');
-  const [selectedPool, setSelectedPool] = useState('average');
+  const [selectedPool, setSelectedPool] = useState(() =>
+    economics.weightedPoolFeePercent === null ? 'solo' : 'average',
+  );
   const [customPoolFee, setCustomPoolFee] = useState('1');
   const [powerWatts, setPowerWatts] = useState('');
   const [electricityPrice, setElectricityPrice] = useState('');
@@ -221,9 +223,11 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
               onChange={handlePoolChange}
               value={selectedPool}
             >
-              <option value="average">
-                {t('averageKnownPools', { fee: economics.weightedPoolFeePercent.toFixed(2) })}
-              </option>
+              {economics.weightedPoolFeePercent !== null ? (
+                <option value="average">
+                  {t('averageKnownPools', { fee: economics.weightedPoolFeePercent.toFixed(2) })}
+                </option>
+              ) : null}
               {economics.poolFees.map((pool) => (
                 <option key={pool.slug} value={pool.slug}>
                   {pool.name} ({pool.feePercent.toFixed(2)}%)
