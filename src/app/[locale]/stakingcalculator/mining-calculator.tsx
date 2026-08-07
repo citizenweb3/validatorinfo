@@ -3,8 +3,11 @@
 import { useTranslations } from 'next-intl';
 import { ChangeEvent, FC, useMemo, useState } from 'react';
 
+import MiningEmissionContext from '@/app/stakingcalculator/mining-emission-context';
+import MiningNetworkFees from '@/app/stakingcalculator/mining-network-fees';
 import MiningNetworkTrend from '@/app/stakingcalculator/mining-network-trend';
 import MiningPersonalEconomics from '@/app/stakingcalculator/mining-personal-economics';
+import MiningTopPools from '@/app/stakingcalculator/mining-top-pools';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
 import BaseTable from '@/components/common/table/base-table';
@@ -368,6 +371,10 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
       {personalEconomics ? (
         <MiningPersonalEconomics economics={personalEconomics} locale={locale} tokenSymbol={economics.tokenSymbol} />
       ) : null}
+
+      {economics.networkFees ? <MiningNetworkFees fees={economics.networkFees} locale={locale} /> : null}
+      {economics.emission ? <MiningEmissionContext emission={economics.emission} locale={locale} /> : null}
+      <MiningTopPools locale={locale} pools={economics.topPools} selectedPoolSlug={selectedPool} />
     </div>
   );
 };
