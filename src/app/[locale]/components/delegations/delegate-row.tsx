@@ -1,13 +1,15 @@
 'use client';
 
+import { useLocale } from 'next-intl';
 import Link from 'next/link';
 import { FC } from 'react';
 
+import CopyButton from '@/components/common/copy-button';
 import BaseTableCell from '@/components/common/table/base-table-cell';
 import BaseTableRow from '@/components/common/table/base-table-row';
-import CopyButton from '@/components/common/copy-button';
 import type { DelegationItem } from '@/services/delegation-service';
 import cutHash from '@/utils/cut-hash';
+import { formatCurrencyDecimal, formatDecimal } from '@/utils/format-decimal';
 
 interface OwnProps {
   item: DelegationItem;
@@ -16,45 +18,37 @@ interface OwnProps {
   price: number;
 }
 
-const formatAmount = (amount: number): string =>
-  amount.toLocaleString('en-US', {
-    maximumFractionDigits: 6,
-  });
-
-const formatUsdAmount = (amount: number, price: number): string =>
-  `$${(amount * price).toLocaleString('en-US', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  })}`;
+const formatUsdAmount = (amount: number, price: number, locale: string): string =>
+  formatCurrencyDecimal(amount * price, locale);
 
 const DelegateRow: FC<OwnProps> = ({ item, chainName, unit, price }) => {
+  const locale = useLocale();
   const txLink = `/networks/${chainName}/tx/${encodeURIComponent(item.txHash)}`;
   const blockLink = `/networks/${chainName}/blocks/${item.blockHeight}`;
   const accountLink = `/networks/${chainName}/address/${item.address}/passport`;
-  const amountLabel = unit === 'usd'
-    ? formatUsdAmount(item.amount, price)
-    : `${formatAmount(item.amount)} ${item.denom}`;
+  const amountLabel =
+    unit === 'usd'
+      ? formatUsdAmount(item.amount, price, locale)
+      : `${formatDecimal(item.amount, locale)} ${item.denom}`;
 
   return (
     <BaseTableRow>
       <BaseTableCell className="w-1/5 px-2 py-4 hover:text-highlight">
         <div className="flex items-center justify-center">
           <Link href={accountLink} className="flex justify-center">
-            <div className="text-center text-base font-sfpro">{cutHash({ value: item.address, cutLength: 14 })}</div>
+            <div className="text-center font-sfpro text-base">{cutHash({ value: item.address, cutLength: 14 })}</div>
           </Link>
           <CopyButton value={item.address} size="md" />
         </div>
       </BaseTableCell>
       <BaseTableCell className="w-1/5 px-2 py-4 hover:text-highlight">
         <Link href={txLink} className="flex justify-center">
-          <div className="text-center font-handjet text-lg">
-            {amountLabel}
-          </div>
+          <div className="text-center font-handjet text-lg">{amountLabel}</div>
         </Link>
       </BaseTableCell>
       <BaseTableCell className="w-1/5 px-2 py-4 hover:text-highlight">
         <Link href={txLink} className="flex justify-center">
-          <div className="text-center text-base font-sfpro">{item.happened}</div>
+          <div className="text-center font-sfpro text-base">{item.happened}</div>
         </Link>
       </BaseTableCell>
       <BaseTableCell className="w-1/5 px-2 py-4 hover:text-highlight">

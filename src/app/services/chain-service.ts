@@ -7,6 +7,15 @@ import ChainWhereInput = Prisma.ChainWhereInput;
 export type ChainWithParams = Prisma.ChainGetPayload<{ include: { params: true } }>;
 export type ChainWithParamsAndTokenomics = Prisma.ChainGetPayload<{ include: { params: true; tokenomics: true } }>;
 
+const networkValidatorChainSelect = {
+  name: true,
+  avgTxInterval: true,
+  tokenomics: { select: { bondedTokens: true } },
+  params: { select: { coinDecimals: true, blocksWindow: true } },
+} satisfies Prisma.ChainSelect;
+
+type NetworkValidatorChain = Prisma.ChainGetPayload<{ select: typeof networkValidatorChainSelect }>;
+
 export type ChainLcdContext = {
   id: number;
   coinDecimals: number;
@@ -35,16 +44,7 @@ export type NetworkValidatorsWithNodes = Node & {
     url: string | null;
     moniker: string;
   } | null;
-  chain: {
-    name: string;
-    tokenomics: {
-      bondedTokens: string;
-    } | null;
-    params: {
-      coinDecimals: number;
-      blocksWindow: number | null;
-    } | null;
-  };
+  chain: NetworkValidatorChain;
   votingPower: number;
   totalSlots: number | null;
   totalSlotsProposals: number | null;
@@ -126,11 +126,7 @@ const getByName = async (name: string): Promise<ChainWithParamsAndTokenomics | n
 
 const getAztecValidatorsWithNodes = async (
   chainId: number,
-  chainInfo: {
-    name: string;
-    tokenomics: { bondedTokens: string } | null;
-    params: { coinDecimals: number; blocksWindow: number | null } | null;
-  } | null,
+  chainInfo: NetworkValidatorChain | null,
   nodeStatus: string[],
   skip: number,
   take: number,
@@ -180,20 +176,7 @@ const getAztecValidatorsWithNodes = async (
         },
       },
       chain: {
-        select: {
-          name: true,
-          tokenomics: {
-            select: {
-              bondedTokens: true,
-            },
-          },
-          params: {
-            select: {
-              coinDecimals: true,
-              blocksWindow: true,
-            },
-          },
-        },
+        select: networkValidatorChainSelect,
       },
       consensusData: {
         select: {
@@ -261,6 +244,7 @@ const getAztecValidatorsWithNodes = async (
         },
         chain: {
           name: chainName,
+          avgTxInterval: chainInfo?.avgTxInterval ?? 0,
           tokenomics: chainInfo?.tokenomics || null,
           params: chainInfo?.params || null,
         },
@@ -420,11 +404,7 @@ const getChainValidatorsWithNodes = async (
 ): Promise<{ validators: NetworkValidatorsWithNodes[]; pages: number }> => {
   const chainInfo = await db.chain.findUnique({
     where: { id },
-    select: {
-      name: true,
-      tokenomics: { select: { bondedTokens: true } },
-      params: { select: { coinDecimals: true, blocksWindow: true } },
-    },
+    select: networkValidatorChainSelect,
   });
 
   const chainName = chainInfo?.name;
@@ -459,20 +439,7 @@ const getChainValidatorsWithNodes = async (
         },
       },
       chain: {
-        select: {
-          name: true,
-          tokenomics: {
-            select: {
-              bondedTokens: true,
-            },
-          },
-          params: {
-            select: {
-              coinDecimals: true,
-              blocksWindow: true,
-            },
-          },
-        },
+        select: networkValidatorChainSelect,
       },
       consensusData: {
         select: {
