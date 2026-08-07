@@ -30,6 +30,8 @@ export interface MoneroMiningEconomics {
   tokenPriceUsd: number;
   tokenSymbol: string;
   topPools: MiningTopPool[];
+  topPoolsSharePercent: number | null;
+  unattributedSharePercent: number | null;
   weightedPoolFeePercent: number | null;
 }
 

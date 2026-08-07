@@ -45,6 +45,11 @@ export interface MiningEmissionContext {
 export interface MiningPoolContext {
   poolFees: MiningPoolFeeOption[];
   topPools: MiningTopPool[];
+  // Attribution is partial by nature: pools publish their blocks voluntarily, so a large
+  // share routinely lands in the synthetic "unknown" bucket. Both figures travel with the
+  // table so it can never imply that the listed pools are the whole network.
+  topPoolsSharePercent: number | null;
+  unattributedSharePercent: number | null;
   weightedPoolFeePercent: number | null;
 }
 
@@ -133,7 +138,14 @@ export const buildMiningPoolContext = (poolStats: readonly MiningPoolStatsInput[
     .sort((a, b) => b.sharePercent - a.sharePercent || a.name.localeCompare(b.name) || a.slug.localeCompare(b.slug))
     .slice(0, TOP_POOL_LIMIT);
 
-  return { poolFees, topPools, weightedPoolFeePercent };
+  const unknownStat = (poolStats ?? []).find((stat) => stat.pool.slug === 'unknown');
+  const unattributedSharePercent =
+    unknownStat && Number.isFinite(unknownStat.sharePercent) && unknownStat.sharePercent >= 0
+      ? unknownStat.sharePercent
+      : null;
+  const topPoolsSharePercent = topPools.length > 0 ? topPools.reduce((sum, pool) => sum + pool.sharePercent, 0) : null;
+
+  return { poolFees, topPools, topPoolsSharePercent, unattributedSharePercent, weightedPoolFeePercent };
 };
 
 export const buildMiningNetworkFees = (

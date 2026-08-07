@@ -390,6 +390,8 @@
     "topPoolShare": "Participação",
     "topPoolHashrate": "Hashrate",
     "topPoolFee": "Taxa",
+    "topPoolsCoverage": "Os pools listados acima representam {share} dos blocos encontrados no período.",
+    "topPoolsCoverageWithUnattributed": "Os pools listados acima representam {share} dos blocos encontrados no período; {unattributed} não é atribuído a nenhum pool conhecido.",
     "selectedPool": "Selecionada",
     "resultDisclaimer": "Valor esperado com base no hashrate atual da rede, recompensa média dos blocos em 24h, preço e taxa da pool selecionada. Sorte da pool, método de pagamento, preço, dificuldade, refrigeração, impostos, depreciação e paradas não planejadas podem alterar o resultado real.",
     "dataUnavailable": "Os dados atuais da rede Monero estão indisponíveis, portanto a calculadora não pode produzir uma estimativa honesta agora."

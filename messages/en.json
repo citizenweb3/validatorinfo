@@ -390,6 +390,8 @@
     "topPoolShare": "Share",
     "topPoolHashrate": "Hashrate",
     "topPoolFee": "Fee",
+    "topPoolsCoverage": "The pools listed above account for {share} of blocks found in the window.",
+    "topPoolsCoverageWithUnattributed": "The pools listed above account for {share} of blocks found in the window; {unattributed} is not attributed to any known pool.",
     "selectedPool": "Selected",
     "resultDisclaimer": "Expected value based on current network hashrate, 24h average block rewards, price, and selected pool fee. Pool luck, payout scheme, price, difficulty, cooling, taxes, hardware depreciation, and unplanned downtime can change actual results.",
     "dataUnavailable": "Current Monero network inputs are unavailable, so the calculator cannot produce an honest estimate right now."

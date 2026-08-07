@@ -17,9 +17,20 @@ interface OwnProps {
   locale: Locale;
   pools: MiningTopPool[];
   selectedPoolSlug: string;
+  topPoolsSharePercent: number | null;
+  unattributedSharePercent: number | null;
 }
 
-const MiningTopPools: FC<OwnProps> = ({ locale, pools, selectedPoolSlug }) => {
+const formatPercent = (value: number, locale: Locale): string =>
+  `${value.toLocaleString(locale, { maximumFractionDigits: 2, minimumFractionDigits: 2 })}%`;
+
+const MiningTopPools: FC<OwnProps> = ({
+  locale,
+  pools,
+  selectedPoolSlug,
+  topPoolsSharePercent,
+  unattributedSharePercent,
+}) => {
   const t = useTranslations('MiningCalculatorPage');
 
   if (pools.length === 0) return null;
@@ -78,6 +89,16 @@ const MiningTopPools: FC<OwnProps> = ({ locale, pools, selectedPoolSlug }) => {
           </tbody>
         </BaseTable>
       </div>
+      {topPoolsSharePercent !== null && (
+        <p className="mt-3 font-sfpro text-sm opacity-75">
+          {unattributedSharePercent === null
+            ? t('topPoolsCoverage', { share: formatPercent(topPoolsSharePercent, locale) })
+            : t('topPoolsCoverageWithUnattributed', {
+                share: formatPercent(topPoolsSharePercent, locale),
+                unattributed: formatPercent(unattributedSharePercent, locale),
+              })}
+        </p>
+      )}
     </section>
   );
 };

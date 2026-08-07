@@ -107,6 +107,36 @@ test('sorts and caps top pools while dropping a malformed hashrate row', () => {
   assert.equal(context.topPools.length, 5);
 });
 
+test('reports how much of the network the listed pools actually cover', () => {
+  // Attribution is partial: most of the hashrate routinely lands in the "unknown" bucket,
+  // so the table must never imply the listed pools are the whole network.
+  const poolStats = [
+    { feePercent: 1, isVerified: false, name: 'Unknown', share: 70, slug: 'unknown' },
+    { feePercent: 1, isVerified: true, name: 'Nanopool', share: 12, slug: 'nanopool' },
+    { feePercent: 1, isVerified: true, name: 'HashVault', share: 8, slug: 'hashvault' },
+  ].map(({ feePercent, isVerified, name, share, slug }) => ({
+    hashrateEstimate: '1000',
+    pool: { feePercent, isVerified, name, slug },
+    sharePercent: share,
+  }));
+
+  const context = buildMiningPoolContext(poolStats);
+
+  assert.deepEqual(
+    context.topPools.map((pool) => pool.slug),
+    ['nanopool', 'hashvault'],
+  );
+  assert.equal(context.topPoolsSharePercent, 20);
+  assert.equal(context.unattributedSharePercent, 70);
+});
+
+test('leaves coverage figures null when there is nothing to report', () => {
+  const context = buildMiningPoolContext(null);
+
+  assert.equal(context.topPoolsSharePercent, null);
+  assert.equal(context.unattributedSharePercent, null);
+});
+
 test('keeps core mining economics when optional context sources are absent', () => {
   const core = buildMiningCoreSnapshot({
     averageRewardAtomic: TAIL_EMISSION_ATOMIC.toString(),

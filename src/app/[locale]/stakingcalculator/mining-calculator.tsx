@@ -374,7 +374,13 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
 
       {economics.networkFees ? <MiningNetworkFees fees={economics.networkFees} locale={locale} /> : null}
       {economics.emission ? <MiningEmissionContext emission={economics.emission} locale={locale} /> : null}
-      <MiningTopPools locale={locale} pools={economics.topPools} selectedPoolSlug={selectedPool} />
+      <MiningTopPools
+        locale={locale}
+        pools={economics.topPools}
+        selectedPoolSlug={selectedPool}
+        topPoolsSharePercent={economics.topPoolsSharePercent}
+        unattributedSharePercent={economics.unattributedSharePercent}
+      />
     </div>
   );
 };
