@@ -3,6 +3,11 @@
 import { useTranslations } from 'next-intl';
 import { ChangeEvent, FC, useMemo, useState } from 'react';
 
+import MiningEmissionContext from '@/app/stakingcalculator/mining-emission-context';
+import MiningNetworkFees from '@/app/stakingcalculator/mining-network-fees';
+import MiningNetworkTrend from '@/app/stakingcalculator/mining-network-trend';
+import MiningPersonalEconomics from '@/app/stakingcalculator/mining-personal-economics';
+import MiningTopPools from '@/app/stakingcalculator/mining-top-pools';
 import MetricsCardItem from '@/components/common/metrics-cards/metrics-card-item';
 import SubTitle from '@/components/common/sub-title';
 import BaseTable from '@/components/common/table/base-table';
@@ -13,11 +18,8 @@ import { Locale } from '@/i18n';
 import type { MoneroMiningEconomics } from '@/services/mining-profitability-service';
 import { formatCurrencyDecimal, formatDecimal } from '@/utils/format-decimal';
 import { formatHashrate } from '@/utils/format-hashrate';
-import {
-  estimateElectricityCostPerDay,
-  estimateHardwarePaybackDays,
-  estimateMiningReturn,
-} from '@/utils/mining-revenue';
+import { estimateElectricityCostPerDay, estimateMiningReturn } from '@/utils/mining-revenue';
+import { estimatePersonalMiningEconomics } from '@/utils/personal-mining-economics';
 
 interface OwnProps {
   economics: MoneroMiningEconomics;
@@ -111,7 +113,9 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
   const t = useTranslations('MiningCalculatorPage');
   const [hashrate, setHashrate] = useState('1');
   const [hashrateUnit, setHashrateUnit] = useState<HashrateUnit>('kh');
-  const [selectedPool, setSelectedPool] = useState('average');
+  const [selectedPool, setSelectedPool] = useState(() =>
+    economics.weightedPoolFeePercent === null ? 'solo' : 'average',
+  );
   const [customPoolFee, setCustomPoolFee] = useState('1');
   const [powerWatts, setPowerWatts] = useState('');
   const [electricityPrice, setElectricityPrice] = useState('');
@@ -156,10 +160,17 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
   const netProfitPerDay =
     calculation && electricityCostPerDay !== null ? calculation.netUsdPerDay - electricityCostPerDay : null;
   const hardwareCostValue = parsePositive(hardwareCost);
-  const paybackDays =
-    hardwareCostValue !== null && netProfitPerDay !== null
-      ? estimateHardwarePaybackDays(hardwareCostValue, netProfitPerDay)
-      : null;
+  const personalEconomics = useMemo(() => {
+    if (!calculation || electricityCostPerDay === null || hardwareCostValue === null) return null;
+
+    return estimatePersonalMiningEconomics({
+      electricityCostUsdPerDay: electricityCostPerDay,
+      hardwareCostUsd: hardwareCostValue,
+      miningReturn: calculation,
+      networkDifficulty: economics.networkDifficulty,
+      networkTrend: economics.networkTrend,
+    });
+  }, [calculation, economics.networkDifficulty, economics.networkTrend, electricityCostPerDay, hardwareCostValue]);
 
   const formatUsd = (value: number): string => formatCurrencyDecimal(value, locale);
   const formatToken = (value: number): string => `${formatDecimal(value, locale)} ${economics.tokenSymbol}`;
@@ -215,9 +226,11 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
               onChange={handlePoolChange}
               value={selectedPool}
             >
-              <option value="average">
-                {t('averageKnownPools', { fee: economics.weightedPoolFeePercent.toFixed(2) })}
-              </option>
+              {economics.weightedPoolFeePercent !== null ? (
+                <option value="average">
+                  {t('averageKnownPools', { fee: economics.weightedPoolFeePercent.toFixed(2) })}
+                </option>
+              ) : null}
               {economics.poolFees.map((pool) => (
                 <option key={pool.slug} value={pool.slug}>
                   {pool.name} ({pool.feePercent.toFixed(2)}%)
@@ -297,6 +310,8 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
         </div>
       </section>
 
+      {economics.networkTrend ? <MiningNetworkTrend economics={economics} locale={locale} /> : null}
+
       <section aria-label={t('resultsTitle')} aria-live="polite">
         <SubTitle text={t('resultsTitle')} />
         {!calculation ? (
@@ -350,15 +365,22 @@ const MiningCalculator: FC<OwnProps> = ({ economics, locale }) => {
           </div>
         )}
 
-        {hardwareCostValue !== null && (
-          <p className={`${cardClassName} mt-4 font-sfpro text-base`}>
-            {paybackDays !== null
-              ? t('estimatedPayback', { days: Math.ceil(paybackDays).toLocaleString(locale) })
-              : t('paybackUnavailable')}
-          </p>
-        )}
         <p className="mt-4 font-sfpro text-sm opacity-75">{t('resultDisclaimer')}</p>
       </section>
+
+      {personalEconomics ? (
+        <MiningPersonalEconomics economics={personalEconomics} locale={locale} tokenSymbol={economics.tokenSymbol} />
+      ) : null}
+
+      {economics.networkFees ? <MiningNetworkFees fees={economics.networkFees} locale={locale} /> : null}
+      {economics.emission ? <MiningEmissionContext emission={economics.emission} locale={locale} /> : null}
+      <MiningTopPools
+        locale={locale}
+        pools={economics.topPools}
+        selectedPoolSlug={selectedPool}
+        topPoolsSharePercent={economics.topPoolsSharePercent}
+        unattributedSharePercent={economics.unattributedSharePercent}
+      />
     </div>
   );
 };
